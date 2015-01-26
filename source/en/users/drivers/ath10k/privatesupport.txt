@@ -1,0 +1,13 @@
+
+Go back --> [[en/users/Drivers/ath10k|ath10k]] 
+
+ 
+
+
+===== ath10k private support =====
+
+Normally ath10k developers cannot give private support, reasons being: 
+  * no time 
+  * doesn't benefit the whole community 
+  * using email list is preferred because the whole team can then participate the discussion 
+  * normally you get better answers via mailing lists as more than one can answer So that's why it's recommended to use the ath10k mailing list for any questions related to ath10k, check [[en/users/Drivers/ath10k|the main ath10k wiki]] for details. 
