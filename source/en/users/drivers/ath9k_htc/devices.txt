@@ -1,0 +1,25 @@
+
+
+===== Supported Atheros devices =====
+
+
+|**Vendor**\\ |**Product**|**Chipset**\\ |**USB Vendor**\\ |**USB Product**\\ |**MaxPower**\\ |
+|Atheros||AR7010+AR9280|0x0cf3|0x7010||
+|Atheros||AR7010+AR9287|0x0cf3|0x7015||
+|Atheros||AR9271|0x0cf3|0x9271||
+|Azurewave||AR9271|0x13d3|0x3327||
+|Azurewave||AR9271|0x13d3|0x3328||
+|D-Link|DWA-126|AR9271|0x07d1|0x3a10||
+|LiteOn||AR9271|0x04ca|0x4605||
+|Netgear|[[http://www.netgear.com/service-provider/products/wireless-adapters/wireless-n/WNA1100.aspx|WNA1100]]|AR9271|0x0846|0x9030||
+|Netgear|WNDA3200|AR7010+AR9280|0x0846|0x9018||
+|Panasonic|N5HBZ0000055|AR7010+AR9280|0x04da|0x3904||
+|Penguin|[[https://www.thinkpenguin.com/gnu-linux/penguin-wireless-n-dual-band-usb-adapter-gnu-linux-tpe-nusbdb|TPE-NUSBDB]]|AR7010+AR9280|0x04da|0x3904||
+|SMC||AR9271|0x083a|0xa704||
+|Sony|UWA-BR100|AR7010+AR9280|0x0411|0x017f||
+|TP-LINK|[[http://www.tp-link.com/en/products/details/?model=TL-WN821N|TL-WN821Nv3]]|AR7010+AR9287|0x0cf3|0x7015||
+|TP-LINK|[[http://www.tp-link.com/en/products/details/?model=TL-WN721N|TL-WN721N]]|AR9271|0x0cf3|0x9271|500mA|
+|TP-LINK|[[http://www.tp-link.com/en/products/details/?model=TL-WN722N|TL-WN722N]]|AR9271|0x0cf3|0x9271||
+|TP-LINK|[[http://www.tp-link.com/en/products/details/?model=TL-WN322G|TL-WN322G v3]]|AR9271|0x0cf3|0x1006||
+|TP-LINK|[[http://www.tp-link.com/en/products/details/?model=TL-WN422G|TL-WN422G v2]]|AR9271|0x0cf3|0x1006||
+|Unex|[[http://www.unex.com.tw/product/dnua-93f|DNUA-93F]]|AR9271|0x0cf3|0x9271||
