@@ -1,0 +1,75 @@
+
+Go back --> [[en/users/Drivers/ath10k|ath10k]] 
+
+ 
+
+
+===== ath10k sources location =====
+
+//ath10k// development happens in Kalle Valo's ath.git tree on github.com: 
+  * [[https://github.com/kvalo/ath|https://github.com/kvalo/ath]] 
+
+To clone the tree: 
+
+
+<code>git clone https://github.com/kvalo/ath</code>
+ath10k driver is located in directory drivers/net/wireless/ath/ath10k. 
+
+If you can't use git, it's also possible to download .zip file from this link: 
+    * [[https://github.com/kvalo/ath/archive/master.zip|https://github.com/kvalo/ath/archive/master.zip]] 
+
+If you just want to browse the source code with your web browser this links always points to latest version of ath10k: 
+
+[[https://github.com/kvalo/ath/tree/master/drivers/net/wireless/ath/ath10k|https://github.com/kvalo/ath/tree/master/drivers/net/wireless/ath/ath10k]] 
+
+John Linville pulls the ath tree into wireless-next tree. Then David Miller pulls it to net-next which is eventually pulled by Linus Torvalds to official kernel releases. 
+
+
+===== Submitting patches =====
+
+Send patches to the mailing lists below. Kalle Valo reviews the patches within the next few days and, if they are ok, commits them to ath.git. 
+      * To: [[mailto:ath10k@lists.infradead.org|ath10k@lists.infradead.org]] 
+      * Cc: [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]] 
+
+Preferably use ath.git master branch as the baseline for patches. Other trees can be used as well, but then the chances of conflicts are higher. 
+
+More info about submitting patches: 
+        * [[en/developers/Documentation/SubmittingPatches|en/developers/Documentation/SubmittingPatches]] 
+        * [[en/developers/Documentation/git-guide|en/developers/Documentation/git-guide]] 
+
+Guidelines for patches: 
+          * MUST be compiler warning free. 
+          * MUST be sparse warning free. 
+          * Commit log MUST not be empty. 
+          * The commit log MUST answer the question "Why?": 
+          *  * Describe the motivation behind the bug. 
+          *  * How does it change the functionality from user's point of view? 
+          *  * Does it fix a bug? If it does, please describe the bug (doesn't need to be long). Also if there's a public bug report add a link to the bug report. 
+          *  * If a problem has been found during code review and doesn't fix a known issues, mention that in the commit log. 
+          *   If others have reported the issue commit log SHOULD use Reported-by: and Tested-by: tags. 
+          *   SHOULD be checkpatch clean: 
+          *    * FIXME: add checkpatch example with correct arguments 
+          *     Patches SHOULD be sent with git send-email tool. 
+          *     Patchsets SHOULD contain no more than 12 patches. 
+          *     Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]] 
+
+The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
+
+The ath10k patch flow is this: 
+          *     - Patch gets posted to the mailing lists. 
+          *     - Kalle immediately applies the patch to ath-next-test for build testing. 
+          *     - Kalle waits two business days for patch being under review (unless the patch is urgent). 
+          *     - If no comments or warnings, Kalle applies the patch to ath-next branch and sends a "Thanks, applied" reply. 
+          *     - Kalle merges ath-next to master branch immeadiately after the patch is applies. 
+          *     - John Linville merges ath-next into wireless-next roughly once a week 
+          *     - David Miller merges wireless-next into net-next every two weeks or so 
+          *     - Linus Torvalds merges net-next into linux.git during [[https://www.kernel.org/doc/Documentation/development-process/2.Process|merge window]] 
+
+
+===== Git branches =====
+
+ath.git contains multiple branches: 
+
+  ; master  : The default branch selected when cloning the tree. Everyone working on ath10k (or ath6kl) should use this branch. Follows John Linville's wireless-testing tree and contains the latest -rc release from Linus Torvalds + latest wireless code from John + latest ath10k/ath6kl code from ath-next branch. Usually the branch is rebased after a merge window (after -rc1 is released). Due to unclean history bisect might not work, better to use ath-next for bisecting. 
+  ; ath-next  : Based on John's wireless-next tree and John will pull from this branch. ath6kl/ath10k patches are commited to this branch first and then merged to the master branch. For bisect runs it's better to use this branch instead of the master branch. 
+  ; ath-next-test  : Used for building and runtime testing patches under review. Is rebased almost daily and hence commit ids are NOT stable. Use this only if you know what you are doing. 
