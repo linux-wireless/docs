@@ -1,0 +1,33 @@
+
+Go back --> [[en/users/Drivers/ath9k|Main ath9k driver page]] 
+
+
+===== ath9k bluetooth coexistence =====
+
+This page documents how [[en/users/Documentation/Bluetooth-coexistence|bluetooth coexistence]] is supported by ath9k. 
+
+ 
+
+
+===== Supported Coexistence Schemes =====
+  * [[en/users/Documentation/Bluetooth-coexistence|2-wire]] 
+  * [[en/users/Documentation/Bluetooth-coexistence|3-wire]] 
+  * MCI (Message-Based Coexistence Interface) 
+===== Enabling bluetooth coexistence =====
+
+Bluetooth coexistence has to be manually enabled when loading ath9k by setting the //btcoex_enable// module parameter. 
+
+
+<code>modprobe ath9k btcoex_enable=1</code>
+
+===== Cards supporting BTCOEX =====
+
+
+==== 2-wire (two-chip cards with separate WLAN and BT) ====
+    * WB197 ( AR9287 + AR3011 ) 
+==== 3-wire (two-chip cards with separate WLAN and BT) ====
+      * WB195 ( AR9285 + AR3011 ) 
+      * WB225 ( AR9485 + AR3012 ) 
+==== MCI (SoC-type cards with integrated WLAN and BT) ====
+        * WB222 ( based on AR9462 ) 
+        * WB335 ( based on AR9565 ) 
