@@ -1,0 +1,166 @@
+
+
+
+===== About this guide =====
+
+This guide is designed to give you an idea of how to write //linux-wireless// patches. 
+
+
+===== Subscribe to this page =====
+
+We would like to ask Linux-wireless developers to subscribe to this page on the wiki. Any new policies and best practices on patching to linux-wireless will be posted here. 
+
+
+===== Prior to sending patches =====
+
+Please **DO NOT** PGP sign patches sent to //linux-wireless//. The reason is that signing patches will encapsulate them into MIME and thereby mangle the patch. Also, please note that we prefer patches inline rather than attachments. 
+
+
+===== Who to address =====
+
+If you intend on getting your patch committed address your e-mail as follows: 
+
+
+<code>To: ''John Linville''
+CC: ''linux-wireless'', Maintainers, Other Developers</code>
+Where [[en/developers/maintainers|Maintainers]] contains the list of maintainers for the piece of code you are patching. //Other Developers// in this case can be a list of developers who you think may like to review this patch or who changed the code you are working on recently. 
+
+
+===== Subject name =====
+
+If what you are sending is a patch you can use a subject as follows: 
+
+
+<code>[PATCH] driver_name: fix foo and optimize bar</code>
+If your patch is just a proposal you can use this format for your subject: 
+
+
+<code>[RFC] driver_name: a new way to do foo</code>
+
+===== Sending large patches or multiple patches =====
+
+You should only send a large patch if your patch does one specific task, or a few of them if they are easy to review. If your work consists of multiple tasks you must split your tasks into separate patches. Each patch must address a small set of tasks to help the maintainers with revision. The rule of thumb here is if you read your patch and if its not clear what the patch is doing then better break it down into separate patches. Patches should also be run through scripts/checkpatch.pl. 
+
+If you are sending multiple patches which depend on each other you can use this format for the subjects: 
+
+
+<code>[PATCH 0/4] driver_name: introduce foo and bar
+[PATCH 1/4] driver_name: introduce get_foo_bars()
+[PATCH 2/4] driver_name: fix locking on bar_by_foo()
+[PATCH 3/4] driver_name: use foo when barring
+[PATCH 4/4] driver_name: optimize bar at init time</code>
+On the e-mail with subject, "[PATCH 0/4] driver_name: introduce foo and bar", you would give a brief overview of all the changes. No patch should be included in that e-mail, and as that e-mail will not end up in the change logs it should not contain anything that should be archived, only a rough overview over the purpose of the patch set, no in-depth description which should be in the changelog for each patch. 
+
+If you use git to send patches, please add **<code>--no-chain-reply-to</code>** to your invocation of git-send-email. 
+
+
+===== Format of patches =====
+
+We prefer patches to be inline-text at the end of the body of the e-mail. You can use git-diff or the like to generate the patch. Additionally note that we prefer to apply patches with -p1. A header as follows is then acceptable: 
+
+
+<code>diff --git a/include/net/mac80211.h b/include/net/mac80211.h
+index 9b4b4a2..4832e6a 100644
+--- a/include/net/mac80211.h
++++ b/include/net/mac80211.h</code>
+
+===== Patch tags =====
+
+In order to track who worked on a patch and released the source code under the appropriate licenses used, patch tags are used to track of provenance of patches. This also helps developers review who was in the line of a patch work, who submitted it, and who reviewed it. This information is available from the //git-log//. We currently use, //Signed-off-by//, //Acked-by//, //Cc//, //Reviewed-by// and //Tested-by//. 
+
+Please note that since you are submitting patches inline, after the //Signed-off-by:// lines, you **must** put //<code>---</code>//, that is three dashes. Example: 
+
+
+<code>...
+Signed-off-by: Luis R. Rodriguez <mcgrof@example.com>
+---
+ include/net/ieee80211_regdomains.h |  196 ++++++++
+...</code>
+Please also read the [[https://kernel.org/doc/Documentation/SubmittingPatches|official Linux SubmittingPatches]] documentation, especially Section 12 and the **Developer's Certificate of Origin**. Do not submit patches unless you have read, understood and agreed to the certificate. 
+
+
+===== Examples of a patches =====
+
+Below are a few examples of a patches. Only the header is provided for long patches. 
+  * Single patch 
+<code>From: Michael Buesch
+To: John Linville
+Cc: linux-wireless, Bcm43xx-dev, Larry Finger
+Subject: [PATCH] b43: Remove the "radio hw enabled" message on startup.
+
+This message is useless. Only report state changes.
+
+Signed-off-by: Michael Buesch <mb@example.com>
+Cc: Larry Finger <larry.finger@example.com>
+
+---
+
+Index: wireless-dev/drivers/net/wireless/b43/main.c
+===================================================================
+--- wireless-dev.orig/drivers/net/wireless/b43/main.c   2007-09-20 19:39:06.000000000 +0200
++++ wireless-dev/drivers/net/wireless/b43/main.c        2007-09-20 20:06:24.000000000 +0200
+@@ -2227,9 +2227,6 @@ static int b43_chip_init(struct b43_wlde
+       if (err)
+               goto err_gpio_cleanup;
+       b43_radio_turn_on(dev);
+-       dev->radio_hw_enable = b43_is_hw_radio_enabled(dev);
+-       b43dbg(dev->wl, "Radio %s by hardware\n",
+-              dev->radio_hw_enable ? "enabled" : "disabled");
+
+       b43_write16(dev, 0x03E6, 0x0000);
+       err = b43_phy_init(dev);
+@@ -3251,6 +3248,9 @@ static void setup_struct_wldev_for_init(
+ {
+       /* Flags */
+       dev->reg124_set_0x4 = 0;
++       /* Assume the radio is enabled. If it's not enabled, the state will
++        * immediately get fixed on the first periodic work run. */
++       dev->radio_hw_enable = 1;
+
+       /* Stats */
+       memset(&dev->stats, 0, sizeof(dev->stats));
+-</code>
+    * Multiple patches 
+<code>From: Luis R. Rodriguez
+To: John Linville
+Cc: linux-wireless, Michael Wu, Johannes Berg, Daniel Drake, Larry Finger
+Subject: [PATCH 3/5] Wireless: add IEEE-802.11 regualtory domain module
+
+This adds the regulatory domain module. It provides a way to
+allocate and construct a regulatory domain based on the current
+map. This module provides no enforcement, it just does the actual
+building of the regdomain and returns it as defined in ieee80211_regdomains.h
+
+This module depends on the ISO3166-1 module.
+
+Signed-off-by: Luis R. Rodriguez <mcgrof@example.com>
+
+---
+ include/net/ieee80211_regdomains.h |  196 ++++++++
+ net/wireless/Kconfig               |   16 +
+ net/wireless/Makefile              |    1 +
+ net/wireless/reg_common.h          |  138 ++++++
+ net/wireless/regdomains.c          |  751 ++++++++++++++++++++++++++++++
+ net/wireless/regulatory_map.h      |  887 ++++++++++++++++++++++++++++++++++++
+ 6 files changed, 1989 insertions(+), 0 deletions(-)
+ create mode 100644 include/net/ieee80211_regdomains.h
+ create mode 100644 net/wireless/reg_common.h
+ create mode 100644 net/wireless/regdomains.c
+ create mode 100644 net/wireless/regulatory_map.h
+
+diff --git a/include/net/ieee80211_regdomains.h b/include/net/ieee80211_regdomains.h
+new file mode 100644
+index 0000000..adf4de4
+--- /dev/null
++++ b/include/net/ieee80211_regdomains.h
+@@ -0,0 +1,196 @@
++#ifndef _IEEE80211_REGDOMAIN_H
++#define _IEEE80211_REGDOMAIN_H
++/*
+... ETC ...</code>
+
+===== More patch work references =====
+
+Here is a list of links to help you write better patches 
+      * [[http://linux.yyz.us/patch-format.html|http://linux.yyz.us/patch-format.html]] 
+      * [[http://userweb.kernel.org/~akpm/stuff/tpp.txt|Andrew Morton's ''The perfect patch'']] 
