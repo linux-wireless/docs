@@ -1,0 +1,49 @@
+
+
+
+===== About nl80211 =====
+
+nl80211 is the new 802.11 netlink interface public header. Together with [[en/developers/Documentation/cfg80211|cfg80211]] it is intended to replace Wireless-Extensions. nl80211 and [[en/developers/Documentation/cfg80211|cfg80211]] are still under development. 
+
+
+===== Users of nl80211 =====
+
+Current users of nl80211: 
+  * [[en/users/Documentation/iw|iw]] 
+  * [[en/developers/Regulatory/CRDA|crda]] 
+  * [[en/users/Documentation/hostapd|hostapd]] 
+  * [[en/users/Documentation/wpa_supplicant|wpa_supplicant]] (with **-Dnl80211**) 
+
+
+===== libnl tiny =====
+
+[[http://openwrt.org/|OpenWrt]] folks created a tiny version of libnl based on a git snapshot, which only contains genl, not rtnetlink or any of the netfilter stuff, and compiles down to less than 30k in binary size. You can find it here: 
+
+[[https://dev.openwrt.org/browser/trunk/package/libs/libnl-tiny|https://dev.openwrt.org/browser/trunk/package/libs/libnl-tiny]] 
+
+svn co svn://svn.openwrt.org/openwrt/trunk/package/libs/libnl-tiny 
+
+
+===== Kerneldoc for nl80211 =====
+
+[[http://git.kernel.org/?p=linux/kernel/git/linville/wireless.git;a=blob;f=include/uapi/linux/nl80211.h;hb=HEAD|include/uapi/linux/nl80211.h]] 
+
+
+===== testmode (CONFIG_NL80211_TESTMODE=y) =====
+
+The nl80211 testmode command helps implementing things like factory calibration or validation tools for wireless chips. 
+
+This functionality could possibly be used for SAR testing (Specific Absorption Rate), MPE testing (Maximum Permissible Exposure), RF testing (Radio Frequency), as possibly requested by institutions such as FCC. 
+
+According to [[http://kernelnewbies.org/Linux_2_6_32|kernelnewbies.org Linux_2_6_32]], testmode has been introduced by nicely described commit [[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=aff89a9b9084931e51b89d8f3ee3c547bea6c422|aff89a9b90849]]. 
+
+This setting is currently provided by [[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/wireless/Kconfig|net/wireless/Kconfig]]. 
+
+For a way to determine whether a wireless driver actually supports nl80211 testmode interface, see [[http://markmail.org/message/j4nfshv4edn2ga7f|[PATCH] nl80211: add testmode to the list of supported commands]]. 
+
+Current users of the testmode interface are: 
+    * [[en/users/Drivers/wl12xx/calibrator|wl12xx calibrator]] (chipsets WL1271 etc.) 
+
+TODO: could list (references to) ready-made scripts which implement nicely automated / elegant workflows for SAR testing etc. 
+
+For ATH9K chipsets, there's SAR testing functionality provided via the non-testmode setting [[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/ath/ath9k/Kconfig|CONFIG_ATH9K_TX99]]. Hmm, this possibly needs conversion to (additionally?) providing the generic nl80211 testmode functionality? 
