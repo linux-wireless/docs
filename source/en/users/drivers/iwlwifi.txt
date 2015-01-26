@@ -1,0 +1,181 @@
+
+
+
+===== Introduction =====
+
+**iwlwifi** is the wireless driver for Intel's current wireless chips. For older chips, there are other drivers: 
+  * [[en/users/Drivers/ipw2100|ipw2100]] 
+  * [[en/users/Drivers/ipw2200|ipw2200]] 
+  * [[en/users/Drivers/iwlegacy|iwlegacy]] (for Intel® PRO/Wireless 3945ABG and Intel® Wireless [[WiFi|WiFi]] Link 4965AGN) 
+
+
+===== Features =====
+    * Station (client) mode 
+    * IBSS (Ad-Hoc) mode 
+    * AP mode (experimental; only on some devices/firmware versions) 
+    * P2P (on 7260 / 3160 and later devices only) 
+    * 802.11a/b/g/n/ac (depending on the device) 
+===== Supported Devices =====
+
+The following devices are supported (since kernel version): 
+      * Intel® Wireless 7265 (3.13) 
+      * Intel® Wireless 7260 (3.10) 
+      * Intel® Wireless 3160 (3.10) 
+      * Intel® Centrino® Advanced-N 6235 (3.2) 
+      * Intel® Centrino® Wireless-N 2230 (3.2) 
+      * Intel® Centrino® Wireless-N 2200 (3.2) 
+      * Intel® Centrino® Wireless-N 105 (3.2) 
+      * Intel® Centrino® Wireless-N 135 (3.2) 
+      * Intel® Centrino® Wireless-N 100 (2.6.37) 
+      * Intel® Centrino® Wireless-N 130 (2.6.37) 
+      * Intel® Centrino® Advanced-N 6230 (2.6.36) 
+      * Intel® Centrino® Wireless-N 1030 (2.6.36) 
+      * Intel® Centrino® Advanced-N 6205 (2.6.35) 
+      * Intel® Centrino® Wireless-N + WiMAX 6150 (2.6.30) 
+      * Intel® Centrino® Advanced-N + WiMAX 6250 (2.6.30) 
+      * Intel® Centrino® Ultimate-N 6300 (2.6.30) 
+      * Intel® Centrino® Advanced-N 6200 (2.6.30) 
+      * Intel® Centrino® Wireless-N 1000 (2.6.30) 
+      * Intel® Wireless [[WiFi|WiFi]] 5150AGN (2.6.29) 
+      * Intel® Wireless [[WiFi|WiFi]] 5100AGN, 5300AGN, and 5350AGN (2.6.27) 
+
+
+===== Support =====
+
+For technical support send email to  and/or . 
+
+TODO: tell people how to use tracing (probably use a sub-page and link to it) 
+
+
+===== Firmware =====
+
+The firmware necessary to support the devices is distributed separately under the [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.iwlwifi_firmware;hb=HEAD|firmware license]]. 
+
+Note that many distributions ship the firmware, you could install the "linux-firmware" package or similar. If that doesn't work, or you need newer firmware, read on.﻿ 
+
+The driver loads the firmware using the kernel's firmware_class infrastructure. More information can be found under in the [[http://kernel.org/doc/Documentation/firmware_class/README|Documentation/firmware_class/README]] file in the kernel source. In order to function correctly the driver requires this to be enabled in your kernel.  When you configure the kernel, you can find this option in the following location: 
+
+
+<code>Device Drivers ->
+    Generic Driver Options ->
+        Userspace firmware loading support</code>
+You can determine if your kernel currently has firmware loader support by looking for the <code>CONFIG_FW_LOADER</code> definition on your kernel's <code>.config</code> file. 
+
+In addition to having the firmware_class support in your kernel, you must also have a working userspace infrastructure configured. The steps for installing and configuring this are very distribution specific and the tools differ, but distributions have this enabled. 
+
+Once you have the firmware loader in place (or if you aren't sure and you just want to try things to see if it works), you need to install the firmware file into the appropriate location. 
+
+Where that appropriate location is depends (again) on your system distribution.  You can typically find this location by looking in the udev scripts of your distro, the default on most distributions is /lib/firmware. 
+
+Installation of the firmware is simply: 
+
+
+<code># cp iwlwifi-*.ucode /lib/firmware</code>
+You can now load the driver. 
+
+You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware.git]], or download it here: 
+|**Device** |**Kernels** |**Firmware** |
+|Intel® Wireless [[WiFi|WiFi]] 5150AGN |2.6.29+ |[[iwlwifi-5150-ucode-8.24.2.2.tgz|iwlwifi-5150-ucode-8.24.2.2.tgz]] |
+|Intel® Wireless [[WiFi|WiFi]] 5100AGN, \\  Intel® Wireless [[WiFi|WiFi]] 5300AGN, \\  Intel® Wireless [[WiFi|WiFi]] 5350AGN |2.6.27+ |[[iwlwifi-5000-ucode-5.4.A.11.tar.gz|iwlwifi-5000-ucode-5.4.A.11.tar.gz]] |
+| ::: |2.6.30+ |[[iwlwifi-5000-ucode-8.24.2.12.tgz|iwlwifi-5000-ucode-8.24.2.12.tgz]] |
+| ::: |2.6.38+ |[[iwlwifi-5000-ucode-8.83.5.1-1.tgz|iwlwifi-5000-ucode-8.83.5.1-1.tgz]] |
+|Intel® Centrino® Advanced-N 6230, \\  Intel® Centrino® Wireless-N 1030, \\  Intel® Centrino® Wireless-N 130, \\  Intel® Centrino® Advanced-N 6235 |2.6.36+ |[[iwlwifi-6000g2b-ucode-17.168.5.1.tgz|iwlwifi-6000g2b-ucode-17.168.5.1.tgz]] |
+| ::: |2.6.36+ |[[iwlwifi-6000g2b-ucode-17.168.5.2.tgz|iwlwifi-6000g2b-ucode-17.168.5.2.tgz]] |
+| ::: |3.2+ |[[iwlwifi-6000g2b-ucode-18.168.6.1.tgz|iwlwifi-6000g2b-ucode-18.168.6.1.tgz]] |
+|Intel® Centrino® Advanced-N 6205 |2.6.35+ |[[iwlwifi-6000g2a-ucode-17.168.5.1.tgz|iwlwifi-6000g2a-ucode-17.168.5.1.tgz]] |
+| ::: |2.6.35+ |[[iwlwifi-6000g2a-ucode-17.168.5.2.tgz|iwlwifi-6000g2a-ucode-17.168.5.2.tgz]] |
+| ::: |2.6.35+ |[[iwlwifi-6000g2a-ucode-17.168.5.3.tgz|iwlwifi-6000g2a-ucode-17.168.5.3.tgz]] |
+| ::: |3.2+ |[[iwlwifi-6000g2a-ucode-18.168.6.1.tgz|iwlwifi-6000g2a-ucode-18.168.6.1.tgz]] |
+|Intel® Centrino® Wireless-N + WiMAX 6150, \\  Intel® Centrino® Advanced-N + WiMAX 6250 |2.6.30+ |[[iwlwifi-6050-ucode-9.201.4.1.tgz|iwlwifi-6050-ucode-9.201.4.1.tgz]] |
+| ::: |2.6.37+ |[[iwlwifi-6050-ucode-41.28.5.1.tgz|iwlwifi-6050-ucode-41.28.5.1.tgz]] |
+|Intel® Centrino® Ultimate-N 6300, \\  Intel® Centrino® Advanced-N 6200 |2.6.30+ |[[iwlwifi-6000-ucode-9.176.4.1.tgz|iwlwifi-6000-ucode-9.176.4.1.tgz]] |
+| ::: |2.6.30+ |[[iwlwifi-6000-ucode-9.193.4.1.tgz|iwlwifi-6000-ucode-9.193.4.1.tgz]] |
+| ::: |2.6.30+ |[[iwlwifi-6000-ucode-9.221.4.1.tgz|iwlwifi-6000-ucode-9.221.4.1.tgz]] |
+|Intel® Centrino® Wireless-N 1000 |2.6.30+ |[[iwlwifi-1000-ucode-128.50.3.1.tgz|iwlwifi-1000-ucode-128.50.3.1.tgz]] |
+| ::: |3.2+ |[[iwlwifi-1000-ucode-39.31.5.1.tgz|iwlwifi-1000-ucode-39.31.5.1.tgz]] |
+|Intel® Centrino® Wireless-N 100 |2.6.37+ |[[iwlwifi-100-ucode-39.31.5.1.tgz|iwlwifi-100-ucode-39.31.5.1.tgz]] |
+|Intel® Centrino® Wireless-N 135 |3.2+ |[[iwlwifi-135-ucode-18.168.6.1.tgz|iwlwifi-135-ucode-18.168.6.1.tgz]] |
+|Intel® Centrino® Wireless-N 105 |3.2+ |[[iwlwifi-105-ucode-18.168.6.1.tgz|iwlwifi-105-ucode-18.168.6.1.tgz]] |
+|Intel® Centrino® Wireless-N 2200 |3.2+ |[[iwlwifi-2000-ucode-18.168.6.1.tgz|iwlwifi-2000-ucode-18.168.6.1.tgz]] |
+|Intel® Centrino® Wireless-N 2230 |3.2+ |[[iwlwifi-2030-ucode-18.168.6.1.tgz|iwlwifi-2030-ucode-18.168.6.1.tgz]] |
+|Intel® Wireless 7260 |3.10+ |[[iwlwifi-7260-ucode-22.1.7.0.tgz|iwlwifi-7260-ucode-22.1.7.0.tgz]] |
+| ::: |3.13+ |[[iwlwifi-7260-ucode-22.24.8.0.tgz|iwlwifi-7260-ucode-22.24.8.0.tgz]] |
+| ::: |3.14.9+ |[[iwlwifi-7260-ucode-25.228.9.0.tgz|iwlwifi-7260-ucode-25.228.9.0.tgz]] |
+| ::: |3.17+ |[[iwlwifi-7260-ucode-23.11.10.0.tgz|iwlwifi-7260-ucode-23.11.10.0.tgz]] |
+|Intel® Wireless 3160 |3.10+ |[[iwlwifi-3160-ucode-22.1.7.0.tgz|iwlwifi-3160-ucode-22.1.7.0.tgz]] |
+| ::: |3.13+ |[[iwlwifi-3160-ucode-22.24.8.0.tgz|iwlwifi-3160-ucode-22.24.8.0.tgz]] |
+| ::: |3.14.9+ |[[iwlwifi-3160-ucode-25.228.9.0.tgz|iwlwifi-3160-ucode-25.228.9.0.tgz]] |
+| ::: |3.17+ |[[iwlwifi-3160-ucode-23.11.10.0.tgz|iwlwifi-3160-ucode-23.11.10.0.tgz]] |
+|Intel® Wireless 7265 |3.13+ |[[iwlwifi-7265-ucode-22.24.8.0.tgz|iwlwifi-7265-ucode-22.24.8.0.tgz]] |
+| ::: |3.14.9+ |[[iwlwifi-7265-ucode-25.228.9.0.tgz|iwlwifi-7265-ucode-25.228.9.0.tgz]] |
+| ::: |3.17+ |[[iwlwifi-7265-ucode-23.11.10.0.tgz|iwlwifi-7265-ucode-23.11.10.0.tgz]] |
+
+
+===== git repositories =====
+
+There are three repositories that we maintain: 
+        * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/iwlwifi-fixes.git;a=summary|iwlwifi-fixes]] with fixes for the current kernel release cycle 
+        * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/iwlwifi-next.git;a=summary|iwlwifi-next]] with features for the next kernel release cycle 
+        * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/linux-firmware.git;a=summary|iwlwifi/linux-firmware]] that feeds the official [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] tree. It contains early releases, or content that just hasn't been merged in [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] yet. 
+
+
+===== Download =====
+
+If you need to use the current driver on an older kernel, you can use the compat-drivers project for that. See [[https://backports.wiki.kernel.org/|https://backports.wiki.kernel.org/]] for more information. 
+
+
+===== Bugzilla =====
+
+Due to security issues, the bugzilla instance was disabled. Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:ilw@linux.intel.com|ilw@linux.intel.com]] to the bug. 
+
+
+===== Debugging =====
+
+
+==== Prints ====
+
+The simplest way to provide minimal output is to dump your kernel log: dmesg. Sometimes we will ask for logs from the supplicant too - they typically land in syslog. iwlwifi can print more data to the kernel log if asked to: this is controlled by the debug module parameter. This is a [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/iwl-debug.h#n145|bitmap]]. To see more debug prints, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n91|CONFIG_IWLWIFI_DEBUG]] must be enabled. 
+
+
+==== Tracing ====
+
+Another (more powerful) way to debug iwlwifi is to use tracing: 
+
+
+<code>sudo trace-cmd record -e iwlwifi</code>
+We will typically ask for more switches: 
+
+
+<code>sudo trace-cmd record -e iwlwifi -e mac80211 -e cfg80211 -e iwlwifi_msg</code>
+This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n130|CONFIG_IWLWIFI_TRACING]] must be set. 
+
+
+==== Firmware Debugging ====
+
+When the firmware crashes, you'll see a message like this: 
+
+
+<code>iwlwifi 0000:01:00.0: Microcode SW error detected.  Restarting 0x82000000.
+[snip]
+iwlwifi 0000:01:00.0: Loaded firmware version: XX.XX.XX.XX
+iwlwifi 0000:01:00.0: 0x0000090A | ADVANCED_SYSASSERT</code>
+In this case, please copy the whole dmesg output since there may be data before and after this message that can be helpful. starting from kernel 3.15, iwlwifi will record data when the firwmare crashes so that it can be retrieved later. The data can be fetched by a simple: 
+
+
+<code>cat /sys/kernel/debug/iwlwifi/*/iwlmvm/fw_error_dump > iwl.bin</code>
+This assumes that [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n116|CONFIG_IWLWIFI_DEBUGFS]] is set. 
+
+A udev event is sent each time the firmware crashes, so that you can automate the process by writing a rule: 
+
+
+<code>DRIVER=="iwlwifi", ACTION=="change", RUN+="/bin/dump_iwl_data.sh"</code>
+Then /bin/dump_iwl_data.sh can simply cat the debugfs hook to a file. 
+
+Starting from kernel 3.17, iwlwifi supports firmware monitor. To enable it, load iwlwifi with fw_monitor=1 as a module parameter. The firmware monitor requires a very big chunk of contiguous memory to write its data - it tries to allocate 64MB and scales down if the allocation fails. This is why it is not enabled by default. Note that you will need a customized firmware to use the firmware monitor. 
+
+
+==== Privacy aspects ====
+
+By sending the debug logs you are providing information to Intel such as your email address, peer’s MAC address, and other information.  This information will be used only for the purpose of troubleshooting the issue you are reporting.  Intel is committed to protecting your privacy.  To learn more about Intel’s privacy practices, please visit [[http://www.intel.com/privacy|Intel's privacy site]] or write Intel Corporation, ATTN Privacy, Mailstop RNB4-145, 2200 Mission College Blvd., Santa Clara, CA 95054 USA. 
+
+Please don't attach the file created by [[en/users/Drivers/iwlwifi|Firmware Debugging]] to public bug trackers (such as bugzilla), but send it privately through email. We recommend you encrypt the data using Emmanuel Grumbach's PGP key (6E363201). 
