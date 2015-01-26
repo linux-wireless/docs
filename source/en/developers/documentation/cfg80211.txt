@@ -1,0 +1,77 @@
+
+
+
+===== About cfg80211 =====
+
+cfg80211 is the Linux 802.11 configuration API. cfg80211 replaces Wireless-Extensions. [[en/developers/Documentation/nl80211|nl80211]] is used to configure a cfg80211 device and is used for kernel <--> userspace communication. Wireless extensions is now in maintenance mode, no new features will be added to it, we'll only fix bugs for it. cfg80211 is now feature-par complete with wireless-extensions, it actually has a lot more features that are simply not available and will never be available through wireless extensions. When implementing a cfg80211 driver wireless extensions support is still provided automatically for you through cfg80211 through CONFIG_CFG80211_WEXT. Distributions no longer needing wireless extensions can remove this and are encouraged to do so. cfg80211 also provides full [[en/developers/Regulatory|regulatory]] support, this is done through [[en/developers/Regulatory|wireless-regdb]] and the usage of [[en/developers/Regulatory/CRDA|CRDA]]. 
+
+All new Linux wireless drivers should be written targeting either cfg80211 for fullmac devices or mac80211 for softmac devices. 
+
+
+===== Writing cfg80211 drivers =====
+
+We now have a few cfg80211 drivers, a good example of a full cfg80211 drivers is the Atheros ath6kl driver. Instead of writing wext ioctls you now write cfg80211 operation callbacks and fill in the wiphy struct to indicate to cfg80211 its device capabilities. 
+
+As an example here is ath6kl's cfg80211_ops: 
+
+
+<code>static struct cfg80211_ops ath6kl_cfg80211_ops = {
+        .add_virtual_intf = ath6kl_cfg80211_add_iface,
+        .del_virtual_intf = ath6kl_cfg80211_del_iface,
+        .change_virtual_intf = ath6kl_cfg80211_change_iface,
+        .scan = ath6kl_cfg80211_scan,
+        .connect = ath6kl_cfg80211_connect,
+        .disconnect = ath6kl_cfg80211_disconnect,
+        .add_key = ath6kl_cfg80211_add_key,
+        .get_key = ath6kl_cfg80211_get_key,
+        .del_key = ath6kl_cfg80211_del_key,
+        .set_default_key = ath6kl_cfg80211_set_default_key,
+        .set_wiphy_params = ath6kl_cfg80211_set_wiphy_params,
+        .set_tx_power = ath6kl_cfg80211_set_txpower,
+        .get_tx_power = ath6kl_cfg80211_get_txpower,
+        .set_power_mgmt = ath6kl_cfg80211_set_power_mgmt,
+        .join_ibss = ath6kl_cfg80211_join_ibss,
+        .leave_ibss = ath6kl_cfg80211_leave_ibss,
+        .get_station = ath6kl_get_station,
+        .set_pmksa = ath6kl_set_pmksa,
+        .del_pmksa = ath6kl_del_pmksa,
+        .flush_pmksa = ath6kl_flush_pmksa,
+        CFG80211_TESTMODE_CMD(ath6kl_tm_cmd)
+#ifdef CONFIG_PM
+        .suspend = __ath6kl_cfg80211_suspend,
+        .resume = __ath6kl_cfg80211_resume,
+#endif
+        .start_ap = ath6kl_start_ap,
+        .change_beacon = ath6kl_change_beacon,
+        .stop_ap = ath6kl_stop_ap,
+        .del_station = ath6kl_del_station,
+        .change_station = ath6kl_change_station,
+        .remain_on_channel = ath6kl_remain_on_channel,
+        .cancel_remain_on_channel = ath6kl_cancel_remain_on_channel,
+        .mgmt_tx = ath6kl_mgmt_tx,
+        .mgmt_frame_register = ath6kl_mgmt_frame_register,
+        .sched_scan_start = ath6kl_cfg80211_sscan_start,
+        .sched_scan_stop = ath6kl_cfg80211_sscan_stop,
+};</code>
+Then you allocate the wiphy by specifying the cfg80211 ops and fill the wiphy. 
+
+For more details refer to cfg80211.h and as an example driver you can read ath6kl. 
+
+
+===== Regulatory =====
+
+Linux wireless regulatory documentation: 
+  * [[en/vendors/VendorSupport|Addressing vendor concerns]] 
+  * [[en/developers/Regulatory/statement|Regulatory statement by developer on responsibility]] 
+  * [[en/developers/Regulatory|Linux wireless regulatory documentation]] 
+  * [[en/developers/Regulatory/processing_rules|Regulatory processing rule documentation]] 
+  * [[en/developers/Regulatory/CRDA|CRDA documentation]] 
+
+
+===== other documentation =====
+    * [[control.pdf|Johannes Berg's presentation]] (out of date!) 
+
+
+===== cfg80211 files and kernel docs =====
+      * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-2.6.git;a=blob;f=include/net/cfg80211.h;hb=HEAD|include/net/cfg80211.h]] ([[en/developers/Documentation/cfg80211/kerneldoc|kerneldoc]]) 
+      * [[en/developers/Documentation/cfg80211/kerneldoc/warnings|cfg80211 kerneldoc warnings]] 
