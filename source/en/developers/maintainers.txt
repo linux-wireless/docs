@@ -1,0 +1,5 @@
+
+
+===== maintainer list =====
+
+See the official maintainers file (in the current wireless-testing tree) at [[http://git.kernel.org/cgit/linux/kernel/git/linville/wireless-testing.git/tree/MAINTAINERS|http://git.kernel.org/cgit/linux/kernel/git/linville/wireless-testing.git/tree/MAINTAINERS]] 
