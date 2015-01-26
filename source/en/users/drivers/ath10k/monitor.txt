@@ -1,0 +1,20 @@
+
+Go back --> [[en/users/Drivers/ath10k|ath10k]] 
+
+ 
+
+
+===== ath10k monitor mode =====
+
+ath10k supports monitor mode. Recommended firmware version for a sniffer is 10.1.467.2-1. Also use recent enough wireshark which supports 11ac. 
+
+To tune into 80 MHz channel, in this example channel 36 (5180 MHz): 
+
+
+<code>iw wlan0 set freq 5180 80 5210</code>
+
+==== Known issues ====
+  * Assoc Request frames not captured (Assoc Response shows up fine)  
+  * cannot see Add BA action frames 
+  * frames do not come up with FCS value in them 
+  * the management frames do not contain mac timestamp as data/control frames 
