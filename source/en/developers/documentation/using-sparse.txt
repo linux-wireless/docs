@@ -1,0 +1,48 @@
+
+
+===== Using sparse =====
+
+Sparse is a semantic parser and static analyzer utility we use for Linux kernel development. We highly recommend to use spare for the wireless subsystem. Below are some quick instructions how to get this set up and how to use it. 
+
+ 
+
+
+===== Get sparse =====
+
+You can get sparse from: 
+
+
+<code>git://git.kernel.org/pub/scm/devel/sparse/sparse.git</code>
+
+===== Version of sparse to use =====
+
+We recommend to use the latest stable release of sparse. As of now this is v0.4.4, so you can do something as follows: 
+
+
+<code>git checkout -b rel4 v0.4.4</code>
+
+===== Install sparse =====
+
+To install: 
+
+
+<code>make
+make install</code>
+
+===== Using sparse =====
+
+To use sparse for kernel development simply pass on the C=1 argument onto your make command. For example to enable sparse for mac80211 development you would use: 
+
+
+<code>make C=1 M=net/mac80211/</code>
+
+===== Endian checks =====
+
+Endian checks are encouraged. Most endian complaints are typically valid and reflect design issues. These should be reviewed carefully. Some drivers force-enable endian checks with sparse by forcing it through their own driver makefiles upstream. If drivers do not have these you can enable sparse checks yourself by appending to your make command: 
+
+
+<code>CF="-D__CHECK_ENDIAN__" </code>
+To enforce endian checks on your driver you can use something as follows on your driver Makefile: 
+
+
+<code>ccflags-y += -D__CHECK_ENDIAN__</code>
