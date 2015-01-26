@@ -1,0 +1,63 @@
+
+
+
+===== Documentation =====
+
+Here we start documentation for users for all new wireless utilities. The list is short, but we'll try to add more as we go. 
+  * [[en/users/Documentation/modes|Wireless modes]] - modes you can set your wireless card to operate in 
+  * [[en/users/Documentation/FAQ|FAQ]] Frequently asked questions 
+  * [[en/users/Documentation/iw|iw]] - new nl80211 based command line interface ([[en/developers/Documentation/Glossary|CLI]]) configuration utility 
+  * [[en/users/Documentation/module-parameters|wireless module parameters]] - documents the different 802.11 module parameters available 
+  * [[en/users/Documentation/rfkill|rfkill]] - simple tool for rfkill debugging/settings 
+  * [[en/developers/Regulatory/CRDA|crda]] - new central regulatory domain agent, nl80211 based userspace regulatory db agent 
+  * [[en/users/Documentation/hostapd|hostapd]] - hostapd is a //IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator// 
+  * [[en/users/Documentation/wpa_supplicant|wpa_supplicant]] - wpa_supplicant is a WPA Supplicant and SME (initiates MLME commands) 
+  * [[en/users/Documentation/WoWLAN|WoWLAN]] - Wake on Wireless LAN support 
+  * [[en/users/Documentation/Power-consumption|Power consumption]] - details of power consumption with 802.11 devices on Linux, covers IEEE 802.11 power savings, ASPM, and driver tweaks for ASPM, Dynamic power save, and pm-qos. 
+  * [[en/developers/WAPI|WAPI]] - China's alternative to 802.11i (now part of 802.11-2007), ISO voted yes... 
+  * [[en/developers/DFS|DFS]] - Design documentation for future DFS implementation in mac80211 
+  * [[en/users/Documentation/acs|ACS]] - Automatic Channel Selection support for Linux 
+  * [[en/developers/OpenWirelessMovement|Solutions on Linux for the Open Wireless Movement]] 
+  * [[http://linuxwimax.org/|WiMAX on Linux]] 
+
+
+===== YouTube Documentation =====
+    * [[http://www.youtube.com/playlist?p=PLA12950D8456F1818|Linux wireless support series - Baked: May 20 2011]] 
+    * [[http://www.youtube.com/watch?v=_yyFiLFx4Mg|RFC: 802.11 DFS support on mac80211 and ath9k]] - [[LinuxCon|LinuxCon]] 2011 
+    * [[http://www.youtube.com/watch?v=frvXN9pmLO4|802.11s on LInux mac80211]] - [[LinuxCon|LinuxCon]] 2011 
+    * [[http://www.youtube.com/watch?v=FzZsTd4Bj7I|wmediumd for mac80211_hwsim]] - [[LinuxCon|LinuxCon]] 2011 
+
+
+===== Wireless managers =====
+
+This is the list of available known wireless managers you can use in distributions 
+      * [[en/users/Documentation/NetworkManager|NetworkManager]] - GUI based connection manager with wireless support 
+      * [[en/users/Documentation/wicd|wicd]] - Simple GUI based connection manager with wireless support 
+      * [[en/users/Documentation/connman|connman]] - GUI based connection manager with wireless support, designed with embedded devices in mind 
+
+
+===== Wireless sniffers / intrusion testing / packet injection utilities =====
+        * [[http://www.wireshark.org/|wireshark]] - a packet analyzer 
+        * [[http://www.kismetwireless.net/|kismet]] - an 802.11 layer2 wireless network detector, sniffer, and intrusion detection system 
+        * [[en/users/Documentation/packetspammer|packetspammer]]- a mac80211 packet injection utility 
+        * [[http://www.aircrack-ng.org/|aircrack-ng]] - an 802.11 WEP and WPA-PSK keys intrusion testing program 
+        * [[http://w1.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=wlantest/inject.c;hb=HEAD|Test AP injection code]] 
+        * [[http://br1.einfach.org/tech/horst/|horst]] - lightweight 802.11 wireless LAN analyzer 
+
+
+===== Helping users and developers =====
+
+Please consider reading these sections to help developers help you more efficiently. 
+          * [[en/users/Documentation/Reporting_bugs|Reporting bugs]] - How to report a bug 
+          * [[en/developers/Documentation/mac80211/tracing|Tracing mac80211]] - how to trace mac80211 
+          * [[en/developers/Testing/wifi-test|wifi-test project]] - utilities to help test your wireless driver 
+          * [[en/users/Documentation/Fix_Propagation|Understanding bug fix propagation]] - should help to understand the flow of a fix 
+
+
+===== To the very curious user =====
+
+In case you want to read up on what things are being advanced within Linux wireless. This should help users become familiar with our latest developments. 
+            * [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - what are they? 
+            * [[en/developers/Documentation/mac80211|mac80211]] - New wireless driver API for [[en/developers/Documentation/Glossary|SoftMAC]] devices 
+            * [[en/developers/Documentation/cfg80211|cfg80211]] - new driver configuration API 
+            * [[en/developers/Documentation/nl80211|nl80211]] - new userspace <–> kernelspace wireless driver communication transport 
