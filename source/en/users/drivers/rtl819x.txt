@@ -1,0 +1,40 @@
+
+
+===== Realtek 802.11n drivers =====
+
+ 
+
+
+===== rtlwifi =====
+  * **rtl8192ce** is a PCI-E driver for RTL8192CE/RTL8188CE devices. 
+  * **rtl8192cu** is a USB driver for RTL8192CU/RTL8188CU devices.  
+  * **rtl8192de** is a PCI-E driver for RTL8192DE/RTL8188DE devices. 
+  * **rtl8192se** is a PCI-E driver for RTL8192SE/RTL8191SE devices. 
+  * **rtl8723ae** is a PCI-E driver for RTL8723AE devices. 
+  * **rtl8188ee** is a PCI-E driver for RTL8188EE devices.  
+  * **rtl8723be** is a PCI-E driver for RTL8723BE devices (**3.15+**). 
+  * **rtl8192su** is a USB driver for RTL8712U/RTL8192SU devices. (**WIP** : [[http://github.com/chunkeey/rtl8192su|http://github.com/chunkeey/rtl8192su]] ) 
+  * **rtl8821ae** is a PCI-E driver for RTL8821AE devices (**3.16+**). 
+  * **r8192ee** is a PCI-E driver for RTL8192EE devices (**3.16+**). 
+
+
+===== staging drivers =====
+    * **r8192e_pci** is a PCI-E driver for RTL8192E devices. 
+    * **r8712u** is a USB driver for RTL8712U/RTL8192SU devices, it's going to be replaced by [[https://github.com/chunkeey/rtl8192su|rtl8192su]].  
+    * **r8192u_usb** is a USB driver for RTL8192U devices.  
+    * **r8192du** is a USB driver for RTL8192DU devices. (**WIP** : [[http://github.com/lwfinger/rtl8192du|http://github.com/lwfinger/rtl8192du]] ) 
+    * **r8723au** is a USB driver for RTL8723AU devices (**3.15+**). 
+    * **r8188eu** is a USB driver for RTL8188EU devices. 
+    * **r8190_pci** is a PCI driver for [[http://www.realtek.com/products/productsView.aspx?Langid=1&PNid=41&PFid=9&Level=6&Conn=5&ProdID=174|RTL8190P]] devices (**WIP** : [[http://github.com/lwfinger/rtl8190p|http://github.com/lwfinger/rtl8190p]] ) 
+
+They are included in the **staging** tree at [[https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/|https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/]] and they are **NOT supported** by linux-wireless developers or mailing list. Instead ask for support in [[http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel|http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel]] . Maintainers are Greg Kroah-Hartman <[[mailto:greg@kroah.com|greg@kroah.com]]> and Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]>. 
+
+
+===== Hardware Donations =====
+
+If you get an unsupported device, you can donate it to the driver maintainer. For more info ask Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]>. 
+
+
+===== Firmware =====
+
+The firmware for those devices can be downloaded from: [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] 
