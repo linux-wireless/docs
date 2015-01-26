@@ -1,0 +1,74 @@
+
+Go back --> [[en/users/Drivers/ath10k|ath10k]] 
+
+ 
+
+
+===== ath10k firmware =====
+
+Firmware is temporalily available at [[https://github.com/kvalo/ath10k-firmware|https://github.com/kvalo/ath10k-firmware]] until it will be available from linux-firmware.git. 
+
+The firmware is searched from directory ath10k/QCA988X/hw2.0 under the system firmware directory, usually /lib/firmware. For example, here's a listing from an Ubuntu system where it's under /lib/firmware: 
+
+
+<code>$ ls -l /lib/firmware/ath10k/QCA988X/hw2.0/
+total 508
+-rwxr-xr-x 1 root root   2116 Oct 22 11:01 board.bin*
+-rw-r--r-- 1 root root 254564 Oct 22 11:01 firmware-2.bin
+-rwxr-xr-x 1 root root 249093 Oct 22 11:01 firmware.bin*
+-rwxr-xr-x 1 root root   5402 Oct 22 11:01 otp.bin*
+$</code>
+Description of the files: 
+
+  ; board.bin  : board file for the firmware 
+  ; firmware-2.bin  : embedded firmware file (includes both firmware and otp) for ath10k versions supporting FW API 2 
+  ; firmware.bin  : firmware file for older ath10k versions supporting only FW API 1 
+  ; otp.bin  : otp file for older ath10k versions supporting only FW API 1 
+
+===== Update firmware =====
+
+First download the firmware image from ath10k-firmware.git: 
+
+[[https://github.com/kvalo/ath10k-firmware/tree/master/|https://github.com/kvalo/ath10k-firmware/tree/master/]] 
+
+In this example we use firmware-2.bin_10.1.467.2-1 from 10.1 directory. Then just copy that file as firmware-2.bin to the ath10k firmware directory: 
+
+
+<code>cp firmware-2.bin_10.1.467.2-1 /lib/firmware/ath10k/QCA988X/hw2.0/firmware-2.bin</code>
+Then reload ath10k (or restart the system) and the new firmware is in use. 
+
+Note: In some distributions the firmware location can be different than /lib/firmware. 
+
+
+===== Firmware branches =====
+
+ath10k firmware has different branches, they are described below. 
+
+
+==== main branch ====
+
+Firmware versions 999.999.0.x. 
+
+Supports AP mode, STA mode, Ad-Hoc and P2P. But AP mode is not that well tested, especially problems with DFS. 
+
+
+==== 10.1 branch ====
+
+Firmware versions 10.1.x. 
+
+Branch focusing on AP mode. Supports DFS. STA mode works but not well tested. No Ad-Hoc or P2P support. 
+
+
+===== Firmware API versions =====
+
+Because firmware changes between versions we have introduced firmware API concept to ath10k. This makes it possible to support different versions of ath10k. 
+
+
+==== Firmware API 1 ====
+
+The first version. Firmware images are in separate files: firmware.bin and otp.bin. There's no FW IE support. Deprecated since March 2014. 
+
+
+==== Firmware API 2 ====
+
+Embedding both firmware and otp images into same file firmware-2.bin. Firmware meta data provided through FW IE. Added in commit 1a222435a dated Sep 27 2013, for Linux 3.13. 
