@@ -1,0 +1,53 @@
+
+
+===== rt2800pci =====
+
+Driver for [[http://www.mediatek.com|Ralink/MediaTek]] PCI devices RT2760, RT2790, RT2860, RT2880, RT2890 & RT3052. 
+
+ 
+
+
+===== available devices =====
+
+Please see the [[en/users/Drivers/rt2800pci/devices|device list]]. 
+  * [[http://rt2x00.serialmonkey.com/wiki/index.php/Hardware|http://rt2x00.serialmonkey.com/wiki/index.php/Hardware]] List of devices from the project site. 
+
+
+===== Unsupported chips =====
+    * [[http://www.mediatek.com/en/products/connectivity/wi-fi-new/pcnb/pcie/rt5592/|RT5592]], 802.11a/b/g/n 2T2R 2.4/5 GHz PCI Express Single Chip. (**WIP** Stanislaw Gruszka <[[mailto:stf_xl@wp.pl|stf_xl@wp.pl]]> : [[http://rt2x00.serialmonkey.com/pipermail/users_rt2x00.serialmonkey.com/2013-March/005765.html|http://rt2x00.serialmonkey.com/pipermail/users_rt2x00.serialmonkey.com/2013-March/005765.html]]) 
+
+The Ralink driver for RT5592 can be downloaded from: [[http://www.asus.com/Networking/PCEN53/HelpDesk_Download/|http://www.asus.com/Networking/PCEN53/HelpDesk_Download/]] (direct link: [[http://dlcdnet.asus.com/pub/ASUS/wireless/PCE-N53/Linux_PCE_N53_1008.zip|http://dlcdnet.asus.com/pub/ASUS/wireless/PCE-N53/Linux_PCE_N53_1008.zip]] ) 
+      * **MT7630E** 802.11b/g/n 1T1R 2.4 GHz Combo Card (Wireless PCI Express Minicard Module). (**WIP** Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]> : [[http://github.com/lwfinger/mt7630|http://github.com/lwfinger/mt7630]]) 
+      * **MT7662E/MT7612E** 802.11a/b/g/n/ac  2T2R 2.4/5 GHz PCI Express Single Chip (**WIP** Felix Fietkau <[[mailto:nbd@openwrt.org|nbd@openwrt.org]]> :[[https://github.com/openwrt/mt76|https://github.com/openwrt/mt76]]) 
+      * [[https://wikidevi.com/wiki/MediaTek|Any new MediaTek chip]]. [[MediaTek|MediaTek]] drivers can be downloaded from: [[http://www.mediatek.com/en/downloads/|http://www.mediatek.com/en/downloads/]] 
+
+
+===== features =====
+        * //TODO// 
+
+
+==== working ====
+          * Monitor Mode 
+          * Station Mode 
+          * AP Mode 
+          * TX aggregation 
+          * HW crypto 
+          * Multi BSS in AP mode 
+          * HT40 
+==== not working yet ====
+            * Automatic MAC address assignment for more than one AP interface 
+==== not supported ====
+              * //TODO// 
+
+
+===== TODO =====
+                * Warning "invalid TX_STA_FIFO content" gets issued sometimes, maybe only in conjunction with tx aggregation? Needs investigation. 
+===== device firmware =====
+                  * [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|rt2860.bin]] 
+                  * SoC devices (RT3050, RT3051 and RT3052) don't need firmware 
+===== support =====
+                    * [[http://rt2x00.serialmonkey.com/mailman/listinfo/users_rt2x00.serialmonkey.com|Mailing list]] 
+
+
+===== external links =====
+                      * [[http://rt2x00.serialmonkey.com/|rt2x00 project website]] 
