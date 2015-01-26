@@ -1,0 +1,31 @@
+
+
+
+===== Linux wireless support =====
+
+You have a few options if you are looking for support on Linux wireless. Below we document the different resources available to you. 
+
+
+===== FAQ =====
+
+Please take a look at the [[en/users/Documentation/FAQ|Frequently Asked Questions]] page to see if it already has an answer for your question. 
+
+
+===== Linux wireless user IRC channel =====
+
+We have an IRC channel where you can stumble in and ask any question you like as silly as it may sound. However, if you are new to IRC, it makes sense to read [[http://www.catb.org/~esr/faqs/smart-questions.html|How To Ask Questions The Smart Way]] beforehand. Also please take a look at the [[en/users/Documentation/FAQ|FAQ]]. 
+
+Do not ask for permission to ask a question in IRC, just ask it with all the information you have and wait for someone answering. 
+
+
+<code>Server: irc.freenode.net
+Channel: #linux-wireless</code>
+
+===== Linux wireless mailing list =====
+
+You can send question to the [[en/developers/MailingLists|Linux wireless mailing list]], however, you are highly encouraged to first check on the IRC channel above. Again, unless you're familiar with the mailing list, it makes sense to read [[http://www.catb.org/~esr/faqs/smart-questions.html|How To Ask Questions The Smart Way]] before you post. 
+
+
+===== Reporting bugs =====
+
+If you have a bug please read our [[en/users/Documentation/Reporting_bugs|Reporting bugs guideline]]. 
