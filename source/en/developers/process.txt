@@ -1,0 +1,127 @@
+
+
+===== Developer process =====
+
+This section documents the development process for 802.11 and the trees used. 
+
+ 
+
+
+===== Patch review process =====
+
+Patches for the 802.11 subsystem must be sent to John and posted to the [[en/developers/MailingLists|linux-wireless]] mailing list. For details of the patch format review the [[en/developers/Documentation/SubmittingPatches|patch submission guide for 802.11]] and our [[en/developers/Documentation/git-guide|git guide]]. Once posted the patches will go through a review process by the community. Anyone can post comments regarding your patch, you should try to be responsive and address any questions asked. 
+
+Your e-mails and replies to e-mails should use [[http://en.wikipedia.org/wiki/Posting_style#Bottom-posting|bottom posting style for replies]]. HTML e-mails are rejected by the [[en/developers/MailingLists|linux-wireless]] mailing list so be sure to use plain text. 
+
+The review process completes once no one has posted concerns, questions or comments, or explicitly has ACKed the patch. John will usually merge the patch the week the review process completes. 
+
+
+===== Maintainer chain =====
+
+802.11 development follows the usual Linux kernel development style and has one maintainer assigned to the entire subsystem. Apart from that we also have specific component maintainers for each major component part of the 802.11 subsystem and we also have specific driver maintainers. 
+
+The diagram below illustrates the chain of how patches get into Linux for 802.11: 
+
+**(Note: This diagram is out of date, some arrows are just wrong, e.g. wireless-next feeds wireless-testing, not the other way around)** {{802.11-tree-process-ext3.png}} 
+
+We detail below the maintainers an 802.11 patch usually goes through for inclusion into Linux. 
+
+
+===== The Linux kernel maintainer - Linus Torvalds =====
+
+[Image:http://www.linuxfoundation.org/sites/main/files/imagecache/user-medium/pictures/picture-71.jpg] 
+
+Linus maintains the Linux kernel as a whole. He receives patches from every major subsystem, a couple relevant examples are patches from David Miller for the Networking subsystem and patches from Greg Kroah-Hartman for the USB subsystem. 
+
+Linus makes stable [[http://kernel.org|kernel.org]] releases based off of this tree: 
+  * [[http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary|The linux-2.6.git tree]] 
+
+
+===== The linux-next integration testing tree maintainer - Stephen Rothwell =====
+
+{{Stephen_Rothwell-181x120.jpg}} 
+
+Stephen maintains a tree to help with the testing of patches which are to be eventually sent to Linus Torvalds for the next kernel release. If [[http://kernel.org|kernel.org]] indicates the latest stable kernel is 2.6.33 it means that the patches in Stephen's [[http://git.kernel.org/?p=linux/kernel/git/next/linux-next.git;a=summary|linux-next.git]] are patches which will likely end up being sent to Linus Torvalds for inclusion into the 2.6.34 kernel release. 
+    * [[http://git.kernel.org/?p=linux/kernel/git/next/linux-next.git;a=summary|linux-next.git]] - subsystem maintainers send their queued up patches to Stephen for integration and testing 
+    * [[http://linux.f-seidel.de/linux-next/pmwiki/pmwiki.php?n=Linux-next.FAQ|The linux-next FAQ]] 
+
+
+===== The Networking subsystem maintainer - David S. Miller =====
+
+{{david-80x120.jpg}} 
+
+Amongst other things David maintains the network subsystem for the Linux kernel. All networking subsystem maintainers send patch updates to David, this includes the 802.11 maintainer and the Bluetooth maintainer. 
+
+Relevant trees to 802.11 that David maintains: 
+      * [[http://git.kernel.org/?p=linux/kernel/git/davem/net-2.6.git;a=summary|Networking net-2.6.git tree]] - Used to send patches to Linus for the [[http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary|linux-2.6.git tree]] 
+      * [[http://git.kernel.org/?p=linux/kernel/git/davem/net-next-2.6.git;a=summary|Networking net-next-2.6.git tree]] - Used to send patches to Stephen for the [[http://git.kernel.org/?p=linux/kernel/git/next/linux-next.git;a=summary|linux-next.git tree]] 
+
+
+===== The 802.11 subsystem maintainer - John W. Linville =====
+
+[Image:http://people.redhat.com/linville/linville-2008-small.jpg] 
+
+[[http://people.redhat.com/linville/|John W. Linville]] is the Linux kernel 802.11 subsystem maintainer. As a maintainer he reads all patches posted to the [[en/developers/MailingLists|linux-wireless mailing list]], and once ready merges them into the development and stable trees. 
+
+John uses three trees for overall 802.11 maintenance: 
+        * wireless-testing.git 
+        * wireless-next-2.6.git 
+        * wireless-2.6.git The differences between these are explained below. 
+
+
+==== wireless-testing.git ====
+
+The [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=summary;|wireless-testing.git tree]] is a git tree that provides developers the chance to use a bootable kernel based on Linus' tree with all new 802.11 development patches. John merges first the wireless-2.6.git tree into this tree, and then merges the wireless-next.git tree into it. He resolves all conflicts along the way. 
+
+The history in wireless-testing is dirty. It contains crap like reverts only so that John can continue to pull cleanly from wireless-next-2.6 and wireless-2.6 even after John has had to rebase those other trees.  The reverts are done so that developers can use a linear tree, so you can simply git pull or git rebase on origin/master and continue with your development. Without these arrangements John would have to do lots of pointless fixups in a tree that will never be pulled by Linus anyway.  The ugly history is the alternative to rebasing, so that those who pull or rebase on origin/master can do so without git complaining. 
+
+The point of wireless-testing is to provide something between linux-2.6 and linux-next, something that is close to the stabilising release but with currently pending wireless patches.  It is not intended to be a basis for historical research.  Don't use it for that. 
+
+Developers should work off of this git tree for all 802.11 development. Developers can simply pull the tree for new updates if no changes have been made committed locally. If you do have changes committed locally you can rebase your tree on top of John's by doing the following instead of pulling: 
+
+
+<code>git fetch
+git rebase origin/master</code>
+Detailed changes for this tree: 
+          * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=history;f=drivers/net/wireless;|Driver changes]] 
+          * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=history;f=net/wireless;|Wireless core changes]] 
+          * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=history;f=net/mac80211;|mac80211 changes]] 
+
+
+==== wireless-next-2.6.git ====
+
+The wireless-next-2.6.git tree is used by John to push patches to the respective [[http://git.kernel.org/?p=linux/kernel/git/davem/net-next-2.6.git;a=summary|net-next-2.6.git tree]] maintained by David. For example if the latest stable kernel release is 2.6.33 then **Networking patches** for the next kernel release are queued in the [[http://git.kernel.org/?p=linux/kernel/git/davem/net-next-2.6.git;a=summary|David Miller's net-next-2.6.git tree]], and in this case it would be for the 2.6.34 kernel release. John pushes patches to David by referring to his own [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-next-2.6.git;a=summary|wireless-next-2.6.git tree]]. Prior to sending new changes to David John pull's David's tree into his own tree and addresses any merge conflicts. David's tree would have had the last batch updates John sent to David plus any new networking changes David has picked up from anyone else. David would merge the new 802.11 [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-next-2.6.git;a=summary|wireless-next-2.6.git tree]] changes and at that point the [[http://git.kernel.org/?p=linux/kernel/git/davem/net-next-2.6.git;a=summary|net-next-2.6.git tree]] becomes in synch with John's queue of 802.11 changes for the next kernel release. David Miller will eventually send his own set of queued up patches to Stephen for the [[http://git.kernel.org/?p=linux/kernel/git/next/linux-next.git;a=summary|linux-next.git]] tree. 
+            * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-next-2.6.git;a=history;f=drivers/net/wireless;|Driver changes]] 
+            * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-next-2.6.git;a=history;f=net/wireless;|Wireless core changes]] 
+            * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-next-2.6.git;a=history;f=net/mac80211;|mac80211 changes]] 
+
+
+==== wireless-2.6.git ====
+
+The [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-2.6.git;a=summary;|wireless-2.6.git tree]] is used to pushing wireless patches to the current -rc release of the Linux kernel. For example If the latest stable kernel release is 2.6.33, John will use his wireless-2.6.git tree to send updates to 2.6.34-rc releases. 
+              * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-2.6.git;a=history;f=drivers/net/wireless;|Driver changes]] 
+              * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-2.6.git;a=history;f=net/wireless;|Wireless core changes]] 
+              * [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-2.6.git;a=history;f=net/mac80211;|mac80211 changes]] 
+
+
+===== The mac80211 and cfg80211 maintainer - Johannes Berg =====
+
+{{johill-106x120.jpg}} 
+
+Johannes maintains the [[en/developers/Documentation/cfg80211|cfg80211]] and the [[en/developers/Documentation/mac80211|mac80211]] components of the 802.11 subsystem. This means patches for either mac80211 or cfg80211 should be addressed to him and that he will pro actively review them. 
+
+
+===== The compat-wireless maintainer - Luis R. Rodriguez =====
+
+{{mcgrof-107x141.jpg}} 
+
+Luis maintains [[en/users/Download|compat-wireless]] and the [[http://mcgrof.github.com/compat/|generic Linux kernel compatibility]] tree, used to provide tarballs of the 802.11 subsystem for both stable kernel releases and for bleeding edge releases based on the linux-next git tree. As of the 2.6.33 kernel release the compat-wireless tree now also provides backport for the Bluetooth subsystem as well as a few Ethernet drivers, check the [[en/users/Download|compat-wireless]] page for more information. 
+
+
+===== The 802.11 driver maintainers =====
+
+Each driver has its own set of maintainers and patches for each driver should be sent to them as well. These driver developers will pro actively review patches posted. See the [[en/developers/maintainers|802.11 driver maintainers page]] for details. 
+
+
+===== Other documentation/presentations =====
+                * [[overview.pdf|Johannes's presentation at UDS Karmic]] 
