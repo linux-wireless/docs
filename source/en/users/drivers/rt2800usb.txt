@@ -1,0 +1,45 @@
+
+
+===== rt2800usb =====
+
+Driver for [[http://www.mediatek.com|Ralink/MediaTek]] USB devices RT2770, RT2870, RT3070 RT3071, RT3072, RT3572. 
+
+ 
+
+
+===== available devices =====
+
+Please see the [[en/users/Drivers/rt2800usb/devices|device list]]. 
+  * [[http://rt2x00.serialmonkey.com/wiki/index.php/Hardware|http://rt2x00.serialmonkey.com/wiki/index.php/Hardware]] List of devices from the project site. 
+
+
+===== Unsupported chips =====
+    * [[https://wikidevi.com/wiki/MediaTek|Any new MediaTek chip]]. [[MediaTek|MediaTek]] drivers can be downloaded from: [[http://www.mediatek.com/en/downloads/|http://www.mediatek.com/en/downloads/]] 
+
+
+===== features =====
+      * //TODO// 
+
+
+==== working ====
+        * //TODO// 
+
+
+==== not working yet ====
+          * Broken Hardware encryption (According to [[http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=d53d9e67b55f6a9fc3f836c5c392eb41ce5676f4|commit adding  rt2800usb]]) 
+
+
+==== not supported ====
+            * //TODO// 
+
+
+===== device firmware =====
+              * [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|rt2870.bin]] 
+
+
+===== support =====
+                * [[http://rt2x00.serialmonkey.com/mailman/listinfo/users_rt2x00.serialmonkey.com|Mailing list]] 
+
+
+===== external links =====
+                  * [[http://rt2x00.serialmonkey.com/|rt2x00 project website]] 
