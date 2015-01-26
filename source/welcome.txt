@@ -1,5 +1,3 @@
-
-
 ===== Welcome to the official Linux Wireless wiki =====
 
 This is the main source of Documentation for the Linux wireless (IEEE-802.11) subsystem. This wiki features information for end-users, developers and vendors. 
