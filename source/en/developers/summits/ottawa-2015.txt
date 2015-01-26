@@ -1,0 +1,19 @@
+
+This event is going to be a 'workshop' at the [[https://www.netdev01.org/|netdev 0.1 conference]]. 
+
+Suggested topics: 
+  * Is wireless-testing still useful? 
+  * statistics - what do people need, what is useful in the current counters, what is pointless, etc.? 
+  * state of 802.11s implementation 
+  * Bob's wmediumd 
+  * brief look at rate statistics (johannes) 
+  * Intel TCP/remote wake demo? 
+  * secure firmware download (Kathy) 
+  * congestion control / "bufferbloat" 
+  * ... (please suggest more) Planning to attend: 
+    * Johannes Berg 
+    * John Linville 
+    * Kalle Valo 
+    * Bob Copeland 
+    * Kathy Giori 
+    * Avery Pennarun 
