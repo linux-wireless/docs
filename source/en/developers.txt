@@ -1,0 +1,17 @@
+
+
+===== Information for Developers =====
+
+This section of the site features information for developers, both for those coming to Linux wireless for the first time as well as those who work with it a lot. 
+  * [[en/developers/Documentation|Linux wireless developer documentation]] 
+  * [[en/developers/MailingLists|mailing list]] to follow current development 
+  * [[en/developers/todo-list|todo-list]] - our current development TODO list 
+  * [[todo|documentation todo list]] - our website TODO list 
+  * [[CertificationIdeas|Certification Ideas]] - we are considering some sort of certification sticker thing 
+  * [[en/developers/Testing|Testing]] - plans for QA 
+  * [[en/developers/Regulatory|Regulatory database & information]] 
+  * [[en/developers/GSoC|Linux wireless Google Summer of Code projects]] 
+  * [[en/developers/Brainstorming|Brainstorming pages]] 
+  * [[en/developers/Summits|Wireless Developer Summits]] 
+  * [[en/developers/p2p|P2P / Wi-Fi Direct]] 
+  * [[en/developers/bufferbloat|Bufferbloat with wireless devices]] 
