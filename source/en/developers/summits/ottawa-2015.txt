@@ -10,10 +10,12 @@ Suggested topics:
   * Intel TCP/remote wake demo? 
   * secure firmware download (Kathy) 
   * congestion control / "bufferbloat" 
-  * ... (please suggest more) Planning to attend: 
-    * Johannes Berg 
-    * John Linville 
-    * Kalle Valo 
-    * Bob Copeland 
-    * Kathy Giori 
-    * Avery Pennarun 
+  * ... (please suggest more)
+
+Planning to attend: 
+  * Johannes Berg 
+  * John Linville 
+  * Kalle Valo 
+  * Bob Copeland 
+  * Kathy Giori 
+  * Avery Pennarun
