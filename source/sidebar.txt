@@ -1,16 +1,14 @@
-===== Users =====
+** [[en/Users|Users]] **
   * [[en/Users|main page]]
   * [[en/users/Support|Support]]
   * [[en/users/Drivers|Drivers]]
   * [[en/users/Devices|Devices]]
   * [[en/users/Download|Download]]
   * [[en/users/Documentation|Documentation]]
-===== Vendors =====
-  * [[en/Vendors|main page]]
+** [[en/Vendors|Vendors]] **
   * [[en/vendors/VendorSupport|Vendor Support]]
   * [[en/vendors/DriverDevelopment|Driver Development]]
-===== Developers =====
-  * [[en/Developers|main page]]
+** [[en/Developers|Developers]] **
   * [[en/developers/documentation|Documentation]]
   * [[en/developers/MailingLists|mailing lists]]
   * [[en/developers/todo-list|todo list]]
