@@ -14,69 +14,70 @@ See also:
 
 
 
-|**Driver**|**Manufacturer**|**cfg80211**\\ |**AP**\\ |**IBSS**\\ |**mesh**\\ |**monitor**\\ |**PHY modes**|**Buses**|
-|[[en/users/Drivers/adm8211|adm8211]]|ADMtek/Infineon|yes|no|no|no|?|B|PCI|
-|[[en/users/Drivers/airo|airo]]|Aironet/Cisco|no|?|?|?|?|B|PCI / PCMCIA|
-|[[en/users/Drivers/ar5523|ar5523]]|Atheros|yes|no|no|no|yes|A(2)/B/G|USB|
-|[[en/users/Drivers/at76c50x-usb|at76c50x-usb]]|Atmel|yes|no|no|no|no|B|USB|
-|[[en/users/Drivers/ath5k|ath5k]]|Atheros|yes|yes|yes|yes|yes|A/B/G|PCI / PCI-E / PCMCIA|
-|[[en/users/Drivers/ath6kl|ath6kl]]|Atheros|yes|no|yes|no|no|A/B/G/N|SDIO|
-|[[en/users/Drivers/ath9k|ath9k]]|Atheros|yes|yes|yes|yes|yes|A/B/G/N|PCI / PCI-E / AHB / PCMCIA|
-|[[en/users/Drivers/ath9k_htc|ath9k_htc]]|Atheros|yes|yes|yes|yes|yes|B/G/N|USB|
-|[[en/users/Drivers/ath10k|ath10k]]|Atheros|yes|?|?|?|?|AC|N|
-|[[en/users/Drivers/atmel|atmel]]|Atmel|no|?|?|?|?|B|PCI / PCMCIA|
-|[[en/users/Drivers/b43|b43]]|Broadcom|yes|yes|yes|yes|yes|A(2)/B/G|SSB / PCI / PCI-E / PCMCIA|
-|[[en/users/Drivers/b43|b43legacy]]|Broadcom|yes|yes|yes|yes|yes|A(2)/B/G|PCI / SSB|
-|[[en/users/Drivers/brcm80211|brcmfmac]]|Broadcom|yes|yes|yes|no|no|A(1)/B/G/N|USB / SDIO|
-|[[en/users/Drivers/brcm80211|brcmsmac]]|Broadcom|yes|yes|no|no|yes|A(1)/B/G/N|PCI / AXI|
-|[[en/users/Drivers/carl9170|carl9170]]|ZyDAS/Atheros|yes|yes|yes|yes|yes|A(1)/B/G/N|USB|
-|[[en/users/Drivers/cw1200|cw1200]]|ST-Ericsson|yes|?|?|?|?|A/B/G/N|SPI / SDIO|
-|[[http://w1.fi/|hostap]]|Intersil/Conexant|no|?|?|?|?|B|PCI / PCMCIA|
-|[[en/users/Drivers/ipw2100|ipw2100]]|Intel|no|no|yes|no|no|B|PCI|
-|[[en/users/Drivers/ipw2200|ipw2200]]|Intel|no|no (3)|yes|no|no|A/B/G|PCI|
-|[[en/users/Drivers/iwlegacy|iwlegacy]]|Intel|yes|no|yes|no|no|A/B/G|PCI-E|
-|[[en/users/Drivers/iwlwifi|iwlwifi]]|Intel|yes|yes (6)|yes|no|yes|A/B/G/N/AC|PCI-E|
-|[[en/users/Drivers/libertas|libertas]]|Marvell|no|no|yes|yes (4)|no|B/G|USB / PCMCIA / SDIO / GSPI|
-|[[en/users/Drivers/libertastf|libertas_tf]]|Marvell|yes|yes|no|yes|?|B/G|USB|
-|[[en/users/Drivers/mac80211_hwsim|mac80211_hwsim]]|Jouni|yes|yes|yes|no|yes|A/B/G/N|NONE!|
-|[[en/users/Drivers/mwifiex|mwifiex]]|Marvell|yes|yes|yes|?|?|A/B/G/N|SDIO / PCI-E / USB|
-|[[en/users/Drivers/mwl8k|mwl8k]]|Marvell|yes|yes|?|?|yes|A/B/G/N|PCI|
-|[[en/users/Drivers/orinoco|orinoco]]|Agere/Intersil/Symbol|yes|no|yes|no|yes|B|PCI / PCMCIA / USB|
-|[[en/users/Drivers/p54|p54pci]]|Intersil/Conexant|yes|yes|yes|yes|yes|A(1)/B/G|PCI / PCMCIA|
-|[[en/users/Drivers/p54|p54spi]]|Conexant/ST-NXP|yes|yes|yes|yes|yes|A(1)/B/G|SPI|
-|[[en/users/Drivers/p54|p54usb]]|Intersil/Conexant|yes|yes|yes|yes|yes|A(1)/B/G|USB|
-|[[http://www.linux-wlan.org/|** prism2_usb]]|Intersil/Conexant|yes|?|?|?|?|B|USB|
-|[[en/users/Drivers/rtl819x|** r8192e_pci]]|Realtek|no|?|?|?|?|B/G/N|PCI-E|
-|[[en/users/Drivers/rtl819x|** r8192u_usb]]|Realtek|no|?|?|?|?|B/G/N|USB|
-|[[en/users/Drivers/rtl819x|** r8712u]]|Realtek|no|?|?|?|?|B/G/N|USB|
-|[[en/users/Drivers/ray_cs|ray_cs]]|Raytheon|no|?|?|?|?|pre802.11|PCMCIA|
-|[[en/users/Drivers/rndis_wlan|rndis_wlan]]|Broadcom|yes|no|yes|no|no|B/G|USB|
-|[[en/users/Drivers/rt61pci|rt61pci]]|Ralink|yes|yes|yes|no|yes|A(1)/B/G|PCI|
-|[[en/users/Drivers/rt73usb|rt73usb]]|Ralink|yes|yes|yes|no|yes|A(1)/B/G|USB|
-|[[en/users/Drivers/rt2400pci|rt2400pci]]|Ralink|yes|yes|yes|no|yes|B|PCI|
-|[[en/users/Drivers/rt2500pci|rt2500pci]]|Ralink|yes|yes|yes|no|yes|A(1)/B/G|PCI|
-|[[en/users/Drivers/rt2500usb|rt2500usb]]|Ralink|yes|yes|yes|no|yes|A(1)/B/G|USB|
-|[[en/users/Drivers/rt2800pci|rt2800pci]]|Ralink|yes|yes|?|?|yes|A(1)/B/G/N|PCI|
-|[[en/users/Drivers/rt2800usb|rt2800usb]]|Ralink|yes|yes|yes|yes(5)|yes|A(1)/B/G/N|USB|
-|[[en/users/Drivers/rtl8187|rtl8180]]|Realtek|yes|no|no|no|?|B/G|PCI|
-|[[en/users/Drivers/rtl8187|rtl8187]]|Realtek|yes|no|yes|no|yes|B/G|USB|
-|[[en/users/Drivers/rtl819x|rtl8188ee]]|Realtek|yes|?|?|?|?|B/G/N|PCI-E|
-|[[en/users/Drivers/rtl819x|rtl8192ce]]|Realtek|yes|?|?|?|?|B/G/N|PCI-E|
-|[[en/users/Drivers/rtl819x|rtl8192cu]]|Realtek|yes|?|?|?|?|B/G/N|USB|
-|[[en/users/Drivers/rtl819x|rtl8192de]]|Realtek|yes|?|?|?|?|B/G/N|PCI-E|
-|[[en/users/Drivers/rtl819x|rtl8192se]]|Realtek|yes|?|?|?|?|B/G/N|PCI-E|
-|[[en/users/Drivers/rtl819x|rtl8723ae]]|Realtek|yes|?|?|?|?|B/G/N|PCI-E|
-|[[en/users/Drivers/vt665x| ** vt6655]]|VIA|no|?|?|?|?|A/B/G|PCI|
-|[[en/users/Drivers/vt665x|vt6656]]|VIA|yes|yes|yes|?|?|A/B/G|USB|
-|[[en/users/Drivers/wil6210|wil6210]]|Atheros|yes|yes|no|no|yes|AD|PCI-E|
-|[[http://code.google.com/p/winbondport/|** winbond]]|Winbond|yes|?|?|?|?|B|USB|
-|[[en/users/Drivers/wl1251|wl1251]]|Texas Instruments|yes|no|yes|?|yes|B/G|SPI / SDIO|
-|[[en/users/Drivers/wl12xx|wl12xx]]|Texas Instruments|yes|yes|yes|no|no|A(1)/B/G/N|SPI / SDIO|
-|[[en/users/Drivers/wl18xx|wl18xx]]|Texas Instruments|yes|?|?|?|?|?|?|
-|[[en/users/Drivers/wl3501_cs|wl3501_cs]]|Z-Com|no|?|?|?|?|pre802.11|PCMCIA|
-|[[en/users/Drivers/wlags49_h2|** wlags49_h2]]|Lucent/Agere|no|?|?|?|?|B/G|PCI / PCMCIA|
-|[[en/users/Drivers/zd1201|zd1201]]|ZyDAS/Atheros|no|?|?|?|?|B|USB|
-|[[en/users/Drivers/zd1211rw|zd1211rw]]|ZyDAS/Atheros|yes|yes|yes|yes|yes|A(2)/B/G|USB|
+| **Driver**                                            | **Manufacturer**       | **cfg80211**\\  | **AP**\\  | **IBSS**\\  | **mesh**\\  | **monitor**\\  | **PHY modes**  | **Buses**                   |
+| [[en/users/Drivers/adm8211|adm8211]]                  | ADMtek/Infineon        | yes             | no        | no          | no          | ?              | B              | PCI                         |
+| [[en/users/Drivers/airo|airo]]                        | Aironet/Cisco          | no              | ?         | ?           | ?           | ?              | B              | PCI / PCMCIA                |
+| [[en/users/Drivers/ar5523|ar5523]]                    | Atheros                | yes             | no        | no          | no          | yes            | A(2)/B/G       | USB                         |
+| [[en/users/Drivers/at76c50x-usb|at76c50x-usb]]        | Atmel                  | yes             | no        | no          | no          | no             | B              | USB                         |
+| [[en/users/Drivers/ath5k|ath5k]]                      | Atheros                | yes             | yes       | yes         | yes         | yes            | A/B/G          | PCI / PCI-E / PCMCIA        |
+| [[en/users/Drivers/ath6kl|ath6kl]]                    | Atheros                | yes             | no        | yes         | no          | no             | A/B/G/N        | SDIO                        |
+| [[en/users/Drivers/ath9k|ath9k]]                      | Atheros                | yes             | yes       | yes         | yes         | yes            | A/B/G/N        | PCI / PCI-E / AHB / PCMCIA  |
+| [[en/users/Drivers/ath9k_htc|ath9k_htc]]              | Atheros                | yes             | yes       | yes         | yes         | yes            | B/G/N          | USB                         |
+| [[en/users/Drivers/ath10k|ath10k]]                    | Atheros                | yes             | ?         | ?           | ?           | ?              | AC             | N                           |
+| [[en/users/Drivers/atmel|atmel]]                      | Atmel                  | no              | ?         | ?           | ?           | ?              | B              | PCI / PCMCIA                |
+| [[en/users/Drivers/b43|b43]]                          | Broadcom               | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | SSB / PCI / PCI-E / PCMCIA  |
+| [[en/users/Drivers/b43|b43legacy]]                    | Broadcom               | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | PCI / SSB                   |
+| [[en/users/Drivers/brcm80211|brcmfmac]]               | Broadcom               | yes             | yes       | yes         | no          | no             | A(1)/B/G/N/AC  | USB / SDIO / PCI-E          |
+| [[en/users/Drivers/brcm80211|brcmsmac]]               | Broadcom               | yes             | yes       | no          | no          | yes            | A(1)/B/G/N     | PCI-E / AXI                 |
+| [[en/users/Drivers/carl9170|carl9170]]                | ZyDAS/Atheros          | yes             | yes       | yes         | yes         | yes            | A(1)/B/G/N     | USB                         |
+| [[en/users/Drivers/cw1200|cw1200]]                    | ST-Ericsson            | yes             | ?         | ?           | ?           | ?              | A/B/G/N        | SPI / SDIO                  |
+| [[http://w1.fi/|hostap]]                              | Intersil/Conexant      | no              | ?         | ?           | ?           | ?              | B              | PCI / PCMCIA                |
+| [[en/users/Drivers/ipw2100|ipw2100]]                  | Intel                  | no              | no        | yes         | no          | no             | B              | PCI                         |
+| [[en/users/Drivers/ipw2200|ipw2200]]                  | Intel                  | no              | no (3)    | yes         | no          | no             | A/B/G          | PCI                         |
+| [[en/users/Drivers/iwlegacy|iwlegacy]]                | Intel                  | yes             | no        | yes         | no          | no             | A/B/G          | PCI-E                       |
+| [[en/users/Drivers/iwlwifi|iwlwifi]]                  | Intel                  | yes             | yes (6)   | yes         | no          | yes            | A/B/G/N/AC     | PCI-E                       |
+| [[en/users/Drivers/libertas|libertas]]                | Marvell                | no              | no        | yes         | yes (4)     | no             | B/G            | USB / PCMCIA / SDIO / GSPI  |
+| [[en/users/Drivers/libertastf|libertas_tf]]           | Marvell                | yes             | yes       | no          | yes         | ?              | B/G            | USB                         |
+| [[en/users/Drivers/mac80211_hwsim|mac80211_hwsim]]    | Jouni                  | yes             | yes       | yes         | no          | yes            | A/B/G/N        | NONE!                       |
+| [[en/users/Drivers/mwifiex|mwifiex]]                  | Marvell                | yes             | yes       | yes         | ?           | ?              | A/B/G/N        | SDIO / PCI-E / USB          |
+| [[en/users/Drivers/mwl8k|mwl8k]]                      | Marvell                | yes             | yes       | ?           | ?           | yes            | A/B/G/N        | PCI                         |
+| [[en/users/Drivers/orinoco|orinoco]]                  | Agere/Intersil/Symbol  | yes             | no        | yes         | no          | yes            | B              | PCI / PCMCIA / USB          |
+| [[en/users/Drivers/p54|p54pci]]                       | Intersil/Conexant      | yes             | yes       | yes         | yes         | yes            | A(1)/B/G       | PCI / PCMCIA                |
+| [[en/users/Drivers/p54|p54spi]]                       | Conexant/ST-NXP        | yes             | yes       | yes         | yes         | yes            | A(1)/B/G       | SPI                         |
+| [[en/users/Drivers/p54|p54usb]]                       | Intersil/Conexant      | yes             | yes       | yes         | yes         | yes            | A(1)/B/G       | USB                         |
+| [[http://www.linux-wlan.org/|** prism2_usb]]          | Intersil/Conexant      | yes             | ?         | ?           | ?           | ?              | B              | USB                         |
+| [[en/users/Drivers/rtl819x|** r8192e_pci]]            | Realtek                | no              | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|** r8192u_usb]]            | Realtek                | no              | ?         | ?           | ?           | ?              | B/G/N          | USB                         |
+| [[en/users/Drivers/rtl819x|** r8712u]]                | Realtek                | no              | ?         | ?           | ?           | ?              | B/G/N          | USB                         |
+| [[en/users/Drivers/ray_cs|ray_cs]]                    | Raytheon               | no              | ?         | ?           | ?           | ?              | pre802.11      | PCMCIA                      |
+| [[en/users/Drivers/rndis_wlan|rndis_wlan]]            | Broadcom               | yes             | no        | yes         | no          | no             | B/G            | USB                         |
+| [[en/users/Drivers/rt61pci|rt61pci]]                  | Ralink                 | yes             | yes       | yes         | no          | yes            | A(1)/B/G       | PCI                         |
+| [[en/users/Drivers/rt73usb|rt73usb]]                  | Ralink                 | yes             | yes       | yes         | no          | yes            | A(1)/B/G       | USB                         |
+| [[en/users/Drivers/rt2400pci|rt2400pci]]              | Ralink                 | yes             | yes       | yes         | no          | yes            | B              | PCI                         |
+| [[en/users/Drivers/rt2500pci|rt2500pci]]              | Ralink                 | yes             | yes       | yes         | no          | yes            | A(1)/B/G       | PCI                         |
+| [[en/users/Drivers/rt2500usb|rt2500usb]]              | Ralink                 | yes             | yes       | yes         | no          | yes            | A(1)/B/G       | USB                         |
+| [[en/users/Drivers/rt2800pci|rt2800pci]]              | Ralink                 | yes             | yes       | ?           | ?           | yes            | A(1)/B/G/N     | PCI                         |
+| [[en/users/Drivers/rt2800usb|rt2800usb]]              | Ralink                 | yes             | yes       | yes         | yes(5)      | yes            | A(1)/B/G/N     | USB                         |
+| [[en/users/Drivers/rtl8187|rtl8180]]                  | Realtek                | yes             | no        | no          | no          | ?              | B/G            | PCI                         |
+| [[en/users/Drivers/rtl8187|rtl8187]]                  | Realtek                | yes             | no        | yes         | no          | yes            | B/G            | USB                         |
+| [[en/users/Drivers/rtl819x|rtl8188ee]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|rtl8192ce]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|rtl8192cu]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | USB                         |
+| [[en/users/Drivers/rtl819x|rtl8192de]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|rtl8192se]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|rtl8723ae]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/vt665x| ** vt6655]]                | VIA                    | no              | ?         | ?           | ?           | ?              | A/B/G          | PCI                         |
+| [[en/users/Drivers/vt665x|vt6656]]                    | VIA                    | yes             | yes       | yes         | ?           | ?              | A/B/G          | USB                         |
+| [[en/users/Drivers/wil6210|wil6210]]                  | Atheros                | yes             | yes       | no          | no          | yes            | AD             | PCI-E                       |
+| [[http://code.google.com/p/winbondport/|** winbond]]  | Winbond                | yes             | ?         | ?           | ?           | ?              | B              | USB                         |
+| [[en/users/Drivers/wl1251|wl1251]]                    | Texas Instruments      | yes             | no        | yes         | ?           | yes            | B/G            | SPI / SDIO                  |
+| [[en/users/Drivers/wl12xx|wl12xx]]                    | Texas Instruments      | yes             | yes       | yes         | no          | no             | A(1)/B/G/N     | SPI / SDIO                  |
+| [[en/users/Drivers/wl18xx|wl18xx]]                    | Texas Instruments      | yes             | ?         | ?           | ?           | ?              | ?              | ?                           |
+| [[en/users/Drivers/wl3501_cs|wl3501_cs]]              | Z-Com                  | no              | ?         | ?           | ?           | ?              | pre802.11      | PCMCIA                      |
+| [[en/users/Drivers/wlags49_h2|** wlags49_h2]]         | Lucent/Agere           | no              | ?         | ?           | ?           | ?              | B/G            | PCI / PCMCIA                |
+| [[en/users/Drivers/zd1201|zd1201]]                    | ZyDAS/Atheros          | no              | ?         | ?           | ?           | ?              | B              | USB                         |
+| [[en/users/Drivers/zd1211rw|zd1211rw]]                | ZyDAS/Atheros          | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | USB                         |
+
 
 Note: //**// **staging drivers** 
 
