@@ -74,7 +74,3 @@ Compex officially says that this card is not supported [[http://www.compex.com.s
 ath10k does NOT support older QCA98xx hw1.0 chips found, for example, from these devices:
 
   * QCA9880 Version 1 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link WDR-7500 v2 and Archer C7 v1.x]]
-
-===== Statistics on contributions =====
-
-Visit the ath10k contribution graphs. You can help keep this up to date if you like. If interested contact the ath10k driver maintainers.
