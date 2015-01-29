@@ -27,7 +27,7 @@ See also:
 |[[en/users/Drivers/atmel|atmel]]|Atmel|no|?|?|?|?|B|PCI / PCMCIA|
 |[[en/users/Drivers/b43|b43]]|Broadcom|yes|yes|yes|yes|yes|A(2)/B/G|SSB / PCI / PCI-E / PCMCIA|
 |[[en/users/Drivers/b43|b43legacy]]|Broadcom|yes|yes|yes|yes|yes|A(2)/B/G|PCI / SSB|
-|[[en/users/Drivers/brcm80211|brcmfmac]]|Broadcom|yes|no|no|no|no|A(1)/B/G/N|USB / SDIO|
+|[[en/users/Drivers/brcm80211|brcmfmac]]|Broadcom|yes|yes|yes|no|no|A(1)/B/G/N|USB / SDIO|
 |[[en/users/Drivers/brcm80211|brcmsmac]]|Broadcom|yes|yes|no|no|yes|A(1)/B/G/N|PCI / AXI|
 |[[en/users/Drivers/carl9170|carl9170]]|ZyDAS/Atheros|yes|yes|yes|yes|yes|A(1)/B/G/N|USB|
 |[[en/users/Drivers/cw1200|cw1200]]|ST-Ericsson|yes|?|?|?|?|A/B/G/N|SPI / SDIO|
