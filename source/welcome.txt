@@ -4,7 +4,7 @@ This is the main source of Documentation for the Linux wireless (IEEE-802.11) su
 
 This site covers all the new 802.11 [[en/users/Drivers|drivers]], the new core [[en/developers/Documentation/mac80211|mac80211]] and [[en/developers/Documentation/cfg80211|cfg80211]] components along with the new userspace and in-kernel [[en/developers/Documentation/nl80211|nl80211]] configuration interface. [[en/users/Documentation|New nl80211 userspace]] applications are also documented. 
 
-If you want to keep track of the latest updates to these pages, please refer to our [[RecentChanges|RecentChanges]] page or get it through [[RecentChanges|RSS]]. 
+If you want to keep track of the latest updates to these pages, please refer to our [[?do=recent|Recent Changes]] page or get it through [[/feed.php|RSS]]. 
 
 
 
