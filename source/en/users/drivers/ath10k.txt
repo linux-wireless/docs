@@ -22,6 +22,7 @@ The ath10k driver is located under drivers/net/wireless/ath/ath10k directory. To
 
 ===== News =====
 
+  * 2015-01-27 QCA6174 support added, will be in 3.20.
   * 2013-09-02 Linux 3.11 released, the first kernel release with ath10k
   * 2013-07-14 ath10k merged into Linux 3.11-rc1
   * 2013-06-01 review v2: http://marc.info/?l=linux-wireless&m=137008586705509&w=2
