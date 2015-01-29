@@ -55,25 +55,25 @@ Please send bug reports to the mailing list <ath10k@lists.infradead.org>
 
 ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a list of known products:
 
-  * QCA9882 Version 2 found in Compex WLE600V5-27 11ac 2x2 miniPCIe Wireless Module
-  * QCA9890 Version 2 found in A family of high powered/extended temp radio modules from Doodle Labs
-  * QCA9880 Version 2 found in Compex acWave: WPJ344 - supports 802.11ac radio
-  * QCA9880 Version 2 found in Compex acWave: WLE900V5-18
-  * QCA9880 Version 2 found in Compex acWave: WLE900V5-23
-  * QCA9880 Version 2 found in Compex acWave: WLE900VX 1
-  * QCA9880 Version 2 found in Unex: DAXA-O1
-  * QCA9882 Version 2 found in Compex acWave: WLE600V5-18
-  * QCA9882 Version 2 found in Compex acWave: WLE600V5-23
-  * QCA9880 Version 2 found in TP-Link : Archer C7 v2.x
-  * QCA9880 Version 2 found in TP-Link : WDR7500 v3.0
+  * QCA9882 Version 2 found in [[http://www.compex.com.sg:809/Datasheets/WLE600V5-27_Dsv1.0.4-141010-I.pdf|Compex WLE600V5-27 11ac 2x2 miniPCIe Wireless Module]]
+  * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of high powered/extended temp radio modules from Doodle Labs]]
+  * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/compex/wpj344|Compex acWave: WPJ344 - supports 802.11ac radio]]
+  * QCA9880 Version 2 found in [[http://www.compex.com.sg/productdetailinfo.asp?model=WLE900V5-18&acc1Panel=1|Compex acWave: WLE900V5-18]]
+  * QCA9880 Version 2 found in [[http://www.compex.com.sg/productdetailinfo.asp?model=WLE900V5-23&acc1Panel=1|Compex acWave: WLE900V5-23]]
+  * QCA9880 Version 2 found in [[http://www.compex.com.sg/productdetailinfo.asp?model=WLE900VX&acc1Panel=1|Compex acWave: WLE900VX]] [1]
+  * QCA9880 Version 2 found in [[http://www.unex.com.tw/product/daxa-o1|Unex: DAXA-O1]]
+  * QCA9882 Version 2 found in [[http://www.compex.com.sg/productdetailinfo.asp?model=WLE600V5-18&acc1Panel=1|Compex acWave: WLE600V5-18]]
+  * QCA9882 Version 2 found in [[http://www.compex.com.sg/productdetailinfo.asp?model=WLE600V5-23&acc1Panel=1|Compex acWave: WLE600V5-23]]
+  * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : Archer C7 v2.x]]
+  * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : WDR7500 v3.0]]
 
-1 Some of Compex WLE900VX fail to enumerate as PCI device, probably for an electric issue.
+[1] Some of Compex WLE900VX fail to enumerate as PCI device, probably for an electric issue.
 Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821 
-Compex officially says that this card is not supported because drivers aren't released, but really working ones exist.
+Compex officially says that this card is not supported [[http://www.compex.com.sg:809/forum/topic.asp?TOPIC_ID=2391|because drivers aren't released]], but really working ones exist.
 
 ath10k does NOT support older QCA98xx hw1.0 chips found, for example, from these devices:
 
-  * QCA9880 Version 1 found in TP-Link WDR-7500 v2 and Archer C7 v1.x
+  * QCA9880 Version 1 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link WDR-7500 v2 and Archer C7 v1.x]]
 
 ===== Statistics on contributions =====
 
