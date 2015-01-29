@@ -2,12 +2,9 @@
 
 ===== Supported devices =====
 
-We try to maintain lists of supported hardware for each driver, and here collect them regardless of drivers: 
-  * [[en/users/Devices/PCI|PCI devices (that includes Cardbus, Mini-PCI and PCI Express)]] 
-  * [[en/users/Devices/USB|USB devices]] 
-  * [[en/users/Devices/PCMCIA|PCMCIA (not Cardbus) devices]] 
+We try to maintain lists of supported hardware for each driver, so there's no combined information here.
 
-Unfortunately not all drivers have their information on this site so all three lists are incomplete. 
+TODO: add a list of driver device pages here? We no longer have a macro to collect it all into one big list as we used to have.
 
 
 ===== Looking for ... =====
