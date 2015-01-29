@@ -19,3 +19,4 @@ Planning to attend:
   * Bob Copeland 
   * Kathy Giori 
   * Avery Pennarun
+  * Jouni Malinen
