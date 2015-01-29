@@ -79,7 +79,7 @@ See also:
 | [[en/users/Drivers/zd1211rw|zd1211rw]]                | ZyDAS/Atheros          | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | USB                         |
 
 
-Note: //**// **staging drivers** 
+Note: %%**%% **staging drivers** 
 
 
 ===== Out of the tree drivers(Unsupported) =====
