@@ -50,6 +50,3 @@
                     * info on test coverage 
                     * tests themselves need to be documented 
                     * instructions how to run tests 
-===== wireless.kernel.org site =====
-                      * fix CSS colours, for example link colours (if you want to start, look at the files in [[moin/linuxwireless/css|moin/linuxwireless/css/]] and send diffs to ) 
-                      * fix print view to include a black&white logo 
