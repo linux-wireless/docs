@@ -1,10 +1,17 @@
 ===== Users =====
+  * [[en/users/Users|main page]]
   * [[en/users/Support|Support]]
   * [[en/users/Drivers|Drivers]]
   * [[en/users/Devices|Devices]]
   * [[en/users/Download|Download]]
   * [[en/users/Documentation|Documentation]]
 ===== Vendors =====
-  * 
+  * [[en/users/Vendors|main page]]
+  * [[en/developers/todo list|todo list]]
+  * [[en/developers/mac80211|mac80211]]
+  * [[en/developers/cfg80211|cfg80211]]
+  * [[en/developers/specs|specs]]
+  * [[en/developers/MailingLists|mailing lists]]
+  * [[en/developers/SubmittingPatches|submitting patches]]
 ===== Developers =====
-  * 
+  * [[en/users/Developers|main page]]
