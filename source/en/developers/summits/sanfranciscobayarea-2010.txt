@@ -38,16 +38,16 @@ The meeting room will be "Union Square North".  Dining will be in the adjacent "
 
 === Thursday ===
 |**Time** |**Session** |**Owner** |
-|7:30 - 9:00 |--colspan=3--**Breakfast** |
+|7:30 - 9:00 |**Breakfast** ||
 |9:00 - 9:30 |Welcome, introduction, agenda bashing |Linville |
 |9:30 - 10:30 |WFA Overview, P2P introduction |Jouni/Henry |
-|10:30 - 11:00 |--colspan=3--**Break** |
+|10:30 - 11:00 |**Break** ||
 |11:00 - 11:30 |P2P demo; mac80211/wpa_supplicant design ([[http://hostap.epitest.fi/gitweb/gitweb.cgi?p=hostap.git;a=summary|code upstream]]!) |Jouni |
 |11:30 - 12:00 |P2P UI, user space next step |Jouni |
-|12:00 - 13:00 |--colspan=3--**Lunch** |
+|12:00 - 13:00 |**Lunch** ||
 |13:00 - 14:00 |P2P virtual interfaces, power saving, etc. needed functionality |Jouni |
 |14:00 - 15:00 |multi-channel operation in cfg80211/mac80211 |Johannes |
-|15:00 - 15:30 |--colspan=3--**Break** |
+|15:00 - 15:30 |**Break** ||
 |15:30 - 16:00 |[[http://lists.infradead.org/mailman/listinfo/wireless-regdb|Requirements for wireless-regdb patches]] |Linville/Luis |
 |16:00 - 16:30 |World roaming and [[http://www.freedesktop.org/wiki/Software/GeoClue|GeoClue]] |Luis |
 |16:30 - 17:00 |Backporting |Johannes |
@@ -56,14 +56,14 @@ The meeting room will be "Union Square North".  Dining will be in the adjacent "
 
 === Friday ===
 |**Time** |**Session** |**Owner** |
-|7:30 - 9:00 |--colspan=3--**Breakfast** |
+|7:30 - 9:00 |**Breakfast** ||
 |09:00 - 10:30 |Legacy drivers support / documentation |Luis |
-|10:30 - 11:00 |--colspan=3--**Break** |
+|10:30 - 11:00 |**Break** ||
 |11:00 - 12:00 |Maintainer Issues / Community Relations |Linville |
-|12:00 - 13:00 |--colspan=3--**Lunch** |
+|12:00 - 13:00 |**Lunch** ||
 |13:00 - 14:00 | Specialized APIs | Felix / Johannes ? |
 |14:00 - 15:00 |powersaving bcast / mcast / multichannel |Luis / Johannes |
-|15:00 - 15:30 |--colspan=3--**Break** |
+|15:00 - 15:30 |**Break** ||
 |15:30 - 16:00 |IBSS issues (RSN/GTKs, HT) |Johannes |
 
 
