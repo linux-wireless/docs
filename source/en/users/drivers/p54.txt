@@ -37,17 +37,21 @@ There are several different firmwares for different hardware. You have to pick t
 
 please pick the right one for your device from the lists: 
     * NOTE: Not all firmwares revisions are compatible with every device out of there! If you run into problems, first try an alternative firmware before requesting further assistance ([[en/users/Drivers/p54|Contact]]). 
-    * for **2.6.29** kernels **and above**: 
-    *  * |**card type** |--colspan=2--**required filename** |--colspan=2--**recommended image** |
-|PCI / PCMCIA |--colspan=2--isl3886pci |--colspan=2--[[http://daemonizer.de/prism54/prism54-fw/fw-softmac/2.13.25.0.arm|download]] |
-|USB 1st generation (ISL3886 + net2280) |--colspan=2--isl3886usb |--colspan=2--[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.lm86.arm|download]] |
-|USB 2nd generation (ISL3887) |--colspan=2--isl3887usb |--colspan=2--[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.25.0.lm87.arm|download]] |
-|SPI / stlc4560 |--colspan=2--3826.arm |--colspan=2--[[http://daemonizer.de/prism54/prism54-fw/|Maxi's site]] |
-    *   for **2.6.28** kernels **and older**: 
-    *    * |**card type** |--colspan=2--**required filename** |**older than 2.6.28 ** |--colspan=2--**specially for 2.6.28** |
-|PCI / PCMCIA |--colspan=2--isl3886 |[[http://daemonizer.de/prism54/prism54-fw/fw-softmac/lmac_2.7.0.0.arm|download]] |--colspan=2--[[http://daemonizer.de/prism54/prism54-fw/fw-softmac/2.13.1.0.arm|download]] |
-|USB 1st generation (ISL3886 + net2280) |--colspan=2--isl3890usb |[[http://jbnote.free.fr/prism54usb/data/firmwares/p54u_2.5.6.0.arm|download]] |--colspan=2--[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.arm.0|download]] |
-|USB 2nd generation (ISL3887) |--colspan=2--isl3887usb_bare |[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.5.8.0.arm|download]] |--colspan=2--[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.arm.1|download]] |
+    * for **2.6.29** kernels **and above**:
+
+|**card type** |**required filename** |**recommended image** |
+|PCI / PCMCIA |isl3886pci |[[http://daemonizer.de/prism54/prism54-fw/fw-softmac/2.13.25.0.arm|download]] |
+|USB 1st generation (ISL3886 + net2280) |isl3886usb |[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.lm86.arm|download]] |
+|USB 2nd generation (ISL3887) |isl3887usb |[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.25.0.lm87.arm|download]] |
+|SPI / stlc4560 |3826.arm |[[http://daemonizer.de/prism54/prism54-fw/|Maxi's site]] |
+
+    * for **2.6.28** kernels **and older**:
+
+|**card type** |**required filename** |**older than 2.6.28 ** |**specially for 2.6.28** |
+|PCI / PCMCIA |isl3886 |[[http://daemonizer.de/prism54/prism54-fw/fw-softmac/lmac_2.7.0.0.arm|download]] |[[http://daemonizer.de/prism54/prism54-fw/fw-softmac/2.13.1.0.arm|download]] |
+|USB 1st generation (ISL3886 + net2280) |isl3890usb |[[http://jbnote.free.fr/prism54usb/data/firmwares/p54u_2.5.6.0.arm|download]] |[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.arm.0|download]] |
+|USB 2nd generation (ISL3887) |isl3887usb_bare |[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.5.8.0.arm|download]] |[[http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.arm.1|download]] |
+
     *     More firmwares for all devices, even unsupported ones, can be found in [[http://daemonizer.de/prism54/prism54-fw/|Maxi's prism54 firmwares archive]]. 
     *     Alternatively, firmware can be extracted from windows drivers with a tool called "fwextract3" available from [[http://lekernel.net/prism54/misc.html|http://lekernel.net/prism54/misc.html]]. 
 
