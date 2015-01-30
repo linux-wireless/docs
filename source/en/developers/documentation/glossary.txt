@@ -97,6 +97,11 @@ See also [[en/developers/Documentation/Glossary|SoftMAC]].
 physical-layer controller 
 
 
+===== SME =====
+
+Station Management Entity, often prepended with //AP// (Access Point)
+
+
 ===== SoftMAC =====
 
 //SoftMAC// is a term used to describe a type of WNIC where the [[en/developers/Documentation/Glossary|MLME]] is expected to be managed in software. [[en/developers/Documentation/Glossary|mac80211]] is a driver API for SoftMAC WNIC, for example. 
