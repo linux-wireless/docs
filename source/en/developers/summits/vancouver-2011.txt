@@ -35,12 +35,12 @@ This event will be colocated with [[http://events.linuxfoundation.org/events/lin
 |9:00 - 9:30 |Welcome, introduction, agenda bashing |John? |
 |9:30 - 10:00 |review todo list |Luis |
 |10:00 - 10:30 |Android |Johannes |
-|10:30 - 11:00 |--colspan=3--**Break** |
+|10:30 - 11:00 |**Break** ||
 |11:00 - 12:00 |device-controlled P2P offloads |Johannes |
-|12:00 - 13:30 |--colspan=3--**Lunch** |
+|12:00 - 13:30 |**Lunch** ||
 |13:30 - 14:00 |WoWLAN |Johannes |
 |14:00 - 15:00 |non-mac80211 drivers |Jouni |
-|15:00 - 15:30 |--colspan=3--**Break** |
+|15:00 - 15:30 |**Break** ||
 |15:30 - 16:30 |mac80211 PS |Kalle |
 |16:30 - 17:00 |11s support |Javier |
 |17:00 - 17:30 |wmediumd |Javier |
@@ -49,12 +49,12 @@ This event will be colocated with [[http://events.linuxfoundation.org/events/lin
 ==== Tuesday ====
 |**Time** |**Session** |**Owner** |
 |9:00 - 10:30 |Regulatory (process, revamp, DFS) |Luis |
-|10:30 - 11:00 |--colspan=3--**Break** |
+|10:30 - 11:00 |**Break** ||
 |11:00 - 12:00 |sharing between projects, test framework |Luis, Johannes |
-|12:00 - 13:30 |--colspan=3--**Lunch** |
+|12:00 - 13:30 |**Lunch** ||
 |13:30 - 14:30 |wpa_supplicant (maint, plugin) |Johannes |
 |14:30 - 15:00 |upcoming technologies: 11ac/ad |Luis |
-|15:00 - 15:30 |--colspan=3--**Break** |
+|15:00 - 15:30 |**Break** ||
 |15:30 - 16:00 |11k |Luca, Assaf |
 |16:00 - 17:30 | | |
 
