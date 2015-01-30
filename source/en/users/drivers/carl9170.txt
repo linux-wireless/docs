@@ -39,10 +39,10 @@ While the driver supports multiple virtual interfaces, in different combinations
 It's worth mentioning that the chip was designed, produced and sold in the early 802.11n-draft period. Compatibility will always be an issue. 
 
 A [[http://git.kernel.org/?p=linux/kernel/git/chr/carl9170fw.git;a=commitdiff;h=39be7dc384e0dd45dc36b4b517fd9fae874b06f0|known problem]] is that hardware can not support [[http://en.wikipedia.org/wiki/IEEE_802.11n-2009#Frame_aggregation|frame aggregation]] and [[http://en.wikipedia.org/wiki/Wireless_Multimedia_Extensions|QoS]] at the same time, meaning the device is not suitable for any serious 802.11n setup. Also the hardware crypto has some serious trouble with encrypting/deciphering at high throughput, therefore if possible use 'nohwcrypt=1' as a workaround. 
-|Hardware|--colspan=2--Problem|--colspan=2--Solution?|
-|**BCM4313**|--colspan=2--//Hardware incompatibility//|--colspan=2--//replace hardware//|
-|**Any Intel N Wifi Link**|--colspan=2--//Aggregation stalls//|--colspan=2--//driver workaround//|
-|**RT28xx/RT3xxx**|--colspan=2--//Random disconnects//|--colspan=2--//?//|
+|Hardware|Problem|Solution?|
+|**BCM4313**|//Hardware incompatibility//|//replace hardware//|
+|**Any Intel N Wifi Link**|//Aggregation stalls//|//driver workaround//|
+|**RT28xx/RT3xxx**|//Random disconnects//|//?//|
 
 See [[en/users/Drivers/carl9170|Contact]], if you want to report issues with specific setups. 
 
@@ -100,9 +100,9 @@ There is code available, check out the [[en/users/Drivers/carl9170.fw|carl9170.f
 The firmware can be obtained from [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|firmware tree]]. 
 
 Alternately you can download the GPLv2 Firmware binary from here (rename to carl9170-1.fw): 
-|--colspan=2--**for Kernel**|--colspan=2--**Firmware Version**|--colspan=2--**Download Link**|
-|--colspan=2--//Linux 2.6.x and 3.0//|--colspan=2--//1.9.2//|--colspan=2--//[[carl9170-1.fw-1.9.2|carl9170-1.fw-1.9.2]]//|
-|--colspan=2--//Linux 3.1 and newer//|--colspan=2--//1.9.9//|--colspan=2--//[[carl9170-1.fw-1.9.9|carl9170-1.fw-1.9.9]]//|
+|**for Kernel**|**Firmware Version**|**Download Link**|
+|//Linux 2.6.x and 3.0//|//1.9.2//|//[[carl9170-1.fw-1.9.2|carl9170-1.fw-1.9.2]]//|
+|//Linux 3.1 and newer//|-//1.9.9//|//[[carl9170-1.fw-1.9.9|carl9170-1.fw-1.9.9]]//|
 
 
 ===== FAQ =====
