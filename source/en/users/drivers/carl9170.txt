@@ -132,17 +132,18 @@ Alternately you can download the GPLv2 Firmware binary from here (rename to carl
 **How can I check if the recovery option works correctly?** 
                         * You can easily test this by physically unplugging and replugging the device. If your connection is coming back, then you are done! If not, you have to find out how your distribution is doing network link hotplugging. **All of a sudden, the device stops working for a few seconds (but recovers)** 
                           * You should check if the driver has issued a device restart. There should be a "restart device (//#number//)" message in your system's logs. 
-| //#// | | meaning |
-|1| |//a fatal firmware error has occurred; the previous "FW" message contains more details//|
-|2| |//excessive flood of (non-fatal) firmware errors; check previous messages.//|
-|3| |//Hardware watchdog triggered, because the firmware has crash silently.//|
-|4| |//stuck tx queues. this is almost always a driver bug, so please file a report.//|
-|5| |//your system wasn't able to process requests fast enough; as a result the device has become unresponsive.//|
-|6| |//command timeout. Either fw/driver bugs or a bad cable/hw malfunction.//|
-|7| |//RF/PHY has become too unstable. Check for radars or microwave ovens?//|
-|8| |//lost command response. related to 6/command timeout//|
-|9| |//unexpected/invalid command response. also related to 6/command timeout//|
-|10| |//firmware restart was requested by user (through DebugFS)//|
+
+| ** #number ** | **meaning** |
+|1| //a fatal firmware error has occurred; the previous "FW" message contains more details//|
+|2| //excessive flood of (non-fatal) firmware errors; check previous messages.//|
+|3| //Hardware watchdog triggered, because the firmware has crash silently.//|
+|4| //stuck tx queues. this is almost always a driver bug, so please file a report.//|
+|5| //your system wasn't able to process requests fast enough; as a result the device has become unresponsive.// |
+|6| //command timeout. Either fw/driver bugs or a bad cable/hw malfunction.//|
+|7| //RF/PHY has become too unstable. Check for radars or microwave ovens?//|
+|8| //lost command response. related to 6/command timeout//|
+|9| //unexpected/invalid command response. also related to 6/command timeout//|
+|10| //firmware restart was requested by user (through DebugFS)//|
 
 
 ==== Multiple Interfaces FAQ ====
