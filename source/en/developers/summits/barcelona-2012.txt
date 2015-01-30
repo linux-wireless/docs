@@ -39,17 +39,17 @@ On Day 1, everyone is sharing a single room...
 |**Time** |**Session** |**Owner** |
 |0930 |Welcome/Intro/Agenda |John Linville |
 |1000 |How to beat bufferbloat on wireless? |Dave Täht |
-|1100 |--colspan=2--**Break** |
+|1100 |**Break** ||
 |1130 |Bluetooth: state of the union |Marcel Holtmann |
 |1200 |6LowPAN |Alan |
-|1230 |--colspan=2--**Lunch** |
+|1230 |**Lunch** ||
 |1400 |NFC "state of the union", etc. |Ortiz / Elias / Janc |
-|1500 |--colspan=2--**Break** |
+|1500 |**Break** ||
 |1530 |[[http://openwrt.org|OpenWrt]] AP |nbd? |
 |1600 |Multi-channel operation in mac80211 |Michał Kazior |
 |1630 |compat-drivers project |Luis Rodriguez |
 |1700 |Bluetooth Broadcaster/Observer API |Lizardo & Delfes |
-|1800 |--colspan=2--**Adjourn** |
+|1800 |**Adjourn** ||
 
 On Day 2, we will have three rooms, one each for 802.11 and Bluetooth discussions and one more for other discussions/presentations... 
 
@@ -58,36 +58,36 @@ On Day 2, we will have three rooms, one each for 802.11 and Bluetooth discussion
 |**Time** |**Session** |**Owner** |
 |0900 |Wireless community networks and the Confine project |Nick Kossifidis |
 |1000 |[[ConnMan|ConnMan]] and wpa_supplicant |Daniel Wagner |
-|1100 |--colspan=2--**Break** |
+|1100 |**Break** ||
 |1130 |Regulatory updates |Luis Rodriguez |
 |1230 |Maintainer issues (both drivers and upstream) & Android |Linville / Kalle |
-|1300 |--colspan=2--**Lunch** |
+|1300 |**Lunch** ||
 |1430 |IEEE802.11/WFA update & hotspot 2.0 |Jouni Malinen |
-|1530 |--colspan=2--**Break** |
+|1530 |**Break** ||
 |1600 |mesh - Power saving and robust a/v streaming |M.Porsch / J.Lopez |
 |1700 |Virtual Bluetooth AMP Controller for mac80211 |Andrei Emeltchenko |
 |1730 |Post-mortem / retrospective / whatever |Linville |
-|1800 |--colspan=2--**Adjourn** |
+|1800 |**Adjourn** ||
 
 
 ==== Day 2 (Bluetooth) ====
 |**Time** |**Session** |**Owner** |
 |0900 |HID over GATT Remote Wakeup support|Andre Guedes |
 |1000 |Status and Roadmap of Bluetooth LE |João Paulo Rechi Vita / Claudio Takahasi |
-|1030 |--colspan=2--**Ad hoc -- see Marcel / Gustavo / Johan** ||
-|1100 |--colspan=2--**Break** |
-|1130 |--colspan=2--**???** |
-|1230 |--colspan=2--**Lunch** |
-|1400 |--colspan=2--**???** |
-|1500 |--colspan=2--**Break** |
-|1530 |--colspan=2--**???** |
-|1800 |--colspan=2--**Adjourn** |
+|1030 |**Ad hoc -- see Marcel / Gustavo / Johan** ||
+|1100 |**Break** ||
+|1130 |**???** ||
+|1230 |**Lunch** ||
+|1400 |**???** ||
+|1500 |**Break** ||
+|1530 |**???** ||
+|1800 |**Adjourn** ||
 
 
 ==== Day 2 (Other/Presentations) ====
 |**Time** |**Session** |**Owner** |
-|0900 |--colspan=2--**Breakout Sessions** |
-|1800 |--colspan=2--**Adjourn** |
+|0900 |**Breakout Sessions** ||
+|1800 |**Adjourn** ||
 
 
 ===== Attendees =====
