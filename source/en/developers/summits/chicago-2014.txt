@@ -44,6 +44,6 @@ Due to its association with the Kernel Summit, this event is invitation only.
 |  3:00  |**Break** ||
 |  3:30  | Bluetooth Session 2 | Gustavo |
 |  4:45  |**Group photograph** ||
-|  5:00  ||**LCNA First Timers Reception**(*) ||
+|  5:00  |**LCNA First Timers Reception**(*) ||
 
 * all kernel developers are cordially invited to the LCNA First Timers Reception 
