@@ -64,12 +64,12 @@ Some sightseeing/dinner with a small group of hackers? Or check out Linux<code><
 | **Time** | **Session** | **Type** | **Owner** |
 | 10:00 - 11:00 | full-MAC hw support | discussion | Johannes/Samuel |
 | 11:00 - 12:00 | cfg80211 WEXT compat work topics | discussion | Johannes |
-| 12:00 - 13:00 |
-| 13:00 - 14:00 | ::: | ::: | ::: |--colspan=3-- **lunch**|
-| 14:00 - 15:00 |--colspan=3-- John's wireless talk |
+| 12:00 - 13:00 | ::: | ::: | ::: |
+| 13:00 - 14:00 | **lunch**|||
+| 14:00 - 15:00 |John's wireless talk |||
 | 15:00 - 16:00 | mgmt processing extensions\\ rate control userspace API\\ noise measurement | discussion | Jouni\\ Johannes\\ ? |
-| 16:00 - 17:00 |
-| 17:00 - 18:00 | ::: | ::: | ::: | roaming improvements | discussion | Kalle |
+| 16:00 - 17:00 |::: | ::: | ::: | 
+| 17:00 - 18:00 | roaming improvements | discussion | Kalle |
 
 
 === Saturday ===
@@ -77,13 +77,13 @@ Some sightseeing/dinner with a small group of hackers? Or check out Linux<code><
 ("barcamp" -- more presentation style stuff) 
 | **Time** | **Session** | **Type** | **Owner** |
 | 10:00 - 11:00 | mac80211/cfg80211 overview | presentation | Johannes |
-| 11:00 - 12:00 |
-| 12:00 - 13:00 | ::: | ::: | ::: | powersaving | presentation | Kalle |
-| 13:00 - 14:00 |--colspan=3-- **lunch**|
+| 11:00 - 12:00 |::: | ::: | ::: |
+| 12:00 - 13:00 |  powersaving | presentation | Kalle |
+| 13:00 - 14:00 |**lunch**|||
 | 14:00 - 15:00 | Freifunk infrastructure | presentation | Juergen Neumann |
 | 15:00 - 16:00 | 802.11 activity | presentation | Jouni |
 | 16:00 - 17:00 | user question panel | | |
-| 17:00 - 18:00 |
+| 17:00 - 18:00 |:::|:::|:::|
 
 
 ==== Confirmed attendees ====
