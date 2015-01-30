@@ -10,6 +10,7 @@ Suggested topics:
   * Intel TCP/remote wake demo? 
   * secure firmware download (Kathy) 
   * congestion control / "bufferbloat" 
+  * mac80211/driver configuration access and lack of locking
   * ... (please suggest more)
 
 Planning to attend: 
