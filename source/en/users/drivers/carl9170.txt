@@ -110,12 +110,20 @@ Alternately you can download the GPLv2 Firmware binary from here (rename to carl
 
 ==== General FAQ ====
 
-**Can I use newer carl9170 firmwares with any old carl9170 driver, or vice versa?** 
-            * Depends on the combination. But the driver will evaluate, if it can safely support the firmware, or reject it. **Can I use the new carl9170 firmware with driver like otus or ar9170usb?** 
-              * No. **Does the driver support the original firmwares?** 
-                * No. **I don't need HT, how do I disable it?** 
-                  * Through a module parameter. 'noht=1' **How can I disable the hardware crypto?** 
-                    * Through a module parameter. 'nohwcrypt=1' 
+  * ** Can I use newer carl9170 firmwares with any old carl9170 driver, or vice versa? **
+    * Depends on the combination. But the driver will evaluate, if it can safely support the firmware, or reject it. 
+
+  * **Can I use the new carl9170 firmware with driver like otus or ar9170usb?** 
+    * No.
+
+  * **Does the driver support the original firmwares?** 
+    * No.
+
+  * **I don't need HT, how do I disable it?** 
+    * Through a module parameter. 'noht=1' 
+
+  * **How can I disable the hardware crypto?** 
+    * Through a module parameter. 'nohwcrypt=1' 
 ==== Recovery FAQ ====
 
 **I get "FW: ... MAC RESET" kernel messages, what are those?** 
