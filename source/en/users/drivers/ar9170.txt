@@ -35,12 +35,14 @@ Firmware is open! Go check the [[en/users/Drivers/ar9170.fw|ar9170.fw]] page.
 You have to pick the right one, download and put it into the __right place__. Normally this should be /lib/firmware. However some distributions put firmware in a different place. 
   * **one stage**: //adds support for AVM FRITZ!WLAN USB Stick N and AVM FRITZ!WLAN USB Stick 2.4// 
   *  * //Download [[http://www.kernel.org/pub/linux/kernel/people/mcgrof/firmware/ar9170/ar9170.fw|ar9170.fw]] and put it into the __right place__.// 
-|--colspan=2--**firmware checksums** |
+
+|**firmware checksums** ||
 |//filename// |//md5sum// |
 |ar9170.fw |34feec4ec0eae3bb92c7c1ea2dfb4530 |
   *   **two stage**: //legacy firmware// 
   *    * The firmware files are included in the [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|firmware tree]]. //Download [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=ar9170-1.fw|ar9170-1.fw]], [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=ar9170-2.fw|ar9170-2.fw]] and put them into the __right place__.// 
-|--colspan=2--**firmware checksums** |
+
+|**firmware checksums** ||
 |//filename//|//md5sum// |
 |ar9170-1.fw |bebf8de7bf0aa8ae3eb395cc6be2e762 |
 |ar9170-2.fw |33ae4899340c75be4bc80c34fbe5d171 |
