@@ -148,13 +148,18 @@ Alternately you can download the GPLv2 Firmware binary from here (rename to carl
 
 ==== Multiple Interfaces FAQ ====
 
-**Why can't I enable more than two interfaces?** 
-                            * In order to overcome this limitation, you'll have to configure the firmware to provide more interface instances. But be advised that additional instances are not as free as you might think and you may lose some tx buffers. **I've setup a station and I can add more, so but why can't I have an AP now too?** 
-                              * Because you have to add and initialize the AP first. (TBE) **How come my computer seems to be burdened with encrypting/decrypting?** 
-                                * This is expected, the hardware has problems selecting the right group-keys when multiple different keys are available. Because of this limitation, the driver disables crypto-offload and your CPU has to do it. **All of a sudden the device stopped transmitting?!** 
-                                  * Maybe a different interface is scanning, or operating on a different channel. Note: All AR9170 only have ONE PHY, it isn't possible to operate on different channels at the same time! **Is it possible to mix Legacy, HT20, HT40+, HT40- channel settings?** 
-                                    * No. **Is it possible to have different beacon period?** 
-                                      * No, the beacon period must be the same, but you can have different dtim counts. 
+  * **Why can't I enable more than two interfaces?** 
+    * In order to overcome this limitation, you'll have to configure the firmware to provide more interface instances. But be advised that additional instances are not as free as you might think and you may lose some tx buffers. 
+  * **I've setup a station and I can add more, so but why can't I have an AP now too?** 
+    * Because you have to add and initialize the AP first.
+  *  **How come my computer seems to be burdened with encrypting/decrypting?** 
+    * This is expected, the hardware has problems selecting the right group-keys when multiple different keys are available. Because of this limitation, the driver disables crypto-offload and your CPU has to do it.
+  * **All of a sudden the device stopped transmitting?!** 
+    * Maybe a different interface is scanning, or operating on a different channel. Note: All AR9170 only have ONE PHY, it isn't possible to operate on different channels at the same time!
+  * **Is it possible to mix Legacy, HT20, HT40+, HT40- channel settings?** 
+    * No.
+  * **Is it possible to have different beacon period?** 
+    * No, the beacon period must be the same, but you can have different dtim counts. 
 ===== History =====
 
 
