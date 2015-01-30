@@ -47,40 +47,40 @@ Attendees for the wireless summit must be registered for one (or both) of those.
 ==== Schedule ====
 
 **Thursday** 
-|**Time** |--colspan=2--Strand 9 |--colspan=2--Room 1722 |--colspan=2--Room 1832 |
+|**Time** |Strand 9 ||Room 1722 ||Room 1832 ||
 | ::: |**Session** |**Owner** |**Session** |**Owner** |**Session** |**Owner** |
-|09:30 |Welcome/Intro/Agenda |John Linville |--colspan=4--— |
+|09:30 |Welcome/Intro/Agenda |John Linville |— ||||
 |10:00 | mac80211 status | Johannes | | | | |
-|10:30 |--colspan=6--**Break** |
+|10:30 |**Break** ||||||
 |11:00 | Bluetooth status | Marcel | | | | |
 |11:30 | NFC status | Samuel | | | | |
-|12:00 |--colspan=6--**Lunch** |
+|12:00 |**Lunch** ||||||
 |14:00 | regulatory | John/Luis | | | | |
-|14:30 |--colspan=6--**Break** |
+|14:30 |**Break** ||||||
 |15:00 | userland status | Dan/Marcel? | | | | |
 |15:30 | Android | Dmitry | | | | |
 |17:00 | backports status | Luis | LE Auto connection kernel API | Andre Guedes | | |
 |17:30 | Intel driver process | Johannes | GATT API | Claudio, Lizardo | | |
-|18:00 |--colspan=6--**Adjourn** |
+|18:00 |**Adjourn** ||||||
 
 **Friday** 
-|**Time** |--colspan=2--Strand 9 |--colspan=2--Room 1722 |--colspan=2--Room 1832 |
+|**Time** |Strand 9 ||Room 1722 ||Room 1832 ||
 | ::: |**Session** |**Owner** |**Session** |**Owner** |**Session** |**Owner** |
 |09:00 | supplicant | Dan | | | | |
 |09:30 | testing | Wojciech | | | | |
-|10:30 |--colspan=6--**Break** |
+|10:30 |**Break** ||||||
 |11:00 | standards | Jouni | | | | |
 |11:30 | distro | Seth | | | | |
-|12:00 |--colspan=6--**Lunch** |
+|12:00 |**Lunch** ||||||
 |14:00 | libnl80211 | Luis | | | | |
-|14:30 |--colspan=6--**Break** |
+|14:30 |**Break** ||||||
 |15:00 | MAC offload strategy | Johannes | | | | |
 |15:30 | roaming | Wojciech | | | | |
 |16:00 | recruiting | Luis | | | | |
 |16:30 | Blueish | Lizardo | | | | |
 |17:00 | ROM patch | Luis | | | | |
 |17:30 | maintainer/process/summit | John | | | | |
-|18:00 |--colspan=6--**Adjourn** |
+|18:00 |**Adjourn** ||||||
 
 
 ==== Attendees ====
