@@ -96,12 +96,13 @@ In some cases using the incorrect firmware may result in unusable interface. If 
     *     * FAA Switch notifications (rfkill) 
     *     * Multicast filtering 
     *     * Supported band table (by radio chip): 
-    *     *  * |**ID** |--colspan=2--**Chip name** |--colspan=2--**802.11 b/g** |--colspan=2--**802.11 a** |
-|**1** |--colspan=2--Duette3 |--colspan=2--yes |--colspan=2--yes |
-|**2** |--colspan=2--Duette2 |--colspan=2--yes |--colspan=2--yes |
-|**3** |--colspan=2--Frisbee |--colspan=2--yes |--colspan=2--no |
-|**4** |--colspan=2--Crossbow |--colspan=2--yes |--colspan=2--yes |
-|**5** |--colspan=2--Longbow |--colspan=2--yes |--colspan=2--no |
+
+|**ID** |**Chip name** |**802.11 b/g** |**802.11 a** |
+|**1** |Duette3 |yes |yes |
+|**2** |Duette2 |yes |yes |
+|**3** |Frisbee |yes |no |
+|**4** |Crossbow |yes |yes |
+|**5** |Longbow |yes |no |
 
 
 ===== not working yet =====
