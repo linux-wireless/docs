@@ -76,7 +76,7 @@ Notes:
 
 
 ==== Table D.5: Detection probability ====
-|**Parameter** |--colspan=2--**Detection Probability (P<sub>d</sub>) [%]** |
+|**Parameter** |**Detection Probability (P<sub>d</sub>) [%]** ||
 | |**Channels whose nominal bandwidth falls partly or completely \\ within the 5 600 MHz to 5 650 MHz band** |**Other channels** |
 |CAC, Off-Channel CAC |99,99 |60 |
 |In-Service Monitoring |60 |60 |
