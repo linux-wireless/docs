@@ -66,6 +66,7 @@ See also:
 | [[en/users/Drivers/rtl819x|rtl8192de]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8192se]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8723ae]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x| ** rtl8723au]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/vt665x| ** vt6655]]                | VIA                    | no              | ?         | ?           | ?           | ?              | A/B/G          | PCI                         |
 | [[en/users/Drivers/vt665x|vt6656]]                    | VIA                    | yes             | yes       | yes         | ?           | ?              | A/B/G          | USB                         |
 | [[en/users/Drivers/wil6210|wil6210]]                  | Atheros                | yes             | yes       | no          | no          | yes            | AD             | PCI-E                       |
