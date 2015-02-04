@@ -11,6 +11,7 @@ Suggested topics:
   * secure firmware download (Kathy) 
   * congestion control / "bufferbloat" 
   * mac80211/driver configuration access and lack of locking
+  * TSO/GSO over mac80211
   * ... (please suggest more)
 
 Planning to attend: 
