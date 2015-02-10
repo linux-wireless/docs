@@ -23,10 +23,8 @@ Our mailing list for this driver is:
 
 ===== Get the latest ath9k driver =====
 
-Any distribution shipping a kernel >= 2.6.27 will have ath9k present but the ath9k driver on 2.6.32 is the oldest one recommended, anything older than that is completely unsupported. 
-
-The latest ath9k driver can be obtained from [[https://backports.wiki.kernel.org/index.php/Main_Page|backports]]. 
-
+ath9k is part of the kernel, but the latest version can be obtained from
+[[https://backports.wiki.kernel.org/index.php/Main_Page|backports]]. 
 
 ===== Enabling ath9k =====
 
