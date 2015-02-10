@@ -13,6 +13,7 @@ Suggested topics:
   * mac80211/driver configuration access and lack of locking
   * TSO/GSO over mac80211
   * 60GHz/P2P scan flag
+  * mac80211 vs. more offloads (e.g. RX) - be more flexible?
   * ... (please suggest more)
 
 Planning to attend: 
