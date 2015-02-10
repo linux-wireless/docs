@@ -139,9 +139,6 @@ ath9k was announced to have been [[http://lwn.net/Articles/293784/|merged into L
 [[http://openwrt.org/|OpenWrt]] became the [[https://dev.openwrt.org/changeset/11884|first distribution to pick up ath9k and contribute to it]]. 
 
 
-===== Statistics on contributions =====
-
-Visit the [[https://docs.google.com/spreadsheet/pub?key=0AtNdeeyGJEJ7dG45U2xrZldlQm80Nlg5QzEwUmtNUGc&single=true&gid=0&output=html|ath9k contribution graphs]]. You can help keep this up to date if you like. If interested contact the ath9k driver maintainers. 
 
 
 ===== Other sections =====
