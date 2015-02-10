@@ -103,30 +103,29 @@ All of these modes of operation are supported and should work on all ath9k cards
 
 
 ==== Features ====
-                * 802.11abg 
-                * 802.11n 
-                *  * HT20 
-                *  * HT40 
-                *  * AMPDU 
-                *  * Short GI (Both 20 and 40 MHz) 
-                *  * LDPC 
-                *  * TX/RX STBC 
-                *   802.11i 
-                *    * WEP 64 / 127 
-                *    * WPA1 / WPA2 
-                *     802.11d 
-                *     802.11h 
-                *     802.11w/D7.0 
-                *     WPS 
-                *     WMM 
-                *     LED 
-                *     RFKILL 
-                *     BT co-existence 
-                *     64-bit support / big endian, small endian 
-                *     AHB and PCI bus 
-                *     TDLS 
-                *     WoW 
-                *     Antenna Diversity 
+  * 802.11abg 
+  * 802.11n 
+    * HT20 
+    * HT40 
+    * AMPDU 
+    * Short GI (Both 20 and 40 MHz) 
+    * LDPC 
+    * TX/RX STBC 
+  * 802.11i 
+    * WEP 64 / 127 
+    * WPA1 / WPA2 
+  * 802.11d 
+  * 802.11h
+  * 802.11w/D7.0 
+  * WPS 
+  * WMM 
+  * LED 
+  * RFKILL
+  * BT co-existence 
+  * AHB and PCI bus 
+  * TDLS 
+  * WoW 
+  * Antenna Diversity 
 ===== A little history on ath9k =====
 
 
