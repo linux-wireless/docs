@@ -46,32 +46,42 @@ You can then enable ath9k in the kernel configuration under
 
 ===== Supported chipsets =====
 
-SB = single-band 2.4GHz DB = dual-band 2.4GHz or 5GHz 
+SB = single-band 2.4GHz \\
+DB = dual-band 2.4GHz or 5GHz 
 
-Legacy: 
-  * AR2427 (no 802.11n hardware support, its bonded out) 1x1 SB PCIe AR5008: 
-    * AR5418+AR5133 AR5418 = DB 11n PCIe, AR5133 = 3x3 DB 11n 
-    * AR5416+AR5133 AR5416 = DB 11n PCI 
-    * AR5416+AR2133 AR2133 = 3x3 SB 11n AR9001: 
-      * AR9160 2x2 DB 11n 
-      * AR9102 2x2 SB 11n 
-      * AR9103 3x3 SB 11n AR9002: 
-        * AR9220 2x2 DB 11n PCI 
-        * AR9223 2x2 SB 11n PCI 
-        * AR9227 2x2 SB 11n PCI 
-        * AR9280 2x2 DB 11n PCIe 
-        * AR9281 2x2 SB 11n PCIe 
-        * AR9285 1x1 SB 11n PCIe 
-        * AR9287 2x2 SB 11n PCIe AR9003: 
-          * AR9380 3x3 DB 11n PCIe 
-          * AR9382 2x2 DB 11n PCIe 
-          * AR9331 1x1 SB 11n 
-          * AR9340 2x2 DB 11n AR9004: 
-            * AR9485 1x1 SB 11n PCIe 
-            * AR9462 2x2 DB 11n PCIe 
-            * AR9565 1x1 SB 11n PCIe 
-            * AR9580 3x3 DB 11n PCIe 
-            * AR9550 3x3 DB 11n 
+  * AR2427 1x1 SB (no 11n)  
+
+  * AR5008: 
+    * AR5418+AR5133 
+    * AR5416+AR5133
+    * AR5416+AR2133
+
+  * AR9001: 
+    * AR9160 2x2 DB 
+    * AR9102 2x2 SB 
+    * AR9103 3x3 SB
+
+  * AR9002: 
+    * AR9220 2x2 DB
+    * AR9223 2x2 SB
+    * AR9227 2x2 SB
+    * AR9280 2x2 DB
+    * AR9281 2x2 SB
+    * AR9285 1x1 SB
+    * AR9287 2x2 SB
+
+  * AR9003: 
+    * AR9380 3x3 DB
+    * AR9382 2x2 DB
+    * AR9331 1x1 SB
+    * AR9340 2x2 DB
+
+  * AR9004: 
+    * AR9485 1x1 SB
+    * AR9462 2x2 DB
+    * AR9565 1x1 SB
+    * AR9580 3x3 DB
+    * AR9550 3x3 DB
 ===== Available devices =====
 
 See the [[en/users/Drivers/ath9k/devices|ath9k device list]]. 
