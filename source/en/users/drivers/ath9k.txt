@@ -93,13 +93,13 @@ All of these modes of operation are supported and should work on all ath9k cards
 
 
 ==== Modes of operation ====
-              * //Station Mode// 
-              * //AP Mode// 
-              * //IBSS Mode// 
-              * //Monitor Mode// 
-              * //Mesh point// with HT support, as well as RSN 
-              * //WDS// (as of >= 2.6.37) 
-              * //P2P GO/CLIENT// 
+  * Station 
+  * AP 
+  * IBSS 
+  * Monitor 
+  * Mesh point 
+  * WDS 
+  * P2P GO/CLIENT 
 
 
 ==== Features ====
