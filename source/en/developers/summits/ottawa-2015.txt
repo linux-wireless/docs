@@ -14,6 +14,7 @@ Suggested topics:
   * TSO/GSO over mac80211
   * 60GHz/P2P scan flag
   * mac80211 vs. more offloads (e.g. RX) - be more flexible?
+  * mac80211 to driver state/failure (auth/assoc/...) feedback operation for debug?
   * ... (please suggest more)
 
 Planning to attend: 
