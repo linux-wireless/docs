@@ -12,11 +12,12 @@
 ===== Supported Chips =====
 
 **brcmsmac (PCIe/AXI)** driver: 
-|**Name** |**PCI Device ID** |
-|BCM4313  |0x4727 |
-|BCM43224 |0x0576 |
-|BCM43224 |0x4353 |
-|BCM43225 |0x4357 |
+| **Name**  | **PCI Device ID**  |
+| BCM4313   | 0x4727             |
+| BCM43224  | 0x0576             |
+| BCM43224  | 0x4353             |
+| BCM43225  | 0x4357             |
+
 
 Please note: at least BCM4313 is not fully supported.  Some models appears to work (users reported success), but some don't, and there's no indication that this is going to change.  For example: [[http://marc.info/?t=138817851800006&r=1&w=2|http://marc.info/?t=138817851800006&r=1&w=2]] 
 
