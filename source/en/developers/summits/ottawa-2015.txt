@@ -15,6 +15,7 @@ Suggested topics:
   * 60GHz/P2P scan flag
   * mac80211 vs. more offloads (e.g. RX) - be more flexible?
   * mac80211 to driver state/failure (auth/assoc/...) feedback operation for debug?
+  * report from netconf (johannes)
   * ... (please suggest more)
 
 Planning to attend: 
