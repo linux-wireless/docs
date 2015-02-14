@@ -7,15 +7,22 @@ Suggested topics:
   * state of 802.11s implementation 
   * Bob's wmediumd 
   * brief look at rate statistics (johannes) 
-  * Intel TCP/remote wake demo? 
+  * Intel TCP/remote wake demo?
   * secure firmware download (Kathy) 
   * congestion control / "bufferbloat" 
   * mac80211/driver configuration access and lack of locking
   * TSO/GSO over mac80211
-  * 60GHz/P2P scan flag
+  * 60GHz/P2P scan&remain-on-channel flag
   * mac80211 vs. more offloads (e.g. RX) - be more flexible?
   * mac80211 to driver state/failure (auth/assoc/...) feedback operation for debug?
   * report from netconf (johannes)
+  * hw address from userspace
+  * new wiki
+  * multiple radios / p2p-device
+  * vendor extensions to existing commands/events (key mgmt offloading)
+  * bt coex subsystem
+  * LPC in Seattle
+  * upper-layer services (P2PS, HS2 config, miracast)
   * ... (please suggest more)
 
 Planning to attend: 
