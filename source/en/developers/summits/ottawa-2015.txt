@@ -25,7 +25,7 @@ Suggested topics:
   * upper-layer services (P2PS, HS2 config, miracast)
   * ... (please suggest more)
 
-Planning to attend: 
+Attendees: 
   * Johannes Berg 
   * John Linville 
   * Kalle Valo 
@@ -33,3 +33,4 @@ Planning to attend:
   * Kathy Giori 
   * Avery Pennarun
   * Jouni Malinen
+  * Seth Forshee
