@@ -1,6 +1,19 @@
-
 For relicensing, the content of this page was removed. 
 
 The old website for now has a copy of the old content: 
 
 [[http://linuxwireless.sipsolutions.net/en/users/Drivers/b43/|http://linuxwireless.sipsolutions.net/en/users/Drivers/b43/]] 
+
+**b43** and **b43legacy** are wireless drivers for Broadcom [[en/developers/Documentation/Glossary#softmac|SoftMAC]] chipsets. Kernel will automatically pick a proper module for you:
+ * **b43** for any new (supported) hardware
+ * **b43legacy** for BCM4301 and early BCM4306 versions
+
+===== Summary =====
+
+ * You need to have firmware files (usually in /lib/firmware/) so ''b43(legacy)'' can upload them to the card and run properly.
+
+===== List of hardware =====
+
+To check for a present hardware model execute following command:
+<code>lspci -nn -d 14e4:</code>
+Please look carefully at device ID and chipset name.
