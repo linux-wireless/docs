@@ -17,3 +17,5 @@ The old website for now has a copy of the old content:
 To check for a present hardware model execute following command:
 <code>lspci -nn -d 14e4:</code>
 Please look carefully at device ID and chipset name.
+
+See the [[en/users/drivers/b43/devices]] page.
