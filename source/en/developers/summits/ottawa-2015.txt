@@ -102,8 +102,7 @@ Attendees:
     * should we add a capability for drivers?
       * or just ask and don't include those we don't have?
     * currently have survey and per-station statistics
-    * device counters not really anywhere (like mcast counters, which are in
-        debugfs now)
+    * device-level counters not really anywhere (like mcast counters, which are in debugfs now)
     * rate statistics
       * tracking a ton of rates uses lots of kernel memory
       * userspace subscribes to it and then gets updates when over 30 rates or overflow 16-bit counters.  Maybe 16-bit counters are too small for high packet rates.
