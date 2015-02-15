@@ -39,11 +39,16 @@ Attendees:
 
 == Notes ==
   * netconf recap
-    * add sysctl knobs for filtering / route lookup for hotspot 2.0
+    * add sysctl knobs for client-side filtering (needing route lookup) for hotspot 2.0
       * need to do a route lookup in ipv4 for mcast -- can't tell whether something is multicast or unicast without knowing the netmask
+      * 4 new knobs
+        * drop-unicast-IPv4-in-multi/broadcast-L2 (even for RFC SHOULD compliance)
+          * originally suggested code in IP stack broke cluster ip, so sysctl needed
+        * same for IPv6
+        * drop gratuitous ARP
+        * drop unsolicited NA
     * proxy arp
     * perceived difficult to add stuff to bridging code
-    * drop certain unicast frames do it in the IP stack? breaks cluster ip, so unlikely to happen there
     * some feedback from mac80211 on queuing time to improve transmit time
   * new wiki
     * Congratulations, you're reading it!
@@ -68,10 +73,10 @@ Attendees:
   * TCP / congestion control -- TSO/GSO over mac80211
     * intel: build AMSDU for TSO frames
       * take one TSO packet, split into AMSDUs
-      * doing segmentation in TCP stack: have to have some delays, or put in HW queue to do AMPDUs
-      * problem: w/TSO packets can get really large, AMSDUs max out at 4/8k
-      * when packets don't fit in AMSDU, we have to split them and generate new PNs.  If we can guarantee TSO limit, then host can still generate sequence numbers
-    * Eric: per-flow limit for TSO/GSO exist, and MSS limits, you need both
+      * doing AMSDUs without help from TCP stack: have to have some delays, or put in HW queue to do AMPDUs
+      * problem: w/ TSO packets can get really large, AMSDUs max out at 4/8k
+      * when packets don't fit in AMSDU, we have to split them and generate new PNs.  If we can guarantee TSO limit, then mac80211 can still PNs
+    * Eric: per-flow size limit for TSO/GSO exist, and packet limits, you need both to protect against peers using tiny MSS
     * can we start small and increase size once we have some traffic with the stations?
     * terminology: "DSO" - driver segmentation offload
     * when doing SW crypto must linearize skbs so can't always use scatter-gather
@@ -133,7 +138,7 @@ Attendees:
     * Jouni: can we use event for more than just debugging?  Johannes: potentially, doing that today for RSSI for bt coex
   * hw address from userspace
     * mfr's want to separate mac address from otp area
-    * firmware is 6 bytes long and includes mac address
+    * "firmware" file that is 6 bytes long and has mac address
     * some people don't want to add device with empty mac and configure it later
     * using same interface as firmware loader could be problematic (e.g. would mac address files need to be signed?)
     * is it just part of the calib data?  different groups might be involved at these stages
@@ -146,6 +151,7 @@ Attendees:
     * connect command passing keys and stuff
     * new attributes in the connect and roaming events
     * can use exisitng nl80211 attributes in vendor commands to avoid copying them?  not validated
+    * problem: vendor extensions could completely change semantics?
   * bt coex subsystem
     * wireless wants to know BT states, might not have a gpio or register in common, or be on separate chip from BT
     * possible that BT calls some cfg80211 API, but want to avoid having some tight coupling
@@ -159,7 +165,5 @@ Attendees:
     * should driver be the one that's calling all the rx handlers or do we use flags to control fastpaths?
     * need to make sure statistics, crypto are still functional
     * Jouni: this can cause fragmentation of features across drivers
-  * opw - Luis
+  * opw - Jes
     * converting orinoco to cfg80211
-
-
