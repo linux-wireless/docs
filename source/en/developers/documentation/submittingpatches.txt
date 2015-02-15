@@ -18,13 +18,17 @@ Please **DO NOT** PGP sign patches sent to //linux-wireless//. The reason is tha
 
 ===== Who to address =====
 
-If you intend on getting your patch committed address your e-mail as follows: 
+Send mac80211, cfg80211 and mac80211_hwsim patches as follows: 
 
+<code>To: Johannes Berg <johannes@sipsolutions.net>
+CC: linux-wireless@vger.kernel.org, Other Developers</code>
 
-<code>To: ''John Linville''
-CC: ''linux-wireless'', Maintainers, Other Developers</code>
+For wireless-drivers patches (except mac80211_hwsim) send patches as:
+
+<code>To: linux-wireless@vger.kernel.org
+Cc: Driver maintainers, Other Developers</code>
+
 Where [[en/developers/maintainers|Maintainers]] contains the list of maintainers for the piece of code you are patching. //Other Developers// in this case can be a list of developers who you think may like to review this patch or who changed the code you are working on recently. 
-
 
 ===== Subject name =====
 
