@@ -24,3 +24,4 @@ Things ath10k developers are currently working on, and other things to do:
   *       set struct wiphy::max_ap_assoc_sta for advertising the maximum number of supported clients 
   *       clear wmi.op_version and other feature variables if there's a problem with the firmware image (corruption etc) 
   *        * [[http://lists.infradead.org/pipermail/ath10k/2014-December/003905.html|http://lists.infradead.org/pipermail/ath10k/2014-December/003905.html]] 
+  * set cfg80211::max_ap_assoc_sta
