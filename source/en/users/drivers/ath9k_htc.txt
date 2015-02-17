@@ -109,11 +109,10 @@ Now, when the device is plugged in, ath9k_htc should load normally. If not, repo
 See [[en/users/Drivers/ath9k/debug|here]]. 
 
 
-===== Known limitations =====
+===== Known issues =====
 
-The AMPDU size is limited to 22 subframes for UB94/95 and 17 for UB91. Fixing this would require removing lots of cruft and structural changes in the firmware. 
-
-
+  * The AMPDU size is limited to 22 subframes for UB94/95 and 17 for UB91. Fixing this would require removing lots of cruft and structural changes in the firmware.
+  * This HW strongly depends on USB.  Please chech [[https://github.com/qca/open-ath9k-htc-firmware/wiki/usb-related-issues|usb related issues]] before sending bug report.
 ===== AP/P2P Modes =====
 
 //**This is experimental !**// 
