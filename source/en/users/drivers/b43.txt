@@ -68,3 +68,10 @@ Please look carefully at device ID and chipset name.
 | ::: | yes (3.6+) | BCM43225 | ? | N (r6) | brcm80211 |
 | 14e4:a8db | not tested | BCM43217 | b/g/n | N (r17) | |
 | 14e4:a99d | not tested | BCM43421? | ? | ? | wl |
+
+===== Contact =====
+
+  * For instant contact you can try #bcm-users channel in IRC freenode network. Please note the limited activity and that you may need to wait for an answer.
+  * As a more reliable way you can use [[http://lists.infradead.org/mailman/listinfo/b43-dev|b43-dev mailing list]].
+
+In case of any problem, please start with providing hardware model (including ID) and description of the issue.
