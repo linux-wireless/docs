@@ -32,18 +32,18 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 
 
 === PCIe devices ===
-|**Chipset** |**PCI Device ID** |**Notes** |
-|BCM4354  |14e4:43df |Supported in 3.17+ |
-|BCM4356  |14e4:43ec |
-|BCM43567 |14e4:43d3 |
-|BCM43570 |14e4:43d9 |
-|BCM43602 |14e4:43ba |
-|BCM43602 |14e4:43bb | ::: |Supported in 3.19+, 2 GHz device |
-|BCM43602 |14e4:43bc | ::: |Supported in 3.19+, 5 GHz device |
+^ Chipset ^ PCI Device ID ^ Notes ^
+|BCM4354  |14e4:43df | Supported in 3.17+ |
+|BCM4356  |14e4:43ec | ::: |
+|BCM43567 |14e4:43d3 | ::: |
+|BCM43570 |14e4:43d9 | ::: |
+|BCM43602 |14e4:43ba | ::: |
+|BCM43602 |14e4:43bb | Supported in 3.19+, 2 GHz device |
+|BCM43602 |14e4:43bc | Supported in 3.19+, 5 GHz device |
 
 
 === SDIO devices ===
-|**Name** |**Device ID** |
+^ Name ^ Device ID ^
 |BCM4329  | 0x4329 |
 |BCM4330  | 0x4330 |
 |BCM4334  | 0x4334 |
@@ -55,7 +55,7 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 
 
 === USB devices ===
-|**Name** |**USB Device ID** |**Notes** |
+^ Name ^ USB Device ID ^ Notes ^
 |BCM43235 (rev == 3) |? | |
 |BCM43236 (rev == 3) |0a5c:bd17 | |
 |BCM43238 (rev == 3) |? | |
