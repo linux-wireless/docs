@@ -6,8 +6,8 @@ Broadcom produces many SoCs that can combine processor, ethernet, WiFi, USB and 
 
 
 ===== Known SSB SoCs =====
-|**Chip** |||**MIPS**||**80211** |||**PCI\\ rev** |**USB\\ rev** |**CC\\ rev** |**PMU\\ rev** |
-|**Name** |**id** |**pkg** |**rev** |**rev** |**PHY** |**Radio** | ::: | ::: | ::: | ::: |
+^ Chip ^^^ MIPS ^^ 80211 ^^^ PCI\\ rev ^ USB\\ rev ^ CC\\ rev ^ PMU\\ rev ^
+^ Name ^ id ^ pkg ^ ^ rev ^ rev ^ PHY ^ Radio ^ ::: ^ ::: ^ ::: ^ ::: ^
 |BCM5352E |0x5352 |0x02 |3302 |6 |9 |G/7 |0x2050/2 |─ |1.1/2 |14 |─ |
 |BCM5354 |0x5354 |0x00 |3302 |8 |13 |LP/0 |0x2062/1 |─ |2.0/2 |20 |0 |
 |? |0x5365 |0x00 |3302 |1 |─ |─ |─ |8 |1.1/2 |5 |─ |
