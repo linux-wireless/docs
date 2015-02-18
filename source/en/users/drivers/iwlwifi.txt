@@ -130,7 +130,7 @@ Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make su
 
 ===== Bluetooth Coexistence =====
 
-Having and WiFi running at the same time is a challenge. These scenarios have been tested thoroughly on 7260 and up, less so on earlier devices. This is why some people may face issues with devices that are handled by iwldvm (pre-7260). For users of these devices that have problems when WiFi and Bluetooth are running concurrently, we suggest to disable BT Coex by loading iwlwifi with bt_coex_active=0 as a module parameter.
+Having and WiFi running at the same time is a challenge. These scenarios have been tested thoroughly on 7260 and up, less so on earlier devices. This is why some people may face issues with devices that are handled by iwldvm (pre-7260). For users of these devices who have problems when WiFi and Bluetooth are running concurrently, we suggest to disable BT Coex by loading iwlwifi with bt_coex_active=0 as a module parameter.
 
 ===== Debugging =====
 
