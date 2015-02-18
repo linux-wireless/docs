@@ -11,6 +11,7 @@ The old website for now has a copy of the old content:
 ===== Summary =====
 
   * You need to have firmware files (usually in ''/lib/firmware/'') so **b43(legacy)** can upload them to the card and run properly.
+  * For [[en/developers/Documentation/Glossary#fullmac|FullMAC]] devices support see [[en/users/Drivers/brcm80211|brcmfmac]] and [[en/users/Drivers/rndis_wlan|rndis_wlan]]
 
 ===== Known problems & limitations =====
 
