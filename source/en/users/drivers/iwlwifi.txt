@@ -74,11 +74,11 @@ Installation of the firmware is simply:
 You can now load the driver. 
 
 You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware.git]], or download it here: 
-|**Device** |**Kernels** |**Firmware** |
-|Intel® Wireless WiFi 5150AGN |2.6.29+ |{{iwlwifi-5150-ucode-8.24.2.2.tgz|iwlwifi-5150-ucode-8.24.2.2.tgz}} |
-|Intel® Wireless WiFi 5100AGN \\  Intel® Wireless WiFi 5300AGN \\  Intel® Wireless WiFi 5350AGN |2.6.27+ |{{iwlwifi-5000-ucode-5.4.A.11.tar.gz|iwlwifi-5000-ucode-5.4.A.11.tar.gz}} |
-| ::: |2.6.30+ |{{iwlwifi-5000-ucode-8.24.2.12.tgz|iwlwifi-5000-ucode-8.24.2.12.tgz}} |
-| ::: |2.6.38+ |{{iwlwifi-5000-ucode-8.83.5.1-1.tgz|iwlwifi-5000-ucode-8.83.5.1-1.tgz}} |
+|**Device** |**Kernels** | **Module** |**Firmware** |
+|Intel® Wireless WiFi 5150AGN |2.6.29+ |iwldvm|{{iwlwifi-5150-ucode-8.24.2.2.tgz|iwlwifi-5150-ucode-8.24.2.2.tgz}} |
+|Intel® Wireless WiFi 5100AGN \\  Intel® Wireless WiFi 5300AGN \\  Intel® Wireless WiFi 5350AGN |2.6.27+ |iwldvm|{{iwlwifi-5000-ucode-5.4.A.11.tar.gz|iwlwifi-5000-ucode-5.4.A.11.tar.gz}} |
+| ::: |2.6.30+ |:::|{{iwlwifi-5000-ucode-8.24.2.12.tgz|iwlwifi-5000-ucode-8.24.2.12.tgz}} |
+| ::: |2.6.38+ |:::|{{iwlwifi-5000-ucode-8.83.5.1-1.tgz|iwlwifi-5000-ucode-8.83.5.1-1.tgz}} |
 |Intel® Centrino® Advanced-N 6230 \\  Intel® Centrino® Wireless-N 1030 \\  Intel® Centrino® Wireless-N 130 \\  Intel® Centrino® Advanced-N 6235 |2.6.36+ |{{iwlwifi-6000g2b-ucode-17.168.5.1.tgz|iwlwifi-6000g2b-ucode-17.168.5.1.tgz}} |
 | ::: |2.6.36+ |{{iwlwifi-6000g2b-ucode-17.168.5.2.tgz|iwlwifi-6000g2b-ucode-17.168.5.2.tgz}} |
 | ::: |3.2+ |{{iwlwifi-6000g2b-ucode-18.168.6.1.tgz|iwlwifi-6000g2b-ucode-18.168.6.1.tgz}} |
