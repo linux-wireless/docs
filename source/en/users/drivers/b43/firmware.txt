@@ -34,3 +34,5 @@ List of planned requirements for the common script:
   * Allow offline installation by providing a path to downloaded driver (archive). This will require a small list of md5/sha sums but should be easy to maintain.
 
 Our current plan is to share this idea with various distributions (most likely package maintainers) and listen to the feedback. Based on that we may change/extend our script requirements.
+
+Once we get requirements list complete and "Ack" from distributions we'll write the common script and make it part of the ''b43-fwcutter''.
