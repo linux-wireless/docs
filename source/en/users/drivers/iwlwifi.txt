@@ -111,7 +111,7 @@ You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmwa
 | ::: |3.17+ |{{iwlwifi-7265-ucode-23.13.10.0.tgz|iwlwifi-7265-ucode-23.13.10.0.tgz}} |
 
 
-===== git repositories =====
+===== Git repositories =====
 
 There are three repositories that we maintain: 
         * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/iwlwifi-fixes.git;a=summary|iwlwifi-fixes]] with fixes for the current kernel release cycle 
