@@ -18,7 +18,7 @@ There are many attempts trying to make end-users life easier:
 ===== Problem =====
 
 While above solutions may seem to work for some (many?) users, they are not really perfect. Few issues:
-  * Limitation to users to particular distributions.
+  * Limitation to users of particular distributions.
   * Duplicated work on solving the same problem.
   * Maintenance problem, it takes time to propagate firmware updates across all implementations. If firmware API happens to change (used to happen in past), maintainers have to track how/where to place the firmware.
   * Lack of one global way for users to install firmware.
