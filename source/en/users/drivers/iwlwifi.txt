@@ -126,7 +126,7 @@ If you need to use the current driver on an older kernel, you can use the compat
 
 ===== Bugzilla =====
 
-Due to security issues, the bugzilla instance was disabled. Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:ilw@linux.intel.com|ilw@linux.intel.com]] to the bug. 
+Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:ilw@linux.intel.com|ilw@linux.intel.com]] to the bug. 
 
 
 ===== Debugging =====
