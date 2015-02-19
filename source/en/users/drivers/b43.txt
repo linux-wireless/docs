@@ -16,6 +16,7 @@ The old website for now has a copy of the old content:
 ===== Known problems & limitations =====
 
   * Some stalls (on G-PHY only?) possibly related to CCK vs. OFDM, see [[https://lists.openwrt.org/pipermail/openwrt-devel/2012-August/016432.html|WRT54g / b43 / mac802.11 BREAKTHROUGH]]
+  * N-PHY: 5 GHz support requires kernel 3.17+
   * HT-PHY: no support for 5 GHz
   * No support for 802.11n features (HT, aggregation, 40 MHz width)
 
