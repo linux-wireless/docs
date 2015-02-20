@@ -20,6 +20,11 @@ The old website for now has a copy of the old content:
   * HT-PHY: no support for 5 GHz
   * No support for 802.11n features (HT, aggregation, 40 MHz width)
 
+===== Resolved problems =====
+
+  * G-PHY devices: not working with kernels 3.15 and 3.16-rc1 (a regression). This was fixed in 3.15.5 ([[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?h=linux-3.15.y&id=6f3f164bd0efe9a090cd74e08d6195c95024a1d1|6f3f164]]) and 3.16-rc3 ([[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=2fc68eb122c7ea6cd5be1fe7d6650c0beb2f4f40|2fc68eb]]).
+  * Scanning/connectivity problems: caused by **b43** bug exposed with kernel 3.8 (by [[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=0172bb75073e11a5aa9d8a953bdaefb8709f00c8|0172bb7]]). Fixed in kernel 3.14 (by [[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=64e5acb09ca6b50c97299cff9ef51299470b29f2|64e5acb]]) and backported to 3.13.2, 3.12.10, 3.10.29.
+
 ===== List of hardware =====
 
 To check for a present hardware model execute following command:
