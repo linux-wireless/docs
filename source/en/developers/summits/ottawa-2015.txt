@@ -65,7 +65,7 @@ Attendees:
       * developers put stuff into gerrit
       * someone takes stuff from internal tree to send it back upstream
     * is there an alternative that's more permanent?
-      * linux-next might be a replacement if mac80211-next went into -next
+      * linux-next might be a replacement if mac80211-next went into linux-next
     * Kalle: we need it because no one has any idea which tree to use
       * Kalle wants to keep it for forseeable future
     * Johannes: doesn't care, if mac80211 goes into -next
