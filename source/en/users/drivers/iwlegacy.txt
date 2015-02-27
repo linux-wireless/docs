@@ -14,7 +14,7 @@
 
 The following devices are supported (since kernel version): 
     * Intel® PRO/Wireless 3945ABG (2.6.24) 
-    * Intel® Wireless [[WiFi|WiFi]] Link 4965AGN (2.6.24) 
+    * Intel® Wireless WiFi Link 4965AGN (2.6.24) 
 
 
 ===== Support =====
@@ -29,7 +29,7 @@ For technical support send email to [[mailto:linux-wireless@vger.kernel.org|linu
 | ::: |2.6.24+ |{{iwlwifi-3945-ucode-15.28.1.8.tgz|iwlwifi-3945-ucode-15.28.1.8.tgz}} |
 | ::: |2.6.29+ |{{iwlwifi-3945-ucode-15.28.2.8.tgz|iwlwifi-3945-ucode-15.28.2.8.tgz}} |
 | ::: |2.6.29+ |{{iwlwifi-3945-ucode-15.32.2.9.tgz|iwlwifi-3945-ucode-15.32.2.9.tgz}} |
-|Intel® Wireless [[WiFi|WiFi]] Link 4965AGN |2.6.24+ |{{iwlwifi-4965-ucode-4.44.14.tgz|iwlwifi-4965-ucode-4.44.14.tgz}} |
+|Intel® Wireless WiFi Link 4965AGN |2.6.24+ |{{iwlwifi-4965-ucode-4.44.14.tgz|iwlwifi-4965-ucode-4.44.14.tgz}} |
 | ::: |2.6.24+ |{{iwlwifi-4965-ucode-4.44.15.tgz|iwlwifi-4965-ucode-4.44.15.tgz}} |
 | ::: |2.6.24+ |{{iwlwifi-4965-ucode-4.44.17.tgz|iwlwifi-4965-ucode-4.44.17.tgz}} |
 | ::: |2.6.24+ |{{iwlwifi-4965-ucode-4.44.1.18.tgz|iwlwifi-4965-ucode-4.44.1.18.tgz}} |
