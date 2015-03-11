@@ -65,9 +65,9 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 |BCM43569 |
 
 Both brcmsmac and brcmfmac drivers require firmware files that need to be separately downloaded. Firmware is available from the Linux firmware repository at: 
-    * git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git 
-    * [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] 
-    * [[https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] 
+  * %%git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git%%
+  * [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]]
+  * [[https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]]
 
 
 ===== Unsupported Chips =====
