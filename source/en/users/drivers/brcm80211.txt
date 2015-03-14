@@ -50,6 +50,7 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 |BCM43241 | 0x4324 | |
 |BCM4335  | 0x4335 | |
 |BCM43362 | 0xA962 | Supported in 3.14+ |
+|BCM4345 | 0x4345 | Supported in 4.1+ |
 |BCM4354  | 0x4354 | Supported in 3.15+ |
 |BCM43143 | 0xA887 | |
 
