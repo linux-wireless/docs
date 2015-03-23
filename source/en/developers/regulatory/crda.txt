@@ -41,9 +41,9 @@ If using CONFIG_CFG80211_INTERNAL_REGDB without updating net/wireless/db.txt you
     * python and the m2crypto package (python-m2crypto) 
     * libgcrypt or libssl (openssl) header files 
     * nl library and header files (libnl1 and libnl-dev) available at git://git.kernel.org/pub/scm/libs/netlink/libnl.git 
-    * RSA public key of John Linville, we include this as part of this package so you do not need to install it. This RSA public key comes from the wireless-regdb.git tree and we keep it up to date here. 
+    * RSA public key of Seth Forshee, we include this as part of this package so you do not need to install it. This RSA public key comes from the wireless-regdb.git tree and we keep it up to date here. 
     * regulatory database (regulatory.bin, no need to build just put the file in REG_BIN location) from: 
-<code>   git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-regdb.git</code>
+<code>   git://git.kernel.org/pub/scm/linux/kernel/git/sforshee/wireless-regdb.git</code>
 
 ===== Letting the kernel call CRDA =====
 
