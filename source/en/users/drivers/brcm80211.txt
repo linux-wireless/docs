@@ -33,8 +33,8 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 
 === PCIe devices ===
 ^ Chipset ^ PCI Device ID ^ Notes ^
-|BCM4354  |14e4:43df | Supported in 3.17+ |
-|BCM4356  |14e4:43ec | ::: |
+|BCM4354  |14e4:43df | Unreleased hw, support dropped in 4.1 |
+|BCM4356  |14e4:43ec | Supported in 3.17+ |
 |BCM43567 |14e4:43d3 | ::: |
 |BCM43570 |14e4:43d9 | ::: |
 |BCM43602 |14e4:43ba | ::: |
