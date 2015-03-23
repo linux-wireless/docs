@@ -114,7 +114,7 @@ On this example the build produced three files:
 
 ==== Importing your public key into CRDA ====
 
-CRDA has a directory, //pubkeys// of all trusted public keys it can use to embed onto the binary for RSA signature verification against any particular binary regulatory database. This is used to allow CRDA to trust different authors for regulatory information. By default John Linville's key is always present on the pubkeys directory. You can remove it if for your particular application you cannot trust the upstream community regulatory database information. 
+CRDA has a directory, //pubkeys// of all trusted public keys it can use to embed onto the binary for RSA signature verification against any particular binary regulatory database. This is used to allow CRDA to trust different authors for regulatory information. By default Seth Forshee's key is always present on the pubkeys directory. You can remove it if for your particular application you cannot trust the upstream community regulatory database information. 
 
 CRDA can be built with gcrypt or openssl support. If using openssl (USE_OPENSSL=1) you can enable dynamic loading of trusted public keys and stuff custom public keys at any time into the /etc/wireless-regdb/pubkeys directory (by default). 
 
