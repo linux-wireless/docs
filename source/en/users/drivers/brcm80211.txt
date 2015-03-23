@@ -12,7 +12,7 @@
 ===== Supported Chips =====
 
 **brcmsmac (PCIe/AXI)** driver: 
-| **Name**  | **PCI Device ID**  |
+^ Name ^ PCI Device ID ^
 | BCM4313   | 0x4727             |
 | BCM43224  | 0x0576             |
 | BCM43224  | 0x4353             |
@@ -22,7 +22,7 @@
 Please note: at least BCM4313 is not fully supported.  Some models appears to work (users reported success), but some don't, and there's no indication that this is going to change.  For example: [[http://marc.info/?t=138817851800006&r=1&w=2|http://marc.info/?t=138817851800006&r=1&w=2]] 
 
 **brcmsmac (SoC/AXI)** driver: 
-|**Name** |
+^ Name ^
 |BCM4716  |
 |BCM4717  |
 |BCM4718  |
@@ -73,7 +73,7 @@ Both brcmsmac and brcmfmac drivers require firmware files that need to be separa
 
 
 ===== Unsupported Chips =====
-|**Chip** |**Rev** |**Marketing name** |**USB ID** |
+^ Chip ^ Rev ^ Marketing name ^ USB ID ^
 |0x4322 |1 |? |0846:9011|
 |0x4322 |1 |BCM43231 |0846:9020|
 |43236 | 2 |BCM43236 |0a5c:bd17|
