@@ -81,6 +81,8 @@ Both brcmsmac and brcmfmac drivers require firmware files that need to be separa
 
 BCM43231 and BCM43236 (rev <= 2) have another architecture and can't be easily supported by **brcmfmac**. They have less memory on the chip and can't run full MAC firmware, so they require implementing some extra code in the Linux driver. On the other hand they are not standard soft MAC devices, so they can't be supported by **brcmsmac** or **b43**. 
 
+^ Chip ^ SDIO ID ^ Notes ^
+|BCM4345 | 02d0:4345 | Older version of BCM43455 |
 
 ===== Broadcom brcmsmac driver =====
       * Support for both 32 and 64 bit Linux kernels 
