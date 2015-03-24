@@ -148,7 +148,7 @@ Brett Rudley            [[mailto:brudley@broadcom.com|brudley@broadcom.com]]
 ==== fullmac driver specifics ====
               * Integrated with cfg80211 
               * Most of Mac functionality is performed on chip 
-              * support for SDIO and USB 
+              * support for SDIO, USB and PCIe 
               * SoftAP 
               * P2P 
               * TDLS 
