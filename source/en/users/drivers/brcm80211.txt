@@ -167,6 +167,7 @@ Location: -> Device Drivers
                 *  *  * -> < > Broadcom IEEE802.11n embedded FullMAC WLAN driver 
                 *  *  *  * -> [ ] SDIO bus interface support for FullMAC driver 
                 *  *  *  * -> [ ] USB bus interface support for FullMAC driver 
+                *  *  *  * -> [ ] PCIE bus interface support for FullMAC driver
 
 For the PCIe SoftMAC WLAN driver (brcmsmac) you need to enable select the BCMA bus driver as well: 
 
