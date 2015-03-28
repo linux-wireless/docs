@@ -68,7 +68,7 @@ Please look carefully at device ID and chipset name.
 | ::: | no | BCM4352 | a/b/g/n/ac | ? | wl |
 | 14e4:43a9 | yes (3.17+) | BCM43217 | b/g/n | N (r17) | |
 | 14e4:43aa | yes (3.17+) | BCM43131 | b/g/n | N (r17) | |
-| 14e4:43b1 | no | BCM4352 | a/b/g/n/ac | AC? | |
+| 14e4:43b1 | no | BCM4352 | a/b/g/n/ac | AC (r3) | wl |
 | 14e4:4727 | no | BCM4313 | b/g/n | LCN (r1) | wl/brcm80211 |
 | 14e4:a8d6 | not tested | BCM43222 | ? | N (6) | |
 | 14e4:a8d8 | yes (3.6+) | BCM43224 | a/b/g/n | N (r6) | brcm80211 |
