@@ -26,7 +26,7 @@ Some rate algorithms for 802.11 have measured RSSI, and used this figure as a ba
 
 Packets sent between two radio devices have some chance of being successfully sent. The probability of success is an unknown function of the variables (distance between devices, multipath effects, interference from other devices). The radio can be used in any environment, where the relationship between these variables is unknown. Further, we do not know which variable will predominate. We do not even know what the interference will look like. If the interference is bursty, then quicker packets (higher rates) have a better chance of getting through in the gaps. Given the unknown nature of the environment, we decided that performance at a particular rate has to be considered as being independant of performance at a different rate. 
 
-Currently, there Since the relationship between these variables is not known - we decided to take a [[http://dictionary.reference.com/search?q=heuristic|heuristic]] approach, where the approach is "pertaining to, or based on experimentation, evaluation, or trial-and-error methods". 
+Since the relationship between these variables is not known we decided to take a [[http://dictionary.reference.com/search?q=heuristic|heuristic]] approach, meaning "pertaining to, or based on experimentation, evaluation, or trial-and-error methods". 
 
 The implementation of minstrel provides a rate table for each of the remote nodes being communicated with. This rate table is  found in the debugfs directory, and shows some interesting things. Sometimes, the 11mbit rate is more likely to succeed, or has a higher throughput, than the the 2mbit rate. 
 
