@@ -1,0 +1,12 @@
+
+----
+  *   - Unordered List Item[[ --- //[[ranaking393@gmail.com|rana hassan]] 2015/04/04 07:18//~~NOCACHE~~ 
+<nspages -h1 -subns -exclude:start><olmap id="olMapOne" width="550px" height="450px" lat="50.0" lon="5.1" zoom="12" statusbar="1" controls="1" poihoverstyle="0" baselyr="OpenStreetMap" gpxfile="" kmlfile="" geojsonfile="" summary="" >
+~~ Plugin olmap help.
+~~ Required in the above tag are values for: id (unique on this page), width, heigth.
+~~ Also you will want to enter zoomlevel and lat, lon values that make sense for where you want the map to start.
+
+~~ Below is an example of a POI, you can add as many as you want. ~~ More examples: http://dokuwiki.org/plugin:openlayersmap 
+50.0117,5.1287,-90,.8,marker-green.png,Pont de Barbouillons; Daverdisse \\ external link: [[http://test.com|test.com]] \\ internal link: [[::start]]\\ **DW Formatting** 
+</olmap>
+]]https://wireless.wiki.kernel.org/lib/images/toolbar/linkextern.png8-)
