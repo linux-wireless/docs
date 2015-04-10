@@ -42,6 +42,6 @@ Same as managed mode, the attributes are used with the crypto settings given whe
 ===== References =====
 
 When implementing WAPI you'll likely want to read 
-    * [[http://docs.google.com/viewer?a=v&q=cache:Chrh0Rl0GyAJ:isotc.iso.org/livelink/livelink/JTC001-N-9880.pdf%3Ffunc%3Ddoc.Fetch%26nodeId%3D8500308%26docTitle%3DJTC001-N-9880+ISO/IEC+JTC+1+N+9880&hl=en&gl=us&pid=bl&srcid=ADGEESgNLsIpQTVZuGsLTOrRumyAnrCO-XAGToXQ3yj8yM7GbRrkpO3akZAqtDNgEDr_5ORb1is-4vXBnESZKLzGUF5h5-A0HqCpg5ey-mhl6G8vE5TPPpdjLBCwf3qlH5US2DTGiv89&sig=AHIEtbSNafwsFJEU6EjtpkTzgtiEK3VGaQ|WAPI ISO submission - ISO/IEC JTC 1 N 9880]] 
+    * [[http://isotc.iso.org/livelink/livelink?func=ll&objId=8500308&objAction=Open&vernum=1|WAPI ISO submission - ISO/IEC JTC 1 N 9880]] 
     * [[http://eprint.iacr.org/2008/329.pdf|SMS4 description in English]] 
     * [[http://isotc.iso.org/livelink/livelink?func=ll&objId=8685212&objAction=Open&vernum=1|WAPI ISO proposal voting results and comments]] 
