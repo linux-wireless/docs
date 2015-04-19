@@ -20,7 +20,8 @@
 The following devices are supported (since kernel version): 
       * Intel® Wireless 7265 (3.13) 
       * Intel® Wireless 7260 (3.10) 
-      * Intel® Wireless 3160 (3.10) 
+      * Intel® Wireless 3160 (3.10)
+      * Intel® Wireless 8260 (4.1)
       * Intel® Centrino® Advanced-N 6235 (3.2) 
       * Intel® Centrino® Wireless-N 2230 (3.2) 
       * Intel® Centrino® Wireless-N 2200 (3.2) 
