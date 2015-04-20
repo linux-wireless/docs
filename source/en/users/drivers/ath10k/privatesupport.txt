@@ -1,13 +1,15 @@
 
 Go back --> [[en/users/Drivers/ath10k|ath10k]] 
 
- 
-
-
 ===== ath10k private support =====
 
-Normally ath10k developers cannot give private support, reasons being: 
-  * no time 
-  * doesn't benefit the whole community 
-  * using email list is preferred because the whole team can then participate the discussion 
-  * normally you get better answers via mailing lists as more than one can answer So that's why it's recommended to use the ath10k mailing list for any questions related to ath10k, check [[en/users/Drivers/ath10k|the main ath10k wiki]] for details. 
+Most likely you have contacted developers privately and was referenced to this page. Please avoid contacting developers privately and instead have all the discussions in mailing lists. That way you and everyone else get the best support.
+
+Some of the reason why it's best to have public discussions on mailing lists: 
+  * Developers are busy, they don't have time to help each user individually. In mailing lists developers can share the support load and have more time for development (which is really important).
+  * Mistakes are usually fixed by others.
+  * Mailing list discussions are archived so other users can easily find the solution using Google.
+  * The whole team can then participate the discussion.
+  * Normally you get better answers via mailing lists as more people can answer.
+
+So that's why it's recommended to use the ath10k mailing list for any questions related to ath10k, check [[en/users/Drivers/ath10k|the main ath10k wiki]] for details how to send to the list. 
