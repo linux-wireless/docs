@@ -13,3 +13,16 @@ Some of the reason why it's best to have public discussions on mailing lists:
   * Normally you get better answers via mailing lists as more people can answer.
 
 So that's why it's recommended to use the ath10k mailing list for any questions related to ath10k, check [[en/users/Drivers/ath10k|the main ath10k wiki]] for details how to send to the list. 
+
+A standard reply which can be used for private email queries:
+
+<file>
+Hi,
+
+you contacted me about ath10k but unfortunately I do not 
+have time to give private support. Instead please check 
+the wiki:
+
+http://wireless.wiki.kernel.org/en/users/drivers/ath10k/privatesupport
+
+</file>
