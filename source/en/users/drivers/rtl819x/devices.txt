@@ -1,0 +1,5 @@
+The list is still in progress, please feel free to complete the device list. :-)
+
+===== rtl8192cu based devices =====
+|**Vendor**\\ |**Product**|**USB Vendor ID**|**USB Product ID**|**MaxPower**|
+|TP-Link|[[http://www.tp-link.com/en/products/details/cat-11_TL-WN821N.html#specifications|TL-WN821N V4]]|0x0bda|0x8178|500mA|
