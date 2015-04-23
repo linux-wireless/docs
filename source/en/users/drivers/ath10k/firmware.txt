@@ -25,6 +25,18 @@ Description of the files:
   ; firmware.bin  : firmware file for older ath10k versions supporting only FW API 1 
   ; otp.bin  : otp file for older ath10k versions supporting only FW API 1 
 
+==== Overview =====
+
+
+^ Hardware  ^ Firmware major version/branch  ^ Latest firmware revision         ^ Intended use  ^ Kernel version required*  ^ Git commit                  ^
+| QCA988X   | main                           | 999.999.0.636                    | STA           | 3.11                      | 5e3dd157d7e7                |
+| QCA988X   | 10.1                           | 10.1.467.2-1                     | AP            | 3.13                      | 8acd3c97ff9e                |
+| QCA988X   | 10.2                           | 10.2-00082-4-2                   | AP            | 3.18                      | 24c88f7807fb                |
+| QCA988X   | 10.2.4                         | 10.2.4.48                        | AP            | 4.0                       | 4a16fbec1cd0                |
+| QCA61X4   | wmi-tlv                        | WLAN.RM.2.0-00073-QCARMSWPZ-1-1  | AP/STA        | 4.0                       | d63955b33b3b, ca996ec56608  |
+
+* Note: It is possible to use newer ath10k driver on an older kernel with backports project: https://backports.wiki.kernel.org
+
 ===== Update firmware =====
 
 First download the firmware image from ath10k-firmware.git: 
@@ -52,9 +64,9 @@ Firmware versions 999.999.0.x.
 Supports AP mode, STA mode, Ad-Hoc and P2P. But AP mode is not that well tested, especially problems with DFS. 
 
 
-==== 10.1 branch ====
+==== 10.x branch ====
 
-Firmware versions 10.1.x. 
+Firmware versions 10.x.y. 
 
 Branch focusing on AP mode. Supports DFS. STA mode works but not well tested. No Ad-Hoc or P2P support. 
 
