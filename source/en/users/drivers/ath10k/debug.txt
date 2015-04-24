@@ -157,29 +157,29 @@ Not passing any arguments would clear the existing mask (if any).
 Some examples: 
 
 
-<code>iw wlanX set bitrates legacy-5 ht-mcs-5 vht-mcs-5 2:9</code>
+<code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 2:9</code>
 will setup VHT, nss=2, mcs=9 
 
 
-<code>iw wlanX set bitrates legacy-5 18 ht-mcs-5 vht-mcs-5</code>
+<code>iw wlan0 set bitrates legacy-5 18 ht-mcs-5 vht-mcs-5</code>
 will setup legacy, 18Mbps 
 
 
-<code>iw wlanX set bitrates legacy-5 ht-mcs-5 3 vht-mcs-5</code>
+<code>iw wlan0 set bitrates legacy-5 ht-mcs-5 3 vht-mcs-5</code>
 will setup HT, nss=1, mcs=3 
 
 
-<code>iw wlanX set bitrates legacy-5 ht-mcs-5 vht-mcs-5 1:0-9</code>
+<code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 1:0-9</code>
 will setup nss=1 
 
 
-<code>iw wlanX set bitrates legacy-5 ht-mcs-5 vht-mcs-5 1:0-9 2:0-9</code>
+<code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 1:0-9 2:0-9</code>
 will setup nss=2 
 
 It is possible to force SGI by adding force-sgi at the end of command: 
 
 
-<code>iw wlanX set bitrates legacy-5 ht-mcs-5 vht-mcs-5 2:9 force-sgi</code>
+<code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 2:9 force-sgi</code>
 
 ==== Simulating firmware crashes ====
 
