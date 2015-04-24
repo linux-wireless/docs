@@ -142,7 +142,6 @@ In order to setup bitrates latest version of iw is required.
 
 Just type iw to get short hint how to use it. 
 
-
 <code>iw
 .
 .
@@ -150,34 +149,36 @@ dev <devname> set bitrates [legacy-<2.4|5> <legacy rate in Mbps>*]
 [ht-mcs-<2.4|5> <MCS index>*] [vht-mcs-<2.4|5> <NSS:MCSx,MCSy... | NSS:MCSx-MCSy>*]
 .
 .</code>
-Currently ath10k HW is limited to handle only single fixed rate setting or limit number of used spatial streams. 
 
-Not passing any arguments would clear the existing mask (if any). 
+Currently ath10k is limited to handle VHT MCS in ranges: none, 0-7, 0-8, and 0-9. You cannot set any other ranges.
 
-Some examples: 
+Not passing any arguments would clear the existing mask (if any):
 
+<code>iw wlan0 set bitrates</code>
+
+To set VHT, nss=2, mcs=9:
 
 <code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 2:9</code>
-will setup VHT, nss=2, mcs=9 
 
+
+To set legacy, 18Mbps:
 
 <code>iw wlan0 set bitrates legacy-5 18 ht-mcs-5 vht-mcs-5</code>
-will setup legacy, 18Mbps 
 
+To set HT, nss=1, mcs=3:
 
 <code>iw wlan0 set bitrates legacy-5 ht-mcs-5 3 vht-mcs-5</code>
-will setup HT, nss=1, mcs=3 
 
+To set nss=1 MCS indexes 0-9
 
 <code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 1:0-9</code>
-will setup nss=1 
 
+
+To set nss=2:
 
 <code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 1:0-9 2:0-9</code>
-will setup nss=2 
 
 It is possible to force SGI by adding force-sgi at the end of command: 
-
 
 <code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 2:9 force-sgi</code>
 
