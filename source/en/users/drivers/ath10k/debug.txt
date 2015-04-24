@@ -182,6 +182,14 @@ It is possible to force SGI by adding force-sgi at the end of command:
 
 <code>iw wlan0 set bitrates legacy-5 ht-mcs-5 vht-mcs-5 2:9 force-sgi</code>
 
+Few more complicated examples, only supported since 4.2 kernel:
+
+<code>
+iw wlan0 set bitrates legacy-5 6 12 ht-mcs-5 1 2 3
+iw wlan0 set bitrates legacy-5 ht-mcs-5 7 8 9
+iw wlan0 set bitrates legacy-5 24 ht-mcs-5 vht-mcs-5 1:0-9
+</code>
+
 ==== Simulating firmware crashes ====
 
 It's possible to manually trigger a firmware crash using simulate_fw_crash debugfs file: 
