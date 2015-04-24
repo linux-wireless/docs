@@ -10,8 +10,10 @@ ath10k supports monitor mode. Recommended firmware version for a sniffer is 10.1
 
 To tune into 80 MHz channel, in this example channel 36 (5180 MHz): 
 
-
-<code>iw wlan0 set freq 5180 80 5210</code>
+<code>ip link set wlan0 down
+iw wlan0 set type monitor
+ip link set wlan0 up
+iw wlan0 set freq 5180 80 5210</code>
 
 ==== Known issues ====
   * Assoc Request frames not captured (Assoc Response shows up fine)  
