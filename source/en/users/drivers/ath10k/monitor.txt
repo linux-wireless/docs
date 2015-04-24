@@ -17,7 +17,7 @@ iw wlan0 set freq 5180 80 5210</code>
 
 To capture HT40+ on channel 36:
 
-<code>iw wlan1 set freq 5180 40 5190</code>
+<code>iw wlan0 set freq 5180 40 5190</code>
 
 ==== Known issues ====
   * Assoc Request frames not captured (Assoc Response shows up fine)  
