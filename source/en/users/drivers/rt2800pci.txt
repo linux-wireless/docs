@@ -18,7 +18,7 @@ Please see the [[en/users/Drivers/rt2800pci/devices|device list]].
 
 The Ralink driver for RT5592 can be downloaded from: [[http://www.asus.com/Networking/PCEN53/HelpDesk_Download/|http://www.asus.com/Networking/PCEN53/HelpDesk_Download/]] (direct link: [[http://dlcdnet.asus.com/pub/ASUS/wireless/PCE-N53/Linux_PCE_N53_1008.zip|http://dlcdnet.asus.com/pub/ASUS/wireless/PCE-N53/Linux_PCE_N53_1008.zip]] ) 
       
- * **MT7630E** 802.11b/g/n 1T1R 2.4 GHz Combo Card (Wireless PCI Express Minicard Module). (**WIP** Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]> : [[http://github.com/lwfinger/mt7630|http://github.com/lwfinger/mt7630]])
+ * **MT7630E** 802.11b/g/n 1T1R 2.4 GHz Combo Card (**WIP** Jakub Kicinski <kubakici@wp.pl> : http://github.com/kuba-moo/mt7630e)
 
  * **MT7662E/MT7612E** 802.11a/b/g/n/ac  2T2R 2.4/5 GHz PCI Express Single Chip (**WIP** Felix Fietkau <[[mailto:nbd@openwrt.org|nbd@openwrt.org]]> :[[https://github.com/openwrt/mt76|https://github.com/openwrt/mt76]])
 
