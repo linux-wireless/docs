@@ -7,7 +7,7 @@ Driver for [[http://www.mediatek.com|Ralink/MediaTek]] PCI devices RT2760, RT279
  
 
 
-===== available devices =====
+===== Available devices =====
 
 Please see the [[en/users/Drivers/rt2800pci/devices|device list]]. 
   * [[http://rt2x00.serialmonkey.com/wiki/index.php/Hardware|http://rt2x00.serialmonkey.com/wiki/index.php/Hardware]] List of devices from the project site. 
@@ -43,12 +43,12 @@ The Ralink driver for RT5592 can be downloaded from: [[http://www.asus.com/Netwo
 
 ===== TODO =====
                 * Warning "invalid TX_STA_FIFO content" gets issued sometimes, maybe only in conjunction with tx aggregation? Needs investigation. 
-===== device firmware =====
+===== Device firmware =====
                   * [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|rt2860.bin]] 
                   * SoC devices (RT3050, RT3051 and RT3052) don't need firmware 
-===== support =====
+===== Support =====
                     * [[http://rt2x00.serialmonkey.com/mailman/listinfo/users_rt2x00.serialmonkey.com|Mailing list]] 
 
 
-===== external links =====
+===== External links =====
                       * [[http://rt2x00.serialmonkey.com/|rt2x00 project website]] 
