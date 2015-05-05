@@ -16,7 +16,7 @@
   * **rtl8192su** is a USB driver for RTL8712U/RTL8192SU devices. (**WIP** : [[http://github.com/chunkeey/rtl8192su|http://github.com/chunkeey/rtl8192su]] ) 
   * **rtl8821ae** is a PCI-E driver for RTL8821AE devices (**3.16+**). 
   * **r8192ee** is a PCI-E driver for RTL8192EE devices (**3.16+**). 
-  * **rtl8xxxu** is a USB driver for RTL8723AU devices. (**WIP** : [[http://marc.info/?l=linux-wireless&m=142592052004569]] ) 
+  * **rtl8xxxu** is a USB driver for RTL8723AU devices. (**WIP** : [[http://marc.info/?l=linux-wireless&m=142714231209480]] ) 
 
 
 ===== staging drivers =====
@@ -24,7 +24,7 @@
     * **r8712u** is a USB driver for RTL8712U/RTL8192SU devices, it's going to be replaced by [[https://github.com/chunkeey/rtl8192su|rtl8192su]].  
     * **r8192u_usb** is a USB driver for RTL8192U devices.  
     * **r8192du** is a USB driver for RTL8192DU devices. (**WIP** : [[http://github.com/lwfinger/rtl8192du|http://github.com/lwfinger/rtl8192du]] ) 
-    * **r8723au** is a USB driver for RTL8723AU devices (**3.15+**). It's going to be replaced by [[http://marc.info/?l=linux-wireless&m=142592052004569|rtl8xxxu]].  
+    * **r8723au** is a USB driver for RTL8723AU devices (**3.15+**). It's going to be replaced by [[http://marc.info/?l=linux-wireless&m=142714231209480|rtl8xxxu]].  
     * **r8188eu** is a USB driver for RTL8188EU devices. 
     * **r8190_pci** is a PCI driver for [[http://www.realtek.com/products/productsView.aspx?Langid=1&PNid=41&PFid=9&Level=6&Conn=5&ProdID=174|RTL8190P]] devices (**WIP** : [[http://github.com/lwfinger/rtl8190p|http://github.com/lwfinger/rtl8190p]] ) 
 
