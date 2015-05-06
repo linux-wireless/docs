@@ -43,10 +43,9 @@ The following devices are supported (since kernel version):
 
 ===== Support =====
 
-For technical support send email to  and/or . 
+For general questions about WiFi on Linux using Intel's devices, you can send an email to ilw@linux.intel.com and / or the Linux wireless mailing which is common to all the vendors: linux-wireless@vger.kernel.org. Please note that the latter address accepts plaintext emails only.
 
-TODO: tell people how to use tracing (probably use a sub-page and link to it) 
-
+For bug reports and debugging , please see the [[en:users:drivers:iwlwifi:Debugging|page]] dedicated to that.
 
 ===== Firmware =====
 
