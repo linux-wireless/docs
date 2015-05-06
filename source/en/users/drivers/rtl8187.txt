@@ -8,14 +8,14 @@ The rtl818x drivers provide support for 802.11a/b/g wireless chipsets from Realt
 
 
 ===== Supported Chips =====
-  * **rtl8180** PCI driver: 
-    * RTL8180 
-    * RTL8185 
-    * RTL8187SE (**3.15+**) 
-  
-  * **rtl8187** USB driver: 
-    * RTL8187 
-    * RTL8187B 
+
+  * **rtl8180** PCI driver:
+    * RTL8180
+    * RTL8185
+    * RTL8187SE (**3.15+**)
+  * **rtl8187** USB driver:
+    * RTL8187
+    * RTL8187B
 ===== available devices =====
 
  
