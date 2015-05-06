@@ -25,16 +25,6 @@ This records all the data that goes from and to the firmware. The output is a fi
 
 Note that we no longer provide support for the firmware of the devices using iwldvm.
 
-=== Firmware crashes ===
-
-When the firmware crashes, you'll see a message like this: 
-
-<code>iwlwifi 0000:01:00.0: Microcode SW error detected.  Restarting 0x82000000.
-[snip]
-iwlwifi 0000:01:00.0: Loaded firmware version: XX.XX.XX.XX
-iwlwifi 0000:01:00.0: 0x0000090A | ADVANCED_SYSASSERT</code>
-In this case, please copy the whole dmesg output since there may be data before and after this message that can be helpful.
-
 === How to provide information to debug the firmware? ===
 Getting data from the firmware can often provide a lot of information, especially when the traffic is being stalled, latency is high, queues are stuck etc.. Here is how to do so. This is working starting kernel 3.19.
 
@@ -61,8 +51,19 @@ echo 1 > /sys/${DEVPATH}/data</code>
 
 To debug the firmware you'll typically need a customized version of it. These customization depends on the bug you are facing.
 
-Starting from 4.1, we can trigger firmware dumps when issues occur (e.g. when the association fails) this again requires a customized firmware.
- 
+Starting from 4.1, we can trigger firmware dumps when issues occur (e.g. when the association fails) this again requires a customized firmware. When a firmware dump is triggered by the driver, it'll create a firmware dump which which will be fetched automatically if you have the udev rule in place.
+
+=== Firmware crashes ===
+
+When the firmware crashes, you'll see a message like this: 
+
+<code>iwlwifi 0000:01:00.0: Microcode SW error detected.  Restarting 0x82000000.
+[snip]
+iwlwifi 0000:01:00.0: Loaded firmware version: XX.XX.XX.XX
+iwlwifi 0000:01:00.0: 0x0000090A | ADVANCED_SYSASSERT</code>
+In this case, please copy the whole dmesg output since there may be data before and after this message that can be helpful.
+
+In case of a firmware crash or queues being stuck, a dump will be automatically created. If you have the udev rule in place, you'll see the log on your filesystem.
 ==== Privacy aspects ====
 
 By sending the debug logs you are providing information to Intel such as your email address, peer’s MAC address, and other information.  This information will be used only for the purpose of troubleshooting the issue you are reporting.  Intel is committed to protecting your privacy.  To learn more about Intel’s privacy practices, please visit [[http://www.intel.com/privacy|Intel's privacy site]] or write Intel Corporation, ATTN Privacy, Mailstop RNB4-145, 2200 Mission College Blvd., Santa Clara, CA 95054 USA. 
