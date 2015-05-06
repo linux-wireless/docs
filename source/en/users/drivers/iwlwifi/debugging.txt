@@ -50,8 +50,7 @@ echo 1 > cat /sys/devices/virtual/devcoredump/devcd1/data</code>
 
 The easiest is to define a udev rule to dump the data automatically as soon as a dump is created:
 
-<code>SUBSYSTEM=="devcoredump", ACTION=="add", RUN+="/root/fwdump"
-"</code>
+<code>SUBSYSTEM=="devcoredump", ACTION=="add", RUN+="/root/fwdump"</code>
 Then /bin/dump_iwl_data.sh can simply be:
 <code>
 timestamp=$(date +%F_%H-%M-%S)
