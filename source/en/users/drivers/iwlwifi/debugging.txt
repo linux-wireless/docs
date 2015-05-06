@@ -1,0 +1,52 @@
+====== Bugs and support ======
+
+===== How to report? =====
+Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:ilw@linux.intel.com|ilw@linux.intel.com]] to the bug.
+Always attach the kernel log to your reports: dmesg > dmesg.log and attach dmesg.log to the bug.
+
+===== How to debug? =====
+==== Prints ====
+
+The simplest way to provide minimal output is to dump your kernel log: dmesg. Sometimes we will ask for logs from the supplicant too - they typically land in syslog. iwlwifi can print more data to the kernel log if asked to: this is controlled by the debug module parameter. This is a [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/iwl-debug.h#n145|bitmap]]. To see more debug prints, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n91|CONFIG_IWLWIFI_DEBUG]] must be enabled. 
+Please don't add debug level unless instructed to do so. Adding more prints typically adds useless information.
+
+==== Tracing ====
+
+Another (more powerful) way to debug iwlwifi is to use tracing: 
+
+<code>sudo trace-cmd record -e iwlwifi</code>
+We will typically ask for more switches: 
+
+<code>sudo trace-cmd record -e iwlwifi -e mac80211 -e cfg80211 -e iwlwifi_msg</code>
+This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n130|CONFIG_IWLWIFI_TRACING]] must be set. 
+
+
+==== Firmware Debugging ====
+
+When the firmware crashes, you'll see a message like this: 
+
+
+<code>iwlwifi 0000:01:00.0: Microcode SW error detected.  Restarting 0x82000000.
+[snip]
+iwlwifi 0000:01:00.0: Loaded firmware version: XX.XX.XX.XX
+iwlwifi 0000:01:00.0: 0x0000090A | ADVANCED_SYSASSERT</code>
+In this case, please copy the whole dmesg output since there may be data before and after this message that can be helpful. starting from kernel 3.15, iwlwifi will record data when the firwmare crashes so that it can be retrieved later. The data can be fetched by a simple: 
+
+
+<code>cat /sys/kernel/debug/iwlwifi/*/iwlmvm/fw_error_dump > iwl.bin</code>
+This assumes that [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n116|CONFIG_IWLWIFI_DEBUGFS]] is set. 
+
+A udev event is sent each time the firmware crashes, so that you can automate the process by writing a rule: 
+
+
+<code>DRIVER=="iwlwifi", ACTION=="change", RUN+="/bin/dump_iwl_data.sh"</code>
+Then /bin/dump_iwl_data.sh can simply cat the debugfs hook to a file. 
+
+Starting from kernel 3.17, iwlwifi supports firmware monitor. To enable it, load iwlwifi with fw_monitor=1 as a module parameter. The firmware monitor requires a very big chunk of contiguous memory to write its data - it tries to allocate 64MB and scales down if the allocation fails. This is why it is not enabled by default. Note that you will need a customized firmware to use the firmware monitor. 
+
+
+==== Privacy aspects ====
+
+By sending the debug logs you are providing information to Intel such as your email address, peer’s MAC address, and other information.  This information will be used only for the purpose of troubleshooting the issue you are reporting.  Intel is committed to protecting your privacy.  To learn more about Intel’s privacy practices, please visit [[http://www.intel.com/privacy|Intel's privacy site]] or write Intel Corporation, ATTN Privacy, Mailstop RNB4-145, 2200 Mission College Blvd., Santa Clara, CA 95054 USA. 
+
+Please don't attach the file created by [[en/users/Drivers/iwlwifi|Firmware Debugging]] to public bug trackers (such as bugzilla), but send it privately through email. We recommend you encrypt the data using Emmanuel Grumbach's PGP key (6E363201). 
