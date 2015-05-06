@@ -2,7 +2,8 @@
 
 ===== How to report? =====
 Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:ilw@linux.intel.com|ilw@linux.intel.com]] to the bug.
-Always attach the kernel log to your reports: dmesg > dmesg.log and attach dmesg.log to the bug.
+Always attach the kernel log to your reports:
+<code>dmesg > dmesg.log</code> and attach dmesg.log to the bug.
 
 ===== How to debug? =====
 ==== Prints ====
