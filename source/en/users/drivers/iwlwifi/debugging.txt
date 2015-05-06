@@ -41,15 +41,15 @@ echo 1 > cat /sys/devices/virtual/devcoredump/devcd1/data</code>
 
 The easiest is to define a udev rule to dump the data automatically as soon as a dump is created:
 
-<code>SUBSYSTEM=="devcoredump", ACTION=="add", RUN+="/root/fwdump"</code>
-Then /bin/dump_iwl_data.sh can simply be:
+<code>SUBSYSTEM=="devcoredump", ACTION=="add", RUN+="/sbin/iwlfwdump.sh"</code>
+Then /sbin/iwlfwdump.sh can simply be:
 <code>
 timestamp=$(date +%F_%H-%M-%S)
 filename=/var/log/iwl-fw-error_${timestamp}.dump
 cat /sys/${DEVPATH}/data > /var/log/${filename}
 echo 1 > /sys/${DEVPATH}/data</code>
 
-This way, each time a dump is created it will automagically land on your file system.
+This way, each time a dump is created it will automatically land on your file system.
 
 To debug the firmware you'll typically need a customized version of it. This customization depends on the bug you are facing.
 Starting from 4.1, we can trigger firmware dumps when issues occur (e.g. when the association fails) this again requires a customized firmware.
