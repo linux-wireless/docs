@@ -22,7 +22,7 @@ This records all the data that goes from and to the firmware. The output is a fi
 
 ==== Firmware Debugging ====
 
-Note that we cannot support the firmware for the devices that use iwldvm anymore.
+Note that we no longer provide support for the firmware of the devices using iwldvm.
 
 === Firmware crashes ===
 
