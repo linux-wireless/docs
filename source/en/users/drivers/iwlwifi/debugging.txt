@@ -36,8 +36,10 @@ Then, you'll need to create a core dump. This can be done by:
 
 You can now get the data from the devcoredump device and dump to a file:
 
-<code>cat /sys/devices/virtual/devcoredump/devcd1/data > iwl.dump
-echo 1 > cat /sys/devices/virtual/devcoredump/devcd1/data</code>
+<code>cat /sys/devices/virtual/devcoredump/devcdY/data > iwl.dump
+echo 1 > /sys/devices/virtual/devcoredump/devcdY/data</code>
+
+(Y is incremented each time)
 
 The easiest is to define a udev rule to dump the data automatically as soon as a dump is created:
 
