@@ -32,7 +32,7 @@ First you'll need to allow DEV_COREDUMP by setting CONFIG_ALLOW_DEV_COREDUMP to 
 Then, you'll need to create a core dump. This can be done by:
 
 <code>echo 1 > /sys/kernel/debug/iwlwifi/0000\:0X\:00.0/iwlmvm/fw_dbg_collect</code>
-(Check what is the X for you system)
+(Check what is the X for your system)
 
 You can get the data from the devcoredump device and dump to a file.
 
