@@ -79,6 +79,7 @@ Both brcmsmac and brcmfmac drivers require firmware files that need to be separa
 |0x4322 |1 |? |0846:9011|
 |0x4322 |1 |BCM43231 |0846:9020|
 |43236 | 2 |BCM43236 |0a5c:bd17|
+|43526 |2 |BCM43526 |0a5c:bd1d|
 | 0x4322 | 1 | BCM4323 | 1eda:2410 |
 
 BCM43231 and BCM43236 (rev <= 2) have another architecture and can't be easily supported by **brcmfmac**. They have less memory on the chip and can't run full MAC firmware, so they require implementing some extra code in the Linux driver. On the other hand they are not standard soft MAC devices, so they can't be supported by **brcmsmac** or **b43**. 
