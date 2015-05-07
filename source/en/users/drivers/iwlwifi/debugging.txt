@@ -34,7 +34,7 @@ Then, you'll need to create a core dump. This can be done by:
 <code>echo 1 > /sys/kernel/debug/iwlwifi/0000\:0X\:00.0/iwlmvm/fw_dbg_collect</code>
 (Check what is the X for your system)
 
-You can get the data from the devcoredump device and dump to a file.
+You can now get the data from the devcoredump device and dump to a file:
 
 <code>cat /sys/devices/virtual/devcoredump/devcd1/data > iwl.dump
 echo 1 > cat /sys/devices/virtual/devcoredump/devcd1/data</code>
