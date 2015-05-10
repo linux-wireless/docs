@@ -21,6 +21,7 @@ The following devices are supported (since kernel version):
       * Intel® Wireless 7265 (3.13) 
       * Intel® Wireless 7260 (3.10) 
       * Intel® Wireless 3160 (3.10)
+      * Intel® Wireless 3165 (4.1)
       * Intel® Wireless 8260 (4.1)
       * Intel® Centrino® Advanced-N 6235 (3.2) 
       * Intel® Centrino® Wireless-N 2230 (3.2) 
@@ -104,15 +105,19 @@ You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmwa
 | :::                                                                                                                                             | 3.14.9+      |    :::         | {{iwlwifi-7260-ucode-25.228.9.0.tgz|iwlwifi-7260-ucode-25.228.9.0.tgz}}        |
 | :::                                                                                                                                             | 3.17+        |      :::       | {{iwlwifi-7260-ucode-23.15.10.0.tgz|iwlwifi-7260-ucode-23.15.10.0.tgz}}        |
 | :::                                                                                                                                             | 3.19+        |      :::       | {{iwlwifi-7260-ucode-25.17.12.0.tgz|iwlwifi-7260-ucode-25.17.12.0.tgz}}        |
+| :::                                                                                                                                             | 4.1+        |      :::       | {{iwlwifi-7260-ucode-25.24.13.0.tgz|iwlwifi-7260-ucode-25.24.13.0.tgz}}        |
 | Intel® Wireless 3160                                                                                                                            | 3.10+        |        iwlmvm     | {{iwlwifi-3160-ucode-22.1.7.0.tgz|iwlwifi-3160-ucode-22.1.7.0.tgz}}            |
 | :::                                                                                                                                             | 3.13+        |       :::      | {{iwlwifi-3160-ucode-22.24.8.0.tgz|iwlwifi-3160-ucode-22.24.8.0.tgz}}          |
 | :::                                                                                                                                             | 3.14.9+      |      :::       | {{iwlwifi-3160-ucode-25.228.9.0.tgz|iwlwifi-3160-ucode-25.228.9.0.tgz}}        |
 | :::                                                                                                                                             | 3.17+        |      :::       | {{iwlwifi-3160-ucode-23.15.10.0.tgz|iwlwifi-3160-ucode-23.15.10.0.tgz}}        |
 | :::                                                                                                                                             | 3.19+        |      :::       | {{iwlwifi-3160-ucode-25.17.12.0.tgz|iwlwifi-3160-ucode-25.17.12.0.tgz}}        |
-| Intel® Wireless 7265                                                                                                                            | 3.13+        |       iwlmvm      | {{iwlwifi-7265-ucode-22.24.8.0.tgz|iwlwifi-7265-ucode-22.24.8.0.tgz}}          |
+| :::                                                                                                                                             | 4.1+        |      :::       | {{iwlwifi-3160-ucode-25.24.13.0.tgz|iwlwifi-3160-ucode-25.24.13.0.tgz}}        |
+| Intel® Wireless 7265 \\ Intel® Wireless 3165 (starting from firmware 25.24.13.0)                                                                | 3.13+        |       iwlmvm      | {{iwlwifi-7265-ucode-22.24.8.0.tgz|iwlwifi-7265-ucode-22.24.8.0.tgz}}          |
 | :::                                                                                                                                             | 3.14.9+      |       :::      | {{iwlwifi-7265-ucode-25.228.9.0.tgz|iwlwifi-7265-ucode-25.228.9.0.tgz}}        |
 | :::                                                                                                                                             | 3.17+        |        :::     | {{iwlwifi-7265-ucode-23.15.10.0.tgz|iwlwifi-7265-ucode-23.15.10.0.tgz}}        |
 | :::                                                                                                                                             | 3.19+        |      :::       | {{iwlwifi-7265-ucode-25.17.12.0.tgz|iwlwifi-7265-ucode-25.17.12.0.tgz}}        |
+| :::                                                                                                                                             | 4.1+        |      :::       | {{iwlwifi-7265-ucode-25.24.13.0.tgz|iwlwifi-7265-ucode-25.24.13.0.tgz}}        |
+
 ===== Git repositories =====
 
 There are three repositories that we maintain: 
@@ -129,4 +134,3 @@ If you need to use the current driver on an older kernel, you can use the compat
 ===== Bluetooth Coexistence =====
 
 Having and WiFi running at the same time is a challenge. These scenarios have been tested thoroughly on 7260 and up, less so on earlier devices. This is why some people may face issues with devices that are handled by iwldvm (pre-7260). For users of these devices who have problems when WiFi and Bluetooth are running concurrently, we suggest to disable BT Coex by loading iwlwifi with bt_coex_active=0 as a module parameter.
-
