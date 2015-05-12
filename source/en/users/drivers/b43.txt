@@ -73,7 +73,7 @@ Please look carefully at device ID and chipset name.
 | 14e4:a8d6  | not tested       | BCM43222   | ?           | N (6)        |               |
 | 14e4:a8d8  | yes (3.6+)       | BCM43224   | a/b/g/n     | N (r6)       | brcm80211     |
 | :::        | yes (3.6+)       | BCM43225   | ?           | N (r6)       | brcm80211     |
-| 14e4:a8db  | yes (3.17+)      | BCM43217   | b/g/n       | N (r17)      |               |
+| 14e4:a8db  | yes (3.18+)      | BCM43217   | b/g/n       | N (r17)      |               |
 | 14e4:a99d  | not tested       | BCM43421?  | ?           | ?            | wl            |
 
 
