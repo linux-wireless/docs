@@ -176,6 +176,19 @@ ACS:  * channel 12: total interference = 0.0816809
 ACS:  * channel 13: total interference = 0.0680776
 ACS: Ideal channel is 13 (2472 MHz) with total interference factor of 0.0680776</code>
 
+===== Driver implementation details =====
+
+User space can get survey using ''NL80211_CMD_GET_SURVEY'' command. It requires:
+  * ''cfg80211'' drivers to implement ''dump_survey'' callback
+  * ''mac80211'' drivers to implement ''get_survey'' callback
+
+As explained is algorithm section, driver needs to provide (fill) few different informations about a channel:
+  * Noise floor (''NL80211_SURVEY_INFO_NOISE'')
+  * Channel time (''NL80211_SURVEY_INFO_CHANNEL_TIME'')
+  * Time of channel unavailability which is **one** of:
+    * RX time (''NL80211_SURVEY_INFO_CHANNEL_TIME_RX'')
+    * Busy time (''NL80211_SURVEY_INFO_CHANNEL_TIME_BUSY'')
+
 ===== Hostapd setup =====
 
 Only the following drivers support the current (2014-08-19) survey based ACS implmenetation in hostapd ([[http://w1.fi/cgit/hostap/tree/hostapd/defconfig#n309|http://w1.fi/cgit/hostap/tree/hostapd/defconfig#n309]]). 
