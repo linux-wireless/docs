@@ -183,11 +183,11 @@ User space can get survey using ''NL80211_CMD_GET_SURVEY'' command. It requires:
   * ''mac80211'' drivers to implement ''get_survey'' callback
 
 As explained is algorithm section, driver needs to provide (fill) few different informations about a channel:
-  * Noise floor (''NL80211_SURVEY_INFO_NOISE'')
-  * Channel time (''NL80211_SURVEY_INFO_CHANNEL_TIME'')
+  * Noise floor (''SURVEY_INFO_NOISE_DBM'') put into ''NL80211_SURVEY_INFO_NOISE''
+  * Channel time (''SURVEY_INFO_TIME'') put into ''NL80211_SURVEY_INFO_TIME''
   * Time of channel unavailability which is **one** of:
-    * RX time (''NL80211_SURVEY_INFO_CHANNEL_TIME_RX'')
-    * Busy time (''NL80211_SURVEY_INFO_CHANNEL_TIME_BUSY'')
+    * RX time (''SURVEY_INFO_TIME_BUSY'') put into ''NL80211_SURVEY_INFO_TIME_BUSY''
+    * Busy time (''SURVEY_INFO_TIME_BUSY'') put into ''NL80211_SURVEY_INFO_TIME_BUSY''
 
 ===== Hostapd setup =====
 
