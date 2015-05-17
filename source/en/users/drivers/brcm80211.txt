@@ -47,6 +47,8 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 | BCM4329   | 0x4329     |                     |
 | BCM4330   | 0x4330     |                     |
 | BCM4334   | 0x4334     |                     |
+|BCM43340 |0xa94c |Supported in 4.0+ |
+|BCM43341 |0xa94d |Supported in 4.0+ |
 | BCM43241  | 0x4324     |                     |
 | BCM4335   | 0x4335     |                     |
 | BCM4339   | 0x4335     | Supported in 3.13+  |
