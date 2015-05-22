@@ -42,7 +42,9 @@ The Ralink driver for RT5592 can be downloaded from: [[http://www.asus.com/Netwo
 
 
 ===== TODO =====
-                * Warning "invalid TX_STA_FIFO content" gets issued sometimes, maybe only in conjunction with tx aggregation? Needs investigation. 
+    * Integrate OpenWrt patches: http://git.openwrt.org/?p=openwrt.git;a=tree;f=package/kernel/mac80211/patches
+    * Add support for more chips
+    * Warning "invalid TX_STA_FIFO content" gets issued sometimes, maybe only in conjunction with tx aggregation? Needs investigation.
 ===== Device firmware =====
                   * [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|rt2860.bin]] 
                   * SoC devices (RT3050, RT3051 and RT3052) don't need firmware 
