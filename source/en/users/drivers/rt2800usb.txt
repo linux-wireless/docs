@@ -28,10 +28,12 @@ http://marc.info/?l=linux-wireless&m=143057171032692 . Git tree: http://github.c
 ==== working ====
         * //TODO// 
 
-
 ==== not working yet ====
           * Broken Hardware encryption (According to [[http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=d53d9e67b55f6a9fc3f836c5c392eb41ce5676f4|commit adding  rt2800usb]]) 
 
+===== TODO =====
+    * Integrate OpenWrt patches: http://git.openwrt.org/?p=openwrt.git;a=tree;f=package/kernel/mac80211/patches
+    * Add support for more chips
 
 ==== not supported ====
             * //TODO// 
