@@ -69,7 +69,7 @@ Linux wireless regulatory documentation:
 
 
 ===== other documentation =====
-    * [[control.pdf|Johannes Berg's presentation]] (out of date!) 
+    * {{control.pdf|Johannes Berg's presentation}} (out of date!) 
 
 
 ===== cfg80211 files and kernel docs =====
