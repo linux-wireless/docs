@@ -78,3 +78,5 @@
 | del_tx_ts                  |  |  |  |  |  |  |
 | tdls_channel_switch        |  |  |  |  |  |  |
 | tdls_cancel_channel_switch |  |  |  |  |  |  |
+
+[1], [2]: one set of these two is required
