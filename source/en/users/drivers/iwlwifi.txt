@@ -128,9 +128,9 @@ There are four repositories that we maintain:
         * [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/|iwlwifi/backport-iwlwifi.git]] which is a backport based tree with iwlwifi / mac80211 / cfg80211 commits only. This tree is ideal for bisecting.
 
 
-===== Download =====
-
-If you need to use the current driver on an older kernel, you can use the compat-drivers project for that. See [[https://backports.wiki.kernel.org/|https://backports.wiki.kernel.org/]] for more information. 
+===== About the backport tree =====
+We merge the updates coming from the backport infrastructure on a regular basis. This means that the bleeding edge of the backport tree will run against decently recent kernel (usually against Linus's tree).
+If you checkout an earlier branch / commit in backport-iwlwifi.git, you might not be able to work against the most recent kernel. Please keep that in mind.
 
 
 ===== Bluetooth Coexistence =====
