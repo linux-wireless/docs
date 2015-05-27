@@ -121,10 +121,11 @@ You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmwa
 
 ===== Git repositories =====
 
-There are three repositories that we maintain: 
+There are four repositories that we maintain: 
         * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/iwlwifi-fixes.git;a=summary|iwlwifi-fixes]] with fixes for the current kernel release cycle 
         * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/iwlwifi-next.git;a=summary|iwlwifi-next]] with features for the next kernel release cycle 
-        * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/linux-firmware.git;a=summary|iwlwifi/linux-firmware]] that feeds the official [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] tree. It contains early releases, or content that just hasn't been merged in [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] yet. 
+        * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/linux-firmware.git;a=summary|iwlwifi/linux-firmware]] that feeds the official [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] tree. It contains early releases, or content that just hasn't been merged in [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] yet.
+        * [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/|iwlwifi/backport-iwlwifi.git]] which is a backport based tree with iwlwifi / mac80211 / cfg80211 commits only. This tree is ideal for bisecting.
 
 
 ===== Download =====
