@@ -48,7 +48,7 @@ For general questions about WiFi on Linux using Intel's devices, you can send an
 
 For bug reports and debugging , please see the [[en:users:drivers:iwlwifi:Debugging|page]] dedicated to that.
 
-===== Firmware =====
+===== Firmware_class dependency =====
 
 The firmware necessary to support the devices is distributed separately under the [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.iwlwifi_firmware;hb=HEAD|firmware license]]. 
 
@@ -65,6 +65,8 @@ You can determine if your kernel currently has firmware loader support by lookin
 In addition to having the firmware_class support in your kernel, you must also have a working userspace infrastructure configured. The steps for installing and configuring this are very distribution specific and the tools differ, but distributions have this enabled. 
 
 Once you have the firmware loader in place (or if you aren't sure and you just want to try things to see if it works), you need to install the firmware file into the appropriate location. 
+
+===== Firmware =====
 
 Where that appropriate location is depends (again) on your system distribution.  You can typically find this location by looking in the udev scripts of your distro, the default on most distributions is /lib/firmware. 
 
