@@ -39,4 +39,4 @@ Here is the table to help you finding the right version of the different compone
 
 
 ====== Support ======
-The support model for Core releases is the same as for the mainline kernel described in the [[en:users:drivers:iwlwifi#Support|support section]]. We will be happy to assist for any pure WLAN bug, but please take into account that platform integration isn't trivial: it can cause random issues. We also don't commit to work on all the platforms.
+The support model for Core releases is the same as for the mainline kernel described in the [[en:users:drivers:iwlwifi#Support|support section]]. We will try to assist for any pure WLAN bug, but please take into account that platform integration isn't trivial: it can cause random issues. We also don't commit to work on all the platforms.
