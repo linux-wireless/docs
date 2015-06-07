@@ -119,7 +119,7 @@ You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmwa
 | :::                                                                                                                                             | 3.17+        | :::         | {{iwlwifi-7265-ucode-23.15.10.0.tgz|iwlwifi-7265-ucode-23.15.10.0.tgz}}        |
 | :::                                                                                                                                             | 3.19+        | :::         | {{iwlwifi-7265-ucode-25.17.12.0.tgz|iwlwifi-7265-ucode-25.17.12.0.tgz}}        |
 | :::                                                                                                                                             | 4.1+         | :::         | {{iwlwifi-7265-ucode-25.27.13.0.tgz|iwlwifi-7265-ucode-25.27.13.0.tgz}}        |
-
+| Intel® Wireless 8260 \\ Intel® Wireless 4165 | 4.1+        |  iwlmvm     | // Not available yet //  |
 
 ===== Git repositories =====
 
