@@ -1,7 +1,7 @@
 ====== Introduction ======
 
 Intel works with periodic releases of the iwlwifi driver that are tested with a specific combination of components. They are called LinuxCore releases and are numbered sequentially, e.g. LinuxCore11 is the latest stable release as of May 2015.
-These releases can be seen as snapshots of the development trees (including upstream) that are tested thoroughly together with a specific version of the firmware and userspace components (i.e. wpa_supplicant and hostapd).
+These releases can be seen as snapshots of the development trees (including upstream) that are tested thoroughly together with a specific version of the firmware and userspace components (i.e. hostap).
 
 ==== Components ====
 The components used in each release are specific stabilization versions of the following:
