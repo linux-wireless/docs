@@ -126,14 +126,14 @@ You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmwa
 There are four repositories that we maintain: 
         * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/iwlwifi-fixes.git;a=summary|iwlwifi-fixes]] with fixes for the current kernel release cycle 
         * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/iwlwifi-next.git;a=summary|iwlwifi-next]] with features for the next kernel release cycle 
-        * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/linux-firmware.git;a=summary|iwlwifi/linux-firmware]] that feeds the official [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] tree. It contains early releases, or content that just hasn't been merged in [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] yet.
+        * [[http://git.kernel.org/?p=linux/kernel/git/iwlwifi/linux-firmware.git;a=summary|iwlwifi/linux-firmware]] that feeds the official [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] tree. It contains early releases, or content that just hasn't been merged in mainline [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware]] yet.
         * [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/|iwlwifi/backport-iwlwifi.git]] which is a backport based tree with iwlwifi / mac80211 / cfg80211 commits only. This tree is ideal for bisecting.
 
 
 ===== About the backport tree =====
 We merge the updates coming from the backport infrastructure on a regular basis. This means that the bleeding edge of the backport tree will run against decently recent kernel (usually against Linus's tree).
 If you checkout an earlier branch / commit in backport-iwlwifi.git, you might not be able to work against the most recent kernel. Please keep that in mind.
-We have a release cycle based on the backport tree. These [[en:users:drivers:iwlwifi:Core_release|Core releases]] can be very useful for someone who wants to integrate our WiFi solution into his system.
+We have a release cycle based on the backport tree. These [[en:users:drivers:iwlwifi:Core_release|Core releases]] can be very useful for someone who wants to integrate our WiFi solution into his home made system.
 
 
 ===== Bluetooth Coexistence =====
