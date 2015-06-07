@@ -24,4 +24,15 @@ If you are building your own system and you know that the only WLAN device you'l
 The fact that Intel published a backport tree for its WLAN drivers doesn't impact its commitment to upstream all the code to the mainline kernel. It simply allows users who can't choose their kernel to work with a more recent driver. The backport tree allows us to provide a combo of the driver / firmware that has been fully validated. For a simple reason of capacity, we cannot test as thoroughly all the kernel versions / firmwares / devices matrix. There is code in the backport tree that is not in the mainline kernel, but this is transient. Eventually, all the code in the backport tree will reach mainline unless it has dependencies (platform drivers etc...).
 
 ====== Core release ======
-A Core release includes all the components described [[en:users:drivers:iwlwifi:core_release#Components|above]].
+A Core release includes all the components described [[en:users:drivers:iwlwifi:core_release#Components|above]]. Here is the way to match all these components together.
+backport, iwlwifi, mac80211 and cfg80211 come from the [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/|backport-iwlwifi git repository]]. You'll find the relevant Core branches there (release/LinuxCoreX).
+The firmware can be found in [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/linux-firmware.git/|iwlwifi's linux-firmware clone]].
+Here is the table to map the firmware version to Core:
+
+^ Core release   ^ Firmware API number ^
+| Core5          | -9.ucode          |
+| Core7          | -10.ucode         |
+| Core9          | -12.ucode         |
+| Core10         | -13.ucode         |
+| Core11         | -14.ucode         |
+| Core12         | -15.ucode         |
