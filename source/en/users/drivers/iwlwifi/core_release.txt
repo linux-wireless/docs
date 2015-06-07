@@ -25,7 +25,7 @@ The fact that Intel published a backport tree for its WLAN drivers doesn't impac
 
 ====== Core release ======
 A Core release includes all the components described [[en:users:drivers:iwlwifi:core_release#Components|above]]. Here is the way to match all these components together.
-backport, iwlwifi, mac80211 and cfg80211 come from the [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/|backport-iwlwifi git repository]]. You'll find the relevant Core branches there (release/LinuxCoreX).
+backport, iwlwifi, mac80211 and cfg80211 come from the [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/|backport-iwlwifi git repository]]. You'll find the relevant Core branches there (release/LinuxCoreX). For all the Core releases, the version 2.4 or later of [[https://w1.fi/cgit/hostap/|hostap]] should be taken.
 The firmware can be found in [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/linux-firmware.git/|iwlwifi's linux-firmware clone]].
 Here is the table to map the firmware version to Core:
 
