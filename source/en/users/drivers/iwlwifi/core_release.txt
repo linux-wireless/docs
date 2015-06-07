@@ -10,7 +10,7 @@ The components used in each release are specific stabilization versions of the f
   * cfg80211
   * backport
   * firmware
-  * hostap/wpa_supplicant
+  * hostap
 
 ====== Who are you ======
 
