@@ -12,7 +12,7 @@ The components used in each release are specific stabilization versions of the f
   * firmware
   * hostap
 
-====== Who are you ======
+====== Who are you? ======
 
 ==== If you use a well known distribution ====
 If you use a well maintained distribution, your device should be supported out of the box. If your device doesn't work at all (you can't even see it in the interface list), then it might mean that your kernel is too old or that you don't have the proper firmware. You can contact your distribution to have them fix this. In the meantime, you can use the backport tree to make your device work. Make sure to install the proper firmware as well. If your device works minimally (you can see it in the interface list), but you experience issues, please check the support section. You can also use the backport tree to check if the issue you are suffering from has been fixed in different releases. The backport tree is also an excellent tool to bisect regressions. Note that when you install the backport drivers, you disallow the usage of any WLAN device that is not supported by iwlmvm. To check if your device is supported by iwlmvm, please check [[en:users:drivers:iwlwifi#Firmware|here]] in the module column.
