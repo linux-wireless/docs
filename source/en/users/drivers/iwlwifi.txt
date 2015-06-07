@@ -13,7 +13,7 @@
     * Station (client) mode 
     * IBSS (Ad-Hoc) mode 
     * AP mode (experimental; only on some devices/firmware versions) 
-    * P2P (on 7260 / 3160 and later devices only) 
+    * P2P (on devices driven by iwlmvm)
     * 802.11a/b/g/n/ac (depending on the device) 
 ===== Supported Devices =====
 
