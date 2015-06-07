@@ -46,7 +46,7 @@ Please look carefully at device ID and chipset name.
 | 14e4:4320  | yes (b43legacy)  | BCM4306/2  | b/g         | G (r1)       |               |
 | :::        | yes              | BCM4306/3  | ?           | G (r2)       |               |
 | 14e4:4321  | partially        | BCM4321    | ?           | N (r2)       |               |
-| 14e4:4322  | not tested       | BCM4322    | b/g/n       | N (r4)       |               |
+| 14e4:4322  | yes (3.18+)      | BCM4322    | b/g/n       | N (r4)       | wl            |
 | 14e4:4324  | yes (b43legacy)  | BCM4306    | a/b/g       | G (r1)       |               |
 | :::        | yes              | BCM4306/3  | a/b/g       | G (r5)       |               |
 | 14e4:4325  | yes (b43legacy)  | BCM4306/2  | b/g         | G (r1)       |               |
@@ -75,6 +75,7 @@ Please look carefully at device ID and chipset name.
 | :::        | yes (3.6+)       | BCM43225   | ?           | N (r6)       | brcm80211     |
 | 14e4:a8db  | yes (3.18+)      | BCM43217   | b/g/n       | N (r17)      |               |
 | 14e4:a99d  | not tested       | BCM43421?  | ?           | ?            | wl            |
+
 
 
 ===== Contact =====
