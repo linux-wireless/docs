@@ -47,8 +47,8 @@ echo 1 > /sys/devices/virtual/devcoredump/devcdY/data</code>
 The easiest is to define a udev rule to dump the data automatically as soon as a dump is created:
 
 <code>SUBSYSTEM=="devcoredump", ACTION=="add", RUN+="/sbin/iwlfwdump.sh"</code>
-You'll typically have to paste this into a file and copy this file under /etc/udev/rules.d/85-iwl-dump.rules.
-This can vary between distributions.
+You'll typically have to paste this into a new file called /etc/udev/rules.d/85-iwl-dump.rules.
+This location can vary between distributions.
 
 /sbin/iwlfwdump.sh can simply be:
 <code>
