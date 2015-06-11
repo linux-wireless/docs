@@ -49,4 +49,4 @@ Please see the [[en/users/Drivers/rt2800usb/devices|device list]].
 
 
 ===== external links =====
-                  * [[http://rt2x00.serialmonkey.com/|rt2x00 project website]] 
+                  * [[http://rt2x00.serialmonkey.com/|rt2x00 project website-Archived]] 
