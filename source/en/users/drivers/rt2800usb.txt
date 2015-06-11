@@ -44,7 +44,7 @@ Please see the [[en/users/Drivers/rt2800usb/devices|device list]].
 
 
 ===== support =====
-    * [[http://rt2x00.serialmonkey.com/mailman/listinfo/users_rt2x00.serialmonkey.com| rt2x00 mailing list]] 
+    * [[http://rt2x00.serialmonkey.com/pipermail/users_rt2x00.serialmonkey.com/| rt2x00 mailing list]] 
     * [[en/users/support| Linux wireless support]]
 
 
