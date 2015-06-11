@@ -6,6 +6,7 @@ Always attach the kernel log to your reports:
 <code>dmesg > dmesg.log</code> and attach dmesg.log to the bug.
 Please also add the firmware version:
 <code> ethtool -i wlan0 | grep firmware</code>
+Note: the interface name (here wlan0) can vary between distributions.
 
 ===== How to debug? =====
 ==== Prints ====
