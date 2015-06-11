@@ -47,6 +47,8 @@ echo 1 > /sys/devices/virtual/devcoredump/devcdY/data</code>
 The easiest is to define a udev rule to dump the data automatically as soon as a dump is created:
 
 <code>SUBSYSTEM=="devcoredump", ACTION=="add", RUN+="/sbin/iwlfwdump.sh"</code>
+You'll typically have to paste this into a file and copy this file under /etc/udev/rules.d/85-iwl-dump.rules.
+This can vary between distributions.
 
 /sbin/iwlfwdump.sh can simply be:
 <code>
@@ -69,7 +71,7 @@ When the firmware crashes, you'll see a message like this:
 [snip]
 iwlwifi 0000:01:00.0: Loaded firmware version: XX.XX.XX.XX
 iwlwifi 0000:01:00.0: 0x0000090A | ADVANCED_SYSASSERT</code>
-In this case, please copy the whole dmesg output since there may be data before and after this message that can be helpful.
+In this case, please copy the full dmesg output since there may be data before and after this message that can be helpful.
 
 In case of a firmware crash or queues being stuck, a dump will be automatically created. If you have the udev rule in place, you'll see the dump on your file system. No customization needed in that case, the dump from a regular firmware will already include valuable data, but the firmware team is likely to ask reproduction with a customized version.
 ==== Privacy aspects ====
