@@ -65,7 +65,7 @@ then 802.11n will be disabled and the STA will fall back to legacy mode of opera
 
 
 ===== other documentation =====
-      * [[mac80211.pdf|Johannes Berg's presentation]]. 
+      * {{mac80211.pdf|Johannes Berg's presentation}}
 
 
 ===== mac80211 files and kernel docs =====
