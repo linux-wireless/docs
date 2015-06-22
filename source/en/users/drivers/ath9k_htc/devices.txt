@@ -23,3 +23,5 @@
 |TP-LINK|[[http://www.tp-link.com/en/products/details/?model=TL-WN322G|TL-WN322G v3]]|AR9271|0x0cf3|0x1006||
 |TP-LINK|[[http://www.tp-link.com/en/products/details/?model=TL-WN422G|TL-WN422G v2]]|AR9271|0x0cf3|0x1006||
 |Unex|[[http://www.unex.com.tw/product/dnua-93f|DNUA-93F]]|AR9271|0x0cf3|0x9271||
+
+A longer list of devices supported by ath9k_htc: [[https://wikidevi.com/wiki/Ath9k_htc|wikidevi ath9k htc page]]
