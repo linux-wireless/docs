@@ -26,11 +26,14 @@ Here we start documentation for users for all new wireless utilities. The list i
     * [[http://www.youtube.com/watch?v=_yyFiLFx4Mg|RFC: 802.11 DFS support on mac80211 and ath9k]] - [[LinuxCon|LinuxCon]] 2011 
     * [[http://www.youtube.com/watch?v=frvXN9pmLO4|802.11s on LInux mac80211]] - [[LinuxCon|LinuxCon]] 2011 
     * [[http://www.youtube.com/watch?v=FzZsTd4Bj7I|wmediumd for mac80211_hwsim]] - [[LinuxCon|LinuxCon]] 2011 
+
+by Adrian Chadd:
     * [[https://www.youtube.com/watch?v=WOcYTqoSQ68|Inside the Atheros WiFi Chipset - Adrian Chadd]] - subtitle: how I learned to love the HAL - Defcon 2014. - ath9k DMA, PHY, MAC ... 
-    * [[https://www.youtube.com/watch?v=pmespp2HDsU|The future of wireless networking - mobile, gigabit and beyond - Adrian Chadd]] - (2013) 802.11ac, 802.11ad, hybrid operating modes, aggressive mobile power saving, the challenges involved in building a network stack that will handle 1+ gigabit/sec throughput.
+    * [[https://www.youtube.com/watch?v=pmespp2HDsU|The future of wireless networking - mobile, gigabit and beyond - Adrian Chadd]] - (2013) 802.11ac, 802.11ad, hybrid operating modes, aggressive mobile power saving, the challenges involved in building a network stack that will handle 1+ gigabit/sec throughput. FreeBSD/Linux/Atheros HAL.
     * [[https://www.youtube.com/watch?v=9P-r3H0bY8c|Wireless drivers (ath9k, HAL, BSD) - Adrian Chadd]]
 
-Adrian Chadd worked at Atheros for 18 months on chip bring-up and open source work. He worked with other Atheros developers to open source the USB firmware for the AR5513 and ath9k-htc hardware, as well as the AR9300 HAL, used by Linux and FreeBSD.
+Note: Adrian Chadd worked at Atheros for 18 months on chip bring-up and open source work. He worked with other Atheros developers to open source the USB firmware for the AR5513 and ath9k-htc hardware, as well as the AR9300 HAL, used by Linux and FreeBSD.
+
 ===== Wireless managers =====
 
 This is the list of available known wireless managers you can use in distributions 
