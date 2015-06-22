@@ -156,3 +156,4 @@ For more information please see:
   * [[en/users/Drivers/ath9k/RHEL5|RHEL]] 
   * [[en/users/Drivers/ath9k/initvals-tool|initvals-tool]] 
   * [[en/users/Drivers/ath9k/spectral_scan|Spectral scan]] 
+  * Youtube presentations about ath9k internals by Adrian Chadd, see [[en:users:documentation|Documentation]]
