@@ -1,3 +1,6 @@
+{{https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/293px-Intel-logo.svg.png}}
+
+
 ===== Introduction =====
 
 **iwlwifi** is the wireless driver for Intel's current wireless chips. For older chips, there are other drivers: 
