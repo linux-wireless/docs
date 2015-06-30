@@ -15,12 +15,12 @@
 
 ===== Supported Devices =====
 The following devices are supported (since kernel version): 
-      * Intel® Wireless 7260 (3.10) 
-      * Intel® Wireless 3160 (3.10)
-      * Intel® Wireless 7265 (3.13) 
-      * Intel® Wireless 3165 (4.1)
       * Intel® Wireless 8260 (4.1)
       * Intel® Wireless 4165 (4.1)
+      * Intel® Wireless 3165 (4.1)
+      * Intel® Wireless 7265 (3.13)
+      * Intel® Wireless 7260 (3.10)
+      * Intel® Wireless 3160 (3.10)
       * Intel® Centrino® Advanced-N 6235 (3.2) 
       * Intel® Centrino® Wireless-N 2230 (3.2) 
       * Intel® Centrino® Wireless-N 2200 (3.2) 
@@ -38,7 +38,6 @@ The following devices are supported (since kernel version):
       * Intel® Centrino® Wireless-N 1000 (2.6.30) 
       * Intel® Wireless WiFi 5150AGN (2.6.29) 
       * Intel® Wireless WiFi 5100AGN, 5300AGN, and 5350AGN (2.6.27) 
-
 ===== Git repositories =====
 
 There are four repositories that we maintain: 
