@@ -1,3 +1,5 @@
+{{intel_rgb_3000.png?0x140}}
+
 ====== Introduction ======
 
 Intel works with periodic releases of the iwlwifi driver that are tested with a specific combination of components. They are called LinuxCore releases and are numbered sequentially, e.g. LinuxCore11 is the latest stable release as of May 2015.
