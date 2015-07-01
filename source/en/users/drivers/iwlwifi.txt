@@ -1,5 +1,4 @@
-{{https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/293px-Intel-logo.svg.png}}
-
+{{en/users/drivers/iwlwifi/intel_rgb_3000.png?0x140}}
 
 ===== Introduction =====
 
