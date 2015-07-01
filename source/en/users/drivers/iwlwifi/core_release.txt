@@ -1,4 +1,4 @@
-{{intel_rgb_3000.png?0x140}}
+{{en/users/drivers/iwlwifi/intel_rgb_3000.png?0x140}}
 
 ====== Introduction ======
 
