@@ -11,7 +11,7 @@ See also [[en/users/Drivers/at76_usb|at76_usb]], the driver which at76c50x-usb i
 
 ===== Status =====
 
-The driver is working with some devices, but it hasn't been widely tested yet. Currently it's available only from wireless-testing tree. 
+The driver is working with some devices, but it hasn't been widely tested yet. Currently it's available only from [[http://www.fixithere.net/sky-customer-service/|sky]] wireless-testing tree. 
 
 The maintainer of the driver is Kalle Valo <[[mailto:kalle.valo@iki.fi|kalle.valo@iki.fi]]>. Send all patches to Kalle and CC linux-wireless mailing list. 
 
