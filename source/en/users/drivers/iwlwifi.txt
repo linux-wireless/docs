@@ -132,6 +132,11 @@ In addition to having the firmware_class support in your kernel, you must also h
 
 Once you have the firmware loader in place (or if you aren't sure and you just want to try things to see if it works), you need to install the firmware file into the appropriate location. 
 
+===== About the backport tree =====
+We merge the updates coming from the backport infrastructure on a regular basis. This means that the bleeding edge of the backport tree will run against decently recent kernel (usually against Linus's tree).
+If you checkout an earlier branch / commit in backport-iwlwifi.git, you might not be able to work against the most recent kernel. Please keep that in mind.
+We have a release cycle based on the backport tree. These [[en:users:drivers:iwlwifi:Core_release|Core releases]] can be very useful for someone who wants to integrate our WiFi solution into his home made system.
+
 ===== Bluetooth Coexistence =====
 
 Having and WiFi running at the same time is a challenge. These scenarios have been tested thoroughly on 7260 and up, less so on earlier devices. This is why some people may face issues with devices that are handled by iwldvm (pre-7260). For users of these devices who have problems when WiFi and Bluetooth are running concurrently, we suggest to disable BT Coex by loading iwlwifi with bt_coex_active=0 as a module parameter.
