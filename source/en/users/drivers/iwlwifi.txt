@@ -113,11 +113,6 @@ For general questions about WiFi on Linux using Intel's devices, you can send an
 
 For bug reports and debugging , please see the [[en:users:drivers:iwlwifi:Debugging|page]] dedicated to that.
 
-===== About the backport tree =====
-We merge the updates coming from the backport infrastructure on a regular basis. This means that the bleeding edge of the backport tree will run against decently recent kernel (usually against Linus's tree).
-If you checkout an earlier branch / commit in backport-iwlwifi.git, you might not be able to work against the most recent kernel. Please keep that in mind.
-We have a release cycle based on the backport tree. These [[en:users:drivers:iwlwifi:Core_release|Core releases]] can be very useful for someone who wants to integrate our WiFi solution into his home made system.
-
 
 ===== Firmware_class dependency =====
 
