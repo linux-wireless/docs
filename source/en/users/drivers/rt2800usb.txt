@@ -17,7 +17,7 @@ Please see the [[en/users/Drivers/rt2800usb/devices|device list]].
 
 * **MT7601U** 802.11b/g/n 1T1R 2.4 GHz USB Single Chip. (**4.2+**) (Git tree: http://github.com/kuba-moo/mt7601u )
 
-* [[https://wikidevi.com/wiki/MediaTek|Any new MediaTek chip]]. MediaTek drivers can be downloaded from: [[http://www.mediatek.com/en/downloads/|http://www.mediatek.com/en/downloads/]] 
+* [[https://wikidevi.com/wiki/MediaTek|Any new MediaTek chip]]. MediaTek drivers can be downloaded from: [[http://www.mediatek.com/en/downloads1/downloads/|http://www.mediatek.com/en/downloads1/downloads/]] 
 
 
 ===== features =====
