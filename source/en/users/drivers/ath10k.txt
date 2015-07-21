@@ -74,7 +74,7 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a 
 
 [1] Some of Compex WLE900VX fail to enumerate as PCI device, probably for an electric issue.
 Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821 
-Compex officially says that this card is not supported [[http://www.compex.com.sg:809/forum/topic.asp?TOPIC_ID=2391|because drivers aren't released]], but really working ones exist.
+Compex officially says that this card is not supported [[http://forum.compex.com.sg/topic.asp?TOPIC_ID=2391|because drivers aren't released]], but really working ones exist.
 
 ath10k does NOT support older QCA98xx hw1.0 chips found, for example, from these devices:
 
