@@ -72,9 +72,7 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a 
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : Archer C7 v2.x]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : WDR7500 v3.0]]
 
-[1] Some of Compex WLE900VX fail to enumerate as PCI device, probably for an electric issue.
-Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821 
-Compex officially says that this card is not supported [[http://forum.compex.com.sg/topic.asp?TOPIC_ID=2391|because drivers aren't released]], but really working ones exist.
+[1] The Compex WLE900VX card enumerates as PCI device on some PCs but not for some other PCs. The reason could possibly be electric issue, kernel version, or PC hardware. Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821. Compex says that [[http://forum.compex.com.sg/topic.asp?TOPIC_ID=2391|the use of this card with ath10k is not officially supported]]. Windows drivers aren't released.
 
 ath10k does NOT support older QCA98xx hw1.0 chips found, for example, from these devices:
 
