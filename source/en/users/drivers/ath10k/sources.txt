@@ -45,7 +45,8 @@ Guidelines for patches:
              * Describe the motivation behind the bug. 
              * How does it change the functionality from user's point of view? 
              * Does it fix a bug? If it does, please describe the bug (doesn't need to be long). Also if there's a public bug report add a link to the bug report. 
-             * If a problem has been found during code review and doesn't fix a known issues, mention that in the commit log. 
+             * If a problem has been found during code review and doesn't fix a known issues, mention that in the commit log.
+             * Ingo Molnar has written [[https://lkml.kernel.org/g/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log. 
           *   If others have reported the issue commit log SHOULD use Reported-by: and Tested-by: tags. 
           *   SHOULD be checkpatch clean: 
                * FIXME: add checkpatch example with correct arguments 
