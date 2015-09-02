@@ -38,6 +38,7 @@ More info about submitting patches:
         * [[en/developers/Documentation/git-guide|en/developers/Documentation/git-guide]] 
 
 Guidelines for patches: 
+          * MUST follow [[https://www.kernel.org/doc/Documentation/SubmittingPatches|Documentation/SubmittingPatches]]
           * MUST be compiler warning free. 
           * MUST be sparse warning free. 
           * Commit log MUST not be empty. 
