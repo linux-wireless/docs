@@ -1,7 +1,7 @@
 ====== Bugs and support ======
 
 ===== How to report? =====
-Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:ilw@linux.intel.com|ilw@linux.intel.com]] to the bug.
+Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:linuxwifi@intel.com|linuxwifi@intel.com]] to the bug.
 Always attach the kernel log to your reports:
 <code>dmesg > dmesg.log</code> and attach dmesg.log to the bug.
 Please also add the firmware version:
