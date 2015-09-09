@@ -19,6 +19,7 @@ Broadcom produces many SoCs that can combine processor, ethernet, WiFi, USB and 
 ===== Known BCMA SoCs =====
 ^ Chip ^^^ MIPS ^^ 80211 ^^^^ PCIe\\ rev ^ USB\\ rev ^ CC\\ rev ^ PMU\\ rev ^
 ^ Name ^ id ^ pkg ^ ^ rev ^ rev ^ PHY ^ Radio ^ Supp. ^ ::: ^ ::: ^ ::: ^ ::: ^
+|BCM5356A1 |0x5356 |0x04 |74K |3 |21 |? |? |? |─ |─ |33 |? |
 |BCM5357B0 |0x5357 |0x08 |74K |4 |28 |N/9 |0x2057/5 |No ((Unsupported radio 0x2057 revision 5)) |─ |2.0/5 |38 |9 |
 |BCM5358 |0x5357 |0x09 |74K |4 |28 |N/9 |0x2057/5 |No |─ |2.0/5 |38 |9 |
 |BCM47186B0 |0x5357 |0x0A |74K |4 |28 |N/9 |0x2057/5 |No |─ |2.0/5 |38 |9 |
