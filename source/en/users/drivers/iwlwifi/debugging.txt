@@ -58,7 +58,7 @@ cat /sys/${DEVPATH}/data > /var/log/${filename}
 echo 1 > /sys/${DEVPATH}/data
 </code>
 
-This way, each time a dump is created it will automatically land on your file system.
+This way, each time a dump is created it will automatically land on your file system.  Remember to make the /sbin/iwlfwdump.sh file executable (i.e. ''chmod a+x /sbin/iwlfwdump.sh''), so that the udev rule can execute it, otherwise it won't work.
 
 To debug the firmware you'll typically need a customized version of it. This customization depends on the bug you are facing.
 Starting from 4.1, we can trigger firmware dumps when issues occur (e.g. when the association fails) this again requires a customized firmware. In that case, the developer working with you will let you know and you won't have to trigger the dump yourself using fw_dbg_collect debugfs hook.
