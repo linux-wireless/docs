@@ -78,4 +78,8 @@ In case of a firmware crash or queues being stuck, a dump will be automatically 
 
 By sending the debug logs, you are providing information to Intel such as your email address, peer’s MAC address, and other information.  This information will be used only for the purpose of troubleshooting the issue you are reporting.  Intel is committed to protecting your privacy.  To learn more about Intel’s privacy practices, please visit [[http://www.intel.com/privacy|Intel's privacy site]] or write Intel Corporation, ATTN Privacy, Mailstop RNB4-145, 2200 Mission College Blvd., Santa Clara, CA 95054 USA. 
 
-Please don't attach the firmware dumps to public bug trackers (such as bugzilla), but send it privately through email. We recommend you encrypt the data using Emmanuel Grumbach's PGP key (6E363201).
+Please don't attach the firmware dumps to public bug trackers (such as bugzilla), but send it privately through email. We recommend you encrypt the data using the iwlwifi developers's PGP keys: Emmanuel Grumbach (6E363201), Johannes Berg (7BF9099A) and Luciano Coelho (1A3CC5FA).  For instance:
+
+<code>gpg --encrypt -r 6E363201 -r 7BF9099A -r 1A3CC5FA <file_to_encrypt></code>
+
+This will generate a new, encrypted file that you should provide to us.  Any of, and only, these developers will be able to open the file.  Adding the three keys during encryption allows us to respond faster, since we're not restrained by a single developer's availability.
