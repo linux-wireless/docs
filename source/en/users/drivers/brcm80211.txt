@@ -33,6 +33,7 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 
 === PCIe devices ===
 ^ Chipset ^ PCI Device ID ^ Notes ^
+|BCM4350  |14e4:43a3 | Queued for 4.4+ |
 |BCM4354  |14e4:43df | Unreleased hw, support dropped in 4.1 |
 |BCM4356  |14e4:43ec | Supported in 3.17+ |
 |BCM43567 |14e4:43d3 | ::: |
@@ -42,6 +43,12 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 |BCM43602 |14e4:43bb | Supported in 3.19+, 2 GHz device |
 |BCM43602 |14e4:43bc | Supported in 3.19+, 5 GHz device |
 |BCM43602 |14e4:aa52 | Supported in 4.2+, "raw" device |
+|BCM4365  |14e4:43ca | Queued for 4.4+ |
+|BCM4365  |14e4:43cb | Queued for 4.4+, 2 GHz device |
+|BCM4365  |14e4:43cc | Queued for 4.4+, 5 GHz device |
+|BCM4366  |14e4:43c3 | Queued for 4.4+ |
+|BCM4366  |14e4:43c4 | Queued for 4.4+, 2 GHz device |
+|BCM4366  |14e4:43c5 | Queued for 4.4+, 5 GHz device |
 
 
 === SDIO devices ===
