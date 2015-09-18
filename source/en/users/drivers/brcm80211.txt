@@ -37,7 +37,8 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 |BCM4356  |14e4:43ec | Supported in 3.17+ |
 |BCM43567 |14e4:43d3 | ::: |
 |BCM43570 |14e4:43d9 | ::: |
-|BCM43602 |14e4:43ba | ::: |
+|BCM4358  |14e4:43e9 | Supported in 4.2+ |
+|BCM43602 |14e4:43ba | Supported in 3.17+ |
 |BCM43602 |14e4:43bb | Supported in 3.19+, 2 GHz device |
 |BCM43602 |14e4:43bc | Supported in 3.19+, 5 GHz device |
 
