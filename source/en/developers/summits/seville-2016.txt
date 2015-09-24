@@ -12,3 +12,4 @@ Suggested Topics
 Attendees (tentative, just to estimate the number, add yourself)
 
   * Johannes Berg
+  * Kalle Valo
