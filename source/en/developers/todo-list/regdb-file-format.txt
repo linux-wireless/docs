@@ -40,4 +40,4 @@ The remaining structures in the file contain their own length (but are padded to
   };
 
 ==== TODO ====
- * add spectral power limits, which is more important now with 5/10 MHz channels
+  * add spectral power limits, which is more important now with 5/10 MHz channels
