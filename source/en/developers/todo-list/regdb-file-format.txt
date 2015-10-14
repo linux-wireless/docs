@@ -1,7 +1,7 @@
 ====== direct loading regdb file format ======
 (suggestion by Johannes)
 
-Everything in the file is aligned to 4-byte boundaries. As a consequence, positions can be represented by 16-bit word offsets while allowing for a 1MiB big file (currently, the database is about 4k with 32-bit pointers!)
+Everything in the file is aligned to 4-byte boundaries. As a consequence, positions can be represented by 16-bit word offsets while allowing for a 256KiB big file (currently, the database is about 4k with 32-bit pointers!)
 
 ^ offset ^ contents ^ comment ^
 | 0x0000 | 0x52474442 | magic |
