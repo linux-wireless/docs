@@ -21,3 +21,8 @@ TPC is something we have considered adding but at least as per our latest review
 ===== Spectral power limits =====
 
 Its believed we may need to allow for spectral power limits (e.g. 10mW/MHz). If this is true the database may need to be adjusted to account for these. This is relevant for 5/10 MHz channels, where we currently assume 1/4 and 1/2 TX power respectively (i.e. assume a spectral power limit being reached exactly for 20 MHz channels) which doesn't allow using the full power if the spectral power limit isn't exactly that. 
+
+===== direct database loading =====
+
+Instead of going through CRDA, we want to load the database directly into the kernel.
+Since this means a major change, a [[regdb-file-format|new, extensible, file format]] should be used.
