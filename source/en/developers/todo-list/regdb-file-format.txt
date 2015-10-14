@@ -38,3 +38,6 @@ The remaining structures in the file contain their own length (but are padded to
     __be16 max_eirp; // mBm
     __be16 cac_timeout;
   };
+
+==== TODO ====
+ * add spectral power limits, which is more important now with 5/10 MHz channels
