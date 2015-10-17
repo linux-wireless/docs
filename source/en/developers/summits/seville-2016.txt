@@ -7,6 +7,7 @@ Suggested Topics
 
   * RSS on wireless, in particular mac80211 (Johannes)
   * gscan?
+  * OpenWrt code out of upstream (http://git.openwrt.org/?p=openwrt.git , target/linux/* and package/kernel/*)
 
 
 Attendees (tentative, just to estimate the number, add yourself)
