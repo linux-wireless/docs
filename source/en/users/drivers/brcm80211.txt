@@ -128,6 +128,17 @@ Alternatively, when not available the Android version can be used as well:
 |firmware files: bcmdhd/firmware/bcm4329/fw_bcm4329.bin bcmdhd/firmware/bcm4330/fw_bcm4330_b2.bin|
 
 
+=== NVRAM from EFI ===
+Some new devices are storing the nvram which is needed in addition to the firmware by the driver in an EFI variable and the Windows driver can access it. Currently brcmfmac does not support this automatically.
+First mount the efi vars into sysfs:
+  mount -t efivarfs none /sys/firmware/efi/efivars
+
+The content of the nvram is in this file:
+  /sys/firmware/efi/efivars/nvram-74b00bd9-805a-4d61-b51f-43268123d113
+
+Copy this file where brcmfmac expects the nvram, for example:
+   cat /sys/firmware/efi/efivars/nvram-74b00bd9-805a-4d61-b51f-43268123d113 > /lib/firmware/brcm/brcmfmac43241b4-sdio.txt
+
 ===== Contact Info =====
 
 For driver issues and/or bug reports, please use: 
