@@ -2,11 +2,11 @@
 
 ===== Existing Linux Wireless drivers =====
 
-We currently have a fair amount of working drivers that cover most of the available wireless networking cards. However, they don't implement all features and may have some issues, due to various reasons like these companies not providing specs. Below is an alphabetically sorted list of drivers and what they currently can and can't do. 
+We currently have a fair amount of working drivers that cover most of the available wireless networking cards. However, they don't implement all features and may have some issues, due to various reasons like companies not providing specs. Below is an alphabetically sorted list of drivers and what they currently can and can't do. 
 
 See also: 
   * [[wp>Comparison_of_open_source_wireless_drivers|Linux wireless drivers in Wikipedia]] 
-  * [[http://www.fixithere.net/sky-contact-number/|fixithere]]
+
 **NOTE:** All drivers can of course run in [[en/users/Documentation/modes|station mode]], but only a few drivers support the other available **[[en/users/Documentation/modes|wireless modes]]**! Support of [[en/developers/Documentation/Glossary|cfg80211]] also offers benefits. 
 
 
