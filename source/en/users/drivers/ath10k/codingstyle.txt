@@ -86,7 +86,7 @@ Name of symbols and functions follow style <drivername>_<filename>_<symbolname>.
 Example: 
 
 
-<code>int ath10k_init_hw(struct ath6kl *ar)</code>
+<code>int ath10k_init_hw(struct ath10k *ar)</code>
 For each component use function names create/destroy for allocating and freeing something, init/cleanup for initialising variables and cleaning up them afterwards and start/stop to temporarily pause something. 
 
 Example: 
