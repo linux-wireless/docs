@@ -8,7 +8,7 @@ Go back --> [[en/users/Drivers/ath10k|ath10k]]
 
 The ath10k firmware images are available from [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]] which all common Linux distributions should install by default. Latest firmware images can be downloaded from [[https://github.com/kvalo/ath10k-firmware|ath10k-firmware.git]] from which they get eventually pushed to [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]].
 
-==== Overview =====
+==== Firmware branches =====
 
 
 ^ Hardware         ^ Firmware major version/branch  ^ Latest firmware revision                                                      ^ Intended use  ^ Kernel version required*  ^ Git commit                  ^
@@ -22,41 +22,16 @@ The ath10k firmware images are available from [[https://git.kernel.org/cgit/linu
 
 
 
-* Note: It is possible to use newer ath10k driver on an older kernel with backports project: https://backports.wiki.kernel.org
+* Note: It is possible to use newer ath10k driver on an older kernel with [[en/users/Drivers/ath10k/backports|backports project]].
 
 ===== Update firmware =====
 
-First download the firmware image from ath10k-firmware.git: 
-
-[[https://github.com/kvalo/ath10k-firmware/tree/master/|https://github.com/kvalo/ath10k-firmware/tree/master/]] 
-
-In this example we use firmware-2.bin_10.1.467.2-1 from 10.1 directory. Then just copy that file as firmware-2.bin to the ath10k firmware directory: 
-
+First download the firmware image from the links above. In this example we use firmware-2.bin_10.1.467.2-1 from QCA988X 10.1 directory. Then just copy that file as firmware-2.bin to the ath10k firmware directory: 
 
 <code>cp firmware-2.bin_10.1.467.2-1 /lib/firmware/ath10k/QCA988X/hw2.0/firmware-2.bin</code>
-Then reload ath10k (or restart the system) and the new firmware is in use. 
+Then reload ath10k (or restart the system) and you can [[en/users/Drivers/ath10k/debug#firmware_version|check if the new firmware is in use]]. 
 
 Note: In some distributions the firmware location can be different than /lib/firmware. 
-
-
-===== Firmware branches =====
-
-ath10k firmware has different branches, they are described below. 
-
-
-==== main branch ====
-
-Firmware versions 999.999.0.x. 
-
-Supports AP mode, STA mode, Ad-Hoc and P2P. But AP mode is not that well tested, especially problems with DFS. 
-
-
-==== 10.x branch ====
-
-Firmware versions 10.x.y. 
-
-Branch focusing on AP mode. Supports DFS. STA mode works but not well tested. No Ad-Hoc or P2P support. 
-
 
 ===== Firmware API versions =====
 
