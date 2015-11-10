@@ -6,24 +6,7 @@ Go back --> [[en/users/Drivers/ath10k|ath10k]]
 
 ===== ath10k firmware =====
 
-Firmware is temporalily available at [[https://github.com/kvalo/ath10k-firmware|https://github.com/kvalo/ath10k-firmware]] until it will be available from linux-firmware.git. 
-
-The firmware is searched from directory ath10k/QCA988X/hw2.0 under the system firmware directory, usually /lib/firmware. For example, here's a listing from an Ubuntu system where it's under /lib/firmware: 
-
-
-<code>$ ls -l /lib/firmware/ath10k/QCA988X/hw2.0/
-total 508
--rwxr-xr-x 1 root root   2116 Oct 22 11:01 board.bin*
--rw-r--r-- 1 root root 254564 Oct 22 11:01 firmware-2.bin
--rwxr-xr-x 1 root root 249093 Oct 22 11:01 firmware.bin*
--rwxr-xr-x 1 root root   5402 Oct 22 11:01 otp.bin*
-$</code>
-Description of the files: 
-
-  ; board.bin  : board file for the firmware 
-  ; firmware-2.bin  : embedded firmware file (includes both firmware and otp) for ath10k versions supporting FW API 2 
-  ; firmware.bin  : firmware file for older ath10k versions supporting only FW API 1 
-  ; otp.bin  : otp file for older ath10k versions supporting only FW API 1 
+The ath10k firmware images are available from [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]] which all common Linux distributions should install by default. Latest firmware images can be downloaded from [[https://github.com/kvalo/ath10k-firmware|ath10k-firmware.git]] from which they get eventually pushed to [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]].
 
 ==== Overview =====
 
