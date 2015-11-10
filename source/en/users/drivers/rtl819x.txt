@@ -16,7 +16,7 @@
   * **rtl8192su** is a USB driver for RTL8712U/RTL8192SU devices. (**WIP** : [[http://github.com/chunkeey/rtl8192su|http://github.com/chunkeey/rtl8192su]] ) 
   * **rtl8821ae** is a PCI-E driver for RTL8821AE devices (**3.16+**). 
   * **rtl8192ee** is a PCI-E driver for RTL8192EE devices (**3.16+**). 
-  * **rtl8xxxu** is a multi-driver for USB devices. (**4.3+** : [[https://marc.info/?l=linux-wireless&m=144486995128902]] [[https://git.kernel.org/cgit/linux/kernel/git/jes/linux.git/ | rtl8723au-mac80211]] git-tree) 
+  * **rtl8xxxu** is a multi-driver for USB devices. (**4.3+** : [[https://marc.info/?l=linux-wireless&m=144486995128902]] [[https://git.kernel.org/cgit/linux/kernel/git/jes/linux.git/ | git-tree]]) 
 
 
 ===== staging drivers =====
