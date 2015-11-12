@@ -6,24 +6,14 @@ Go back –> [[en/users/Drivers/Atheros|Atheros Linux wireless drivers]]
 
 ===== About wil6210 =====
 
-The wil6210 driver supports several 60GHz wireless card by Qualcomm (1-st ones was originally made by Wilocity; later Wilocity got acquired by Qualcomm). Hardware provides [[WiFi|WiFi]] and wireless PCIE connectivity, as described in the [[WiGig|WiGig]] WBE spec. Driver supports [[WiFi|WiFi]] only. All cards are PCIE devices 
+The wil6210 driver supports 60GHz wireless card by Qualcomm.
+Hardware provides [[WiFi|WiFi]] and wireless PCIE connectivity, as described in
+the [[WiGig|WiGig]] WBE spec. Driver supports [[WiFi|WiFi]] only. Card is PCIE device, with PCIe
+ID ''1ae9:0310''
 
-Some cards have 60G device combined with Atheros 2.4/5.2 GHz [[WiFi|WiFi]] card. On the PCI, it is represented as the following hierarchy: 
+There are old version of the Qualcomm 60GHz card, with PCIe ID ''1ae9:0301'' it is not supported.
 
-
-<code>1ae9:0101-+-1ae9:0201---168c:0034
-          +-1ae9:0201---1ae9:0301
-          +-1ae9:0201
-          \-1ae9:0201</code>
-Chip consists of the root bridge 1ae9:0101, with 4 ports 1ae9:0201. One port routed to separate Atheros card 168c:0034, it is handled by the ath9k driver. Another port connected to the wil6210 device 1ae9:0301, that is on the same chip. 2 empty ports may be populated when connecting in WBE (PCIE-over-60g) mode. 
-
-Devices 1ae9:xxxx except 1ae9:0101 are configurable from the firmware, and may wary depending on the FW build. In particular, slots 1ae9:0201 may be represented slightly different, using device ID 0200, 0201, 0202, 0203. 
-
-**Warning!** It may be that [[WiFi|WiFi]] device 1ae9:0301 is not visible. This is the case if FW build is WBE-only. If you see this, please contact Wilocity [[http://wilocity.com/|http://wilocity.com/]] to obtain and flash FW with [[WiFi|WiFi]] support. 
-
-wil6210 device, 1ae9:0301, has one 2Mb BAR. 
-
-Depending on card flavor and generation, Atheros 2.4/5.2 GHz [[WiFi|WiFi]] (device 168c:xxxx) may be present or not. Device IDs for 60G device may also differ. Currently, it may be 1ae9:0301 or 1ae9:0310 
+wil6210 device, ''1ae9:0310'', has one 2Mb BAR; it supports MSI interrupt.
 
 
 ===== Network features =====
@@ -34,11 +24,10 @@ wil6210 use cfg80211 framework, but not mac80211.
 
 
 ===== What works =====
-  * sniffer. Due to hardware limitation it captures either only CP (control PHY) or DP (data PHY) frames 
-  * managed mode. works well even with network-manager GUI. Require up-to-date wpa_supplicant. 
+  * managed mode, aka station. Fully functional. Require up-to-date wpa_supplicant. 
+  * sniffer. May be configured to captures either only CP (control PHY) or all frames 
   * AP mode. Up to 8 simultaneous connected stations supported 
-  * security. supported is GCMP, it is the only allowed cipher accordingly to the spec. Driver designed in a way that hardware start running only when network interface brought up, with either 'ifconfig up' or starting AP. All settings made before are cached in the driver but not passed to the hardware. 
-
+  * security. supported is GCMP, it is the only allowed cipher accordingly to the spec.
 
 ==== iw commands supported ====
 
@@ -46,36 +35,26 @@ iw link: query link status. Report current MCS.
 
 
 ===== Module parameters =====
-    * rtap_include_phy_info 
-    *  * Include PHY info in the radiotap header, default - no (bool) 
-    *   use_msi 
-    *    * Use MSI interrupt: 0 - don't, 1 - (default) - single, or 3 (int) 
-    *     debug_fw 
-    *      * load driver if FW not ready. For FW debug (bool) 
-    *       max_assoc_sta 
-    *        * Max number of stations associated to the AP (uint) 
-    *         no_fw_recovery 
-    *          * disable automatic FW error recovery (bool) 
-    *           no_fw_load 
-    *            * do not download FW, use one in on-card flash. (bool) 
-    *             itr_trsh 
-    *              * Interrupt moderation threshold, usecs. (uint) 
-    *               mtu_max 
-    *                * Max MTU value. 
-    *                 rx_ring_order 
-    *                  * Rx ring order; size = 1 << order 
-    *                   tx_ring_order 
-    *                    * Tx ring order; size = 1 << order 
 
-wil6210 support set of interrupt handling modes: 
+^ Parameter               ^ Type    ^ Default  ^ Comment                                                                                                                                            ^
+| use_msi                 | bool    | true     | Use MSI or INTx (pin) interrupt                                                                                                                    |
+| mtu_max                 | uint    | 1986     | Maximum supported MTU, [68..7912]                                                                                                                  |
+| rx_ring_order           | uint    | 10       | Rx sing size is ''1 << order'', [5..15]                                                                                                            |
+| tx_ring_order           | uint    | 10       | Tx sing size is ''1 << order'', [5..15]                                                                                                            |
+| bcast_ring_order        | uint    | 7        | Broadcast Tx sing size is ''1 << order'', [5..15]                                                                                                  |
+| max_assoc_sta           | uint    | 8        | Max number of stations associated to the AP, [1..8]                                                                                                |
+| agg_wsize               | int     | 0        | Window size for Tx Block Ack after connect; 0 - use default; < 0 - don't auto-establish. Writeable, new value used when new block ack established  |
+| rx_ring_overflow_thrsh  | ushort  | 0        | RX ring overflow threshold in descriptors.                                                                                                         |
+| no_fw_recovery          | bool    | false    | disable automatic FW error recovery                                                                                                                |
+| debug_fw                | bool    | false    | do not perform card reset. For FW debug                                                                                                            |
+| rx_align_2              | bool    | false    | align Rx buffers on 4*n+2                                                                                                                          |
+| rtap_include_phy_info   | bool    | false    | Include PHY info in the radiotap header                                                                                                            |
 
-- INTx - legacy pin interrupt. Do not use if possible. - 1MSI - one MSI interrupt. This is the default mode. - 3MSI - 3 MSI interrupts for {Tx, Rx, Misc}. 
 
-For interrupt handling mode, probed is highest one specified with @use_msi, with fallback: 
+wil6210 support of interrupt handling modes: 
 
-3MSI -> 1MSI -> INTx 
-
-On the x86 platform, multiple MSI interrupts are not supported with recent kernel (3.17). 
+  * MSI - MSI interrupt. This is the default mode.
+  * INTx - legacy pin interrupt. Do not use if possible.
 
 When **debug_fw** set to true, driver probe will not fail if firmware do not report "ready" event. This is to aid firmware boot issues debugging. 
 
