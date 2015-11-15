@@ -143,7 +143,7 @@ Should firmware crash, or in case of scan timeout, driver try to recover from er
 to query status, it will reads: 
 <code> mode = [auto|manual] state = [idle|pending|running]</code>
 If **state** is //pending//, it is time to collect all crash information as desired, and continue with recovery by writing **run** into **recovery**: 
-    *                         *     * <code>echo -n "run" > /sys/kernel/debug/ieee80211/phy/wil6210/recovery</code>
+  * <code>echo -n "run" > /sys/kernel/debug/ieee80211/phy/wil6210/recovery</code>
 
 ==== Debug facilities ====
 
@@ -166,17 +166,21 @@ All debugfs files placed under standard location for the cfg80211 devices, $DEBU
 All wil6210 specific files placed under directory 'wil6210'. Facilities provided: 
   * register access. All ICR (Interrupt Control Registers) groups represented as directories, with entries per register, allowing read/write. ITR (Interrupt Threshold Registers) represented as well. 
   * raw memory access. All memory sections represented as 'blob' files, providing read only access to the memory on card. Sections include: 
-<code>+-------------------------------+---------------+
-| blob_xxx  | BAR0    | Size    | Comment       |
-| file name | offset  |         |               |
-+-----------+---------+---------+---------------+
-| rgf       |     0x0 |  0xa000 | Register file |
-| fw_code   | 0x40000 | 0x40000 | FW code       |
-| fw_data   | 0x80000 |  0x8000 | FW data       |
-| fw_peri   | 0x88000 | 0x18000 | FW peripheral |
-| uc_code   | 0xa0000 | 0x10000 | Ucode code    |
-| uc_data   | 0xb0000 |  0x4000 | Ucode data    |
-+-----------+---------+---------+---------------+</code>
+<code>+---------------------------------+---------------+
+| blob_xxx    | BAR0    | Size    | Comment       |
+| file name   | offset  |         |               |
++-------------+---------+---------+---------------+
+| rgf         |     0x0 |  0xa000 | Register file |
+| AGC_tbl     |  0xa000 |  0x1000 | AGC table     |
+| rgf_ext     |  0xb000 |  0x1000 | Ext. rgf      |
+| mac_rgf_ext |  0xc000 |   0x200 | Mac Ext. rgf  |
+| fw_code     | 0x40000 | 0x40000 | FW code       |
+| fw_data     | 0x80000 |  0x8000 | FW data       |
+| fw_peri     | 0x88000 | 0x18000 | FW peripheral |
+| uc_code     | 0xa0000 | 0x10000 | Ucode code    |
+| uc_data     | 0xb0000 |  0x4000 | Ucode data    |
++-------------+---------+---------+---------------+</code>
+
 Raw memory access used by firmware/ucode trace extractor. See below. Also, raw memory dump may be obtained for later analysis. 
   * DWORD memory read, as FW see it. Files 'mem_addr' and 'mem_val' provide access to the memory, using FW addresses (FW memory mapping is somewhat different from what host see in BAR0). Write address to the 'mem_addr', then read 'mem_val'. It will reads like "[0x%08x] = 0x%08x\n", addr, value 
   * mailbox for WMI commands events. File 'mbox' reads like: 
