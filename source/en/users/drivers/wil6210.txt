@@ -1,8 +1,6 @@
 
 Go back –> [[en/users/Drivers/Atheros|Atheros Linux wireless drivers]] 
 
- 
-
 
 ===== About wil6210 =====
 
@@ -20,7 +18,6 @@ for experimenting, and can be used as researcher workbench.
 
 
 ===== Network features =====
-
 For the [[WiFi|WiFi]] connection, implemented is 802.11ad spec. Supported are channels 1..3 with corresponded frequencies 58320, 60480, 62640 MHz. 
 
 wil6210 use cfg80211 framework, but not mac80211. 
@@ -44,38 +41,27 @@ Firmware has to be downloaded to the card; card will not work without firmware.
 ==== Status ====
   * Basic support for 802.11ad merged into kernel 3.6 
   * The driver merged into kernel 3.8. 
-  * Patches for hostapd/wpa_supplicant submitted, some part is already merged. 
-
-
-==== iw commands supported ====
-
-iw link: query link status. Report current MCS. 
+  * Patches for basic 11ad support for hostapd/wpa_supplicant merged. 
 
 ==== Sniffer ====
-
 To configure wil6210 in sniffer mode (assume $WLAN set to network interface name): 
 
-
 <code># iw $WLAN set type monitor</code>
-Due to hardware/firmware deficiency, sniffer can capture either only control PHY (CP) or only data PHY (DP). To configure for desired PHY type do, after configuring for monitor mode: 
+Sniffer can capture either only control PHY (CP) or all frames. Note however,
+data sent at high MCS is hard to acquire by the antennas configured for quasi-omni mode.
 
-For CP: 
-
+To configure for control PHY type do, after configuring for monitor mode: 
 
 <code># iw $WLAN set monitor control</code>
-For DP: 
 
-
-<code># iw $WLAN set monitor none</code>
 Finally, bring interface up: 
-
 
 <code># ifconfig $WLAN up</code>
 
 ==== AP mode ====
 
-To start AP mode, use recent wpa_supplicant (assume relevant patches already merged). Sample config for non-secure mode: 
-
+To start AP mode, use recent wpa_supplicant (assume relevant patches already merged).
+Sample config for non-secure mode: 
 
 <code>﻿ap_scan=2
 
@@ -85,8 +71,8 @@ network={
         mode=2
         key_mgmt=NONE
 }</code>
-Sample config for secure mode. Note GCMP cipher: 
 
+Sample config for secure mode. Note GCMP cipher: 
 
 <code>﻿ap_scan=2
 
@@ -103,7 +89,8 @@ network={
 
 ===== For developer =====
 
-
+Information below is not necessary for operating driver, it is interesting
+only for those developing/customizing driver, or experimenting with the 60GHz technology.
 
 ==== Module parameters ====
 
@@ -133,24 +120,25 @@ When **debug_fw** set to true, driver probe will not fail if firmware do not rep
 
 ==== WMI commands ====
 
-Control communication with the card is done through so called WMI commands and events. Target access to the mailbox within memory in BAR0 used. There are 2 similar mailbox structures: one for host->card commands, and one for card->host events. 
-
+Control communication with the card is done through so called WMI commands and events.
+Target access to the mailbox within memory in BAR0 used. There are 2 similar mailbox structures:
+one for host->card commands, and one for card->host events. 
 
 ==== Tx/Rx ====
 
-DMA using 'vring' structures. Vring in consistent memory; hold descriptors that points to the data buffers. Card to write status back to the descriptor. 
+DMA using 'vring' structures. Vring allocated in consistent memory;
+hold descriptors that points to the data buffers. Card to write status back to the descriptor. 
 
-There is one Rx vring. Tx vrings - multiple, per DA*TID. 
-
+There is one Rx vring. Tx vrings - multiple, per DA*TID, AP also has broadcast Tx vring. 
 
 ==== Firmware error recovery ====
 
 Should firmware crash, or in case of scan timeout, driver try to recover from error by resetting card. This works for **station** only. In the **AP** mode, driver will not perform recovery. It will, however, report error to the user space. There are 2 modes of firmware recovery, depending on the driver parameter **no_fw_recovery**: 
-    *                         * Automatic 
-    *                         *  * when **no_fw_recovery** not set (default), driver starts recovery attempt immediately. If firmware keeps crashing, driver will stop after 5 attempts performed within short time. 
-    *                         *   Manual 
-    *                         *    * when **no_fw_recovery** set (**Y** or **1**), driver will report firmware error to the user space and wait for command to continue. To query error state and continue with recovery, use **recovery** file on the driver's debugfs: read it 
-    *                         *     
+  * Automatic 
+  * when **no_fw_recovery** not set (default), driver starts recovery attempt immediately. If firmware keeps crashing, driver will stop after 5 attempts performed within short time. 
+  * Manual 
+  * when **no_fw_recovery** set (**Y** or **1**), driver will report firmware error to the user space and wait for command to continue. To query error state and continue with recovery, use **recovery** file on the driver's debugfs: read it 
+
 <code>cat /sys/kernel/debug/ieee80211/phy/wil6210/recovery</code>
 to query status, it will reads: 
 <code> mode = [auto|manual] state = [idle|pending|running]</code>
@@ -163,11 +151,12 @@ If **state** is //pending//, it is time to collect all crash information as desi
 === Dynamic debug ===
 
 Almost all messages printed to the dmesg, are "dynamic debug" ones. See Documentation/dynamic-debug-howto.txt for details. Module "wil6210" uses format prefixes to identify message groups: 
-    *                         *       * "DBG[ IRQ]" for interrupt related messages. Prints every IRQ. 
-    *                         *       * "DBG[TXRX]" for Tx/Rx path. Prints every Tx/Rx package. 
-    *                         *       * "DBG[ WMI]" for WMI commands subsystem 
-    *                         *       * "DBG[ FW ]" for FW download 
-    *                         *       * "DBG[MISC]" for various un-categorized cases Groups IRQ and TXRX are heavy traffic; enable only when required. Group WMI is relatively low traffic, it prints only WMI messages. It is good idea to enable all but IRQ and TXRX when debugging. 
+   * "DBG[ IRQ]" for interrupt related messages. Prints every IRQ. 
+   * "DBG[TXRX]" for Tx/Rx path. Prints every Tx/Rx package. 
+   * "DBG[ WMI]" for WMI commands subsystem 
+   * "DBG[ FW ]" for FW download 
+   * "DBG[MISC]" for various un-categorized cases Groups IRQ and TXRX are heavy traffic; enable only when required. Group WMI is relatively low traffic, it prints only WMI messages. It is good idea to enable all but IRQ and TXRX when debugging. 
+   * "DBG[ IOC]" for IOCTL 
 
 
 === Debugfs ===
@@ -175,8 +164,8 @@ Almost all messages printed to the dmesg, are "dynamic debug" ones. See Document
 All debugfs files placed under standard location for the cfg80211 devices, $DEBUGFS/ieee80211/$PHY/ where $PHY is phy name like 'phy1'. 
 
 All wil6210 specific files placed under directory 'wil6210'. Facilities provided: 
-    *                         *         * register access. All ICR (Interrupt Control Registers) groups represented as directories, with entries per register, allowing read/write. ITR (Interrupt Threshold Registers) represented as well. 
-    *                         *         * raw memory access. All memory sections represented as 'blob' files, providing read only access to the memory on card. Sections include: 
+  * register access. All ICR (Interrupt Control Registers) groups represented as directories, with entries per register, allowing read/write. ITR (Interrupt Threshold Registers) represented as well. 
+  * raw memory access. All memory sections represented as 'blob' files, providing read only access to the memory on card. Sections include: 
 <code>+-------------------------------+---------------+
 | blob_xxx  | BAR0    | Size    | Comment       |
 | file name | offset  |         |               |
@@ -189,8 +178,8 @@ All wil6210 specific files placed under directory 'wil6210'. Facilities provided
 | uc_data   | 0xb0000 |  0x4000 | Ucode data    |
 +-----------+---------+---------+---------------+</code>
 Raw memory access used by firmware/ucode trace extractor. See below. Also, raw memory dump may be obtained for later analysis. 
-    *                         *           * DWORD memory read, as FW see it. Files 'mem_addr' and 'mem_val' provide access to the memory, using FW addresses (FW memory mapping is somewhat different from what host see in BAR0). Write address to the 'mem_addr', then read 'mem_val'. It will reads like "[0x%08x] = 0x%08x\n", addr, value 
-    *                         *           * mailbox for WMI commands events. File 'mbox' reads like: 
+  * DWORD memory read, as FW see it. Files 'mem_addr' and 'mem_val' provide access to the memory, using FW addresses (FW memory mapping is somewhat different from what host see in BAR0). Write address to the 'mem_addr', then read 'mem_val'. It will reads like "[0x%08x] = 0x%08x\n", addr, value 
+  * mailbox for WMI commands events. File 'mbox' reads like: 
 <code>ring tx = {
   base = 0x008802e8
   size = 0x0028 bytes -> 5 entries
@@ -232,11 +221,11 @@ ring rx = {
 There are 2 separate rings, one for Tx, or host->card commands; and 2-nd for Rx, or card->host events. 
 
 Printed for each ring (all addresses in FW memory mapping): 
-    *                         *             * base address of ring in card's memory 
-    *                         *             * ring size in bytes and entries 
-    *                         *             * tail and head pointers 
-    *                         *             * max. entry size. It is fake for Rx - FW may allocate entry of arbitrary size 
-    *                         *             * mailbox entries, format for entry: 
+  * base address of ring in card's memory 
+  * ring size in bytes and entries 
+  * tail and head pointers 
+  * max. entry size. It is fake for Rx - FW may allocate entry of arbitrary size 
+  * mailbox entries, format for entry: 
 <code>       /-- 'E' for empty entry, 'F' for full
        | /+-- 't' for tail, 'h' for head
        | ||
@@ -260,11 +249,11 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHS
 There is one block for Rx DMA vring and one for every Tx DMA vring. 
 
 Information printed: 
-    *                         *                 * addresses, physical (pa) and virtual (va) 
-    *                         *                 * size, entries 
-    *                         *                 * software head and tail pointers 
-    *                         *                 * hardware tail, format: [fw addr] -> value 
-    *                         *                 * One letter per vring entry, 'H' for hardware owned and 'S' for software owned ones. 
+  * addresses, physical (pa) and virtual (va) 
+  * size, entries 
+  * software head and tail pointers 
+  * hardware tail, format: [fw addr] -> value 
+  * One letter per vring entry, 'H' for hardware owned and 'S' for software owned ones. 
 ===== Contributions to wil6210 =====
 
 You can see [[https://docs.google.com/spreadsheet/pub?key=0AtNdeeyGJEJ7dG45U2xrZldlQm80Nlg5QzEwUmtNUGc&single=true&gid=2&output=html|statistics and graphs of contributions to wil6210 here]]. Contact the wil6210 maintainer if you'd like to help with keeping this document up to date. 
