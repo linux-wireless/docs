@@ -15,6 +15,9 @@ There are old version of the Qualcomm 60GHz card, with PCIe ID ''1ae9:0301'' it 
 
 wil6210 device, ''1ae9:0310'', has one 2Mb BAR; it supports MSI interrupt.
 
+Since 60GHz is emerging technology and hardware is completely new, driver provides lots of features
+for experimenting, and can be used as researcher workbench.
+
 
 ===== Network features =====
 
