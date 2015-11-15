@@ -25,44 +25,33 @@ For the [[WiFi|WiFi]] connection, implemented is 802.11ad spec. Supported are ch
 
 wil6210 use cfg80211 framework, but not mac80211. 
 
+==== Firmware ====
 
-===== What works =====
+We need to get this publicly available... 
+
+Firmware has to be downloaded to the card; card will not work without firmware. 
+
+==== What works ====
   * managed mode, aka station. Fully functional. Require up-to-date wpa_supplicant. 
   * sniffer. May be configured to captures either only CP (control PHY) or all frames 
   * AP mode. Up to 8 simultaneous connected stations supported 
   * security. supported is GCMP, it is the only allowed cipher accordingly to the spec.
 
+==== TODO ====
+  * P2P and FST flows 
+  * various offloads
+
+==== Status ====
+  * Basic support for 802.11ad merged into kernel 3.6 
+  * The driver merged into kernel 3.8. 
+  * Patches for hostapd/wpa_supplicant submitted, some part is already merged. 
+
+
 ==== iw commands supported ====
 
 iw link: query link status. Report current MCS. 
 
-
-===== Module parameters =====
-
-^ Parameter               ^ Type    ^ Default  ^ Comment                                                                                                                                            ^
-| use_msi                 | bool    | true     | Use MSI or INTx (pin) interrupt                                                                                                                    |
-| mtu_max                 | uint    | 1986     | Maximum supported MTU, [68..7912]                                                                                                                  |
-| rx_ring_order           | uint    | 10       | Rx sing size is ''1 << order'', [5..15]                                                                                                            |
-| tx_ring_order           | uint    | 10       | Tx sing size is ''1 << order'', [5..15]                                                                                                            |
-| bcast_ring_order        | uint    | 7        | Broadcast Tx sing size is ''1 << order'', [5..15]                                                                                                  |
-| max_assoc_sta           | uint    | 8        | Max number of stations associated to the AP, [1..8]                                                                                                |
-| agg_wsize               | int     | 0        | Window size for Tx Block Ack after connect; 0 - use default; < 0 - don't auto-establish. Writeable, new value used when new block ack established  |
-| rx_ring_overflow_thrsh  | ushort  | 0        | RX ring overflow threshold in descriptors.                                                                                                         |
-| no_fw_recovery          | bool    | false    | disable automatic FW error recovery                                                                                                                |
-| debug_fw                | bool    | false    | do not perform card reset. For FW debug                                                                                                            |
-| rx_align_2              | bool    | false    | align Rx buffers on 4*n+2                                                                                                                          |
-| rtap_include_phy_info   | bool    | false    | Include PHY info in the radiotap header                                                                                                            |
-
-
-wil6210 support of interrupt handling modes: 
-
-  * MSI - MSI interrupt. This is the default mode.
-  * INTx - legacy pin interrupt. Do not use if possible.
-
-When **debug_fw** set to true, driver probe will not fail if firmware do not report "ready" event. This is to aid firmware boot issues debugging. 
-
-
-===== Sniffer =====
+==== Sniffer ====
 
 To configure wil6210 in sniffer mode (assume $WLAN set to network interface name): 
 
@@ -83,21 +72,7 @@ Finally, bring interface up:
 
 <code># ifconfig $WLAN up</code>
 
-===== TODO =====
-    *                     * P2P and FST flows 
-    *                     * various offloads 
-===== Status =====
-    *                       * Basic support for 802.11ad merged into kernel 3.6 
-    *                       * The driver merged into kernel 3.8. 
-    *                       * Patches for hostapd/wpa_supplicant submitted, some part is already merged. 
-===== Firmware =====
-
-We need to get this publicly available... 
-
-In the current version, firmware stored in the flash memory on the NIC and not downloaded by the driver. Firmware flashing required for the upgrade only. 
-
-
-===== How to =====
+==== AP mode ====
 
 To start AP mode, use recent wpa_supplicant (assume relevant patches already merged). Sample config for non-secure mode: 
 
@@ -126,19 +101,49 @@ network={
         group=GCMP
 }</code>
 
-===== WMI commands =====
+===== For developer =====
+
+
+
+==== Module parameters ====
+
+^ Parameter               ^ Type    ^ Default  ^ Comment                                                                                                                                            ^
+| use_msi                 | bool    | true     | Use MSI or INTx (pin) interrupt                                                                                                                    |
+| mtu_max                 | uint    | 1986     | Maximum supported MTU, [68..7912]                                                                                                                  |
+| rx_ring_order           | uint    | 10       | Rx sing size is ''1 << order'', [5..15]                                                                                                            |
+| tx_ring_order           | uint    | 10       | Tx sing size is ''1 << order'', [5..15]                                                                                                            |
+| bcast_ring_order        | uint    | 7        | Broadcast Tx sing size is ''1 << order'', [5..15]                                                                                                  |
+| max_assoc_sta           | uint    | 8        | Max number of stations associated to the AP, [1..8]                                                                                                |
+| agg_wsize               | int     | 0        | Window size for Tx Block Ack after connect; 0 - use default; < 0 - don't auto-establish. Writeable, new value used when new block ack established  |
+| rx_ring_overflow_thrsh  | ushort  | 0        | RX ring overflow threshold in descriptors.                                                                                                         |
+| no_fw_recovery          | bool    | false    | disable automatic FW error recovery                                                                                                                |
+| debug_fw                | bool    | false    | do not perform card reset. For FW debug                                                                                                            |
+| rx_align_2              | bool    | false    | align Rx buffers on 4*n+2                                                                                                                          |
+| rtap_include_phy_info   | bool    | false    | Include PHY info in the radiotap header                                                                                                            |
+
+
+wil6210 support of interrupt handling modes: 
+
+  * MSI - MSI interrupt. This is the default mode.
+  * INTx - legacy pin interrupt. Do not use if possible.
+
+When **debug_fw** set to true, driver probe will not fail if firmware do not report "ready" event. This is to aid firmware boot issues debugging. 
+
+
+
+==== WMI commands ====
 
 Control communication with the card is done through so called WMI commands and events. Target access to the mailbox within memory in BAR0 used. There are 2 similar mailbox structures: one for host->card commands, and one for card->host events. 
 
 
-===== Tx/Rx =====
+==== Tx/Rx ====
 
 DMA using 'vring' structures. Vring in consistent memory; hold descriptors that points to the data buffers. Card to write status back to the descriptor. 
 
 There is one Rx vring. Tx vrings - multiple, per DA*TID. 
 
 
-===== Firmware error recovery =====
+==== Firmware error recovery ====
 
 Should firmware crash, or in case of scan timeout, driver try to recover from error by resetting card. This works for **station** only. In the **AP** mode, driver will not perform recovery. It will, however, report error to the user space. There are 2 modes of firmware recovery, depending on the driver parameter **no_fw_recovery**: 
     *                         * Automatic 
@@ -151,10 +156,11 @@ to query status, it will reads:
 <code> mode = [auto|manual] state = [idle|pending|running]</code>
 If **state** is //pending//, it is time to collect all crash information as desired, and continue with recovery by writing **run** into **recovery**: 
     *                         *     * <code>echo -n "run" > /sys/kernel/debug/ieee80211/phy/wil6210/recovery</code>
-===== Debug facilities =====
+
+==== Debug facilities ====
 
 
-==== Dynamic debug ====
+=== Dynamic debug ===
 
 Almost all messages printed to the dmesg, are "dynamic debug" ones. See Documentation/dynamic-debug-howto.txt for details. Module "wil6210" uses format prefixes to identify message groups: 
     *                         *       * "DBG[ IRQ]" for interrupt related messages. Prints every IRQ. 
@@ -164,7 +170,7 @@ Almost all messages printed to the dmesg, are "dynamic debug" ones. See Document
     *                         *       * "DBG[MISC]" for various un-categorized cases Groups IRQ and TXRX are heavy traffic; enable only when required. Group WMI is relatively low traffic, it prints only WMI messages. It is good idea to enable all but IRQ and TXRX when debugging. 
 
 
-==== Debugfs ====
+=== Debugfs ===
 
 All debugfs files placed under standard location for the cfg80211 devices, $DEBUGFS/ieee80211/$PHY/ where $PHY is phy name like 'phy1'. 
 
