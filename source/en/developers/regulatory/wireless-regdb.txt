@@ -24,7 +24,7 @@ The regulatory.bin file there is signed with his RSA private key. We keep the RS
 
 ===== Releases of wireless-regdb =====
 
-You can find official wireless-regdb releases on the [[http://drvbp1.linux-foundation.org/~mcgrof/rel-html/wireless-regdb/|wireless-regdb release page]], older releases can be downloaded through the [[http://kernel.org/pub/software/network/wireless-regdb/|wireless-regdb archive]] 
+You can find official wireless-regdb releases on the [[http://drvbp1.linux-foundation.org/~mcgrof/rel-html/wireless-regdb/|wireless-regdb release page]], all releases can be downloaded through the [[http://kernel.org/pub/software/network/wireless-regdb/|wireless-regdb archive]] 
 
 
 ===== ASCII file format =====
