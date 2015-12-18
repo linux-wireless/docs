@@ -8,7 +8,7 @@ Suggested Topics
   * RSS on wireless, in particular mac80211 (Johannes)
   * Android wifi topics (Dmitry, ~45mins)
   * OpenWrt code out of upstream (http://git.openwrt.org/?p=openwrt.git , target/linux/* and package/kernel/*)
-
+  * regulatory - simplification? (Johannes)
 
 Attendees (tentative, just to estimate the number, add yourself)
 
