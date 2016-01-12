@@ -119,36 +119,15 @@ As noted above, Minstrel keeps state on each node that we are associated with.  
 
 
 <code># mount -t debugfs debugfs /sys/kernel/debug/</code>
-Inside the <code>/sys/kernel/debug/ieee80211/phy0/stations/</code>  directory there will be  subdirectories, where the subdirectory corresponds to each node that  we are associated with. The name of the subdirectory is the mac address of the associated node. Take for example (from a box here) the directory <code>/sys/kernel/debug/ieee80211/phy0/stations/00:02:6f:49:41:01</code>. There are 27 different files 
+Inside the <code>/sys/kernel/debug/ieee80211/phy0/stations/</code>  directory there will be  subdirectories, where the subdirectory corresponds to each node that  we are associated with. The name of the subdirectory is the mac address of the associated node. Take for example (from a box here) the directory <code>/sys/kernel/debug/ieee80211/phy0/stations/00:02:6f:49:41:01</code>. There are 6 different files 
 
 
 <code>agg_status        report of different parameters for the remote station
-beacon_loss_count
-connected_time
-current_tx_rate
-dev
-driver_buffered_tids
 flags             Auth, Assoc, ps authorized preamble, wme, wds, mfp
-ht_capa
 inactive_ms       time (ms) since received a last packet
-last_ack_signal
-last_rx_rate
 last_seq_ctrl     for each RX q, last rx seq/frag number from the remote station
-last_signal
 num_ps_buf_frames number of ps frames to transmit to the remote station
-rc_stats          A table of loss/success rates for each data rates
-rx_bytes
-rx_dropped
-rx_duplicates
-rx_fragments
-rx_packets
-tx_bytes
-tx_filtered
-tx_fragments
-tx_packets
-tx_retry_count
-tx_retry_failed
-vht_capa</code>
+rc_stats          A table of loss/success rates for each data rates</code>
 The most interesting file is the <code>rc_stats</code> file, as it contains the working information that Minstrel uses to determine the rate for the next packet, and is a report on which rates  work well/badly. While developing Minstrel, the following command: 
 
 
