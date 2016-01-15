@@ -9,11 +9,12 @@
 
 
 ===== Features =====
-    * Station (client) mode 
-    * IBSS (Ad-Hoc) mode 
-    * AP mode (experimental; only on some devices/firmware versions) 
+    * Station (client) mode
+    * IBSS (Ad-Hoc) mode
+    * AP mode (on devices driven by iwlmvm)
     * P2P (on devices driven by iwlmvm)
-    * 802.11a/b/g/n/ac (depending on the device) 
+    * 802.11a/b/g/n/ac (depending on the device)
+    * NAN, FTM and other features are planned for 8260
 
 ===== Supported Devices =====
 The following devices are supported (since kernel version): 
