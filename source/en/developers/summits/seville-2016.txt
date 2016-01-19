@@ -9,6 +9,8 @@ Suggested Topics
   * Android wifi topics (Dmitry, ~45mins)
   * OpenWrt code out of upstream (http://git.openwrt.org/?p=openwrt.git , target/linux/* and package/kernel/*)
   * regulatory - simplification? (Johannes)
+  * "roaming" offload with auth/assoc - candidate reporting (Johannes)
+  * FILS authentication/association (Jouni/Johannes)
 
 Attendees (tentative, just to estimate the number, add yourself)
 
