@@ -11,7 +11,8 @@
 ===== Features =====
     * Station (client) mode
     * IBSS (Ad-Hoc) mode
-    * AP mode (on devices driven by iwlmvm)
+    * AP mode on 2.4GHz (on devices driven by iwlmvm)
+    * AP mode on 5.2GHz on 7265D and 8260 in certain conditions only
     * P2P (on devices driven by iwlmvm)
     * 802.11a/b/g/n/ac (depending on the device)
     * NAN, FTM and other features are planned for 8260
