@@ -11,6 +11,7 @@ Suggested Topics
   * regulatory - simplification? (Johannes)
   * "roaming" offload with auth/assoc - candidate reporting (Johannes/Ilan)
   * FILS secured association (Jouni/Johannes)
+  * beacon report scan
 
 Attendees (tentative, just to estimate the number, add yourself)
 
