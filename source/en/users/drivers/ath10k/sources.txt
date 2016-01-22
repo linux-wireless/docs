@@ -2,25 +2,21 @@ o
 Go back --> [[en/users/Drivers/ath10k|ath10k]] 
 
  
-
-
 ===== ath10k sources location =====
 
-//ath10k// development happens in Kalle Valo's ath.git tree on github.com: 
-  * [[https://github.com/kvalo/ath|https://github.com/kvalo/ath]] 
+//ath10k// development happens in Kalle Valo's ath.git tree on kernel.org: 
+
+https://git.kernel.org/cgit/linux/kernel/git/kvalo/ath.git/
 
 To clone the tree: 
 
+<code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git</code>
 
-<code>git clone https://github.com/kvalo/ath</code>
 ath10k driver is located in directory drivers/net/wireless/ath/ath10k. 
-
-If you can't use git, it's also possible to download .zip file from this link: 
-    * [[https://github.com/kvalo/ath/archive/master.zip|https://github.com/kvalo/ath/archive/master.zip]] 
 
 If you just want to browse the source code with your web browser this links always points to latest version of ath10k: 
 
-[[https://github.com/kvalo/ath/tree/master/drivers/net/wireless/ath/ath10k|https://github.com/kvalo/ath/tree/master/drivers/net/wireless/ath/ath10k]] 
+https://git.kernel.org/cgit/linux/kernel/git/kvalo/ath.git/tree/drivers/net/wireless/ath/ath10k
 
 Periodically Kalle Valo pulls the ath tree into wireless-drivers-next tree. Then David Miller pulls it to net-next which is eventually pulled by Linus Torvalds to official kernel releases. As a rough estimate it takes 2-4 months for a patch to propage from ath.git to an official Linux release.
 
