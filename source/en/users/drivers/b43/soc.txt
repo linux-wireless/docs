@@ -36,6 +36,7 @@ Broadcom produces many SoCs that can combine processor, ethernet, WiFi, USB and 
 ^ Name ^ id ^ pkg ^ ^ rev ^ ::: ^ 2.0 ^ 3.0 ^ ::: ^
 |BCM4708A0 |53010 |0x02 |Cortex-A9 |1 |1 |1 |1 |42 |
 |BCM4709A0 |53010 |0x00 |Cortex-A9 |1 |1 |1 |1 |42 |
+|BCM4709C0 |53030| 0x00 |Cortex-A9 |1 |7 |7 |7 |42 |
 |BCM47189B0 |53573 |0x01 |Cortex-A7 |0 |5 |5 |─ |54 |
 
 Please note that devices with PCI(e)/USB core (working in a host mode) can have extra cards attached. We don't list them in the table, as it's vendor choice what additional card will be used. For example: 
