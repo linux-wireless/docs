@@ -111,7 +111,7 @@ You can now load the driver.
 
 
 ===== Support =====
-For general questions about WiFi on Linux using Intel's devices, you can send an email to [[mailto:linuxwifi@intel.com|linuxwifi@intel.com]] and / or the Linux wireless mailing which is common to all the vendors: [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]]. Please note that the latter address accepts plaintext emails only.
+For general questions about WiFi on Linux using Intel's devices, you can send an email to [[mailto:linuxwifi@intel.com|linuxwifi@intel.com]] and / or the Linux wireless mailing which is common to all the vendors: [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]]. Please note that the latter address accepts plaintext emails only. Our policy is to close bugs that have been pending for input for more than two weeks.
 
 For bug reports and debugging , please see the [[en:users:drivers:iwlwifi:Debugging|page]] dedicated to that.
 
