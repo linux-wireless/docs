@@ -13,6 +13,7 @@ Suggested Topics
   * FILS secured association (Jouni/Johannes)
   * beacon report scan (Johannes)
   * 802.3 frame format support in mac80211 (Kalle)
+  * Johannes's EL
 
 Attendees (tentative, just to estimate the number, add yourself)
 
