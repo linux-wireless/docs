@@ -12,6 +12,7 @@ Suggested Topics
   * "roaming" offload with auth/assoc - candidate reporting (Johannes/Ilan)
   * FILS secured association (Jouni/Johannes)
   * beacon report scan (Johannes)
+  * 802.3 frame format support in mac80211 (Kalle)
 
 Attendees (tentative, just to estimate the number, add yourself)
 
