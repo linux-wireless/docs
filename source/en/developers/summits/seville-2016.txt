@@ -20,3 +20,4 @@ Attendees (tentative, just to estimate the number, add yourself)
   * Kalle Valo
   * Emmanuel Grumbach
   * Dmitry Shmidt
+  * Avery Pennarun
