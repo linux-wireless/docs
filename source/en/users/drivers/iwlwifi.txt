@@ -139,6 +139,32 @@ We merge the updates coming from the backport infrastructure on a regular basis.
 If you checkout an earlier branch / commit in backport-iwlwifi.git, you might not be able to work against the most recent kernel. Please keep that in mind.
 We have a release cycle based on the backport tree. These [[en:users:drivers:iwlwifi:Core_release|Core releases]] can be very useful for someone who wants to integrate our WiFi solution into his home made system.
 
+
+===== About platform noise =====
+ 
+WiFi heavily relies on radio frequencies, and those are subject to interference.
+Interference may come from another WiFi device, or from many other non-wifi devices (e.g. microwaves) that operates on the same frequency,
+and it might also come from other components of your own device/computer – this is known as 'platform noise'.
+Platform noise depends on the actual platform/computer and its design/manufacturing, and not on the Intel-wifi module.
+ 
+Some common sources of platform noise might be:
+
+  * The PCIe bus, especially when switching in/out of power saving modes.
+  * USB3 and graphics (in certain scenarios).
+  * Sometimes, even the fact that several ingredients’ Ground lines are connected can cause noise. 
+ 
+This kind of interference might happen on 2.4GHz band, it is much less likely to happen on 5.2GHz band.
+Also note that using 40MHz (and not 20MHz) channel bandwidth will increase the probability to suffer from platform noise (since more frequencies might impact the wifi performance).
+ 
+Some potential work-around options to this issue:
+
+  * ItemDisable wifi's power save (prevent the PCIe link to go to power save):  power_scheme=1 module parameter for iwlmvm
+  * Disable USB3 in BIOS (if possible), it not, just stop using it
+  * Disable 40MHz on 2.4GHz:        cfg80211_disable_40mhz_24ghz module parameter
+  * Use 5GHz band (on devices that support 5GHz operation)
+
+The fact that one of these options helped doesn't prove that the issue being troubleshooted is 'platform noise', but it may be an indication.
+
 ===== About iwldvm support and known issues =====
 
 ==== WiFi / Bluetooth coexistence ====
