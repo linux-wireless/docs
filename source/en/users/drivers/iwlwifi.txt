@@ -158,7 +158,7 @@ Also note that using 40MHz (and not 20MHz) channel bandwidth will increase the p
  
 Some potential work-around options to this issue:
 
-  * ItemDisable wifi's power save (prevent the PCIe link to go to power save):  power_scheme=1 module parameter for iwlmvm
+  * Disable wifi's power save (prevent the PCIe link to go to power save):  power_scheme=1 module parameter for iwlmvm
   * Disable USB3 in BIOS (if possible), it not, just stop using it
   * Disable 40MHz on 2.4GHz:        cfg80211_disable_40mhz_24ghz module parameter
   * Use 5GHz band (on devices that support 5GHz operation)
