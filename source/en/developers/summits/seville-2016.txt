@@ -22,3 +22,4 @@ Attendees (tentative, just to estimate the number, add yourself)
   * Emmanuel Grumbach
   * Dmitry Shmidt
   * Avery Pennarun
+  * Jouni Malinen
