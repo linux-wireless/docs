@@ -14,6 +14,7 @@ Suggested Topics
   * beacon report scan (Johannes)
   * 802.3 frame format support in mac80211 (Kalle)
   * Johannes's EL
+  * per-station netdev queues
 
 Attendees (tentative, just to estimate the number, add yourself)
 
