@@ -24,3 +24,4 @@ Attendees (tentative, just to estimate the number, add yourself)
   * Dmitry Shmidt
   * Avery Pennarun
   * Jouni Malinen
+  * Michal Kazior
