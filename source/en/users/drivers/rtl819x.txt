@@ -27,7 +27,7 @@
     * **r8723au** is a USB driver for RTL8723AU devices (**3.15+**). It's going to be replaced by rtl8xxxu.
     * **r8188eu** is a USB driver for RTL8188EU devices. It's going to be replaced by rtl8xxxu.
     * **r8190_pci** is a PCI driver for [[http://www.realtek.com/products/productsView.aspx?Langid=1&PNid=41&PFid=9&Level=6&Conn=5&ProdID=174|RTL8190P]] devices (**WIP** : [[http://github.com/lwfinger/rtl8190p|http://github.com/lwfinger/rtl8190p]] )
-    * **8723bu** is a USB driver for RTL8723BU devices (**WIP** https://github.com/lwfinger/rtl8723bu)
+    * **8723bu** is a USB driver for RTL8723BU devices (**WIP** https://github.com/lwfinger/rtl8723bu). It's going to be replaced by rtl8xxxu.
     *  **r8723bs** is a SDIO/SPI driver for RTL8723A/B devices (**WIP** : https://github.com/lwfinger/rtl8723bs)
 
 They are included in the **staging** tree at [[https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/|https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/]] and they are **NOT supported** by linux-wireless developers or mailing list. Instead ask for support in [[http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel|http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel]] . Maintainers are Greg Kroah-Hartman <[[mailto:greg@kroah.com|greg@kroah.com]]> and Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]>. 
