@@ -193,7 +193,7 @@ As explained is algorithm section, driver needs to provide (fill) few different 
 
 Only the following drivers support the current (2014-08-19) survey based ACS implmenetation in hostapd ([[http://w1.fi/cgit/hostap/tree/hostapd/defconfig#n309|http://w1.fi/cgit/hostap/tree/hostapd/defconfig#n309]]). 
   * ath5k 
-  * ath9k 
+  * ath9k (The pcie version only)
   * ath10k When building make sure you enable ACS in hostapd's .config file: 
 
 
