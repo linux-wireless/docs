@@ -19,6 +19,7 @@ Suggested Topics
   * per-station netdev queues
   * FTM APIs
   * NaN APIs?
+  * MU-MIMO sniffer
 
 Attendees (tentative, just to estimate the number, add yourself)
 
