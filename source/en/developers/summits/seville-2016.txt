@@ -25,3 +25,4 @@ Attendees (tentative, just to estimate the number, add yourself)
   * Avery Pennarun
   * Jouni Malinen
   * Michal Kazior
+  * Maya Erez
