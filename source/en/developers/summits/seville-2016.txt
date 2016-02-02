@@ -18,6 +18,7 @@ Suggested Topics
   * Johannes's EL
   * per-station netdev queues
   * FTM APIs
+  * NaN APIs?
 
 Attendees (tentative, just to estimate the number, add yourself)
 
