@@ -15,6 +15,7 @@ Suggested Topics
   * 802.3 frame format support in mac80211 (Kalle)
   * Johannes's EL
   * per-station netdev queues
+  * FTM APIs
 
 Attendees (tentative, just to estimate the number, add yourself)
 
