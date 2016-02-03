@@ -31,3 +31,4 @@ Attendees (tentative, just to estimate the number, add yourself)
   * Jouni Malinen
   * Michal Kazior
   * Maya Erez
+  * Jason Abele
