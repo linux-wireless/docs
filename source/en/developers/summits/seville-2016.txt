@@ -20,6 +20,7 @@ Suggested Topics
   * FTM APIs
   * NaN APIs?
   * MU-MIMO sniffer
+  * next workshop with LPC/KS in November (Santa Fe)?
 
 Attendees (tentative, just to estimate the number, add yourself)
 
