@@ -6,7 +6,7 @@ The workshop is going to take place on the second day of netdev 1.1, February 11
 Suggested Topics
 
   * RSS on wireless, in particular mac80211 (Johannes)
-    * RX statistics
+    * RX statistics (wild idea: bpf? though that assumes a single userspace controller?)
     * RX optimisation/fastpath?
   * Android wifi topics (Dmitry, ~45mins)
   * OpenWrt code out of upstream (http://git.openwrt.org/?p=openwrt.git , target/linux/* and package/kernel/*)
