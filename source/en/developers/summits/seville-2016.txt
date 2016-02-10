@@ -25,20 +25,22 @@ Suggested Topics
   * next workshop with LPC/KS in November (Santa Fe)?
 
 Agenda
-| **9:00**         | Android (Dmitry)                      |
-| **9:30**         | Android (Dmitry & filtering/Lorenzo)  |
-| **10:00**        |                                       |
-| **10:30**        |                                       |
-| **11:00**        | **break**                             |
-| **11:30**        |                                       |
-| **12:00**        |                                       |
-| **12:30**        |                                       |
-| **13:00**        | **(keynote)**                         |
-| **13:30-15:00**  | **lunch**                             |
-| **15:00**        |                                       |
-| **15:30**        |                                       |
-| **16:00**        |                                       |
-| **16:30**        |                                       |
+| **9:00**         | Android (Dmitry)                                                                                                                    |
+| **9:30**         | Android (Dmitry & filtering/Lorenzo)                                                                                                |
+| **10:00**        | NaN (R2), FTM, FW debug                                                                                                             |
+| **10:30**        | OpenWrt upstream, regulatory simplification, 11d rules                                                                              |
+| **11:00**        | **break**                                                                                                                           |
+| **11:30**        | datapath - RSS, stats,                                                                                                              |
+| **12:00**        | 802.3 format, per-sta queues                                                                                                        |
+| **12:30**        | latency reduction                                                                                                                   |
+| **13:00**        | **(keynote)**                                                                                                                       |
+| **13:30-15:00**  | **lunch**                                                                                                                           |
+| **15:00**        | tri-band P2P, beacon report scan (Johannes)                                                                                         |
+| **15:30**        | MU-MIMO sniffer, “roaming” offload with auth/assoc - candidate reporting (Johannes/Ilan)
+FILS secured association (Jouni/Johannes)  |
+| **16:00**        |                                                                                                                                     |
+| **16:30**        | admin - Johannes's EL, next workshop, ...                                                                                           |
+
 
 
 
