@@ -5,24 +5,42 @@ The workshop is going to take place on the second day of netdev 1.1, February 11
 
 Suggested Topics
 
+  * Android wifi topics (Dmitry, ~45mins)
+  * NaN APIs
+  * FTM APIs
+  * firmware debugging with triggers in iwlwifi (Emmanuel)
+  * 802.3 frame format support in mac80211 (Kalle)
+  * per-station netdev queues
+  * latency under load reduction - time estimation vs. stations vs. queues
   * RSS on wireless, in particular mac80211 (Johannes)
     * RX statistics (wild idea: bpf? though that assumes a single userspace controller?)
     * RX optimisation/fastpath?
-  * Android wifi topics (Dmitry, ~45mins)
   * OpenWrt code out of upstream (http://git.openwrt.org/?p=openwrt.git , target/linux/* and package/kernel/*)
   * regulatory - simplification? (Johannes)
   * "roaming" offload with auth/assoc - candidate reporting (Johannes/Ilan)
   * FILS secured association (Jouni/Johannes)
   * beacon report scan (Johannes)
-  * 802.3 frame format support in mac80211 (Kalle)
-  * Johannes's EL
-  * per-station netdev queues
-  * FTM APIs
-  * NaN APIs
   * MU-MIMO sniffer
+  * Johannes's EL
   * next workshop with LPC/KS in November (Santa Fe)?
-  * firmware debugging with triggers in iwlwifi (Emmanuel)
-  * latency under load reduction - time estimation vs. stations vs. queues
+
+Agenda
+| **9:00**         | Android (Dmitry)                      |
+| **9:30**         | Android (Dmitry & filtering/Lorenzo)  |
+| **10:00**        |                                       |
+| **10:30**        |                                       |
+| **11:00**        | **break**                             |
+| **11:30**        |                                       |
+| **12:00**        |                                       |
+| **12:30**        |                                       |
+| **13:00**        | **(keynote)**                         |
+| **13:30-15:00**  | **lunch**                             |
+| **15:00**        |                                       |
+| **15:30**        |                                       |
+| **16:00**        |                                       |
+| **16:30**        |                                       |
+
+
 
 Attendees (tentative, just to estimate the number, add yourself)
 
