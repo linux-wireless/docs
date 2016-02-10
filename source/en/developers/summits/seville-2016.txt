@@ -22,6 +22,7 @@ Suggested Topics
   * MU-MIMO sniffer
   * next workshop with LPC/KS in November (Santa Fe)?
   * firmware debugging with triggers in iwlwifi (Emmanuel)
+  * latency under load reduction - time estimation vs. stations vs. queues
 
 Attendees (tentative, just to estimate the number, add yourself)
 
