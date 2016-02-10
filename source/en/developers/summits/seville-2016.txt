@@ -18,7 +18,7 @@ Suggested Topics
   * Johannes's EL
   * per-station netdev queues
   * FTM APIs
-  * NaN APIs?
+  * NaN APIs
   * MU-MIMO sniffer
   * next workshop with LPC/KS in November (Santa Fe)?
   * firmware debugging with triggers in iwlwifi (Emmanuel)
