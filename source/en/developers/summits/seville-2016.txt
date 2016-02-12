@@ -35,9 +35,8 @@ Agenda
 | **12:30**        | latency reduction                                                                                                                   |
 | **13:00**        | **(keynote)**                                                                                                                       |
 | **13:30-15:00**  | **lunch**                                                                                                                           |
-| **15:00**        | tri-band P2P, beacon report scan (Johannes)                                                                                         |
-| **15:30**        | MU-MIMO sniffer, “roaming” offload with auth/assoc - candidate reporting (Johannes/Ilan)
-FILS secured association (Jouni/Johannes)  |
+| **15:00**        | tri-band P2P, beacon report scan (Johannes)|
+| **15:30**        | MU-MIMO sniffer, “roaming” offload with auth/assoc - candidate reporting (Johannes/Ilan); FILS secured association (Jouni/Johannes)  |
 | **16:00**        |                                                                                                                                     |
 | **16:30**        | admin - Johannes's EL, next workshop, ...                                                                                           |
 
