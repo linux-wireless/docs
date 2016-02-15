@@ -61,7 +61,7 @@ See also:
 | [[en/users/Drivers/rtl8187|rtl8180]]                  | Realtek                | yes             | no        | no          | no          | ?              | B/G            | PCI                         |
 | [[en/users/Drivers/rtl8187|rtl8187]]                  | Realtek                | yes             | no        | yes         | no          | yes            | B/G            | USB                         |
 | [[en/users/Drivers/rtl819x|rtl8188ee]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
-| [[en/users/Drivers/rtl819x|rtl8192ce]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|rtl8192ce]]                | Realtek                | yes             | ?         | ?           | ?           | yes              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8192cu]]                | Realtek                | yes             | yes         | ?           | ?           | yes            | B/G/N          | USB                         |
 | [[en/users/Drivers/rtl819x|rtl8192de]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8192se]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
