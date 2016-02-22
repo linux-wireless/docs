@@ -56,18 +56,19 @@ Please note: at least BCM4313 is not fully supported.  Some models appears to wo
 === SDIO devices ===
 ^ Name      ^ Device ID  ^ Notes               ^
 | BCM4329   | 0x4329     |                     |
-| BCM4330   | 0x4330     |                     |
-| BCM4334   | 0x4334     |                     |
-|BCM43340 |0xa94c |Supported in 4.0+ |
-|BCM43341 |0xa94d |Supported in 4.0+ |
-| BCM43241  | 0x4324     |                     |
-| BCM4335   | 0x4335     |                     |
+| BCM4330   | 0x4330     | Supported in 3.3+   |
+| BCM4334   | 0x4334     | Supported in 3.6+   |
+| BCM43340  | 0xa94c     | Supported in 4.0+   |
+| BCM43341  | 0xa94d     | Supported in 4.0+   |
+| BCM43241  | 0x4324     | Supported in 3.7+   |
+| BCM4335   | 0x4335     | Supported in 3.10+  |
 | BCM4339   | 0x4335     | Supported in 3.13+  |
 | BCM43362  | 0xA962     | Supported in 3.14+  |
 | BCM43430  | 0xa9a6     | Supported in 4.1+   |
 | BCM43455  | 0x4345     | Supported in 4.1+   |
 | BCM4354   | 0x4354     | Supported in 3.15+  |
-| BCM43143  | 0xA887     |                     |
+| BCM43143  | 0xA887     | Supported in 3.10+  |
+
 
 
 
