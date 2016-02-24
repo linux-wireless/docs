@@ -35,6 +35,7 @@ Broadcom produces many SoCs that can combine processor, ethernet, WiFi, USB and 
 ^ Chip ^^^ ARM ^^ PCIe 2\\ rev ^ USB rev ^^ CC\\ rev ^
 ^ Name ^ id ^ pkg ^ ^ rev ^ ::: ^ 2.0 ^ 3.0 ^ ::: ^
 |BCM4708A0 |53010 |0x02 |Cortex-A9 |1 |1 |1 |1 |42 |
+|BCM47081A0 |::: |::: |::: |::: |::: |::: |::: |::: |
 |BCM4709A0 |53010 |0x00 |Cortex-A9 |1 |1 |1 |1 |42 |
 |BCM4709C0 |53030| 0x00 |Cortex-A9 |1 |7 |7 |7 |42 |
 |BCM47189B0 |53573 |0x01 |Cortex-A7 |0 |5 |5 |─ |54 |
