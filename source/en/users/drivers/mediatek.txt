@@ -1,3 +1,7 @@
-**Mediatek**
+===== Mediatek =====
 
   * mt76 is a PCIe driver for MT76x2e, MT7603e and MT7628 devices (4.6+)
+
+==== Firmware ====
+
+The firmware for those devices can be downloaded from: [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] 
