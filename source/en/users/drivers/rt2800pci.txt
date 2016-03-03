@@ -19,9 +19,8 @@ The Ralink driver for RT5592 can be downloaded from: [[http://www.asus.com/Netwo
    
    * **MT7630E** 802.11b/g/n 1T1R 2.4 GHz Combo Card (**WIP** Jakub Kicinski <kubakici@wp.pl> : http://github.com/kuba-moo/mt7630e)
 
-
    * [[https://wikidevi.com/wiki/MediaTek|Any new MediaTek chip]]. MediaTek drivers can be downloaded from: [[http://www.mediatek.com/en/downloads1/downloads/|http://www.mediatek.com/en/downloads1/downloads/]] 
-   * 
+ 
 ===== Features =====
         * //TODO// 
 
