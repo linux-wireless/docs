@@ -1,7 +1,7 @@
 ===== Mediatek =====
 
-  * mt76 is a PCIe driver for MT76x2e, MT7603e and MT7628 devices (4.6+)
-
+  * **mt76** driver handle MT76x2e, MT7603e and MT7628 PCIe devices (**4.6+**)
+  * **mt7601u** driver handle MT7601U 802.11b/g/n 1T1R 2.4 GHz USB Single Chip devices (**4.2+**)
 ==== Firmware ====
 
 The firmware for those devices can be downloaded from: [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git|https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git]] 
