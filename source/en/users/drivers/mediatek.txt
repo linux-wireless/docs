@@ -4,4 +4,4 @@
 
 ==== Firmware ====
 
-The firmware for those devices can be downloaded from: [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] 
+The firmware for those devices can be downloaded from: [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git|https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git]] 
