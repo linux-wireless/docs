@@ -159,7 +159,7 @@ Some common sources of platform noise might be:
 
   * The PCIe bus, especially when switching in/out of power saving modes.
   * USB3 and graphics (in certain scenarios).
-  * Sometimes, even the fact that several ingredients’ Ground lines are connected can cause noise. 
+  * Sometimes, even the fact that several ingredients’ ground lines are connected can cause noise. 
  
 This kind of interference might happen on 2.4GHz band, it is much less likely to happen on 5.2GHz band.
 Also note that using 40MHz (and not 20MHz) channel bandwidth will increase the probability to suffer from platform noise (since more frequencies might impact the wifi performance).
