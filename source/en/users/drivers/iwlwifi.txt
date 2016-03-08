@@ -118,7 +118,7 @@ For general questions about WiFi on Linux using Intel's devices, you can send an
 For bug reports and debugging , please see the [[en:users:drivers:iwlwifi:Debugging|page]] dedicated to that.
 
 ===== 7260 and 7265 support =====
-7260 and 7265 will not be supported in the newest firmware versions: the last firmware that was released for these devices is -17.ucode. Bug fixes will be ported to -17.ucode. Note that 7265D can run later firmware versions. In order to determine if your 7265 device is a 'D' version, you can check the dmesg output:
+7260 and 7265 will not be supported by the newest firmware versions: the last firmware that was released for these devices is -17.ucode. Bug fixes will be ported to -17.ucode. Note that 7265D can run later firmware versions. In order to determine if your 7265 device is a 'D' version, you can check the dmesg output:
 
 <code>
 Detected Intel(R) Dual Band Wireless AC 7265, REV=0x210
