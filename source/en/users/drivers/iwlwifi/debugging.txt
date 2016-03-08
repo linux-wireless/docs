@@ -54,7 +54,7 @@ This location can vary between distributions.
 <code>
 timestamp=$(date +%F_%H-%M-%S)
 filename=/var/log/iwl-fw-error_${timestamp}.dump
-cat /sys/${DEVPATH}/data > /var/log/${filename}
+cat /sys/${DEVPATH}/data > ${filename}
 echo 1 > /sys/${DEVPATH}/data
 </code>
 
