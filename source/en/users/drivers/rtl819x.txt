@@ -31,7 +31,7 @@
 
 
 
-They are included in the **staging** tree at [[https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/|https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/]] and they are **NOT supported** by linux-wireless developers or mailing list. Instead ask for support in [[http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel|http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel]] . Maintainers are Greg Kroah-Hartman <[[mailto:greg@kroah.com|greg@kroah.com]]> and Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]>. 
+They are included in the **staging** tree at [[https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/|https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/]] and they are **NOT supported** by linux-wireless developers or mailing list. Instead ask for support in [[http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel|http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel]] . Maintainers are Greg Kroah-Hartman <[[mailto:gregkh@linuxfoundation.org|gregkh@linuxfoundation.org]]> and Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]>. 
 
 
 ===== Hardware Donations =====
