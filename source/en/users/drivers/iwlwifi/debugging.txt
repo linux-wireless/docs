@@ -52,10 +52,12 @@ This location can vary between distributions.
 
 /sbin/iwlfwdump.sh can simply be:
 <code>
+#!/bin/bash
+
 timestamp=$(date +%F_%H-%M-%S)
 filename=/var/log/iwl-fw-error_${timestamp}.dump
 cat /sys/${DEVPATH}/data > ${filename}
-echo 1 > /sys/${DEVPATH}/data
+echo 1 > /sys/${DEVPATH}/
 </code>
 
 This way, each time a dump is created it will automatically land on your file system.  Remember to make the /sbin/iwlfwdump.sh file executable (i.e. ''chmod a+x /sbin/iwlfwdump.sh''), so that the udev rule can execute it, otherwise it won't work.
