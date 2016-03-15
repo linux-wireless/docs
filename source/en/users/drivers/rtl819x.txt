@@ -38,9 +38,9 @@ They are included in the **staging** tree at [[https://git.kernel.org/cgit/linux
 If you get an unsupported device, you can donate it to the driver maintainer. For more info ask Larry Finger <[[mailto:Larry.Finger@lwfinger.net|Larry.Finger@lwfinger.net]]>. 
 
 
-===== Firmware =====
+ ===== Firmware =====
 
-The firmware for those devices can be downloaded from: [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] 
+The firmware for those devices can be downloaded from: [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git]] 
 
 ===== Available devices =====
 See [[en/users/drivers/rtl819x/devices|this page]] for a list of devices that based on the rtl819x chip.
