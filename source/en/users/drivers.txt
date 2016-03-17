@@ -39,8 +39,8 @@ See also:
 | [[en/users/Drivers/libertas|libertas]]                | Marvell                | no              | no        | yes         | yes (4)     | no             | B/G            | USB / PCMCIA / SDIO / GSPI  |
 | [[en/users/Drivers/libertastf|libertas_tf]]           | Marvell                | yes             | yes       | no          | yes         | ?              | B/G            | USB                         |
 | [[en/users/Drivers/mac80211_hwsim|mac80211_hwsim]]    | Jouni                  | yes             | yes       | yes         | no          | yes            | A/B/G/N        | NONE!                       |
-| [[en/users/Drivers/mediatek|mt76]]                      | Mediatek                | yes             | ?       | ?           | ?           |             | A/B/G/N/AC        | PCI/SoC                         |
-| [[en/users/Drivers/mediatek|mt7601u]]                      | Mediatek                | yes             | ?       | ?           | ?           |             | B/G/N/        | USB                         |
+| [[en/users/Drivers/mediatek|mt76]]                      | Mediatek                | yes             | ?       | ?           | ?           | ?            | A/B/G/N/AC        | PCI/SoC                         |
+| [[en/users/Drivers/mediatek|mt7601u]]                      | Mediatek                | yes             | ?       | ?           | ?           | ?            | B/G/N/        | USB                         |
 | [[en/users/Drivers/mwifiex|mwifiex]]                  | Marvell                | yes             | yes       | yes         | ?           | ?              | A/B/G/N        | SDIO / PCI-E / USB          |
 | [[en/users/Drivers/mwl8k|mwl8k]]                      | Marvell                | yes             | yes       | ?           | ?           | yes            | A/B/G/N        | PCI                         |
 | [[en/users/Drivers/orinoco|orinoco]]                  | Agere/Intersil/Symbol  | yes             | no        | yes         | no          | yes            | B              | PCI / PCMCIA / USB          |
