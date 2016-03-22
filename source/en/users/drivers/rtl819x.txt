@@ -16,7 +16,7 @@
   * **rtl8192su** is a USB driver for RTL8188SU/RTL8191SU/RTL8192SU devices. (**WIP**: [[http://github.com/chunkeey/rtl8192su|http://github.com/chunkeey/rtl8192su]]) 
   * **rtl8821ae** is a PCI-E driver for RTL8821AE devices (**3.16+**). 
   * **rtl8192ee** is a PCI-E driver for RTL8192EE devices (**3.16+**). 
-  * **rtl8xxxu** is a multi-driver for USB devices(RTL8723AU/RTL8723BU/RTL8192EU) (**4.3+**), for other chips **WIP**: [[https://git.kernel.org/cgit/linux/kernel/git/jes/linux.git/|git-tree]](rtl8xxxu-devel)
+  * **rtl8xxxu** is a multi-driver for USB devices(RTL8723AU/RTL8723BU/RTL8191EU/RTL8192EU) (**4.3+**), for other chips **WIP**: [[https://git.kernel.org/cgit/linux/kernel/git/jes/linux.git/|git-tree]](rtl8xxxu-devel)
 
 
 
