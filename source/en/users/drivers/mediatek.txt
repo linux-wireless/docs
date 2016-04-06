@@ -1,6 +1,6 @@
 ===== Mediatek =====
 
-  * **mt76** driver handles **MT7662E**/**MT7612E** 802.11a/b/g/n/ac 2T2R 2.4/5 GHz PCI Express Single Chip, **MT7603E** 802.11b/g/n 2T2R 2.4GHz PCI Express Single Chip and **MT7628** 802.11b/g/n 2T2R 2.4GHz SoC devices (**4.7+**)
+  * **mt76** driver handles **MT7662E**/**MT7612E** 802.11a/b/g/n/ac 2T2R 2.4/5 GHz PCI Express Single Chip, **MT7603E** 802.11b/g/n 2T2R 2.4GHz PCI Express Single Chip and **MT7628** 802.11b/g/n 2T2R 2.4GHz SoC devices (**WIP**: https://github.com/openwrt/mt76)
   
   * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4 GHz USB Single Chip devices (**4.2+**)
 
