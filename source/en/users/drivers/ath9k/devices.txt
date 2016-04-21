@@ -27,6 +27,7 @@ Please feel free to add devices to this list here though.
 |D-Link|DWA-552|PCI|5416|0x0023|0x1186|0x3a6d|
 |D-Link|DWA-556|PCI Express|5418|0x0024|0x1186|0x3a70|
 |D-Link|DWA-645|Cardbus|5416|0x0023|0x07d1|0x3a09|
+|Doodle Labs|NM-DB-3|MiniPCIe|9590|0x1C14|0x168c|0x0245|
 |Doodle Labs|NL-2450-2F|MiniPCIe|9580/9590|0x1C14|0x168c|0x0245|
 |Doodle Labs|NL-5500-2F|MiniPCIe|9580/9590|0x1C14|0x168c|0x0550|
 |Doodle Labs|NL-2450-1F|MiniPCIe|9580/9590|0x1C14|0x168c|0x0246|
