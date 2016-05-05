@@ -15,7 +15,7 @@ Terms we use throughout the wiki with which you should become familiar.
 
 Kernel side of configuration management for wireless devices. [[en/developers/Documentation/Glossary|nl80211]] is the User-space side of configuration management for wireless devices. 
 
-Works together with [[en/developers/Documentation/Glossary|FullMAC]]-drivers and also with [[en/developers/Documentation/Glossary|mac80211]]-based drivers. 
+Works together with [[en/developers/Documentation/Glossary|FullMAC]]-drivers and also with [[en/developers/Documentation/Glossary#mac80211|mac80211]]-based drivers. 
 
 
 ===== CLI =====
@@ -25,7 +25,7 @@ Works together with [[en/developers/Documentation/Glossary|FullMAC]]-drivers and
 
 ===== FullMAC =====
 
-//FullMAC// is a term used to describe a type of wireless card where the [[en/developers/Documentation/Glossary|MLME]] is managed in hardware. You would **not** use [[en/developers/Documentation/Glossary|mac80211]] to write a //FullMAC// wireless driver. 
+//FullMAC// is a term used to describe a type of wireless card where the [[en/developers/Documentation/Glossary|MLME]] is managed in hardware. You would **not** use [[en/developers/Documentation/Glossary#mac80211|mac80211]] to write a //FullMAC// wireless driver. 
 
 
 ===== git-describe =====
@@ -63,7 +63,7 @@ Whereas the vendor specific IE looks like this:
 
 ===== iw =====
 
-[[en/users/Documentation/iw|iw]] is a new [[en/developers/Documentation/nl80211|nl80211]] based [[en/developers/Documentation/Glossary|CLI]] configuration utility for wireless devices. 
+[[en/users/Documentation/iw|iw]] is a new [[en/developers/Documentation/nl80211|nl80211]] based [[en/developers/Documentation/Glossary#CLI|CLI]] configuration utility for wireless devices. 
 
 
 ===== nl80211 =====
@@ -77,7 +77,7 @@ User-space side of configuration management for wireless devices. It is a Netlin
 
 A driver API for SoftMAC wireless cards.  See [[en/developers/Documentation/mac80211|Developer Docs for mac80211]]. 
 
-See also [[en/developers/Documentation/Glossary|SoftMAC]]. 
+See also [[en/developers/Documentation/Glossary#SoftMac|SoftMAC]]. 
 
 
 ===== MLME =====
@@ -89,7 +89,7 @@ See also [[en/developers/Documentation/Glossary|SoftMAC]].
   * Disassociate 
   * Reassociate 
   * Beacon 
-  * Probe [[en/developers/Documentation/Glossary|mac80211]]'s MLME management implementation is currently handled by <code>net/mac80211/ieee80211_sta.c</code>. This handles only the STA MLME 
+  * Probe [[en/developers/Documentation/Glossary#mac80211|mac80211]]'s MLME management implementation is currently handled by <code>net/mac80211/ieee80211_sta.c</code>. This handles only the STA MLME 
 
 
 ===== PHY =====
