@@ -104,7 +104,7 @@ Station Management Entity, often prepended with //AP// (Access Point)
 
 ===== SoftMAC =====
 
-//SoftMAC// is a term used to describe a type of WNIC where the [[en/developers/Documentation/Glossary|MLME]] is expected to be managed in software. [[en/developers/Documentation/Glossary|mac80211]] is a driver API for SoftMAC WNIC, for example. 
+//SoftMAC// is a term used to describe a type of WNIC where the [[en/developers/Documentation/Glossary|MLME]] is expected to be managed in software. [[en/developers/Documentation/Glossary#mac80211|mac80211]] is a driver API for SoftMAC WNIC, for example. 
 
 
 ===== SSID =====
