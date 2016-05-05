@@ -15,7 +15,7 @@ Terms we use throughout the wiki with which you should become familiar.
 
 Kernel side of configuration management for wireless devices. [[en/developers/Documentation/Glossary|nl80211]] is the User-space side of configuration management for wireless devices. 
 
-Works together with [[en/developers/Documentation/Glossary|FullMAC]]-drivers and also with [[en/developers/Documentation/Glossary#mac80211|mac80211]]-based drivers. 
+Works together with [[en/developers/Documentation/Glossary#FullMAC|FullMAC]]-drivers and also with [[en/developers/Documentation/Glossary#mac80211|mac80211]]-based drivers. 
 
 
 ===== CLI =====
