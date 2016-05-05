@@ -25,7 +25,7 @@ Works together with [[en/developers/Documentation/Glossary#FullMAC|FullMAC]]-dri
 
 ===== FullMAC =====
 
-//FullMAC// is a term used to describe a type of wireless card where the [[en/developers/Documentation/Glossary|MLME]] is managed in hardware. You would **not** use [[en/developers/Documentation/Glossary#mac80211|mac80211]] to write a //FullMAC// wireless driver. 
+//FullMAC// is a term used to describe a type of wireless card where the [[en/developers/Documentation/Glossary#MLME|MLME]] is managed in hardware. You would **not** use [[en/developers/Documentation/Glossary#mac80211|mac80211]] to write a //FullMAC// wireless driver. 
 
 
 ===== git-describe =====
