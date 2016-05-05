@@ -123,14 +123,14 @@ See also [[wp>Station_(networking)|Station_(networking)]] or [[wp>Wireless_acces
 
 ===== WE =====
 
-//WE// stands for [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - the old driver API and user <--> kernel communication transport. Obsoleted by [[en/developers/Documentation/Glossary|#cfg80211]] 
+//WE// stands for [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - the old driver API and user <--> kernel communication transport. Obsoleted by [[en/developers/Documentation/Glossary#cfg80211|cfg80211]] 
 
 
 ===== WEXT =====
 
-//WEXT// stands for [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - the old driver API and user <--> kernel communication transport. Obsoleted by [[en/developers/Documentation/Glossary|#cfg80211]] 
+//WEXT// stands for [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - the old driver API and user <--> kernel communication transport. Obsoleted by [[en/developers/Documentation/Glossary#cfg80211|cfg80211]] 
 
 
 ===== WIPHY =====
 
-Wireless [[en/developers/Documentation/Glossary|PHY]]. 
+Wireless [[en/developers/Documentation/Glossary#phy|PHY]]. 
