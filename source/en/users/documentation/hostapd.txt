@@ -183,6 +183,8 @@ Example settings:
 ieee80211n=1
 ht_capab=[HT40+][SHORT-GI-40][DSSS_CCK-40]</code>
 
+- HT DSSS/CCK mode in 40MHz: Will/Can use DSSS/CCK in 40 MHz
+
 ==== Authentication and Encryption ====
 
 There is a lot to the authentication and encryption options in hostapd.  This section will cover the basics as far as wep/wpa/wpa2 goes, as well as some of the other commonly used options. 
