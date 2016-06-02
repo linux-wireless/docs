@@ -146,17 +146,17 @@ Copy this file where brcmfmac expects the nvram, for example:
 
 For driver issues and/or bug reports, please use: 
 
-[[mailto:brcm80211-dev-list@broadcom.com|brcm80211-dev-list@broadcom.com]] 
+[[mailto:brcm80211-dev-list.pdl@broadcom.com|brcm80211-dev-list.pdl@broadcom.com]] 
 
 For any other questions feel free to contact the developers listed below: 
 
-Arend van Spriel        [[mailto:arend@broadcom.com|arend@broadcom.com]] 
+Arend van Spriel        [[mailto:arend.vanspriel@broadcom.com|arend.vanspriel@broadcom.com]] 
 
-Franky Lin              [[mailto:frankyl@broadcom.com|frankyl@broadcom.com]] 
+Franky Lin              [[mailto:franky.lin@broadcom.com|franky.lin@broadcom.com]] 
 
-Hante Meuleman          [[mailto:meuleman@broadcom.com|meuleman@broadcom.com]] 
+Hante Meuleman          [[mailto:hante.meuleman@broadcom.com|hante.meuleman@broadcom.com]] 
 
-Brett Rudley            [[mailto:brudley@broadcom.com|brudley@broadcom.com]] 
+Brett Rudley            [[mailto:brett.rudley@broadcom.com|brett.rudley@broadcom.com]] 
 
 
 ===== Developer information =====
