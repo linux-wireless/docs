@@ -132,7 +132,7 @@ Alternatively, when not available the Android version can be used as well:
 
 
 === NVRAM from EFI ===
-Some new devices are storing the nvram which is needed in addition to the firmware by the driver in an EFI variable and the Windows driver can access it. Currently brcmfmac does not support this automatically.
+Some new non-PCIe devices are storing the nvram which is needed in addition to the firmware by the driver in an EFI variable and the Windows driver can access it. Currently brcmfmac does not support this automatically.
 First mount the efi vars into sysfs:
   mount -t efivarfs none /sys/firmware/efi/efivars
 
