@@ -46,3 +46,15 @@ The first version. Firmware images are in separate files: firmware.bin and otp.b
 ==== Firmware API 2 ====
 
 Embedding both firmware and otp images into same file firmware-2.bin. Firmware meta data provided through FW IE. Added in commit 1a222435a dated Sep 27 2013, for Linux 3.13. 
+
+==== Firmware API 3 ====
+
+Adding support for 10.2 firmware for QCA988X and ATH10K_FW_FEATURE_WMI_10_2 feature for 10.2 WMI mappings. Added in commit 24c88f7807fb7 dated Jul 27 2014.
+
+==== Firmware API 4 ====
+
+Adding support for ATH10K_FW_IE_WMI_OP_VERSION. Added in commit 4a16fbec1cd0a dated December 17th 2014.
+
+==== Firmware API 5 ====
+
+Adding support for ATH10K_FW_IE_HTT_OP_VERSION, needed to support 10.2.4.48-2 on QCA988X. Added in commit 53513c302f35e March 25 2015.
