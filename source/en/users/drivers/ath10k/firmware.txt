@@ -40,16 +40,16 @@ Because firmware changes between versions we have introduced firmware API concep
 
 ==== Firmware API 1 ====
 
-The first version. Firmware images are in separate files: firmware.bin and otp.bin. There's no FW IE support. Deprecated since March 2014. 
+The first version. Firmware images are in separate files: firmware.bin and otp.bin. There's no FW IE support. Deprecated since March 2014 and removed on March 2016.
 
 
 ==== Firmware API 2 ====
 
-Embedding both firmware and otp images into same file firmware-2.bin. Firmware meta data provided through FW IE. Added in commit 1a222435a dated Sep 27 2013, for Linux 3.13. 
+Embedding both firmware and otp images into same file firmware-2.bin. Firmware meta data provided through FW IE. Added in commit 1a222435a dated Sep 27 2013, for Linux 3.13. Deprecated, no new firmware releases use this anymore.
 
 ==== Firmware API 3 ====
 
-Adding support for 10.2 firmware for QCA988X and ATH10K_FW_FEATURE_WMI_10_2 feature for 10.2 WMI mappings. Added in commit 24c88f7807fb7 dated Jul 27 2014.
+Adding support for 10.2 firmware for QCA988X and ATH10K_FW_FEATURE_WMI_10_2 feature for 10.2 WMI mappings. Added in commit 24c88f7807fb7 dated Jul 27 2014. Deprecated, no new firmware releases use this anymore.
 
 ==== Firmware API 4 ====
 
