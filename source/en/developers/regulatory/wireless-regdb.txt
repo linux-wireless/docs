@@ -58,7 +58,7 @@ If your distribution requires you to //build// your own regulatory.bin you can a
 
 ===== Sending updates to the regulatory database =====
 
-If you find any errors please send them to the [[http://lists.infradead.org/mailman/listinfo/wireless-regdb|wirleess-regdb]](subscribers-only) mailing list and the [[en/developers/MailingLists|linux-wireless mailing list]], either as patches to the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|db.txt]] file from the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=summary|wireless-regdb git tree]], or just tell us what is wrong in plain English. 
+If you find any errors please send them to the [[http://lists.infradead.org/mailman/listinfo/wireless-regdb|wireless-regdb]](subscribers-only) mailing list and the [[en/developers/MailingLists|linux-wireless mailing list]], either as patches to the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|db.txt]] file from the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=summary|wireless-regdb git tree]], or just tell us what is wrong in plain English. 
 
 Patches sent to the wireless-regdb git tree should be addressed as follows: 
 
