@@ -4,6 +4,7 @@
   
   * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4 GHz USB Single Chip devices (**4.2+**)
 
+  * Try the 64-bit driver at https://bitbucket.org/sanrath/mediatek_mt7610u_sta_driver_linux-64bit as it can compile on a 4.4 kernel (not tested though.)
 ==== Unsupported chips ====
 
    * **MT7630E** 802.11b/g/n 1T1R 2.4 GHz Combo Card (**WIP** Jakub Kicinski <kubakici@wp.pl> : http://github.com/kuba-moo/mt7630e)
