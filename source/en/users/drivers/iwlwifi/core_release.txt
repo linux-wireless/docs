@@ -63,6 +63,7 @@ Then, you can make the sources with vendor commands disabled:
 Now it is time to install the modules you built
   sudo make install
 
-Now you can reboot.hack password wifi.TM_ANAS
+Now you can reboot.
+
 ====== Support ======
 The support model for Core releases is the same as for the mainline kernel described in the [[en:users:drivers:iwlwifi#Support|support section]]. We will try to assist for any pure WLAN bug, but please take into account that platform integration isn't trivial: it can cause random issues. We also don't commit to work on all the platforms.
