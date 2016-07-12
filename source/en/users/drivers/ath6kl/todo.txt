@@ -15,7 +15,8 @@ High priority:
   *  * try to reduce the number of locks, semaphores and mutexes 
   *  * convert semaphores to mutexes 
   *  * the DMA bounce buffer should probably be protected by a lock so dueling threads don't corrupt it 
-  *   use ath6kl prefix everywhere 
+  *   use ath6kl prefix everywhere
+  *   Implement 802.11 ieee disconnect reasons 
   *   high coupling between main.c and init.c 
   *   confusion with header files 
   *    * function prototypes not in corresponding .h files 
