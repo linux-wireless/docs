@@ -6,7 +6,7 @@ Go back --> [[en/users/Drivers/ath10k|ath10k]]
 
 ===== ath10k FAQ =====
 
-====If ath10k support ad-hoc mode? ====
+====Q:If ath10k support ad-hoc mode? ====
 
 ==== Why I cannot start an AP in an 80 MHz channel / in 11ac mode? ====
 
