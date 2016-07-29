@@ -6,7 +6,8 @@ Go back --> [[en/users/Drivers/ath10k|ath10k]]
 
 ===== ath10k FAQ =====
 
-if ath10k support ad-hoc mode?
+====If ath10k support ad-hoc mode? ====
+
 ==== Why I cannot start an AP in an 80 MHz channel / in 11ac mode? ====
 
 If you get "nl80211: Failed to set channel" error from hostapd, most likely that means that regulatory database doesn't support 80 MHz channels (which were introduced in 11ac). You can check that with iw: 
