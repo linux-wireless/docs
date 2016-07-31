@@ -43,10 +43,11 @@ It is also available for older kernels through the [[en/users/Download/stable|st
 
 ===== Hacking on ath6kl =====
 
-ath6kl is now part of wireless kernel trees. All the development happens in github [[https://github.com/kvalo/ath|github's ath6kl project]]. To clone the tree: 
+ath6kl is now part of wireless kernel trees. All the development happens on [[https://git.kernel.org/cgit/linux/kernel/git/kvalo/ath.git/|Kalle Valo's ath.git tree]]. To clone the tree: 
 
+<code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git
+</code>
 
-<code>git clone git://github.com/kvalo/ath.git</code>
 The driver is located in drivers/net/wireless/ath/ath6kl. To compile the driver enable CONFIG_ATH6KL which is found under Device Drivers/Network device support/Wireless LAN/Atheros Wireless Cards/Atheros ath6kl support. Also enable CONFIG_ATH6KL_DEBUG to include all debugging code. 
 
 Send any patches to Kalle Valo < [[mailto:kvalo@qca.qualcomm.com|kvalo@qca.qualcomm.com]] >, but remember also to CC both < [[mailto:ath6kl@lists.infradead.org|ath6kl@lists.infradead.org]] > and < [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]]. To learn more about git you can refer to our [[en/developers/Documentation/git-guide|Git guide]]. It even documents how to send patches with //git format-patch//. 
