@@ -66,7 +66,7 @@ If you need to make changes to the patch add a version number inside the bracket
 
 **Always** increase the version number, no matter how small the change is. The maintainers focus on the latest version and ignore the older versions. Make sure that the maintainers don't need to guess what version he should take, that just creates problems.
 
-Then sending a new version of the patch **always** add a change log, either after the "--" line or in the cover letter.
+Then sending a new version of the patch **always** add a change log, either after the ''%%---%%'' line (three dashes) or in the cover letter.
 
 If a patch in a bigger patchset changes resubmit the whole patchset, even the patches which have not changes. The maintainers look at patchsets as a complete unit, usually they do not want to take patches individually from a patchset.
 
