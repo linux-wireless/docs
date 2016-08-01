@@ -84,9 +84,6 @@ If you are sending multiple patches which depend on each other you can use this 
 [PATCH 4/4] driver_name: optimize bar at init time</code>
 On the e-mail with subject, "[PATCH 0/4] driver_name: introduce foo and bar", you would give a brief overview of all the changes. No patch should be included in that e-mail, and as that e-mail will not end up in the change logs it should not contain anything that should be archived, only a rough overview over the purpose of the patch set, no in-depth description which should be in the changelog for each patch. 
 
-If you use git to send patches, please add **<code>--no-chain-reply-to</code>** to your invocation of git-send-email. 
-
-
 ===== Format of patches =====
 
 We prefer patches to be inline-text at the end of the body of the e-mail. You can use git-diff or the like to generate the patch. Additionally note that we prefer to apply patches with -p1. A header as follows is then acceptable: 
