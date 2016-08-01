@@ -92,7 +92,15 @@ All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux
 
 Always avoid contacting maintainers directly, they get way too much email already. Instead use the link above to find your patch and see the status. Only in last resort contact the maintainers, and do that by replying to your own patch and ask for status.
 
+Different patchwork states and their meanings:
 
+  * **New**: No action haven't taken yet, expect maybe assigned to a correct maintainer.
+  * **Under Review**: The maintainer is waiting review comments from others.
+  * **Accepted**: The maintainer has applied the patch to his/her tree.
+  * **Rejected**: The maintainer rejected the patch, reasons stated in an email.
+  * **Changes Requested**: Either the maintainer or a reviewer requested changes in the patch. The maintainer expects the patch author to submit a new version.
+  * **Deferred**: The maintainer has postponed the review of the patch for some reason, for example due to lack of time, patch being to controversial or something else. Patch author doesn't need to take any action, the maintainer will revisit the patch in a later time.
+  * **Awaiting Upstream**: The patch depends on an another patch from a different tree, for example a wireless driver needing
 ===== Format of patches =====
 
 We prefer patches to be inline-text at the end of the body of the e-mail. You can use git-diff or the like to generate the patch. Additionally note that we prefer to apply patches with -p1. A header as follows is then acceptable: 
