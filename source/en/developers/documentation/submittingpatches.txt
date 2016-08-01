@@ -166,5 +166,8 @@ index 0000000..adf4de4
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
-      * [[http://linux.yyz.us/patch-format.html|http://linux.yyz.us/patch-format.html]] 
-      * [[http://userweb.kernel.org/~akpm/stuff/tpp.txt|Andrew Morton's ''The perfect patch'']] 
+
+  * [[https://www.kernel.org/doc/Documentation/SubmittingPatches|SubmittingPatches]]
+  * https://kernelnewbies.org/FirstKernelPatch
+  * [[http://linux.yyz.us/patch-format.html|http://linux.yyz.us/patch-format.html]] 
+  * [[http://userweb.kernel.org/~akpm/stuff/tpp.txt|Andrew Morton's ''The perfect patch'']] 
