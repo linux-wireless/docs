@@ -84,6 +84,15 @@ If you are sending multiple patches which depend on each other you can use this 
 [PATCH 4/4] driver_name: optimize bar at init time</code>
 On the e-mail with subject, "[PATCH 0/4] driver_name: introduce foo and bar", you would give a brief overview of all the changes. No patch should be included in that e-mail, and as that e-mail will not end up in the change logs it should not contain anything that should be archived, only a rough overview over the purpose of the patch set, no in-depth description which should be in the changelog for each patch. 
 
+===== Checking state of patches =====
+
+All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux-wireless/list/|linux-wireless patchwork project]]. From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
+
+[[https://patchwork.kernel.org/project/linux-wireless/list/?state=*]]
+
+Always avoid contacting maintainers directly, they get way too much email already. Instead use the link above to find your patch and see the status. Only in last resort contact the maintainers, and do that by replying to your own patch and ask for status.
+
+
 ===== Format of patches =====
 
 We prefer patches to be inline-text at the end of the body of the e-mail. You can use git-diff or the like to generate the patch. Additionally note that we prefer to apply patches with -p1. A header as follows is then acceptable: 
