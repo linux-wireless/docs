@@ -101,6 +101,9 @@ Different patchwork states and their meanings:
   * **Changes Requested**: Either the maintainer or a reviewer requested changes in the patch. The maintainer expects the patch author to submit a new version.
   * **Deferred**: The maintainer has postponed the review of the patch for some reason, for example due to lack of time, patch being to controversial or something else. Patch author doesn't need to take any action, the maintainer will revisit the patch in a later time.
   * **Awaiting Upstream**: The patch depends on an another patch from a different tree, for example a wireless driver needing
+  * **RFC**: The patch is sent as Request For Comments. The maintainer expects the patch author to submit a new version.
+  * **Superseded**: There's a new version of the patch available, the maintainer has skipped this version.
+  * **Not Applicable**: The patch is either not part of wireless subsystem or it will be applied via different trees (for example net-next or driver maintainer trees). The patch is considered as dropped from now on and needs to be resubmitted for the maintainer to reconsider it.
 ===== Format of patches =====
 
 We prefer patches to be inline-text at the end of the body of the e-mail. You can use git-diff or the like to generate the patch. Additionally note that we prefer to apply patches with -p1. A header as follows is then acceptable: 
