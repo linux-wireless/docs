@@ -98,7 +98,7 @@ index 9b4b4a2..4832e6a 100644
 
 In order to track who worked on a patch and released the source code under the appropriate licenses used, patch tags are used to track of provenance of patches. This also helps developers review who was in the line of a patch work, who submitted it, and who reviewed it. This information is available from the //git-log//. We currently use, //Signed-off-by//, //Acked-by//, //Cc//, //Reviewed-by// and //Tested-by//. 
 
-Please note that since you are submitting patches inline, after the //Signed-off-by:// lines, you **must** put //<code>---</code>//, that is three dashes. Example: 
+Please note that since you are submitting patches inline, after the //Signed-off-by:// lines, you **must** put ''%%---%%'', that is three dashes. Example: 
 
 
 <code>...
