@@ -2,4 +2,10 @@
 
 ===== maintainer list =====
 
-See the official maintainers file (in the current wireless-testing tree) at [[http://git.kernel.org/cgit/linux/kernel/git/linville/wireless-testing.git/tree/MAINTAINERS|http://git.kernel.org/cgit/linux/kernel/git/linville/wireless-testing.git/tree/MAINTAINERS]] 
+''cfg80211'' and ''mac80211'' maintainer is Johannes Berg.
+
+''wireless-drivers'' maintainer is Kalle Valo.
+
+[[https://git.kernel.org/cgit/linux/kernel/git/wireless/wireless-testing.git/|wireless-testing]] maintainer is Bob Copeland.
+
+See [[https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/MAINTAINERS|the official maintainers file]] for details.
