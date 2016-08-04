@@ -10,3 +10,4 @@ See also http://wiki.linuxplumbersconf.org/2016:wireless
 ==== Attendees (wishing to attend) ====
   * Jouni Malinen
   * Kalle Valo
+  * Avery Pennarun
