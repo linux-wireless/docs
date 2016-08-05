@@ -202,7 +202,7 @@ Note that the interface is automatically put into AP mode when using hostapd.
 
 ==== Modifying monitor interface flags ====
 
-You can customize the type of monitor interface you create. This can be very useful for debugging purposes on end user systems. For example suppose you want to help a user you can take advantage of the fact that a monitor interface in mac80211 uses radiotap to pass up to userspace additional data. Say we want to help a user fish out data without affecting the device's performance by setting it it to a full monitor interface an monitor interface with no additional monitor flags can be created as follows: 
+You can customize the type of monitor interface you create. This can be very useful for debugging purposes on end user systems. For example, suppose you want to help a user. You can take advantage of the fact that a monitor interface in mac80211 uses radiotap to pass up to userspace additional data. Say we want to help a user fish out data without affecting the device's performance by setting it to a full monitor interface. A monitor interface with no additional monitor flags can be created as follows: 
 
 
 <code>iw dev wlan0 interface add fish0 type monitor flags none</code>
