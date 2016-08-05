@@ -5,9 +5,13 @@ https://www.linuxplumbersconf.org/2016/wireless-workshop-accepted-into-the-2016-
 See also http://wiki.linuxplumbersconf.org/2016:wireless
 
 ==== Attendees (confirmed) ====
-  * Johannes Berg
+  * Dmitry Shmidt
 
-==== Attendees (wishing to attend) ====
+==== Attendees (LPC registration passes reserved) ====
+  * Johannes Berg
   * Jouni Malinen
   * Kalle Valo
   * Avery Pennarun
+
+==== Attendees (wishing to attend) ====
+  * 
