@@ -224,6 +224,7 @@ The following are flags you can specify:
           * control 
           * otherbss 
           * cook 
+          * active
 ===== Deleting interfaces with iw =====
 
 Use 
