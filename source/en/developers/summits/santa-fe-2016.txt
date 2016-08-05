@@ -13,6 +13,6 @@ See also http://wiki.linuxplumbersconf.org/2016:wireless
   * Kalle Valo
   * Avery Pennarun
 
-==== Attendees (wishing to attend) ====
+==== Attendees ====
 (please add yourself here - I'll make sure registration is available and move you up, then please move yourself up again when you're confident you'll make the trip)
   * 
