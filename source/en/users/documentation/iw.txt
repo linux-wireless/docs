@@ -166,8 +166,8 @@ iw dev wlan0 set bitrates mcs-5</code>
 You can set the txpower by using either the device interface name of the respective phy. 
 
 
-<code>iw dev <devname> set txpower <auto|fixed|limit> [<tx power in mBm>]
-iw phy <phyname> set txpower <auto|fixed|limit> [<tx power in mBm>]</code>
+<code>iw dev <devname> set txpower <auto|fixed|limit> [<tx power in dBm>]
+iw phy <phyname> set txpower <auto|fixed|limit> [<tx power in dBm>]</code>
 
 ===== Power save =====
 
