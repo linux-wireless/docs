@@ -6,6 +6,7 @@ See also http://wiki.linuxplumbersconf.org/2016:wireless
 
 ==== Attendees (confirmed) ====
   * Dmitry Shmidt
+  * Jes Sorensen
 
 ==== Attendees (LPC registration passes reserved) ====
   * Johannes Berg
