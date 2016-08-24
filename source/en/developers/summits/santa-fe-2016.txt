@@ -13,6 +13,7 @@ To attend, you need to be registered at LPC or invited to KS. Right now, registr
   * key derivation offloading for WPA-Enterprise (pass PMK through nl80211)
   * wpa_supplicant: driver wrapper scan list integration
   * NaN R2
+  * WFA eNDP?
 
 
 ==== Attendees (confirmed) ====
