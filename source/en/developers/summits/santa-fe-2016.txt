@@ -15,6 +15,7 @@ To attend, you need to be registered at LPC or invited to KS. Right now, registr
   * Patches and progress related to assisted roaming/steering
   * NaN R2
   * WFA eNDP?
+  * Wifi taxonomy
 
 
 ==== Attendees (confirmed) ====
