@@ -4,7 +4,7 @@ https://www.linuxplumbersconf.org/2016/wireless-workshop-accepted-into-the-2016-
 
 See also http://wiki.linuxplumbersconf.org/2016:wireless
 
-To attend, you need to be registered at LPC or invited to KS. Right now, registrations for LPC are closed, but we have some free/reduced rate/full rate reserved passes. Contract Johannes Berg to be listed for those.
+To attend, you need to be registered at LPC or invited to KS. Right now, registrations for LPC are closed, but we have some free/reduced rate/full rate reserved passes. Contact Johannes Berg to be listed for those.
 
 ==== Agenda items ====
   * WAVE/802.11p (state, development)?
@@ -12,6 +12,7 @@ To attend, you need to be registered at LPC or invited to KS. Right now, registr
   * WPA PSK offloading
   * key derivation offloading for WPA-Enterprise (pass PMK through nl80211)
   * wpa_supplicant: driver wrapper scan list integration
+  * Patches and progress related to assisted roaming/steering
   * NaN R2
   * WFA eNDP?
 
