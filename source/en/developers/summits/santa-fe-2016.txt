@@ -4,7 +4,7 @@ https://www.linuxplumbersconf.org/2016/wireless-workshop-accepted-into-the-2016-
 
 See also http://wiki.linuxplumbersconf.org/2016:wireless
 
-To attend, you need to be registered at LPC or invited to KS. Right now, registrations for LPC are closed, but we have some free/reduced rate/full rate reserved passes. Contact Johannes Berg to be listed for those.
+To attend, you need to be registered at LPC or invited to KS. Reserved passes are all assigned/used, unless more slots open up due to LPC/KS overlap.
 
 ==== Agenda items ====
   * WAVE/802.11p (state, development)?
@@ -21,8 +21,6 @@ To attend, you need to be registered at LPC or invited to KS. Right now, registr
 ==== Attendees (confirmed) ====
   * Dmitry Shmidt
   * Jes Sorensen
-
-==== Attendees (LPC registration passes reserved) ====
   * Johannes Berg
   * Jouni Malinen
   * Kalle Valo
@@ -34,8 +32,8 @@ To attend, you need to be registered at LPC or invited to KS. Right now, registr
   * Kirtika Ruchanandi
   * Luigi Semenzato
   * Steve deRosier
+  * Etan Cohen
 
 ==== Attendees ====
-(please add yourself here - I'll make sure registration is available and move you up)
-  * Etan Cohen
+(please add yourself here; LPC has sold out, but I'll try to see if we can still get some passes)
   * Lior David
