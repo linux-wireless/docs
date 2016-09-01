@@ -3,7 +3,7 @@
 
 ===== About iw =====
 
-iw is a new [[en/developers/Documentation/nl80211|nl80211]] based CLI configuration utility for wireless devices. It supports all new drivers that have been added to the kernel recently. The old tool iwconfing, which uses Wireless Extensions interface, is deprecated and it's strongly recommended to switch to iw and nl80211. 
+iw is a new [[en/developers/Documentation/nl80211|nl80211]] based CLI configuration utility for wireless devices. It supports all new drivers that have been added to the kernel recently. The old tool iwconfig, which uses Wireless Extensions interface, is deprecated and it's strongly recommended to switch to iw and nl80211. 
 
 Like rest of Linux kernel, iw is still under development. Features are added 'as we go'. The only documentation for iw is this page and output from 'iw help'. Please help expand this page. 
 
