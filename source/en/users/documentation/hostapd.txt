@@ -126,7 +126,7 @@ Wireless Mode: g+n
 Normal for an environment that has only up to date hardware and software</code>
 <code>Encryption: wep
 Wireless Mode: b
-This is the works case scenario, as wep is broken and can be trivially cracked.  Don't consider this as anything more than keeping casual free loaders out.</code>
+This is the worst-case scenario, as wep is broken and can be trivially cracked.  Don't consider this as anything more than keeping casual free loaders out.</code>
 Once you've found your baseline, it's time to edit hostapd.conf.  The configuration options will be broken into 3 sections: 
 
 
