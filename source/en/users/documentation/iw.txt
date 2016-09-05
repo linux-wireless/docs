@@ -163,12 +163,12 @@ iw dev wlan0 set bitrates mcs-5</code>
 
 ===== Setting TX power =====
 
-You can set the txpower by using either the device interface name of the respective phy. 
+You can set the txpower by using either the device interface name of the respective phy.
 
+<code>iw dev <devname> set txpower <auto|fixed|limit> [<tx power in mBm>]
+iw phy <phyname> set txpower <auto|fixed|limit> [<tx power in mBm>]</code>
 
-<code>iw dev <devname> set txpower <auto|fixed|limit> [<tx power in dBm>]
-iw phy <phyname> set txpower <auto|fixed|limit> [<tx power in dBm>]</code>
-
+(Note that the value this commands takes is in //milli//bel-milliwatts (mBm) instead of the commonly used //deci//bel-milliwatts (dBm). <power in mBm> = 100 * <power in dBm>)
 ===== Power save =====
 
 To enable [[en/developers/Documentation/ieee80211/power-savings|power save]] by default you can use: 
