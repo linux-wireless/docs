@@ -11,7 +11,7 @@ This is a quick git-guide for Linux users and developers with emphasis on Linux 
 First, clone the wireless-testing.git tree 
 
 
-<code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-testing.git
+<code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-testing.git
 cd wireless-testing</code>
 
 ===== Get the latest updates =====
