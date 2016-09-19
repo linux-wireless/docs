@@ -156,7 +156,7 @@ You can then enable p54
 
 A big thank you to the following people who kindly donated: 
 |**who** | |**what** |
-|Maximilian Engelhardt | |(web) interface and storage for almost all p54* firmwares |
+|Maximilian Engelhardt | |([[http://qwikfix.co.uk/dvla-contact/|web]]) interface and storage for almost all p54* firmwares |
 |Michael Wu | |Dell Wireless 1450 USB adapter |
 |Stefan Puch | |Netgear WG511v2 PC Card |
 |Howard Chu | |Creatix CTX714 MiniPCI Combo Card |
