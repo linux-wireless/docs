@@ -3,8 +3,7 @@
 
 ===== Git guide for Linux wireless users and developers =====
 
-This is a quick git-guide for Linux users and developers with emphasis on Linux wireless. The latest Linux wireless development takes place on John Linville's wireless-testing git tree. 
-
+This is a quick git-guide for Linux users and developers with emphasis on Linux wireless. The latest Linux wireless development happens in two trees: mac80211-next maintained by Johannes Berg, and wireless-drivers-next maintained by Kalle Valo.  Both trees are regularly pulled into wireless-testing for integration testing; wireless-testing may therefore also be used as a base for development along with the upstream trees.
 
 ===== Cloning latest wireless-testing =====
 
