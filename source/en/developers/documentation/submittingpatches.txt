@@ -30,6 +30,29 @@ Cc: Driver maintainers, Other Developers</code>
 
 Where [[en/developers/maintainers|Maintainers]] contains the list of maintainers for the piece of code you are patching. //Other Developers// in this case can be a list of developers who you think may like to review this patch or who changed the code you are working on recently. 
 
+
+===== Checking state of patches from patchwork =====
+
+All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux-wireless/list/|linux-wireless patchwork project]]. From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
+
+[[https://patchwork.kernel.org/project/linux-wireless/list/?state=*]]
+
+Always avoid contacting maintainers directly, they get way too much email already. Instead use the link above to find your patch and see the status. Only in last resort contact the maintainers, and do that by replying to your own patch and ask for status.
+
+Different patchwork states and their meanings:
+
+  * **New**: No action haven't taken yet, expect maybe assigned to a correct maintainer.
+  * **Under Review**: The maintainer is waiting review comments from others.
+  * **Accepted**: The maintainer has applied the patch to his/her tree.
+  * **Rejected**: The maintainer rejected the patch, reasons stated in an email.
+  * **Changes Requested**: Either the maintainer or a reviewer requested changes in the patch. The maintainer expects the patch author to submit a new version.
+  * **Deferred**: The maintainer has postponed the review of the patch for some reason, for example due to lack of time, patch being to controversial or something else. Patch author doesn't need to take any action, the maintainer will revisit the patch in a later time.
+  * **Awaiting Upstream**: The patch depends on an another patch from a different tree, for example a wireless driver needing
+  * **RFC**: The patch is sent as Request For Comments. The maintainer expects the patch author to submit a new version.
+  * **Superseded**: There's a new version of the patch available, the maintainer has skipped this version.
+  * **Not Applicable**: The patch is either not part of wireless subsystem or it will be applied via different trees (for example net-next or driver maintainer trees). The patch is considered as dropped from now on and needs to be resubmitted for the maintainer to reconsider it.
+
+
 ===== Subject name =====
 
 If what you are sending is a patch you can use a subject as follows: 
@@ -84,26 +107,7 @@ If you are sending multiple patches which depend on each other you can use this 
 [PATCH 4/4] driver_name: optimize bar at init time</code>
 On the e-mail with subject, "[PATCH 0/4] driver_name: introduce foo and bar", you would give a brief overview of all the changes. No patch should be included in that e-mail, and as that e-mail will not end up in the change logs it should not contain anything that should be archived, only a rough overview over the purpose of the patch set, no in-depth description which should be in the changelog for each patch. 
 
-===== Checking state of patches from patchwork =====
 
-All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux-wireless/list/|linux-wireless patchwork project]]. From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
-
-[[https://patchwork.kernel.org/project/linux-wireless/list/?state=*]]
-
-Always avoid contacting maintainers directly, they get way too much email already. Instead use the link above to find your patch and see the status. Only in last resort contact the maintainers, and do that by replying to your own patch and ask for status.
-
-Different patchwork states and their meanings:
-
-  * **New**: No action haven't taken yet, expect maybe assigned to a correct maintainer.
-  * **Under Review**: The maintainer is waiting review comments from others.
-  * **Accepted**: The maintainer has applied the patch to his/her tree.
-  * **Rejected**: The maintainer rejected the patch, reasons stated in an email.
-  * **Changes Requested**: Either the maintainer or a reviewer requested changes in the patch. The maintainer expects the patch author to submit a new version.
-  * **Deferred**: The maintainer has postponed the review of the patch for some reason, for example due to lack of time, patch being to controversial or something else. Patch author doesn't need to take any action, the maintainer will revisit the patch in a later time.
-  * **Awaiting Upstream**: The patch depends on an another patch from a different tree, for example a wireless driver needing
-  * **RFC**: The patch is sent as Request For Comments. The maintainer expects the patch author to submit a new version.
-  * **Superseded**: There's a new version of the patch available, the maintainer has skipped this version.
-  * **Not Applicable**: The patch is either not part of wireless subsystem or it will be applied via different trees (for example net-next or driver maintainer trees). The patch is considered as dropped from now on and needs to be resubmitted for the maintainer to reconsider it.
 ===== Format of patches =====
 
 We prefer patches to be inline-text at the end of the body of the e-mail. You can use git-diff or the like to generate the patch. Additionally note that we prefer to apply patches with -p1. A header as follows is then acceptable: 
