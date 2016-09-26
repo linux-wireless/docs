@@ -33,7 +33,7 @@ Where [[en/developers/maintainers|Maintainers]] contains the list of maintainers
 
 ===== Checking state of patches from patchwork =====
 
-All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux-wireless/list/|linux-wireless patchwork project]]. From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
+All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux-wireless/list/|linux-wireless patchwork project]] (only exception being ath10k which has its own [[https://patchwork.kernel.org/project/ath10k/list/?state=*|ath10k patchwork project]]). From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
 
 [[https://patchwork.kernel.org/project/linux-wireless/list/?state=*]]
 
@@ -51,7 +51,6 @@ Different patchwork states and their meanings:
   * **RFC**: The patch is sent as Request For Comments. The maintainer expects the patch author to submit a new version.
   * **Superseded**: There's a new version of the patch available, the maintainer has skipped this version.
   * **Not Applicable**: The patch is either not part of wireless subsystem or it will be applied via different trees (for example net-next or driver maintainer trees). The patch is considered as dropped from now on and needs to be resubmitted for the maintainer to reconsider it.
-
 
 ===== Subject name =====
 
