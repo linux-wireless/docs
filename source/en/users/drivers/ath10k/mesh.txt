@@ -112,7 +112,8 @@ key_mgmt=SAE
 psk=”123456789a”
 …</code>
 
-The wpa_supplicant with path "Use ieee80211w profile parameter" incorporated requires the ieee80211w to be set to non-zero value to have secured mesh operating properly.
+The wpa_supplicant with path "Use ieee80211w profile parameter" incorporated requires the ieee80211w to be set to non-zero value to have secured mesh operating properly if the PATCH "mac80211: Encrypt "Group addressed privacy" action frames" is not available.
+
 <code>…
 ieee80211w=1
 …</code>
