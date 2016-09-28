@@ -16,7 +16,7 @@ To attend, you need to be registered at LPC or invited to KS. Reserved passes ar
   * NaN R2
   * WFA eNDP?
   * Wifi taxonomy
-
+  * EAPOL races & solutions
 
 ==== Attendees (confirmed) ====
   * Dmitry Shmidt
