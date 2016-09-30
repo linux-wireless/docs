@@ -76,6 +76,13 @@ Other regulatory domains like JP (Japan), US (FCC master region) are currently n
 
 See [[en/users/Documentation/hostapd|hostapd wiki page]] and [[http://hostap.epitest.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=hostapd/hostapd.conf|hostapd.conf documentation]] for more information. 
 
+==== Mu-MIMO configuration ====
+
+To enable Mu-MIMO configuration:
+
+<code> vht_capab=[MAX-MPDU-11454][RXLDPC][SHORT-GI-80][TX-STBC-2BY1][RX-STBC-1][MAX-A-MPDU-LEN-EXP7][RX-ANTENNA-PATTERN][TX-ANTENNA-PATTERN][SU-BEAMFORMER][SU-BEAMFORMEE][MU-BEAMFORMER][MU-BEAMFORMEE][BF-ANTENNA-4][SOUNDING-DIMENSION-4] </code>
+
+The values for "BF-ANTENNA" and "SOUNDING-DIMENSION" refer to the number of radio chains. Here the value is used as 4 which means that the target has 4 radio chains.
 
 ==== mBSSID ====
 
