@@ -18,6 +18,7 @@ To attend, you need to be registered at LPC or invited to KS. Reserved passes ar
   * Wifi taxonomy
   * EAPOL races & solutions
   * 802.3 frame format with mac80211 - status?
+  * multicast-to-unicast
 
 ==== Attendees (confirmed) ====
   * Dmitry Shmidt
