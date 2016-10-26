@@ -11,6 +11,9 @@ To attend, you need to be registered at LPC or invited to KS. Reserved passes ar
   * FQ/Codel integration, testing & development
   * WPA PSK offloading
   * key derivation offloading for WPA-Enterprise (pass PMK through nl80211)
+    * consider this vs. FILS offloading
+  * FILS offloading
+    * API for higher-layer protocols (DHCP, ...)?
   * wpa_supplicant: driver wrapper scan list integration
   * Patches and progress related to assisted roaming/steering
   * NaN R2
