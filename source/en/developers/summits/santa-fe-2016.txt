@@ -23,6 +23,9 @@ To attend, you need to be registered at LPC or invited to KS. Reserved passes ar
   * 802.3 frame format with mac80211 - status?
   * multicast-to-unicast
   * skb acked bits
+  * pre-association GAS/ANQP and MAC address randomization
+  * IEEE 802.11ax (HE) extensions during standard development
+  * sched_scan extensions for connected state
   * wiki: plenty of spam, sometimes more than real edits - replace with some generated site from a git tree?
 
 ==== Attendees (confirmed) ====
