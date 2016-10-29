@@ -27,6 +27,7 @@ To attend, you need to be registered at LPC or invited to KS. Reserved passes ar
   * IEEE 802.11ax (HE) extensions during standard development
   * sched_scan extensions for connected state
   * wiki: plenty of spam, sometimes more than real edits - replace with some generated site from a git tree?
+  * Measurements/FTM API
 
 ==== Attendees (confirmed) ====
   * Dmitry Shmidt
