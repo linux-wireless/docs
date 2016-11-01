@@ -28,6 +28,7 @@ To attend, you need to be registered at LPC or invited to KS. Reserved passes ar
   * sched_scan extensions for connected state
   * wiki: plenty of spam, sometimes more than real edits - replace with some generated site from a git tree?
   * Measurements/FTM API
+  * mesh status
 
 ==== Attendees (confirmed) ====
   * Dmitry Shmidt
