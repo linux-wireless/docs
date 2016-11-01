@@ -29,6 +29,8 @@ To attend, you need to be registered at LPC or invited to KS. Reserved passes ar
   * wiki: plenty of spam, sometimes more than real edits - replace with some generated site from a git tree?
   * Measurements/FTM API
   * mesh status
+  * Status of linux-backports?
+  * tcp_bbr and its interaction with wireless retransmit / reordering logic
 
 ==== Attendees (confirmed) ====
   * Dmitry Shmidt
