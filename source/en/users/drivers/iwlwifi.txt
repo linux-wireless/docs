@@ -175,7 +175,7 @@ The fact that one of these options helped doesn't prove that the issue being tro
 
 ==== WiFi / Bluetooth coexistence ====
 
-Having and WiFi and Bluetooth running at the same time is a challenge. These scenarios have been tested thoroughly on 7260 and up, less so on earlier devices. This is why some people may face issues with devices that are handled by iwldvm. For users of these devices who have problems when WiFi and Bluetooth are running concurrently, we suggest to disable BT Coex by loading iwlwifi with bt_coex_active=0 as a module parameter.
+Having WiFi and Bluetooth running at the same time is a challenge. These scenarios have been tested thoroughly on 7260 and up, less so on earlier devices. This is why some people may face issues with devices that are handled by iwldvm. For users of these devices who have problems when WiFi and Bluetooth are running concurrently, we suggest to disable BT Coex by loading iwlwifi with bt_coex_active=0 as a module parameter.
 
 ==== Power management ====
 Starting from 3.17, power management has been disabled in iwldvm because users reported it improved the behavior and was a valid work around for [[https://bugzilla.kernel.org/show_bug.cgi?id=84031|issues]].
