@@ -60,8 +60,8 @@ Please send bug reports to the mailing list <ath10k@lists.infradead.org>
 ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a list of known products:
 
 
- * QCA9886 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18 v2]] 
- * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of Dual band/Single band/high powered/extended temp radio modules from Doodle Labs]]
+  * QCA9886 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18 v2]] 
+  * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of Dual band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9892 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of DUal band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex WLE600V5-27 11ac 2x2 miniPCIe Wireless Module]]
   * QCA9880 Version 2 found in [[http://www.sparklan.com/p2-products-detail.php?PKey=05f1PcJhJnAq1DolkcoSJibeSaxmPjpTYdltrQ-f&WPEA-352ACN|SparkLan: WPEA-352ACN - supports 802.11ac radio]]
