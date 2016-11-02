@@ -60,17 +60,19 @@ Please send bug reports to the mailing list <ath10k@lists.infradead.org>
 ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a list of known products:
 
 
-  * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of Dual band/Single band/high powered/extended temp radio modules from Doodle Labs]]
+ * QCA9886 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18 v2]] 
+ * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of Dual band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9892 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of DUal band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex WLE600V5-27 11ac 2x2 miniPCIe Wireless Module]]
   * QCA9880 Version 2 found in [[http://www.sparklan.com/p2-products-detail.php?PKey=05f1PcJhJnAq1DolkcoSJibeSaxmPjpTYdltrQ-f&WPEA-352ACN|SparkLan: WPEA-352ACN - supports 802.11ac radio]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/compex/wpj344|Compex acWave: WPJ344 - supports 802.11ac radio]]
-  * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900v5-27/|Compex acWave: WLE900V5-18]]
-  * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900v5-27/|Compex acWave: WLE900V5-23]]
-  * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900vx/|Compex acWave: WLE900VX]] [1]
+  * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900v5-27/|Compex WLE900V5-18]]
+  * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900v5-27/|Compex WLE900V5-27]]
+  * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900vx/|Compex WLE900VX]] [1]
   * QCA9880 Version 2 found in [[http://www.unex.com.tw/product/daxa-o1|Unex: DAXA-O1]]
-  * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex acWave: WLE600V5-18]]
-  * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex acWave: WLE600V5-23]]
+  * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex WLE600V5-18]]
+  * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex WLE600V5-27]]
+  * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600vx/|Compex WLE600VX]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : Archer C7 v2.x]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : WDR7500 v3.0]]
   * QCA9377
