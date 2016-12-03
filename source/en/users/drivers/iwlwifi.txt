@@ -171,6 +171,8 @@ Some potential work-around options to this issue:
 
 The fact that one of these options helped doesn't prove that the issue being troubleshooted is 'platform noise', but it may be an indication.
 
+Another thing that can be tried is to modify the antenna position. The antennas are typically located in the lid of the laptop. It is worth trying to open / close the lid or to rotate the system and see if it has any effect.
+
 ===== About iwldvm support and known issues =====
 
 ==== WiFi / Bluetooth coexistence ====
