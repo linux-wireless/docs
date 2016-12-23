@@ -24,7 +24,7 @@ Spectral scan configuration parameters can be read and changed ''/sys/kernel/deb
     * ''background'': spectral scans samples are returned endlessly from the currently configured channel. It is running while the hardware is not busy with sending/receiving. Must be turned on by writing "trigger" into spectral_scan_ctl. 
     * ''manual'': as many spectral scan samples as configured in spectral_count are returned from the current channel after writing "trigger" into spectral_scan_ctl. 
     * ''chanscan'': as many spectral scan samples as configured in spectral_count are returned for each channel when performing a scan. 
-    *   **spectral_scan0**: the relayfs file which returns the spectral scan samples. The samples are returned as TLV binary data, see ''drivers/net/wireless/ath/ath9k/spectral.h'' and/or ''drivers/net/wireless/ath/spectral_common.h'' for the format 
+  *   **spectral_scan0**: the relayfs file which returns the spectral scan samples. The samples are returned as TLV binary data, see ''drivers/net/wireless/ath/ath9k/spectral.h'' and/or ''drivers/net/wireless/ath/spectral_common.h'' for the format 
 
 ===== Spectral scan parameters =====
   * //fft_period//: when active and triggered, PHY passes FFT frames to MAC every (fft_period+1)*4uS 
