@@ -4,9 +4,9 @@
 Atheros 802.11n chipsets include a built-in spectral analysis feature. AR92xx and AR93xx have the ability to report FFT data from the baseband under software controlled conditions, including: 
   * absolute magnitude (|i|+|q|, abs() for I/Q phase of the wireless signal) for each FFT bin (56 for subcarriers in HT20 mode and 128 in HT40 mode) 
   * an index indicating the strongest FFT bin 
-  * the maximum signal magnitude for each sample These information can be used to create an open source spectrum analyzer or interference classifier 
+  * the maximum signal magnitude for each sample
 
-To try it out, you can use the following commands to acquire samples for all channels which can be scanned: 
+These information can be used to create an open source spectrum analyzer or interference classifier. To try it out, you can use the following commands to acquire samples for all channels which can be scanned: 
 
 
 <code>echo chanscan > /sys/kernel/debug/ieee80211/phy0/ath9k/spectral_scan_ctl
