@@ -14,7 +14,7 @@ Here we start documentation for users for all new wireless utilities. The list i
   * [[en/users/Documentation/wpa_supplicant|wpa_supplicant]] - wpa_supplicant is a WPA Supplicant and SME (initiates MLME commands) 
   * [[en/users/Documentation/WoWLAN|WoWLAN]] - Wake on Wireless LAN support 
   * [[en/users/Documentation/Power-consumption|Power consumption]] - details of power consumption with 802.11 devices on Linux, covers IEEE 802.11 power savings, ASPM, and driver tweaks for ASPM, Dynamic power save, and pm-qos. 
-  * [[en/developers/WAPI|WAPI]] - China's alternative to 802.11i (now part of 802.11-2007), ISO voted yes. However, the standard has been withdrawn by China. 
+  * [[en/developers/WAPI|WAPI]] - China's alternative to 802.11i (now part of 802.11-2007), ISO voted yes. However, as of 2012, the standard has been withdrawn by China[[https://mentor.ieee.org/802.11/dcn/12/11-12-0199-00-0jtc-jacksonville-minutes-jan-2012.doc]]. 
   * [[en/developers/DFS|DFS]] - Design documentation for future DFS implementation in mac80211 
   * [[en/users/Documentation/acs|ACS]] - Automatic Channel Selection support for Linux 
   * [[en/developers/OpenWirelessMovement|Solutions on Linux for the Open Wireless Movement]] 
