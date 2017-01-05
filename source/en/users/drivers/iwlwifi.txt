@@ -54,7 +54,7 @@ There are four repositories that we maintain:
 
 You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware.git]], or download it here: 
 
-| **Device** | **Kernels** | **Module** | **Firmware** |
+| **Device**                                                                                                                                      | **Kernels**  | **Module**  | **Firmware**                                                                   |
 | Intel® Wireless WiFi 5150AGN                                                                                                                    | 2.6.29+      | iwldvm      | {{iwlwifi-5150-ucode-8.24.2.2.tgz|iwlwifi-5150-ucode-8.24.2.2.tgz}}            |
 | Intel® Wireless WiFi 5100AGN \\  Intel® Wireless WiFi 5300AGN \\  Intel® Wireless WiFi 5350AGN                                                  | 2.6.27+      | iwldvm      | {{iwlwifi-5000-ucode-5.4.A.11.tar.gz|iwlwifi-5000-ucode-5.4.A.11.tar.gz}}      |
 | :::                                                                                                                                             | 2.6.30+      | :::         | {{iwlwifi-5000-ucode-8.24.2.12.tgz|iwlwifi-5000-ucode-8.24.2.12.tgz}}          |
@@ -78,28 +78,30 @@ You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmwa
 | Intel® Centrino® Wireless-N 105                                                                                                                 | 3.2+         |  iwldvm     | {{iwlwifi-105-ucode-18.168.6.1.tgz|iwlwifi-105-ucode-18.168.6.1.tgz}}          |
 | Intel® Centrino® Wireless-N 2200                                                                                                                | 3.2+         |  iwldvm     | {{iwlwifi-2000-ucode-18.168.6.1.tgz|iwlwifi-2000-ucode-18.168.6.1.tgz}}        |
 | Intel® Centrino® Wireless-N 2230                                                                                                                | 3.2+         |  iwldvm     | {{iwlwifi-2030-ucode-18.168.6.1.tgz|iwlwifi-2030-ucode-18.168.6.1.tgz}}        |
-| Intel® Wireless 7260 | 3.10+ | iwlmvm | {{iwlwifi-7260-ucode-22.1.7.0.tgz|iwlwifi-7260-ucode-22.1.7.0.tgz}}  |
-| ::: | 3.13+   | ::: | {{iwlwifi-7260-ucode-22.24.8.0.tgz|iwlwifi-7260-ucode-22.24.8.0.tgz}}   |
-| ::: | 3.14.9+ | ::: | {{iwlwifi-7260-ucode-25.228.9.0.tgz|iwlwifi-7260-ucode-25.228.9.0.tgz}} |
-| ::: | 3.17+   | ::: | {{iwlwifi-7260-ucode-23.15.10.0.tgz|iwlwifi-7260-ucode-23.15.10.0.tgz}} |
-| ::: | 3.19+   | ::: | {{iwlwifi-7260-ucode-25.17.12.0.tgz|iwlwifi-7260-ucode-25.17.12.0.tgz}} |
-| ::: | 4.1+    | ::: | {{iwlwifi-7260-ucode-25.30.13.0.tgz|iwlwifi-7260-ucode-25.30.13.0.tgz}} |
-| ::: | 4.3+    | ::: | {{iwlwifi-7260-ucode-16.242414.0.tgz|iwlwifi-7260-ucode-16.242414.0.tgz}} |
-| Intel® Wireless 3160 | 3.10+ | iwlmvm | {{iwlwifi-3160-ucode-22.1.7.0.tgz|iwlwifi-3160-ucode-22.1.7.0.tgz}} |
-| ::: | 3.13+   | ::: | {{iwlwifi-3160-ucode-22.24.8.0.tgz|iwlwifi-3160-ucode-22.24.8.0.tgz}}   |
-| ::: | 3.14.9+ | ::: | {{iwlwifi-3160-ucode-25.228.9.0.tgz|iwlwifi-3160-ucode-25.228.9.0.tgz}} |
-| ::: | 3.17+   | ::: | {{iwlwifi-3160-ucode-23.15.10.0.tgz|iwlwifi-3160-ucode-23.15.10.0.tgz}} |
-| ::: | 3.19+   | ::: | {{iwlwifi-3160-ucode-25.17.12.0.tgz|iwlwifi-3160-ucode-25.17.12.0.tgz}} |
-| ::: | 4.1+    | ::: | {{iwlwifi-3160-ucode-25.30.13.0.tgz|iwlwifi-3160-ucode-25.30.13.0.tgz}} |
-| ::: | 4.3+    | ::: | {{iwlwifi-3160-ucode-16.242414.0.tgz|iwlwifi-3160-ucode-16.242414.0.tgz}} |
-| Intel® Wireless 7265 \\ Intel® Wireless 3165 (starting from firmware XX.XX.13.0 and kernel 4.1) | 3.13+ | iwlmvm | {{iwlwifi-7265-ucode-22.24.8.0.tgz|iwlwifi-7265-ucode-22.24.8.0.tgz}} |
-| ::: | 3.14.9+ | ::: | {{iwlwifi-7265-ucode-25.228.9.0.tgz|iwlwifi-7265-ucode-25.228.9.0.tgz}} |
-| ::: | 3.17+   | ::: | {{iwlwifi-7265-ucode-23.15.10.0.tgz|iwlwifi-7265-ucode-23.15.10.0.tgz}} |
-| ::: | 3.19+   | ::: | {{iwlwifi-7265-ucode-25.17.12.0.tgz|iwlwifi-7265-ucode-25.17.12.0.tgz}} |
-| ::: | 4.1+    | ::: | {{iwlwifi-7265-ucode-25.30.13.0.tgz|iwlwifi-7265-ucode-25.30.13.0.tgz}} |
-| ::: | 4.3+    | ::: | {{iwlwifi-7265-ucode-16.242414.0.tgz|iwlwifi-7265-ucode-16.242414.0.tgz}} |
-| Intel® Wireless 8260 \\ Intel® Wireless 4165 | 4.1+ | iwlmvm | {{iwlwifi-8000-ucode-25.30.13.0.tgz|iwlwifi-8000-ucode-25.30.13.0.tgz}} |
-| ::: | 4.3+    | ::: | {{iwlwifi-8000-ucode-16.242414.0.tgz|iwlwifi-8000-ucode-16.242414.0.tgz}} |
+| Intel® Wireless 7260                                                                                                                            | 3.10+        | iwlmvm      | {{iwlwifi-7260-ucode-22.1.7.0.tgz|iwlwifi-7260-ucode-22.1.7.0.tgz}}            |
+| :::                                                                                                                                             | 3.13+        | :::         | {{iwlwifi-7260-ucode-22.24.8.0.tgz|iwlwifi-7260-ucode-22.24.8.0.tgz}}          |
+| :::                                                                                                                                             | 3.14.9+      | :::         | {{iwlwifi-7260-ucode-25.228.9.0.tgz|iwlwifi-7260-ucode-25.228.9.0.tgz}}        |
+| :::                                                                                                                                             | 3.17+        | :::         | {{iwlwifi-7260-ucode-23.15.10.0.tgz|iwlwifi-7260-ucode-23.15.10.0.tgz}}        |
+| :::                                                                                                                                             | 3.19+        | :::         | {{iwlwifi-7260-ucode-25.17.12.0.tgz|iwlwifi-7260-ucode-25.17.12.0.tgz}}        |
+| :::                                                                                                                                             | 4.1+         | :::         | {{iwlwifi-7260-ucode-25.30.13.0.tgz|iwlwifi-7260-ucode-25.30.13.0.tgz}}        |
+| :::                                                                                                                                             | 4.3+         | :::         | {{iwlwifi-7260-ucode-16.242414.0.tgz|iwlwifi-7260-ucode-16.242414.0.tgz}}      |
+| Intel® Wireless 3160                                                                                                                            | 3.10+        | iwlmvm      | {{iwlwifi-3160-ucode-22.1.7.0.tgz|iwlwifi-3160-ucode-22.1.7.0.tgz}}            |
+| :::                                                                                                                                             | 3.13+        | :::         | {{iwlwifi-3160-ucode-22.24.8.0.tgz|iwlwifi-3160-ucode-22.24.8.0.tgz}}          |
+| :::                                                                                                                                             | 3.14.9+      | :::         | {{iwlwifi-3160-ucode-25.228.9.0.tgz|iwlwifi-3160-ucode-25.228.9.0.tgz}}        |
+| :::                                                                                                                                             | 3.17+        | :::         | {{iwlwifi-3160-ucode-23.15.10.0.tgz|iwlwifi-3160-ucode-23.15.10.0.tgz}}        |
+| :::                                                                                                                                             | 3.19+        | :::         | {{iwlwifi-3160-ucode-25.17.12.0.tgz|iwlwifi-3160-ucode-25.17.12.0.tgz}}        |
+| :::                                                                                                                                             | 4.1+         | :::         | {{iwlwifi-3160-ucode-25.30.13.0.tgz|iwlwifi-3160-ucode-25.30.13.0.tgz}}        |
+| :::                                                                                                                                             | 4.3+         | :::         | {{iwlwifi-3160-ucode-16.242414.0.tgz|iwlwifi-3160-ucode-16.242414.0.tgz}}      |
+| Intel® Wireless 7265 \\ Intel® Wireless 3165 (starting from firmware XX.XX.13.0 and kernel 4.1)                                                 | 3.13+        | iwlmvm      | {{iwlwifi-7265-ucode-22.24.8.0.tgz|iwlwifi-7265-ucode-22.24.8.0.tgz}}          |
+| :::                                                                                                                                             | 3.14.9+      | :::         | {{iwlwifi-7265-ucode-25.228.9.0.tgz|iwlwifi-7265-ucode-25.228.9.0.tgz}}        |
+| :::                                                                                                                                             | 3.17+        | :::         | {{iwlwifi-7265-ucode-23.15.10.0.tgz|iwlwifi-7265-ucode-23.15.10.0.tgz}}        |
+| :::                                                                                                                                             | 3.19+        | :::         | {{iwlwifi-7265-ucode-25.17.12.0.tgz|iwlwifi-7265-ucode-25.17.12.0.tgz}}        |
+| :::                                                                                                                                             | 4.1+         | :::         | {{iwlwifi-7265-ucode-25.30.13.0.tgz|iwlwifi-7265-ucode-25.30.13.0.tgz}}        |
+| :::                                                                                                                                             | 4.3+         | :::         | {{iwlwifi-7265-ucode-16.242414.0.tgz|iwlwifi-7265-ucode-16.242414.0.tgz}}      |
+| Intel® Wireless 8260 \\ Intel® Wireless 4165                                                                                                    | 4.1+         | iwlmvm      | {{iwlwifi-8000-ucode-25.30.13.0.tgz|iwlwifi-8000-ucode-25.30.13.0.tgz}}        |
+| :::                                                                                                                                             | 4.3+         | :::         | {{iwlwifi-8000-ucode-16.242414.0.tgz|iwlwifi-8000-ucode-16.242414.0.tgz}}      |
+| Intel® Wireless 8265                                                                                                                            | 4.6+         | iwlmvm      | {{iwlwifi-8265-ucode-22.361476.0.tgz}}                                         |
+
 
 Where that appropriate location is depends (again) on your system distribution.  You can typically find this location by looking in the udev scripts of your distro, the default on most distributions is /lib/firmware. 
 
