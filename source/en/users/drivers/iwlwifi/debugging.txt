@@ -24,6 +24,29 @@ We will typically ask for more switches:
 <code>sudo trace-cmd record -e iwlwifi -e mac80211 -e cfg80211 -e iwlwifi_msg</code>
 This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n130|CONFIG_IWLWIFI_TRACING]] must be set.
 
+==== Air sniffing ====
+Your Intel device can act as a sniffer (which is also referred to as "monitor mode"). This means that it can record all the packets being sent over the air by all the other devices including your Access Point. When acting as a sniffer, your device cannot be connected to any Access Point or do anything else.
+The output of the air sniffing operation is a file with a pcap extension that can be parsed by the [[https://www.wireshark.org|Wireshark]] program.
+=== How to get a sniffer capture with your Intel device ===
+In order to put your device in monitor mode and get a sniffer capture, you first need to stop using it as a WiFi client. To do so there are several options:
+  * Disable WiFi from the Network Manager GUI and re-enable manually with <code>rfkill unblock wifi </code> This may not work on all the distributions.
+  * Disable the Network Manager and kill the wpa_supplicant<code>sudo service NetworkManager stop
+sudo killall wpa_supplicant</code>
+
+Then you need to put it in monitor mode:
+<code> sudo iw wlan0 set type monitor </code>
+
+After that, you can bring the interface up again and set the frequency (taking channel 1 as an example but you should check what frequency you want to listen to):
+<code>sudo ifconfig wlan0 up
+sudo iw wlan0 set freq 2412</code>
+
+Then you can start the capture:
+<code>sudo tcpdump -i wlan0 -w capture.pcap</code>
+This file can be opened by [[https://www.wireshark.org/|Wireshark]] and sent for analysis by our developers. Note that this file can be fairly large if you capture a lot of traffic, but it can be compressed very efficiently.
+=== How to put your WiFi device back in normal client mode ===
+In order to get your device back in a regular client mode, you can either reboot or start the NeworkManager again:
+<code>sudo service NetworkManager start</code>
+
 ==== Firmware Debugging ====
 
 Note that we no longer provide support for the firmware of the devices using iwldvm.
