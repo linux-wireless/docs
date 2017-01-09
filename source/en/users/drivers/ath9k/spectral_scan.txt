@@ -102,5 +102,6 @@ For 40MHz channel, previous formula should be used for 64 bins of control and ex
 FFT samples gathered from Atheros NICs could be drawn using userspace programs: 
   * [[https://github.com/simonwunderlich/FFT_eval|https://github.com/simonwunderlich/FFT_eval]] (HT20 only) 
   * [[https://github.com/LorenzoBianconi/ath_spectral|https://github.com/LorenzoBianconi/ath_spectral]] 
+  * [[https://github.com/bcopeland/speccy|https://github.com/bcopeland/speccy]]
 
 (based on Adrian Chadd's documentation [[https://wiki.freebsd.org/dev/ath_hal(4)/SpectralScan|https://wiki.freebsd.org/dev/ath_hal%284%29/SpectralScan]]) 
