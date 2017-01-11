@@ -100,7 +100,8 @@ Acer AOD250-1613
                         * Amilo Sa3650 
                         * Amilo Xa3530 
 ===== HP =====
-
+==== AR9285 ====
+  * HP ProBook 4535s
 
 ==== AR9280/HB92, 2x2 DB ====
                           * HP Pavilion dv5 
