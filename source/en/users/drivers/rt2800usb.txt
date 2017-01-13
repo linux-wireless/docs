@@ -15,7 +15,7 @@ Please see the [[en/users/Drivers/rt2800usb/devices|device list]].
 
 ===== Unsupported chips =====
 
-* [[https://wikidevi.com/wiki/Ralink|Any new Ralink chip]]. Ralink drivers can be downloaded from: [[http://www.mediatek.com/en/downloads1/downloads/|http://www.mediatek.com/en/downloads1/downloads/]] 
+* [[https://wikidevi.com/wiki/Ralink|Any new Ralink chip]]. Ralink drivers can be downloaded from: [[http://www.mediatek.com/products/connectivity-and-networking/broadband-wifi]] 
 
 
 ===== features =====
@@ -33,7 +33,6 @@ Please see the [[en/users/Drivers/rt2800usb/devices|device list]].
 
 
 ===== TODO =====
-    * Integrate OpenWrt patches: http://git.openwrt.org/?p=openwrt.git;a=tree;f=package/kernel/mac80211/patches
     * Add support for more chips
 
 
