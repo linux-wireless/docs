@@ -52,7 +52,7 @@ Different patchwork states and their meanings:
   * **Superseded**: There's a new version of the patch available, the maintainer has skipped this version.
   * **Not Applicable**: The patch is either not part of wireless subsystem or it will be applied via different trees (for example net-next or driver maintainer trees). The patch is considered as dropped from now on and needs to be resubmitted for the maintainer to reconsider it.
 
-===== Subject name =====
+===== Subject =====
 
 If what you are sending is a patch you can use a subject as follows: 
 
