@@ -51,9 +51,9 @@ Ath5k is a completely FOSS wireless driver for Atheros based wireless chipset ve
 
 ===== Mailing list =====
 
-Our mailing list for this driver is: 
+[[en/developers/mailinglists|linux-wireless]] is the recommended mailing list to use.
 
-[[https://lists.ath5k.org/mailman/listinfo/ath5k-devel|https://lists.ath5k.org/mailman/listinfo/ath5k-devel]] 
+The archives ​for the old ath5k-devel list, which was closed in 2017, are available [[https://lists.ath5k.org/mailman/listinfo/ath5k-devel|here]].
 
 
 ===== Getting ath5k =====
