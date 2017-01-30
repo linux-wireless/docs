@@ -23,9 +23,10 @@ See the [[en/users/Drivers/ath9k_htc/devices|ath9k_htc device list]].
 
 
 ===== Mailing list =====
-    * [[https://lists.ath9k.org/mailman/listinfo/ath9k-devel|https://lists.ath9k.org/mailman/listinfo/ath9k-devel]] 
-    * [[http://lists.infradead.org/mailman/listinfo/ath9k_htc_fw|http://lists.infradead.org/mailman/listinfo/ath9k_htc_fw]] (firmware only) 
 
+[[en/developers/mailinglists|linux-wireless]] is the recommended mailing list to use for questions regarding the driver. Firmware-related questions should go to [[http://lists.infradead.org/mailman/listinfo/ath9k_htc_fw|ath9k_htc_fw]].
+
+The archives for the old ath9k-devel list, which was closed in 2017, are available [[https://lists.ath9k.org/mailman/listinfo/ath9k-devel|here]].
 
 ===== Configuring your kernel =====
 
