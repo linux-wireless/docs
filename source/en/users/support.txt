@@ -23,7 +23,7 @@ Channel: #linux-wireless</code>
 
 ===== Linux wireless mailing list =====
 
-You can send question to the [[en/developers/MailingLists|Linux wireless mailing list]], however, you are highly encouraged to first check on the IRC channel above. Again, unless you're familiar with the mailing list, it makes sense to read [[http://www.catb.org/~esr/faqs/smart-questions.html|How To Ask Questions The Smart Way]] before you post. 
+You can send question to the [[en/developers/MailingLists|Linux wireless mailing list]]. Again, unless you're familiar with the mailing list, it makes sense to read [[http://www.catb.org/~esr/faqs/smart-questions.html|How To Ask Questions The Smart Way]] before you post. 
 
 
 ===== Reporting bugs =====
