@@ -120,7 +120,4 @@ Follow [[http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=D
 
 ==== Checking code ====
 
-Run sparse: 
-
-
-<code>make drivers/net/wireless/ath/ath10k/ C=2 CF="-D__CHECK_ENDIAN__"</code>
+For checking the code we have a dedicated script [[https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath10k/ath10k-check|ath10k-check]] which runs various tests, including sparse and checkpatch. Run the script with ''--help'' to see the installation and usage instructions. Strongly recommended to run this before submitting patches as it can catch common problems.
