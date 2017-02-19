@@ -46,10 +46,10 @@ Guidelines for patches:
              * Ingo Molnar has written [[https://lkml.kernel.org/g/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log. 
           *   If others have reported the issue commit log SHOULD use Reported-by: and Tested-by: tags. 
           *   SHOULD be checkpatch clean: 
-               * FIXME: add checkpatch example with correct arguments 
           *     Patches SHOULD be sent with git send-email tool. 
           *     Patchsets SHOULD contain no more than 12 patches. 
           *     Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]] 
+          *     It's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] 
 
 The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
 
