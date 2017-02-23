@@ -38,7 +38,8 @@ Date:   Wed Nov 9 10:15:42 2011 +0100
 
 For developers wanting to make changes to ath10k it's possible to create backports releases on your own: 
   - Clone the backports tree: <code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/backports/backports.git</code>
-  - Clone the ath.git containing latest ath10k: <code>git clone https://github.com/kvalo/ath.git</code>
+  - Clone the ath.git containing latest ath10k: <code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git
+</code>
   - Go to the backports tree: <code>cd backports</code>
   - create file copy-list.ath with this content: <code>COPYING
 MAINTAINERS
