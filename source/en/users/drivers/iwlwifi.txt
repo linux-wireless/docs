@@ -101,6 +101,7 @@ You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmwa
 | Intel® Wireless 8260 \\ Intel® Wireless 4165                                                                                                    | 4.1+         | iwlmvm      | {{iwlwifi-8000-ucode-25.30.13.0.tgz|iwlwifi-8000-ucode-25.30.13.0.tgz}}        |
 | :::                                                                                                                                             | 4.3+         | :::         | {{iwlwifi-8000-ucode-16.242414.0.tgz|iwlwifi-8000-ucode-16.242414.0.tgz}}      |
 | Intel® Wireless 8265                                                                                                                            | 4.6+         | iwlmvm      | {{iwlwifi-8265-ucode-22.361476.0.tgz}}                                         |
+| Intel® Wireless 3168                                                                                                                            | 4.6+         | iwlmvm      | {{iwlwifi-3168-ucode-22.361476.0.tgz}}                                         |
 
 
 Where that appropriate location is depends (again) on your system distribution.  You can typically find this location by looking in the udev scripts of your distro, the default on most distributions is /lib/firmware. 
