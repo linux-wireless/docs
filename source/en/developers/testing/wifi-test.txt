@@ -4,7 +4,7 @@
 
 ===== Wifi-test =====
 
-wifi-test is fully automated test script for linux wireless drivers. It's an open-source project. 
+wifi-test is fully automated test script for linux [[http://driverwhiz.com/device-drivers/wireless-drivers|wireless drivers]]. It's an open-source project. 
 
  
 
