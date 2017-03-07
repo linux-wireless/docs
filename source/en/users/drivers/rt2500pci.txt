@@ -43,4 +43,3 @@ Please see the [[en/users/Drivers/rt2500pci/devices|device list]].
 
 ===== external links =====
               * [[http://rt2x00.serialmonkey.com/|rt2x00 project website]] 
-              * [[http://driverrestore.com/|update drivers]] 
