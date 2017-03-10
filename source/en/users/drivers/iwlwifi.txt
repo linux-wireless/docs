@@ -126,6 +126,10 @@ Detected Intel(R) Dual Band Wireless AC 7265, REV=0x210
 </code>
 The revision number of a 7265D device is 0x210, if you see any other number, you have a 7265 device.
 
+===== 8260 Problem =====
+
+The file iwlwifi-8000-ucode-25.30.13.0.tgz listed above appears to actually contain a version 13 firmware file, iwlwifi-8000C-13.ucode, that will not work. I checked that it was not mis-named by renaming it to iwlwifi-8000C-25.ucode but it was identified as genuinely version 13 at boot.
+
 ===== Firmware_class dependency =====
 
 The firmware necessary to support the devices is distributed separately under the [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.iwlwifi_firmware;hb=HEAD|firmware license]]. 
