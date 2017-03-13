@@ -52,7 +52,9 @@ There are four repositories that we maintain:
 
 ===== Firmware =====
 
-You can get the firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware.git]], or download it here: 
+You can get the latest firmware from [[http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|linux-firmware.git]], or download it from the table below.
+
+NOTE: this table contains only the first official firmware version released, which is only guaranteed to work with the kernel version specified in the table.  To get the latest version for newer kernels, please use the firmware git tree instead.
 
 | **Device**                                                                                                                                      | **Kernels**  | **Module**  | **Firmware**                                                                   |
 | Intel® Wireless WiFi 5150AGN                                                                                                                    | 2.6.29+      | iwldvm      | {{iwlwifi-5150-ucode-8.24.2.2.tgz|iwlwifi-5150-ucode-8.24.2.2.tgz}}            |
