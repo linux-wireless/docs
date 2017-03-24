@@ -1,2 +1,3 @@
 
-Please see the generated HTML docs at [[https://www.kernel.org/doc/htmldocs/80211/index.html|https://www.kernel.org/doc/htmldocs/80211/index.html]]. 
+Please see the generated HTML docs at [[https://www.kernel.org/doc/html/latest/driver-api/80211
+/index.html|https://www.kernel.org/doc/html/latest/driver-api/80211/]]. 
