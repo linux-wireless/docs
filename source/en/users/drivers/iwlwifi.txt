@@ -42,8 +42,10 @@ The following devices are supported (since kernel version):
       * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-ultimate-n-6300.html|Intel® Centrino® Ultimate-N 6300]] (2.6.30) 
       * [[http://www.intel.com/products/wireless/adapters/6200/|Intel® Centrino® Advanced-N 6200]] (2.6.30) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-1000-brief.html|Intel® Centrino® Wireless-N 1000]] (2.6.30) 
-      * Intel® Wireless WiFi 5150AGN (2.6.29) 
-      * [[http://www.intel.com/products/wireless/adapters/5000/|Intel® Wireless WiFi 5100AGN, 5300AGN]], and 5350AGN (2.6.27) 
+      * [[http://www.intel.com/Assets/PDF/prodbrief/320663_5150.pdf|Intel® WiMAX/WiFi Link 5150]] (2.6.29)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wifi-link-5100-brief.pdf|Intel® WiFi Link 5100 Series]] (2.6.27)
+      * [[http://www.intel.com/Assets/PDF/prodbrief/320663.pdf|Intel® WiMAX/WiFi Link 5350]] (2.6.27) 
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/ultimate-n-wifi-link-5300-brief.pdf|Intel® Ultimate N WiFi Link 5300]] (2.6.27)
 ===== Git repositories =====
 
 There are four repositories that we maintain: 
