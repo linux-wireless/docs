@@ -9,13 +9,12 @@
 
 
 ===== Features =====
-    * Station (client) mode
-    * IBSS (Ad-Hoc) mode
+    * Station (client)
     * AP mode on 2.4GHz (on devices driven by iwlmvm)
-    * P2P (on devices driven by iwlmvm)
-    * 802.11a/b/g/n/ac (depending on the device)
-    * NAN, FTM and other features are planned for 8260
-
+    * P2P and multi-role (on devices driven by iwlmvm)
+    * Wi-Fi Aware*, Wi-Fi Location* are experimental on 8260
+    * Monitor (sniffer)
+    * IBSS (Ad-Hoc)
 ===== Supported Devices =====
 The following devices are supported (since kernel version):
 
