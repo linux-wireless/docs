@@ -17,35 +17,40 @@
     * NAN, FTM and other features are planned for 8260
 
 ===== Supported Devices =====
-The following devices are supported (since kernel version): 
+The following devices are supported (since kernel version):
+
+  * 802.11ac products
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9260-brief.pdf|Intel® Wireless 9260]] (4.13?)
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9560-brief.pdf|Intel® Wireless 9560]] (4.13?)
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-8265-brief.pdf|Intel® Wireless 8265]] (4.6)
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-3168-brief.pdf|Intel® Wireless 3168]] (4.6)
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-8260-brief.pdf|Intel® Wireless 8260]] (4.1)
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-3165-brief.pdf|Intel® Wireless 3165]] (4.1)
+  * 802.11n or 802.11ac products (SKU dependent)
       * [[http://www.intel.com/content/www/us/en/wireless-products/dual-band-wireless-ac-7265.html|Intel® Wireless 7265]] (3.13)
       * [[http://www.intel.com/content/www/us/en/wireless-products/dual-band-wireless-ac-7260-bluetooth.html|Intel® Wireless 7260]] (3.10)
       * [[http://www.intel.com/content/www/us/en/wireless-products/dual-band-wireless-ac-3160-bluetooth.html|Intel® Wireless 3160]] (3.10)
+  * 802.11abgn products
       * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-advanced-n-6235.html|Intel® Centrino® Advanced-N 6235]] (3.2) 
+      * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-advanced-n-6230-brief.html|Intel® Centrino® Advanced-N 6230]] (2.6.36)
+      * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-advanced-n-6205.html|Intel® Centrino® Advanced-N 6205]] (2.6.35) 
+      * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-advanced-n-wimax-6150-brief.html|Intel® Centrino® Advance-N + WiMAX 6150]] (2.6.30) 
+      * [[http://download.intel.com/support/wireless/wmax/6250/sb/intel_centrino_advancedn_wimax_6250_product_brief1.pdf|Intel® Centrino® Advanced-N + WiMAX 6250]] (2.6.30) 
+      * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-ultimate-n-6300.html|Intel® Centrino® Ultimate-N 6300]] (2.6.30) 
+      * [[http://www.intel.com/products/wireless/adapters/6200/|Intel® Centrino® Advanced-N 6200]] (2.6.30) 
+      * [[http://www.intel.com/Assets/PDF/prodbrief/320663.pdf|Intel® WiMAX/WiFi Link 5350]] (2.6.27) 
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/ultimate-n-wifi-link-5300-brief.pdf|Intel® Ultimate N WiFi Link 5300]] (2.6.27)
+      * [[http://www.intel.com/Assets/PDF/prodbrief/320663_5150.pdf|Intel® WiMAX/WiFi Link 5150]] (2.6.29)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wifi-link-5100-brief.pdf|Intel® WiFi Link 5100 Series]] (2.6.27)
+  * 802.11bgn products
       * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-wireless-n-2230.html|Intel® Centrino® Wireless-N 2230]] (3.2) 
       * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-wireless-n-2200.html|Intel® Centrino® Wireless-N 2200]] (3.2) 
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/centrino-wireless-n-105-brief.pdf|Intel® Centrino® Wireless-N 105]] (3.2) 
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/centrino-wireless-n-135-brief.pdf|Intel® Centrino® Wireless-N 135]] (3.2) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-100-brief.html|Intel® Centrino® Wireless-N 100]] (2.6.37) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-130-brief.html|Intel® Centrino® Wireless-N 130]] (2.6.37) 
-      * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-advanced-n-6230-brief.html|Intel® Centrino® Advanced-N 6230]] (2.6.36) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-1030-brief.html|Intel® Centrino® Wireless-N 1030]] (2.6.36) 
-      * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-advanced-n-6205.html|Intel® Centrino® Advanced-N 6205]] (2.6.35) 
-      * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-advanced-n-wimax-6150-brief.html|Intel® Centrino® Advance-N + WiMAX 6150]] (2.6.30) 
-      * [[http://download.intel.com/support/wireless/wmax/6250/sb/intel_centrino_advancedn_wimax_6250_product_brief1.pdf|Intel® Centrino® Advanced-N + WiMAX 6250]] (2.6.30) 
-      * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-ultimate-n-6300.html|Intel® Centrino® Ultimate-N 6300]] (2.6.30) 
-      * [[http://www.intel.com/products/wireless/adapters/6200/|Intel® Centrino® Advanced-N 6200]] (2.6.30) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-1000-brief.html|Intel® Centrino® Wireless-N 1000]] (2.6.30) 
-      * [[http://www.intel.com/Assets/PDF/prodbrief/320663_5150.pdf|Intel® WiMAX/WiFi Link 5150]] (2.6.29)
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wifi-link-5100-brief.pdf|Intel® WiFi Link 5100 Series]] (2.6.27)
-      * [[http://www.intel.com/Assets/PDF/prodbrief/320663.pdf|Intel® WiMAX/WiFi Link 5350]] (2.6.27) 
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/ultimate-n-wifi-link-5300-brief.pdf|Intel® Ultimate N WiFi Link 5300]] (2.6.27)
 ===== Git repositories =====
 
 There are four repositories that we maintain: 
