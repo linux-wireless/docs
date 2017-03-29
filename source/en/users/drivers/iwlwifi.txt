@@ -51,6 +51,8 @@ The following devices are supported (since kernel version):
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-130-brief.html|Intel® Centrino® Wireless-N 130]] (2.6.37) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-1030-brief.html|Intel® Centrino® Wireless-N 1030]] (2.6.36) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-1000-brief.html|Intel® Centrino® Wireless-N 1000]] (2.6.30) 
+
+For more information on Intel Wireless products, please visit [[http://www.intel.com/wireless|Intel Wireless]].
 ===== Git repositories =====
 
 There are four repositories that we maintain: 
