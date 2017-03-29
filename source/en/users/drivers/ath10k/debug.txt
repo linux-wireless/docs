@@ -221,8 +221,9 @@ To automatically collect devcoredump files add script /usr/local/sbin/devcoredum
 
 timestamp=$(date +%Y%m%d%H%M%S)
 filename="/var/spool/devcoredump/devcoredump-${timestamp}.dump"
-cat /sys/${DEVPATH}/data > ${filename}
-echo 1 > /sys/${DEVPATH}/data</code>
+cp /sys/${DEVPATH}/data ${filename}
+echo 1 > /sys/${DEVPATH}/data
+logger "created ${filename}"</code>
 
 Create a directory for the dump files:
 
