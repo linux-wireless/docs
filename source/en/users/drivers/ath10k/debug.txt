@@ -209,3 +209,28 @@ To simulate firmware crash write one of the keywords to this file:
 `hard` - this will send to firmware command with illegal parameters causing firmware crash.
 `assert` - this will send special illegal parameter to firmware to cause assert failure and crash.
 `hw-restart` - this will simply queue hw restart without fw/hw actually crashing.</code>
+
+==== Firmware crash dump file ====
+
+When the firmware crashes ath10k collects various information which helps to debug the crash and creates a crash dump file. This is available via dev_coredump facility from /sys/class/devcoredump.
+
+To automatically collect devcoredump files add script /usr/local/sbin/devcoredump-collect.sh:
+
+<code>
+#!/bin/sh
+
+timestamp=$(date +%Y%m%d%H%M%S)
+filename="/var/spool/devcoredump/devcoredump-${timestamp}.dump"
+cat /sys/${DEVPATH}/data > ${filename}
+echo 1 > /sys/${DEVPATH}/data</code>
+
+Create a directory for the dump files:
+
+<code>
+sudo mkdir /var/spool/devcoredump</code>
+
+And add a udev rules script /etc/udev/rules.d/50-devcoredump.rules:
+
+<code>
+SUBSYSTEM=="devcoredump", ACTION=="add", RUN+="/usr/local/sbin/devcoredump-collect.sh"</code>
+
