@@ -30,7 +30,7 @@ The following devices are supported (since kernel version):
       * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-advanced-n-6235.html|Intel® Centrino® Advanced-N 6235]] (3.2) 
       * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-wireless-n-2230.html|Intel® Centrino® Wireless-N 2230]] (3.2) 
       * [[http://www.intel.com/content/www/us/en/wireless-products/centrino-wireless-n-2200.html|Intel® Centrino® Wireless-N 2200]] (3.2) 
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/centrino-wireless-n-105-brief.pdf|ntel® Centrino® Wireless-N 105]] (3.2) 
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/centrino-wireless-n-105-brief.pdf|Intel® Centrino® Wireless-N 105]] (3.2) 
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/centrino-wireless-n-135-brief.pdf|Intel® Centrino® Wireless-N 135]] (3.2) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-100-brief.html|Intel® Centrino® Wireless-N 100]] (2.6.37) 
       * [[http://www.intel.com/content/www/us/en/processors/centrino/centrino-wireless-n-130-brief.html|Intel® Centrino® Wireless-N 130]] (2.6.37) 
