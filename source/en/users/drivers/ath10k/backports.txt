@@ -44,6 +44,10 @@ For developers wanting to make changes to ath10k it's possible to create backpor
   - create file copy-list.ath with this content: <code>COPYING
 MAINTAINERS
 
+# This just defines some macros, simply take it
+include/linux/bitfield.h
+include/linux/average.h
+
 drivers/net/wireless/Kconfig
 drivers/net/wireless/Makefile
 
@@ -58,6 +62,11 @@ include/net/ieee80211_radiotap.h
 include/net/lib80211.h
 include/net/mac80211.h
 include/net/regulatory.h
+include/net/codel.h
+include/net/codel_impl.h
+include/net/codel_qdisc.h
+include/net/fq.h
+include/net/fq_impl.h
 
 net/Makefile
 net/Kconfig
