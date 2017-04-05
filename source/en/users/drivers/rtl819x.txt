@@ -22,7 +22,7 @@
 ===== staging drivers =====
     * **r8192e_pci** is a PCI-E driver for RTL8192E devices. 
     * **r8190_pci** is a PCI driver for [[http://www.realtek.com/products/productsView.aspx?Langid=1&PNid=41&PFid=9&Level=6&Conn=5&ProdID=174|RTL8190P]] devices (**WIP**: [[http://github.com/lwfinger/rtl8190p|http://github.com/lwfinger/rtl8190p]])
-    *  **r8723bs** is a SDIO/SPI driver for RTL8723A/B devices (**WIP**: https://github.com/lwfinger/rtl8723bs)
+    *  **r8723bs** is a SDIO/SPI driver for RTL8723A/B devices (**WIP**: https://marc.info/?l=linux-wireless&m=149081010826453 )
     * **r8712u** is a USB driver for RTL8712U/RTL8192SU devices. It's going to be replaced by rtl8192su.  
     * **r8192u_usb** is a USB driver for RTL8192U devices. It's going to be replaced by rtl8xxxu. 
     * **r8192du** is a USB driver for RTL8192DU devices. (**WIP**: [[http://github.com/lwfinger/rtl8192du|http://github.com/lwfinger/rtl8192du]]). It's going to be replaced by rtl8xxxu.
