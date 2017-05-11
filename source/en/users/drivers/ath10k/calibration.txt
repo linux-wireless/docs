@@ -8,10 +8,10 @@ The ath10k NICs require calibration data to be supplied in order to function cor
 
 The calibration data includes:
 
- * Configuration information (MAC address, 2G/5G, 11n capabilities, 11ac capabilities, number of antennas, etc)
- * Regulatory information
- * Calibration information (crystal offset calibration, TX/RX Gain table, spur information, etc)
- * Power table information (band edges, power levels per channel/rate, etc)
+  * Configuration information (MAC address, 2G/5G, 11n capabilities, 11ac capabilities, number of antennas, etc)
+  * Regulatory information
+  * Calibration information (crystal offset calibration, TX/RX Gain table, spur information, etc)
+  * Power table information (band edges, power levels per channel/rate, etc)
 
 Without it, the NIC will likely not function correctly.
 
@@ -21,10 +21,10 @@ There are a few pieces to the puzzle here.
 
 Firstly - there are a number of sources of calibration data.
 
- * Sometimes it's in OTP (one time programmable ROM.) It's on-chip, there's a small amount of it, and it's one time programmable.
- * Sometimes it's in serial attached EEPROM (highly unlikely, but it indeed is a possibility).
- * Sometimes it's in some section in flash (NOR, NAND) with the rest of the running system.
- * Sometimes (during initial calibration) it's just a file on a filesystem.
+  * Sometimes it's in OTP (one time programmable ROM.) It's on-chip, there's a small amount of it, and it's one time programmable.
+  * Sometimes it's in serial attached EEPROM (highly unlikely, but it indeed is a possibility).
+  * Sometimes it's in some section in flash (NOR, NAND) with the rest of the running system.
+  * Sometimes (during initial calibration) it's just a file on a filesystem.
 
 The OTP and EEPROM is typically found on discrete NICs. The flash (NOR, NAND) calibration sections are typically found in access points and embedded devices, primarily to cut down manufacturing overhead (no need to program OTP.)
 
@@ -36,9 +36,9 @@ So, what's board data? When manufacturers make wireless boards, they start with 
 
 So instead of storing the whole calibration data set in each chip, it's typically a three stage process:
 
- * The calibration data in OTP says "I'm a board of type X!", which the driver can use to find a template board data file to use;
- * The driver loads the template board data file and OTP file into firmware;
- * The firmware creates a single large calibration data section, and uses that for operation.
+  * The calibration data in OTP says "I'm a board of type X!", which the driver can use to find a template board data file to use;
+  * The driver loads the template board data file and OTP file into firmware;
+  * The firmware creates a single large calibration data section, and uses that for operation.
 
 Now, some of the methods don't require it. Notably, in-flash calibration (NOR, NAND) has an entire copy of the calibration data, so the firmware just consumes all of that. However! The initial boot-up sequence may use parameters in the board data file to find out some capabilities, so typically the board data files are still required.
 
@@ -58,13 +58,13 @@ For later NICs there are plenty of variants of calibration files, so ath10k supp
 
 So, when the driver starts up, it will:
 
- * Determine which calibration section to check - file, flash, OTP - this is where you can really use you own calibration data in a file.
- * Read the board data information out and check board data files
- * if a per-NIC board.bin file exists, use that. This is your general "I really want to use my own per-NIC board data file."
- * Assemble a search string to search for board data files - typically that includes the BMI ID out of OTP, PCI ID, PCI subdivide ID, etc
- * Use the search string(s) to find a suitable calibration file in a board-2.bin file
- * If nothing is found, use the global board.bin file
- * If that isn't found, abort
+  * Determine which calibration section to check - file, flash, OTP - this is where you can really use you own calibration data in a file.
+  * Read the board data information out and check board data files
+  * if a per-NIC board.bin file exists, use that. This is your general "I really want to use my own per-NIC board data file."
+  * Assemble a search string to search for board data files - typically that includes the BMI ID out of OTP, PCI ID, PCI subdivide ID, etc
+  * Use the search string(s) to find a suitable calibration file in a board-2.bin file
+  * If nothing is found, use the global board.bin file
+  * If that isn't found, abort
 
 Then the driver will feed the calibration data and the OTP data to the firmware and .. well, magic happens.
 
