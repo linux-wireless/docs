@@ -218,11 +218,11 @@ index 0000000..adf4de4
 
 If you send a new version of the patch or patchset you should always add a version number. The first version does not need to be shown but starting from second version the version number must be available:
 
-[PATCH] ath10k: fix DMA allocation
-[PATCH v2] ath10k: fix DMA allocation
-[PATCH v3] ath10k: fix DMA allocation
-...
-[PATCH v11] ath10k: fix DMA allocation
+  [PATCH] ath10k: fix DMA allocation
+  [PATCH v2] ath10k: fix DMA allocation
+  [PATCH v3] ath10k: fix DMA allocation
+  ...
+  [PATCH v11] ath10k: fix DMA allocation
 
 ===== More patch work references =====
 
