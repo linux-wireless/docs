@@ -236,6 +236,10 @@ If you have just one patch you can add the changelog after the ''%%---%%'' (thre
 If you have multiples patches (called a patchset) add the changelog to the cover letter. You can create the cover letter with switch ''--cover-letter'':
 
   git format-patch --subject-prefix="PATCH v2" --cover-letter
+  
+==== Signed-off-by missing ====
+
+Read [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin|Developer's Certificate of Origin]] and add Signed-off-by to the commit log.
 
 ===== More patch work references =====
 
