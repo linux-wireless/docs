@@ -1,6 +1,5 @@
 
 
-
 ===== About this guide =====
 
 This guide is designed to give you an idea of how to write //linux-wireless// patches. 
@@ -129,7 +128,7 @@ Signed-off-by: Luis R. Rodriguez <mcgrof@example.com>
 ---
  include/net/ieee80211_regdomains.h |  196 ++++++++
 ...</code>
-Please also read the [[https://kernel.org/doc/Documentation/SubmittingPatches|official Linux SubmittingPatches]] documentation, especially Section 12 and the **Developer's Certificate of Origin**. Do not submit patches unless you have read, understood and agreed to the certificate. 
+Please also read the [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|official Linux SubmittingPatches]] documentation, especially the **[[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin|Developer's Certificate of Origin]]**. Do not submit patches unless you have read, understood and agreed to the certificate. 
 
 
 ===== Examples of a patches =====
@@ -242,7 +241,7 @@ If you have multiples patches (called a patchset) add the changelog to the cover
 
 Here is a list of links to help you write better patches 
 
-  * [[https://www.kernel.org/doc/Documentation/SubmittingPatches|SubmittingPatches]]
+  * [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|SubmittingPatches]]
   * https://kernelnewbies.org/FirstKernelPatch
   * [[http://linux.yyz.us/patch-format.html|http://linux.yyz.us/patch-format.html]] 
   * [[https://www.ozlabs.org/~akpm/stuff/tpp.txt|Andrew Morton's ''The perfect patch'']] 
