@@ -212,6 +212,18 @@ index 0000000..adf4de4
 +/*
 ... ETC ...</code>
 
+===== Frequent problems in patch submissions =====
+
+==== Patch version missing ====
+
+If you send a new version of the patch or patchset you should always add a version number. The first version does not need to be shown but starting from second version the version number must be available:
+
+[PATCH] ath10k: fix DMA allocation
+[PATCH v2] ath10k: fix DMA allocation
+[PATCH v3] ath10k: fix DMA allocation
+...
+[PATCH v11] ath10k: fix DMA allocation
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
