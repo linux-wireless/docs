@@ -224,6 +224,20 @@ If you send a new version of the patch or patchset you should always add a versi
   ...
   [PATCH v11] ath10k: fix DMA allocation
 
+You can add the version with switch ''--subject-prefix'':
+  
+  git format-patch --subject-prefix="PATCH v2"
+
+==== Changelog missing ====
+
+When sending a new version of a patch or patchset you should **always** add a changelog so that maintainer can easily what has changed.
+
+If you have just one patch you can add the changelog after the ''%%---%%'' (three dashes) line.
+
+If you have multiples patches (called a patchset) add the changelog to the cover letter. You can create the cover letter with switch ''--cover-letter'':
+
+  git format-patch --subject-prefix="PATCH v2" --cover-letter
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
