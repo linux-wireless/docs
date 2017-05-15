@@ -156,9 +156,6 @@ Franky Lin              [[mailto:franky.lin@broadcom.com|franky.lin@broadcom.com
 
 Hante Meuleman          [[mailto:hante.meuleman@broadcom.com|hante.meuleman@broadcom.com]] 
 
-Brett Rudley            [[mailto:brett.rudley@broadcom.com|brett.rudley@broadcom.com]] 
-
-
 ===== Developer information =====
 
 
