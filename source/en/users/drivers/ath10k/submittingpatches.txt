@@ -4,17 +4,20 @@ Go back --> [[en/users/Drivers/ath10k]]
 ===== Submitting patches =====
 
 Send patches to the mailing lists below. Kalle Valo reviews the patches within the next few days and, if they are ok, commits them to ath.git. 
-      * To: [[mailto:ath10k@lists.infradead.org|ath10k@lists.infradead.org]] 
-      * Cc: [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]] 
+      * To: [[ath10k@lists.infradead.org]] 
+      * Cc: [[linux-wireless@vger.kernel.org]] 
 
-Preferably use ath.git master branch as the baseline for patches. Other trees can be used as well, but then the chances of conflicts are higher. 
+Preferably use [[en/users/drivers/ath10k/sources|ath.git master branch]] as the baseline for patches. Other trees can be used as well, but then the chances of conflicts are higher. 
 
 More info about submitting patches: 
-        * [[en/developers/Documentation/SubmittingPatches|en/developers/Documentation/SubmittingPatches]] 
-        * [[en/developers/Documentation/git-guide|en/developers/Documentation/git-guide]] 
+        * [[en/developers/Documentation/SubmittingPatches|linux-wireless submitting patches instructions]] 
+        * [[en/developers/Documentation/git-guide|linux-wireless git guide]] 
 
-Guidelines for patches: 
-          * MUST follow [[https://www.kernel.org/doc/Documentation/SubmittingPatches|Documentation/SubmittingPatches]]
+==== Guidelines ====
+
+Guidelines for patches are:
+ 
+          * MUST follow [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Documentation/SubmittingPatches]]
           * MUST be compiler warning free. 
           * MUST be sparse warning free. 
           * Commit log MUST not be empty. 
@@ -23,19 +26,21 @@ Guidelines for patches:
              * How does it change the functionality from user's point of view? 
              * Does it fix a bug? If it does, please describe the bug (doesn't need to be long). Also if there's a public bug report add a link to the bug report. 
              * If a problem has been found during code review and doesn't fix a known issues, mention that in the commit log.
-             * Ingo Molnar has written [[https://lkml.kernel.org/g/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log. 
+             * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log. 
           *   If others have reported the issue commit log SHOULD use Reported-by: and Tested-by: tags. 
-          *   SHOULD be checkpatch clean: 
-          *     Patches SHOULD be sent with git send-email tool. 
-          *     Patchsets SHOULD contain no more than 12 patches. 
-          *     Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]] 
-          *     It's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] 
+          * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense): 
+            * Patches SHOULD be sent with git send-email tool. 
+            * Patchsets SHOULD contain no more than 12 patches. 
+            * Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]] 
+            * It's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] 
 
 The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
 
+==== Patch flow ====
+
 The ath10k patch flow is this: 
           * Patch gets posted to the mailing lists. 
-          * Kalle immediately applies the patch to pending branch for build testing. 
+          * Kalle immediately applies the patch to pending and master-pending branches for build testing. 
           * Kalle waits two business days for patch being under review (unless the patch is urgent). 
           * If no comments or warnings, Kalle applies the patch to ath-next branch and sends a "Thanks, applied" reply. 
           * Kalle merges ath-next to master branch immeadiately after the patch is applies. 
