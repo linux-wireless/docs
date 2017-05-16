@@ -27,9 +27,11 @@ For wireless-drivers patches (except mac80211_hwsim) send patches as:
 <code>To: linux-wireless@vger.kernel.org
 Cc: Driver maintainers, Other Developers</code>
 
-Where [[en/developers/maintainers|Maintainers]] contains the list of maintainers for the piece of code you are patching. //Other Developers// in this case can be a list of developers who you think may like to review this patch or who changed the code you are working on recently. 
+Where [[en/developers/maintainers|Maintainers]] contains the list of maintainers and mailing lists for the piece of code you are patching. //Other Developers// in this case can be a list of developers (or mailing lists) who you think may like to review this patch or who changed the code you are working on recently. 
 
+Do note that drivers might have special requirements, the best is to check them from the corresponding wiki page. Here's a list for few of them:
 
+  * [[en/users/drivers/ath10k/sources#submitting_patches|ath10k]]
 ===== Checking state of patches from patchwork =====
 
 All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux-wireless/list/|linux-wireless patchwork project]] (only exception being ath10k which has its own [[https://patchwork.kernel.org/project/ath10k/list/?state=*|ath10k patchwork project]]). From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
