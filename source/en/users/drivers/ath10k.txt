@@ -4,7 +4,7 @@ ath10k is the mac80211 wireless driver for Qualcom Atheros QCA988x family of chi
 
 A major difference from [[ath9k]] is that there's now a firmware and that's why we had to implement a new driver.
 
-The ath10k driver is located under drivers/net/wireless/ath/ath10k directory. To easily browse the sources you can access that through [[https://github.com/kvalo/ath/tree/master/drivers/net/wireless/ath/ath10k|github source listing]].
+The ath10k driver is located under [[https://git.kernel.org/cgit/linux/kernel/git/kvalo/ath.git/tree/drivers/net/wireless/ath/ath10k|drivers/net/wireless/ath/ath10k]] directory. For more information see [[en/users/drivers/ath10k/sources]].
 
 ===== Subpages =====
 
