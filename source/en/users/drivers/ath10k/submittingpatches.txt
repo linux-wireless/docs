@@ -48,3 +48,4 @@ The ath10k patch flow is this:
           * David Miller merges wireless-drivers-next into net-next every two weeks or so 
           * Linus Torvalds merges net-next into linux.git during [[https://www.kernel.org/doc/Documentation/development-process/2.Process|merge window]] 
 
+As a rough estimate it takes 2-4 months for a patch to propagate from ath.git to an official Linux release.
