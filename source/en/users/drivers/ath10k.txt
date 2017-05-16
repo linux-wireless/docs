@@ -1,6 +1,6 @@
 ===== About ath10k =====
 
-ath10k is the mac80211 wireless driver for Qualcom Atheros QCA988x family of chips, which support [[http://en.wikipedia.org/wiki/IEEE|IEEE 802.11ac]].
+ath10k is the mac80211 wireless driver for Qualcom Atheros QCA988x family of chips, which support [[https://en.wikipedia.org/wiki/IEEE_802.11ac|IEEE 802.11ac]].
 
 A major difference from [[ath9k]] is that there's now a firmware and that's why we had to implement a new driver.
 
