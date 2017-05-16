@@ -8,10 +8,11 @@ The ath10k driver is located under [[https://git.kernel.org/cgit/linux/kernel/gi
 
 ===== Subpages =====
 
+  * [[en/users/drivers/ath10k/sources|Sources]]
+  * [[en/users/drivers/ath10k/submittingpatches|Submitting Patches]]
   * [[en/users/drivers/ath10k/faq|FAQ]]
   * [[en/users/drivers/ath10k/backports|Backports]]
   * [[en/users/drivers/ath10k/architecture|Architecture]]
-  * [[en/users/drivers/ath10k/sources|Sources & patches]]
   * [[en/users/drivers/ath10k/debug|Debug]]
   * [[en/users/drivers/ath10k/firmware|Firmware]]
   * [[en/users/drivers/ath10k/configuration|Configuration]]
