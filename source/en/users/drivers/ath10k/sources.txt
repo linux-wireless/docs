@@ -1,4 +1,3 @@
-o
 Go back --> [[en/users/Drivers/ath10k|ath10k]] 
 
  
