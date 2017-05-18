@@ -243,7 +243,7 @@ If you have multiples patches (called a patchset) add the changelog to the cover
 
 Read [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin|Developer's Certificate of Origin]] and add Signed-off-by to the commit log.
 
-==== Whitespace damage ====
+==== Format issues ====
 
 Patch is somehow whitespace damaged, for example tabs converted to spaces, extra new lines or other modifications which prevent applying the patch without manual fixing. Or the mail is in HTML format which most of the mailing lists even block silently.
 
