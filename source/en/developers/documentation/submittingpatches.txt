@@ -286,7 +286,7 @@ Date:   Sun Mar 5 18:35:02 2017 +0200
 
 ==== Commit title is wrong ====
 
-The format of the commit title is name of driver, followed by colon, followed by space and then followed by the actual title. You can use ''git log'' to check older commits and see what prefix was used:
+The correc tformat for the commit title is name of driver, followed by a colon, followed by a space and then followed by the actual title. You can use ''git log'' to check older commits and see what prefix was used:
 
 <code>
 $ git log --oneline --follow --no-merges -20 drivers/net/wireless/marvell/mwifiex/11ac.c
