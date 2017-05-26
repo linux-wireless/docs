@@ -260,6 +260,31 @@ Example:
 
   Fixes: c742e623e941 ("mwifiex: sdio card reset enhancement")
 
+==== Commit reference is wrong ====
+
+The correct format for the commit references in commit logs is to start with the string "commit", followed by a space, followed 12 initial digits
+of the SHA1_ID of the commit, followed by a space and followed by the
+commit log message header line text enclosed in parentheses.
+
+Example:
+
+<code>
+commit f99a6abe59e096cc2c753e667c19f22022e3bef4
+Author: Sara Sharon <sara.sharon@intel.com>
+Date:   Sun Mar 5 18:35:02 2017 +0200
+
+    iwlwifi: mvm: memset binding before setting values
+    
+    The changes in commit 9415af7f306b ("iwlwifi: mvm: support new binding
+    API") assigned values that were later memset to 0.  Move the memset
+    earlier.
+    
+    Fixes: 9415af7f306b ("iwlwifi: mvm: support new binding API")
+    Signed-off-by: Sara Sharon <sara.sharon@intel.com>
+    Signed-off-by: Luca Coelho <luciano.coelho@intel.com>
+</code>
+
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
