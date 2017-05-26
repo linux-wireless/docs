@@ -284,6 +284,26 @@ Date:   Sun Mar 5 18:35:02 2017 +0200
     Signed-off-by: Luca Coelho <luciano.coelho@intel.com>
 </code>
 
+==== Commit title is wrong ====
+
+The format of the commit title is name of driver, followed by colon, followed by space and then followed by the actual title. You can use ''git log'' to check older commits and see what prefix was used:
+
+<code>
+$ git log --oneline --follow --no-merges -20 drivers/net/wireless/marvell/mwifiex/11ac.c
+277b024e5e3d mwifiex: move under marvell vendor directory
+65da33f5557f mwifiex: update Copyright to 2014
+cf831ffe4473 mwifiex: fix IE parsing issues
+d51246481c7f mwifiex: save and copy AP's VHT capability info correctly
+5f6d5983394f mwifiex: add VHT support for TDLS
+9ed230bcbab7 mwifiex: pass ieee80211_vht_cap to mwifiex_fill_vht_cap_tlv
+406d702b47a2 mwifiex: improve readability in 11ac mcsmap to maxrate conversion
+89467d8ca21b mwifiex: make 11ac mcs rate tables global and const
+7abf4129e6df mwifiex: make use of IEEE80211_VHT_MCS_NOT_SUPPORTED
+0648f3a4b0e9 mwifiex: correct bss_mode check while appending vht operation IE
+2b6254dacfe6 mwifiex: use separate AMPDU tx/rx window sizes in 11ac networks
+83c78da983d6 mwifiex: add support to configure VHT for AP mode
+a5f390562a37 mwifiex: add 802.11AC support
+</code>
 
 ===== More patch work references =====
 
