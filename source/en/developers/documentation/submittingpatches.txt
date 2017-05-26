@@ -249,6 +249,17 @@ Patch is somehow whitespace damaged, for example tabs converted to spaces, extra
 
 The best way to avoid all formatting issues is to use [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]]
 
+==== Fixes line is incorrect ====
+
+The correct format for the commit references in Fixes line is the 12 initial digits
+of the SHA1_ID of the commit, followed by a space, followed by the
+commit log message header line text enclosed in parentheses and
+double quotes with no line breaks whatsoever.
+
+Example:
+
+  Fixes: c742e623e941 ("mwifiex: sdio card reset enhancement")
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
