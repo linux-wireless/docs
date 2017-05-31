@@ -247,7 +247,7 @@ Read [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#si
 
 Patch is somehow whitespace damaged, for example tabs converted to spaces, extra new lines or other modifications which prevent applying the patch without manual fixing. Or the mail is in HTML format which most of the mailing lists even block silently.
 
-The best way to avoid all formatting issues is to use [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]]
+The best way to avoid all formatting issues is to use [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]]. See [[en/developers/Documentation/git-guide|linux-wireless git guide]] for more information.
 
 ==== Fixes line is incorrect ====
 
