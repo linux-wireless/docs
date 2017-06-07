@@ -144,17 +144,18 @@ Copy this file where brcmfmac expects the nvram, for example:
 
 ===== Contact Info =====
 
-For driver issues and/or bug reports, please use: 
+For driver issues and/or bug reports, please use one or both:
 
-[[mailto:brcm80211-dev-list.pdl@broadcom.com|brcm80211-dev-list.pdl@broadcom.com]] 
+[[mailto:brcm80211-dev-list.pdl@broadcom.com|brcm80211-dev-list.pdl@broadcom.com]]
+[[mailto:brcm80211-dev-list@cypress.com|brcm80211-dev-list@cypress.com]]
 
 For any other questions feel free to contact the developers listed below: 
 
 Arend van Spriel        [[mailto:arend.vanspriel@broadcom.com|arend.vanspriel@broadcom.com]] 
-
 Franky Lin              [[mailto:franky.lin@broadcom.com|franky.lin@broadcom.com]] 
-
 Hante Meuleman          [[mailto:hante.meuleman@broadcom.com|hante.meuleman@broadcom.com]] 
+Chi-Hsien Lin           [[mailto:Chi-Hsien.Lin@cypress.com|Chi-Hsien.Lin@cypress.com]]
+Wright Feng             [[mailto:Wright.Feng@cypress.com|Wright.Feng@cypress.com]]
 
 ===== Developer information =====
 
