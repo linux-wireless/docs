@@ -22,21 +22,6 @@ The ath10k driver is located under [[https://git.kernel.org/cgit/linux/kernel/gi
   * [[en/users/drivers/ath10k/todo|TODO]]
   * [[en/users/drivers/ath10k/privatesupport|Private Support]]
 
-
-===== Mailing list =====
-
-ath10k has it's own mailing list for discussions and patches:
-
-http://lists.infradead.org/mailman/listinfo/ath10k
-
-Archive for the mailing list:
-
-http://lists.infradead.org/pipermail/ath10k/
-
-===== IRC channel =====
-
-For real time discussions there is #ath10k channel on Freenode.
-
 ===== Known bugs/limitations =====
 
   * firmware does not support association to the same AP from different virtual STA interfaces (driver prints "ath10k: Failed to add peer XX:XX:XX:XX:XX:XX for VDEV: X" in that case)
@@ -44,9 +29,7 @@ For real time discussions there is #ath10k channel on Freenode.
   * applying ath9k regulatory domain hack patch from OpenWRT causes firmware crash (reason: regulatory hint function is never called and ath10k never sends scan channel list to the firmware which in turn causes firmware to crash on scan)
   * tx rate is reported as 6mbps due to firmware limitation (no tx rate information in tx completions); instead see /sys/kernel/debug/ieee80211/phyX/ath10k/fw_stats
   * WEP doesn't work with AP_VLANs - frames are sent unencrypted (observed on: 999.999.0.636, 10.2.4.20-1, 10.1.467.2-1)
-===== Reporting bugs =====
 
-Please send bug reports to the mailing list <ath10k@lists.infradead.org>
 
 ===== Supported Devices =====
 
