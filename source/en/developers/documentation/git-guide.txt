@@ -195,10 +195,26 @@ If you want to add a new commit to the series simply add the commit using the us
 
 Read git-send-email man page. But here is a quick summary for those who just want to get it to work. Keep in mind git send-email is a perl script and is usually shipped separately from git core. 
 
-You can install your favorite mailer, one option is to use ssmtp.  
+You can install your favorite mailer, you can directly contact to your SMTP server or alternivately to use ssmtp.  
 
+To set your name and email in git:
 
-==== Setting up ssmtp ====
+<code>
+git config --global user.name "Ed Example"
+git config --global user.email "ed@example.com"</code>
+
+==== Using SMTP server directly ====
+
+Set SMTP settings to git:
+
+<code>
+git config --global sendemail.smtpencryption tls
+git config --global sendemail.smtpserver mail.example.com
+git config --global sendemail.smtpuser ed@example.com
+git config --global sendemail.smtpserverport 587
+git config --global sendemail.smtppass myverysecretpassword</code>
+
+==== Setting up ssmtp (optional) ====
 
 Below is an example config that works with an exchange server, in etc/ssmtp/ssmtp.conf: 
 
@@ -223,7 +239,7 @@ user can be the username (<code>whoami</code>) on the system.
 
 Once you have your mailer setup and patches in a directory, review them so they are correct. Once all done send them out using: 
 
+<code>
+git send-email --to linux-wireless@vger.kernel.org --cc maintainer-of-driver@example.com some-dir/</code>
 
-<code># Note new versions of git use: git send-email
-git send-email --no-chain-reply-to --from "Random Developer <hacker@company.com>" --to linville@tuxdriver.com --cc linux-wireless@vger.kernel.org --cc maintainer-of-driver@some-cool.org some-dir/</code>
-Where some-dir is where you stashed your patches. Keep in mind that if you are submitting a series it helps to send an introductory PATCH [0/n]  as well, where n is the number of patches you want to send. You can add this to the git-send-email queue easily using --cover-letter when generating patches using git-format-patch. Be sure to edit the patch 0000-foo then. git-send-email will pick it up when you specify the directory :) 
+Where some-dir is where you stashed your patches. Keep in mind that if you are submitting a series it helps to send an introductory PATCH [0/n]  as well, where n is the number of patches you want to send. You can add this to the git-send-email queue easily using ''--cover-letter'' when generating patches using git-format-patch. Be sure to edit the patch 0000-foo then. git-send-email will pick it up when you specify the directory :) 
