@@ -22,15 +22,6 @@ The ath10k driver is located under [[https://git.kernel.org/cgit/linux/kernel/gi
   * [[en/users/drivers/ath10k/todo|TODO]]
   * [[en/users/drivers/ath10k/privatesupport|Private Support]]
 
-===== Known bugs/limitations =====
-
-  * firmware does not support association to the same AP from different virtual STA interfaces (driver prints "ath10k: Failed to add peer XX:XX:XX:XX:XX:XX for VDEV: X" in that case)
-  * packet injection isn't supported yet
-  * applying ath9k regulatory domain hack patch from OpenWRT causes firmware crash (reason: regulatory hint function is never called and ath10k never sends scan channel list to the firmware which in turn causes firmware to crash on scan)
-  * tx rate is reported as 6mbps due to firmware limitation (no tx rate information in tx completions); instead see /sys/kernel/debug/ieee80211/phyX/ath10k/fw_stats
-  * WEP doesn't work with AP_VLANs - frames are sent unencrypted (observed on: 999.999.0.636, 10.2.4.20-1, 10.1.467.2-1)
-
-
 ===== Supported Devices =====
 
 ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a list of known products:
@@ -56,6 +47,19 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a 
 
 [1] The Compex WLE900VX card enumerates as PCI device on some PCs but not for some other PCs. The reason could possibly be PC hardware or kernel version. Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821. The Chaos Calmer wpj344a_150827_vCC.img provided by http://www.compex.com.sg/downloads/ can detect and enable the WLE900VX card with ath10k.
 
+===== Not supported =====
+
 ath10k does NOT support older QCA98xx hw1.0 chips found, for example, from these devices:
 
   * QCA9880 Version 1 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link WDR-7500 v2 and Archer C7 v1.x]]
+
+Any SDIO or USB devices are not supported, but work is ongoing to add that.
+
+===== Known bugs/limitations =====
+
+  * firmware does not support association to the same AP from different virtual STA interfaces (driver prints "ath10k: Failed to add peer XX:XX:XX:XX:XX:XX for VDEV: X" in that case)
+  * packet injection isn't supported yet
+  * applying ath9k regulatory domain hack patch from OpenWRT causes firmware crash (reason: regulatory hint function is never called and ath10k never sends scan channel list to the firmware which in turn causes firmware to crash on scan)
+  * tx rate is reported as 6mbps due to firmware limitation (no tx rate information in tx completions); instead see /sys/kernel/debug/ieee80211/phyX/ath10k/fw_stats
+  * WEP doesn't work with AP_VLANs - frames are sent unencrypted (observed on: 999.999.0.636, 10.2.4.20-1, 10.1.467.2-1)
+
