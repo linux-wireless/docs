@@ -17,7 +17,9 @@ If you just want to browse the source code with your web browser this links alwa
 
 https://git.kernel.org/cgit/linux/kernel/git/kvalo/ath.git/tree/drivers/net/wireless/ath/ath10k
 
-Periodically Kalle Valo pulls the ath tree into wireless-drivers-next tree. Then David Miller pulls it to net-next which is eventually pulled by Linus Torvalds to official kernel releases. As a rough estimate it takes 2-4 months for a patch to propage from ath.git to an official Linux release.
+Periodically Kalle Valo merges ath-next and ath-current branches from ath.git into wireless-drivers-next and wireless-drivers tree, respectively. Then David Miller merges them to net-next and net trees, respectively, which are eventually merged by Linus Torvalds to the official kernel releases. 
+
+As a rough estimate it takes patches in ath-next 2-4 months to propagate from ath.git to the next official Linux release and patches from ath-current 1-3 weeks to propagate to the next -rc release.
 
 See also [[en/users/drivers/ath10k/submittingpatches|submitting ath10k patches]].
 
