@@ -33,4 +33,4 @@ ath.git contains multiple branches:
   * **pending:** Used for building and runtime testing patches under review. Is rebased almost daily and hence commit ids are NOT stable. Use this only if you know what you are doing. 
   * **master-pending:** The pending branch merged on top of the master, for easier testing of the pending patches. Same rules apply as with the pending branch.
 
-To clarify the meaning with ath-current and ath-next let's take a concrete example: let's say that the latest release from Linux is v4.9-rc2. If a patch is applied to ath-current it will most like be in v4.9-rc4 or v4.9-rc5 (usually it takes a minimum of one week to get to Linus' tree, sometimes more). But if the patch is applied to ath-next the first it will be in v4.10-rc1.
+To clarify the meaning with ath-current and ath-next let's take a concrete example: let's say that the latest release from Linux is v4.9-rc2. If a patch is applied to ath-current it will most like be in v4.9-rc4 or v4.9-rc5 (usually it takes a minimum of one week to get to Linus' tree, sometimes more). But if the patch is applied to ath-next the first release it will be in is v4.10-rc1.
