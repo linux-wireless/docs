@@ -56,7 +56,7 @@ Here is the table to help you finding the right version of the different compone
 
 
 
-Note that due what is said [[en:users:drivers:iwlwifi#and_7265_support|here]], 7260 and 7265 are not supported any more in the latest firmware versions. The recommended firmware for these devices is the latest published firmware (Core14) and the latest Core driver. 7265D and 3168's latest firmware version is Core26 (-29.ucode).
+Note that due what is said [[en:users:drivers:iwlwifi#d_3165_and_3168_support|here]], 7260 and 7265 are not supported any more in the latest firmware versions. The recommended firmware for these devices is the latest published firmware (Core14) and the latest Core driver. 7265D and 3168's latest firmware version is Core26 (-29.ucode).
 
 ====== About vendor commands ======
 iwlwifi implements a few vendor commands that are available in this tree. We strongly suggest that you disable the vendor commands Kconfig option (CPTCFG_IWLMVM_VENDOR_CMDS). Enabling vendor commands without actually sending them can cause incompatibility with certain versions of the supplicant (due to a supplicant bug) or too aggressive Multicast frames filtering. Note that CPTCFG_IWLMVM_VENDOR_CMDS is enabled by default and needs to be explicitly disabled.
