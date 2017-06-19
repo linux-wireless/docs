@@ -14,3 +14,4 @@
   * [[en/developers/Summits/Ottawa-2015|Ottawa, 2015]] 
   * [[en/developers/Summits/Seville-2016|Seville, 2016]]
   * [[en/developers/Summits/Santa-Fe-2016|Santa Fe, 2016]]
+  * [[en/developers/Summits/Seoul-2017|Seoul, 2017]]
