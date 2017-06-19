@@ -1,0 +1,23 @@
+====== 2017 wireless workshop ======
+
+===== Logistics =====
+
+Netdev 2.2 has been announced for Seoul, South Korea, November 8-10:
+
+http://netdevconf.org/2.2/
+
+We're planning to hold the next wireless workshop there.
+
+Formalities will be as usual - open (discussion) session, you have to
+be registered for netdev. Details will follow.
+
+
+===== Suggested topics =====
+
+add suggestions here:
+
+  * EAPOL over nl80211 review/post-mortem (assuming it's done)?
+
+===== planning to attend =====
+  * Johannes Berg
+  * 
