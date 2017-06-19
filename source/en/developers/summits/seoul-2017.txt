@@ -6,7 +6,7 @@ Netdev 2.2 has been announced for Seoul, South Korea, November 8-10:
 
 http://netdevconf.org/2.2/
 
-We're planning to hold the next wireless workshop there.
+We're planning to hold the next wireless workshop there, most likely either on November 8th or 9th (Wednesday or Thursday).
 
 Formalities will be as usual - open (discussion) session, you have to
 be registered for netdev. Details will follow.
