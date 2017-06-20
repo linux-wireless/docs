@@ -55,7 +55,7 @@ iwlwifi implements a few vendor commands that are available in this tree. We str
 
 ====== How to install the driver ======
 In order to install the driver, you'll need to download the sources:
-  git clone https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git -b release/LinuxCore14
+  git clone https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git -b release/LinuxCore28
 
 Then, you can make the sources with vendor commands disabled:
   make defconfig-iwlwifi-public
