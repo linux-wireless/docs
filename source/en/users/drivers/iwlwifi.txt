@@ -171,7 +171,7 @@ Platform noise depends on the actual platform/computer and its design/manufactur
 Some common sources of platform noise might be:
 
   * The PCIe bus, especially when switching in/out of power saving modes.
-  * USB3 and graphics (in certain scenarios).
+  * [[https://www.intel.com/content/www/us/en/io/universal-serial-bus/usb3-frequency-interference-paper.html|USB3]] and graphics (in certain scenarios).
   * Sometimes, even the fact that several ingredients’ ground lines are connected can cause noise. 
  
 This kind of interference might happen on 2.4GHz band, it is much less likely to happen on 5.2GHz band.
