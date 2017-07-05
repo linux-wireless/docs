@@ -2,7 +2,7 @@
 
 ===== rt2800usb =====
 
-Driver for [[http://www.mediatek.com|Ralink/MediaTek]] USB devices RT2770, RT2870, RT3070 RT3071, RT3072, RT3572. 
+Driver for [[https://www.mediatek.com/products/connectivity-and-networking|Ralink/MediaTek]] USB devices RT2770, RT2870, RT3070 RT3071, RT3072, RT3572. 
 
  
 
