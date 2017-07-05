@@ -16,7 +16,9 @@ Please see the [[en/users/Drivers/rt2800pci/devices|device list]].
 ===== Unsupported chips =====
    * [[https://www.mediatek.com/products/broadbandWifi/rt5592|RT5592]], 802.11a/b/g/n 2T2R 2.4/5 GHz PCI Express Single Chip. (**WIP** Stanislaw Gruszka <[[mailto:stf_xl@wp.pl|stf_xl@wp.pl]]> : [[http://rt2x00.serialmonkey.com/pipermail/users_rt2x00.serialmonkey.com/2013-March/005765.html|http://rt2x00.serialmonkey.com/pipermail/users_rt2x00.serialmonkey.com/2013-March/005765.html]]). The Ralink driver for RT5592 can be downloaded from: [[http://www.asus.com/Networking/PCEN53/HelpDesk_Download/|http://www.asus.com/Networking/PCEN53/HelpDesk_Download/]] (direct link: [[http://dlcdnet.asus.com/pub/ASUS/wireless/PCE-N53/Linux_PCE_N53_1008.zip|http://dlcdnet.asus.com/pub/ASUS/wireless/PCE-N53/Linux_PCE_N53_1008.zip]] )
    
-   * Any new [[https://wikidevi.com/wiki/Ralink|Ralink]] or [[https://wikidevi.com/wiki/MediaTek|MediaTek]] chip. Vendor drivers can be downloaded from: [[http://www.mediatek.com/products/connectivity-and-networking/broadband-wifi]] 
+   * Any new [[https://wikidevi.com/wiki/Ralink|Ralink]] or [[https://wikidevi.com/wiki/MediaTek|MediaTek]] chip. Vendor drivers can be downloaded from: 
+      * [[https://www.mediatek.com/products/connectivity-and-networking/broadband-wifi]] 
+      * https://www.mediatek.com/products/connectivity-and-networking/legacy-products
  
 ===== Features =====
         * //TODO// 
