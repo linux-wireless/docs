@@ -2,7 +2,7 @@
 
 ===== rt2800pci =====
 
-Driver for [[http://www.mediatek.com|Ralink/MediaTek]] PCI devices RT2760, RT2790, RT2860, RT2880, RT2890 & RT3052. 
+Driver for [[https://www.mediatek.com/products/connectivity-and-networking|Ralink/MediaTek]] PCI devices RT2760, RT2790, RT2860, RT2880, RT2890 & RT3052. 
 
  
 
