@@ -15,7 +15,7 @@ Please see the [[en/users/Drivers/rt2800usb/devices|device list]].
 
 ===== Unsupported chips =====
 
-* Any new [[https://wikidevi.com/wiki/Ralink|Ralink]] or [[https://wikidevi.com/wiki/MediaTek|MediaTek]] chip. Vendor drivers can be downloaded from: [[http://www.mediatek.com/products/connectivity-and-networking/broadband-wifi]] 
+  * Any new [[https://wikidevi.com/wiki/Ralink|Ralink]] or [[https://wikidevi.com/wiki/MediaTek|MediaTek]] chip. Vendor drivers can be downloaded from: [[http://www.mediatek.com/products/connectivity-and-networking/broadband-wifi]] 
 
 
 ===== features =====
