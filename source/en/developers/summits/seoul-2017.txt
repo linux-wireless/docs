@@ -21,3 +21,4 @@ add suggestions here:
 ===== planning to attend =====
   * Johannes Berg
   * Luca Coelho
+  * Jouni Malinen
