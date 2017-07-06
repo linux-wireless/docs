@@ -22,3 +22,4 @@ add suggestions here:
   * Johannes Berg
   * Luca Coelho
   * Jouni Malinen
+  * Kalle Valo
