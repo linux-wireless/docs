@@ -243,7 +243,7 @@ The command line is:
 <code>iw reg set alpha2</code>
 Where "alpha2" is the [[http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2|ISO/IEC 3166 alpha2]] country code. The information used and set comes from our [[en/developers/Regulatory|regulatory infrastructure]]. 
 
-You can also use the latest wpa_supplicant (as of 0.6.7) now to change your regulatory domain, to do so just add a "COUNTRY=US" entry into your configuration for example. 
+You can also use the latest wpa_supplicant (as of 0.6.7) now to change your regulatory domain, to do so just add a "country=US" entry into your configuration for example. 
 
 
 ===== Creating and inspecting Mesh Point interfaces with iw =====
