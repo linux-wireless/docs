@@ -305,6 +305,10 @@ d51246481c7f mwifiex: save and copy AP's VHT capability info correctly
 a5f390562a37 mwifiex: add 802.11AC support
 </code>
 
+==== Too many patches ====
+
+The recommend size is 10-12 patches per patchset. More than that it gets difficult for reviewers and maintainers. Of course there's no hard rule, for simple patches more than that might be ok but then again for more complex patches even 10 patches per patchset might be too much.
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
