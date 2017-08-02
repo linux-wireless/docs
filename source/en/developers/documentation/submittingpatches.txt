@@ -309,6 +309,10 @@ a5f390562a37 mwifiex: add 802.11AC support
 
 The recommend size is 10-12 patches per patchset. More than that it gets difficult for reviewers and maintainers. Of course there's no hard rule, for simple patches more than that might be ok but then again for more complex patches even 10 patches per patchset might be too much.
 
+==== Resubmit the whole patchset =====
+
+Even if just one patch has changed in a patch series resubmit the whole patchset (and remember to increase the version number), do not just resubmit that one changed patch. The reason is that it's difficult to apply patches in correct order when some of them are submitted separately.
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
