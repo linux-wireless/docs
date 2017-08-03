@@ -313,6 +313,13 @@ The recommend size is 10-12 patches per patchset. More than that it gets difficu
 
 Even if just one patch has changed in a patch series resubmit the whole patchset (and remember to increase the version number), do not just resubmit that one changed patch. The reason is that it's difficult to apply patches in correct order when some of them are submitted separately.
 
+==== Commit log does not answer "Why?" ====
+
+The commit log should //always// answer the question "Why?" and describe the reason what
+motivated to implement the patch. This is the most important part of the commit log as this helps maintainers, backports, distros etc to make decisions if the patch is important for them or not and to what release it should go.
+
+The commit log needs to tell why you wrote the patch. If you fixed a bug give a short summary of the bug (can be a long one as well, of course) from user's point of view, and if there's a publically available bug report include a link to that. If you are fixing a warning from a compiler or a static checker add the warning from tool. Or if it's just code cleanup or fixing a theoretical issue, and does not have practical user visible changes, mention that also.
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
