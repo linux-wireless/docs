@@ -27,7 +27,7 @@ The ath10k driver is located under [[https://git.kernel.org/cgit/linux/kernel/gi
 ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a list of known products:
 
 
-  * QCA9888 found in [[http://www.compex.com.sg/product/wle650v5-18/|2x2 MU-MIMO 802.11ac Wave 2 Wireless Module - Compex WLE650V5-18 v2]] 
+  * QCA9888 found in [[http://www.compex.com.sg/product/wle650v5-18/|2x2 MU-MIMO 802.11ac Wave 2 Wireless Module - Compex WLE650V5-18A]] 
   * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of Dual band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9892 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of DUal band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex WLE600V5-27 11ac 2x2 miniPCIe Wireless Module]]
@@ -43,7 +43,7 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a 
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : Archer C7 v2.x]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : WDR7500 v3.0]]
   * QCA9377
-  * QCA9888 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18A]]
+  * QCA9886 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18]]
 
 [1] The Compex WLE900VX card enumerates as PCI device on some PCs but not for some other PCs. The reason could possibly be PC hardware or kernel version. Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821. The Chaos Calmer wpj344a_150827_vCC.img provided by http://www.compex.com.sg/downloads/ can detect and enable the WLE900VX card with ath10k.
 
