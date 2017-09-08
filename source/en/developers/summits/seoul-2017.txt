@@ -20,7 +20,7 @@ add suggestions here:
   * rtlwifi situation?
   * OCE/FILS (review)?
   * iTXQ hookups, airtime fairness?
-  * 
+  * fully migrating mac80211 to iTXQ
 ===== planning to attend =====
   * Johannes Berg
   * Luca Coelho
