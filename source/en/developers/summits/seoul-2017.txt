@@ -14,8 +14,6 @@ be registered for netdev. Details will follow.
 
 ===== Suggested topics =====
 
-add suggestions here:
-
   * EAPOL over nl80211 review/post-mortem (assuming it's done)?
   * rtlwifi situation?
   * OCE/FILS (review)?
