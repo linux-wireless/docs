@@ -15,7 +15,7 @@ be registered for netdev. Details will follow.
 ===== Suggested topics =====
 
   * EAPOL over nl80211 review/post-mortem (assuming it's done)?
-  * rtlwifi situation?
+  * rtlwifi([[https://marc.info/?l=linux-wireless&m=143023412222482 | PCI/USB]]) situation?
   * OCE/FILS (review)?
   * iTXQ hookups, airtime fairness?
   * fully migrating mac80211 to iTXQ
