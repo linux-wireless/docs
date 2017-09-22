@@ -6,10 +6,6 @@
 
 
 
-==== AP support ====
-        * [[en/developers/DFS|AP DFS or AP radar detection]] 
-        * local->total_ps_buffered is totally racy 
-
 
 ==== Issues ====
           * drivers with IV offload do not correctly report IV/PN to nl80211 
