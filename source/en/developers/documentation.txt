@@ -1,11 +1,5 @@
 
 
-===== Developer Documentation =====
-
-This section tries to organize documentation for new Linux wireless developers. 
-
- 
-
 
 ===== Development basics =====
 
