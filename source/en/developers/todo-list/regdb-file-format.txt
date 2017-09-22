@@ -1,3 +1,0 @@
-
-==== TODO ====
-  * add spectral power limits, which is more important now with 5/10 MHz channels
