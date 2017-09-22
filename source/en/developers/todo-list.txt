@@ -4,8 +4,6 @@
 
 
 
-===== mac80211 =====
-
 
 ==== Mesh ====
       * If a mesh join request does not come with a frequency, initiate scan for suitable neighbor MBSS frequency first. 
