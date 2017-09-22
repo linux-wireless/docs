@@ -8,11 +8,12 @@
 
 
 
-| **Manufacturer**   | **AP**\\  | **IBSS**\\  | **mesh**\\  | **monitor**\\  | **PHY modes**  | **Buses**           |
-| Texas Instruments  | ?         | ?           | no          | ?              | B              | PCI / PCMCIA / USB  |
-| Airgo/Qualcom      | ?         | ?           | ?           | ?              | A/B/G          | PCI                 |
-| Atheros            | ?         | ?           | ?           | ?              | B/G            | ?                   |
-| NWN                | ?         | ? ?                      || ?              | B              | PCMCIA              |
+|                    |    |      |    |    |   |    |
+| Texas Instruments  | ?  | ?    |    | ?  |   |    |
+| Airgo/Qualcom      | ?  | ?    | ?  | ?  |   |    |
+| Atheros            | ?  | ?    | ?  | ?  |   | ?  |
+| NWN                | ?  | ? ?      || ?  |   |    |
+
 
 
 Notes: 
