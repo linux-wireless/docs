@@ -10,12 +10,7 @@
 
 
 
-==== Offchannel work ====
-                * optimise "offchannel" to not stop beaconing/traffic/etc. when using the operating channel 
-                * implement addBA in terms off "offchannel" on the operating channel so it blocks other offchannel while waiting for a response 
-                * don't time out RX BA agreements while offchannel 
-                * do TX flushing as appropriate 
-                * Wait for DTIM beacon and multicast traffic before going offchannel 
+
 ===== drivers =====
                   * [[en/developers/todo-list/cfg80211-conversion|convert drivers to cfg80211]] 
 
