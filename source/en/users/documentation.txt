@@ -3,13 +3,6 @@
 
 
 
-===== Wireless managers =====
-
-This is the list of available known wireless managers you can use in distributions 
-      * [[en/users/Documentation/NetworkManager|NetworkManager]] - GUI based connection manager with wireless support 
-      * [[en/users/Documentation/wicd|wicd]] - Simple GUI based connection manager with wireless support 
-      * [[en/users/Documentation/connman|connman]] - GUI based connection manager with wireless support, designed with embedded devices in mind 
-
 
 ===== Wireless sniffers / intrusion testing / packet injection utilities =====
         * [[http://www.wireshark.org/|wireshark]] - a packet analyzer 
