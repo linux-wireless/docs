@@ -1,25 +1,6 @@
 
 
 
-===== Documentation =====
-
-Here we start documentation for users for all new wireless utilities. The list is short, but we'll try to add more as we go. 
-  * [[en/users/Documentation/modes|Wireless modes]] - modes you can set your wireless card to operate in 
-  * [[en/users/Documentation/FAQ|FAQ]] Frequently asked questions 
-  * [[en/users/Documentation/iw|iw]] - new nl80211 based command line interface ([[en/developers/Documentation/Glossary|CLI]]) configuration utility 
-  * [[en/users/Documentation/module-parameters|wireless module parameters]] - documents the different 802.11 module parameters available 
-  * [[en/users/Documentation/rfkill|rfkill]] - simple tool for rfkill debugging/settings 
-  * [[en/developers/Regulatory/CRDA|crda]] - new central regulatory domain agent, nl80211 based userspace regulatory db agent 
-  * [[en/users/Documentation/hostapd|hostapd]] - hostapd is a //IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator// 
-  * [[en/users/Documentation/wpa_supplicant|wpa_supplicant]] - wpa_supplicant is a WPA Supplicant and SME (initiates MLME commands) 
-  * [[en/users/Documentation/WoWLAN|WoWLAN]] - Wake on Wireless LAN support 
-  * [[en/users/Documentation/Power-consumption|Power consumption]] - details of power consumption with 802.11 devices on Linux, covers IEEE 802.11 power savings, ASPM, and driver tweaks for ASPM, Dynamic power save, and pm-qos. 
-  * [[en/developers/WAPI|WAPI]] - China's alternative to 802.11i (now part of 802.11-2007), ISO voted yes. However, as of 2012, the standard has been withdrawn by China[[https://mentor.ieee.org/802.11/dcn/12/11-12-0199-00-0jtc-jacksonville-minutes-jan-2012.doc]]. 
-  * [[en/developers/DFS|DFS]] - Design documentation for future DFS implementation in mac80211 
-  * [[en/users/Documentation/acs|ACS]] - Automatic Channel Selection support for Linux 
-  * [[en/developers/OpenWirelessMovement|Solutions on Linux for the Open Wireless Movement]] 
-  * [[http://linuxwimax.org/|WiMAX on Linux]] 
-
 
 ===== YouTube Documentation =====
     * [[http://www.youtube.com/playlist?p=PLA12950D8456F1818|Linux wireless support series - Baked: May 20 2011]] 
