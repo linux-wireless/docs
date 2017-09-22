@@ -8,11 +8,12 @@
 
 
 
-|**Driver**|**Manufacturer**|**cfg80211**\\ |**AP**\\ |**IBSS**\\ |**mesh**\\ |**monitor**\\ |**PHY modes**|**Buses**|
-|[[en/users/Drivers/acx1xx|acx1xx]]|Texas Instruments|yes|?|?|no|?|B|PCI / PCMCIA / USB|
-|[[en/users/Drivers/agnx|agnx]]|Airgo/Qualcom|yes|?|?|?|?|A/B/G|PCI|
-|[[en/users/Drivers/ar6k|ar6k]]|Atheros|?|?|?|?|?|B/G|?|
-|[[http://poldhu.sf.net/|poldhu]]|NWN|no|?|?|?|?|B|PCMCIA|
+| **Manufacturer**   | **AP**\\  | **IBSS**\\  | **mesh**\\  | **monitor**\\  | **PHY modes**  | **Buses**           |
+| Texas Instruments  | ?         | ?           | no          | ?              | B              | PCI / PCMCIA / USB  |
+| Airgo/Qualcom      | ?         | ?           | ?           | ?              | A/B/G          | PCI                 |
+| Atheros            | ?         | ?           | ?           | ?              | B/G            | ?                   |
+| NWN                | ?         | ? ?                      || ?              | B              | PCMCIA              |
+
 
 Notes: 
     - 802.11a capabilities depend on the actual radio chip used. 
