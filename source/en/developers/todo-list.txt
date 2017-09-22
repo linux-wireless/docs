@@ -7,9 +7,7 @@
 
 
 
-==== Issues ====
-          * drivers with IV offload do not correctly report IV/PN to nl80211 
-          * Need to stop TX/RX when a radar is detected for the duration of scan for a new channel. 
+
 ==== Improvements ====
             * reset the connection and beacon monitor timers when we are able to successfully TX data to an AP (we currently do it on RX) 
             * move survey caching code from ath9k to mac80211 so that other drivers can simply update channel survey data once and all cached data can be sent back to userspace as ath9k does it 
