@@ -2,10 +2,6 @@
 
 
 
-===== FAQ =====
-
-Please take a look at the [[en/users/Documentation/FAQ|Frequently Asked Questions]] page to see if it already has an answer for your question. 
-
 
 ===== Linux wireless user IRC channel =====
 
