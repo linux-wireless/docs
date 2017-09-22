@@ -36,8 +36,3 @@ Here are all the driver APIs we use to write drivers in Linux:
       * [[en/developers/Documentation/modularizing-code|Howto modularize code]] - Examples of how we expect you to modularize code 
 
 
-===== 802.11 Development process =====
-
-Check out the [[en/developers/process|802.11 development process]] page for details of how patches get merged into Linux for 802.11 and what trees are used. 
-
-
