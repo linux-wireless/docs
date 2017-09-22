@@ -41,6 +41,3 @@ Here are all the driver APIs we use to write drivers in Linux:
 Check out the [[en/developers/process|802.11 development process]] page for details of how patches get merged into Linux for 802.11 and what trees are used. 
 
 
-===== Stable monitor list =====
-
-The [[en/developers/stable-pending|stable-pending]] section is dedicated to the ensuring we propagate critical patches to the stable series of the Linux kernel. Use it to peg commits which you know are important to get merged. 
