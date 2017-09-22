@@ -4,10 +4,6 @@
 
 
 
-==== Our stance and solution ====
-
-Security through obscurity is simply not bullet proof but we do have precedents of its use to allow vendors to support drivers on Linux, either through a FOSS driver and binary firmware or through a binary driver. **Real technical solutions** can be used instead of relying on archaic security through obscurity mechanisms for support of FOSS wireless drivers on the Linux kernel. Our solutions have been to get commitment from the community developers to not accept patches upstream which alter regulatory considerations for drivers and to pave the way for open platforms to embrace a framework supported by the community to further advance regulatory considerations. 
-
 
 ==== Linux wireless regulatory support statement ====
 
