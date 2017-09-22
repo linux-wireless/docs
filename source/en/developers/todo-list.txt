@@ -11,9 +11,6 @@
 
 
 
-===== drivers =====
-                  * [[en/developers/todo-list/cfg80211-conversion|convert drivers to cfg80211]] 
-
 
 ===== testing =====
                     * [[en/developers/todo-list/client-ps-testing|client powersave testing]] 
