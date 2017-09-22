@@ -18,8 +18,3 @@
   * [[en/developers/Documentation/LinuxkernelWirelessImplementation|Linux Kernel Wireless (802.11) Implementation]] - some implementation details 
 
 
-==== Other interesting information ====
-    * [[en/developers/Documentation/ChannelList|channel list]] 
-    * [[en/developers/Documentation/IEorder|information element order]] 
-
-
