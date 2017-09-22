@@ -44,6 +44,4 @@ To subscribe to netdev send an an e-mail to // [[mailto:majordomo@vger.kernel.or
 
 <code>subscribe netdev</code>
 
-===== Submitting patches to linux-wireless =====
-
-If you would like to submit patches to linux-wireless please read our [[en/developers/Documentation/SubmittingPatches|Submitting Patches]] guide. 
+L
