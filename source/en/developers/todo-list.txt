@@ -8,10 +8,7 @@
 
 
 
-==== Improvements ====
-            * reset the connection and beacon monitor timers when we are able to successfully TX data to an AP (we currently do it on RX) 
-            * move survey caching code from ath9k to mac80211 so that other drivers can simply update channel survey data once and all cached data can be sent back to userspace as ath9k does it 
-            * improve roaming time by collapsing synchronize_rcu() (or even getting rid of it by using call_rcu()) in station/key management 
+
 ==== power saving ====
               * move checking for broadcast / multicast frames to mac80211 before going to PS. ath9k already has some code for this, this should be moved to mac80211. Or just extend documentation to indicate drivers are required to do this. 
               * 11v support (eventually) 
