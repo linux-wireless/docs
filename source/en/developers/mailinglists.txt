@@ -3,12 +3,6 @@
 
 
 
-===== Stats and requirements of linux-wireless mailing list =====
-
-This mailing list is specific to wireless development. The list address is // [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]] //. **No subscription is required for posting**. 
-
-The list currently sees about a thousand emails per month. 
-
 
 ===== Subscribing to linux-wireless =====
 
