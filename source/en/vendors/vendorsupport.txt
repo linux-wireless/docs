@@ -2,10 +2,6 @@
 
 
 
-==== Addressing vendor concerns ====
-
-Based on discussions and conference calls before and after the 2007 summit it became clear that the main vendor concern over supporting FOSS drivers was to provide a mechanism to enforce regulatory compliance to satisfy their own and their hardware vendors (OEMs like Dell, HP, IBM) legal department's concerns over legal liability. Additional concerns have been that a FOSS driver may force hardware vendors to certify their platforms under new Software Defined Radio regulations. Additionally, also that the FCC is only one of the many regulatory agencies vendors take into consideration for certifying devices -- the major vendor's geographies of interest are governed under the FCC, ETSI and MKK. Vendors explained their concerns over getting devices certified under FCC SDR regulations is the uncertainty of the details involved for such certification. Vendors need to provide driver solutions which meet legal criteria on all of their geographies of interest. 
-
 
 ==== Technical difficulties on solutions ====
 
