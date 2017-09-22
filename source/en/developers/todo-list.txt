@@ -5,8 +5,7 @@
 
 
 
-==== Mesh ====
-      * If a mesh join request does not come with a frequency, initiate scan for suitable neighbor MBSS frequency first. 
+
 ==== AP support ====
         * [[en/developers/DFS|AP DFS or AP radar detection]] 
         * local->total_ps_buffered is totally racy 
