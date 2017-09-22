@@ -1,10 +1,6 @@
 
 
 
-===== About the Linux wireless mailing list =====
-
-The //linux-wireless// was introduced in February of 2007 due to the fact that it was difficult to keep track of wireless-specific only related e-mails on //netdev//. We now use //linux-wireless// for **all** wireless development discussions, including to post patches. We now **only** post to //netdev// if patches or suggested changes touch generic networking code. If you are interested in sending patches please read our [[en/developers/Documentation/SubmittingPatches|Submitting Patches]] guide. 
-
 
 ===== linux-wireless online archives =====
 
