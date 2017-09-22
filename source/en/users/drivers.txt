@@ -1,28 +1,7 @@
 
 
 
-===== Out of the tree drivers(Unsupported) =====
 
-
-
-
-
-
-|                    |    |      |    |    |   |    |
-| Texas Instruments  | ?  | ?    |    | ?  |   |    |
-| Airgo/Qualcom      | ?  | ?    | ?  | ?  |   |    |
-| Atheros            | ?  | ?    | ?  | ?  |   | ?  |
-| NWN                | ?  | ? ?      || ?  |   |    |
-
-
-
-Notes: 
-    - 802.11a capabilities depend on the actual radio chip used. 
-    - 802.11a devices exist, but currently can't be used with this driver, A/B/G devices will work in B/G mode only. 
-    - There is support with a special, out-of-tree driver and special firmware, see [[http://sf.net/projects/ipw2200-ap|http://sf.net/projects/ipw2200-ap]]. 
-    - Slightly different mesh implementation than mac80211's, in firmware. 
-    - Tested with RT2870/RT3070 driver 
-    - Only some devices 
 ===== Abandoned/Deprecated Drivers(Unsupported) =====
 |**Driver** |**Manufacturer** |**[[en/developers/Documentation/cfg80211|cfg80211]]** |**[[en/users/Documentation/modes|AP]]** |**[[en/users/Documentation/modes|ad-hoc]]** |**[[en/users/Documentation/modes|mesh]]** |**[[en/users/Documentation/modes|monitor]]** |**PHY modes** |**BUS** |**Replaced by** |
 |[[en/users/Drivers/ar9170|ar9170usb]] |ZyDAS/Atheros |yes |no |yes |no |yes |A(1)/B/G/N |USB |[[en/users/Drivers/carl9170|carl9170]] |
