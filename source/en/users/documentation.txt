@@ -60,10 +60,3 @@ Please consider reading these sections to help developers help you more efficien
           * [[en/users/Documentation/Fix_Propagation|Understanding bug fix propagation]] - should help to understand the flow of a fix 
 
 
-===== To the very curious user =====
-
-In case you want to read up on what things are being advanced within Linux wireless. This should help users become familiar with our latest developments. 
-            * [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - what are they? 
-            * [[en/developers/Documentation/mac80211|mac80211]] - New wireless driver API for [[en/developers/Documentation/Glossary|SoftMAC]] devices 
-            * [[en/developers/Documentation/cfg80211|cfg80211]] - new driver configuration API 
-            * [[en/developers/Documentation/nl80211|nl80211]] - new userspace <–> kernelspace wireless driver communication transport 
