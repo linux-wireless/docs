@@ -5,12 +5,6 @@
 
 
 
-===== Unsubscribing from linux-wireless =====
-
-To unsubscribe, send an an e-mail to // [[mailto:majordomo@vger.kernel.org|majordomo@vger.kernel.org]] // with anything on the subject, but on the body put: 
-
-
-<code>unsubscribe linux-wireless</code>
 
 ===== Additional mailing lists =====
 
