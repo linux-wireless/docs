@@ -3,15 +3,6 @@
 
 
 
-===== Linux wireless user IRC channel =====
-
-We have an IRC channel where you can stumble in and ask any question you like as silly as it may sound. However, if you are new to IRC, it makes sense to read [[http://www.catb.org/~esr/faqs/smart-questions.html|How To Ask Questions The Smart Way]] beforehand. Also please take a look at the [[en/users/Documentation/FAQ|FAQ]]. 
-
-Do not ask for permission to ask a question in IRC, just ask it with all the information you have and wait for someone answering. 
-
-
-<code>Server: irc.freenode.net
-Channel: #linux-wireless</code>
 
 ===== Linux wireless mailing list =====
 
