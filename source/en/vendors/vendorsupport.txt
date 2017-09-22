@@ -3,10 +3,6 @@
 
 
 
-==== Technical difficulties on solutions ====
-
-The obvious solution to all of these vendor concerns in providing support for FOSS drivers is to provide restrictions in hardware based on geography but it has been argued by **vendors** that this proves to be **economically unfeasible**. Likewise, this would also create a problem for **some users**  wanting to **roam** outside of their geography using the same wireless hardware. Current vagueness under FCC Part 15 rules have allowed vendors to move forward with supporting proprietary driver solutions for management and enforcement of regulatory restrictions. Although security through obscurity is ultimately not a great security model it is one which some vendors rely on, even for Linux proprietary drivers, as it has satisfied both their own and their customers' legal departments. Alternative solutions to the problem has been to incorporate regulatory restrictions on the microcode of the resulting firmware for use on a wireless device, which does allow for a complete FOSS driver, but this approach is **looked down upon by vendors** as it confines the vendors to smaller amount of space available for development on the microcode and increases complexity. 
-
 
 ==== Our stance and solution ====
 
