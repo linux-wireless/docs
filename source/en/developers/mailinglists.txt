@@ -2,13 +2,6 @@
 
 
 
-===== linux-wireless online archives =====
-
-If you don't want to subscribe or if you just want to refer to e-mail through a URL you have a few options, here are a few of them: 
-  * [[http://thread.gmane.org/gmane.linux.kernel.wireless.general|gmane linux-wireless archive (threaded display)]] 
-  * [[http://blog.gmane.org/gmane.linux.kernel.wireless.general|gmane linux-wireless archive (forum/blog-style display)]] 
-  * [[http://marc.info/?l=linux-wireless|marc archive on linux-wireless]] 
-
 
 ===== Stats and requirements of linux-wireless mailing list =====
 
