@@ -1,9 +1,5 @@
 
 
-==== Linux wireless vendor support and regulatory compliance ====
-
- 
-
 
 ==== Enhancing vendor relationship ====
 
