@@ -4,14 +4,6 @@
 
 
 
-===== Wireless sniffers / intrusion testing / packet injection utilities =====
-        * [[http://www.wireshark.org/|wireshark]] - a packet analyzer 
-        * [[http://www.kismetwireless.net/|kismet]] - an 802.11 layer2 wireless network detector, sniffer, and intrusion detection system 
-        * [[en/users/Documentation/packetspammer|packetspammer]]- a mac80211 packet injection utility 
-        * [[http://www.aircrack-ng.org/|aircrack-ng]] - an 802.11 WEP and WPA-PSK keys intrusion testing program 
-        * [[http://w1.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=wlantest/inject.c;hb=HEAD|Test AP injection code]] 
-        * [[http://br1.einfach.org/tech/horst/|horst]] - lightweight 802.11 wireless LAN analyzer 
-
 
 ===== Helping users and developers =====
 
