@@ -30,6 +30,3 @@ Security through obscurity is simply not bullet proof but we do have precedents 
 For more details the non-technical details of our position please see our [[en/developers/Regulatory/statement|Linux wireless regulatory support statement]]. 
 
 
-==== Technical review of our regulatory infrastructure ====
-
-For technical details on our solution on this work please see the documentation of our [[en/developers/Regulatory|regulatory infrastructure]] page. 
