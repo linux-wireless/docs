@@ -1,10 +1,6 @@
 
 
 
-===== Linux wireless support =====
-
-You have a few options if you are looking for support on Linux wireless. Below we document the different resources available to you. 
-
 
 ===== FAQ =====
 
