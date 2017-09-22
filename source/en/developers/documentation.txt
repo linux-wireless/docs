@@ -23,16 +23,3 @@
     * [[en/developers/Documentation/IEorder|information element order]] 
 
 
-===== Driver APIs =====
-
-Here are all the driver APIs we use to write drivers in Linux: 
-      * [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - old wireless driver framework 
-      * [[en/developers/Documentation/mac80211|mac80211]] - wireless driver API for [[en/developers/Documentation/Glossary|SoftMAC]] devices 
-      * [[en/developers/Documentation/cfg80211|cfg80211]] - new driver configuration API 
-      * [[en/developers/Documentation/nl80211|nl80211]] - new userspace <--> kernelspace wireless driver communication transport 
-      * [[en/developers/Documentation/specs|Hardware Specifications]] - specifications for chipsets we support or will support soon 
-      * [[en/developers/Documentation/radiotap|Radiotap]] - For 802.11 frame injection/reception 
-      * [[en/developers/Documentation/Android|Support for Android]] - if you want to know how to add support for Android 
-      * [[en/developers/Documentation/modularizing-code|Howto modularize code]] - Examples of how we expect you to modularize code 
-
-
