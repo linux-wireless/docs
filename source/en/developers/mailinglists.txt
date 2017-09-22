@@ -4,12 +4,6 @@
 
 
 
-===== Subscribing to linux-wireless =====
-
-To subscribe, send an an e-mail to // [[mailto:majordomo@vger.kernel.org|majordomo@vger.kernel.org]] // with anything on the subject, but on the body put: 
-
-
-<code>subscribe linux-wireless</code>
 
 ===== Unsubscribing from linux-wireless =====
 
