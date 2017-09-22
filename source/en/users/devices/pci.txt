@@ -24,6 +24,5 @@ mini-PCI express, the PCI Express equivalent of Mini-PCI, but even smaller. [[ht
 The hot-pluggable version of PCI Express. Note that Express<code></code>Cards can be USB as well, in which case they won't be listed here. 
 
 
-==== Device list ====
 
  
