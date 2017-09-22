@@ -9,11 +9,6 @@
 
 
 
-==== power saving ====
-              * move checking for broadcast / multicast frames to mac80211 before going to PS. ath9k already has some code for this, this should be moved to mac80211. Or just extend documentation to indicate drivers are required to do this. 
-              * 11v support (eventually) 
-              * implement a PS library, a la described in [[http://marc.info/?l=linux-wireless&m=135838252227053|http://marc.info/?l=linux-wireless&m=135838252227053]] 
-
 
 ==== Offchannel work ====
                 * optimise "offchannel" to not stop beaconing/traffic/etc. when using the operating channel 
