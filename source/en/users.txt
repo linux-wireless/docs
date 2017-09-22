@@ -1,9 +1,5 @@
 
 
-===== wireless.kernel.org – Users =====
-
-There has been a lot of recent development and advances on Linux wireless. We intend on documenting this progress for users here. 
-
 
 ===== User sections =====
   * [[en/users/Support|Support]] - Our various support channels 
