@@ -1,14 +1,6 @@
 
 
 
-===== User sections =====
-  * [[en/users/Support|Support]] - Our various support channels 
-  * [[en/users/Documentation|Documentation]] - General user documenation 
-  * [[en/users/Devices|Wireless hardware device list]] 
-  * [[en/users/Drivers|Drivers]] - Linux wireless drivers for new wireless cards 
-  * [[en/users/firmware|Firmware]] - Firmware for Linux wireless drivers
-  * [[en/users/Download|Download]] - Download and compile the latest drivers available  
-
 
 ===== Tips to stay on top of things =====
 
