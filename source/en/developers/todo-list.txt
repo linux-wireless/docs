@@ -3,8 +3,7 @@
 
 
 
-==== Issues ====
-    * make scan timeout variable depending on scan length, in case scans take longer than the current 15 seconds 
+
 ===== mac80211 =====
 
 
