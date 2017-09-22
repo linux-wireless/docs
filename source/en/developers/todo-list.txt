@@ -2,9 +2,6 @@
 
 
 
-==== Regulatory ====
-  * [[en/developers/todo-list/regulatory|Regulatory TODO]] 
-
 
 ==== Issues ====
     * make scan timeout variable depending on scan length, in case scans take longer than the current 15 seconds 
