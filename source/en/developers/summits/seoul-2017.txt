@@ -21,6 +21,5 @@ be registered for netdev. Details will follow.
   * fully migrating mac80211 to iTXQ
 ===== planning to attend =====
   * Johannes Berg
-  * Luca Coelho
   * Jouni Malinen
   * Kalle Valo
