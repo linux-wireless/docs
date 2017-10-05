@@ -19,7 +19,9 @@ be registered for netdev. Details will follow.
   * OCE/FILS (review)?
   * iTXQ hookups, airtime fairness?
   * fully migrating mac80211 to iTXQ
+  * Dynamic QoS prioritisation
 ===== planning to attend =====
   * Johannes Berg
   * Jouni Malinen
   * Kalle Valo
+  * Toke Høiland-Jørgensen
