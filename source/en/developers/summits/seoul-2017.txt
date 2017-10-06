@@ -6,22 +6,24 @@ Netdev 2.2 has been announced for Seoul, South Korea, November 8-10:
 
 http://netdevconf.org/2.2/
 
-We're planning to hold the next wireless workshop there, most likely either on November 8th or 9th (Wednesday or Thursday).
+We're planning to hold the next wireless workshop there, on Thursday, November 9th.
 
-Formalities will be as usual - open (discussion) session, you have to
-be registered for netdev. Details will follow.
+Formalities are as usual - open (discussion) session, you only have to
+be registered for netdev to attend (but you can add yourself below).
 
 
 ===== Suggested topics =====
 
-  * EAPOL over nl80211 review/post-mortem (assuming it's done)?
+  * EAPOL over nl80211 recap
   * [[en/users/Drivers/rtl819x | rtlwifi]] ([[https://marc.info/?l=linux-wireless&m=143023412222482 | PCI/USB]]) situation?
   * OCE/FILS (review)?
   * iTXQ hookups, airtime fairness?
   * fully migrating mac80211 to iTXQ
   * Dynamic QoS prioritisation
+
 ===== planning to attend =====
   * Johannes Berg
   * Jouni Malinen
   * Kalle Valo
   * Toke Høiland-Jørgensen
+  * 
