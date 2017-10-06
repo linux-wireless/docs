@@ -1,0 +1,10 @@
+
+
+
+
+
+
+
+===== Reporting bugs =====
+
+If you have a bug please read our [[en/users/Documentation/Reporting_bugs|Reporting bugs guideline]]. 
