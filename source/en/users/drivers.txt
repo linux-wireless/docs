@@ -39,8 +39,8 @@ See also:
 | [[en/users/Drivers/libertas|libertas]]                | Marvell                | no              | no        | yes         | yes (4)     | no             | B/G            | USB / PCMCIA / SDIO / GSPI  |
 | [[en/users/Drivers/libertastf|libertas_tf]]           | Marvell                | yes             | yes       | no          | yes         | ?              | B/G            | USB                         |
 | [[en/users/Drivers/mac80211_hwsim|mac80211_hwsim]]    | Jouni                  | yes             | yes       | yes         | no          | yes            | A/B/G/N        | NONE!                       |
-| [[en/users/Drivers/mediatek|mt76]]                      | Mediatek                | yes             | ?       | ?           | ?           | ?            | A/B/G/N/AC        | PCI/SoC                         |
-| [[en/users/Drivers/mediatek|mt7601u]]                      | Mediatek                | yes             | ?       | ?           | ?           | ?            | B/G/N/        | USB                         |
+| [[en/users/Drivers/mediatek|mt76]]                    | Mediatek               | yes             | ?         | ?           | ?           | ?              | A/B/G/N/AC     | PCI/SoC                     |
+| [[en/users/Drivers/mediatek|mt7601u]]                 | Mediatek               | yes             | ?         | ?           | ?           | ?              | B/G/N/         | USB                         |
 | [[en/users/Drivers/mwifiex|mwifiex]]                  | Marvell                | yes             | yes       | yes         | ?           | ?              | A/B/G/N        | SDIO / PCI-E / USB          |
 | [[en/users/Drivers/mwl8k|mwl8k]]                      | Marvell                | yes             | yes       | ?           | ?           | yes            | A/B/G/N        | PCI                         |
 | [[en/users/Drivers/orinoco|orinoco]]                  | Agere/Intersil/Symbol  | yes             | no        | yes         | no          | yes            | B              | PCI / PCMCIA / USB          |
@@ -48,6 +48,7 @@ See also:
 | [[en/users/Drivers/p54|p54spi]]                       | Conexant/ST-NXP        | yes             | yes       | yes         | yes         | yes            | A(1)/B/G       | SPI                         |
 | [[en/users/Drivers/p54|p54usb]]                       | Intersil/Conexant      | yes             | yes       | yes         | yes         | yes            | A(1)/B/G       | USB                         |
 | [[http://www.linux-wlan.org/|** prism2_usb]]          | Intersil/Conexant      | yes             | ?         | ?           | ?           | ?              | B              | USB                         |
+| [[en/users/Drivers/qtnfmac|qtnfmac]]                  | Quantenna              | yes             | yes       | no          | no          | no             | A/B/G/N/AC     | PCI-E                       |
 | [[en/users/Drivers/rtl819x|** r8192e_pci]]            | Realtek                | no              | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|** r8192u_usb]]            | Realtek                | no              | ?         | ?           | ?           | ?              | B/G/N          | USB                         |
 | [[en/users/Drivers/rtl819x|** r8712u]]                | Realtek                | no              | ?         | ?           | ?           | ?              | B/G/N          | USB                         |
@@ -60,19 +61,19 @@ See also:
 | [[en/users/Drivers/rt2500usb|rt2500usb]]              | Ralink                 | yes             | yes       | yes         | no          | yes            | A(1)/B/G       | USB                         |
 | [[en/users/Drivers/rt2800pci|rt2800pci]]              | Ralink                 | yes             | yes       | ?           | ?           | yes            | A(1)/B/G/N     | PCI                         |
 | [[en/users/Drivers/rt2800usb|rt2800usb]]              | Ralink                 | yes             | yes       | yes         | yes(5)      | yes            | A(1)/B/G/N     | USB                         |
-| [[en/users/Drivers/rtl819x|rtl8xxxu]]                | Realtek                | yes             | ?         | ?           | ?           | ?            | A(1)/B/G/N          | USB                         |
+| [[en/users/Drivers/rtl819x|rtl8xxxu]]                 | Realtek                | yes             | ?         | ?           | ?           | ?              | A(1)/B/G/N     | USB                         |
 | [[en/users/Drivers/rtl8187|rtl8180]]                  | Realtek                | yes             | no        | no          | no          | ?              | B/G            | PCI                         |
 | [[en/users/Drivers/rtl8187|rtl8187]]                  | Realtek                | yes             | no        | yes         | no          | yes            | B/G            | USB                         |
 | [[en/users/Drivers/rtl819x|rtl8188ee]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
-| [[en/users/Drivers/rtl819x|rtl8192ce]]                | Realtek                | yes             | ?         | ?           | ?           | yes              | B/G/N          | PCI-E                       |
-| [[en/users/Drivers/rtl819x|rtl8192cu]]                | Realtek                | yes             | yes         | ?           | ?           | yes            | B/G/N          | USB                         |
+| [[en/users/Drivers/rtl819x|rtl8192ce]]                | Realtek                | yes             | ?         | ?           | ?           | yes            | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|rtl8192cu]]                | Realtek                | yes             | yes       | ?           | ?           | yes            | B/G/N          | USB                         |
 | [[en/users/Drivers/rtl819x|rtl8192de]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8192se]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8723ae]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x| ** r8723au]]              | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | USB                         |
 | [[en/users/Drivers/vt665x| ** vt6655]]                | VIA                    | yes             | yes       | yes         | no          | no             | A/B/G          | PCI                         |
 | [[en/users/Drivers/vt665x| ** vt6656]]                | VIA                    | yes             | yes       | yes         | no          | no             | A/B/G          | USB                         |
-| [[en/users/Drivers/wcn36xx|wcn36xx]]                  | Qualcomm Atheros       | yes             | yes       | yes         | yes          | yes            | A/B/G/N             |                        |
+| [[en/users/Drivers/wcn36xx|wcn36xx]]                  | Qualcomm Atheros       | yes             | yes       | yes         | yes         | yes            | A/B/G/N        |                             |
 | [[en/users/Drivers/wil6210|wil6210]]                  | Atheros                | yes             | yes       | no          | no          | yes            | AD             | PCI-E                       |
 | [[http://code.google.com/p/winbondport/|** winbond]]  | Winbond                | yes             | ?         | ?           | ?           | ?              | B              | USB                         |
 | [[en/users/Drivers/wl1251|wl1251]]                    | Texas Instruments      | yes             | no        | yes         | ?           | yes            | B/G            | SPI / SDIO                  |
@@ -82,6 +83,7 @@ See also:
 | [[en/users/Drivers/wlags49_h2|** wlags49_h2]]         | Lucent/Agere           | no              | ?         | ?           | ?           | ?              | B/G            | PCI / PCMCIA                |
 | [[en/users/Drivers/zd1201|zd1201]]                    | ZyDAS/Atheros          | no              | ?         | ?           | ?           | ?              | B              | USB                         |
 | [[en/users/Drivers/zd1211rw|zd1211rw]]                | ZyDAS/Atheros          | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | USB                         |
+
 
 
 
