@@ -76,6 +76,7 @@ See also:
 | [[en/users/Drivers/wcn36xx|wcn36xx]]                  | Qualcomm Atheros       | yes             | yes       | yes         | yes         | yes            | A/B/G/N        |                             |
 | [[en/users/Drivers/wil6210|wil6210]]                  | Atheros                | yes             | yes       | no          | no          | yes            | AD             | PCI-E                       |
 | [[http://code.google.com/p/winbondport/|** winbond]]  | Winbond                | yes             | ?         | ?           | ?           | ?              | B              | USB                         |
+| [[en/users/Drivers/wilc|** wilc]]                    | Microchip               | yes             | yes       | no         | no           | no            | A/B/G/N            | SPI / SDIO                  |
 | [[en/users/Drivers/wl1251|wl1251]]                    | Texas Instruments      | yes             | no        | yes         | ?           | yes            | B/G            | SPI / SDIO                  |
 | [[en/users/Drivers/wl12xx|wl12xx]]                    | Texas Instruments      | yes             | yes       | yes         | no          | no             | A(1)/B/G/N     | SPI / SDIO                  |
 | [[en/users/Drivers/wl18xx|wl18xx]]                    | Texas Instruments      | yes             | yes       | yes         | ?           | ?              | A/B/G/N        | SDIO                        |
