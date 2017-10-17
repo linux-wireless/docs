@@ -10,6 +10,12 @@ wilc is a driver to support Microchip's ATWILC1000 802.11abgn chipset, and ATWIL
   * On-chip memory management engine to reduce host load
   * SPI and SDIO host interfaces
 
+====== Code ======
+
+The code is available on linux kernel staging-testing branch on the staging repository
+<code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
+git checkout -b staging-testing </code>
+
 ====== References ======
 http://www.microchip.com/wwwproducts/en/ATWILC1000
 http://www.microchip.com/wwwproducts/en/ATWILC3000
