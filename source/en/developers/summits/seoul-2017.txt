@@ -26,4 +26,4 @@ be registered for netdev to attend (but you can add yourself below).
   * Jouni Malinen
   * Kalle Valo
   * Toke Høiland-Jørgensen
-  * 
+  * Kirtika Ruchandani
