@@ -3,7 +3,7 @@
 
 ===== Documentation move =====
 
-The project **compat-wireless** has been renamed to **compat-drivers**, and latter to **backports**, and its documentation has been moved to: 
+The project **compat-wireless** has been renamed to **compat-wireless**, and latter to **backports**, and its documentation has been moved to: 
 
 [[https://backports.wiki.kernel.org|https://backports.wiki.kernel.org]] 
 
