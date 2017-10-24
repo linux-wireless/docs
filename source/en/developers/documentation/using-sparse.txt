@@ -2,7 +2,7 @@
 
 ===== Using sparse =====
 
-Sparse is a semantic parser and static analyzer utility we use for Linux kernel development. We highly recommend to use spare for the wireless subsystem. Below are some quick instructions how to get this set up and how to use it. 
+Sparse is a semantic parser and static analyzer utility we use for Linux kernel development. We highly recommend using sparse for the wireless subsystem. Below are some quick instructions how to get this set up and how to use it. 
 
  
 
