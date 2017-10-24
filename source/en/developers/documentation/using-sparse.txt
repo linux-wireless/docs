@@ -16,11 +16,11 @@ You can get sparse from:
 
 ===== Version of sparse to use =====
 
-We recommend to use the latest stable release of sparse. As of now this is v0.4.4, so you can do something as follows: 
+We recommend to use the latest stable release of sparse. As of now this is v0.5.1, so you can do something as follows: 
 
+<code>git checkout v0.5.1</code>
 
-<code>git checkout -b rel4 v0.4.4</code>
-
+Or do <code>git tag -l</code> to see all releases.
 ===== Install sparse =====
 
 To install: 
