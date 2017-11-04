@@ -9,11 +9,8 @@ The //linux-wireless// was introduced in February of 2007 due to the fact that i
 ===== linux-wireless online archives =====
 
 If you don't want to subscribe or if you just want to refer to e-mail through a URL you have a few options, here are a few of them: 
-  * [[http://thread.gmane.org/gmane.linux.kernel.wireless.general|gmane linux-wireless archive (threaded display)]] 
-  * [[http://blog.gmane.org/gmane.linux.kernel.wireless.general|gmane linux-wireless archive (forum/blog-style display)]] 
   * [[http://marc.info/?l=linux-wireless|marc archive on linux-wireless]] 
-
-
+  * [[https://www.spinics.net/lists/linux-wireless/|spinics archive]]
 ===== Stats and requirements of linux-wireless mailing list =====
 
 This mailing list is specific to wireless development. The list address is // [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]] //. **No subscription is required for posting**. 
