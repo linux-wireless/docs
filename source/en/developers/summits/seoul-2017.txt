@@ -20,7 +20,8 @@ be registered for netdev to attend (but you can add yourself below).
   * iTXQ hookups, airtime fairness?
   * fully migrating mac80211 to iTXQ
   * Dynamic QoS prioritisation
-
+  * Enforcement of radio TX parameters to meet regulatory requirements
+  * SAE with NL80211_CMD_CONNECT
 ===== planning to attend =====
   * Johannes Berg
   * Jouni Malinen
