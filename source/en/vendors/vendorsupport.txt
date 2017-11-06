@@ -7,7 +7,7 @@
 
 ==== Enhancing vendor relationship ====
 
-Distributions and Linux wireless developers would like to see vendor support for FOSS drivers for their wireless chipsets. Today most 802.11 vendors are working upstream with wireless developers in the community in providing sane drivers for proper Linux kernel inclusion and support. Historically though, **years ago**, a few vendors only provided proprietary solutions for their drivers. This was based on advice from third parties which usually prevented from these drivers being supported by the community and getting included into the Linux kernel. On the second wireless summit which was held in London in 2007 we attempted to reach out to as many wireless vendors as possible so we could properly address their concerns in providing FOSS drivers. 
+Distributions and Linux wireless developers would like to see vendor support for FOSS drivers for their wireless chipsets. Today most 802.11 vendors are working upstream with wireless developers in the community in providing sane drivers for proper Linux kernel inclusion and support. Historically though, **years ago**, a few vendors only provided proprietary solutions for their drivers. This was based on advice from third parties which usually prevented these drivers from being supported by the community and getting included into the Linux kernel. On the second wireless summit which was held in London in 2007 we attempted to reach out to as many wireless vendors as possible so we could properly address their concerns in providing FOSS drivers. 
 
 
 ==== Addressing vendor concerns ====
