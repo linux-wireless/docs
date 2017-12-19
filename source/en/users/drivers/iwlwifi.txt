@@ -114,6 +114,8 @@ NOTE: this table contains only the first official firmware version released, whi
 | :::                                                                                                                                             | 4.3+         | :::         | {{iwlwifi-8000-ucode-16.242414.0.tgz|iwlwifi-8000-ucode-16.242414.0.tgz}}      |
 | Intel® Wireless 8265                                                                                                                            | 4.6+         | iwlmvm      | {{iwlwifi-8265-ucode-22.361476.0.tgz}}                                         |
 | Intel® Wireless 3168                                                                                                                            | 4.6+         | iwlmvm      | {{iwlwifi-3168-ucode-22.361476.0.tgz}}                                         |
+| Intel® Wireless 9260                                                                                                                            | 4.14+         | iwlmvm      | {{iwlwifi-9260-th-b0-jf-b0-34.618819.0.tgz}}                                         |
+| Intel® Wireless 9560                                                                                                                            | 4.14+         | iwlmvm      | {{iwlwifi-9000-pu-b0-jf-b0-34.618819.0.tgz}}                                         |
 
 
 Where that appropriate location is depends (again) on your system distribution.  You can typically find this location by looking in the udev scripts of your distro, the default on most distributions is /lib/firmware. 
