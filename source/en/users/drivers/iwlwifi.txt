@@ -194,6 +194,10 @@ Another thing that can be tried is to modify the antenna position. The antennas 
 Our devices support monitor mode. When you have VHT APs around, you should load the iwlwifi module with
 <code>amsdu_size=3</code> This will put lots of pressure on the memory subsystem, but it will allow you to hear 12K long packets. You may see firmware crashes in case you didn't set that module parameter.
 
+
+===== About the FTM and NAN support =====
+While we advertise support for [[https://www.wi-fi.org/discover-wi-fi/wi-fi-location|Wi-Fi Location*]] and [[https://www.wi-fi.org/discover-wi-fi/wi-fi-aware|Wi-Fi Aware*]] on 8260, we can't commmit on accurate results for those features. NAN isn't considered stable yet and may or may not work depending on the firmware version. FTM can work on 8260 only and requires special calibrations so that an off the shelf 8260 won't be able to provide accurate measurements.
+
 ===== About iwldvm support and known issues =====
 
 ==== Wi-Fi / Bluetooth coexistence ====
