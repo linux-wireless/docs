@@ -231,11 +231,11 @@ You can add the version with switch ''--subject-prefix'':
 
 ==== Changelog missing ====
 
-When sending a new version of a patch or patchset you should **always** add a changelog so that maintainer can easily what has changed.
+When sending a new version of a patch or patchset you should **always** add a changelog so that maintainer can easily see what has changed.
 
 If you have just one patch you can add the changelog after the ''%%---%%'' (three dashes) line.
 
-If you have multiples patches (called a patchset) add the changelog to the cover letter. You can create the cover letter with switch ''--cover-letter'':
+If you have multiples patches (called a patchset) add the changelog to the cover letter. You can create the cover letter with the switch ''--cover-letter'':
 
   git format-patch --subject-prefix="PATCH v2" --cover-letter
   
