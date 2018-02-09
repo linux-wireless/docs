@@ -115,7 +115,7 @@ Don't use typedef.
 
 ==== Linux style ====
 
-Follow [[http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=Documentation/CodingStyle;hb=HEAD|Linux Coding Style]]. 
+Follow [[https://www.kernel.org/doc/html/latest/process/coding-style.html|Linux Coding Style]]. 
 
 
 ==== Checking code ====
