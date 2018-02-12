@@ -65,7 +65,7 @@ Each valid and possible channel spec (i.e. channel + width) is taken and its int
 Note: This implies base channel interference factor must be non-negative allowing easy summing up. 
 
 
-===== Example survet-based ACS analysis printout from hostapd =====
+===== Example survey-based ACS analysis printout from hostapd =====
 
 
 <code>ACS: Trying survey-based ACS
