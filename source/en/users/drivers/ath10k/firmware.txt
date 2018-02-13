@@ -12,10 +12,10 @@ The ath10k firmware images are available from [[https://git.kernel.org/cgit/linu
 
 
 ^ Hardware         ^ Firmware major version/branch  ^ Latest firmware revision                                                      ^ Intended use  ^ Kernel version required*  ^ Git commit                  ^
-| QCA988X          | main                           | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/main|link]]    | STA           | 3.11                      | 5e3dd157d7e7                |
-| QCA988X          | 10.1                           | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/10.1|link]]    | AP            | 3.13                      | 8acd3c97ff9e                |
-| QCA988X          | 10.2                           | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/10.2|link]]    | AP            | 3.18                      | 24c88f7807fb                |
-| QCA988X          | 10.2.4                         | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/10.2.4|link]]  | AP            | 4.0                       | 4a16fbec1cd0                |
+| QCA988X          | main                           | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/hw2.0/main|link]]    | STA           | 3.11                      | 5e3dd157d7e7                |
+| QCA988X          | 10.1                           | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/hw2.0/10.1|link]]    | AP            | 3.13                      | 8acd3c97ff9e                |
+| QCA988X          | 10.2                           | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/hw2.0/10.2|link]]    | AP            | 3.18                      | 24c88f7807fb                |
+| QCA988X          | 10.2.4                         | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA988X/hw2.0/10.2.4|link]]  | AP            | 4.0                       | 4a16fbec1cd0                |
 | QCA6164/QCA6174  | wmi-tlv                        | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA6174|link]]         | AP/STA        | 4.0                       | d63955b33b3b, ca996ec56608  |
 | QCA9980          | 10.4                           | [[https://github.com/kvalo/ath10k-firmware/tree/master/QCA99X0|link]]         | AP            | 4.2                       | 8a055a8adc87                |
 
