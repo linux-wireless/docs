@@ -19,9 +19,8 @@ Current users of nl80211:
 
 [[http://openwrt.org/|OpenWrt]] folks created a tiny version of libnl based on a git snapshot, which only contains genl, not rtnetlink or any of the netfilter stuff, and compiles down to less than 30k in binary size. You can find it here: 
 
-[[https://dev.openwrt.org/browser/trunk/package/libs/libnl-tiny|https://dev.openwrt.org/browser/trunk/package/libs/libnl-tiny]] 
+[[https://git.openwrt.org/?p=openwrt/openwrt.git;a=tree;f=package/libs/libnl-tiny;hb=HEAD]] 
 
-svn co svn://svn.openwrt.org/openwrt/trunk/package/libs/libnl-tiny 
 
 
 ===== Kerneldoc for nl80211 =====
