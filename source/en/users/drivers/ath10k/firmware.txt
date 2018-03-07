@@ -58,3 +58,9 @@ Adding support for ATH10K_FW_IE_WMI_OP_VERSION. Added in commit 4a16fbec1cd0a da
 ==== Firmware API 5 ====
 
 Adding support for ATH10K_FW_IE_HTT_OP_VERSION, needed to support 10.2.4.48-2 on QCA988X. Added in commit 53513c302f35e March 25 2015.
+
+==== Firmware API 6 ====
+
+Workaround for board id being zero on QCA6174 hw3.0 starting from firmware release WLAN.RM.4.4-00022-QCARMSWPZ-2. Added in commit aad1fd7f7677 April 19 2017, first release v4.12-rc1.
+
+Also for QCA9377 hw1.0 fix IRAM bank compatibility starting from firmware release WLAN.TF.2.1-00014-QCARMSWP-1. Added in commit fc8b92635f79 February 2018, first release v4.17-rc1.
