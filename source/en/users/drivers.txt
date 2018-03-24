@@ -20,7 +20,7 @@ See also:
 | [[en/users/Drivers/ar5523|ar5523]]                    | Atheros                | yes             | no        | no          | no          | yes            | A(2)/B/G       | USB                         |
 | [[en/users/Drivers/at76c50x-usb|at76c50x-usb]]        | Atmel                  | yes             | no        | no          | no          | no             | B              | USB                         |
 | [[en/users/Drivers/ath5k|ath5k]]                      | Atheros                | yes             | yes       | yes         | yes         | yes            | A/B/G          | PCI / PCI-E / PCMCIA        |
-| [[en/users/Drivers/ath6kl|ath6kl]]                    | Atheros                | yes             | no        | yes         | no          | no             | A/B/G/N        | SDIO                        |
+| [[en/users/Drivers/ath6kl|ath6kl]]                    | Atheros                | yes             | no        | yes         | no          | no             | A/B/G/N        | SDIO / USB                       |
 | [[en/users/Drivers/ath9k|ath9k]]                      | Atheros                | yes             | yes       | yes         | yes         | yes            | A/B/G/N        | PCI / PCI-E / AHB / PCMCIA  |
 | [[en/users/Drivers/ath9k_htc|ath9k_htc]]              | Atheros                | yes             | yes       | yes         | yes         | yes            | B/G/N          | USB                         |
 | [[en/users/Drivers/ath10k|ath10k]]                    | Atheros                | yes             | yes       | yes         | no          | yes            | A/B/G/N/AC     | PCI-E                       |
