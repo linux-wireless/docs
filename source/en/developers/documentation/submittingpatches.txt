@@ -38,7 +38,7 @@ All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux
 
 [[https://patchwork.kernel.org/project/linux-wireless/list/?state=*]]
 
-Always avoid contacting maintainers directly, they get way too much email already. Instead use the link above to find your patch and see the status. Only in last resort contact the maintainers, and do that by replying to your own patch and ask for status.
+Always avoid contacting maintainers directly, they get way too much email already. Instead use the link above to find your patch and see the status. Only in last resort contact the maintainers, and do that by replying to your own patch and ask for status. Do not top post!
 
 Different patchwork states and their meanings:
 
