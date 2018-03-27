@@ -110,7 +110,7 @@ On the e-mail with subject, "[PATCH 0/4] driver_name: introduce foo and bar", yo
 
 ===== Format of patches =====
 
-We prefer patches to be inline-text at the end of the body of the e-mail. You can use git-diff or the like to generate the patch. Additionally note that we prefer to apply patches with -p1. A header as follows is then acceptable: 
+We prefer patches to be inline-text at the end of the body of the e-mail. It's strongly recommended to use git-format-patch and git-send-email tools to submit patches as they use the correct format automatically. Additionally note that we prefer to apply patches with git-am (using the -p1 diff format). A header as follows is then acceptable: 
 
 
 <code>diff --git a/include/net/mac80211.h b/include/net/mac80211.h
