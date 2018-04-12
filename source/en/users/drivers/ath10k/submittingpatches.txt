@@ -21,23 +21,23 @@ More info about submitting patches:
 
 Guidelines for patches are:
  
-          * MUST follow [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Documentation/SubmittingPatches]]
-          * MUST be compiler warning free. 
-          * MUST be sparse warning free. 
-          * Commit log MUST not be empty. 
-          * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
-          * The commit log MUST answer the question "Why?": 
-             * Describe the motivation behind the bug. 
-             * How does it change the functionality from user's point of view? 
-             * Does it fix a bug? If it does, please describe the bug (doesn't need to be long). Also if there's a public bug report add a link to the bug report. 
-             * If a problem has been found during code review and doesn't fix a known issues, mention that in the commit log.
-             * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log. 
-          *   If others have reported the issue commit log SHOULD use Reported-by: and Tested-by: tags. 
-          * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense): 
-            * Patches SHOULD be sent with git send-email tool. 
-            * Patchsets SHOULD contain no more than 12 patches. 
-            * Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]] 
-            * It's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] 
+  * MUST follow [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Documentation/SubmittingPatches]]
+  * MUST be compiler warning free. 
+  * MUST be sparse warning free. 
+  * Commit log MUST not be empty. 
+  * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
+  * The commit log MUST answer the question "Why?": 
+    * Describe the motivation behind the bug. 
+    * How does it change the functionality from user's point of view? 
+    * Does it fix a bug? If it does, please describe the bug (doesn't need to be long). Also if there's a public bug report add a link to the bug report. 
+    * If a problem has been found during code review and doesn't fix a known issues, mention that in the commit log.
+    * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log. 
+  *   If others have reported the issue commit log SHOULD use Reported-by: and Tested-by: tags. 
+  * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense): 
+    * Patches SHOULD be sent with git send-email tool. 
+    * Patchsets SHOULD contain no more than 12 patches. 
+    * Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]] 
+    * It's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] 
 
 The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
 
