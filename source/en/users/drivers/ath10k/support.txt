@@ -10,7 +10,7 @@ Please refrain from sending email for developers privately, they don't usually [
 
 ===== Mailing list =====
 
-ath10k has it's own mailing list for discussions and patches to which anyone can subscribe to:
+ath10k has its own mailing list for discussions and patches to which anyone can subscribe to:
 
 http://lists.infradead.org/mailman/listinfo/ath10k
 
