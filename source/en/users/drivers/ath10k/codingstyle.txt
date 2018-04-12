@@ -7,6 +7,45 @@ Go back –> [[en/users/Drivers/ath10k|ath10k]]
 ===== ath10k Coding Style =====
 
 
+==== Linux coding style ====
+
+ath10k mostly follows [[https://www.kernel.org/doc/html/latest/process/coding-style.html|Linux Coding Style]], so read that first. 
+
+==== Checking code ====
+
+For checking the code we have a dedicated script [[https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath10k/ath10k-check|ath10k-check]] which runs various tests, including sparse and checkpatch. Run the script with ''--help'' to see the installation and usage instructions. Strongly recommended to run this before submitting patches as it can catch common problems. Example:
+
+<code>
+~$ cd ~/ath
+~/ath$ ls
+arch/    debian/         include/  lib/                               Module.symvers  sound/
+block/   Documentation/  init/     localversion-wireless-testing      net/            tools/
+certs/   drivers/        ipc/      localversion-wireless-testing-ath  README          usr/
+COPYING  firmware/       Kbuild    MAINTAINERS                        samples/        virt/
+CREDITS  fs/             Kconfig   Makefile                           scripts/        vmlinux-gdb.py@
+crypto/  GNUmakefile     kernel/   mm/                                security/
+~/ath$ ath10k-check
+drivers/net/wireless/ath/ath10k/debug.h:207: return is not a function, parentheses are not required
+drivers/net/wireless/ath/ath10k/debug.h:209: return is not a function, parentheses are not required
+drivers/net/wireless/ath/ath10k/debug.h:210: return is not a function, parentheses are not required
+drivers/net/wireless/ath/ath10k/debug.h:214: Alignment should match open parenthesis
+drivers/net/wireless/ath/ath10k/debug.h:218: Alignment should match open parenthesis
+drivers/net/wireless/ath/ath10k/debug.c:2430: code indent should use tabs where possible
+drivers/net/wireless/ath/ath10k/debug.c:2430: please, no spaces at the start of a line
+drivers/net/wireless/ath/ath10k/debug.c:2431: code indent should use tabs where possible
+drivers/net/wireless/ath/ath10k/debug.c:2431: please, no spaces at the start of a line
+drivers/net/wireless/ath/ath10k/debug.c:2464: code indent should use tabs where possible
+drivers/net/wireless/ath/ath10k/debug.c:2464: please, no spaces at the start of a line
+drivers/net/wireless/ath/ath10k/debug.c:2465: code indent should use tabs where possible
+drivers/net/wireless/ath/ath10k/debug.c:2465: please, no spaces at the start of a line
+drivers/net/wireless/ath/ath10k/debug.c:2493: Please don't use multiple blank lines
+drivers/net/wireless/ath/ath10k/debug.c:2525: Symbolic permissions 'S_IRUSR' are not preferred. Consider using octal permissions '0400'.
+drivers/net/wireless/ath/ath10k/debug.c:2527: Symbolic permissions 'S_IRUSR' are not preferred. Consider using octal permissions '0400'.
+drivers/net/wireless/ath/ath10k/debug.c:2620: Alignment should match open parenthesis
+drivers/net/wireless/ath/ath10k/debug.c:2640: Alignment should match open parenthesis
+~/ath$
+</code>
+
 ==== Status/error variables ====
 
 Use a variable named "ret" to store return values or status codes. Also propagate the error code to upper levels. 
@@ -111,44 +150,3 @@ Multiline comment style is:
 Don't use void pointers. 
 
 Don't use typedef. 
-
-
-==== Linux style ====
-
-Follow [[https://www.kernel.org/doc/html/latest/process/coding-style.html|Linux Coding Style]]. 
-
-
-==== Checking code ====
-
-For checking the code we have a dedicated script [[https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath10k/ath10k-check|ath10k-check]] which runs various tests, including sparse and checkpatch. Run the script with ''--help'' to see the installation and usage instructions. Strongly recommended to run this before submitting patches as it can catch common problems. Example:
-
-<code>
-~$ cd ~/ath
-~/ath$ ls
-arch/    debian/         include/  lib/                               Module.symvers  sound/
-block/   Documentation/  init/     localversion-wireless-testing      net/            tools/
-certs/   drivers/        ipc/      localversion-wireless-testing-ath  README          usr/
-COPYING  firmware/       Kbuild    MAINTAINERS                        samples/        virt/
-CREDITS  fs/             Kconfig   Makefile                           scripts/        vmlinux-gdb.py@
-crypto/  GNUmakefile     kernel/   mm/                                security/
-~/ath$ ath10k-check
-drivers/net/wireless/ath/ath10k/debug.h:207: return is not a function, parentheses are not required
-drivers/net/wireless/ath/ath10k/debug.h:209: return is not a function, parentheses are not required
-drivers/net/wireless/ath/ath10k/debug.h:210: return is not a function, parentheses are not required
-drivers/net/wireless/ath/ath10k/debug.h:214: Alignment should match open parenthesis
-drivers/net/wireless/ath/ath10k/debug.h:218: Alignment should match open parenthesis
-drivers/net/wireless/ath/ath10k/debug.c:2430: code indent should use tabs where possible
-drivers/net/wireless/ath/ath10k/debug.c:2430: please, no spaces at the start of a line
-drivers/net/wireless/ath/ath10k/debug.c:2431: code indent should use tabs where possible
-drivers/net/wireless/ath/ath10k/debug.c:2431: please, no spaces at the start of a line
-drivers/net/wireless/ath/ath10k/debug.c:2464: code indent should use tabs where possible
-drivers/net/wireless/ath/ath10k/debug.c:2464: please, no spaces at the start of a line
-drivers/net/wireless/ath/ath10k/debug.c:2465: code indent should use tabs where possible
-drivers/net/wireless/ath/ath10k/debug.c:2465: please, no spaces at the start of a line
-drivers/net/wireless/ath/ath10k/debug.c:2493: Please don't use multiple blank lines
-drivers/net/wireless/ath/ath10k/debug.c:2525: Symbolic permissions 'S_IRUSR' are not preferred. Consider using octal permissions '0400'.
-drivers/net/wireless/ath/ath10k/debug.c:2527: Symbolic permissions 'S_IRUSR' are not preferred. Consider using octal permissions '0400'.
-drivers/net/wireless/ath/ath10k/debug.c:2620: Alignment should match open parenthesis
-drivers/net/wireless/ath/ath10k/debug.c:2640: Alignment should match open parenthesis
-~/ath$
-</code>
