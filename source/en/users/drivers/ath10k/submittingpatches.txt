@@ -23,7 +23,6 @@ Guidelines for patches are:
  
   * MUST follow [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Documentation/SubmittingPatches]]
   * MUST be compiler and sparse warning free. 
-  * Commit log MUST not be empty. 
   * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
   * Patchsets SHOULD contain no more than 12 patches and include a cover letter. 
   * Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]]
@@ -32,11 +31,17 @@ Guidelines for patches are:
     * How does it change the functionality from user's point of view? 
     * Does it fix a bug? If it does, please describe the bug (doesn't necessarily need to be long). Also if there's a public bug report add a link to the bug report or email describing the issue. 
     * If a problem has been found during code review and doesn't fix a known issue, mention that in the commit log this is a theoretical fix.
-    * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log. 
+    * This also implies that the commit log MUST not be empty. 
+    * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log.
+  * Commit log MUST document the affected hardware versions, bus type and firmware version(s) tested, examples:
+    * QCA988X PCI 10.2.4-1.0-00037
+    * QCA99X0/QCA9984/QCA4019 PCI/AHB 10.4-3.5.3-00053
+    * QCA6174 hw3.2 PCI WLAN.RM.4.4.1-00102-QCARMSWP-1
+    * QCA9377 SDIO WLAN.TF.1.1.1-00061-QCATFSWPZ-1
   * SHOULD use Reported-by: and Tested-by: tags if others have reported the issue. 
   * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense), tt's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] as that will disable the useless warnings.
 
-The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
+The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]]www.ietf.org/rfc/rfc2119.txt]] 
 
 ==== Patch flow ====
 
