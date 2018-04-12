@@ -22,10 +22,10 @@ More info about submitting patches:
 Guidelines for patches are:
  
   * MUST follow [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Documentation/SubmittingPatches]]
+  * MUST follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]]
   * MUST be compiler and sparse warning free. 
   * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
   * Patchsets SHOULD contain no more than 12 patches and include a cover letter. 
-  * Patches SHOULD follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]]
   * The commit log MUST answer the question "Why?": 
     * Describe the motivation behind the bug. 
     * How does it change the functionality from user's point of view? 
