@@ -145,6 +145,23 @@ Multiline comment style is:
  * Bar
  */</code>
 
+==== Debug messages ====
+
+Use ath10k_dbg() or ath10k_dbg_dump().
+
+The format string for ath10k_dbg() should start with debug level followed by name of the command or event and then parameters. All uppercase and no commas, colons or periods.
+
+Examples:
+
+<code>ath10k_dbg(ar, ATH10K_DBG_BOOT, "boot suspend complete\n");
+
+ath10k_dbg(ar, ATH10K_DBG_WMI, "wmi mgmt tx skb %pK len %d ftype %02x stype %02x\n",
+	   msdu, skb->len, fc & IEEE80211_FCTL_FTYPE,
+	   fc & IEEE80211_FCTL_STYPE);
+
+ath10k_dbg(ar, ATH10K_DBG_MAC, "mac update sta %pM peer bw %d\n",
+	   sta->addr, bw);
+</code>
 ==== Things NOT to do ====
 
 Don't use void pointers. 
