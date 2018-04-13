@@ -320,6 +320,22 @@ motivated to implement the patch. This is the most important part of the commit 
 
 The commit log needs to tell why you wrote the patch. If you fixed a bug give a short summary of the bug (can be a long one as well, of course) from user's point of view, and if there's a publically available bug report include a link to that. If you are fixing a warning from a compiler or a static checker add the warning from tool. Or if it's just code cleanup or fixing a theoretical issue, and does not have practical user visible changes, mention that also.
 
+==== Do not top post and edit your quotes ====
+
+Top posting makes following email threads hard to follow and also it makes use of patchwork more difficult, which gets the maintainers grumpy as you are making their work more difficult. So do not top post and instead edit your quotes properly.
+
+<code>A: Because it messes up the order in which people normally read text.
+Q: Why is top-posting such a bad thing?
+A: Top-posting.
+Q: What is the most annoying thing in e-mail?
+
+A: No.
+Q: Should I include quotations after my reply?
+</code>
+
+More info: http://www.idallen.com/topposting.html
+
+
 ===== More patch work references =====
 
 Here is a list of links to help you write better patches 
