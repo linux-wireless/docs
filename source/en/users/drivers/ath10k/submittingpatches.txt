@@ -38,7 +38,7 @@ Guidelines for patches are:
     * QCA99X0/QCA9984/QCA4019 PCI/AHB 10.4-3.5.3-00053
     * QCA6174 hw3.2 PCI WLAN.RM.4.4.1-00102-QCARMSWP-1
     * QCA9377 SDIO WLAN.TF.1.1.1-00061-QCATFSWPZ-1
-  * SHOULD use Reported-by: and Tested-by: tags if others have reported the issue. 
+  * SHOULD use [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#using-reported-by-tested-by-reviewed-by-suggested-by-and-fixes|Reported-by: and Tested-by: tags]] if others have reported the issue. 
   * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense), it's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] as that will disable the useless warnings.
 
 The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
