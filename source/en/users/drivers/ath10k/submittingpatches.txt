@@ -26,7 +26,7 @@ Guidelines for patches are:
   * MUST be compiler and sparse warning free. 
   * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
   * Patchsets SHOULD contain no more than 12 patches and include a cover letter. 
-  * The commit log MUST answer the question "Why?": 
+  * Commit log MUST answer the question "Why?": 
     * Describe the motivation behind the bug. 
     * How does it change the functionality from user's point of view? 
     * Does it fix a bug? If it does, please describe the bug (doesn't necessarily need to be long). Also if there's a public bug report add a link to the bug report or email describing the issue. 
