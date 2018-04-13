@@ -145,6 +145,14 @@ Multiline comment style is:
  * Bar
  */</code>
 
+==== Error messages ====
+
+For warning and error messages we have ath10k_warn() and ath10k_err().
+
+ath10k_warn() should be used when ath10k still continues to work, for example then some limit has been reached or an unknown event has been received. It's also rate limited.
+
+ath10k_err() should be used when a fatal error has been detected and ath10k will shut itself down, for example during driver initialisation or firmware recover fails. It is NOT rate limited.
+
 ==== Debug messages ====
 
 Use ath10k_dbg() or ath10k_dbg_dump().
