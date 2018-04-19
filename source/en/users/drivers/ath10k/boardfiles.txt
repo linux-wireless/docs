@@ -5,12 +5,13 @@ Go back --> [[en/users/Drivers/ath10k]]
 
 If you want to submit board files to the official board-2.bin file send a mail to [[ath10k@lists.infradead.org]] with this information:
 
-  * use prefix "ath10k-firmware:" in the subject
+  * use subject with style of "ath10k-firmware: QCA1234 hw0.0: foo bar" (naturally replacing with real hardware name and proper title)
+  * only one hardware per mail (so for example if you have files for both QCA4019 and QCA9888 send two mails)
   * description for what hardware this is
   * origin of the board file (did you create it yourself or where you downloaded)
   * ids to be used with the board file (ATH10K_BD_IE_BOARD_NAME in ath10k)
-  * attach the actual board file (board.bin)
   * md5sum of each new board file to add
+  * attach the actual board file (board.bin)
 
 Note: You should NOT submit the full board-2.bin file, just the board file/image you want to add (ie. board.bin in ath10k terms).
 
