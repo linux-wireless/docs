@@ -10,6 +10,7 @@ If you want to submit board files to the official board-2.bin file send a mail t
   * origin of the board file (did you create it yourself or where you downloaded)
   * ids to be used with the board file (ATH10K_BD_IE_BOARD_NAME in ath10k)
   * attach the actual board file (board.bin)
+  * md5sum of each new board file to add
 
 Note: You should NOT submit the full board-2.bin file, just the board file/image you want to add (ie. board.bin in ath10k terms).
 
