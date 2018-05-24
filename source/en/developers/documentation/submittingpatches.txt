@@ -335,6 +335,10 @@ Q: Should I include quotations after my reply?
 
 More info: http://www.idallen.com/topposting.html
 
+==== Use RFC or RFT for patches not ready ====
+
+If the patches are not yet ready to be applied by the maintainer mark them as RFC (Request For Comments) or RFC (Request For Test), this way the maintainer can easily see that the patch should not be applied yet. This saves a lot of maintainer's time.
+
 
 ===== More patch work references =====
 
