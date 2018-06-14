@@ -348,3 +348,4 @@ Here is a list of links to help you write better patches
   * https://kernelnewbies.org/FirstKernelPatch
   * [[http://linux.yyz.us/patch-format.html|http://linux.yyz.us/patch-format.html]] 
   * [[https://www.ozlabs.org/~akpm/stuff/tpp.txt|Andrew Morton's ''The perfect patch'']] 
+  * [[http://lkml.kernel.org/r/20171026223701.GA25649@bhelgaas-glaptop.roam.corp.google.com|Make Bjorn's life easier (and grease the path of your patch)]]
