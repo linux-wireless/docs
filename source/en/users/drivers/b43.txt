@@ -32,7 +32,7 @@ To check for a present hardware model execute following command:
 Please look carefully at device ID and chipset name.
 
 ^ PCI-ID     ^ Supported?         ^ Chip ID    ^ Modes       ^ PHY version  ^ Alternative   ^
-| 14e4:0576  | not tested         | BCM43224   | a/b/g/n     | ?            | wl/brcm80211  |
+| 14e4:0576  | not tested         | BCM43224   | a/b/g/n     | ?            | brcm80211     |
 | 14e4:4301  | yes (b43legacy)    | BCM4301    | b           | B            |               |
 | 14e4:4306  | yes (b43legacy)    | BCM4306/2  | b/g         | G            |               |
 | 14e4:4307  | yes                | BCM4306/3  | b/g         | G            |               |
@@ -46,7 +46,7 @@ Please look carefully at device ID and chipset name.
 | 14e4:4320  | yes (b43legacy)    | BCM4306/2  | b/g         | G (r1)       |               |
 | :::        | yes                | BCM4306/3  | ?           | G (r2)       |               |
 | 14e4:4321  | partially          | BCM4321    | ?           | N (r2)       |               |
-| 14e4:4322  | yes (3.18+)        | BCM4322    | b/g/n       | N (r4)       | wl            |
+| 14e4:4322  | yes (3.18+)        | BCM4322    | b/g/n       | N (r4)       |               |
 | 14e4:4324  | yes (b43legacy)    | BCM4306    | a/b/g       | G (r1)       |               |
 | :::        | yes                | BCM4306/3  | a/b/g       | G (r5)       |               |
 | 14e4:4325  | yes (b43legacy)    | BCM4306/2  | b/g         | G (r1)       |               |
@@ -68,13 +68,14 @@ Please look carefully at device ID and chipset name.
 | :::        | no                 | BCM4352    | a/b/g/n/ac  | ?            | wl            |
 | 14e4:43a9  | yes (3.17+)        | BCM43217   | b/g/n       | N (r17)      |               |
 | 14e4:43aa  | yes (3.17+)        | BCM43131   | b/g/n       | N (r17)      |               |
-| 14e4:43b1  | no                 | BCM4352    | a/b/g/n/ac  | AC (r3)      | wl            |
+| 14e4:43b1  | no                 | BCM4352    | a/b/g/n/ac  | AC (r3)      |               |
 | 14e4:4727  | no                 | BCM4313    | b/g/n       | LCN (r1)     | wl/brcm80211  |
 | 14e4:a8d6  | not tested         | BCM43222   | ?           | N (6)        |               |
 | 14e4:a8d8  | yes (3.6+)         | BCM43224   | a/b/g/n     | N (r6)       | brcm80211     |
 | :::        | yes (3.6+)         | BCM43225   | ?           | N (r6)       | brcm80211     |
 | 14e4:a8db  | partially (3.18+)  | BCM43217   | b/g/n       | N (r17)      |               |
-| 14e4:a99d  | not tested         | BCM43421?  | ?           | ?            | wl            |
+| 14e4:a99d  | not tested         | BCM43421?  | ?           | ?            |               |
+
 
 
 
