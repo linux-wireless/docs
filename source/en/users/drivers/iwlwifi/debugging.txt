@@ -22,7 +22,7 @@ Another (more powerful) way to debug iwlwifi is to use tracing:
 We will typically ask for more switches: 
 
 <code>sudo trace-cmd record -e iwlwifi -e mac80211 -e cfg80211 -e iwlwifi_msg</code>
-This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/iwlwifi/Kconfig#n130|CONFIG_IWLWIFI_TRACING]] must be set.
+This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/net/wireless/intel/iwlwifi/Kconfig#n139|CONFIG_IWLWIFI_TRACING]] must be set.
 
 ==== Air sniffing ====
 Your Intel device can act as a sniffer (which is also referred to as "monitor mode"). This means that it can record all the packets being sent over the air by all the other devices including your Access Point. When acting as a sniffer, your device cannot be connected to any Access Point or do anything else.
