@@ -153,6 +153,11 @@ ath10k_warn() should be used when ath10k still continues to work, for example th
 
 ath10k_err() should be used when a fatal error has been detected and ath10k will shut itself down, for example during driver initialisation or firmware recover fails. It is NOT rate limited.
 
+Examples:
+
+  ath10k_warn(ar, "failed to submit frame %d: %d\n", frame_index, ret);
+  ath10k_err(ar, "failed to wake up the device from sleep: %d\n", ret);
+
 ==== Debug messages ====
 
 Use ath10k_dbg() or ath10k_dbg_dump().
