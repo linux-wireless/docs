@@ -29,6 +29,9 @@ The old website for now has a copy of the old content:
 
 To check for a present hardware model execute following command:
 <code>lspci -nn -d 14e4:</code>
+
+If the chipset isn't listed, check if it's connected via SSB (Sonics Silicon Backplane). Such connected chipsets only become visible after the ''ssb'' kernel module has been loaded.
+
 Please look carefully at device ID and chipset name.
 
 ^ PCI-ID     ^ Supported?         ^ Chip ID    ^ Modes       ^ PHY version  ^ Alternative   ^
