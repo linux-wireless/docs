@@ -124,17 +124,19 @@ Name of symbols and functions follow style <drivername>_<filename>_<symbolname>.
 
 Example: 
 
+<code>int ath10k_mac_start(struct ath10k *ar)</code>
 
-<code>int ath10k_init_hw(struct ath10k *ar)</code>
-For each component use function names create/destroy for allocating and freeing something, init/cleanup for initialising variables and cleaning up them afterwards and start/stop to temporarily pause something. 
+For each component use function names create/destroy for allocating and freeing something, register/unregister for initialising and cleaning up them afterwards and start/stop to temporarily pause something. 
 
 Example: 
 
 
 <code>int ath10k_cfg80211_create(struct ath10k *ar)
+int ath10k_cfg80211_register(struct ath10k *ar)
 int ath10k_cfg80211_start(struct ath10k *ar)
 void ath10k_cfg80211_stop(struct ath10k *ar)
-void ath10k_cfg80211_destory(struct ath10k *ar)</code>
+int ath10k_cfg80211_unregister(struct ath10k *ar)
+void ath10k_cfg80211_destroy(struct ath10k *ar)</code>
 
 ==== Comments ====
 
