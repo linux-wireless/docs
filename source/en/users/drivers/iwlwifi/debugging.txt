@@ -24,6 +24,8 @@ We will typically ask for more switches:
 <code>sudo trace-cmd record -e iwlwifi -e mac80211 -e cfg80211 -e iwlwifi_msg</code>
 This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/net/wireless/intel/iwlwifi/Kconfig#n139|CONFIG_IWLWIFI_TRACING]] must be set.
 
+**//Note: you must not remove the iwlwifi kernel module while tracing is running. You need to stop the tracing first!//**
+
 ==== Air sniffing ====
 Your Intel device can act as a sniffer (which is also referred to as "monitor mode"). This means that it can record all the packets being sent over the air by all the other devices including your Access Point. When acting as a sniffer, your device cannot be connected to any Access Point or do anything else.
 The output of the air sniffing operation is a file with a pcap extension that can be parsed by the [[https://www.wireshark.org|Wireshark]] program.
