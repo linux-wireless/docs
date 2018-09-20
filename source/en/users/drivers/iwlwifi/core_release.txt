@@ -37,6 +37,18 @@ Here is the table to help you finding the right version of the different compone
 | Core35        | maintained                | [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/log/?h=release/core35|core35]]  | -38.ucode [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/linux-firmware.git/plain/iwlwifi-9260-th-b0-jf-b0-38.ucode|9260]][[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/linux-firmware.git/plain/iwlwifi-9000-pu-b0-jf-b0-38.ucode|9000]]                                                                                                                                                                                                                                                                                                                                                |
 | Core38        | maintained                | [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/backport-iwlwifi.git/log/?h=release/core38|core38]]  | -41.ucode [[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/linux-firmware.git/plain/iwlwifi-9260-th-b0-jf-b0-41.ucode|9260]][[https://git.kernel.org/cgit/linux/kernel/git/iwlwifi/linux-firmware.git/plain/iwlwifi-9000-pu-b0-jf-b0-41.ucode|9000]]                                                                                                                                                                                                                                                                                                                                                |
 
+====== Devices not maintained in mainline ======
+From time to time, we remove support for existing devices from the mainline code base of the firmware. This means that those devices won't benefit from new features, but bug fixes will be back-ported to the Core release branch on which they are supported. For those devices, it is recommended to take the latest Core available for the driver and the latest firmware. For example for 7260, the Core14 firmware should be used together with the latest Core available for the driver.
+Those devices and the latest Core firmware that supports them are:
+  * 3160  (Core14)
+  * 7260  (Core14)
+  * 7265  (Core14)
+  * 7265D (Core26)
+  * 3165  (Core26)
+  * 3168  (Core26)
+  * 8260  (Core33)
+  * 8265  (Core33)
+
 ====== About vendor commands ======
 iwlwifi implements a few vendor commands that are available in this tree. We strongly suggest that you disable the vendor commands Kconfig option (CPTCFG_IWLMVM_VENDOR_CMDS). Enabling vendor commands without actually sending them can cause incompatibility with certain versions of the supplicant (due to a supplicant bug) or too aggressive Multicast frames filtering. Note that CPTCFG_IWLMVM_VENDOR_CMDS is enabled by default and needs to be explicitly disabled.
 
