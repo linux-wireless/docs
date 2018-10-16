@@ -44,7 +44,8 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a 
   * QCA9882-BR4A found in [[http://www.sparklan.com/p2-products-detail.php?PKey=c792ZnxnchlkAqWCF1qRFJm1kZwZ0-Ze-Y6NJoUDEvA&WPEQ-257ACN/|SparkLan WPEQ-257ACN]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : Archer C7 v2.x]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : WDR7500 v3.0]]
-  * QCA9377
+  * QCA9880-BR4A found in [[http://www.sparklan.com/p2-products-detail.php?PKey=9b34x6pYIBoCvHn2usWOnLoPmEOzltNRGNsHFtWq&WPEA-352ACN/|SparkLan WPEA-352ACN]]
+  * QCA9377-5 found in [[http://www.sparklan.com/p2-products-detail.php?PKey=1d2bsjqrHnqa85aaHl0mpJtOWcBpjf5kKBc0DfFEU90&WNFQ-158ACN(BT)/|SparkLan WNFQ-158ACN(BT)]]
   * QCA9886 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18]]
 
 [1] The Compex WLE900VX card enumerates as PCI device on some PCs but not for some other PCs. The reason could possibly be PC hardware or kernel version. Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821. The Chaos Calmer wpj344a_150827_vCC.img provided by http://www.compex.com.sg/downloads/ can detect and enable the WLE900VX card with ath10k.
