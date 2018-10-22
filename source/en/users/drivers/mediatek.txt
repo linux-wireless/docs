@@ -2,10 +2,10 @@
 
   * **mt76** driver handles:
     * **MT7662E**/**MT7612E** 802.11a/b/g/n/ac 2T2R 2.4/5 GHz PCI Express Single Chip, 
-    * **MT7610U** 802.11a/b/g/n/ac 1T1R 2.4/5GHz USB chip (since **4.19**)
-    * **MT7612U** 802.11a/b/g/n/ac 2T2R 2.4/5GHz USB chip (since **4.19**)
-    * **MT7630E** 802.11a/b/g/n 1T1R 2.4/5GHz PCIe chip (since **4.20**)
-    * **MT7610E** 802.11a/b/g/n/ac 1T1R 2.4/5GHz PCIe chip (since **4.20**)
+    * **MT7610U** 802.11a/b/g/n/ac 1T1R 2.4/5GHz USB chip (**4.19+**)
+    * **MT7612U** 802.11a/b/g/n/ac 2T2R 2.4/5GHz USB chip (**4.19+**)
+    * **MT7630E** 802.11a/b/g/n 1T1R 2.4/5GHz PCIe chip (**4.20+**)
+    * **MT7610E** 802.11a/b/g/n/ac 1T1R 2.4/5GHz PCIe chip (**4.20+**)
     * **MT7603E** 802.11b/g/n 2T2R 2.4GHz PCI Express Single Chip and **MT7628** 802.11b/g/n 2T2R 2.4GHz SoC devices (**4.7+**, **WIP**: https://github.com/openwrt/mt76)
   
   * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4 GHz USB Single Chip devices (**4.2+**)
