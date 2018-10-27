@@ -36,7 +36,7 @@ For a complete listing of supported products, see the //[[en/users/Drivers/p54/d
 There are several different firmwares for different hardware. You have to pick the right one, download, rename to the listed name and put it into the right place... Normally this should be /lib/firmware. However some distributions put firmware in a different place. 
 
 please pick the right one for your device from the lists: 
-    * NOTE: Not all firmwares revisions are compatible with every device out of there! If you run into problems, first try an alternative firmware before requesting further assistance ([[en/users/Drivers/p54|Contact]]). 
+    * NOTE: Not all firmwares revisions are compatible with every device out of there! If you run into problems, first try an alternative firmware before requesting further assistance ([[http://press1for.co.uk/apple-customer-service/|Contact]]). 
     * for **2.6.29** kernels **and above**:
 
 |**card type** |**required filename** |**recommended image** |
