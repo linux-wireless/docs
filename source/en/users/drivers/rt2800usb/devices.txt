@@ -62,6 +62,7 @@
 |Ralink|RT3071|RT3071|0x148f|0x3071||
 |Ralink|RT3072|RT3072|0x148f|0x3072||
 |Ralink|RT3370|RT3370|0x148f|0x3370||
+|Ralink|RT5370|RT5370|0x148f|0x5370||
 |Ralink|RT8070|RT8070|0x148f|0x8070||
 |Rosewill|[[http://www.rosewill.com/products/1125/ProductDetail_Specifications.htm|RNX-N1]]|RT2870+RT2820|0x148f|0x2870||
 |Rosewill|[[http://www.rosewill.com/products/1603/ProductDetail_Specifications.htm|RNX-N250UB]]|RT3072|0x148f|0x3072||
