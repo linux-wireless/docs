@@ -93,6 +93,27 @@ Then sending a new version of the patch **always** add a change log, either afte
 
 If a patch in a bigger patchset changes resubmit the whole patchset, even the patches which have not changes. The maintainers look at patchsets as a complete unit, usually they do not want to take patches individually from a patchset.
 
+===== Tree labels =====
+
+Labeling patches with what tree the patch should go to helps maintainers to prioritise and sort patches and avoids unnecessary emails, which saves everyone time and speeds up patch review. Here are some tips how to label wireless patches.
+
+If you want to target your patch to a specific release (for example that the patch should go -rc release not -next) you can inform the maintainer by adding the release number inside the PATCH brackets:
+ 
+<code>[PATCH 4.20] subsystem: fix foo</code>
+
+If you want to make it clear to the maintainer that the patch should NOT go to -rc release but to -next instead you can add "-next" to PATCH brackets:
+
+<code>[PATCH -next] subsystem: fix foo</code>
+
+Alternatively you can specify the exact tree you are targetting by adding the name of the git tree inside PATCH brackets:
+
+<code>[PATCH mac80211] mac80211: fix foo
+[PATCH mac80211-next] mac80211: implement very-cool-feature
+[PATCH wireless-drivers] ath10k: fix foo
+[PATCH wireless-drivers-next] ath10k: implement awesome-feature
+</code>
+
+
 ===== Sending large patches or multiple patches =====
 
 You should only send a large patch if your patch does one specific task, or a few of them if they are easy to review. If your work consists of multiple tasks you must split your tasks into separate patches. Each patch must address a small set of tasks to help the maintainers with revision. The rule of thumb here is if you read your patch and if its not clear what the patch is doing then better break it down into separate patches. Patches should also be run through scripts/checkpatch.pl. 
