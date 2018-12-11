@@ -19,12 +19,14 @@
 The following devices are supported (since kernel version):
 
   * 802.11ac products
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9260-brief.pdf|Intel® Wireless 9260]] (4.14)
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9560-brief.pdf|Intel® Wireless 9560]] (4.14)
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-8265-brief.pdf|Intel® Wireless 8265]] (4.6)
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-3168-brief.pdf|Intel® Wireless 3168]] (4.6)
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-8260-brief.pdf|Intel® Wireless 8260]] (4.1)
-      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-3165-brief.pdf|Intel® Wireless 3165]] (4.1)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9462-brief.pdf|Intel® Wireless-AC 9462]] (4.14)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9461-brief.pdf|Intel® Wireless-AC 9461]] (4.14)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9260-brief.pdf|Intel® Wireless-AC 9260]] (4.14)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9560-brief.pdf|Intel® Wireless-AC 9560]] (4.14)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-8265-brief.pdf|Intel® Wireless-AC 8265]] (4.6)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-3168-brief.pdf|Intel® Wireless-AC 3168]] (4.6)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-8260-brief.pdf|Intel® Wireless-AC 8260]] (4.1)
+      * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-3165-brief.pdf|Intel® Wireless-AC 3165]] (4.1)
   * 802.11n or 802.11ac products (SKU dependent)
       * [[http://www.intel.com/content/www/us/en/wireless-products/dual-band-wireless-ac-7265.html|Intel® Wireless 7265]] (3.13)
       * [[http://www.intel.com/content/www/us/en/wireless-products/dual-band-wireless-ac-7260-bluetooth.html|Intel® Wireless 7260]] (3.10)
