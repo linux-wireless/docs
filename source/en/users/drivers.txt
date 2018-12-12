@@ -106,6 +106,7 @@ Note: %%**%% **staging drivers**
 |[[en/users/Drivers/agnx|agnx]]|Airgo/Qualcom|yes|?|?|?|?|A/B/G|PCI|
 |[[en/users/Drivers/ar6k|ar6k]]|Atheros|?|?|?|?|?|B/G|?|
 |[[http://poldhu.sf.net/|poldhu]]|NWN|no|?|?|?|?|B|PCMCIA|
+|[[en/users/Drivers/rt2880_inic|RT2880 iNIC]]|Ralink|?|?|?|?|?|?|?|
 
 Notes: 
     - 802.11a capabilities depend on the actual radio chip used. 
