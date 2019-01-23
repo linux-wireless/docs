@@ -113,6 +113,8 @@ We recommend you encrypt the data using the iwlwifi developers's PGP keys before
 
 For instance:
 
-<code>gpg --encrypt -r 18D075865D915B5E386F660F2D0B96FE6E363201 -r C0EBC440F6DA091C884D8532E0F373F37BF9099A -r 1772CD7E06F604F5A6EBCB26A1479CA21A3CC5FA <file_to_encrypt></code>
+<code>
+gpg --recv-keys C0EBC440F6DA091C884D8532E0F373F37BF9099A 1772CD7E06F604F5A6EBCB26A1479CA21A3CC5FA 18D075865D915B5E386F660F2D0B96FE6E363201
+gpg --encrypt -r 18D075865D915B5E386F660F2D0B96FE6E363201 -r C0EBC440F6DA091C884D8532E0F373F37BF9099A -r 1772CD7E06F604F5A6EBCB26A1479CA21A3CC5FA <file_to_encrypt></code>
 
 This will generate a new, encrypted file that you should provide to us.  Any of, and only, these developers will be able to open the file.  Adding the three keys during encryption allows us to respond faster, since we're not restrained by a single developer's availability.
