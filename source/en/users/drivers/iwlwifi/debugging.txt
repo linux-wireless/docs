@@ -100,7 +100,6 @@ echo 1 > /sys/${DEVPATH}/data
 
 This way, each time a dump is created it will automatically land on your file system.  Remember to make the /sbin/iwlfwdump.sh file executable (i.e. ''chmod a+x /sbin/iwlfwdump.sh''), so that the udev rule can execute it, otherwise it won't work.
 
-To debug the firmware you'll typically need a customized version of it. This customization depends on the bug you are facing.
 Starting from 4.1, we can trigger firmware dumps when issues occur (e.g. when the association fails) this again requires a customized firmware. In that case, the developer working with you will let you know and you won't have to trigger the dump yourself using fw_dbg_collect debugfs hook.
 
 === Firmware crashes ===
@@ -113,7 +112,27 @@ iwlwifi 0000:01:00.0: Loaded firmware version: XX.XX.XX.XX
 iwlwifi 0000:01:00.0: 0x0000090A | ADVANCED_SYSASSERT</code>
 In this case, please copy the full dmesg output since there may be data before and after this message that can be helpful.
 
-In case of a firmware crash or queues being stuck, a dump will be automatically created. If you have the udev rule in place, you'll see the dump on your file system. No customization needed in that case, the dump from a regular firmware will already include valuable data, but the firmware team is likely to ask reproduction with a customized version.
+In case of a firmware crash or queues being stuck, a dump will be automatically created. If you have the udev rule in place, you'll see the dump on your file system. No customization needed in that case, the dump from a regular firmware will already include valuable data, but we usually need more information than the data provided by a release version of the firmware. When you report a bug, please use a debug firmware 
+from the list below which will allow the dump to include more data at the cost of extra PCI transactions:
+
+{{en:users:drivers:iwlwifi:iwlwifi-3160-17.ucode.gz|debug firmware version for 3160}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-7260-17.ucode.gz|debug firmware version for 7260}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-7265-17.ucode.gz|debug firmware version for 7265}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-7265d-29.ucode.gz|debug firmware version for 7265D}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-3168-29.ucode.gz|debug firmware version for 3168}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-8000C-36.ucode.gz|debug firmware version for 8260}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-8265-36.ucode.gz|debug firmware version for 8265}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-9000-pu-b0-jf-b0-43.ucode.gz|debug firmware version for 9000}}
+
+{{en:users:drivers:iwlwifi:iwlwifi-9260-th-b0-jf-b0-43.ucode.gz|debug firmware version for 9260}}
+
 ==== Privacy aspects ====
 
 By sending the debug logs, you are providing information to Intel such as your email address, peer’s MAC address, and other information.  This information will be used only for the purpose of troubleshooting the issue you are reporting.  Intel is committed to protecting your privacy.  To learn more about Intel’s privacy practices, please visit [[http://www.intel.com/privacy|Intel's privacy site]] or write Intel Corporation, ATTN Privacy, Mailstop RNB4-145, 2200 Mission College Blvd., Santa Clara, CA 95054 USA. 
