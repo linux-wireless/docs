@@ -113,7 +113,7 @@ iwlwifi 0000:01:00.0: 0x0000090A | ADVANCED_SYSASSERT</code>
 In this case, please copy the full dmesg output since there may be data before and after this message that can be helpful.
 
 In case of a firmware crash or queues being stuck, a dump will be automatically created. If you have the udev rule in place, you'll see the dump on your file system. No customization needed in that case, the dump from a regular firmware will already include valuable data, but we usually need more information than the data provided by a release version of the firmware. When you report a bug, please use a debug firmware 
-from the list below which will allow the dump to include more data at the cost of extra PCI transactions:
+from the list below. This will allow to include more data in the dump at the cost of extra PCI transactions:
 
 {{en:users:drivers:iwlwifi:iwlwifi-3160-17.ucode.gz|debug firmware version for 3160}}
 
