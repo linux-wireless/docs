@@ -1,5 +1,18 @@
 ====== Bugs and support ======
 
+===== Before you contact us... =====
+We try to give the best support we can with the best response time possible. We also don't have several levels of support, by contacting us, you contact the developers who are also busy with other tasks. Before reaching out to us, please make sure you have a supported Intel Wi-Fi device and that it is enabled. Many request are for problems in the rfkill area where the platform pulls the rfkill signal preventing us from doing anything.
+
+If you see that Wi-Fi is hard blocked like in:
+
+<code>
+3: phy0: Wireless LAN
+ 	Soft blocked: yes
+ 	Hard blocked: yes
+</code>
+
+you can blacklist the WMI module and see if that helps. The name of the WMI module will vary depending on the OEM. A simple lsmod | grep wmi should give you a hint of what module to blacklist.
+
 ===== How to report? =====
 Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:linuxwifi@intel.com|linuxwifi@intel.com]] to the bug.
 Always attach the kernel log to your reports:
