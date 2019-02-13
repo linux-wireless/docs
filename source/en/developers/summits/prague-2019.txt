@@ -1,0 +1,21 @@
+====== 2019 wireless workshop ======
+
+===== Logistics =====
+
+Netdev 0x13 has been announced for Prague, Czech Republic, March 20-22:
+
+http://netdevconf.org/0x13/
+
+We're going to hold the next wireless workshop there, on March 20th.
+
+Formalities are as usual - open (discussion) session, you only have to
+be registered for netdev to attend (but you can add yourself below so
+we have an idea of who's coming to talk about what).
+
+
+===== Topics =====
+
+  * fq_codel and airtime fairness integration in the wireless stack (Kevin Hayes, Kan Yan)
+
+===== planning to attend =====
+  * Johannes Berg
