@@ -15,3 +15,4 @@
   * [[en/developers/Summits/Seville-2016|Seville, 2016]]
   * [[en/developers/Summits/Santa-Fe-2016|Santa Fe, 2016]]
   * [[en/developers/Summits/Seoul-2017|Seoul, 2017]]
+  * [[en/developers/Summits/Prague-2019|Prague, 2019]]
