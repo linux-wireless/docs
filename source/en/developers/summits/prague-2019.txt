@@ -19,3 +19,4 @@ we have an idea of who's coming to talk about what).
 
 ===== planning to attend =====
   * Johannes Berg
+  * Kalle Valo
