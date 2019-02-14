@@ -22,4 +22,4 @@ we have an idea of who's coming to talk about what).
   * Kalle Valo
   * Yan Hsuan, Chuang
   * Stanislaw Gruszka
-  * Toke Høiland-Jørgensen (parts of it; need to run a tutorial as well)
+  * Toke Høiland-Jørgensen (parts of it; need to run [[https://netdevconf.org/0x13/session.html?tutorial-XDP-hands-on|a tutorial]] as well)
