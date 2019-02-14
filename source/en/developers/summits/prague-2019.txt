@@ -21,3 +21,4 @@ we have an idea of who's coming to talk about what).
   * Johannes Berg
   * Kalle Valo
   * Yan Hsuan, Chuang
+  * Stanislaw Gruszka
