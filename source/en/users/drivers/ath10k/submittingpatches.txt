@@ -15,7 +15,9 @@ You can follow the state of ath10k patch review from patchwork:
 
 More info about submitting patches: 
         * [[en/developers/Documentation/SubmittingPatches|linux-wireless submitting patches instructions]] 
-        * [[en/developers/Documentation/git-guide|linux-wireless git guide]] 
+        * [[en/developers/Documentation/git-guide|linux-wireless git guide]]
+        * [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Linux kernel submitting patches]]
+        * [[https://medium.com/@steveamaza/how-to-write-a-proper-git-commit-message-e028865e5791|How to write proper git commit messages]]
 
 ==== Guidelines ====
 
