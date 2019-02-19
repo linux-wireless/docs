@@ -64,4 +64,5 @@ Any SDIO or USB devices are not supported, but work is ongoing to add that.
   * applying ath9k regulatory domain hack patch from OpenWRT causes firmware crash (reason: regulatory hint function is never called and ath10k never sends scan channel list to the firmware which in turn causes firmware to crash on scan)
   * tx rate is reported as 6mbps due to firmware limitation (no tx rate information in tx completions); instead see /sys/kernel/debug/ieee80211/phyX/ath10k/fw_stats
   * WEP doesn't work with AP_VLANs - frames are sent unencrypted (observed on: 999.999.0.636, 10.2.4.20-1, 10.1.467.2-1)
+  * TX speeds are extremely poor on certain chips (QCA6174 is one). A patch solves the issue in most cases [[https://gist.github.com/harrykipper/d1bedb234c4af0692f7ccd33329a02d7]] (source: [[https://bbs.archlinux.org/viewtopic.php?pid=1689990#p1689990]])
 
