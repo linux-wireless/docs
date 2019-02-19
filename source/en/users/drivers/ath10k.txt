@@ -25,7 +25,7 @@ The ath10k driver is located under [[https://git.kernel.org/cgit/linux/kernel/gi
 
 ===== Supported Devices =====
 
-ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 based devices, here's a list of known products:
+ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 and QCA6174 based devices, here's a list of known products:
 
 
   * QCA9888 found in [[http://www.compex.com.sg/product/wle650v5-18/|2x2 MU-MIMO 802.11ac Wave 2 Wireless Module - Compex WLE650V5-18A]] 
