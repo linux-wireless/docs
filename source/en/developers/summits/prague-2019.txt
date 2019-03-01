@@ -24,6 +24,7 @@ we have an idea of who's coming to talk about what).
   * eBPF integration into the wireless stack cont'd - for future statistics etc.
     * old proposal from Johannes exists, but is pretty bare (and not done yet)
     * are there other places where hooks should be added?
+    * XDP support for WiFi?
   * CRDA deprecation plan
   * CSI reporting
   * vendor command/event handling upstream
