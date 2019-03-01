@@ -16,7 +16,19 @@ we have an idea of who's coming to talk about what).
 ===== Topics =====
 
   * fq_codel and airtime fairness integration in the wireless stack (Kevin Hayes, Kan Yan)
-
+  * HE/11ax
+    * client side should be more or less done?
+    * AP side pretty much open - one thing to remember was configuration being not just in the beacon elements but also outside (we wanted to learn from VHT :-))
+    * much more multi-user TX/RX, are TXQs sufficient? but likely will need different scheduling
+  * 802.3/802.11 frame conversion offload with mac80211
+  * eBPF integration into the wireless stack cont'd - for future statistics etc.
+    * old proposal from Johannes exists, but is pretty bare (and not done yet)
+    * are there other places where hooks should be added?
+  * CRDA deprecation plan
+  * CSI reporting
+  * vendor command/event handling upstream
+  * upstream mechanisms for non-public features
+  * security issue handling - can/should we sync better among ourselves?
 ===== planning to attend =====
   * Johannes Berg
   * Kalle Valo
