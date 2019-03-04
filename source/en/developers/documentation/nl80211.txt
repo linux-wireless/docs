@@ -13,7 +13,7 @@ Current users of nl80211:
   * [[en/developers/Regulatory/CRDA|crda]] 
   * [[en/users/Documentation/hostapd|hostapd]] 
   * [[en/users/Documentation/wpa_supplicant|wpa_supplicant]] (with **-Dnl80211**) 
-
+  * [[https://iwd.wiki.kernel.org/|iwd]]
 
 ===== libnl tiny =====
 
