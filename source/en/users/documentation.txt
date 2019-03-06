@@ -19,6 +19,7 @@ Here we start documentation for users for all new wireless utilities. The list i
   * [[en/users/Documentation/acs|ACS]] - Automatic Channel Selection support for Linux 
   * [[en/developers/OpenWirelessMovement|Solutions on Linux for the Open Wireless Movement]] 
   * [[http://linuxwimax.org/|WiMAX on Linux]] 
+  * [[https://iwd.wiki.kernel.org/|iwd]] - Wifi management daemon (scanning, AP, supplicant, etc.)
 
 
 ===== YouTube Documentation =====
