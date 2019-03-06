@@ -14,6 +14,7 @@ Current users of nl80211:
   * [[en/users/Documentation/hostapd|hostapd]] 
   * [[en/users/Documentation/wpa_supplicant|wpa_supplicant]] (with **-Dnl80211**) 
   * [[https://iwd.wiki.kernel.org/|iwd]]
+  * [[en/users/Documentation/NetworkManager|NetworkManager]] (scanning etc.)
 
 ===== libnl tiny =====
 
