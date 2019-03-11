@@ -40,3 +40,5 @@ we have an idea of who's coming to talk about what).
   * Jouni Malinen
   * Maya Haim (Erez)
   * Michał Kazior
+  * Kevin Hayes
+  * Kan Yan
