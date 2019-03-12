@@ -31,6 +31,7 @@ we have an idea of who's coming to talk about what).
   * upstream mechanisms for non-public features
   * security issue handling - can/should we sync better among ourselves?
   * What's the next for rtw88?
+  * 802.11ax timeline and testing discussion
 ===== planning to attend =====
   * Johannes Berg
   * Kalle Valo
