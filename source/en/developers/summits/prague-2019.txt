@@ -34,7 +34,8 @@ we have an idea of who's coming to talk about what).
   * 802.11ax timeline and testing discussion
   * removing NAN APIs?
   * Android APIs
-    * RX filter
+    * RX filter?
+    * BT Coex enable/disable/auto?
     * ...?
 
 ===== planning to attend =====
