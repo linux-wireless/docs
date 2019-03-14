@@ -33,6 +33,9 @@ we have an idea of who's coming to talk about what).
   * What's the next for rtw88?
   * 802.11ax timeline and testing discussion
   * removing NAN APIs?
+  * Android APIs
+    * RX filter
+    * ...?
 
 ===== planning to attend =====
   * Johannes Berg
