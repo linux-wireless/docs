@@ -51,3 +51,4 @@ we have an idea of who's coming to talk about what).
   * Kan Yan
   * Kirtika Ruchandani
   * Brian Norris
+  * Matthias May
