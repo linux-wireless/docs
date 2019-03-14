@@ -52,3 +52,4 @@ we have an idea of who's coming to talk about what).
   * Kirtika Ruchandani
   * Brian Norris
   * Matthias May
+  * Wojciech Dubowik
