@@ -39,6 +39,7 @@ we have an idea of who's coming to talk about what).
     * BT Coex enable/disable/auto?
     * ...?
   * radiotap, in particular TLV format?
+  * extended key ID support
 
 ===== planning to attend =====
   * Johannes Berg
