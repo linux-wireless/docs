@@ -40,6 +40,7 @@ we have an idea of who's coming to talk about what).
     * ...?
   * radiotap, in particular TLV format?
   * extended key ID support
+  * S1G (mac80211, radiotap)
 
 ===== planning to attend =====
   * Johannes Berg
