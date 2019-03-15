@@ -38,6 +38,7 @@ we have an idea of who's coming to talk about what).
     * RX filter?
     * BT Coex enable/disable/auto?
     * ...?
+  * radiotap, in particular TLV format?
 
 ===== planning to attend =====
   * Johannes Berg
