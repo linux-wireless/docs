@@ -28,6 +28,7 @@ we have an idea of who's coming to talk about what).
   * CRDA deprecation plan
   * CSI reporting
   * vendor command/event handling upstream
+    * TX power table switching?
   * upstream mechanisms for non-public features
   * security issue handling - can/should we sync better among ourselves?
   * What's the next for rtw88?
