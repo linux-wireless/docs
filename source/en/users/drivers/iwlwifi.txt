@@ -12,7 +12,6 @@
     * Station (client)
     * AP mode on 2.4GHz (on devices driven by iwlmvm)
     * P2P and multi-role (on devices driven by iwlmvm)
-    * Wi-Fi Aware*, Wi-Fi Location* are experimental on 8260 - see [[en:users:drivers:iwlwifi#about_the_ftm_and_nan_support|note]]
     * Monitor (sniffer) - see [[en:users:drivers:iwlwifi#about_the_monitorsniffer_mode|note]]
     * IBSS (Ad-Hoc)
 ===== Supported Devices =====
