@@ -38,11 +38,4 @@ To use sparse for kernel development simply pass on the C=1 argument onto your m
 
 ===== Endian checks =====
 
-Endian checks are encouraged. Most endian complaints are typically valid and reflect design issues. These should be reviewed carefully. Some drivers force-enable endian checks with sparse by forcing it through their own driver makefiles upstream. If drivers do not have these you can enable sparse checks yourself by appending to your make command: 
-
-
-<code>CF="-D__CHECK_ENDIAN__" </code>
-To enforce endian checks on your driver you can use something as follows on your driver Makefile: 
-
-
-<code>ccflags-y += -D__CHECK_ENDIAN__</code>
+Most endian complaints are typically valid and reflect design issues. These should be reviewed carefully. Happily, since v4.10-rc1 these checks are automatically enabled.
