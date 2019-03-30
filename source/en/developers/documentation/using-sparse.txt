@@ -31,10 +31,17 @@ make install</code>
 
 ===== Using sparse =====
 
-To use sparse for kernel development simply pass on the C=1 argument onto your make command. For example to enable sparse for mac80211 development you would use: 
+To use sparse for kernel development simply pass on the C=2 argument onto your make command. For example to enable sparse for mac80211 development you would use: 
+
+
+<code>make C=2 M=net/mac80211/</code>
+
+
+This will force-check all corresponding source files. To only check files which will be recompiled you would use the C=1 argument:
 
 
 <code>make C=1 M=net/mac80211/</code>
+
 
 ===== Endian checks =====
 
