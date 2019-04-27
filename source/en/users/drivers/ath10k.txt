@@ -48,6 +48,7 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 and QCA6174 based device
   * QCA9886 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18]]
   * QCA6174 / QCA6174A found in [[https://compex.com.sg/shop/wifi-module/wlt674/ | Compex WLT674]] and [[http://www.sparklan.com/p2-products-detail.php?PKey=82b4pR_W7FJSYinv09o8G_QIGWRWlZuAZzti33RYwi0&WPEQ-261ACNI(BT)|SparkLan WPEQ-261ACNI(BT)]] and [[http://bointec.com/p4-products_detail.php?PKey=6851tczr12Q8EfPpaG9ML6ap7bJe2sSKZYPXP_9jLIE|Bointec DPE109A]] 
   * QCA9984 /QCA9994 found in [[https://compex.com.sg/shop/wifi-module/wle1216v5-20/ | Compex WLE1216V5-20]]
+  * IPQ4018 found in [[https://www.8devices.com/products/jalapeno | 8Devices Jalapeno module]] 
 
 [1] The Compex WLE900VX card enumerates as PCI device on some PCs but not for some other PCs. The reason could possibly be PC hardware or kernel version. Detailed info: https://bugzilla.kernel.org/show_bug.cgi?id=84821. The Chaos Calmer wpj344a_150827_vCC.img provided by http://www.compex.com.sg/downloads/ can detect and enable the WLE900VX card with ath10k.
 
