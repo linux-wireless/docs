@@ -16,7 +16,8 @@
     * IBSS (Ad-Hoc)
 ===== Supported Devices =====
 The following devices are supported (since kernel version):
-
+  * 802.11ax products
+      * [[https://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wi-fi-6-ax200-module-brief.pdf|Intel® Wi-Fi 6 AX200]] (5.2)
   * 802.11ac products
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9462-brief.pdf|Intel® Wireless-AC 9462]] (4.14)
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9461-brief.pdf|Intel® Wireless-AC 9461]] (4.14)
