@@ -89,7 +89,7 @@ See also [[en/developers/Documentation/Glossary#SoftMac|SoftMAC]].
   * Disassociate 
   * Reassociate 
   * Beacon 
-  * Probe [[en/developers/Documentation/Glossary#mac80211|mac80211]]'s MLME management implementation is currently handled by <code>net/mac80211/ieee80211_sta.c</code>. This handles only the STA MLME 
+  * Probe [[en/developers/Documentation/Glossary#mac80211|mac80211]]'s MLME management implementation is currently handled by ''net/mac80211/mlme.c''. This handles only the client-side MLME.
 
 
 ===== PHY =====
