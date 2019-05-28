@@ -47,3 +47,17 @@ Current users of the testmode interface are:
 TODO: could list (references to) ready-made scripts which implement nicely automated / elegant workflows for SAR testing etc. 
 
 For ATH9K chipsets, there's SAR testing functionality provided via the non-testmode setting [[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/ath/ath9k/Kconfig|CONFIG_ATH9K_TX99]]. Hmm, this possibly needs conversion to (additionally?) providing the generic nl80211 testmode functionality? 
+
+===== vendor-specific API =====
+
+Under the NL80211_CMD_VENDOR command, there's the ability to register vendor-specific behavior. For a long time, we've explicitly rejected these upstream, but after many discussions some may be allowed, subject to (at least) the following constraints:
+
+  - Upstream vendor commands shall not replace existing functionality.
+  - The submitter shall consider a pure nl80211 implementation and explain the reasoning against it in the commit message.
+  - Example users/use cases of the API shall be documented.
+  - The newly proposed API shall be subject to stable API rules.
+  - The content of the NL80211_ATTR_VENDOR_DATA shall be documented.
+  - Vendor command and sub-attribute definitions shall be in a common header file location (TBD, e.g. include/uapi/nl80211-vnd-*.h)
+  - Patches introducing such commands shall be submitted separately, not "buried" in big driver patchsets. Give them a "nl80211: vendor-cmd: " prefix to make them easily identifiable.
+
+The goal with these rules is to enable use of vendor commands in a fashion that is transparent enough to allow later reuse by other components with similar needs, and then potentially defining "real" nl80211 API for the use case in question.
