@@ -56,7 +56,7 @@ Under the NL80211_CMD_VENDOR command, there's the ability to register vendor-spe
   - The submitter shall consider a pure nl80211 implementation and explain the reasoning against it in the commit message.
   - Example users/use cases of the API shall be documented.
   - The newly proposed API shall be subject to stable API rules.
-  - Sub-attributes of the NL80211_ATTR_VENDOR_DATA shall usually be used (at least for driver code) and shall be documented.
+  - Unless the data inside NL80211_ATTR_VENDOR_DATA is just an opaque blob not used by the driver (but e.g. by firmware), sub-attributes shall be used inside of it, and those shall be documented.
   - Vendor command and sub-attribute definitions shall be in a common header file location (TBD, e.g. include/uapi/nl80211-vnd-*.h)
   - Patches introducing such commands shall be submitted separately, not "buried" in big driver patchsets. Give them a "nl80211: vendor-cmd: " prefix to make them easily identifiable.
 
