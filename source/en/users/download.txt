@@ -1,1 +1,12 @@
-yes
+
+
+
+===== Documentation move =====
+
+The project **compat-wireless** has been renamed to **compat-drivers**, and later to **backports**, and its documentation has been moved to: 
+
+[[https://backports.wiki.kernel.org|https://backports.wiki.kernel.org]] 
+
+The code is in [[http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/|Releases]] page: 
+  * [[http://www.kernel.org/pub/linux/kernel/projects/backports/stable/|linux-stable backports releases]] 
+  * [[http://www.kernel.org/pub/linux/kernel/projects/backports/2013/|linux-next backports releases]] 
