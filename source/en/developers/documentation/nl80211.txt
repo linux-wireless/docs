@@ -42,7 +42,7 @@ This setting is currently provided by [[http://git.kernel.org/cgit/linux/kernel/
 For a way to determine whether a wireless driver actually supports nl80211 testmode interface, see [[http://markmail.org/message/j4nfshv4edn2ga7f|[PATCH] nl80211: add testmode to the list of supported commands]]. 
 
 Current users of the testmode interface are: 
-    * [[en/users/Drivers/wl12xx/calibrator|wl12xx calibrator]] (chipsets WL1271 etc.) 
+    * [[http://linuxwireless.sipsolutions.net/en/users/Drivers/wl12xx/calibrator/|wl12xx calibrator]] (chipsets WL1271 etc.) 
 
 TODO: could list (references to) ready-made scripts which implement nicely automated / elegant workflows for SAR testing etc. 
 
