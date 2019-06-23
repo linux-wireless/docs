@@ -276,6 +276,7 @@ The correct format for the commit references in Fixes line is the 12 initial dig
 of the SHA1_ID of the commit, followed by a space, followed by the
 commit log message header line text enclosed in parentheses and
 double quotes with no line breaks whatsoever.
+The fixes lines must be placed just above the signed-off-by lines.
 
 Example:
 
