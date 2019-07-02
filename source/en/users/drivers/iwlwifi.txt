@@ -16,8 +16,9 @@
     * IBSS (Ad-Hoc)
 ===== Supported Devices =====
 The following devices are supported (since kernel version):
-  * 802.11ax products
-      * [[https://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wi-fi-6-ax200-module-brief.pdf|Intel® Wi-Fi 6 AX200]] (5.2)
+  * Wi-Fi 6 products
+      * [[https://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wi-fi-6-ax200-module-brief.pdf|Intel® Wi-Fi 6 AX200]] (5.1)
+      * [[https://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wi-fi-6-ax201-module-brief.pdf|Intel® Wi-Fi 6 AX201]] (5.2)
   * 802.11ac products
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9462-brief.pdf|Intel® Wireless-AC 9462]] (4.14)
       * [[http://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/dual-band-wireless-ac-9461-brief.pdf|Intel® Wireless-AC 9461]] (4.14)
@@ -118,8 +119,9 @@ NOTE: this table contains only the first official firmware version released, whi
 | Intel® Wireless-AC 3168                                                                                                                         | 4.6+         | iwlmvm      | {{iwlwifi-3168-ucode-22.361476.0.tgz}}                                                  |
 | Intel® Wireless-AC 9260                                                                                                                         | 4.14+        | iwlmvm      | {{iwlwifi-9260-th-b0-jf-b0-34.618819.0.tgz}}                                            |
 | Intel® Wireless-AC 9560 \\ Intel® Wireless-AC 9461 \\ Intel® Wireless-AC 9462                                                                   | 4.14+        | iwlmvm      | {{iwlwifi-9000-pu-b0-jf-b0-34.618819.0.tgz}}                                            |
-| Intel® Wi-Fi 6 AX200 160MHz                                                                                                                     | 5.1          | iwlmvm      | {{en/users/drivers/iwlwifi/iwlwifi-cc-46.3cfab8da.0.tgz|iwlwifi-cc-46.3cfab8da.0.tgz}}  |
-
+| Intel® Wi-Fi 6 AX200 160MHz                                                                                                                     | 5.1+         | iwlmvm      | {{en/users/drivers/iwlwifi/iwlwifi-cc-46.3cfab8da.0.tgz|iwlwifi-cc-46.3cfab8da.0.tgz}}  |
+|
+| Intel® Wi-Fi 6 AX201 160MHz                                                                                                                     | 5.2+         | iwlmvm      | {{en/users/drivers/iwlwifi/iwlwifi-Qu-48.13675109.0.tgz|iwlwifi-Qu-48.13675109.0.tgz}}  |
 
 
 
