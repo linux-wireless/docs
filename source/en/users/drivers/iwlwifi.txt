@@ -122,6 +122,7 @@ NOTE: this table contains only the first official firmware version released, whi
 
 
 
+
 Where that appropriate location is depends (again) on your system distribution.  You can typically find this location by looking in the udev scripts of your distro, the default on most distributions is /lib/firmware. 
 
 Installation of the firmware is simply: 
