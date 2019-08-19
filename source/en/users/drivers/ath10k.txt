@@ -44,6 +44,8 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 and QCA6174 based device
   * QCA9882-BR4A found in [[http://www.sparklan.com/p2-products-detail.php?PKey=c792ZnxnchlkAqWCF1qRFJm1kZwZ0-Ze-Y6NJoUDEvA&WPEQ-257ACN/|SparkLan WPEQ-257ACN]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : Archer C7 v2.x]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : WDR7500 v3.0]]
+  * QCA9880/QCA9890 found in [[https://www.jjplus.com/jwx6052/|jjPlus JWX6052]] and [[https://www.jjplus.com/jwx6053/|jjPlus JWX6053]]
+  * QCA9882/QCA9892 found in [[https://www.jjplus.com/jwx6055/|jjPlus JWX6055]] and [[https://www.jjplus.com/jwx6056/|jjPlus JWX6056]]
   * QCA9377-5 found in [[http://www.sparklan.com/p2-products-detail.php?PKey=1d2bsjqrHnqa85aaHl0mpJtOWcBpjf5kKBc0DfFEU90&WNFQ-158ACN(BT)/|SparkLan WNFQ-158ACN(BT)]]
   * QCA9886 found in [[http://www.compex.com.sg/product/wle650v5-18/|WLE650V5-18]]
   * QCA6174 / QCA6174A found in [[https://compex.com.sg/shop/wifi-module/wlt674/ | Compex WLT674]] and [[http://www.sparklan.com/p2-products-detail.php?PKey=82b4pR_W7FJSYinv09o8G_QIGWRWlZuAZzti33RYwi0&WPEQ-261ACNI(BT)|SparkLan WPEQ-261ACNI(BT)]] and [[http://bointec.com/p4-products_detail.php?PKey=6851tczr12Q8EfPpaG9ML6ap7bJe2sSKZYPXP_9jLIE|Bointec DPE109A]]
