@@ -171,6 +171,12 @@ We merge the updates coming from the backport infrastructure on a regular basis.
 If you checkout an earlier branch / commit in backport-iwlwifi.git, you might not be able to work against the most recent kernel. Please keep that in mind.
 We have a release cycle based on the backport tree. These [[en:users:drivers:iwlwifi:Core_release|Core releases]] can be very useful for someone who wants to integrate our Wi-Fi solution into his home made system.
 
+===== About dual-boot with Windows and "fast-boot" enabled =====
+
+If you have a dual-boot machine with a recent version of Windows and start seeing problems during initialization of the WiFi device when booting Linux, the problem could be due to the "fast startup" feature on Windows.
+
+With this feature enabled, Windows don't really shut down the entire system, but leaves things partially running so you can start the machine faster again. Try to disable this option, on Windows 10 it should be in "Control Panel->Hardware and Sound->Power Options->System Settings", then disable the "Fast Startup" option in "Shutdown Settings".  This will cause Windows to fully shutdown and may solve the issue.
+
 ===== About platform noise =====
  
 Wi-Fi heavily relies on radio frequencies, and those are subject to interference.
