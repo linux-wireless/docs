@@ -27,6 +27,9 @@ The ath10k driver is located under [[https://git.kernel.org/cgit/linux/kernel/gi
 
 ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 and QCA6174 based devices, here's a list of known products:
 
+  * QCA9880/QCA9882 Version 2 found in [[https://airetos.voxmicro.com/product/aex-qca9890-series/|AIRETOS AEX-QCA988x Series; part of the VOXMICRO AIRETOS E98 Class of Wireless Infrastructure Netowrking Modules]]
+  *   * QCA9890/QCA9892 Version 2 found in [[https://airetos.voxmicro.com/product/aex-qca9890-series/|AIRETOS AEX-QCA989x Series; part of the VOXMICRO AIRETOS E98 Class of Wireless Infrastructure Netowrking Modules]]
+
 
   * QCA9888 found in [[http://www.compex.com.sg/product/wle650v5-18/|2x2 MU-MIMO 802.11ac Wave 2 Wireless Module - Compex WLE650V5-18A]] 
   * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of Dual band/Single band/high powered/extended temp radio modules from Doodle Labs]]
