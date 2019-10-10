@@ -24,7 +24,7 @@ Note: the interface name (here wlan0) can vary between distributions.
 ===== How to debug? =====
 ==== Prints ====
 
-The simplest way to provide minimal output is to dump your kernel log: dmesg. Sometimes we will ask for logs from the supplicant too - they typically land in syslog. iwlwifi can print more data to the kernel log if asked to: this is controlled by the debug module parameter. This is a [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/intel/iwlwifi/iwl-debug.h#n143|bitmap]]. To see more debug prints, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/intel/iwlwifi/Kconfig#n105|CONFIG_IWLWIFI_DEBUG]] must be enabled. 
+The simplest way to provide minimal output is to dump your kernel log: dmesg. Sometimes we will ask for logs from the supplicant too - they typically land in syslog. iwlwifi can print more data to the kernel log if asked to: this is controlled by the debug module parameter. This is a [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/intel/iwlwifi/iwl-debug.h#n129|bitmap]]. To see more debug prints, [[https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/tree/drivers/net/wireless/intel/iwlwifi/Kconfig#n105|CONFIG_IWLWIFI_DEBUG]] must be enabled. 
 Please don't add debug level unless instructed to do so. Adding more prints typically adds useless information.
 
 ==== Tracing ====
