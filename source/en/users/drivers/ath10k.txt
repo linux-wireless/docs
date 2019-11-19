@@ -32,10 +32,11 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 and QCA6174 based device
 
 
   * QCA9888 found in [[http://www.compex.com.sg/product/wle650v5-18/|2x2 MU-MIMO 802.11ac Wave 2 Wireless Module - Compex WLE650V5-18A]] 
+  * QCA9890 found in [[http://www.sparklan.com/p2-products-detail.php?PKey=6a3bZRhgGfny-920wDhCpah7QRcVRIRN8k4i_w7s4KY&WPEA-352ACNRBI|SparkLan WPEA-352ACNRBI - supports 802.11ac radio]]
   * QCA9890 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of Dual band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9892 Version 2 found in [[http://www.doodlelabs.com/products/802-11-wifi-mimo-radio-transceivers/|A family of DUal band/Single band/high powered/extended temp radio modules from Doodle Labs]]
   * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex WLE600V5-27 11ac 2x2 miniPCIe Wireless Module]]
-  * QCA9880 Version 2 found in [[http://www.sparklan.com/p2-products-detail.php?PKey=05f1PcJhJnAq1DolkcoSJibeSaxmPjpTYdltrQ-f&WPEA-352ACN|SparkLan: WPEA-352ACN - supports 802.11ac radio]]
+  * QCA9880 Version 2 found in [[http://www.sparklan.com/p2-products-detail.php?PKey=c9dcFqVNUud77BoRgNOPgz9iDsyfhVHjxHLDz5wX2gE&WPEA-352ACNRB|SparkLan WPEA-352ACNRB - supports 802.11ac radio]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/compex/wpj344|Compex acWave: WPJ344 - supports 802.11ac radio]]
   * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900v5-27/|Compex WLE900V5-18]]
   * QCA9880 Version 2 found in [[http://www.compex.com.sg/product/wle900v5-27/|Compex WLE900V5-27]]
