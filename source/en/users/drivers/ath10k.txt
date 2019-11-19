@@ -46,6 +46,8 @@ ath10k supports Qualcomm Atheros 802.11ac QCA98xx hw2.0 and QCA6174 based device
   * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600v5-27/|Compex WLE600V5-27]]
   * QCA9882 Version 2 found in [[http://www.compex.com.sg/product/wle600vx/|Compex WLE600VX]]
   * QCA9882-BR4A found in [[http://www.sparklan.com/p2-products-detail.php?PKey=c792ZnxnchlkAqWCF1qRFJm1kZwZ0-Ze-Y6NJoUDEvA&WPEQ-257ACN/|SparkLan WPEQ-257ACN]]
+  * QCA9882-BR4A found in [[http://www.sparklan.com/p2-products-detail.php?PKey=6006ipnHVrhPzpttrQnW6zoGA4LHxJtE7bLnVC1Qpqs&WPEQ-256ACN|SparkLan WPEQ-256ACN]]
+  * QCA9892-BR4B found in [[http://www.sparklan.com/p2-products-detail.php?PKey=8344ncFyiVsQ5erkmRdYzcCaUOBn47fzSrICXe30LWU&WPEQ-256ACNI|SparkLan WPEQ-256ACNI]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : Archer C7 v2.x]]
   * QCA9880 Version 2 found in [[http://wiki.openwrt.org/toh/tp-link/tl-wdr7500|TP-Link : WDR7500 v3.0]]
   * QCA9880/QCA9890 found in [[https://www.jjplus.com/jwx6052/|jjPlus JWX6052]] and [[https://www.jjplus.com/jwx6053/|jjPlus JWX6053]]
