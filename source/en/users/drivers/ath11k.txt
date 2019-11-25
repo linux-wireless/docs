@@ -1,0 +1,13 @@
+===== About ath11k =====
+
+ath11k is a new driver for Qualcomm IEEE 802.11ax devices, first supporting only IPQ8074 SoC using the shared memory AHB bus. ath11k uses mac80211.
+
+===== Subpages =====
+
+
+===== Supported Devices =====
+
+  * IPQ8074
+
+===== Known bugs/limitations =====
+
