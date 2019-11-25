@@ -1,0 +1,48 @@
+Go back --> [[en/users/Drivers/ath11k]] 
+
+
+===== Submitting patches =====
+
+Send patches to the mailing lists below. Kalle Valo reviews the patches within the next few days and, if they are ok, commits them to ath.git.
+ 
+      * To: [[ath11k@lists.infradead.org]] 
+      * Cc: [[linux-wireless@vger.kernel.org]] 
+
+Preferably use [[en/users/drivers/ath10k/sources|ath.git master branch]] as the baseline for patches. Other trees can be used as well, but then the chances of conflicts are higher.
+
+You can follow the state of ath11k patch review from patchwork:
+
+[[https://patchwork.kernel.org/project/linux-wireless/list/?state=*&q=ath11k]]
+
+More info about submitting patches: 
+        * [[en/developers/Documentation/SubmittingPatches|linux-wireless submitting patches instructions]] 
+        * [[en/developers/Documentation/git-guide|linux-wireless git guide]]
+        * [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Linux kernel submitting patches]]
+        * [[https://medium.com/@steveamaza/how-to-write-a-proper-git-commit-message-e028865e5791|How to write proper git commit messages]]
+
+==== Guidelines ====
+
+Guidelines for patches are:
+ 
+  * MUST follow [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Documentation/SubmittingPatches]]
+  * MUST follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]]
+  * MUST be compiler and sparse warning free. 
+  * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
+  * Patchsets SHOULD contain no more than 12 patches and include a cover letter. 
+  * Commit log MUST answer the question "Why?": 
+    * Describe the motivation behind the bug. 
+    * How does it change the functionality from user's point of view? 
+    * Does it fix a bug? If it does, please describe the bug (doesn't necessarily need to be long). Also if there's a public bug report add a link to the bug report or email describing the issue. 
+    * If a problem has been found during code review and doesn't fix a known issue, mention that in the commit log this is a theoretical fix.
+    * This also implies that the commit log MUST not be empty. 
+    * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log.
+  * Commit log MUST document the affected hardware versions, bus type and firmware version(s) tested
+  * SHOULD use [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#using-reported-by-tested-by-reviewed-by-suggested-by-and-fixes|Reported-by: and Tested-by: tags]] if others have reported the issue.
+  * SHOULD use [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#describe-changes|Fixes: tag]] if it fixes a regression caused by known commit.
+  * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense), it's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath11k-check]] as that will disable the useless warnings.
+
+The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
+
+==== Patch flow ====
+
+The ath11k patch flow is the same as [[en/users/drivers/ath10k/submittingpatches#patch_flow|ath10k patch flow]]
