@@ -32,6 +32,7 @@ Where [[en/developers/maintainers|Maintainers]] contains the list of maintainers
 Do note that drivers might have special requirements, the best is to check them from the corresponding wiki page. Here's a list for few of them:
 
   * [[en/users/drivers/ath10k/submittingpatches|ath10k]]
+  * [[en/users/drivers/ath11k/submittingpatches|ath11k]]
 ===== Checking state of patches from patchwork =====
 
 All wireless patches are tracked in [[https://patchwork.kernel.org/project/linux-wireless/list/|linux-wireless patchwork project]]. From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
