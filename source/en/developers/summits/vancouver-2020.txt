@@ -26,3 +26,4 @@ Add a proposed topic to the list below you would like to discuss in the workshop
   * Johannes Berg
   * Kalle Valo
   * Lorenzo Bianconi
+  * Steve deRosier
