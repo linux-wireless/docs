@@ -358,6 +358,10 @@ Q: Should I include quotations after my reply?
 
 More info: http://www.idallen.com/topposting.html
 
+==== Do not send HTML mail ====
+
+linux-wireless mailing list drops all mail using HTML, so don't use it.
+
 ==== Use RFC or RFT for patches not ready ====
 
 If the patches are not yet ready to be applied by the maintainer, mark them as RFC (Request For Comments) or RFT (Request For Test). This way the maintainer can easily see that the patch should not be applied yet. This saves a lot of maintainer's time.
