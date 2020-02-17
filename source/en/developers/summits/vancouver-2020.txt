@@ -24,7 +24,7 @@ Add a proposed topic to the list below you would like to discuss in the workshop
   * netlink vendor stuff after patches, especially SAR
   * HE & 6/7 GHz support?
   * brief intro/demo of hostap testing setup
-  * 
+  * wmediumd virtio extension?
 
 ===== Proposed Agenda =====
 (TBD)
