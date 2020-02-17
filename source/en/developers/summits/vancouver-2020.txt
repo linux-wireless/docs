@@ -19,7 +19,23 @@ we have an idea of who's coming to talk about what).
 
 Add a proposed topic to the list below you would like to discuss in the workshop. Include your name so that we know who added it!
 
-  * 802.3/802.11 encaps offload (Johannes)
+  * 802.3/802.11 encaps offload - TX retrospective, RX support (Johannes)
+  * BPF work? (cont'ed, if we have any new code?)
+  * netlink vendor stuff after patches, especially SAR
+  * HE & 6/7 GHz support?
+  * brief intro/demo of hostap testing setup
+  * 
+
+===== Proposed Agenda =====
+(TBD)
+^   ^   ^
+| 08:15 - 09:45  |   |
+| 09:45 - 10:15  | break |
+| 10:15 - 12:15 |   |
+| 12:15 - 13:30 | lunch |
+| 13:30 - 15:00 |   |
+| 15:00 - 15:15 | break |
+| 15:15 - 18:30 |   |
 
 ===== planning to attend =====
 
