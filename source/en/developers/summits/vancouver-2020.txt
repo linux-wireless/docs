@@ -44,3 +44,4 @@ Add a proposed topic to the list below you would like to discuss in the workshop
   * Lorenzo Bianconi
   * Steve deRosier
   * Jouni Malinen
+  * Brian Norris
