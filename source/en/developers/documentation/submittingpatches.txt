@@ -372,6 +372,12 @@ When a patch has multiple authors you should use Co-developed-by tag:
 
 https://www.kernel.org/doc/html/latest/process/submitting-patches.html#when-to-use-acked-by-cc-and-co-developed-by
 
+==== Maximum of 7-12 patches per patchset  ====
+
+If you want your patches reviewed smoothly submit maximum of 7-12 patches per patchset. If the patches are bigger don't send more than 7 patches. But if they smaller, or trivial patches, 12 patches is ok. But anything more than 12 patches and you will get reviewers grumpy (read: it takes longer to get your patches reviewed and applied).
+
+But you can submit multiple patchsets, just try to throttle it down to avoid bufferbloat in patchwork, for example you can send a new patchset every other day. And don't forget to document the dependencies in the cover letter ("this patchset depends on patchset B").
+
 ===== More references =====
 
 Here is a list of links to help you write better patches 
