@@ -138,7 +138,7 @@ You can now load the driver.
 ===== Support =====
 If you have technical issues or general questions about Intel Wi-Fi on Linux, please context [[https://intel.com/content/www/us/en/support/contact-support.html?productId=59484,59485,83418#@11|Intel Customer Support]].
 
-For bug reports and debugging , please see the [[en:users:drivers:iwlwifi:Debugging|page]] dedicated to that.
+For bug reports and debugging, please see the [[en:users:drivers:iwlwifi:Debugging|page]] dedicated to that.
 
 ===== 7260, 3160, 7265, 7265D, 3165 and 3168 support =====
 Those devices will not be supported by the newest firmware versions: the last firmware that was released for 3160, 7260 and 7265 is -17.ucode. Bug fixes will be ported to -17.ucode. 7265D, 3165 and 3168's latest firmware version is -29.ucode. In order to determine if your 7265 device is a 'D' version, you can check the dmesg output:
