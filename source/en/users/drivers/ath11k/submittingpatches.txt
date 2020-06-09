@@ -22,26 +22,24 @@ More info about submitting patches:
 
 ==== Guidelines ====
 
-Guidelines for patches are:
- 
-  * MUST follow [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Documentation/SubmittingPatches]]
-  * MUST follow [[en/users/Drivers/ath10k/CodingStyle|ath10k coding style]]
-  * MUST be compiler and sparse warning free. 
-  * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
-  * Patchsets SHOULD contain no more than 12 patches and include a cover letter. 
-  * Commit log MUST answer the question "Why?": 
-    * Describe the motivation behind the bug. 
-    * How does it change the functionality from user's point of view? 
-    * Does it fix a bug? If it does, please describe the bug (doesn't necessarily need to be long). Also if there's a public bug report add a link to the bug report or email describing the issue. 
-    * If a problem has been found during code review and doesn't fix a known issue, mention that in the commit log this is a theoretical fix.
-    * This also implies that the commit log MUST not be empty. 
-    * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log.
-  * Commit log MUST document the affected hardware versions, bus type and firmware version(s) tested
-  * SHOULD use [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#using-reported-by-tested-by-reviewed-by-suggested-by-and-fixes|Reported-by: and Tested-by: tags]] if others have reported the issue.
-  * SHOULD use [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#describe-changes|Fixes: tag]] if it fixes a regression caused by known commit.
-  * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense), it's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath11k-check]] as that will disable the useless warnings.
+The ath11k patch guidelines are the same as [[en/users/drivers/ath10k/submittingpatches#guidelines|ath10k guidelines]].
 
-The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
+==== Hardware families ====
+
+ath11k supports two hardware families:
+
+  * IPQ8074 SoC AP devices
+  * QCA6390 PCI mobile devices
+
+Just like with ath10k, all ath11k patches need to account all supported hardware families.
+
+Few Tested-on tag examples:
+
+<code>
+Tested-on: IPQ8074 hw2.0 WLAN.HK.2.1.0.1-00410-QCAHKSWPL_SILICONZ-2
+Tested-on: IPQ6018 hw1.0 WLAN.HK.2.1.0.1-01161-QCAHKSWPL_SILICONZ-1
+Tested-on: QCA6390 hw2.0 WLAN.HST.1.0.1-01230-QCAHSTSWPLZ_V2_TO_X86-1
+</code>
 
 ==== Patch flow ====
 
