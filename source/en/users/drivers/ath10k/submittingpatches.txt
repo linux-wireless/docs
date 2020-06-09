@@ -71,17 +71,17 @@ To speed up patch acceptance the commit log should explain what families are aff
 
 As there are so many different hardware families, to make it clear on what hardware and firmware the patch is tested on please use the Tested-on tag. It's similar as Fixes tag, just informing the testing information. The format is:
 
-Tested-on: <hwname> <hwversion> <bus> <fwversion>
+  Tested-on: <hwname> <hwversion> <bus> <fwversion>
 
 Add this information after the commit log text, but before the s-o-b lines, and adding an empty line between Tested-on and s-o-b tags. There can be (and is very much preferred!) to have multiple Tested-on tags, each tag for every hardware tested.
 
 Few examples:
 
 <code>
-Tested-on: WCN3990 hw1.0 WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+Tested-on: WCN3990 hw1.0 SNOC WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
 Tested-on: QCA6174 hw3.2 SDIO WLAN.RMH.4.4.1-00029
 Tested-on: QCA6174 hw3.2 PCI WLAN.RM.4.4.1-00110-QCARMSWP-1
-Tested-on: QCA9888 hw2.0 10.4-3.10-00047
+Tested-on: QCA9888 hw2.0 PCI 10.4-3.10-00047
 </code>
 
 Tested-on tag should be in every patch, as non-trivial patches should not be submitted without testing. For trivial patches it's ok to skip Tested-on tag but then it should say "Compile tested only".
