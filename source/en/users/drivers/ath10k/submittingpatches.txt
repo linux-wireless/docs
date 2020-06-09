@@ -18,6 +18,7 @@ More info about submitting patches:
         * [[en/developers/Documentation/git-guide|linux-wireless git guide]]
         * [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|Linux kernel submitting patches]]
         * [[https://medium.com/@steveamaza/how-to-write-a-proper-git-commit-message-e028865e5791|How to write proper git commit messages]]
+        * [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|Ingo Molnar's points about commit logs]]
 
 ==== Guidelines ====
 
@@ -28,13 +29,8 @@ Guidelines for patches are:
   * MUST be compiler and sparse warning free. 
   * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
   * Patchsets SHOULD contain no more than 12 patches and include a cover letter. 
-  * Commit log MUST answer the question "Why?": 
-    * Describe the motivation behind the bug. 
-    * How does it change the functionality from user's point of view? 
-    * Does it fix a bug? If it does, please describe the bug (doesn't necessarily need to be long). Also if there's a public bug report add a link to the bug report or email describing the issue. 
-    * If a problem has been found during code review and doesn't fix a known issue, mention that in the commit log this is a theoretical fix.
-    * This also implies that the commit log MUST not be empty. 
-    * Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log.
+  * Commit log MUST [[#answer_to_why|answer the question "Why?"]].
+  * The commit log MUST not be empty.
   * Commit log MUST document the affected hardware versions, bus type and firmware version(s) tested, examples:
     * QCA988X PCI 10.2.4-1.0-00037
     * QCA99X0/QCA9984/QCA4019 PCI/AHB 10.4-3.5.3-00053
@@ -45,6 +41,17 @@ Guidelines for patches are:
   * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense), it's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] as that will disable the useless warnings.
 
 The terminology is from [[http://www.ietf.org/rfc/rfc2119.txt|http://www.ietf.org/rfc/rfc2119.txt]] 
+
+
+==== Answer to "Why?" ====
+
+The commit log needs to describe the motivation behind the bug, in other words provide the background information why the patch is needed and why is it needed the way it is.
+
+  * How does it change the functionality from user's point of view? 
+  * Does it fix a bug? If it does, please describe the bug (doesn't necessarily need to be long). Also if there's a public bug report add a link to the bug report or email describing the issue. 
+  * If a problem has been found during code review and doesn't fix a known issue, mention that in the commit log this is a theoretical fix.
+
+Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log, read that to understand more about commit logs.
 
 ==== Patch flow ====
 
