@@ -30,12 +30,8 @@ Guidelines for patches are:
   * [[https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html|git send-email]] SHOULD be used to submit the patch to avoid any formatting issues.
   * Patchsets SHOULD contain no more than 12 patches and include a cover letter. 
   * Commit log MUST [[#answer_to_why|answer the question "Why?"]].
-  * The commit log MUST not be empty.
-  * Commit log MUST document the affected hardware versions, bus type and firmware version(s) tested, examples:
-    * QCA988X PCI 10.2.4-1.0-00037
-    * QCA99X0/QCA9984/QCA4019 PCI/AHB 10.4-3.5.3-00053
-    * QCA6174 hw3.2 PCI WLAN.RM.4.4.1-00102-QCARMSWP-1
-    * QCA9377 SDIO WLAN.TF.1.1.1-00061-QCATFSWPZ-1
+  * Commit log MUST not be empty.
+  * Commit log MUST have [[#tested-on_tag|Tested-on tags]].
   * SHOULD use [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#using-reported-by-tested-by-reviewed-by-suggested-by-and-fixes|Reported-by: and Tested-by: tags]] if others have reported the issue.
   * SHOULD use [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#describe-changes|Fixes: tag]] if it fixes a regression caused by known commit.
   * SHOULD be //mostly// checkpatch clean (though not all patchworks warnings make sense), it's RECOMMENDED to test patches with [[en/users/Drivers/ath10k/CodingStyle#checking_code|ath10k-check]] as that will disable the useless warnings.
@@ -52,6 +48,42 @@ The commit log needs to describe the motivation behind the bug, in other words p
   * If a problem has been found during code review and doesn't fix a known issue, mention that in the commit log this is a theoretical fix.
 
 Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log, read that to understand more about commit logs.
+
+=== Hardware families ====
+
+ath10k supports multiple hardware families:
+
+  * QCA988X PCI Wave 1 AP devices
+
+  * QCA9884 PCI Wave 2 AP devices 
+
+  * QCA4019 part of IPQ4019 AP SoC
+
+  * QCA6174 PCI mobile devices
+
+  * QCA6174 SDIO mobile devices
+
+For each of these families have their own firmware branch with different interfaces and possibly different functionality. So then writing a patch for ath10k it's not enough to think about just one family and instead all families need to be taken into account. Otherwise risk of regressions on other families increases significantly.
+
+To speed up patch acceptance the commit log should explain what families are affected and what families are not, and why. If that is not done that task will be left for the driver mantainer to do and that will slow down the review significantly.
+
+==== Tested-on tag ====
+
+As there are so many different hardware families, to make it clear on what hardware and firmware the patch is tested on please use the Tested-on tag. It's similar as Fixes tag, just informing the testing information. The format is:
+
+Tested-on: <hwname> <hwversion> <bus> <fwversion>
+
+Add this information after the commit log text, but before the s-o-b lines, and adding an empty line between Tested-on and s-o-b tags. There can be (and is very much preferred!) to have multiple Tested-on tags, each tag for every hardware tested.
+
+Few examples:
+
+Tested-on: WCN3990 hw1.0 WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+Tested-on: QCA6174 hw3.2 SDIO WLAN.RMH.4.4.1-00029
+Tested-on: QCA6174 hw3.2 PCI WLAN.RM.4.4.1-00110-QCARMSWP-1
+Tested-on: QCA9888 hw2.0 10.4-3.10-00047
+
+Tested-on tag should be in every patch, as non-trivial patches should not be submitted without testing. For trivial patches it's ok to skip Tested-on tag but then it should say "Compile tested only".
+
 
 ==== Patch flow ====
 
