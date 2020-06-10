@@ -118,7 +118,7 @@ Copy brcm/bcm43xx-0.fw and brcm/bcm43xx_hdr-0.fw to /lib/firmware/brcm (or where
 For SDIO driver you need to copy the nvram for your system and place it in /lib/firmware/brcm. The nvram file name depends on the chip you have. The kernel log will tell you the exact file name. 
 
 For the USB driver no nvram file is //strictly// needed: in fact, the driver only loads the firmware blob and does not look for an nvram text file. However, the nvram parameters are still required and they are already part of the firmware blob. This is a TRX file which contains the nvram parameters as a sequence of zero-terminated plain text strings, appended at the end of the last section.
-For an example of how to modify/add nvram parameters for USB devices, see [[https://www.linkedin.com/feed/update/urn:li:activity:6675830103454339072/|this article]]
+For an example of how to modify/add nvram parameters for USB devices, see [[https://blog.elimo.io/reverse-engineering/wifi/mesh/thread/802.15.4/2020/06/05/pta-coexistence.html|this post]]
 
 The firmware files are located in the linux-firmware repository and can be copied as is to /lib/firmware/brcm. 
 
