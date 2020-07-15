@@ -1,8 +1,13 @@
 The list is still in progress, please feel free to complete the device list. :-)
 
+===== rtl8188cus based devices =====
+|**Vendor**\\ |**Product**|**USB Vendor ID**|**USB Product ID**|**MaxPower**|
+|sModule|[[http://smodule.com/Product/sWiFi-R8188CU1.html|sWiFi-8188CU1]]|0x0bda|0x8176|140mAmA|
+
 ===== rtl8192cu based devices =====
 |**Vendor**\\ |**Product**|**USB Vendor ID**|**USB Product ID**|**MaxPower**|
 |TP-Link|[[http://www.tp-link.com/en/products/details/cat-11_TL-WN821N.html#specifications|TL-WN821N V4]]|0x0bda|0x8178|500mA|
+
 ===== rtl8192eu based devices =====
 | **Vendor**\\  | **Product**                                                                                       | **USB Vendor ID**  | **USB Product ID**  | **MaxPower**  |
 | TP-Link | TL-WN821N V5 | 0x2357 | 0x0107 | ?             |
