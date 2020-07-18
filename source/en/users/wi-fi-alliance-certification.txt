@@ -1,4 +1,4 @@
-====== Certified ======
+====== Certified by Wi-Fi Alliance ======
 
 | **Date** | **Vendor** | **Certificate** | **Hardware** | **Driver (version)** | **Certified** |
 | September 11, 2019 | Aeon Matrix Inc. | [[http://certifications.prod.wi-fi.org/pdf/certificate/public/download?cid=WFA91694|Yardian Pro]] PRO1902 | ? | [[https://github.com/openwrt/mt76/commit/a5f5605f|mt76]] (pre mainline) | 2,4 GHz, 1 Spatial Stream 2.4 GHz, STA, b/g/n, WMM, WPA2/WPA Personal, Short Guard Interval, TX A-MPDU, STBC Receive, 40 MHz operation in 2.4 GHz with coexistence mechanisms |
