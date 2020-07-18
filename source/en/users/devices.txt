@@ -10,11 +10,7 @@ External link: [[https://deviwiki.com/wiki/List_of_Wi-Fi_Device_IDs_in_Linux|lis
 
 
 ===== Certified by Wi-Fi Alliance =====
-
-| **Date** | **Vendor** | **Certificate** | **Hardware** | **Driver (version)** | **Certified** |
-| September 11, 2019 | Aeon Matrix Inc. | [[http://certifications.prod.wi-fi.org/pdf/certificate/public/download?cid=WFA91694|Yardian Pro]] PRO1902 | ? | [[https://github.com/openwrt/mt76/commit/a5f5605f|mt76]] (pre mainline) | 2,4 GHz, 1 Spatial Stream 2.4 GHz, STA, b/g/n, WMM, WPA2/WPA Personal, Short Guard Interval, TX A-MPDU, STBC Receive, 40 MHz operation in 2.4 GHz with coexistence mechanisms |
-| January 14, 2019 | GARDENA GmbH | [[http://certifications.prod.wi-fi.org/pdf/certificate/public/download?cid=WFA81035|GARDENA smart Gateway]] (Art. 19005) | MT7688 | [[https://github.com/openwrt/mt76/commit/6203d46fcc4577065209ea0ed9334d89df4f63f7|mt76]] (pre mainline) | 2,4 GHz, 1 Spatial Stream 2.4 GHz, STA, b/g/n, WMM, WPA2/WPA Personal, Short Guard Interval, TX A-MPDU, STBC Receive, 40 MHz operation in 2.4 GHz with coexistence mechanisms, Greenfield Preamble, STAUT Power Management |
-
+See [[en/users/wi-fi-alliance-certification|Wi-Fi Alliance Certification]]
 ===== Looking for ... =====
 
 Are you looking for a specific device with specific capabilities? Unfortunately we don't have all information easily accessible yet, but if you're, for instance, looking for a card supporting AP mode, head over to the [[en/users/Drivers|Drivers]] page, look at drivers that support AP mode, and then filter on those drivers on these device pages. 
