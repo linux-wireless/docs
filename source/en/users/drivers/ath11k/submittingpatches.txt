@@ -33,7 +33,7 @@ ath11k supports two hardware families:
 
 Just like with ath10k, all ath11k patches need to account all supported hardware families.
 
-Few Tested-on tag examples:
+Testing information needs to be provided using Tested-on tag. Few Tested-on tag examples:
 
 <code>
 Tested-on: IPQ8074 hw2.0 AHB WLAN.HK.2.1.0.1-00410-QCAHKSWPL_SILICONZ-2
