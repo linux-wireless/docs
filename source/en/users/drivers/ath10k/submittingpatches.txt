@@ -49,7 +49,7 @@ The commit log needs to describe the motivation behind the bug, in other words p
 
 Ingo Molnar has written [[https://lkml.kernel.org/r/20150314075357.GA8319@gmail.com|a nice description]] about what maintainers are looking from a commit log, read that to understand more about commit logs.
 
-=== Hardware families ====
+==== Hardware families ====
 
 ath10k supports multiple hardware families:
 
