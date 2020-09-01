@@ -30,8 +30,8 @@ History:
 
 | Priority | **Task (Wi-Fi Alliance Test Case)** | **State** | **Optional** |
 | 1 | TX Power controllable (none, but needed for EMC) | not yet implemented | n |
-| 2 | WMM: Wi-Fi Multimedia (many) | not yet implemented | n |
-| 2 | RX A-MPDU (5.2.37) | Partially supported - Block ACK missing | n |
-| 2 | 802.11n: STBC Receive (5.2.46) | not supported | n |
-| 2 | A-MPDU Aggregation when the STA is the Transmitter (5.2.47) | unknown | n |
+| unknown | WMM: Wi-Fi Multimedia (many) | not yet implemented | n |
+| unknown | RX A-MPDU (5.2.37) | Partially supported - Block ACK missing | n |
+| unknown | 802.11n: STBC Receive (5.2.46) | not supported | n |
+| unknown | A-MPDU Aggregation when the STA is the Transmitter (5.2.47) | unknown | n |
 | unknown | Greenfield mode (5.2.41) | not supported | y |
