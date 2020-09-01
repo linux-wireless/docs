@@ -15,7 +15,7 @@
 Progress: Hardware is already on the market, nothing left to do or could be changed for that matter.
 
 ==== Firmware ====
-Version 88(.2)
+All driver development and the verification is getting done with firmware version 88.2, **which is not yet mainlined as of 2020-08-31**.
 
 === Progress ===
 == Upstreaming FW 88.2 ==
