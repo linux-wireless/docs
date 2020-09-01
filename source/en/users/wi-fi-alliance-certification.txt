@@ -3,3 +3,33 @@
 | **Date** | **Vendor** | **Certificate** | **Hardware** | **Driver (version)** | **Certified** |
 | September 11, 2019 | Aeon Matrix Inc. | [[http://certifications.prod.wi-fi.org/pdf/certificate/public/download?cid=WFA91694|Yardian Pro]] PRO1902 | ? | [[https://github.com/openwrt/mt76/commit/a5f5605f|mt76]] (pre mainline) | 2,4 GHz, 1 Spatial Stream 2.4 GHz, STA, b/g/n, WMM, WPA2/WPA Personal, Short Guard Interval, TX A-MPDU, STBC Receive, 40 MHz operation in 2.4 GHz with coexistence mechanisms |
 | January 14, 2019 | GARDENA GmbH | [[http://certifications.prod.wi-fi.org/pdf/certificate/public/download?cid=WFA81035|GARDENA smart Gateway]] (Art. 19005) | MT7688 | [[https://github.com/openwrt/mt76/commit/6203d46fcc4577065209ea0ed9334d89df4f63f7|mt76]] (pre mainline) | 2,4 GHz, 1 Spatial Stream 2.4 GHz, STA, b/g/n, WMM, WPA2/WPA Personal, Short Guard Interval, TX A-MPDU, STBC Receive, 40 MHz operation in 2.4 GHz with coexistence mechanisms, Greenfield Preamble, STAUT Power Management |
+
+====== Work In Progress ======
+
+===== rtl8xxxu on RTL8188CUS =====
+
+==== Hardware ====
+  * End product: ARMv5, Atmel SAM9G25 based GARDENA smart gateway ([[https://github.com/husqvarnagroup/smart-garden-gateway-public|sources]])
+  * For development: x86_amd64, [[https://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/de/wireless_adapters_n150/ew-7811un/|Edimax EW-7811UN]]
+
+Progress: Hardware is already on the market, nothing left to do or could be changed for that matter.
+
+==== Firmware ====
+Version 88(.2)
+
+=== Progress: Upstreaming FW 88.2 ===
+Currently, FW version 81 from vendor driver [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi/rtl8192cufw_TMSC.bin?id=2c8a279754a8a8c2a56ddd4a75af2921d2e8e6e3|rtl8188C_8192C_8192D_usb_linux_v3.4.2_3727.20120404 is upstreamed in linux-firmware]]. The more recent, more stable firmware version 88.2 (contained in vendor driver XXX) still needs to be upstreamed.
+
+Upstreaming attempt #1 (failed): https://lore.kernel.org/linux-firmware/20200323024500.Ze6v0ni2oI-wqoL4A1DGg4421OZ2E73GCrjTgU3bqbw@z/
+Upstreaming attempt #2 (failed/stalled): https://lore.kernel.org/linux-firmware/20200323225809.11594-1-code@reto-schneider.ch/
+
+==== Driver ====
+=== Progress: Wi-Fi Alliance ===
+
+| **Testcase** | **Task()** | **State** | **Optional** |
+| n/a (EMC requirement) | TX Power controlable | not yet implemented | n |
+| many | Wi-Fi Multimedia (WMM) | not yet implemented | n |
+| 5.2.37 | RX A-MPDU | Partially supported - Block ACK missing | n |
+| 5.2.46 | 802.11n: STBC Receive | not supported | no |
+| 5.2.47 | A-MPDU Aggregation when the STA is the Transmitter | unknown | n |
+| 5.2.41 | Greenfield mode | not supported | y |
