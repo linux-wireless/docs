@@ -15,7 +15,9 @@
 Progress: Hardware is already on the market, nothing left to do or could be changed for that matter.
 
 ==== Firmware ====
-All driver development and the verification is getting done with firmware version 88.2, **which is not yet mainlined as of 2020-08-31**.
+As of 2020-08-31, linux-firmware contains firmware version 80.0, which is known to hang on the GARDENA smart gateway as long-term tests have shown (and on other machines too - Google knows). Only a cold reset resolves the problem, which is easy to do for an USB WLAN stick but very problematic (human intervention needed) on a embedded device without hardware reset capabilities for the USB device.
+
+Therefore, all driver development and the verification is getting done with firmware version 88.2, **which is not yet mainlined as of 2020-08-31**, but has the mentioned problem resolved.
 
 === Progress ===
 == Upstreaming FW 88.2 ==
