@@ -30,7 +30,7 @@ History:
 ==== Driver ====
 === Progress ===
 
-| Priority | **Task (Wi-Fi Alliance Test Case)** | **State** | **Optional** | **ETA** | 
+| Priority | **Task (Wi-Fi Alliance Test Case)** | **State** | **Optional** | **ETA** |
 | 1 | TX Power controllable (none, but needed for EMC) | not yet implemented |  n  |  n/a  |
 | unknown | WMM: Wi-Fi Multimedia (many) | not yet implemented |  n  |  n/a  |
 | unknown | RX A-MPDU (5.2.37) | Partially supported - Block ACK missing |  n  |  n/a  |
