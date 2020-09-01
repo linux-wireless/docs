@@ -37,5 +37,5 @@ History:
 | unknown | 802.11n: STBC Receive (5.2.46) | not supported |  n  |  n/a  |
 | unknown | A-MPDU Aggregation when the STA is the Transmitter (5.2.47) | unknown |  n  |  n/a  |
 | unknown | Greenfield mode (5.2.41) | not supported |  y  |  n/a  |
-| unknown | iw station dump: "tx bitrate: (unknown)" | Present as of Linux 5.8 |  ?  |  n/a  |
-| unknown | iw output: "Available Antennas: TX 0 RX 0" | Present as of Linux 5.8 |  ?  |  n/a  |
+| unknown | iw station dump: "tx bitrate: (unknown)" (n/a) | Present as of Linux 5.8 |  ?  |  n/a  |
+| unknown | iw output: "Available Antennas: TX 0 RX 0" (n/a) | Present as of Linux 5.8 |  ?  |  n/a  |
