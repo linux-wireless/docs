@@ -6,7 +6,7 @@
 
 ====== Work In Progress ======
 
-===== rtl8xxxu on RTL8188CUS =====
+===== rtl8xxxu on RTL8188CUS on GARDENA smart gateway  =====
 
 ==== Hardware ====
   * End product: ARMv5, Atmel SAM9G25 based GARDENA smart gateway ([[https://github.com/husqvarnagroup/smart-garden-gateway-public|sources]])
