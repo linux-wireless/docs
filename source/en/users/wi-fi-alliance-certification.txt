@@ -17,19 +17,21 @@ Progress: Hardware is already on the market, nothing left to do or could be chan
 ==== Firmware ====
 Version 88(.2)
 
-=== Progress: Upstreaming FW 88.2 ===
-Currently, FW version 81 from vendor driver [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi/rtl8192cufw_TMSC.bin?id=2c8a279754a8a8c2a56ddd4a75af2921d2e8e6e3|rtl8188C_8192C_8192D_usb_linux_v3.4.2_3727.20120404 is upstreamed in linux-firmware]]. The more recent, more stable firmware version 88.2 (contained in vendor driver XXX) still needs to be upstreamed.
+=== Progress ===
+== Upstreaming FW 88.2 ==
+Currently, FW version 80.0 from vendor driver rtl8188C_8192C_8192D_usb_linux_v3.4.2_3727.20120404 is [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi/rtl8192cufw_TMSC.bin?id=2c8a279754a8a8c2a56ddd4a75af2921d2e8e6e3|in linux-firmware]]. The more recent, more stable firmware version 88.2 (contained in vendor driver v4.0.1_6911.20130308 to v4.0.9_25039.20171107) still needs to be upstreamed.
 
-Upstreaming attempt #1 (failed): https://lore.kernel.org/linux-firmware/20200323024500.Ze6v0ni2oI-wqoL4A1DGg4421OZ2E73GCrjTgU3bqbw@z/
-Upstreaming attempt #2 (failed/stalled): https://lore.kernel.org/linux-firmware/20200323225809.11594-1-code@reto-schneider.ch/
+History:
+  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323024500.Ze6v0ni2oI-wqoL4A1DGg4421OZ2E73GCrjTgU3bqbw@z/|#1 (superseded)]]
+  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323225809.11594-1-code@reto-schneider.ch/|#2 (failed/stalled)]]
 
 ==== Driver ====
-=== Progress: Wi-Fi Alliance ===
+=== Progress ===
 
-| **Testcase** | **Task()** | **State** | **Optional** |
-| n/a (EMC requirement) | TX Power controlable | not yet implemented | n |
-| many | Wi-Fi Multimedia (WMM) | not yet implemented | n |
-| 5.2.37 | RX A-MPDU | Partially supported - Block ACK missing | n |
-| 5.2.46 | 802.11n: STBC Receive | not supported | no |
-| 5.2.47 | A-MPDU Aggregation when the STA is the Transmitter | unknown | n |
-| 5.2.41 | Greenfield mode | not supported | y |
+| Priority | **Task (Wi-Fi Alliance Test Case)** | **State** | **Optional** |
+| 1 | TX Power controllable (none, but needed for EMC) | not yet implemented | n |
+| 2 | WMM: Wi-Fi Multimedia (many) | not yet implemented | n |
+| 2 | RX A-MPDU (5.2.37) | Partially supported - Block ACK missing | n |
+| 2 | 802.11n: STBC Receive (5.2.46) | not supported | n |
+| 2 | A-MPDU Aggregation when the STA is the Transmitter (5.2.47) | unknown | n |
+| unknown | Greenfield mode (5.2.41) | not supported | y |
