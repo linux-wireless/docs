@@ -31,7 +31,8 @@ History:
 === Progress ===
 
 | Priority | **Task (Wi-Fi Alliance Test Case)** | **State** | **Optional** | **ETA** |
-| 1 | TX Power controllable (none, but needed for EMC) | not yet implemented |  n  |  n/a  |
+| 1 | TX power #1: Hook the tx power set/get of the cfg80211 to the driver (none, but needed for EMC) | not yet implemented |  n  |  n/a  |
+| 1 | TX Power #2: reverse engineering the register setting and implement power by rate. (none, but needed for EMC) | not yet implemented |  n  |  n/a  |
 | unknown | WMM: Wi-Fi Multimedia (many) | not yet implemented |  n  |  n/a  |
 | unknown | RX A-MPDU (5.2.37) | Partially supported - Block ACK missing |  n  |  n/a  |
 | unknown | 802.11n: STBC Receive (5.2.46) | not supported |  n  |  n/a  |
@@ -39,3 +40,5 @@ History:
 | unknown | Greenfield mode (5.2.41) | not supported |  y  |  n/a  |
 | unknown | iw station dump: "tx bitrate: (unknown)" (n/a) | Present as of Linux 5.8 |  ?  |  n/a  |
 | unknown | iw output: "Available Antennas: TX 0 RX 0" (n/a) | Present as of Linux 5.8 |  ?  |  n/a  |
+
+Source: https://github.com/mschiu77/linux
