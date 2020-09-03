@@ -31,7 +31,7 @@ History:
 === Progress ===
 
 | Priority  | **Task (Wi-Fi Alliance Test Case)**                                                                            | **State**                | **Optional**  | **ETA**   |
-| 1         | TX power #1: Hook the tx power set/get of the cfg80211 to the driver (none, but needed for EMC)                | not yet implemented      |  n            |  n/a      |
+| 1         | TX power #1: Hook the tx power set/get of the cfg80211 to the driver (none, but needed for EMC)                | not yet implemented      |  n            |  10 days   |
 | 1         | TX Power #2: reverse engineering the register setting and implement power by rate. (none, but needed for EMC)  | not yet implemented      |  n            |  n/a      |
 | unknown   | WMM: Wi-Fi Multimedia (many)                                                                                   | not yet implemented      |  n            |  n/a      |
 | unknown   | 802.11n: STBC Receive (5.2.46)                                                                                 | not supported            |  n            |  n/a      |
