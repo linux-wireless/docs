@@ -37,7 +37,7 @@ History:
 | unknown   | 802.11n: STBC Receive                                                              | 5.2.46                       | not supported                       |  n            |  n/a      |
 | unknown   | A-MPDU: #1. Handle ampdu_action properly on TX. Ex.ADDBA, DELBA, BAR               | 5.2.47                       | not yet implemented                 |  n            |  10 days  |
 | unknown   | A-MPDU: #2. Make sure BAR to be handled correctly on RX                            | 5.2.47                       | not yet implemented                 |  n            |  10 days  |
-| unknown   | Greenfield mode ()                                                                 | 5.2.41                       | not supported                       |  y            |  n/a      |
+| unknown   | Greenfield mode                                                                    | 5.2.41                       | not supported                       |  y            |  n/a      |
 | unknown   | iw station dump: "tx bitrate: (unknown)" (n/a)                                     | n/a                          | Shortcoming present as of Linux 5.8 |  ?            |  5 days   |
 | unknown   | iw output: "Available Antennas: TX 0 RX 0" (n/a)                                   | n/a                          | Bug present as of Linux 5.8         |  ?            |  10 days  |
 | unknown   | Reach MCS5 ~ MCS7 rate under rate control                                          | n/a                          | not supported                       |  y            |  n/a      |
