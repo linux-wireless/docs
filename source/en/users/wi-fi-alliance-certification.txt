@@ -30,7 +30,7 @@ History:
 ==== Driver ====
 === Progress ===
 
-| **Priority**  | **Task**                                                                           | **Wi-Fi Alliance Test Case** | **State**                           | **Optional**  | **Work left [best case,]expected[,worst case]** |
+| **Priority**  | **Task**                                                                           | **Wi-Fi Alliance Test Case** | **State**                           | **Optional**  | **Work left [best,]expected[,worst]** |
 | 1             | TX power #1: Hook the tx power set/get of the cfg80211 to the driver               | none, but needed for EMC     | not yet implemented                 |  n            |  15 days                                        |
 | 1             | TX Power #2: reverse engineering the register setting and implement power by rate. | none, but needed for EMC     | not yet implemented                 |  n            |  n/a                                            |
 | unknown       | WMM: Wi-Fi Multimedia                                                              | many                         | not yet implemented                 |  n            |  n/a                                            |
@@ -42,5 +42,7 @@ History:
 | unknown       | iw output: "Available Antennas: TX 0 RX 0" (n/a)                                   | n/a                          | Bug present as of Linux 5.8         |  ?            |  10 days                                        |
 | unknown       | Reach MCS5 ~ MCS7 rate under rate control                                          | n/a                          | not yet implemented                 |  y            |  n/a                                            |
 | unknown       | Protected Management Frames                                                        | unknown                      | not yet implemented                 |  y            |  n/a                                            |
+| unknown       | CRDA + RegDB support: Static TX power limit, global                                | unknown                      | not yet implemented                 |  y            |  n/a                                            |
+| unknown       | CRDA + RegDB support: Country support                                              | unknown                      | not yet implemented                 |  y            |  n/a                                            |
 
 Source: https://github.com/mschiu77/linux
