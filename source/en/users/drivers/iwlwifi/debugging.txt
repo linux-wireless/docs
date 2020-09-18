@@ -14,7 +14,13 @@ If you see that Wi-Fi is hard blocked like in:
 you can blacklist the WMI module and see if that helps. The name of the WMI module will vary depending on the OEM. A simple lsmod | grep wmi should give you a hint of what module to blacklist.
 
 ===== How to report? =====
-Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]]. Make sure to add [[mailto:linuxwifi@intel.com|linuxwifi@intel.com]] to the bug.
+Issues can be filed in [[http://bugzilla.kernel.org|kernel's bugzilla]].
+
+Make sure to set 
+
+  * Product: Drivers
+  * Component: network-wireless-intel
+
 Always attach the kernel log to your reports:
 <code>dmesg > dmesg.log</code> and attach dmesg.log to the bug.
 Please also add the firmware version:
