@@ -263,7 +263,8 @@ If you have multiples patches (called a patchset) add the changelog to the cover
   
 ==== Signed-off-by missing ====
 
-Read [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin|Developer's Certificate of Origin]] and add Signed-off-by to the commit log.
+Read [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin|Developer's Certificate of Origin]]. Do not submit patches unless you have read, understood and agreed to the certificate.
+
 
 ==== Format issues ====
 
