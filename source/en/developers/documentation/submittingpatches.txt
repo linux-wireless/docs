@@ -169,7 +169,7 @@ For submitting a new wireless driver the requirements are:
   * final commit (after the review) will be one big patch
     * for staging drivers the final patch will be just a small patch moving the driver, example: https://git.kernel.org/linus/5625f965d764
 
-There's also a list [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/LICENSES/preferred|preferred licenses]] available.
+There's also a list of [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/LICENSES/preferred|preferred licenses]] available.
 
 ===== Examples of a patches =====
 
