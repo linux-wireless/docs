@@ -155,6 +155,20 @@ Signed-off-by: Luis R. Rodriguez <mcgrof@example.com>
 Please also read the [[https://www.kernel.org/doc/html/latest/process/submitting-patches.html|official Linux SubmittingPatches]] documentation, especially the **[[https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin|Developer's Certificate of Origin]]**. Do not submit patches unless you have read, understood and agreed to the certificate. 
 
 
+===== New driver =====
+
+For submitting a new wireless driver the recommendations are:
+
+  * follow [[https://www.kernel.org/doc/html/latest/process/coding-style.html|Linux kernel coding style]]
+  * use one of [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/LICENSES/preferred|preferred licenses]] 
+  * use [[https://www.kernel.org/doc/html/latest/process/license-rules.html|SPDX tags]]
+  * use either cfg80211 or mac80211, depending on the firmware architecture (no custom 802.11 stack in the driver)
+  * have firmware images available with an acceptable license in [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware]]
+  * for review submit the driver as one file per patch, for easier review
+    * example: https://lore.kernel.org/linux-wireless/20200623110000.31559-1-ajay.kathat@microchip.com/
+  * final commit (after the review) will be one big patch
+    * for staging drivers the final patch will be just a small moving the driver, example: https://git.kernel.org/linus/5625f965d764
+
 ===== Examples of a patches =====
 
 Below are a few examples of a patches. Only the header is provided for long patches. 
