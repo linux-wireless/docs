@@ -157,17 +157,19 @@ Please also read the [[https://www.kernel.org/doc/html/latest/process/submitting
 
 ===== New driver =====
 
-For submitting a new wireless driver the recommendations are:
+For submitting a new wireless driver the requirements are:
 
   * follow [[https://www.kernel.org/doc/html/latest/process/coding-style.html|Linux kernel coding style]]
-  * use one of [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/LICENSES/preferred|preferred licenses]] 
   * use [[https://www.kernel.org/doc/html/latest/process/license-rules.html|SPDX tags]]
   * use either cfg80211 or mac80211, depending on the firmware architecture (no custom 802.11 stack in the driver)
-  * have firmware images available with an acceptable license in [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware]]
-  * for review submit the driver as one file per patch, for easier review
+  * have firmware images submitted for [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware]] with an acceptable license allowing redistribution
+  * document Device Tree usage in [[https://www.kernel.org/doc/html/latest/devicetree/bindings/submitting-patches.html|devicetree bindings]] and review them with DT maintainers
+  * for review submit the driver as one file per patch, to make it easier for the reviewers
     * example: https://lore.kernel.org/linux-wireless/20200623110000.31559-1-ajay.kathat@microchip.com/
   * final commit (after the review) will be one big patch
-    * for staging drivers the final patch will be just a small moving the driver, example: https://git.kernel.org/linus/5625f965d764
+    * for staging drivers the final patch will be just a small patch moving the driver, example: https://git.kernel.org/linus/5625f965d764
+
+There's also a list [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/LICENSES/preferred|preferred licenses]] available.
 
 ===== Examples of a patches =====
 
