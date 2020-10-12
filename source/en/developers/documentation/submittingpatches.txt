@@ -164,6 +164,9 @@ For submitting a new wireless driver the requirements are:
   * use either cfg80211 or mac80211, depending on the firmware architecture (no custom 802.11 stack in the driver)
   * have firmware images submitted for [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware]] with an acceptable license allowing redistribution
   * document Device Tree usage in [[https://www.kernel.org/doc/html/latest/devicetree/bindings/submitting-patches.html|devicetree bindings]] and review them with DT maintainers
+  * in the commit log/cover letter provide an overview of the driver
+    * what hardware the driver supports
+    * what features are supported (client, AP, mesh modes etc)
   * for review submit the driver as one file per patch, to make it easier for the reviewers
     * example: https://lore.kernel.org/linux-wireless/20200623110000.31559-1-ajay.kathat@microchip.com/
   * final commit (after the review) will be one big patch
