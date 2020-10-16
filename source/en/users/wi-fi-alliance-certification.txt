@@ -41,7 +41,7 @@ History:
 | unknown       | iw station dump: "tx bitrate: (unknown)" (n/a)                                     | n/a                          | Shortcoming present as of Linux 5.8 |  ?            |  5 days                                         |
 | unknown       | iw output: "Available Antennas: TX 0 RX 0" (n/a)                                   | n/a                          | Bug present as of Linux 5.8         |  ?            |  10 hours                                        |
 | unknown       | Reach MCS5 ~ MCS7 rate under rate control                                          | n/a                          | not yet implemented                 |  y            |  n/a                                            |
-| unknown       | Protected Management Frames                                                        | unknown                      | not yet implemented                 |  y            |  n/a                                            |
+| unknown       | Protected Management Frames (For WPA3 support)                                     | unknown                      | not yet implemented                 |  y            |  n/a                                            |
 | unknown       | CRDA + RegDB support: Static TX power limit, global                                | unknown                      | not yet implemented                 |  y            |  n/a                                            |
 | unknown       | CRDA + RegDB support: Country support (implement regd_notifier())                  | unknown                      | not yet implemented                 |  y            |  n/a                                            |
 
