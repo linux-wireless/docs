@@ -1,16 +1,16 @@
-===== Mediatek =====
+===== MediaTek =====
 
-  * **mt76** driver https://github.com/openwrt/mt76 handles:
+  * **mt76** driver handles:
     * **MT7610U** 802.11a/b/g/n/ac 1T1R 2.4/5GHz USB Chip
     * **MT7612**/**MT7662** 802.11a/b/g/n/ac 2T2R 2.4/5GHz PCIe/USB Chip
     * **MT7630E** 802.11a/b/g/n 1T1R 2.4/5GHz PCIe Chip
     * **MT7610E** 802.11a/b/g/n/ac 1T1R 2.4/5GHz PCIe Chip
-    * **MT7603E** 802.11b/g/n 2T2R 2.4GHz PCIe chip and **MT7628** 802.11b/g/n 2T2R 2.4GHz SoC devices (**4.7+**)
+    * **MT7603E** 802.11b/g/n 2T2R 2.4GHz PCIe chip and **MT7628** 802.11b/g/n 2T2R 2.4GHz SoC Device (**4.7+**)
     * **MT7615** 802.11a/b/g/n/ac 4T4R 2.4/5GHz PCIe Chip (**5.2+**)
-    * **MT7622** 802.11b/g/n 4T4R 2.4GHz SoC devices (**5.7+**)
+    * **MT7622** 802.11b/g/n 4T4R 2.4GHz SoC Device (**5.7+**)
     * **MT7663** 802.11a/b/g/n/ac 2T2R 2.4/5GHz PCIe/USB/SDIO Chip (**5.8+**)
     * **MT7915** 802.11a/b/g/n/ac/ax 4T4R 2.4/5GHz PCIe Chip (**5.9+**)
-  * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4 GHz USB Chip (**4.2+**)
+  * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4GHz USB Chip (**4.2+**)
 ==== Unsupported chips ====
 
    * [[https://wikidevi.com/wiki/MediaTek|Any new MediaTek chip]]. MediaTek drivers can be downloaded from: [[http://www.mediatek.com/en/downloads1/downloads/|http://www.mediatek.com/en/downloads1/downloads/]] 
