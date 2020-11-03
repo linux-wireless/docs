@@ -1,5 +1,6 @@
-===== MediaTek =====
+{{:en:users:drivers:primary-master-logo_en_cmyk_orange.png?direct&400|}}
 
+  * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4GHz USB Chip
   * **mt76** driver handles:
     * **MT7610U** 802.11a/b/g/n/ac 1T1R 2.4/5GHz USB Chip
     * **MT7612**/**MT7662** 802.11a/b/g/n/ac 2T2R 2.4/5GHz PCIe/USB Chip
@@ -10,7 +11,7 @@
     * **MT7622** 802.11b/g/n 4T4R 2.4GHz SoC Device (**5.7+**)
     * **MT7663** 802.11a/b/g/n/ac 2T2R 2.4/5GHz PCIe/USB/SDIO Chip (**5.8+**)
     * **MT7915** 802.11a/b/g/n/ac/ax 4T4R 2.4/5GHz PCIe Chip (**5.9+**)
-  * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4GHz USB Chip (**4.2+**)
+ 
 ==== Unsupported chips ====
 
    * [[https://deviwiki.com/wiki/MediaTek|Any other MediaTek chips]].
@@ -18,3 +19,14 @@
 ==== Firmware ====
 
 You can get the latest firmware from [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/mediatek|linux-firmware.git]] 
+
+==== Developers ====
+
+Send patches to the mailing lists below. 
+      * To: Felix Fietkau [[nbd@nbd.name]] 
+      * To: Lorenzo Bianconi [[lorenzo@kernel.org]] 
+      * To: Ryder Lee [[ryder.lee@mediatek.com]] 
+      * Cc: [[linux-mediatek@lists.infradead.org]] 
+      * Cc: [[linux-wireless@vger.kernel.org]] 
+
+IRC channel: #mt76-devel
