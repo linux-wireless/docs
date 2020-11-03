@@ -17,4 +17,4 @@
 
 ==== Firmware ====
 
-The firmware for those devices can be downloaded from: [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git|https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git]] 
+You can get the latest firmware from [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/mediatek|linux-firmware.git]] 
