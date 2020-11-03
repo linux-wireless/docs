@@ -1,4 +1,8 @@
-{{:en:users:drivers:primary-master-logo_en_cmyk_orange.png?direct&400|}}
+{{:en:users:drivers:primary-master-logo_en_cmyk_orange.png?direct&250|}}
+
+==== Introduction ====
+
+mac80211 wireless driver for MediaTek MT7xxx series
 
   * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4GHz USB Chip
   * **mt76** driver handles:
@@ -20,7 +24,7 @@
 
 You can get the latest firmware from [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/mediatek|linux-firmware.git]] 
 
-==== Developers ====
+==== Developers & Support ====
 
 Send patches to the mailing lists below. 
       * To: Felix Fietkau [[nbd@nbd.name]] 
