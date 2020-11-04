@@ -17,7 +17,7 @@
   * **rtl8821ae** is a PCI-E driver for RTL8821AE devices (**3.16+**). 
   * **rtl8192ee** is a PCI-E driver for RTL8192EE devices (**3.16+**). 
   * **rtl8xxxu** is a **multi-driver** for USB devices(RTL8723AU/RTL8723BU/RTL8191EU/RTL8192EU/RTL8188EU/RTL8188RU) (**4.3+**), for other chips **WIP**: [[https://git.kernel.org/cgit/linux/kernel/git/jes/linux.git/|git-tree]]
-  * **r8822be** is a PCI-E driver for RTL8822BE(802.11ac) devices. (**WIP** https://marc.info/?l=linux-netdev&m=150299204509065)
+  * **rtw88** is a 802.11ac PCI-E driver for 8822BE, 8822CE, 8723DE and 8821CE devices.
 
 
 ===== staging drivers =====
