@@ -26,11 +26,11 @@ You can get the latest firmware from [[https://git.kernel.org/pub/scm/linux/kern
 
 ==== Developers & Support ====
 
-Send patches to the mailing lists below. 
+Send patches to the people and mailing lists below: 
       * To: Felix Fietkau [[nbd@nbd.name]] 
       * To: Lorenzo Bianconi [[lorenzo@kernel.org]] 
       * To: Ryder Lee [[ryder.lee@mediatek.com]] 
-      * Cc: [[linux-mediatek@lists.infradead.org]] 
-      * Cc: [[linux-wireless@vger.kernel.org]] 
+      * Cc: [[linux-mediatek@lists.infradead.org]] - https://lists.infradead.org/mailman/listinfo/linux-mediatek
+      * Cc: [[linux-wireless@vger.kernel.org]] - http://vger.kernel.org/vger-lists.html#linux-wireless
 
 IRC channel: #mt76-devel
