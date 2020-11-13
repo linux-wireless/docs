@@ -21,10 +21,10 @@ Therefore, all driver development and the verification is getting done with firm
 
 === Progress ===
 == Upstreaming FW 88.2 ==
-Currently, FW version 80.0 from vendor driver rtl8188C_8192C_8192D_usb_linux_v3.4.2_3727.20120404 is [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi/rtl8192cufw_TMSC.bin?id=2c8a279754a8a8c2a56ddd4a75af2921d2e8e6e3|in linux-firmware]]. The more recent, more stable firmware version 88.2 (contained in vendor driver v4.0.1_6911.20130308 to v4.0.9_25039.20171107) still needs to be upstreamed.
+done
 
 History:
-  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20201108234254.21645-1-code@reto-schneider.ch/|#3 (awaiting feedback)]]
+  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20201108234254.21645-1-code@reto-schneider.ch/|#3 (accepted)]]
   * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323225809.11594-1-code@reto-schneider.ch/|#2 (superseded)]]
   * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323024500.Ze6v0ni2oI-wqoL4A1DGg4421OZ2E73GCrjTgU3bqbw@z/|#1 (superseded)]]
 
