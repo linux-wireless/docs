@@ -25,7 +25,7 @@ Currently, FW version 80.0 from vendor driver rtl8188C_8192C_8192D_usb_linux_v3.
 
 History:
   * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20201108234254.21645-1-code@reto-schneider.ch/|#3 (awaiting feedback)]]
-  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323225809.11594-1-code@reto-schneider.ch/|#2 (failed/stalled)]]
+  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323225809.11594-1-code@reto-schneider.ch/|#2 (superseded)]]
   * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323024500.Ze6v0ni2oI-wqoL4A1DGg4421OZ2E73GCrjTgU3bqbw@z/|#1 (superseded)]]
 
 ==== Driver ====
