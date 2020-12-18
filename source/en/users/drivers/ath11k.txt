@@ -9,7 +9,9 @@ ath11k is a driver for Qualcomm [[https://en.wikipedia.org/wiki/IEEE_802.11ax|IE
 
 ===== Supported Devices =====
 
-  * IPQ8074
+  * IPQ8074 hw2.0
+  * IPQ6018 hw1.0
+  * QCA6390 hw2.0
 
 ===== Known bugs/limitations =====
 
