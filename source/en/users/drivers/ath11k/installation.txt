@@ -26,7 +26,11 @@ make menuconfig
                                 [*]     QCA ath11k spectral scan support
 </code>
                         
-Build and install the kernel and the kernel modules. There are multiple ways to do that depending on your preferences and the Linux distribution you are using.
+Build and install the kernel and the kernel modules. There are multiple ways to do that depending on your preferences and the Linux distribution you are using, check the documentation for your distro how you want to do it. Few pointers:
+
+  * https://wiki.debian.org/BuildADebianKernelPackage
+  * https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
+  * https://fedoraproject.org/wiki/Building_a_custom_kernel
 
 Clone linux-firmware:
 
