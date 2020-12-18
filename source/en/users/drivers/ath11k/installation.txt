@@ -1,0 +1,41 @@
+Go back --> [[en/users/Drivers/ath11k]] 
+
+
+===== Installing ath11k =====
+
+As of this writing (December 2020) Linux distributions do not support QCA6390 PCI devices out of box, so you need to install kernel and firmware manually. Here are simple instructions how to install Linux kernel v5.10 with ath11k PCI support and latest ath11k firmwares.
+
+Clone kernel:
+
+  git clone -b v5.10 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+
+Ensure below options are selected in the kernel (debug, tracing and spectral scan options are optional):
+
+<code>
+cd linux
+make menuconfig
+--> Select Device drivers
+        --> Network device support
+                --> Wireless LAN
+                        --> Enable as below
+                                <M> Qualcomm Technologies 11ax chipset support
+                                <M>       Atheros ath11k PCI support
+                                [*]       QCA ath11k debugging
+                                [*]       QCA ath11k debugfs support
+                                [*]       ath11k tracing support
+                                [*]     QCA ath11k spectral scan support
+</code>
+                        
+Build and install the kernel and the kernel modules. There are multiple ways to do that depending on your preferences and the Linux distribution you are using.
+
+Clone linux-firmware:
+
+  git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+                                                                
+Install firmware:
+
+<code>
+cd linux-firmware           
+sudo cp -r ath11k/ /lib/firmware/
+</code>
+
