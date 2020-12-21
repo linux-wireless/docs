@@ -10,7 +10,8 @@
   * **rtl8192cu** is a USB driver for RTL8192CU/RTL8188CU devices. It's going to be replaced by rtl8xxxu.  
   * **rtl8192de** is a PCI-E driver for RTL8192DE/RTL8188DE devices. 
   * **rtl8192se** is a PCI-E driver for RTL8192SE/RTL8191SE devices. 
-  * **rtl8723ae** is a PCI-E driver for RTL8723AE devices. 
+  * **rtl8723ae** is a PCI-E driver for RTL8723AE devices.
+  * **rtl8723bs** is a SDIO driver for RTL8723BS devices.
   * **rtl8188ee** is a PCI-E driver for RTL8188EE devices.  
   * **rtl8723be** is a PCI-E driver for RTL8723BE devices (**3.15+**). 
   * **rtl8192su** is a USB driver for RTL8188SU/RTL8191SU/RTL8192SU devices. (**WIP**: [[http://github.com/chunkeey/rtl8192su|http://github.com/chunkeey/rtl8192su]]) 
