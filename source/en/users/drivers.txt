@@ -10,10 +10,6 @@ See also:
 **NOTE:** All drivers can of course run in [[en/users/Documentation/modes|station mode]], but only a few drivers support the other available **[[en/users/Documentation/modes|wireless modes]]**! Support of [[en/developers/Documentation/Glossary|cfg80211]] also offers benefits. 
 
 
-
-
-
-
 | **Driver**                                            | **Manufacturer**       | **cfg80211**\\  | **AP**\\  | **IBSS**\\  | **mesh**\\  | **monitor**\\  | **PHY modes**  | **Buses**                   |
 | [[en/users/Drivers/adm8211|adm8211]]                  | ADMtek/Infineon        | yes             | no        | no          | no          | ?              | B              | PCI                         |
 | [[en/users/Drivers/airo|airo]]                        | Aironet/Cisco          | no              | ?         | ?           | ?           | ?              | B              | PCI / PCMCIA                |
@@ -24,6 +20,7 @@ See also:
 | [[en/users/Drivers/ath9k|ath9k]]                      | Atheros                | yes             | yes       | yes         | yes         | yes            | A/B/G/N        | PCI / PCI-E / AHB / PCMCIA  |
 | [[en/users/Drivers/ath9k_htc|ath9k_htc]]              | Atheros                | yes             | yes       | yes         | yes         | yes            | B/G/N          | USB                         |
 | [[en/users/Drivers/ath10k|ath10k]]                    | Atheros                | yes             | yes       | yes         | yes          | yes            | A/B/G/N/AC     | PCI-E                       |
+| [[en/users/Drivers/ath11k|ath11k]]                    | Atheros                | yes             | yes       | yes         | yes          | yes            | A/B/G/N/AC/AX  | PCI-E                       |
 | [[en/users/Drivers/atmel|atmel]]                      | Atmel                  | no              | ?         | ?           | ?           | ?              | B              | PCI / PCMCIA                |
 | [[en/users/Drivers/b43|b43]]                          | Broadcom               | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | SSB / PCI / PCI-E / PCMCIA  |
 | [[en/users/Drivers/b43|b43legacy]]                    | Broadcom               | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | PCI / SSB                   |
