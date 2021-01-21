@@ -75,7 +75,15 @@ Note that we no longer provide support for the firmware of the devices using iwl
 === How to provide information to debug the firmware? ===
 Getting data from the firmware can often provide a lot of information, especially when the traffic is being stalled, latency is high, queues are stuck etc.. Here is how to do so. This is working starting kernel 3.19.
 
-First you'll need to allow DEV_COREDUMP by setting CONFIG_ALLOW_DEV_COREDUMP to Y.
+First you need to add the debug configuration. Open the debug file:
+<code> /lib/firmware/iwl-dbg-cfg.ini </code>
+And add this text:
+<code>
+[IWL DEBUG CONFIG DATA]
+FW_DBG_PRESET=1
+</code>
+
+Then, you'll need to allow DEV_COREDUMP by setting CONFIG_ALLOW_DEV_COREDUMP to Y.
 Then, you'll need to create a core dump. This can be done by:
 
 <code>echo 1 > /sys/kernel/debug/iwlwifi/0000\:0X\:00.0/iwlmvm/fw_dbg_collect</code>
