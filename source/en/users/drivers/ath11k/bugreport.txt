@@ -10,3 +10,7 @@ ath11k bug reports can be filed to [[https://bugzilla.kernel.org/enter_bug.cgi?p
   * Summary: start with string "ath11k:"
 
 See also [[https://bugzilla.kernel.org/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&list_id=1082403&query_format=advanced&short_desc=ath11k&short_desc_type=allwordssubstr|the list of open ath11k bugs]].
+
+Bugzilla is not actively followed, so it's a good idea to also send a short mail to [[en/users/Drivers/ath11k/mailinglist|the mailing list]].
+
+Patches are not submitted via bugzilla, see [[en/users/Drivers/ath11k/submittingpatches|Submitting patches]].
