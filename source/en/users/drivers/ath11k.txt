@@ -6,6 +6,7 @@ ath11k is a driver for Qualcomm [[https://en.wikipedia.org/wiki/IEEE_802.11ax|IE
 
   * [[en/users/drivers/ath11k/installation|Installation]]
   * [[en/users/drivers/ath11k/bugreport|Reporting bugs]]
+  * [[en/users/drivers/ath11k/mailinglist|Mailinglist]]
   * [[en/users/drivers/ath11k/submittingpatches|Submitting patches]]
 
 ===== Supported Devices =====
