@@ -18,7 +18,4 @@ Archive for the mailing list:
 
 http://lists.infradead.org/pipermail/ath10k/
 
-===== IRC channel =====
-
-For real time discussions there is #ath10k channel on Freenode. Please do take into account that due to timezone differences and whatnot it might take hours, or even days, to get a reply. So patience is gold here.
 
