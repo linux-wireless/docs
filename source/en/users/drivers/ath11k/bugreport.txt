@@ -9,8 +9,18 @@ ath11k bug reports can be filed to [[https://bugzilla.kernel.org/enter_bug.cgi?p
   * Component: network-wireless
   * Summary: start with string "ath11k:"
 
+To make it easier for the developers to help the bug report include at least this version:
+
+  * Exact kernel version. Is it a distro kernel or have you compiled it yourself? Any extra patches?
+  * Host device information, for example if it's a laptop make and model, architecture, CPU etc.
+  * BIOS version.
+  * Output from: uname -a
+  * Output from: lpsci -mnn
+  * Output from: find /lib/firmware/ath11k/ -type f | xargs md5sum
+  * Output from: dmesg | grep ath11k
+
 See also [[https://bugzilla.kernel.org/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&list_id=1082403&query_format=advanced&short_desc=ath11k&short_desc_type=allwordssubstr|the list of open ath11k bugs]].
 
-Bugzilla is not actively followed, so it's a good idea to also send a short mail to [[en/users/Drivers/ath11k/mailinglist|the mailing list]].
+Bugzilla is not actively followed by all developers, so it's a good idea to also send a short mail to [[en/users/Drivers/ath11k/mailinglist|the mailing list]]. Usually a post to the mailing list gathers more attention. Also questions should be sent to the mailing list.
 
 Patches are not submitted via bugzilla, see [[en/users/Drivers/ath11k/submittingpatches|Submitting patches]].
