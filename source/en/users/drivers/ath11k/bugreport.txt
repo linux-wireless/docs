@@ -15,7 +15,7 @@ To make it easier for the developers to help the bug report include at least thi
   * Host device information, for example if it's a laptop make and model, architecture, CPU etc.
   * BIOS version.
   * Output from: uname -a
-  * Output from: lpsci -mnn
+  * Output from: lspci -mnn
   * Output from: find /lib/firmware/ath11k/ -type f | xargs md5sum
   * Output from: dmesg | grep ath11k
 
