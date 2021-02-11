@@ -9,7 +9,7 @@ ath11k bug reports can be filed to [[https://bugzilla.kernel.org/enter_bug.cgi?p
   * Component: network-wireless
   * Summary: start with string "ath11k:"
 
-To make it easier for the developers to help the bug report include at least this version:
+To make it easier for the developers to help, include in the bug report at least this information:
 
   * Exact kernel version. Is it a distro kernel or have you compiled it yourself? Any extra patches?
   * Host device information, for example if it's a laptop make and model, architecture, CPU etc.
