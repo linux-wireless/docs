@@ -19,7 +19,7 @@ See also:
 | [[en/users/Drivers/ath6kl|ath6kl]]                    | Atheros                | yes             | no        | yes         | no          | no             | A/B/G/N        | SDIO / USB                  |
 | [[en/users/Drivers/ath9k|ath9k]]                      | Atheros                | yes             | yes       | yes         | yes         | yes            | A/B/G/N        | PCI / PCI-E / AHB / PCMCIA  |
 | [[en/users/Drivers/ath9k_htc|ath9k_htc]]              | Atheros                | yes             | yes       | yes         | yes         | yes            | B/G/N          | USB                         |
-| [[en/users/Drivers/ath10k|ath10k]]                    | Atheros                | yes             | yes       | yes         | yes         | yes            | A/B/G/N/AC     | PCI-E                       |
+| [[en/users/Drivers/ath10k|ath10k]]                    | Atheros                | yes             | yes       | yes (6)     | yes (6)     | yes (6)        | A/B/G/N/AC     | PCI-E / AHB / SDIO          |
 | [[en/users/Drivers/ath11k|ath11k]]                    | Atheros                | yes             | yes       | no          | yes (6)     | yes (6)        | A/B/G/N/AC/AX  | PCI-E / AHB                 |
 | [[en/users/Drivers/atmel|atmel]]                      | Atmel                  | no              | ?         | ?           | ?           | ?              | B              | PCI / PCMCIA                |
 | [[en/users/Drivers/b43|b43]]                          | Broadcom               | yes             | yes       | yes         | yes         | yes            | A(2)/B/G       | SSB / PCI / PCI-E / PCMCIA  |
