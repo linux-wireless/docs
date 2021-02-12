@@ -56,7 +56,7 @@ Different patchwork states and their meanings:
 
 ===== Subject =====
 
-If what you are sending is a patch you can use a subject as follows: 
+If what you are sending is a patch you should use a subject as follows: 
 
 
 <code>[PATCH] subsystem: fix foo and optimize bar</code>
@@ -80,7 +80,7 @@ $
 
 If your patch is just a proposal you can mark the patch as RFC in the subject: 
 
-<code>[RFC] subsystem: a new way to do foo</code>
+<code>[RFC] subsystem: add a new way to do foo</code>
 
 If you need to make changes to the patch add a version number inside the brackets:
 
@@ -93,6 +93,23 @@ If you need to make changes to the patch add a version number inside the bracket
 Then sending a new version of the patch **always** add a change log, either after the ''%%---%%'' line (three dashes) or in the cover letter.
 
 If a patch in a bigger patchset changes resubmit the whole patchset, even the patches which have not changes. The maintainers look at patchsets as a complete unit, usually they do not want to take patches individually from a patchset.
+
+Subject lines, like commit messages (see below) should be written in imperative voice ("fix foo and optimize bar"), not in any other way such as past tense ("fixed foo and optimized bar").
+
+===== Commit Messages =====
+
+Please write commit messages, like mentioned for the subject above, in imperative voice.
+
+Commit messages should describe
+  * why a change was made,
+  * how it achieves its stated goal, and,
+  * if applicable, other considerations such as
+    * alternatives that were considered,
+    * implications on other code,
+    * possible security implications,
+    * etc.
+
+If you find yourself listing out a number of changes in the commit message as a bulleted list or similar, consider splitting up the patch into discrete changes that each do one thing. Similarly, if one of the additional considerations is refactoring, try to shift that into a separate patch.
 
 ===== Tree labels =====
 
