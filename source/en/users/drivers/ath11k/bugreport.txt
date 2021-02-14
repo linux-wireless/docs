@@ -21,6 +21,8 @@ To make it easier for the developers to help, include in the bug report at least
 
 See also [[https://bugzilla.kernel.org/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&list_id=1082403&query_format=advanced&short_desc=ath11k&short_desc_type=allwordssubstr|the list of open ath11k bugs]].
 
-Bugzilla is not actively followed by all developers, so it's a good idea to also send a short mail to [[en/users/Drivers/ath11k/mailinglist|the mailing list]]. Usually a post to the mailing list gathers more attention. Also questions should be sent to the mailing list.
+As distros (Ubuntu, Fedora etc) can modify ath11k on their own, and it's difficult to track what has changed, it's best to report bugs with distro kernels to the distro bug trackers. https://bugzilla.kernel.org should be used only for bugs found with upstream releases download from https://www.kernel.org.
+
+Bugzilla is not actively followed by all developers, so it's a good idea to also send a short mail to [[en/users/Drivers/ath11k/mailinglist|the mailing list]]. Usually a post to the mailing list gathers more attention. Also questions and support requests should be sent to the mailing list, not to bugzilla. Bugzilla is not used as a support forum, it is just to collect actual bugs.
 
 Patches are not submitted via bugzilla, see [[en/users/Drivers/ath11k/submittingpatches|Submitting patches]].
