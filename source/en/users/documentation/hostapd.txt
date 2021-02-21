@@ -390,4 +390,4 @@ There is no point in setting wmm_ac_[option]_acm=1 with any mac80211-based drive
 
 This is a work in progress. The patches are yet to be included in mainline hostapd. 
 
-See the [[http://wireless.kernel.org/en/users/Documentation/acs|ACS sub-page]] for more details. 
+See the [[https://wireless.wiki.kernel.org/en/users/documentation/acs|ACS sub-page]] for more details. 
