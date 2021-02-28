@@ -65,7 +65,7 @@ See also:
 | [[en/users/Drivers/rtl819x|rtl8192ce]]                | Realtek                | yes             | ?         | ?           | ?           | yes            | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8192cu]]                | Realtek                | yes             | yes       | ?           | ?           | yes            | B/G/N          | USB                         |
 | [[en/users/Drivers/rtl819x|rtl8192de]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
-| [[en/users/Drivers/rtl819x|rtl8192se]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
+| [[en/users/Drivers/rtl819x|rtl8192se]]                | Realtek                | yes             | yes       | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8723ae]]                | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | PCI-E                       |
 | [[en/users/Drivers/rtl819x|rtl8723bs]]                | Realtek                | ?               | ?         | ?           | no          | no             | B/G/N          | SDIO                        |
 | [[en/users/Drivers/rtl819x| ** r8723au]]              | Realtek                | yes             | ?         | ?           | ?           | ?              | B/G/N          | USB                         |
