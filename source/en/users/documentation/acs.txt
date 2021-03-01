@@ -54,13 +54,13 @@ However to account for cases where busy/rx time is 0 (channel load is then 0%) c
 This "interference factor" is purely subjective and ony time will tell how usable this is. By using the minimum noise floor we remove any possible issues due to card calibration. The computation of the interference factor then is dependent on what the card itself picks up as the minimum noise, not an actual real possible card noise value. 
 
 
-===== Total interferece factor =====
+===== Total interference factor =====
 
 The above channel interference factor is calculated with no respect to target operational bandwidth. 
 
 To find an ideal channel the above data is combined by taking into account the target operational bandwidth and selected band. E.g. on 2.4GHz channels overlap w/ 20MHz bandwidth, but there is no overlap for 20MHz bandwidth on 5GHz. 
 
-Each valid and possible channel spec (i.e. channel + width) is taken and its interference factor is computed by summing up intereferences of each channel it overlaps. The one with least total interference is picked up. 
+Each valid and possible channel spec (i.e. channel + width) is taken and its interference factor is computed by summing up interferences of each channel it overlaps. The one with least total interference is picked up. 
 
 Note: This implies base channel interference factor must be non-negative allowing easy summing up. 
 
