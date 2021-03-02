@@ -17,12 +17,13 @@ To make it easier for the developers to help, include in the bug report at least
   * Linux distribution version.
   * Host device information, for example if it's a laptop make and model, architecture, CPU etc.
   * BIOS version.
+  * How many times have you seen the bug and how many times did you try to reproduce it? For example, the test failed 3 times out of 5 total times tested.
   * Output from: uname -a
   * Output from: lspci -mnn
   * Output from: find /lib/firmware/ath11k/ -type f | xargs md5sum
   * Output from: dmesg | grep ath11k
 
-If you unsure if your bug is same as already reported, it's better to open a new bug. Even if the symptoms are the same (eg. "kernel freeze"), the actual bugs causing the issue might be very different.
+If you are unsure if your bug is same as already reported, it's better to open a new bug. Even if the symptoms are the same (eg. "kernel freeze"), the actual bugs causing the issue might be very different.
 
 https://bugzilla.kernel.org is only for [[https://www.kernel.org/|upstream kernel.org releases]]. As distros (Ubuntu, Fedora etc) can modify ath11k on their own, and it's difficult to track what has changed, report bugs seen on distro kernels to the distro bug trackers. 
 
