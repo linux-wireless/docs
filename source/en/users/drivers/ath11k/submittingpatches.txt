@@ -33,6 +33,8 @@ ath11k supports two hardware families:
 
 Just like with ath10k, all ath11k patches need to account all supported hardware families.
 
+==== Tested-on tag ====
+
 Testing information needs to be provided using Tested-on tag. Few Tested-on tag examples:
 
 <code>
