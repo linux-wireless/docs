@@ -29,6 +29,9 @@ History:
   * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323024500.Ze6v0ni2oI-wqoL4A1DGg4421OZ2E73GCrjTgU3bqbw@z/|#1 (superseded)]]
 
 ==== Driver ====
+=== Baseline ===
+The rtl8xxxu driver performance gets compared to the latest vendor driver release, patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
+
 === Progress ===
 
 | **Priority**  | **Task**                                                                            | **Wi-Fi Alliance Test Case**     | **State**                                             | **Optional**  |
