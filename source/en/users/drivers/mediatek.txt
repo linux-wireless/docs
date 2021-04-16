@@ -15,6 +15,7 @@ mac80211 wireless driver for MediaTek MT7xxx series
     * **MT7622** 802.11b/g/n 4T4R 2.4GHz SoC Device (**5.7+**)
     * **MT7663** 802.11a/b/g/n/ac 2T2R 2.4/5GHz PCIe/USB/SDIO Chip (**5.8+**)
     * **MT7915** 802.11a/b/g/n/ac/ax 4T4R 2.4/5GHz PCIe Chip (**5.9+**)
+    * **MT7921** 802.11a/b/g/n/ac/ax 2T2R 2.4/5GHz PCIe Chip (**5.12+**)
  
 ==== Unsupported chips ====
 
