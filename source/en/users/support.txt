@@ -18,7 +18,7 @@ We have an IRC channel where you can stumble in and ask any question you like as
 Do not ask for permission to ask a question in IRC, just ask it with all the information you have and wait for someone answering. 
 
 
-<code>Server: irc.freenode.net
+<code>Server: irc.libera.chat:6697 (TLS)
 Channel: #linux-wireless</code>
 
 ===== Linux wireless mailing list =====
