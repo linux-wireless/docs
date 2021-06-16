@@ -132,7 +132,7 @@ Where that appropriate location is depends (again) on your system distribution. 
 
 Installation of the firmware is simply: 
 
-<code># cp iwlwifi-*.ucode /lib/firmware</code>
+<code># cp iwlwifi-*.{ucode,pnvm} /lib/firmware</code>
 You can now load the driver. 
 
 
