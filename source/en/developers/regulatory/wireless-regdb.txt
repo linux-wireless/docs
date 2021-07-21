@@ -63,7 +63,7 @@ If you find any errors please send them to the [[http://lists.infradead.org/mail
 Patches sent to the wireless-regdb git tree should be addressed as follows: 
 
 
-<code>To: seth.forshee@canonical.com
+<code>To: sforshee@kernel.org
 Cc: wireless-regdb@lists.infradead.org, linux-wireless@vger.kernel.org
 Subject: wireless-regdb: Update regulatory rules for France (FR) on 5GHz</code>
 
