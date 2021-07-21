@@ -15,19 +15,9 @@
 Progress: Hardware is already on the market, nothing left to do or could be changed for that matter.
 
 ==== Firmware ====
-As of 2020-08-31, linux-firmware contains firmware version 80.0, which is known to hang on the GARDENA smart gateway as long-term tests have shown (and on other machines too - Google knows). Only a cold reset resolves the problem, which is easy to do for an USB WLAN stick but very problematic (human intervention needed) on a embedded device without hardware reset capabilities for the USB device.
+All driver development and the verification is getting done with firmware version 88.2, which is part of linux-wireless [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi?id=2ea86675db1349235e9af0a9d0372b72da4db259 | since release 20201118]].
 
-Therefore, all driver development and the verification is getting done with firmware version 88.2, **which is not yet mainlined as of 2020-08-31**, but has the mentioned problem resolved.
-
-=== Progress ===
-== Upstreaming FW 88.2 ==
-done
-
-History:
-  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20201108234254.21645-1-code@reto-schneider.ch/|#3 (accepted)]]
-  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323225809.11594-1-code@reto-schneider.ch/|#2 (superseded)]]
-  * Upstreaming attempt [[https://lore.kernel.org/linux-firmware/20200323024500.Ze6v0ni2oI-wqoL4A1DGg4421OZ2E73GCrjTgU3bqbw@z/|#1 (superseded)]]
-
+Before linux-wireless release 20201118, the provided firmware was version 80.0, which is known to hang on the GARDENA smart gateway as long-term tests have shown (and on other machines too - Google knows). Only a cold reset resolved the problem, which is easy to do for an USB WLAN stick but problematic (human intervention needed) on a embedded device that has no hardware reset capabilities for the USB device.
 ==== Driver ====
 === Baseline ===
 The rtl8xxxu driver performance gets compared to the latest vendor driver release, patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
