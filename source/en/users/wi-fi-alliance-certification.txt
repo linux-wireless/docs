@@ -20,7 +20,7 @@ All driver development and the verification is getting done with firmware versio
 Before linux-wireless release 20201118, the provided firmware was version 80.0, which is known to hang on the GARDENA smart gateway as long-term tests have shown (and on other machines too - Google knows). Only a cold reset resolved the problem, which is easy to do for an USB WLAN stick but problematic (human intervention needed) on a embedded device that has no hardware reset capabilities for the USB device.
 ==== Driver ====
 === Baseline ===
-The rtl8xxxu driver performance gets compared to the latest vendor driver release, patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
+The rtl8xxxu driver performance (throughput) gets compared to the latest vendor driver release, patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
 
 === Progress ===
 
