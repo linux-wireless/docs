@@ -18,15 +18,27 @@ Progress: Hardware is already on the market, nothing left to do or could be chan
 All driver development and the verification is getting done with firmware version 88.2, which is part of linux-wireless [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi?id=2ea86675db1349235e9af0a9d0372b72da4db259 | since release 20201118]].
 
 Before linux-wireless release 20201118, the provided firmware was version 80.0, which is known to hang on the GARDENA smart gateway as long-term tests have shown (and on other machines too - Google knows). Only a cold reset resolved the problem, which is easy to do for an USB WLAN stick but problematic (human intervention needed) on a embedded device that has no hardware reset capabilities for the USB device.
-==== Driver ====
+==== Driver development and testing ====
+=== Setup ===
+== Reto ==
+  * AP: various (mainly Linksys WRT3200ACM)
+  * STA: rtl8xxxu running on Edimax EW-7811UN (amd64) or the GARDENA smart gateway (ARMv5)
+  * Distance: Variable, but generally close (1-3m distance)
+  * Environment: Residual area; not clean/standardized, but using a (seemingly) non-crowded channel (12)
+
+== Chris ==
+  * AP: ?
+  * STA: rtl8xxxu running on Edimax EW-7811UN (amd64)
+  * Distance: ?
+  * Environment: ?
+
 === Baseline ===
-The rtl8xxxu driver performance (throughput) gets compared to the latest vendor driver release, patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
+The rtl8xxxu driver performance (throughput) gets compared to the latest vendor driver release (8192cu), which has been patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
 
 === Progress ===
-
 | **Priority**  | **Task**                                                                            | **Wi-Fi Alliance Test Case**     | **State**                                             | **Optional**  |
-| 1             | ACK #1: Fix Block ACKs to included (ack) recently sent frames                       | n/a (but a prerequisite)         | WIP                                                   |  n            |
-| 2             | ACK #1: Fix regular ACKs to work also with non-MCS2 packets                         | n/a (but a prerequisite)         | WIP                                                   |  n            |
+| 1             | ACK #1: Fix Block ACKs to include (ack) recently sent frames                       | n/a (but a prerequisite)         | WIP                                                   |  n            |
+| 2             | ACK #2: Fix regular ACKs to work also with non-MCS2 packets                         | n/a (but a prerequisite)         | WIP                                                   |  n            |
 | unknown       | Allow setting TX power limit via iw                                                 | none, but needed for EMC         | implemented, needs to be verified by GARDENA          |  n            |
 | unknown       | TX Power: power by rate.                                                            | none, but maybe required for EMC | not yet implemented                                   |  n            |
 | unknown       | A-MSDU (RX support)                                                                 | 5.2.38                           | not yet implemented                                   |  n            |
@@ -43,4 +55,12 @@ The rtl8xxxu driver performance (throughput) gets compared to the latest vendor 
 | none          | Greenfield mode                                                                     | 5.2.41 (no longer existing)      | not yet implemented                                   |  y            |
 | unknown       | Regulatory domain: Hook the TX power set/get of the cfg80211 to the driver          | none                             | not yet implemented                                   |  y            |
 
-Source: https://github.com/mschiu77/linux (check out recent branches)
+== ACK #1: Fix Block ACKs to include (ack) recently sent frames ==
+
+rtl8xxxu:
+During block ACK sessions, the STA does not ACK frames sent by the AP in time, causing the AP to resend them. It is unknown whether the frames have not been properly received by the STA or if the STA is "just" too slow to ACK them in time.
+
+This results in retransmission percentages of 10-50%. While still yielding usable performance (10-40 MBit/s), this percentage is too high for passing the Wi-Fi Alliance certification.
+
+8192cu:
+ACK-ing all sent frames in time, resulting in only 1-2% retransmitted frames and great performance (35+ MBit/s).
