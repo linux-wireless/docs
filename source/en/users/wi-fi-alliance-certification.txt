@@ -18,11 +18,15 @@ Progress: Hardware is already on the market, nothing left to do or could be chan
 All driver development and the verification is getting done with firmware version 88.2, which is part of linux-wireless [[https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi?id=2ea86675db1349235e9af0a9d0372b72da4db259 | since release 20201118]].
 
 Before linux-wireless release 20201118, the provided firmware was version 80.0, which is known to hang on the GARDENA smart gateway as long-term tests have shown (and on other machines too - Google knows). Only a cold reset resolved the problem, which is easy to do for an USB WLAN stick but problematic (human intervention needed) on a embedded device that has no hardware reset capabilities for the USB device.
-==== Driver development and testing ====
+==== Driver development ====
 === Setup ===
 == Reto ==
-  * AP: various (mainly Linksys WRT3200ACM)
-  * STA: rtl8xxxu running on Edimax EW-7811UN (amd64) or the GARDENA smart gateway (ARMv5)
+  * AP: various (mainly Linksys WRT3200ACM with TA 00:60:6e:00:07:7d, BS 24:f5:a2:c0:4e:b1, SSID "customer-wifi")
+  * STAs:
+    * Thinkpad T420/Edimax EW-7811UN (08:be:ac:0b:14:c4; amd64)
+    * GARDENA smart gateways (various MAC addresses; ARMv5)
+  * Capturing device: Asus PCE-AX58BT (Intel AX200)
+  * iperf3 host: Workstation with IPv4 address 10.42.0.1
   * Distance: Variable, but generally close (1-3m distance)
   * Environment: Residual area; not clean/standardized, but using a (seemingly) non-crowded channel (12)
 
@@ -36,27 +40,28 @@ Before linux-wireless release 20201118, the provided firmware was version 80.0, 
 The rtl8xxxu driver performance (throughput) gets compared to the latest vendor driver release (8192cu), which has been patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
 
 === Progress ===
-| **Priority**  | **Task**                                                                            | **Wi-Fi Alliance Test Case**     | **State**                                             | **Optional**  |
-| 1             | ACK #1: Fix Block ACKs to include (ack) recently sent frames                       | n/a (but a prerequisite)         | WIP                                                   |  n            |
-| 2             | ACK #2: Fix regular ACKs to work also with non-MCS2 packets                         | n/a (but a prerequisite)         | WIP                                                   |  n            |
-| unknown       | Allow setting TX power limit via iw                                                 | none, but needed for EMC         | implemented, needs to be verified by GARDENA          |  n            |
-| unknown       | TX Power: power by rate.                                                            | none, but maybe required for EMC | not yet implemented                                   |  n            |
-| unknown       | A-MSDU (RX support)                                                                 | 5.2.38                           | not yet implemented                                   |  n            |
-| unknown       | WMM: Wi-Fi Multimedia                                                               | many                             | not yet implemented                                   |  n (but ASD?) |
-| unknown       | 802.11n: STBC Receive                                                               | 5.2.46                           | implemented, needs to be verified                     |  n            |
-| unknown       | A-MPDU: #1. Handle ampdu_action properly on TX. Ex.ADDBA, DELBA, BAR                | 5.2.47                           | implemented, needs to be verified                     |  n            |
-| unknown       | A-MPDU: #2. Make sure BAR to be handled correctly on RX                             | 5.2.47                           | not yet implemented                                   |  n            |
-| unknown       | iw station dump: "tx bitrate: (unknown)" (n/a)                                      | n/a                              | fixed                                                 |  y            |
-| unknown       | iw output: "Available Antennas: TX 0 RX 0" (n/a)                                    | n/a                              | fixed                                                 |  y            |
-| unknown       | Reach MCS5 ~ MCS7 rate under rate control                                           | n/a                              | not yet implemented                                   |  y            |
-| unknown       | Protected Management Frames (For WPA3 support)                                      | unknown                          | not yet implemented, HW support unknown (RTL8188CUS)  |  y            |
-| unknown       | CRDA + RegDB support: Static TX power limit, global                                 | unknown                          | not yet implemented                                   |  y            |
-| unknown       | CRDA + RegDB support: Country support (implement regd_notifier())                   | unknown                          | not yet implemented                                   |  y            |
-| none          | Greenfield mode                                                                     | 5.2.41 (no longer existing)      | not yet implemented                                   |  y            |
-| unknown       | Regulatory domain: Hook the TX power set/get of the cfg80211 to the driver          | none                             | not yet implemented                                   |  y            |
+| **Priority** | **Task**                                                                   | **Wi-Fi Alliance Test Case**     | **State**                                            | **Optional** |
+| 1            | ACK #1: Fix Block ACKs to include (ack) recently sent frames               | n/a (but a prerequisite)         | WIP                                                  | n            |
+| 2            | ACK #2: Fix regular ACKs to work also with non-MCS2 packets                | n/a (but a prerequisite)         | WIP                                                  | n            |
+| unknown      | Allow setting TX power limit via iw                                        | none, but needed for EMC         | implemented, needs to be verified by GARDENA         | n            |
+| unknown      | TX Power: power by rate.                                                   | none, but maybe required for EMC | not yet implemented                                  | n            |
+| unknown      | A-MSDU (RX support)                                                        | 5.2.38                           | not yet implemented                                  | n            |
+| unknown      | WMM: Wi-Fi Multimedia                                                      | many                             | not yet implemented                                  | n (but ASD?) |
+| unknown      | 802.11n: STBC Receive                                                      | 5.2.46                           | implemented, needs to be verified                    | n            |
+| unknown      | A-MPDU: #1. Handle ampdu_action properly on TX. Ex.ADDBA, DELBA, BAR       | 5.2.47                           | implemented, needs to be verified                    | n            |
+| unknown      | A-MPDU: #2. Make sure BAR to be handled correctly on RX                    | 5.2.47                           | not yet implemented                                  | n            |
+| unknown      | iw station dump: "tx bitrate: (unknown)" (n/a)                             | n/a                              | fixed                                                | y            |
+| unknown      | iw output: "Available Antennas: TX 0 RX 0" (n/a)                           | n/a                              | fixed                                                | y            |
+| unknown      | Reach MCS5 ~ MCS7 rate under rate control                                  | n/a                              | not yet implemented                                  | y            |
+| unknown      | Protected Management Frames (For WPA3 support)                             | unknown                          | not yet implemented, HW support unknown (RTL8188CUS) | y            |
+| unknown      | CRDA + RegDB support: Static TX power limit, global                        | unknown                          | not yet implemented                                  | y            |
+| unknown      | CRDA + RegDB support: Country support (implement regd_notifier())          | unknown                          | not yet implemented                                  | y            |
+| none         | Greenfield mode                                                            | 5.2.41 (no longer existing)      | not yet implemented                                  | y            |
+| unknown      | Regulatory domain: Hook the TX power set/get of the cfg80211 to the driver | none                             | not yet implemented                                  | y            |
+| none         | Firmware upload failure                                                    | n/a                              | not yet fixed                                        | y            |
+| none         | RX IQK failed                                                              | n/a                              | not yet fixed                                        | y            |
 
 == ACK #1: Fix Block ACKs to include (ack) recently sent frames ==
-
 rtl8xxxu:
 During block ACK sessions, the STA does not ACK frames sent by the AP in time, causing the AP to resend them. It is unknown whether the frames have not been properly received by the STA or if the STA is "just" too slow to ACK them in time.
 
@@ -64,3 +69,108 @@ This results in retransmission percentages of 10-50%. While still yielding usabl
 
 8192cu:
 ACK-ing all sent frames in time, resulting in only 1-2% retransmitted frames and great performance (35+ MBit/s).
+
+== Firmware upload failure ==
+The following error happens frequently on Reto's machine, but does not happen on the GARDENA smart gateway:
+<code>
+kernel: usb 1-1.5.4: new high-speed USB device number 8 using ehci-pci
+kernel: usb 1-1.5.4: New USB device found, idVendor=7392, idProduct=7811, bcdDevice= 2.00
+kernel: usb 1-1.5.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+kernel: usb 1-1.5.4: Product: 802.11n WLAN Adapter
+kernel: usb 1-1.5.4: Manufacturer: Realtek
+kernel: usb 1-1.5.4: SerialNumber: 00e04c000001
+kernel: usb 1-1.5.4: Vendor: Realtek
+kernel: usb 1-1.5.4: Product: 802.11n WLAN Adapter
+kernel: usb 1-1.5.4: rtl8192cu_parse_efuse: dumping efuse (0x80 bytes):
+kernel: usb 1-1.5.4: 00: 29 81 00 74 cd 00 00 00
+kernel: usb 1-1.5.4: 08: ff 00 92 73 11 78 03 41
+kernel: usb 1-1.5.4: 10: 32 00 85 62 9e ad 08 be
+kernel: usb 1-1.5.4: 18: ac 0b 14 c4 0a 03 52 65
+kernel: usb 1-1.5.4: 20: 61 6c 74 65 6b 00 16 03
+kernel: usb 1-1.5.4: 28: 38 30 32 2e 31 31 6e 20
+kernel: usb 1-1.5.4: 30: 57 4c 41 4e 20 41 64 61
+kernel: usb 1-1.5.4: 38: 70 74 65 72 00 00 00 00
+kernel: usb 1-1.5.4: 40: 00 00 00 00 00 00 00 00
+kernel: usb 1-1.5.4: 48: 00 00 00 00 00 00 00 00
+kernel: usb 1-1.5.4: 50: 00 00 00 00 00 00 00 00
+kernel: usb 1-1.5.4: 58: 06 00 27 27 27 00 00 00
+kernel: usb 1-1.5.4: 60: 29 29 29 00 00 00 00 00
+kernel: usb 1-1.5.4: 68: 00 00 00 00 11 11 33 00
+kernel: usb 1-1.5.4: 70: 00 00 00 00 00 02 00 00
+kernel: usb 1-1.5.4: 78: 0f 00 00 00 36 00 00 00
+kernel: usb 1-1.5.4: RTL8188CU rev A (TSMC) 1T1R, TX queues 2, WiFi=1, BT=0, GPS=0, HI PA=0
+kernel: usb 1-1.5.4: RTL8188CU MAC: 08:be:ac:0b:14:c4
+kernel: usb 1-1.5.4: rtl8xxxu: Loading firmware rtlwifi/rtl8192cufw_TMSC.bin
+kernel: usb 1-1.5.4: Firmware revision 88.2 (signature 0x88c1)
+kernel: usb 1-1.5.4: rtl8xxxu_writeN: Failed to write block at addr: 1c00 size: 0080
+kernel: rtl8xxxu: probe of 1-1.5.4:1.0 failed with error -11
+</code>
+
+Unsure if this is a common issue.
+
+== RX IQK failed ==
+The following error happens frequently on Reto's machine, but does not happen on the GARDENA smart gateway:
+<code>
+kernel: usb 1-1.5.4: Vendor: Realtek
+kernel: usb 1-1.5.4: Product: 802.11n WLAN Adapter
+kernel: usb 1-1.5.4: rtl8192cu_parse_efuse: dumping efuse (0x80 bytes):
+kernel: usb 1-1.5.4: 00: 29 81 00 74 cd 00 00 00
+kernel: usb 1-1.5.4: 08: ff 00 92 73 11 78 03 41
+kernel: usb 1-1.5.4: 10: 32 00 85 62 9e ad 08 be
+kernel: usb 1-1.5.4: 18: ac 0b 14 c4 0a 03 52 65
+kernel: usb 1-1.5.4: 20: 61 6c 74 65 6b 00 16 03
+kernel: usb 1-1.5.4: 28: 38 30 32 2e 31 31 6e 20
+kernel: usb 1-1.5.4: 30: 57 4c 41 4e 20 41 64 61
+kernel: usb 1-1.5.4: 38: 70 74 65 72 00 00 00 00
+kernel: usb 1-1.5.4: 40: 00 00 00 00 00 00 00 00
+kernel: usb 1-1.5.4: 48: 00 00 00 00 00 00 00 00
+kernel: usb 1-1.5.4: 50: 00 00 00 00 00 00 00 00
+kernel: usb 1-1.5.4: 58: 06 00 27 27 27 00 00 00
+kernel: usb 1-1.5.4: 60: 29 29 29 00 00 00 00 00
+kernel: usb 1-1.5.4: 68: 00 00 00 00 11 11 33 00
+kernel: usb 1-1.5.4: 70: 00 00 00 00 00 02 00 00
+kernel: usb 1-1.5.4: 78: 0f 00 00 00 36 00 00 00
+kernel: usb 1-1.5.4: RTL8188CU rev A (TSMC) 1T1R, TX queues 2, WiFi=1, BT=0, GPS=0, HI PA=0
+kernel: usb 1-1.5.4: RTL8188CU MAC: 08:be:ac:0b:14:c4
+kernel: usb 1-1.5.4: rtl8xxxu: Loading firmware rtlwifi/rtl8192cufw_TMSC.bin
+kernel: usb 1-1.5.4: Firmware revision 88.2 (signature 0x88c1)
+kernel: usb 1-1.5.4: rtl8xxxu_iqk_path_a: Path A RX IQK failed!
+kernel: usb 1-1.5.4: rtl8xxxu_iqk_path_a: Path A RX IQK failed!
+kernel: usbcore: registered new interface driver rtl8xxxu
+</code>
+
+Unsure if this is a common issue.
+
+==== Driver Testing ====
+=== Setup ===
+  - Blacklist all drivers (rlt8xxxu, 8192cu, rtl8192cu)
+  - Ensure no drivers are loaded
+  - Load driver to be tested (rlt8xxxu, 8192cu, rtl8192cu) with insmod
+  - Start 802.11 capture
+  - Start wpa_supplicant on DUT
+  - Once IP addres got assigned, measure the performance using iperf3:
+    * TCP TX Throughput: <code>iperf3 -c 10.42.0.1</code>
+    * TCP RX Throughput: <code>iperf3 -c --reverse 10.42.0.1</code>
+
+=== Analysis ===
+  * The throughput values are the ones reported by iperf3 (the lower value if server/client values differ)
+  *The retry values are taken from Wireshark in menu "Wireless" -> "WLAN Traffic"
+
+=== TCP TX Throughput ===
+
+| **Tester** | **DUT**       | **AP**  | **Driver**                                 | **Throughput [Mbits/sec]; retires [%]** | **AP <-> DUT**                    | **Notes**                                                      | **PCAP**                                                                                                                                                                                       |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, rtl8xxxu (vanilla)         | 30.6 Mbits/s; 12%                       | 2m, two monitors in line of sight | Many "ghost MAC addresses"                                     | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-1-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-tx-tcp-12%25-retries-at-30.6MBps.pcapng.gz   |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, rtl8xxxu (vanilla)         | 13.1 Mbits/s; 3%                        | 2m, two monitors in line of sight | Many "ghost MAC addresses"; unexplained performance/retry drop | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-3-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-tx-tcp-3%25-retries-at-13.1MBps.pcapng.gz    |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, 8192cu (tag rs/2021-07-23) | 4.02 Mbits/s; 17.2%                     | 2m, two monitors in line of sight | No "ghost MAC addresses"; Surprisingly bad performance         | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-5-Linux-5.10.51-2021-07-22-8192cu-edimax-08:be:ac:0b:14:c4-iperf-tx-tcp-16%25-retries-at-4.02MBps.pcapng.gz             |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, 8192cu (tag rs/2021-07-23) | 3.91 Mbits/s; 18.8%                     | 2m, two monitors in line of sight | No "ghost MAC addresses"; Surprisingly bad performance         | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-6-Linux-5.10.51-2021-07-22-8192cu-edimax-08:be:ac:0b:14:c4-iperf-tx-tcp-18%25-retries-at-3.91MBps.pcapng.gz             |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, 8192cu (tag rs/2021-07-23) | 49.7 Mbits/s; 4.8%                      | 1m, direct line of sight          | Some "ghost MAC addresses"                                     | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-8-Linux-5.10.51-2021-07-22-8192cu-edimax-08:be:ac:0b:14:c4-iperf-tx-tcp-4.8%25-retries-at-49.7MBps.pcapng.gz            |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, rtl8xxxu (vanilla)         | 45.7 Mbits/s; 9.4%                      | 1m, direct line of sigh           | No "ghost MAC addresses"                                       | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-10-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-tx-tcp-9.4%25-retries-at-45.7MBps.pcapng.gz |
+
+=== TCP RX Throughput ===
+
+| **Tester** | **DUT**       | **AP**  | **Driver**                                 | **Throughput [Mbits/sec]; retires [%]** | **AP <-> DUT**                    | **Notes**                  | **PCAP**                                                                                                                                                                                       |
+| Reto       | amd64, Edimax | Linksys | rtl8xxxu, vanilla Linux v5.10.51           | 38.9 Mbits/s; 16%                       | 2m, two monitors in line of sight | Many "ghost MAC addresses" | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-2-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-rx-tcp-16%25-retries-at-37.2MBps.pcapng.gz   |
+| Reto       | amd64, Edimax | Linksys | rtl8xxxu, vanilla Linux v5.10.51           | 41.7 Mbits/s; 15.6%                     | 2m, two monitors in line of sight | Many "ghost MAC addresses" | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-4-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-rx-tcp-15.6%25-retries-at-41.7MBps.pcapng.gz |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, 8192cu (tag rs/2021-07-23) | 41.8 Mbits/s; 10%                       | 2m, two monitors in line of sight | Many "ghost MAC addresses" | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-7-Linux-5.10.51-2021-07-22-8192cu-edimax-08:be:ac:0b:14:c4-iperf-rx-tcp-10%25-retries-at-41.4MBps.pcapng.gz             |
+| Reto       | amd64, Edimax | Linksys | Linux v5.10.51, 8192cu (tag rs/2021-07-23) | 49.7 Mbits/s; 9.9%                      | 1m, direct line of sight          | Many "ghost MAC addresses" | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-9-Linux-5.10.51-2021-07-22-8192cu-edimax-08:be:ac:0b:14:c4-iperf-rx-tcp-4.8%25-retries-at-49.7MBps.pcapng.gz            |
+| Reto       | amd64, Edimax | Linksys | rtl8xxxu, vanilla Linux v5.10.51           | 47.5 Mbits/s; 10.8%                     | 1m, direct line of sight          | Many "ghost MAC addresses" | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-11-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-rx-tcp-10.9%25-retries-at-47.5MBps.pcapng.gz                                                                                                                                                                                               |
