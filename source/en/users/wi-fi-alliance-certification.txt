@@ -156,7 +156,8 @@ Unsure if this is a common issue.
 |         10 | Reduce number of USB interrupts                        | ACKed: https://lore.kernel.org/linux-wireless/d32690a6-f679-c676-1461-10b47ae3428b@gmail.com/T/#t | ACKed by maintainer |
 
 ==== Driver Testing ====
-=== Setup ===
+=== Reto ===
+== Setup ==
   - Blacklist all drivers (rlt8xxxu, 8192cu, rtl8192cu)
   - Ensure no drivers are loaded
   - Load driver to be tested (rlt8xxxu, 8192cu, rtl8192cu) with insmod
@@ -166,15 +167,15 @@ Unsure if this is a common issue.
     * TCP TX Throughput: <code>iperf3 -c 10.42.0.1</code>
     * TCP RX Throughput: <code>iperf3 -c --reverse 10.42.0.1</code>
 
-=== Repos ===
+== Repos ==
   * Linux: https://github.com/husqvarnagroup/linux
   * 8192cu: https://github.com/husqvarnagroup/realtek-8192cu_rtl8188cus
 
-=== Analysis by Reto ===
+== Analysis ==
   * The throughput values are the ones reported by iperf3 (the lower value if server/client values differ)
   * The retry values are taken from Wireshark in menu "Wireless" -> "WLAN Traffic"
 
-=== TCP TX Throughput ===
+== TCP TX Throughput ==
 
 | **DUT**                                          | **AP**  | **Driver**                                                                                              | **Throughput [Mbits/sec]; retries [%]** | **AP <-> DUT**                    | **Notes**                                                                             | **PCAP**                                                                                                                                                                                             |
 | amd64, Edimax                                    | Linksys | Linux v5.10.51, rtl8xxxu (vanilla)                                                                      | 30.6 Mbits/s; 12%                       | 2m, two monitors in line of sight | Many "ghost MAC addresses"                                                            | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-1-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-tx-tcp-12%25-retries-at-30.6MBps.pcapng.gz         |
@@ -191,7 +192,7 @@ Unsure if this is a common issue.
 | ARMv5, GARDENA smart Gateway (00:1d:43:c0:19:8a) | Linksys | Linux v5.10.52, rtl8xxxu (patches 10, 8; tag gardena/rs/v5.10.52-rtl8xxxu-writeup-4-hw-rts-v1)          | 15.2 Mbits/s; 17.7%                     | 1m, direct line of sigh           | Few "ghost MAC addresses"; Throughout and retry percentage worsened                   | https://files.reto-schneider.ch/rtl8xxxu/2021-07-27-Testing/2021-07-27-3-Linux-5.10.52-rtl8xxxu-writeup-4-hw-rts-gateway-00:1d:43:c0:19:8a-iperf-tx-tcp-17.7%25-retries-at-15.2MBps.pcapng.gz        |
 | ARMv5, GARDENA smart Gateway (00:1d:43:c0:19:8a) | Linksys | Linux v5.10.52, rtl8xxxu (patches 10, 8, 7; tag gardena/rs/v5.10.52-rtl8xxxu-writeup-5-ampdu-v1)        | 20.8 Mbits/s; 46.5%                     | 1m, direct line of sigh           | Many "ghost MAC addresses"; Terrible retry performance; Patch 9 does not change this. | https://files.reto-schneider.ch/rtl8xxxu/2021-07-27-Testing/2021-07-27-5-Linux-5.10.52-rtl8xxxu-writeup-5-ampdu-v1-gateway-00:1d:43:c0:19:8a-iperf-tx-tcp-46.5%25-retries-at-20.8MBps.pcapng.gz      |
 
-=== TCP RX Throughput ===
+== TCP RX Throughput ==
 
 | **DUT**                                          | **AP**  | **Driver**                                  | **Throughput [Mbits/sec]; retries [%]** | **AP <-> DUT**                    | **Notes**                                                                             | **PCAP**                                                                                                                                                                                            |
 | amd64, Edimax                                    | Linksys | Linux v5.10.51, rtl8xxxu (vanilla)          | 38.9 Mbits/s; 16%                       | 2m, two monitors in line of sight | Many "ghost MAC addresses"                                                            | https://files.reto-schneider.ch/rtl8xxxu/2021-07-23-Testing/2021-07-23-2-Linux-5.10.51-2021-07-22-vanilla-rtl8xxxu-edimax-08:be:ac:0b:14:c4-iperf-rx-tcp-16%25-retries-at-37.2MBps.pcapng.gz        |
