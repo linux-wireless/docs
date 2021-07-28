@@ -191,6 +191,15 @@ For submitting a new wireless driver the requirements are:
 
 There's also a list of [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/LICENSES/preferred|preferred licenses]] available.
 
+Some guidelines to speed up new driver review:
+
+  * keep the driver small and simple, more features can be added after the driver is accepted upstream
+  * use clean understandable code
+  * use generic kernel frameworks instead of reinventing the wheel
+  * use generic user space interfaces
+    * no driver specific user interfaces or hacks
+    * no .ini style driver configuration files
+  * avoid using debugfs or nl80211 vendor interfaces
 ===== Examples of a patches =====
 
 Below are a few examples of a patches. Only the header is provided for long patches. 
