@@ -8,6 +8,14 @@
 
 ===== rtl8xxxu on RTL8188CUS on GARDENA smart gateway  =====
 
+RealTek provides a GPLed Linux driver named "8192cu" for its RTL8188CUS hardware. While it has worked [[https://api.cert.wi-fi.org/api/certificate/download/public?variantId=14856 | well enough to pass the Wi-Fi Alliance certification]], the last release [[https://github.com/rettichschnidi/realtek-linux/tree/master/RTL8188C_8192C/USB/v4.0 | is from 2017]], its code does not work well with modern kernels (FullMAC, and notoriously unstable) and does no longer receive any security updates. Luckily, it has been superseded by TWO mainlined kernel drivers:
+  * rtl8192cu: Based on the RealTek driver, shoehorned into mainline Linux. Suffers from various stability issues and code is close to unreadable.
+  * rtl8xxxu: Written from scratch, [[en::users::drivers::rtl819x | will replace rtl8192cu]]. It has been shown to to be stable during long-term testing. Code is readable. Not (yet) feature equivalent to the 8192cu or even the rtl8192cu. 
+
+Both, rtl8192cu and rtl8xxxu are worse than 8192cu when it comes to features and performance.
+
+Given the code quality and stability, it is the goal of GARDENA to develop the rtl8xxxu driver as far as needed to pass the Wi-Fi Alliance certification.
+
 ==== Hardware ====
   * End product: ARMv5, Atmel SAM9G25 based GARDENA smart gateway ([[https://github.com/husqvarnagroup/smart-garden-gateway-public|sources]])
   * For development: x86_amd64, [[https://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/de/wireless_adapters_n150/ew-7811un/|Edimax EW-7811UN]]
