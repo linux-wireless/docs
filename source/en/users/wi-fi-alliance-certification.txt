@@ -40,10 +40,10 @@ Before linux-wireless release 20201118, the provided firmware was version 80.0, 
   * Environment: Residual area; not clean/standardized, but using a (seemingly) non-crowded channel (12)
 
 == Chris ==
-  * AP: ?
+  * AP: Dlink DIR-612 (2x2) SSID: CHT57196 with BSSID: 18:0f:76:c5:0a:ea
   * STA: rtl8xxxu running on Edimax EW-7811UN (amd64)
-  * Distance: ?
-  * Environment: ?
+  * Distance: fixed to 3m and 6m for experiment
+  * Environment: use less-noisy channel 9 in a 8x9 square meters area which only have 1 router. 
 
 === Baseline ===
 The rtl8xxxu driver performance (throughput) gets compared to the latest vendor driver release (8192cu), which has been patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
