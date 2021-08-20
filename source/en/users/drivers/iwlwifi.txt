@@ -73,7 +73,7 @@ If you do get it from linux-firmware.git, you'll have to copy the files to the a
 
 Installation of the firmware is simply: 
 
-<code># cp iwlwifi-*.{ucode,pnvm} /lib/firmware</code>
+<code># cp iwlwifi-*.{ucode,pnvm} /lib/firmware/</code>
 
 You can now load the driver.
 
