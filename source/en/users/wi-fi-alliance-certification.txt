@@ -218,6 +218,8 @@ Unsure if this is a common issue.
 
 === Chris ===
 
+
+
 == TCP TX Throughput ==
 
 | **DUT**        | **AP**  | **Driver**                                                                       | **Throughput [Mbits/sec]; retries [%]**  | **AP <-> DUT**            | **Notes**                           | **PCAP**                                                |
@@ -227,6 +229,24 @@ Unsure if this is a common issue.
 | amd64, Edimax  | DLink   | Linux v5.12, 8192cu ((https://github.com/mschiu77/rtl8188cus_vendor.git master)  | 13-16 Mbits/s; 20~23%                    | 6m, direct line of sight  | steady throughput w/o sudden drop   | https://mega.nz/folder/HZ8iQRqY#2ss6WW9u6oxInJvT2R6iCw  |
 
 == TCP RX Throughput ==
+
+== Setup ==
+  - Blacklist all drivers (rlt8xxxu, 8192cu, rtl8192cu)
+  - Ensure no drivers are loaded
+  - Load driver to be tested (rlt8xxxu, 8192cu) with insmod
+  - Start 802.11 capture
+  - Once IP address got assigned, measure the performance using iperf3:
+    * TCP TX Throughput: <code>iperf3 -c 192.168.0.11 -t 30 -i 1</code>
+    * TCP RX Throughput: <code>iperf3 -c --reverse 192.168.0.11 -t 30 -i 1</code>
+
+== Repos ==
+  * Linux: https://github.com/mschiu77/linux/tree/chris/ampdu_action
+  * 8192cu: https://github.com/mschiu77/rtl8188cus_vendor
+
+== Analysis ==
+  * The throughput values are the ones reported by iperf3 (the lower value if server/client values differ)
+  * The retry values are taken from Wireshark in menu "Wireless" -> "WLAN Traffic"
+
 
 | **DUT**        | **AP**  | **Driver**                 | **Throughput [Mbits/sec]; retries [%]**  | **AP <-> DUT**            | **Notes**                   | **PCAP**                                                |
 | amd64, Edimax  | DLink   | Linux v5.13.1    rtl8xxxu  | 36 Mbits/s; 12%                          | 3m, direct line of sight  | performance is stable high  | https://mega.nz/folder/3Zs0nDrK#i1fnW6Bp5E_jeC3dcPlWaw  |
