@@ -36,10 +36,17 @@ Clone linux-firmware:
 
   git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
                                                                 
-Install firmware:
+Install Wi-fi firmware:
 
 <code>
 cd linux-firmware           
 sudo cp -r ath11k/ /lib/firmware/
+</code>
+
+Install Bluetooth firmware:
+
+<code>
+sudo cp qca/htnv20.bin /lib/firmware/qca/
+sudo cp qca/htbtfw20.tlv /lib/firmware/qca/
 </code>
 
