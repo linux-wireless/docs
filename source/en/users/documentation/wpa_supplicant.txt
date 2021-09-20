@@ -9,10 +9,10 @@
 
 
 ===== Supported Linux wireless cards/drivers =====
-    * Linux drivers that support Linux Wireless Extensions v19 or newer with WPA/WPA2 extensions 
+    * Linux drivers that support Linux [[en/developers/documentation/wireless-extensions|Wireless Extensions]] v19 or newer with WPA/WPA2 extensions 
     * All Linux mac80211 drivers 
     * Host AP driver for Prism2/2.5/3 (WPA and WPA2) 
-    * Linuxant [[DriverLoader|DriverLoader]] with Windows NDIS driver supporting WPA/WPA2 
+    * Linuxant [[http://www.linuxant.com/driverloader/|DriverLoader]] with Windows NDIS driver supporting WPA/WPA2 
     * Agere Systems Inc. Linux Driver (Hermes-I/Hermes-II chipset) (WPA, but not WPA2) 
     * madwifi (Atheros ar521x) 
     * ATMEL AT76C5XXx 
