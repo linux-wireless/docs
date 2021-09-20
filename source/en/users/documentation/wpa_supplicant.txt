@@ -5,7 +5,7 @@
 
 [[http://w1.fi/wpa_supplicant/|wpa_supplicant]] is a userspace application which works as a WPA supplicant and SME (to handle initiating MLME commands). This page is dedicated only to the documentation relating to the Linux aspects of wpa_supplicant. For further documentation please refer to: 
   * [[http://w1.fi/wpa_supplicant/|wpa_supplicant's home page]] 
-  * Latest [[http://w1.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=wpa_supplicant/README|README]] and well-commented [[http://hostap.epitest.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=wpa_supplicant/wpa_supplicant.conf|configuration file]] 
+  * Latest [[https://w1.fi/cgit/hostap/tree/wpa_supplicant/README|README]] and well-commented [[https://w1.fi/cgit/hostap/tree/wpa_supplicant/wpa_supplicant.conf|configuration file]] 
 
 
 ===== Supported Linux wireless cards/drivers =====
