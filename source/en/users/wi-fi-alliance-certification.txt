@@ -115,7 +115,7 @@ kernel: usb 1-1.5.4: rtl8xxxu_writeN: Failed to write block at addr: 1c00 size: 
 kernel: rtl8xxxu: probe of 1-1.5.4:1.0 failed with error -11
 </code>
 
-Unsure if this is a common issue.
+<del>Unsure if this is a common issue.</del> Seems hardware specific - USB dongle probably broken.
 
 == RX IQK failed ==
 The following error happens frequently on Reto's machine, but does not happen on the GARDENA smart gateway:
@@ -148,7 +148,7 @@ kernel: usb 1-1.5.4: rtl8xxxu_iqk_path_a: Path A RX IQK failed!
 kernel: usbcore: registered new interface driver rtl8xxxu
 </code>
 
-Unsure if this is a common issue.
+<del>Unsure if this is a common issue.</del> Seems hardware specific - USB dongle probably broken.
 
 === Patches ===
 
