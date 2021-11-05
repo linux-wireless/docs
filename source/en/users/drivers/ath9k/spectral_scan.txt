@@ -6,7 +6,7 @@ Atheros 802.11n chipsets include a built-in spectral analysis feature. AR92xx an
   * an index indicating the strongest FFT bin 
   * the maximum signal magnitude for each sample
 
-These information can be used to create an open source spectrum analyzer or interference classifier. To try it out, you can use the following commands to acquire samples for all channels which can be scanned: 
+These information can be used to create an open source spectrum analyzer or interference classifier. To try it out, you must first have a kernel compiled with config option ''ATH9K_COMMON_SPECTRAL'' and one or both of ''ATH9K_DEBUGFS'' and ''ATH9K_HTC_DEBUGFS''. Then you can use the following commands to acquire samples for all channels which can be scanned: 
 
 
 <code>echo chanscan > /sys/kernel/debug/ieee80211/phy0/ath9k/spectral_scan_ctl
