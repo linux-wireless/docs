@@ -253,7 +253,7 @@ kernel: usbcore: registered new interface driver rtl8xxxu
 | amd64, Edimax  | DLink   | Linux v5.12, 8192cu        | 35 Mbits/s; 10%                          | 3m, direct line of sight  | performance is stable high                      | https://mega.nz/folder/KIsmCBRR#rN9X9sXrdLo7It8qj8PQgQ  |
 | amd64, Edimax  | DLink   | Linux v5.12, 8192cu        | 20 Mbits/s; 11%                          | 6m, direct line of sight  | performance and retry are better than rtl8xxxu  | https://mega.nz/folder/2Q1WBJqS#6dU1pQ9OXbveETqlfQcZ2w  |
 
-=== Observations ===
+==== Observations ====
 | **Criterion**                       | **rtl8xxxu**                                          | **rtl8192cu**   | **8192cu**                 | **Comment**                                                                                                    |
 | wlan.frag != 1                      | rarely                                                | often           | never                      | Maybe a side-effect of failed transfers. Never sent by AP.                                                     |
 | Block ACK Initiator                 | STA, then AP                                          | AP, then AP     | AP, then STA               |                                                                                                                |
