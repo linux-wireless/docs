@@ -253,8 +253,7 @@ kernel: usbcore: registered new interface driver rtl8xxxu
 | amd64, Edimax  | DLink   | Linux v5.12, 8192cu        | 35 Mbits/s; 10%                          | 3m, direct line of sight  | performance is stable high                      | https://mega.nz/folder/KIsmCBRR#rN9X9sXrdLo7It8qj8PQgQ  |
 | amd64, Edimax  | DLink   | Linux v5.12, 8192cu        | 20 Mbits/s; 11%                          | 6m, direct line of sight  | performance and retry are better than rtl8xxxu  | https://mega.nz/folder/2Q1WBJqS#6dU1pQ9OXbveETqlfQcZ2w  |
 
-==== Driver Comparisation ====
-
+=== Observations ===
 | **Criterion**                       | **rtl8xxxu**                                          | **rtl8192cu**   | **8192cu**                 | **Comment**                                                                                                    |
 | wlan.frag != 1                      | rarely                                                | often           | never                      | Maybe a side-effect of failed transfers. Never sent by AP.                                                     |
 | Block ACK Initiator                 | STA, then AP                                          | AP, then AP     | AP, then STA               |                                                                                                                |
@@ -262,3 +261,278 @@ kernel: usbcore: registered new interface driver rtl8xxxu
 | A-MSDU                              | Permitted when ADDBA initiated by STA, not when by AP | alway permitted | never permitted            |                                                                                                                |
 | Block ACK Timeout [1024 us]         | 0x0 (disabled)                                        | 0x1388          | 0x1388                     |                                                                                                                |
 | wlan.qos.amsdupresent == 1          | some                                                  |                 |                            |                                                                                                                |
+
+==== Register Comparison ====
+
+=== Reto ===
+
+  * Issue: When using the rtl8xxxu driver, the communication has a much higher retransmission rate (20%) than with the other drivers (8192cu: < 5%, rtl8192cu: < 7.5%). Mainly, because the DUT fails to send ACKs in time, causing the AP to resend many frames. Issue can be seen best in the RX traces (iperf3 receiving data from the AP).
+  * Traces: https://files.reto-schneider.ch/diesunddas/rtl8xxxu/2021-11-09-Testing/t420-2021-11-09T05:20:20+01:00/
+
+
+== RF Register ==
+| **Driver**   | **Source**   | **Filename**                                                                                                        |
+| 8192cu       | debugfs      | 8192cu-gardena-rs-dump-registers-v0.ko-74:da:38:0e:49:7d-rx-rf_reg_dump-05-iperf-done                               |
+| rtl8192cu    | debugfs      | rtl8192cu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-rf_reg_dump-05-iperf-done |
+| rtl8xxxu     | debugfs      | rtl8xxxu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-rf_reg_dump-05-iperf-done  |
+
+
+| **Address**   | **Mask**   | **Name**       | **#0: 8192cu**   | **#1: rtl8192cu**   | **#2: rtl8xxxu**   | **Hint**   |
+| 0x0000        | 0xFF       | AC             | 0xB2             | 0x36                | 0x16               |            |
+|               | 0x4        | ACM_HW_CTRL_VI | 0x0              | 0x1                 | 0x1                |            |
+| 0x0001        | 0xFF       | IQADJ_G1       | 0x2C             | 0x2E                | 0x0F               |            |
+| 0x0002        | 0xFF       | IQADJ_G2       | 0x08             | 0x08                | 0x03               |            |
+| 0x001C        | 0xFF       | RX_BB2         | 0x18             | 0x18                | 0x78               |            |
+| 0x0024        | 0xFF       | T_METER        | 0x10             | 0x10                | 0x0F               |            |
+| 0x0042        | 0xFF       | T_METER_8723B  | 0x03             | 0x08                | 0x0F               |            |
+| 0x0043        | 0xFFFFFFFF | UNKNOWN_43     | 0x0210E700       | 0x0210E700          | 0x0FFF0100         |            |
+| 0x0055        | 0xFF       | UNKNOWN_55     | 0x94             | 0x94                | 0xFF               |            |
+| 0x0056        | 0xFFFF     | UNKNOWN_56     | 0x000D           | 0x000D              | 0x000F             |            |
+| 0x00B0        | 0xFFFFFFFF | S0S1           | 0x000AAAAA       | 0x000AAAAA          | 0x000FFF01         |            |
+| 0x00DF        | 0xFFFFFFFF | UNKNOWN_DF     | 0x00B61400       | 0x00B61400          | 0x0FFF0100         |            |
+| 0x00ED        | 0xFFFF     | UNKNOWN_ED     | 0x0000           | 0x0000              | 0x0FFF             |            |
+| 0x00EF        | 0xFFFFFFFF | WE_LUT         | 0x0AAAAA00       | 0x0AAAAA00          | 0x0FFF0100         |            |
+| 0x003F        | 0xFFFFFF   | unknown        | 0x0C7200         | 0x2E3600            | 0xFF0100           |            |
+| 0x0047        | 0xFFFFFFFF | unknown        | 0x0C840000       | 0x0C840000          | 0x0FFF0100         |            |
+| 0x004B        | 0xFFFFFFFF | unknown        | 0x08992E00       | 0x08992E00          | 0x0FFF0100         |            |
+| 0x004F        | 0xFFFFFFFF | unknown        | 0x09000F00       | 0x09000F00          | 0x0FFF0100         |            |
+| 0x0053        | 0xFFFF     | unknown        | 0x4400           | 0x4400              | 0x0100             |            |
+| 0x0058        | 0xFFFFFFFF | unknown        | 0x0000740C       | 0x0000740C          | 0x000FFF01         |            |
+| 0x005C        | 0xFFFFFFFF | unknown        | 0x000FC378       | 0x000FC318          | 0x000FFF01         |            |
+| 0x0060        | 0xFFFFFFFF | unknown        | 0x0000B614       | 0x0000B614          | 0x000FFF01         |            |
+| 0x0064        | 0xFFFFFFFF | unknown        | 0x00000010       | 0x00000010          | 0x000FFF01         |            |
+| 0x0068        | 0xFFFFFFFF | unknown        | 0x000577F0       | 0x000577F0          | 0x000FFF01         |            |
+| 0x006C        | 0xFFFFFFFF | unknown        | 0x0000001A       | 0x0000001A          | 0x000FFF01         |            |
+| 0x0070        | 0xFFFFFFFF | unknown        | 0x000AAAAA       | 0x000AAAAA          | 0x000FFF01         |            |
+| 0x0080        | 0xFFFFFFFF | unknown        | 0x00082CB2       | 0x00082E36          | 0x000FFF01         |            |
+| 0x0084        | 0xFFFFFFFF | unknown        | 0x000210E7       | 0x000210E7          | 0x000FFF01         |            |
+| 0x0088        | 0xFFFFFFFF | unknown        | 0x000C8400       | 0x000C8400          | 0x000FFF01         |            |
+| 0x008C        | 0xFFFFFFFF | unknown        | 0x0008992E       | 0x0008992E          | 0x000FFF01         |            |
+| 0x0090        | 0xFFFFFFFF | unknown        | 0x0009000F       | 0x0009000F          | 0x000FFF01         |            |
+| 0x0094        | 0xFFFFFFFF | unknown        | 0x000D9444       | 0x000D9444          | 0x000FFF01         |            |
+| 0x0098        | 0xFFFFFFFF | unknown        | 0x0000740C       | 0x0000740C          | 0x000FFF01         |            |
+| 0x009C        | 0xFFFFFFFF | unknown        | 0x000FC318       | 0x000FC318          | 0x000FFF01         |            |
+| 0x00A0        | 0xFFFFFFFF | unknown        | 0x0000B614       | 0x0000B614          | 0x000FFF01         |            |
+| 0x00A4        | 0xFFFFFFFF | unknown        | 0x00000010       | 0x00000010          | 0x000FFF01         |            |
+| 0x00A8        | 0xFFFFFFFF | unknown        | 0x000577F0       | 0x000577F0          | 0x000FFF01         |            |
+| 0x00AC        | 0xFFFFFFFF | unknown        | 0x0000001A       | 0x0000001A          | 0x000FFF01         |            |
+| 0x00C0        | 0xFFFFFFFF | unknown        | 0x00082CB2       | 0x00082E36          | 0x000FFF01         |            |
+| 0x00C4        | 0xFFFFFFFF | unknown        | 0x000210E7       | 0x000210E7          | 0x000FFF01         |            |
+| 0x00C8        | 0xFFFFFFFF | unknown        | 0x000C8400       | 0x000C8400          | 0x000FFF01         |            |
+| 0x00CC        | 0xFFFFFFFF | unknown        | 0x0008992E       | 0x0008992E          | 0x000FFF01         |            |
+| 0x00D0        | 0xFFFFFFFF | unknown        | 0x0009000F       | 0x0009000F          | 0x000FFF01         |            |
+| 0x00D4        | 0xFFFFFFFF | unknown        | 0x000D9444       | 0x000D9444          | 0x000FFF01         |            |
+| 0x00D8        | 0xFFFFFFFF | unknown        | 0x0000740C       | 0x0000740C          | 0x000FFF01         |            |
+| 0x00DC        | 0xFFFFFF   | unknown        | 0x0FC318         | 0x0FC318            | 0x0FFF01           |            |
+| 0x00E3        | 0xFFFFFFFF | unknown        | 0x00001000       | 0x00001000          | 0x0FFF0100         |            |
+| 0x00E7        | 0xFFFFFFFF | unknown        | 0x0577F000       | 0x0577F000          | 0x0FFF0100         |            |
+| 0x00EB        | 0xFFFF     | unknown        | 0x1A00           | 0x1A00              | 0x0100             |            |
+
+== BB Register ==
+
+| **Driver**   | **Source**   | **Filename**                                                                                                        |
+| 8192cu       | debugfs      | 8192cu-gardena-rs-dump-registers-v0.ko-74:da:38:0e:49:7d-rx-bb_reg_dump-05-iperf-done                               |
+| rtl8192cu    | debugfs      | rtl8192cu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-bb_reg_dump-05-iperf-done |
+| rtl8xxxu     | debugfs      | rtl8xxxu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-bb_reg_dump-05-iperf-done  |
+
+
+| **Address**   | **Mask**   | **Name**                 | **#0: 8192cu**   | **#1: rtl8192cu**   | **#2: rtl8xxxu**   | **Hint**                        |
+| 0x0818        | 0xFFFFFFFF | FPGA0_POWER_SAVE         | 0x12200385       | 0x12200385          | 0x02200385         | Bit 28 never set by [rtl]8192cu |
+|               | 0x10000000 | FPGA0_POWER_SAVE_ENABLE  | 0x1              | 0x1                 | 0x0                |                                 |
+| 0x082C        | 0xFFFFFFFF | FPGA0_XB_HSSI_PARM2      | 0x8C000000       | 0x8C000000          | 0x00000000         | Ignore (RF B path)              |
+| 0x0830        | 0xFFFFFFFF | TX_AGC_B_RATE18_06       | 0x0A0C0F0F       | 0x03030303          | 0x0A0C0F0F         | Ignore (RF B path)              |
+| 0x0834        | 0xFFFFFFFF | TX_AGC_B_RATE54_24       | 0x04050708       | 0x03030303          | 0x04050708         | Ignore (RF B path)              |
+| 0x0838        | 0xFFFFFFFF | TX_AGC_B_CCK1_55_MCS32   | 0x00000000       | 0x00000000          | 0x3F3F3F00         | Ignore (RF B path)              |
+| 0x083C        | 0xFFFFFFFF | TX_AGC_B_MCS03_MCS00     | 0x0B0C0D0E       | 0x00000000          | 0x0B0C0D0E         | Ignore (RF B path)              |
+| 0x0840        | 0xFFFFFFFF | FPGA0_XA_LSSI_PARM       | 0x02400060       | 0x02400060          | 0x0180740C         |                                 |
+|               | 0xFF00000  | FPGA0_XA_LSSI_PARM_ADDR  | 0x24             | 0x24                | 0x18               |                                 |
+|               | 0xFFFFF    | FPGA0_XA_LSSI_PARM_DATA  | 0x60             | 0x60                | 0x740C             |                                 |
+| 0x0848        | 0xFFFFFFFF | TX_AGC_B_MCS07_MCS04     | 0x01030509       | 0x00000000          | 0x01030509         | Ignore (RF B path)              |
+| 0x084C        | 0xFFFFFFFF | TX_AGC_B_MCS11_MCS08     | 0x0B0C0D0E       | 0x00000000          | 0x0B0C0D0E         | Ignore (RF B path)              |
+| 0x085C        | 0xFFFFFFFF | FPGA0_XCD_SWITCH_CTRL    | 0x631B25A4       | 0x631B25A4          | 0x001B25A4         |                                 |
+| 0x0860        | 0xFFFFFFFF | FPGA0_XA_RF_INT_OE       | 0x66F60230       | 0x66F60230          | 0x66F60210         |                                 |
+| 0x0868        | 0xFFFFFFFF | TX_AGC_B_MCS15_MCS12     | 0x01030509       | 0x00000000          | 0x01030509         | Ignore (RF B path)              |
+| 0x086C        | 0xFFFFFFFF | TX_AGC_B_CCK11_A_CCK2_11 | 0x2B2B2200       | 0x2B2B2B00          | 0x2A2A2A3F         | Ignore (RF B path)              |
+| 0x0870        | 0xFFFF     | FPGA0_XA_RF_SW_CTRL      | 0x0700           | 0x0700              | 0x0760             |                                 |
+| 0x0874        | 0xFFFF     | FPGA0_XC_RF_SW_CTRL      | 0x8000           | 0x8000              | 0x4000             |                                 |
+| 0x0876        | 0xFFFF     | FPGA0_XD_RF_SW_CTRL      | 0x2208           | 0x2208              | 0x2200             |                                 |
+| 0x0878        | 0xFFFF     | FPGA0_XA_RF_PARM         | 0x0808           | 0x2808              | 0x0808             |                                 |
+| 0x08B8        | 0xFFFFFFFF | HSPI_XA_READBACK         | 0x00100010       | 0x00100010          | 0x001FFF01         |                                 |
+| 0x0B68        | 0xFFFFFFFF | CONFIG_ANT_A             | 0x80000000       | 0x00080000          | 0x80000000         |                                 |
+| 0x0C14        | 0xFFFFFFFF | OFDM0_XA_RX_IQ_IMBALANCE | 0x400004FE       | 0x400008FE          | 0x400008FE         |                                 |
+| 0x0C50        | 0xFFFFFFFF | OFDM0_XA_AGC_CORE1       | 0x69543435       | 0x6954341E          | 0x6954341E         |                                 |
+| 0x0C58        | 0xFFFFFFFF | OFDM0_XB_AGC_CORE1       | 0x69543435       | 0x6954341E          | 0x69543420         |                                 |
+| 0x0C70        | 0xFFFFFFFF | OFDM0_AGC_PARM1          | 0x2C7F0005       | 0x2C7F0005          | 0x2C7F000D         |                                 |
+| 0x0C90        | 0xFFFFFFFF | OFDM0_XC_TX_IQ_IMBALANCE | 0x00171D25       | 0x00161C24          | 0x00252323         |                                 |
+| 0x0E00        | 0xFFFFFFFF | TX_AGC_A_RATE18_06       | 0x36383B3B       | 0x2F2F2F2F          | 0x35373A3A         |                                 |
+| 0x0E04        | 0xFFFFFFFF | TX_AGC_A_RATE54_24       | 0x30313334       | 0x2F2F2F2F          | 0x2F303233         |                                 |
+| 0x0E08        | 0xFFFFFFFF | TX_AGC_A_CCK1_MCS32      | 0x03902B2A       | 0x03902B2A          | 0x03902A2A         |                                 |
+| 0x0E10        | 0xFFFFFFFF | TX_AGC_A_MCS03_MCS00     | 0x3738383A       | 0x2C2C2C2C          | 0x36373739         |                                 |
+| 0x0E14        | 0xFFFFFFFF | TX_AGC_A_MCS07_MCS04     | 0x2D2F3132       | 0x2C2C2C2C          | 0x2C2E3031         |                                 |
+| 0x0E18        | 0xFFFFFFFF | TX_AGC_A_MCS11_MCS08     | 0x3738393A       | 0x2C2C2C2C          | 0x36373839         |                                 |
+| 0x0E1C        | 0xFFFFFFFF | TX_AGC_A_MCS15_MCS12     | 0x2D2F3135       | 0x2C2C2C2C          | 0x2C2E3034         |                                 |
+| 0x0E30        | 0xFFFFFFFF | TX_IQK_TONE_A            | 0x01008C00       | 0x10008C1F          | 0x01008C00         |                                 |
+| 0x0E34        | 0xFFFFFFFF | RX_IQK_TONE_A            | 0x01008C00       | 0x10008C1F          | 0x01008C00         |                                 |
+| 0x0EA0        | 0xFFFFFFFF | RX_POWER_BEFORE_IQK_A    | 0x000561D4       | 0x00066A94          | 0x00057BA4         |                                 |
+| 0x0EA8        | 0xFFFFFFFF | RX_POWER_AFTER_IQK_A     | 0x00015694       | 0x0000CCF4          | 0x0000E634         |                                 |
+| 0x0EAC        | 0xFFFFFFFF | RX_POWER_AFTER_IQK_A_2   | 0x04013000       | 0x04023000          | 0x04023000         |                                 |
+| 0x08A8        | 0xFFFFFFFF | unknown                  | 0x00000010       | 0x00000010          | 0x0000000F         |                                 |
+| 0x08AC        | 0xFFFFFFFF | unknown                  | 0x00000020       | 0x00001AC0          | 0x00000500         |                                 |
+| 0x08EC        | 0xFFFFFFFF | unknown                  | 0x36383B3B       | 0x2F2F2F2F          | 0x35373A3A         |                                 |
+| 0x08F0        | 0xFFFFFFFF | unknown                  | 0x30313334       | 0x2F2F2F2F          | 0x2F303233         |                                 |
+| 0x08F4        | 0xFFFFFFFF | unknown                  | 0x00000006       | 0x00000007          | 0x0000000D         |                                 |
+| 0x08F8        | 0xFFFFFFFF | unknown                  | 0x000000D3       | 0x000000E9          | 0x000000E3         |                                 |
+| 0x09C0        | 0xFFFFFFFF | unknown                  | 0x00297F80       | 0x00234E97          | 0x00308A25         |                                 |
+| 0x0A08        | 0xFFFFFFFF | unknown                  | 0x8CCD8300       | 0x8CCD8300          | 0x8C838300         |                                 |
+| 0x0A2C        | 0xFFFFFFFF | unknown                  | 0x00D38000       | 0x00D38000          | 0x00D30000         |                                 |
+| 0x0A50        | 0xFFFFFFFF | unknown                  | 0x0504C708       | 0x0201ED07          | 0x490CC909         |                                 |
+| 0x0A54        | 0xFFFFFFFF | unknown                  | 0x08305200       | 0x10307600          | 0x10308E03         |                                 |
+| 0x0A5C        | 0xFFFFFFFF | unknown                  | 0x00000014       | 0x0000035F          | 0x00000200         |                                 |
+| 0x0A74        | 0xFFFFFFFF | unknown                  | 0x00003007       | 0x00003007          | 0x00000007         |                                 |
+| 0x0C84        | 0xFFFFFFFF | unknown                  | 0x50F60000       | 0x20F60000          | 0x20F60000         |                                 |
+| 0x0CF4        | 0xFFFFFFFF | unknown                  | 0x00250000       | 0x002C0000          | 0x002C0000         |                                 |
+| 0x0CF8        | 0xFFFFFFFF | unknown                  | 0x00000000       | 0x00000000          | 0x00000020         |                                 |
+| 0x0CFC        | 0xFFFFFFFF | unknown                  | 0x00000006       | 0x00000007          | 0x0000000D         |                                 |
+| 0x0DA0        | 0xFFFFFFFF | unknown                  | 0x0002016A       | 0x0010083C          | 0xB64DFFFF         |                                 |
+| 0x0DA4        | 0xFFFFFFFF | unknown                  | 0x00010001       | 0x00000015          | 0x0635B8BC         |                                 |
+| 0x0DA8        | 0xFFFFFFFF | unknown                  | 0x00000001       | 0x00000000          | 0x000005D9         |                                 |
+| 0x0DAC        | 0xFFFFFFFF | unknown                  | 0xFC7C0000       | 0xFD3C0000          | 0xF8000000         |                                 |
+| 0x0DB0        | 0xFFFFFFFF | unknown                  | 0xF6D60000       | 0xFD080000          | 0x0A200000         |                                 |
+| 0x0DB4        | 0xFFFFFFFF | unknown                  | 0xF6D6E000       | 0xFD08E000          | 0x0A200000         |                                 |
+| 0x0DB8        | 0xFFFFFFFF | unknown                  | 0x00600000       | 0x009F0000          | 0xFEFD0000         |                                 |
+| 0x0DBC        | 0xFFFFFFFF | unknown                  | 0x185C0000       | 0x14C40000          | 0x0B160000         |                                 |
+| 0x0DC4        | 0xFFFFFFFF | unknown                  | 0x03FA0000       | 0x03F10000          | 0x00030000         |                                 |
+| 0x0DC8        | 0xFFFFFFFF | unknown                  | 0x00000006       | 0x00000000          | 0x0000000C         |                                 |
+| 0x0DD0        | 0xFFFFFFFF | unknown                  | 0x0000000B       | 0x0000000B          | 0x00000009         |                                 |
+| 0x0DD4        | 0xFFFFFFFF | unknown                  | 0x00000007       | 0x00000009          | 0x00000006         |                                 |
+| 0x0DD8        | 0xFFFFFFFF | unknown                  | 0x00ED0B21       | 0x00FD0721          | 0x00DF0925         |                                 |
+| 0x0DDC        | 0xFFFFFFFF | unknown                  | 0x00002700       | 0x00002A00          | 0x00002700         |                                 |
+| 0x0DE0        | 0xFFFFFFFF | unknown                  | 0x16D60000       | 0x1D080000          | 0x0A200000         |                                 |
+| 0x0DE8        | 0xFFFFFFFF | unknown                  | 0x000288E9       | 0x0003192F          | 0x0000DFDC         |                                 |
+| 0x0DF4        | 0xFFFFFFFF | unknown                  | 0x78C10000       | 0x78410000          | 0x78C10000         |                                 |
+| 0x0E90        | 0xFFFFFFFF | unknown                  | 0x00A6CBA4       | 0x00A858E8          | 0x00A36EC4         |                                 |
+| 0x0E98        | 0xFFFFFFFF | unknown                  | 0x00000C68       | 0x000008B4          | 0x000005C4         |                                 |
+| 0x0F80        | 0xFFFFFFFF | unknown                  | 0x00000001       | 0x00000007          | 0x00000006         |                                 |
+| 0x0F84        | 0xFFFFFFFF | unknown                  | 0x00000004       | 0x0000002C          | 0x0000007B         |                                 |
+| 0x0F88        | 0xFFFFFFFF | unknown                  | 0x00000187       | 0x0000025C          | 0x00000363         |                                 |
+| 0x0F90        | 0xFFFFFFFF | unknown                  | 0x06ED0012       | 0x04C70010          | 0x04F3000A         |                                 |
+| 0x0F94        | 0xFFFFFFFF | unknown                  | 0x05470DA9       | 0x171A4708          | 0x310A09C8         |                                 |
+| 0x0FA0        | 0xFFFFFFFF | unknown                  | 0x06050000       | 0x0EEF0000          | 0x14DE0000         |                                 |
+| 0x0FA4        | 0xFFFFFFFF | unknown                  | 0x000201C9       | 0x0000530C          | 0x00001CD9         |                                 |
+| 0x0FA8        | 0xFFFFFFFF | unknown                  | 0x00011407       | 0x0000C407          | 0x00011407         |                                 |
+| 0x0FAC        | 0xFFFFFFFF | unknown                  | 0x0A00FC8E       | 0x0000A886          | 0x0A001C0E         |                                 |
+| 0x0FB0        | 0xFFFFFFFF | unknown                  | 0x0810040A       | 0x0810040A          | 0x08F0040A         |                                 |
+| 0x0FB4        | 0xFFFFFFFF | unknown                  | 0x000A5AC8       | 0x00005AC8          | 0x000AB351         |                                 |
+| 0x0FB8        | 0xFFFFFFFF | unknown                  | 0x0101BB86       | 0x00B98A49          | 0x00B58546         |                                 |
+
+== MAC Register ==
+
+| **Driver**   | **Source**   | **Filename**                                                                                                         |
+| 8192cu       | debugfs      | 8192cu-gardena-rs-dump-registers-v0.ko-74:da:38:0e:49:7d-rx-mac_reg_dump-05-iperf-done                               |
+| rtl8192cu    | debugfs      | rtl8192cu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-mac_reg_dump-05-iperf-done |
+| rtl8xxxu     | debugfs      | rtl8xxxu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-mac_reg_dump-05-iperf-done  |
+
+
+| **Address**   | **Mask**   | **Name**                 | **#0: 8192cu**   | **#1: rtl8192cu**   | **#2: rtl8xxxu**   | **Hint**                       |
+| 0x0000        | 0xFFFF     | SYS_ISO_CTRL             | 0x80F8           | 0x8000              | 0x80F8             |                                |
+|               | 0x20       | SYS_ISO_CTRL_ANALOG_IPS  | 0x1              | 0x0                 | 0x1                |                                |
+|               | 0x80       | SYS_ISO_CTRL_BIT_7       | 0x1              | 0x0                 | 0x1                |                                |
+| 0x0002        | 0xFFFF     | SYS_FUNC                 | 0xFC17           | 0xFC17              | 0xDC1F             |                                |
+|               | 0x8        | SYS_FUNC_UPLL            | 0x0              | 0x0                 | 0x1                |                                |
+|               | 0x2000     | SYS_FUNC_DIO_RF          | 0x1              | 0x1                 | 0x0                |                                |
+| 0x001C        | 0xFFFFFF   | RSV_CTRL                 | 0x1D3100         | 0x8E2100            | 0x3E3100           |                                |
+| 0x0021        | 0xFF       | LDOV12D_CTRL             | 0x55             | 0x25                | 0x25               |                                |
+| 0x0022        | 0xFF       | LDOHCI12_CTRL            | 0x0F             | 0x0F                | 0x57               |                                |
+| 0x0030        | 0xFFFFFFFF | EFUSE_CTRL               | 0x8021FAFF       | 0x8021FAFF          | 0x8020A7FF         |                                |
+| 0x0042        | 0xFF       | GPIO_IO_SEL              | 0x88             | 0x08                | 0x08               |                                |
+| 0x0043        | 0xFF       | MAC_PINMUX_CFG           | 0x07             | 0x00                | 0x00               |                                |
+| 0x0044        | 0xFFFFFFFF | GPIO_PIN_CTRL            | 0x00FB0000       | 0x07880000          | 0x00000000         |                                |
+| 0x004C        | 0xFF       | LEDCFG0                  | 0x08             | 0x80                | 0x82               |                                |
+| 0x004D        | 0xFF       | LEDCFG1                  | 0x00             | 0x80                | 0x82               |                                |
+| 0x0080        | 0xFFFFFFFF | MCU_FW_DL                | 0x0C0300C6       | 0x000300C6          | 0x000300C6         |                                |
+| 0x0088        | 0xFFFF     | HMBOX_EXT_0              | 0xFFFF           | 0xF005              | 0xFFFF             |                                |
+| 0x008A        | 0xFFFF     | HMBOX_EXT_1              | 0xF005           | 0xF005              | 0x0000             |                                |
+| 0x00F4        | 0xFFFFFFFF | GPIO_OUTSTS              | 0x000007FB       | 0x00000088          | 0x00000000         |                                |
+| 0x010C        | 0xFFFFFFFF | TRXDMA_CTRL              | 0x0000FAF4       | 0x0000FAF0          | 0x0000FAF0         |                                |
+|               | 0x4        | TRXDMA_CTRL_RXDMA_AGG_EN | 0x1              | 0x0                 | 0x0                |                                |
+| 0x011C        | 0xFFFFFFFF | RXFF_PTR                 | 0x03000300       | 0x03000300          | 0x13801380         |                                |
+| 0x0124        | 0xFFFFFFFF | HISR                     | 0x0004A600       | 0x0004A600          | 0x00043200         |                                |
+| 0x0128        | 0xFFFFFFFF | HIMRE                    | 0x00000000       | 0x00FFFFFF          | 0x00000000         |                                |
+| 0x012C        | 0xFFFFFF   | HISRE                    | 0x003200         | 0x000000            | 0x000000           |                                |
+| 0x0134        | 0xFFFFFFFF | FWISR                    | 0x020001C8       | 0x020001C8          | 0x02000108         |                                |
+| 0x0154        | 0xFFFFFFFF | TC1_CTRL                 | 0x00000500       | 0x00000000          | 0x00000000         |                                |
+| 0x0158        | 0xFFFFFFFF | TC2_CTRL                 | 0x05001400       | 0x00000000          | 0x00000000         |                                |
+| 0x01A0        | 0xFFFFFFFF | C2HEVT_MSG_NORMAL        | 0x03000083       | 0x00000000          | 0x00000000         |                                |
+| 0x01B8        | 0xFFFFFFFF | C2HEVT_MSG_TEST          | 0x00000004       | 0x00000000          | 0x00000000         |                                |
+| 0x01C4        | 0xFFFFFFFF | MCUTST_2                 | 0x000050C7       | 0x000050C6          | 0x000050C7         |                                |
+| 0x01C8        | 0xFFFFFFFF | FMTHR                    | 0x80000000       | 0x00000000          | 0x00000000         |                                |
+| 0x01D0        | 0xFFFFFFFF | HMBOX_0                  | 0x35000005       | 0xA0000F86          | 0xA0000F86         |                                |
+| 0x01D4        | 0xFFFFFFFF | HMBOX_1                  | 0x35000005       | 0xA0000F86          | 0x00000102         |                                |
+| 0x01D8        | 0xFFFFFFFF | HMBOX_2                  | 0x36000005       | 0x03020403          | 0xA0000F86         |                                |
+| 0x01DC        | 0xFFFFFFFF | HMBOX_3                  | 0x36000005       | 0x00000102          | 0x00000000         |                                |
+| 0x01E8        | 0xFFFFFFFF | BB_ACCEESS_CTRL          | 0x0000F840       | 0x00000000          | 0x00000000         |                                |
+| 0x01EC        | 0xFFFFFFFF | BB_ACCESS_DATA           | 0x00032D95       | 0x00000000          | 0x00000000         |                                |
+| 0x0200        | 0xFFFFFFFF | RQPN                     | 0x00EA000C       | 0x00E70009          | 0x00E9000C         |                                |
+| 0x0204        | 0xFFFFFFFF | FIFOPAGE                 | 0x00EA000C       | 0x00E70009          | 0x00E9000C         |                                |
+| 0x0208        | 0xFFFFFFFF | TDECTRL                  | 0x9201F960       | 0x8C00F910          | 0xC400F910         |                                |
+| 0x020C        | 0xFFFFFFFF | TXDMA_OFFSET_CHK         | 0x00FD0320       | 0x00FD0000          | 0x00FD0320         |                                |
+| 0x0214        | 0xFFFFFFFF | RQPN_NPQ                 | 0x00000202       | 0x00000808          | 0x00000202         |                                |
+| 0x0280        | 0xFFFFFFFF | RXDMA_AGG_PG_TH          | 0x00000030       | 0x00000000          | 0x00000000         |                                |
+| 0x0400        | 0xFFFFFFFF | VOQ_INFO                 | 0x000000FF       | 0x000000FF          | 0xFF0000FF         |                                |
+| 0x041C        | 0xFFFFFFFF | CPU_MGQ_INFORMATION      | 0x000000FC       | 0x000000F9          | 0x000000F9         |                                |
+| 0x0420        | 0xFFFFFF   | FWHW_TXQ_CTRL            | 0x713F80         | 0x313F80            | 0x313F80           |                                |
+| 0x0425        | 0xFF       | TXPKTBUF_MGQ_BDNY        | 0xFC             | 0xF9                | 0xF9               |                                |
+| 0x0427        | 0xFF       | MULTI_BCNQ_OFFSET        | 0x91             | 0x8B                | 0xC3               |                                |
+| 0x0428        | 0xFFFF     | SPEC_SIFS                | 0x100A           | 0x0A10              | 0x100A             | Endian error in rtl8192cu?     |
+|               | 0xFF       | SPEC_SIFS_CCK            | 0xA              | 0x10                | 0xA                |                                |
+|               | 0xFF00     | SPEC_SIFS_OFDM           | 0x10             | 0xA                 | 0x10               |                                |
+| 0x042A        | 0xFFFF     | RETRY_LIMIT              | 0x3030           | 0x3030              | 0x0704             | rtl8xxxu: Adjusted by mac80211 |
+|               | 0x3F       | RETRY_LIMIT_LONG         | 0x30             | 0x30                | 0x4                |                                |
+|               | 0x3F00     | RETRY_LIMIT_SHORT        | 0x30             | 0x30                | 0x7                |                                |
+| 0x0430        | 0xFFFFFFFF | DARFRC                   | 0x00000000       | 0x01000000          | 0x00000000         |                                |
+| 0x0438        | 0xFFFFFFFF | RARFRC                   | 0x04030201       | 0x01000000          | 0x04030201         |                                |
+| 0x0440        | 0xFFFFFFFF | RESPONSE_RATE_SET        | 0x0000015F       | 0x0080015D          | 0x0080015F         |                                |
+| 0x0450        | 0xFFFFFFFF | ARFR3                    | 0x0000FFFD       | 0x0FFFFFFF          | 0x0FFFFFFF         |                                |
+| 0x045C        | 0xFF       | AMPDU_MIN_SPACE          | 0x07             | 0x07                | 0x05               |                                |
+| 0x0460        | 0xFFFFFF   | FAST_EDCA_CTRL           | 0x086666         | 0x086666            | 0x080000           |                                |
+| 0x0480        | 0xFFFFFF   | INIRTS_RATE_SEL          | 0x0C0A08         | 0x0C0A0A            | 0x0C0A04           |                                |
+| 0x04A4        | 0xFFFFFFFF | POWER_STATUS             | 0x00000001       | 0x00000001          | 0x00000000         |                                |
+| 0x04C0        | 0xFFFF     | PKT_VO_VI_LIFE_TIME      | 0x0400           | 0x1000              | 0x1000             |                                |
+| 0x04C2        | 0xFFFF     | PKT_BE_BK_LIFE_TIME      | 0x0400           | 0x1000              | 0x1000             |                                |
+| 0x04CA        | 0xFF       | MAX_AGGR_NUM             | 0x0A             | 0x08                | 0x0A               |                                |
+| 0x04CB        | 0xFF       | RTS_MAX_AGGR_NUM         | 0x0C             | 0x07                | 0x0C               |                                |
+| 0x04CF        | 0xFF       | RA_TRY_RATE_AGG_LMT      | 0x02             | 0x00                | 0x02               |                                |
+| 0x04DC        | 0xFFFF     | NQOS_SEQ                 | 0x003C           | 0x0000              | 0x0000             |                                |
+| 0x0500        | 0xFFFFFFFF | EDCA_VO_PARAM            | 0x002F3222       | 0x002F7302          | 0x002F3202         |                                |
+| 0x0504        | 0xFFFFFFFF | EDCA_VI_PARAM            | 0x005E4322       | 0x005EF702          | 0x005E4302         |                                |
+| 0x0508        | 0xFFFFFFFF | EDCA_BE_PARAM            | 0x005EA42B       | 0x005EA42B          | 0x0000A403         |                                |
+| 0x050C        | 0xFFFFFFFF | EDCA_BK_PARAM            | 0x0000A44F       | 0x0000FF07          | 0x0000A407         |                                |
+| 0x0514        | 0xFFFF     | SIFS_CCK                 | 0x100A           | 0x0A0A              | 0x0E0A             |                                |
+| 0x0516        | 0xFFFF     | SIFS_OFDM                | 0x100A           | 0x0A0A              | 0x0E0A             |                                |
+| 0x0550        | 0xFF       | BEACON_CTRL              | 0x08             | 0x08                | 0x09               |                                |
+| 0x0551        | 0xFF       | BEACON_CTRL_1            | 0x18             | 0x10                | 0x10               |                                |
+| 0x0558        | 0xFF       | DRIVER_EARLY_INT         | 0x03             | 0x05                | 0x05               |                                |
+| 0x0560        | 0xFFFFFFFF | TSFTR                    | 0x1CB1C31E       | 0x168A306C          | 0x0FFFBC85         | Ignore (Timer)                 |
+| 0x0568        | 0xFFFFFFFF | TSFTR1                   | 0x0193582E       | 0x023BEA8D          | 0x02D23588         | Ignore (Timer)                 |
+| 0x0608        | 0xFFFFFFFF | RCR                      | 0x700060CE       | 0xF00069CE          | 0x700060CE         |                                |
+|               | 0x100      | RCR_ACCEPT_CRC32         | 0x0              | 0x1                 | 0x0                |                                |
+|               | 0x800      | RCR_ACCEPT_DATA_FRAME    | 0x0              | 0x1                 | 0x0                |                                |
+|               | 0x80000000 | RCR_APPEND_FCS           | 0x0              | 0x1                 | 0x0                |                                |
+| 0x063A        | 0xFFFF     | MAC_SPEC_SIFS            | 0x100A           | 0x0A0A              | 0x100A             |                                |
+| 0x063C        | 0xFFFF     | R2T_SIFS                 | 0x0808           | 0x0A08              | 0x0808             |                                |
+| 0x063E        | 0xFFFF     | T2T_SIFS                 | 0x0A0A           | 0x0A0C              | 0x0A0A             |                                |
+| 0x0652        | 0xFFFF     | NAV_UPPER                | 0x0000           | 0x0020              | 0x00EB             |                                |
+| 0x0664        | 0xFFFFFFFF | RXERR_RPT                | 0xA0000000       | 0x00004708          | 0x000009C8         |                                |
+| 0x0670        | 0xFFFFFFFF | CAM_CMD                  | 0x00010028       | 0x00010008          | 0x00010008         |                                |
+| 0x0674        | 0xFFFFFFFF | CAM_WRITE                | 0xF5248051       | 0xFFFF8011          | 0xFFFF8011         |                                |
+| 0x067C        | 0xFFFFFFFF | CAM_DEBUG                | 0x0000C005       | 0x00000000          | 0x00000000         |                                |
+| 0x0680        | 0xFFFFFFFF | SECURITY_CFG             | 0x0000010C       | 0x000000CC          | 0x000000CF         |                                |
+| 0x0692        | 0xFFFF     | PS_RX_INFO               | 0x320E           | 0x321F              | 0x320F             |                                |
+| 0x06A0        | 0xFFFF     | RXFLTMAP0                | 0x0000           | 0xFFFF              | 0xFFFF             |                                |
+| 0x06A8        | 0xFFFFFFFF | BCN_PSR_RPT              | 0x00032001       | 0x00000001          | 0x00000001         |                                |
+| 0x013C        | 0xFFFFFFFF | unknown                  | 0x00002600       | 0x00000600          | 0x00000600         |                                |
+| 0x01A8        | 0xFFFFFFFF | unknown                  | 0x0000D001       | 0x00000000          | 0x00000000         |                                |
+| 0x0434        | 0xFFFFFFFF | unknown                  | 0x10080404       | 0x07060504          | 0x10080404         |                                |
+| 0x043C        | 0xFFFFFFFF | unknown                  | 0x08070605       | 0x07060504          | 0x08070605         |                                |
+| 0x04E8        | 0xFFFFFFFF | unknown                  | 0x00000000       | 0x00000000          | 0x00000379         |                                |
+| 0x06B8        | 0xFFFFFFFF | unknown                  | 0x00000000       | 0x00010000          | 0x00000000         |                                |
