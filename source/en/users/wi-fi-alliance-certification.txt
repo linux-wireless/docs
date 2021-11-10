@@ -268,6 +268,7 @@ kernel: usbcore: registered new interface driver rtl8xxxu
 
   * Issue: When using the rtl8xxxu driver, the communication has a much higher retransmission rate (20%) than with the other drivers (8192cu: < 5%, rtl8192cu: < 7.5%). Mainly, because the DUT fails to send ACKs in time, causing the AP to resend many frames. Issue can be seen best in the RX traces (iperf3 receiving data from the AP).
   * Traces: https://files.reto-schneider.ch/diesunddas/rtl8xxxu/2021-11-09-Testing/t420-2021-11-09T05:20:20+01:00/
+  * Please note: Only differentiating registers and their values are shown. Whenever additional information about bits/bitmasks is available, those are printed too.
 
 
 == RF Register ==
