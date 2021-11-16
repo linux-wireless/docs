@@ -10,7 +10,7 @@
 
 ===== Features =====
     * Station (client)
-    * AP mode on 2.4GHz (on devices driven by iwlmvm)
+    * AP mode on 2.4GHz (on devices driven by iwlmvm, note no 5GHz AP support [[https://bugzilla.kernel.org/show_bug.cgi?id=206469#c2|due to LAR]])
     * P2P and multi-role (on devices driven by iwlmvm)
     * Monitor (sniffer) - see [[en:users:drivers:iwlwifi#about_the_monitorsniffer_mode|note]]
     * IBSS (Ad-Hoc)
