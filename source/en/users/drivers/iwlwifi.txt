@@ -17,6 +17,7 @@
 ===== Supported Devices =====
 The following devices are supported (since kernel version):
   * Wi-Fi 6E products
+      * Intel® Wi-Fi 6E AX211 (5.14)
       * [[https://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wi-fi-6e-ax210-product-brief.pdf|Intel® Wi-Fi 6E AX210]] (5.10)
   * Wi-Fi 6 products
       * [[https://www.intel.com/content/dam/www/public/us/en/documents/product-briefs/wi-fi-6-ax200-module-brief.pdf|Intel® Wi-Fi 6 AX200]] (5.1)
