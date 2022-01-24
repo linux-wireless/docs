@@ -1,6 +1,6 @@
 ===== About ath11k =====
 
-ath11k is a Linux driver for Qualcomm [[https://en.wikipedia.org/wiki/IEEE_802.11ax|IEEE 802.11ax]] devices, supporting both AHB bus in SoC type devices and PCI. ath11k uses mac80211.
+ath11k is a Linux driver for Qualcomm [[https://en.wikipedia.org/wiki/IEEE_802.11ax|IEEE 802.11ax]] devices, supporting both AHB bus in SoC type devices and PCI. ath11k uses mac80211. It was first included in Linux v5.6 released March 2020.
 
 ===== Subpages =====
 
