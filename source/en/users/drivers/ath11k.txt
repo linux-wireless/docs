@@ -19,5 +19,5 @@ ath11k is a driver for Qualcomm [[https://en.wikipedia.org/wiki/IEEE_802.11ax|IE
   * WCN6855 hw2.1 (v5.17)
 ===== Known bugs/limitations =====
 
-  * QCA6390: firmware has problems accessing host memory below 32 MB ([[https://bugzilla.kernel.org/show_bug.cgi?id=210923|bug #210923]])
-  * QCA6390: As of Jan 2021 requires 32 MSI interrupts, make sure VT-d is enabled or use patchset [[https://patchwork.kernel.org/project/linux-wireless/list/?series=405591&state=*&order=date|ath11k: support one MSI vector]]
+  * QCA6390: firmware WLAN.HST.1.0.1-01740-QCAHSTSWPLZ_V2_TO_X86-1 and older have problems accessing host memory below 32 MB ([[https://bugzilla.kernel.org/show_bug.cgi?id=210923|bug #210923]])
+  * QCA6390: v5.16 and older require 32 MSI interrupts, make sure VT-d is enabled or use patchset [[https://patchwork.kernel.org/project/linux-wireless/list/?series=570089&state=*&order=date|ath11k: support one MSI vector]]
