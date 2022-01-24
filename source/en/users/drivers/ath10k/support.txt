@@ -16,6 +16,4 @@ http://lists.infradead.org/mailman/listinfo/ath10k
 
 Archive for the mailing list:
 
-http://lists.infradead.org/pipermail/ath10k/
-
-
+https://lore.kernel.org/ath10k/
