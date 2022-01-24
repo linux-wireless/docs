@@ -14,7 +14,9 @@ ath11k is a driver for Qualcomm [[https://en.wikipedia.org/wiki/IEEE_802.11ax|IE
   * IPQ8074 hw2.0 (v5.6)
   * IPQ6018 hw1.0 (v5.10)
   * QCA6390 hw2.0 (v5.10)
-
+  * QCN9074 hw1.0 (v5.14)
+  * WCN6855 hw2.0 (v5.17)
+  * WCN6855 hw2.1 (v5.17)
 ===== Known bugs/limitations =====
 
   * QCA6390: firmware has problems accessing host memory below 32 MB ([[https://bugzilla.kernel.org/show_bug.cgi?id=210923|bug #210923]])
