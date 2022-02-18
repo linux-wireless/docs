@@ -22,7 +22,7 @@ Send mac80211, cfg80211 and mac80211_hwsim patches as follows:
 <code>To: Johannes Berg <johannes@sipsolutions.net>
 CC: linux-wireless@vger.kernel.org, Other Developers</code>
 
-For wireless-drivers patches (except mac80211_hwsim) send patches as:
+For wireless drivers patches (except mac80211_hwsim) send patches as:
 
 <code>To: linux-wireless@vger.kernel.org
 Cc: Driver maintainers, Other Developers</code>
