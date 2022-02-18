@@ -125,10 +125,10 @@ If you want to make it clear to the maintainer that the patch should NOT go to -
 
 Alternatively you can specify the exact tree you are targetting by adding the name of the git tree inside PATCH brackets:
 
-<code>[PATCH mac80211] mac80211: fix foo
-[PATCH mac80211-next] mac80211: implement very-cool-feature
-[PATCH wireless-drivers] ath10k: fix foo
-[PATCH wireless-drivers-next] ath10k: implement awesome-feature
+<code>[PATCH wireless] mac80211: fix foo
+[PATCH wireless-next] mac80211: implement very-cool-feature
+[PATCH wireless] ath10k: fix foo
+[PATCH wireless-next] ath10k: implement awesome-feature
 </code>
 
 
