@@ -1,9 +1,4 @@
-
-
-===== Realtek 802.11n and 802.11ac drivers =====
-
- 
-
+===== Realtek 802.11n, 802.11ac and 802.11ax drivers =====
 
 ===== mac80211 based =====
   * **rtl8192ce** is a PCI-E driver for RTL8192CE/RTL8188CE devices. 
