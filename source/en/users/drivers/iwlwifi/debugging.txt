@@ -41,7 +41,7 @@ Another (more powerful) way to debug iwlwifi is to use tracing:
 We will typically ask for more switches: 
 
 <code>sudo trace-cmd record -e iwlwifi -e mac80211 -e cfg80211 -e iwlwifi_msg</code>
-This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/net/wireless/intel/iwlwifi/Kconfig#n139|CONFIG_IWLWIFI_TRACING]] must be set.
+This records all the data that goes from and to the firmware. The output is a file: trace.dat which you can compress prior to sending. To enable tracing, [[https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/net/wireless/intel/iwlwifi/Kconfig#n139|CONFIG_IWLWIFI_DEVICE_TRACING]] must be set.
 
 **//Note: you must not remove the iwlwifi kernel module while tracing is running. You need to stop the tracing first!//**
 
