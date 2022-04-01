@@ -329,6 +329,13 @@ Example:
 
   Fixes: c742e623e941 ("mwifiex: sdio card reset enhancement")
 
+Here's how one can configure git to provide the fixes tag in correct format:
+
+  $ git config --global --add alias.fixes 'show -q --format=fixes'
+  $ git config --global --add pretty.fixes 'Fixes: %h ("%s")'
+  $ git config --global --add core.abbrev 12
+  $ git fixes ba9177fcef21
+  Fixes: ba9177fcef21 ("ath11k: Add basic WoW functionalities")
 ==== Commit reference is wrong ====
 
 The correct format for the commit references in commit logs is to start with the string "commit", followed by a space, followed 12 initial digits
