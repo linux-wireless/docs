@@ -12,7 +12,9 @@ We would like to ask Linux-wireless developers to subscribe to this page on the 
 
 ===== Prior to sending patches =====
 
-Please **DO NOT** PGP sign patches sent to //linux-wireless//. The reason is that signing patches will encapsulate them into MIME and thereby mangle the patch. Also, please note that we prefer patches inline rather than attachments. 
+Please **DO NOT** PGP sign patches sent to public lists. The reason is that signing patches will encapsulate them into MIME and thereby mangle the patch. Also, please note that we prefer patches inline rather than attachments. And no HTML mail, our lists reject those automatically.
+
+And carefully read [[http://www.infradead.org/~dwmw2/email.html|our email etiquette]], that saves everyone's time.
 
 
 ===== Who to address =====
