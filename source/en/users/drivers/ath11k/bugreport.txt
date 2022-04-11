@@ -23,7 +23,7 @@ To make it easier for the developers to help, include in the bug report at least
   * Output from: find /lib/firmware/ath11k/ -type f | xargs md5sum
   * Output from: dmesg | grep ath11k
 
-If you are unsure if your bug is same as already reported, it's better to open a new bug. Even if the symptoms are the same (eg. "kernel freeze"), the actual bugs causing the issue might be very different.
+//Always open a new bug//, do not comment to an existing bug. Even if the symptoms are the same (eg. "kernel freeze" or "firmware crash"), the actual bugs causing the issue might be very different. It's better that the developers do the analysis, and if it's really the same bug the devs will mark it as duplicate. If people report their issues to an existing bug reports, it will become a huge mess for the devs to maintain them.
 
 https://bugzilla.kernel.org is only for [[https://www.kernel.org/|upstream kernel.org releases]]. As distros (Ubuntu, Fedora etc) can modify ath11k on their own, and it's difficult to track what has changed, report bugs seen on distro kernels to the distro bug trackers. 
 
