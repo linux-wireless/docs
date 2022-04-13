@@ -9,7 +9,7 @@ ath11k bug reports can be filed to [[https://bugzilla.kernel.org/enter_bug.cgi?p
   * Component: network-wireless
   * Summary: start with string "ath11k:"
 
-See also [[https://bugzilla.kernel.org/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&list_id=1082403&query_format=advanced&short_desc=ath11k&short_desc_type=allwordssubstr|the list of open ath11k bugs]]. 
+Before filing see also the list of [[https://bugzilla.kernel.org/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&list_id=1082403&query_format=advanced&short_desc=ath11k&short_desc_type=allwordssubstr|open]] and [[https://bugzilla.kernel.org/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&bug_status=REJECTED&bug_status=DEFERRED&bug_status=NEEDINFO&bug_status=CLOSED&list_id=1111073&query_format=advanced&short_desc=ath11k&short_desc_type=allwordssubstr|closed]] ath11k bugs. 
 
 To make it easier for the developers to help, include in the bug report at least this information:
 
@@ -23,7 +23,7 @@ To make it easier for the developers to help, include in the bug report at least
   * Output from: find /lib/firmware/ath11k/ -type f | xargs md5sum
   * Output from: dmesg | grep ath11k
 
-//Always open a new bug//, do not comment to an existing bug. Even if the symptoms are the same (eg. "kernel freeze" or "firmware crash"), the actual bugs causing the issue might be very different. It's better that the developers do the analysis, and if it's really the same bug the devs will mark it as duplicate. If people report their issues to an existing bug reports, it will become a huge mess for the devs to maintain them.
+//Always open a new bug//, do not report your issue as a comment to an existing bug. Even if the symptoms are the same (eg. "kernel freeze" or "firmware crash"), the actual bugs causing the issue might be very different. It's better that the developers do the analysis, and if it's really the same bug the developers will mark the report as duplicate. If people report their issues to an existing bug reports, it will become a mess for the developers to maintain them.
 
 https://bugzilla.kernel.org is only for [[https://www.kernel.org/|upstream kernel.org releases]]. As distros (Ubuntu, Fedora etc) can modify ath11k on their own, and it's difficult to track what has changed, report bugs seen on distro kernels to the distro bug trackers. 
 
