@@ -364,7 +364,9 @@ Date:   Sun Mar 5 18:35:02 2017 +0200
 
 ==== Commit title is wrong ====
 
-The correc tformat for the commit title is name of driver, followed by a colon, followed by a space and then followed by the actual title. You can use ''git log'' to check older commits and see what prefix was used:
+The correct format for the commit title is name of driver, followed by a colon, followed by a space and then followed by the actual title. Also the title should be informative and unique, so something like "fix a bug" is not a good title.
+
+For examples uou can use ''git log'' to check older commits and see what prefix was used:
 
 <code>
 $ git log --oneline --follow --no-merges -20 drivers/net/wireless/marvell/mwifiex/11ac.c
