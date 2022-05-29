@@ -49,6 +49,8 @@ This records all the data that goes from and to the firmware. The output is a fi
 Your Intel device can act as a sniffer (which is also referred to as "monitor mode"). This means that it can record all the packets being sent over the air by all the other devices including your Access Point. When acting as a sniffer, your device cannot be connected to any Access Point or do anything else.
 The output of the air sniffing operation is a file with a pcap extension that can be parsed by the [[https://www.wireshark.org|Wireshark]] program.
 === How to get a sniffer capture with your Intel device ===
+To capture all A-MSDUs, you need to reload the iwlwifi driver with the ''amsdu_size=3'' module parameter.
+
 In order to put your device in monitor mode and get a sniffer capture, you first need to stop using it as a Wi-Fi client. To do so there are several options:
   * Disable Wi-Fi from the Network Manager GUI and re-enable manually with <code>rfkill unblock wifi </code> This may not work on all the distributions.
   * Disable the Network Manager and kill the wpa_supplicant<code>sudo service NetworkManager stop
