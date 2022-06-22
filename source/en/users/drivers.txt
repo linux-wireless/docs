@@ -72,6 +72,7 @@ See also:
 | [[en/users/Drivers/vt665x| ** vt6655]]                | VIA                    | yes             | yes       | yes         | no          | no             | A/B/G          | PCI                         |
 | [[en/users/Drivers/vt665x| ** vt6656]]                | VIA                    | yes             | yes       | yes         | no          | no             | A/B/G          | USB                         |
 | [[en/users/Drivers/wcn36xx|wcn36xx]]                  | Qualcomm Atheros       | yes             | yes       | yes         | yes         | yes            | A/B/G/N        |                             |
+| [[en/users/Drivers/wfx|wfx]]                          | Silicon Laboratories   | yes             | yes       | no          | no          | no             | A/B/G/N        | SPI / SDIO                  |
 | [[en/users/Drivers/wil6210|wil6210]]                  | Atheros                | yes             | yes       | no          | no          | yes            | AD             | PCI-E                       |
 | [[http://code.google.com/p/winbondport/|** winbond]]  | Winbond                | yes             | ?         | ?           | ?           | ?              | B              | USB                         |
 | [[en/users/Drivers/wilc|** wilc]]                     | Microchip              | yes             | yes       | no          | no          | no             | A/B/G/N        | SPI / SDIO                  |
