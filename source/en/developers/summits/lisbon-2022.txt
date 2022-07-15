@@ -1,0 +1,24 @@
+====== 2022 Wireless workshop in Lisbon ======
+
+===== Logistics =====
+
+Netdev 0x16 is in Lisbon:
+
+http://netdevconf.org/0x16/
+
+We're planning to hold the next wireless workshop there, but do note that is not yet confirmed!
+
+Formalities are as usual - open (discussion) session, you only have to be registered for netdev to attend (but you can add yourself below so we have an idea of who's coming to talk about what).
+
+
+===== Topics =====
+
+Add a proposed topic to the list below you would like to discuss in the workshop. Include your name so that we know who added it!
+
+  * Wi-Fi 7 (EHT) support (Kalle)
+    * EHT puncturing (Johannes)
+  * improved module parameters (Kalle)
+
+===== planning to attend =====
+
+  * Kalle Valo
