@@ -36,8 +36,8 @@ Send patches to the people and mailing lists below:
       * To: Felix Fietkau [[nbd@nbd.name]] 
       * To: Lorenzo Bianconi [[lorenzo@kernel.org]] 
       * To: Ryder Lee [[ryder.lee@mediatek.com]]
-      * To: Shayne Chen [[<shayne.chen@mediatek.com>]] 
-      * To: Sean Wang [[<sean.wang@mediatek.com>]]
+      * To: Shayne Chen [[shayne.chen@mediatek.com]] 
+      * To: Sean Wang [[sean.wang@mediatek.com]]
       * Cc: [[linux-mediatek@lists.infradead.org]] - https://lists.infradead.org/mailman/listinfo/linux-mediatek
       * Cc: [[linux-wireless@vger.kernel.org]] - http://vger.kernel.org/vger-lists.html#linux-wireless
 
