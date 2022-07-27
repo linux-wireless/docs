@@ -61,7 +61,9 @@ Different patchwork states and their meanings:
 If what you are sending is a patch you should use a subject as follows: 
 
 
-<code>[PATCH] subsystem: fix foo and optimize bar</code>
+<code>[PATCH] wifi: subsystem: fix foo and optimize bar</code>
+
+Starting from 2022 we prefix all wireless patch titles with "wifi: ".
 
 In case of wireless patches the subsystem can for example be ''mac80211'', ''cfg80211'' or the name of the driver, for example ''ath9k''. There's an easy way to check with git what prefix you should use:
 
@@ -82,13 +84,13 @@ $
 
 If your patch is just a proposal you can mark the patch as RFC in the subject: 
 
-<code>[RFC] subsystem: add a new way to do foo</code>
+<code>[RFC] wifi: subsystem: add a new way to do foo</code>
 
 If you need to make changes to the patch add a version number inside the brackets:
 
-<code>[PATCH v2] subsystem: fix foo and optimize bar
-[PATCH v3] subsystem: fix foo and optimize bar
-[PATCH v4] subsystem: fix foo and optimize bar</code>
+<code>[PATCH v2] wifi: subsystem: fix foo and optimize bar
+[PATCH v3] wifi: subsystem: fix foo and optimize bar
+[PATCH v4] wifi: subsystem: fix foo and optimize bar</code>
 
 **Always** increase the version number, no matter how small the change is. The maintainers focus on the latest version and ignore the older versions. Make sure that the maintainers don't need to guess what version he should take, that just creates problems.
 
@@ -119,18 +121,18 @@ Labeling patches with what tree the patch should go to helps maintainers to prio
 
 If you want to target your patch to a specific release (for example that the patch should go -rc release not -next) you can inform the maintainer by adding the release number inside the PATCH brackets:
  
-<code>[PATCH 4.20] subsystem: fix foo</code>
+<code>[PATCH 4.20] wifi: subsystem: fix foo</code>
 
 If you want to make it clear to the maintainer that the patch should NOT go to -rc release but to -next instead you can add "-next" to PATCH brackets:
 
-<code>[PATCH -next] subsystem: fix foo</code>
+<code>[PATCH -next] wifi: subsystem: fix foo</code>
 
 Alternatively you can specify the exact tree you are targetting by adding the name of the git tree inside PATCH brackets:
 
-<code>[PATCH wireless] mac80211: fix foo
-[PATCH wireless-next] mac80211: implement very-cool-feature
-[PATCH wireless] ath10k: fix foo
-[PATCH wireless-next] ath10k: implement awesome-feature
+<code>[PATCH wireless] wifi: mac80211: fix foo
+[PATCH wireless-next] wifi: mac80211: implement very-cool-feature
+[PATCH wireless] wifi: ath10k: fix foo
+[PATCH wireless-next] wifi: ath10k: implement awesome-feature
 </code>
 
 
@@ -141,12 +143,12 @@ You should only send a large patch if your patch does one specific task, or a fe
 If you are sending multiple patches which depend on each other you can use this format for the subjects: 
 
 
-<code>[PATCH 0/4] driver_name: introduce foo and bar
-[PATCH 1/4] driver_name: introduce get_foo_bars()
-[PATCH 2/4] driver_name: fix locking on bar_by_foo()
-[PATCH 3/4] driver_name: use foo when barring
-[PATCH 4/4] driver_name: optimize bar at init time</code>
-On the e-mail with subject, "[PATCH 0/4] driver_name: introduce foo and bar", you would give a brief overview of all the changes. No patch should be included in that e-mail, and as that e-mail will not end up in the change logs it should not contain anything that should be archived, only a rough overview over the purpose of the patch set, no in-depth description which should be in the changelog for each patch. 
+<code>[PATCH 0/4] wifi: driver_name: introduce foo and bar
+[PATCH 1/4] wifi: driver_name: introduce get_foo_bars()
+[PATCH 2/4] wifi: driver_name: fix locking on bar_by_foo()
+[PATCH 3/4] wifi: driver_name: use foo when barring
+[PATCH 4/4] wifi: driver_name: optimize bar at init time</code>
+On the e-mail with subject, "[PATCH 0/4] wifi: driver_name: introduce foo and bar", you would give a brief overview of all the changes. No patch should be included in that e-mail, and as that e-mail will not end up in the change logs it should not contain anything that should be archived, only a rough overview over the purpose of the patch set, no in-depth description which should be in the changelog for each patch. 
 
 
 ===== Format of patches =====
@@ -209,7 +211,7 @@ Below are a few examples of a patches. Only the header is provided for long patc
 <code>From: Michael Buesch
 To: John Linville
 Cc: linux-wireless, Bcm43xx-dev, Larry Finger
-Subject: [PATCH] b43: Remove the "radio hw enabled" message on startup.
+Subject: [PATCH] wifi: b43: Remove the "radio hw enabled" message on startup.
 
 This message is useless. Only report state changes.
 
@@ -247,7 +249,7 @@ Index: wireless-dev/drivers/net/wireless/b43/main.c
 <code>From: Luis R. Rodriguez
 To: John Linville
 Cc: linux-wireless, Michael Wu, Johannes Berg, Daniel Drake, Larry Finger
-Subject: [PATCH 3/5] Wireless: add IEEE-802.11 regualtory domain module
+Subject: [PATCH 3/5] wifi: add IEEE-802.11 regualtory domain module
 
 This adds the regulatory domain module. It provides a way to
 allocate and construct a regulatory domain based on the current
@@ -288,11 +290,11 @@ index 0000000..adf4de4
 
 If you send a new version of the patch or patchset you should always add a version number. The first version does not need to be shown but starting from second version the version number must be available:
 
-  [PATCH] ath10k: fix DMA allocation
-  [PATCH v2] ath10k: fix DMA allocation
-  [PATCH v3] ath10k: fix DMA allocation
+  [PATCH] wifi: ath10k: fix DMA allocation
+  [PATCH v2] wifi: ath10k: fix DMA allocation
+  [PATCH v3] wifi: ath10k: fix DMA allocation
   ...
-  [PATCH v11] ath10k: fix DMA allocation
+  [PATCH v11] wifi: ath10k: fix DMA allocation
 
 You can add the version with switch ''--subject-prefix'':
   
@@ -366,6 +368,8 @@ Date:   Sun Mar 5 18:35:02 2017 +0200
 
 The correct format for the commit title is name of driver, followed by a colon, followed by a space and then followed by the actual title. Also the title should be informative and unique, so something like "fix a bug" is not a good title.
 
+In 2022 we started using "wifi: " in front of all wireless patches.
+
 For examples uou can use ''git log'' to check older commits and see what prefix was used:
 
 <code>
@@ -425,8 +429,8 @@ If the patches are not yet ready to be applied by the maintainer, mark them as R
 
 Examples:
 
-  [PATCH RFC] ath11k: enable power save mode always
-  [PATCH RFT] ath10k: sdio: always use DMA transfers
+  [PATCH RFC] wifi: ath11k: enable power save mode always
+  [PATCH RFT] wifi: ath10k: sdio: always use DMA transfers
 
 
 ==== Use Co-developed-by when multiple authors  ====
