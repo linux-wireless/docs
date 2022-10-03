@@ -2,11 +2,13 @@
 
 ===== Logistics =====
 
-Netdev 0x16 is in Lisbon:
+Netdev 0x16 is in Lisbon, Portugal, from October 24th to 28th:
 
 http://netdevconf.org/0x16/
 
-We're planning to hold the next wireless workshop there, but do note that is not yet confirmed!
+We will have a wireless workshop there:
+
+https://netdevconf.info/0x16/session.html?Wireless-Workshop
 
 Formalities are as usual - open (discussion) session, you only have to be registered for netdev to attend (but you can add yourself below so we have an idea of who's coming to talk about what).
 
