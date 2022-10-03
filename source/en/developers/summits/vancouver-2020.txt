@@ -1,5 +1,7 @@
 ====== 2020 wireless workshop ======
 
+The workshop was cancelled due to COVID-19. Below is the planning what was done before the cancellation.
+
 ===== Logistics =====
 
 Netdev 0x14 is in Vancouver, BC, March 17th to 20th:
