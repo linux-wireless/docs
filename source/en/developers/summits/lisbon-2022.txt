@@ -20,6 +20,7 @@ Add a proposed topic to the list below you would like to discuss in the workshop
   * Wi-Fi 7 (EHT) support (Kalle)
     * EHT puncturing (Johannes)
   * improved module parameters (Kalle)
+  * keeping MAINTAINERS file up-to-date (Kalle)
 
 ===== planning to attend =====
 
