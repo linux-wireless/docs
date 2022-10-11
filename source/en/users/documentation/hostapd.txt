@@ -60,7 +60,7 @@ ex: hostapd-0.6.8.tar.gz would be referred to as hostapd-x.y.z.tar.gz
 //You can get the latest development version of hostapd from the git repository with: // 
 
 
-<code>git clone git://w1.fi/srv/git/hostap.git
+<code>git clone git://w1.fi/hostap.git
 cd hostap/hostapd</code>
 Or you can get a stable release (0.6.8 or later recommended) by downloading the tarball from [[http://w1.fi/hostapd/|http://w1.fi/hostapd/]] as follows: 
 
