@@ -72,6 +72,7 @@ Try to get the review discussion going forward on the mailing list.
 AP MLD can have multiple links (e.g., 2.4, 5, and 6 GHz) and non-AP MLDs/STAs may connect to different combinations of those affiliated links. On which links would the AP transmit multicast frames, e.g., when a STA that is associated only on the 6 GHz link has joined a specific multicast group; no point in sending multicast frames for that group on 2.4 and 5 GHz links. So how will we make WLAN stack know which links to use?
 
 Can we use/extend bridge layer IGMP snooping or do we need to make yet another copy of that for WLAN?
+
 Also related to multicast-to-unicast and some vxlan use cases. Challenging to get bridge code changes accepted if they touch the hot path.
 
 There are proposed patches that were not accepted. Maybe try again with the new use cases as justification and identify this as subport forwarding.
@@ -98,12 +99,16 @@ Some designs will do with firmware, e.g., when providing Ethernet frames to the 
 
 Some designs will do this in host software, e.g., in mac80211 with sequence number checks. Nothing has been contributed yet.
 
-AP RX of unicast address for each affiliated link (e.g., for RSN preauth) with one netdev
+== AP RX of unicast address for each affiliated link (e.g., for RSN preauth) with one netdev ==
 
 Need to make networking stack aware of multiple BSSIDs (one per affiliated link in AP MLD) with our model of a single netdev so that frames targeted to any of the BSSIDs get delivered.
+
 There probably already exists functionality to register an additional address. See dev_uc_add() (and the matching dev_uc_del() for cleanup). Someone needs to do some experimentation.
-BSS color change and CSA and radar detection
+
+== BSS color change and CSA and radar detection ==
+
 The design for each of these needs to be modified to cover multi-link cases.
+
 Some of this is still a moving target from the IEEE 802.11 standard view point.
 
 == mac80211 rate scaling ==
@@ -120,16 +125,17 @@ Station, and potentially also AP, adding/removing/disabling/re-enabling links dy
 
 Impact to roaming? Should this impact candidate AP MLD selection? More generally, would it be helpful to provide information to user space about other competing needs or co-existence constraints on frequency ranges (BT, LTE, etc.)
 
-Consider adding this information to the channel list to keep state
+  * Consider adding this information to the channel list to keep state
 
-Event when updated
+  * Event when updated
 
-May solve part of the issue of link selection conflicting with roaming selection
+  * May solve part of the issue of link selection conflicting with roaming selection
+
 Where to do roaming decisions and link enabling/activation decisions for mac80211-based drivers? In user space with additional information on capabilities from the driver? Or move to the driver?
 
 Should note that there is currently no roaming decision implementation based on the multi-link cases.
 
-Mesh? Anything to discuss?
+== Mesh? Anything to discuss? ==
 
 MLO is not defined for mesh (MBSS) and it does not look like anyone is working on defining this IEEE 802.11
 
@@ -178,17 +184,18 @@ I.e., no more mac80211/mac80211-next.git or wireless-drivers/wireless-drivers-ne
 Addresses issues of STAs using random MAC addresses on existing networks
 
 Not much to do except perhaps hostapd/wpa_s to get/set the network identifier
-P802.11bi / privacy improvements (STA and also AP)
+
+=== P802.11bi / privacy improvements (STA and also AP) ===
 
 Addresses user privacy including APs
 
-So far proposed
+So far proposed:
 
-Hide MAC address over the air using random MAC addresses, potentially changing during association, while using long(er) term MAC address in the Ethernet network; potentially hiding also Ethernet devices when they communicate with WiFi clients.
+  * Hide MAC address over the air using random MAC addresses, potentially changing during association, while using long(er) term MAC address in the Ethernet network; potentially hiding also Ethernet devices when they communicate with WiFi clients.
 
-Start hiding more of elements (e.g. association request) to avoid fingerprinting, e.g. derive some keys first and then use them to encrypt association request frames (generated in mac80211). Similar thing exists for FILS. Will likely have an impact on authentication as well.
+  * Start hiding more of elements (e.g. association request) to avoid fingerprinting, e.g. derive some keys first and then use them to encrypt association request frames (generated in mac80211). Similar thing exists for FILS. Will likely have an impact on authentication as well.
 
-Protecting AP privacy e.g. SSID, elements, randomised BSSID; some changes might not be backwards compatible; significant differences for beacon frames
+  * Protecting AP privacy e.g. SSID, elements, randomised BSSID; some changes might not be backwards compatible; significant differences for beacon frames
 
 ==== Wi-Fi 6E (6&7 GHz) ===
 
