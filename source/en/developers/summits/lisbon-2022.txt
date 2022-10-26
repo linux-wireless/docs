@@ -51,7 +51,7 @@ Add a proposed topic to the list below you would like to discuss in the workshop
     * AFC
     * Power modes - LPI, VLP, …
 
-====== Minutes =====
+===== Minutes ====
 
 === Wi-Fi 7 (EHT & MLO) support ===
 
@@ -197,7 +197,7 @@ So far proposed:
 
   * Protecting AP privacy e.g. SSID, elements, randomised BSSID; some changes might not be backwards compatible; significant differences for beacon frames
 
-==== Wi-Fi 6E (6&7 GHz) ===
+=== Wi-Fi 6E (6&7 GHz) ===
 
 == AFC ==
 
