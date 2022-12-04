@@ -4,7 +4,6 @@
 
 mac80211 wireless driver for MediaTek MT7xxx series
 
-  * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4GHz USB Chip
   * **mt76** driver handles:
     * **MT7610U** 802.11a/b/g/n/ac 1T1R 2.4/5GHz USB Chip
     * **MT7612**/**MT7602**/**MT7662** 802.11a/b/g/n/ac 2T2R 2.4/5GHz PCIe/USB Chip
@@ -21,7 +20,8 @@ mac80211 wireless driver for MediaTek MT7xxx series
         * MT7921 USB is supported since (**5.18+**)
         * 6G band is supported by MT7921K
     * **MT7922** 802.11a/b/g/n/ac/ax 2T2R 2.4/5G/6GHz PCIe Chip (**5.16+**)
- 
+
+  * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4GHz USB Chip
 ==== Unsupported chips ====
 
    * [[https://deviwiki.com/wiki/MediaTek|Any other MediaTek chips]].
