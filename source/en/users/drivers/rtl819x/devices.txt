@@ -12,6 +12,7 @@ The list is still in progress, please feel free to complete the device list. :-)
 
 ===== rtl8192eu based devices =====
 | **Vendor**\\  | **Product**                                                                                       | **USB Vendor ID**  | **USB Product ID**  | **MaxPower**  |
+| Gembird | [[https://gembird.nl/item.aspx?id=11964|WNP-UA300P-02]] | 0x0bda | 0x818b | 500mA |
 | TP-Link | TL-WN821N V5 | 0x2357 | 0x0107 | ?             |
 | TP-Link | [[http://www.tp-link.com/en/products/details/cat-11_TL-WN822N.html#specifications|TL-WN822N V4]]  | 0x2357             | 0x0108              | ?             |
 | TP-Link | TL-WN823N V2 | 0x2357 | 0x0109 | ? |
