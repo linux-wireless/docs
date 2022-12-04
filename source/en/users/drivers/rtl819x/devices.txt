@@ -2,7 +2,7 @@ The list is still in progress, please feel free to complete the device list. :-)
 
 ===== rtl8188cus based devices =====
 | **Vendor**\\  | **Product**                                                                                                                  | **USB Vendor ID**  | **USB Product ID**  | **MaxPower**  |
-| Savio         | [[https://www.savio.net.pl/produkt/adapter-wifi-na-usb-150mbps-cl-63/|CL-63]]                                                | 0x0bda             | 0x8176              |               |
+| Savio         | [[https://www.savio.net.pl/produkt/adapter-wifi-na-usb-150mbps-cl-63/|CL-63]]                                                | 0x0bda             | 0x8176              | 500mA         |
 | sModule       | [[http://smodule.com/Product/sWiFi-R8188CU1.html|sWiFi-8188CU1]]                                                             | 0x0bda             | 0x8176              | 140mA         |
 | Edimax        | [[https://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/in/wireless_adapters_n150/ew-7811un/|EW-7811Un]]  | 0x7392             | 0x7811              |               |
 
