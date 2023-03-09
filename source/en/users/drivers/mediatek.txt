@@ -22,6 +22,8 @@ mac80211 wireless driver for MediaTek MT7xxx series
     * **MT7922** 802.11a/b/g/n/ac/ax 2T2R 2.4/5G/6GHz PCIe Chip (**5.16+**)
 
   * **mt7601u** driver handles **MT7601U** 802.11b/g/n 1T1R 2.4GHz USB Chip
+
+note: 5Ghz MT7613BEN is handled as a mt7663 special case which is handled by mt7615 driver. Openwrt Archer c6 v3 uses it.
 ==== Unsupported chips ====
 
    * [[https://deviwiki.com/wiki/MediaTek|Any other MediaTek chips]].
