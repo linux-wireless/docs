@@ -22,6 +22,11 @@ CRDA is licensed under the [[https://raw.github.com/richardfontana/copyleft-next
 
 You can find official crda releases on the [[http://drvbp1.linux-foundation.org/~mcgrof/rel-html/crda/|crda release page]], older releases can be downloaded through the [[https://www.kernel.org/pub/software/network/crda/|crda archive]] 
 
+===== Status =====
+
+The new regulatory infrastructure went in as of 2.6.28, so CRDA can be used in kernels >= 2.6.28. It is required for 802.11d operation in 2.6.29.
+
+CRDA is no longer needed as of kernel v4.15 since commit [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=007f6c5e6eb45 | 007f6c5e6eb45]] ("cfg80211: support loading regulatory database as firmware file") added support to use the kernel's firmware request API which looks for the firmware on /lib/firmware.
 
 ===== Host requirements =====
   * libc/ublibc 
