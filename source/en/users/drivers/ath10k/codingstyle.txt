@@ -69,7 +69,7 @@ Examples:
 
 
 <code>struct ath10k *ar = ptr;
-struct ath10k_pci *ar_sdio = ath10k_pci_priv(ar);</code>
+struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);</code>
 For consistency always use the main context (struct ath10k *ar) as function parameter, don't use hif specific context. 
 
 
@@ -104,9 +104,9 @@ return ret;</code>
 Print error codes after a colon: 
 
 
-<code>ath10k_warn("failed to associate peer STA %pM\n: %d",
+<code>ath10k_warn("failed to associate peer STA %pM: %d\n",
             sta->addr, ret);</code>
-Try to start the warning messages with the the verb "failed" if possible. Warning and error messages start with lower case. 
+Try to start the warning messages with the verb "failed" if possible. Warning and error messages start with lower case. 
 
 ath10k_warn() is used for errors where it might be possible to recover and ath10k_err() for errors when it's not possible to recover in any way. 
 
@@ -126,7 +126,7 @@ Example:
 
 <code>int ath10k_mac_start(struct ath10k *ar)</code>
 
-For each component use function names create/destroy for allocating and freeing something, register/unregister for initialising and cleaning up them afterwards and start/stop to temporarily pause something. 
+For each component use function names create/destroy for allocating and freeing something, register/unregister for initializing and cleaning up them afterwards and start/stop to temporarily pause something. 
 
 Example: 
 
@@ -153,7 +153,7 @@ For warning and error messages we have ath10k_warn() and ath10k_err().
 
 ath10k_warn() should be used when ath10k still continues to work, for example then some limit has been reached or an unknown event has been received. It's also rate limited.
 
-ath10k_err() should be used when a fatal error has been detected and ath10k will shut itself down, for example during driver initialisation or firmware recover fails. It is NOT rate limited.
+ath10k_err() should be used when a fatal error has been detected and ath10k will shut itself down, for example during driver initialization or firmware recover fails. It is NOT rate limited.
 
 Examples:
 
@@ -164,7 +164,7 @@ Examples:
 
 Use ath10k_dbg() or ath10k_dbg_dump().
 
-The format string for ath10k_dbg() should start with debug level followed by name of the command or event and then parameters. All uppercase and no commas, colons or periods.
+The format string for ath10k_dbg() should start with debug level followed by name of the command or event and then parameters. All lowercase and no commas, colons or periods.
 
 Examples:
 
