@@ -110,7 +110,7 @@ Try to start the warning messages with the verb "failed" if possible. Warning an
 
 ath10k_warn() is used for errors where it might be possible to recover and ath10k_err() for errors when it's not possible to recover in any way. 
 
-Dan Carpenters g+ post about error paths: [[https://plus.google.com/u/0/106378716002406849458/posts/dnanfhQ4mHQ|https://plus.google.com/u/0/106378716002406849458/posts/dnanfhQ4mHQ]] 
+Dan Carpenter's post about error paths: [[https://staticthinking.wordpress.com/2022/04/28/free-the-last-thing-style/|https://staticthinking.wordpress.com/2022/04/28/free-the-last-thing-style/]] 
 
 
 ==== Locking ====
