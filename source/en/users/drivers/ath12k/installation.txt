@@ -31,14 +31,15 @@ Build and install the kernel and the kernel modules. There are multiple ways to 
   * https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
   * https://fedoraproject.org/wiki/Building_a_custom_kernel
 
-Clone ath12k-testing firmware:
+Clone ath11k firmware project which currently also contains the ath12k firmware:
 <code>
-  git clone https://github.com/kvalo/ath11k-firmware/tree/master/ath12k-testing.git
+  git clone https://github.com/kvalo/ath11k-firmware.git
 </code>
 
-Install Wi-fi firmware:
+Install ath12k Wi-fi firmware:
 <code>
-cd ath12k-testing           
-sudo cp -r * /lib/firmware/
+  sudo mkdir -p /lib/firmware/ath12k
+  cd ath11k-firmware/ath12k-testing
+  sudo cp -r * /lib/firmware/ath12k/
 </code>
 
