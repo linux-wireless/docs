@@ -13,7 +13,7 @@ wireless-regdb is licensed under the [[wp>ISC_license|ISC license]] and CRDA is 
 
 ===== The regulatory database =====
 
-[[en/developers/Regulatory/CRDA|CRDA]] requires a regulatory database ([[en/developers/Regulatory/Database|Web view]] or [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|gitweb]]) to be build and maintained. Our hope is that this database can be used by other platforms (open or proprietary), not just Linux. Seth Forshee maintains this database through the wireless-regdb git tree: 
+[[en/developers/Regulatory/CRDA|CRDA]] requires a regulatory database ([[en/developers/Regulatory/Database|Web view]] or [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|gitweb]]) to be build and maintained. Our hope is that this database can be used by other platforms (open or proprietary), not just Linux. The database is currently unmaintained, but the latest changes can be found in this git tree: 
 
 [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git|http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git]] 
 
@@ -58,13 +58,15 @@ If your distribution requires you to //build// your own regulatory.bin you can a
 
 ===== Sending updates to the regulatory database =====
 
+**Note**: wireless-regdb is currently unmaintained, and patches or requests for changes are likely to get no response.
+
 If you find any errors please send them to the [[http://lists.infradead.org/mailman/listinfo/wireless-regdb|wireless-regdb]](subscribers-only) mailing list and the [[en/developers/MailingLists|linux-wireless mailing list]], either as patches to the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|db.txt]] file from the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=summary|wireless-regdb git tree]], or just tell us what is wrong in plain English. 
 
 Patches sent to the wireless-regdb git tree should be addressed as follows: 
 
 
-<code>To: sforshee@kernel.org
-Cc: wireless-regdb@lists.infradead.org, linux-wireless@vger.kernel.org
+<code>To: linux-wireless@vger.kernel.org
+Cc: wireless-regdb@lists.infradead.org
 Subject: wireless-regdb: Update regulatory rules for France (FR) on 5GHz</code>
 
 ===== Mailing list for regulatory updates =====
