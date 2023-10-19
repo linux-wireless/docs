@@ -79,10 +79,12 @@ DB = dual-band 2.4GHz or 5GHz
     * AR9340 2x2 DB
 
   * AR9004: 
-    * AR9485 1x1 SB
+    * AR9485 1x2 SB
     * AR9462 2x2 DB
     * AR9565 1x1 SB
     * AR9580 3x3 DB
+    * AR9590 3x3 DB
+    * AR9592 2x2 DB
     * AR9550 3x3 DB
 ===== Available devices =====
 
