@@ -19,7 +19,7 @@ This page documents products in the retail market sold which have Atheros chipse
 
 ===== AIRETOS by VOXMICRO =====
 ==== AR9485 ====
-      * AEH-AR9485-NC - E94 Class, HB, SB, 2x1, C-Grade
+      * AEH-AR9485-NC - E94 Class, HB, SB, 1x2, C-Grade
 
 
 ==== AR9462====
