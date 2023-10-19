@@ -19,12 +19,12 @@ This page documents products in the retail market sold which have Atheros chipse
 
 ===== AIRETOS by VOXMICRO =====
 
-==== AR95xx ====
-      * AEX-AR9580-NX - E95 Class, WiFi4 AP Module, XB, DB, 3x3, X-Grade
-      * AEX-AR9590-NX - E95 Class, WiFi4 AP Module, XB, DB, 3x3, X-Grade, Enterprise
-      * AEX-AR9590-NI - E95 Class, WiFi4 AP Module, XB, DB, 3x3, I-Grade, Enterprise
-      * AEX-AR9592-NX - E95 Class, WiFi4 AP Module, XB, DB, 2x2, X-Grade, Enterprise
-      * AEX-AR9592-NI - E95 Class, WiFi4 AP Module, XB, DB, 2x2, I-Grade, Enterprise
+==== AR95xx====
+      * AEX-AR9580-NX - E95 Class, XB, DB, 3x3, X-Grade
+      * AEX-AR9590-NX - E95 Class, XB, DB, 3x3, X-Grade, Enterprise
+      * AEX-AR9590-NI - E95 Class, XB, DB, 3x3, I-Grade, Enterprise
+      * AEX-AR9592-NX - E95 Class, XB, DB, 2x2, X-Grade, Enterprise
+      * AEX-AR9592-NI - E95 Class, XB, DB, 2x2, I-Grade, Enterprise
 ===== D-Link =====
 
 
