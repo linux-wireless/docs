@@ -22,9 +22,9 @@ This page documents products in the retail market sold which have Atheros chipse
       * AEH-AR9485-NC - HB, SB, 1x2, C-Grade
 
 
-==== AR9462====
-      * AEH-AR9462-LC - E94 Class, HB, DB, 2x2, C-Grade
-      * AEH-AR9462-LX - E94 Class, HB, DB, 2x2, X-Grade
+==== AR9462 (E94 Class) ====
+      * AEH-AR9462-LC - HB, DB, 2x2, C-Grade
+      * AEH-AR9462-LX - HB, DB, 2x2, X-Grade
 
 
 ==== AR95xx====
