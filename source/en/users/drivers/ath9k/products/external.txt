@@ -19,7 +19,8 @@ This page documents products in the retail market sold which have Atheros chipse
 
 ===== AIRETOS by VOXMICRO =====
 
-
+==== AR95xx (E95 Class) ====
+      * AEX-AR9590-NX
 ===== D-Link =====
 
 
