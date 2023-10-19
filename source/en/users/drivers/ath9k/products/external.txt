@@ -16,6 +16,10 @@ This page documents products in the retail market sold which have Atheros chipse
   * CB: PCI Cardbus card 
   * SB: Single band, 1x2, 2x2 configuration 
   * DB: Dual band, 2x3, 2x2 configuration 
+
+===== AIRETOS by VOXMICRO =====
+
+
 ===== D-Link =====
 
 
