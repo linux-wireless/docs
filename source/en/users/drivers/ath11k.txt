@@ -14,9 +14,13 @@ ath11k is a Linux driver for Qualcomm [[https://en.wikipedia.org/wiki/IEEE_802.1
   * IPQ8074 hw2.0 (v5.6)
   * IPQ6018 hw1.0 (v5.10)
   * QCA6390 hw2.0 (v5.10)
+  * QCA6391 hw2.0 (v5.10) - found in [[https://airetos.voxmicro.com/e63-class/|AIRETOS E63 Class by VOXMICRO]] MPNs: ACB-QCA6391
   * QCN9074 hw1.0 (v5.14)
   * WCN6855 hw2.0 (v5.17)
   * WCN6855 hw2.1 (v5.17)
+  * QCA2062 hw2.1 (v5.17) - found in [[https://airetos.voxmicro.com/e20-class/|AIRETOS E20 Class by VOXMICRO]] MPNs: ACB-QCA2062
+  * QCA2066 hw2.1 (v5.17) - found in [[https://airetos.voxmicro.com/e20-class/|AIRETOS E20 Class by VOXMICRO]] MPNs: ACB-QCA2066
+  * QCA6698AQ hw2.1 (v5.17) - found in [[https://airetos.voxmicro.com/e20-class/|AIRETOS E20 Class by VOXMICRO]] MPNs: ACB-QCA6698
 ===== Known bugs/limitations =====
 
   * QCA6390: firmware WLAN.HST.1.0.1-01740-QCAHSTSWPLZ_V2_TO_X86-1 and older have problems accessing host memory below 32 MB ([[https://bugzilla.kernel.org/show_bug.cgi?id=210923|bug #210923]])
