@@ -18,8 +18,8 @@ This page documents products in the retail market sold which have Atheros chipse
   * DB: Dual band, 2x3, 2x2 configuration 
 
 ===== AIRETOS by VOXMICRO =====
-==== AR9485 ====
-      * AEH-AR9485-NC - E94 Class, HB, SB, 1x2, C-Grade
+==== AR9485 (E94 Class) ====
+      * AEH-AR9485-NC - HB, SB, 1x2, C-Grade
 
 
 ==== AR9462====
