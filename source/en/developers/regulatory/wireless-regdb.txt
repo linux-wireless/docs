@@ -13,12 +13,12 @@ wireless-regdb is licensed under the [[wp>ISC_license|ISC license]] and CRDA is 
 
 ===== The regulatory database =====
 
-[[en/developers/Regulatory/CRDA|CRDA]] requires a regulatory database ([[en/developers/Regulatory/Database|Web view]] or [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|gitweb]]) to be build and maintained. Our hope is that this database can be used by other platforms (open or proprietary), not just Linux. The database is currently unmaintained, but the latest changes can be found in this git tree: 
+[[en/developers/Regulatory/CRDA|CRDA]] requires a regulatory database ([[en/developers/Regulatory/Database|Web view]] or [[http://git.kernel.org/?p=linux/kernel/git/wens/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|gitweb]]) to be build and maintained. Our hope is that this database can be used by other platforms (open or proprietary), not just Linux. The database is currently unmaintained, but the latest changes can be found in this git tree: 
 
-[[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git|http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git]] 
+[[http://git.kernel.org/?p=linux/kernel/git/wens/wireless-regdb.git|http://git.kernel.org/?p=linux/kernel/git/wens/wireless-regdb.git]] 
 
 
-<code>git://git.kernel.org/pub/scm/linux/kernel/git/sforshee/wireless-regdb.git</code>
+<code>git://git.kernel.org/pub/scm/linux/kernel/git/wens/wireless-regdb.git</code>
 The regulatory.bin file there is signed with his RSA private key. We keep the RSA public key embedded as part of CRDA which allows us to verify the authorship and integrity of the regulatory database. 
 
 
@@ -60,7 +60,7 @@ If your distribution requires you to //build// your own regulatory.bin you can a
 
 **Note**: wireless-regdb is currently unmaintained, and patches or requests for changes are likely to get no response.
 
-If you find any errors please send them to the [[http://lists.infradead.org/mailman/listinfo/wireless-regdb|wireless-regdb]](subscribers-only) mailing list and the [[en/developers/MailingLists|linux-wireless mailing list]], either as patches to the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|db.txt]] file from the [[http://git.kernel.org/?p=linux/kernel/git/sforshee/wireless-regdb.git;a=summary|wireless-regdb git tree]], or just tell us what is wrong in plain English. 
+If you find any errors please send them to the [[http://lists.infradead.org/mailman/listinfo/wireless-regdb|wireless-regdb]](subscribers-only) mailing list and the [[en/developers/MailingLists|linux-wireless mailing list]], either as patches to the [[http://git.kernel.org/?p=linux/kernel/git/wens/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD|db.txt]] file from the [[http://git.kernel.org/?p=linux/kernel/git/wens/wireless-regdb.git;a=summary|wireless-regdb git tree]], or just tell us what is wrong in plain English. 
 
 Patches sent to the wireless-regdb git tree should be addressed as follows: 
 
@@ -81,3 +81,4 @@ Please review [[http://marc.info/?l=linux-wireless&m=128414096127554&w=2|these i
 ===== Changing the database file format =====
 
 To change the file format you will need to send patches to both crda (start off with regdb.h) and wireless-regdb/dbparse.py. You should send your patch as an RFC on the linux-wireless mailing list and CC both the wireless-regdb and crda maintainers. 
+
