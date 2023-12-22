@@ -33,11 +33,12 @@ Below is an example of a country entry for the db.txt regulatory file for EC (Ec
 
 
 <code>country EC:
-        (2402 - 2482 @ 40), (N/A, 20)
-        (5170 - 5250 @ 20), (6, 17)
-        (5250 - 5330 @ 20), (6, 23), DFS
-        (5735 - 5835 @ 20), (6, 30)</code>
-Note that the frequency range (e.g. <code>2402-2482</code>) covers the complete used bandwidth, so this definition allows using the 2 GHz channels 1 through 13 as 40 MHz channels. 5 GHz channels of a bandwidth of 20 MHz can be used if the frequencies used by the channel fit into the specified frequency ranges. 
+        (2400 - 2483.5 @ 40), (1000 mW)
+        (5150 - 5250 @ 80), (50 mW), AUTO-BW, DFS
+        (5250 - 5350 @ 80), (125 mW), AUTO-BW, DFS
+        (5470 - 5725 @ 160), (125 mW), DFS
+        (5725 - 5850 @ 80), (1000 mW)</code>
+Note that the frequency range (e.g. <code>2400-2483.5</code>) covers the complete used bandwidth, so this definition allows using the 2 GHz channels 1 through 13 as 40 MHz channels. 5 GHz channels of a bandwidth of 80 or 160 MHz can be used if the frequencies used by the channel fit into the specified frequency ranges. 
 
 
 ===== Binary file format =====
