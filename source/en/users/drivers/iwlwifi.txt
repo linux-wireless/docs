@@ -16,6 +16,8 @@
     * IBSS (Ad-Hoc)
 ===== Supported Devices =====
 The following devices are supported (since kernel version):
+  * Wi-Fi 7 products
+      * [[https://www.intel.com/content/www/us/en/products/sku/230078/intel-wifi-7-be200/specifications.html|Intel® Wi-Fi 7 BE200]] (6.5)
   * Wi-Fi 6E products
       * [[https://www.intel.com/content/www/us/en/products/sku/217242/intel-wifi-6e-ax411-gig/specifications.html|Intel® Wi-Fi 6E AX411]] (5.14)
       * [[https://www.intel.com/content/www/us/en/products/docs/wireless/wi-fi-6e-ax211-module-brief.html|Intel® Wi-Fi 6E AX211]] (5.14)
