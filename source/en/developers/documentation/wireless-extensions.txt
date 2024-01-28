@@ -2,11 +2,7 @@
 
 ===== About Wireless-Extensions =====
 
-[[http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Linux.Wireless.Extensions.html|Wireless-Extensions]] (WE or Wext) are the extensions added to the kernel circa 1997 by [[http://www.hpl.hp.com/personal/Jean_Tourrilhes/|Jean Tourrilhes]]. We don't document WE as [[http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Linux.Wireless.Extensions.html|Jean already has documentation for this on his page]] so what we do do here is document things you should know about WE if you didn't before. 
-
- 
-
-
+[[https://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Linux.Wireless.Extensions.html|Wireless-Extensions]] (WE or Wext) are the extensions added to the kernel circa 1997 by [[https://www.hpl.hp.com/personal/Jean_Tourrilhes/|Jean Tourrilhes]]. We don't document WE as [[https://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Linux.Wireless.Extensions.html|Jean already has documentation for this on his page]] so what we do do here is document things you should know about WE if you didn't before. 
 ===== Is WE being further developed ? =====
 
 No it is not. Only bug fixes are being accepted for WE. 
