@@ -3,19 +3,34 @@
 
 ===== Git guide for Linux wireless users and developers =====
 
-This is a quick git-guide for Linux users and developers with emphasis on Linux wireless. The latest Linux wireless development happens in two trees: mac80211-next maintained by Johannes Berg, and wireless-drivers-next maintained by Kalle Valo.  Both trees are regularly pulled into wireless-testing for integration testing; wireless-testing may therefore also be used as a base for development along with the upstream trees.
+This is a quick git-guide for Linux users and developers with emphasis on Linux wireless.
 
-===== Cloning latest wireless-testing =====
+===== Git trees in use for wireless patches integration =====
 
-First, clone the wireless-testing.git tree 
+The wireless maintainers use different git trees depending on the patches target. Contributors are expected to base their work on the relevant tree:
+
+  * [[https://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-next.git|wireless-next]] must be used for patches bringing new features, either for mac80211/cfg80211 or device drivers. The patches from this tree will eventually land in Linus' tree during each merge window.
+  * some devices family have their own git tree which should then be preferred over wireless-next, that's for example the case for [[https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git|ath]] or [[https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/iwlwifi-next.git|iwlwifi]]
+  * urgent patches/fixes must target the [[https://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless.git|wireless]] tree. Those fixes will be sent for "-rc" releases and/or to stable kernels
+  * for some specific cases, the [[https://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-testing.git|wireless-testing tree]] can be used. wireless and wireless-next are frequently merged into it to run automated tests
+  * device firmwares are handled separately and should target [[https://gitlab.com/kernel-firmware/linux-firmware|linux-firmware]]
+
+===== Cloning a development tree =====
+
+First, clone the relevant tree, for example wireless-next.git tree 
 
 
-<code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-testing.git
-cd wireless-testing</code>
+<code>git clone git://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-next.git
+cd wireless-next</code>
+
+If you need to work on multiple trees, you can either clone needed repositories at different paths, or use a multi-remote repository:
+
+<code>git remote add ath https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git
+git fetch ath</code>
 
 ===== Get the latest updates =====
 
-You will want to update your local git repository to match what John has last committed. You can do this as follows. 
+You will want to update your local git repository to match what maintainers has last committed. You can do this as follows. 
 
 
 <code>git pull</code>
