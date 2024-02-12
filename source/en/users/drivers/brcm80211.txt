@@ -172,7 +172,8 @@ Arend van Spriel        [[mailto:arend.vanspriel@broadcom.com|arend.vanspriel@br
             * monitor mode 
 ==== fullmac driver specifics ====
 The brcmfmac driver is based on the DHD driver, which is also released in AOSP under the name bcmdhd. Although similar the brcmfmac driver has been reworked significantly. In the figure below the layering of the brcmfmac is shown. It was made couple of years ago so it may not be accurate.
-{{:en:users:drivers:brcm80211:brcmfmac-layering.png?500|}}\\
+{{:en:users:drivers:brcm80211:brcmfmac-layering.png?500|}}
+\\
 The bus layer supports SDIO, USB, and PCIe. The protocol layer support msgbuf protocol used for PCIe devices and BCDC which is used for SDIO and USB devices.
 ==== Get the code ====
 
