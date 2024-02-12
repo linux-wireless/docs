@@ -179,7 +179,7 @@ The bus layer supports SDIO, USB, and PCIe. The protocol layer support msgbuf pr
 The driver is available in linux mainline and development is done on the wireless-testing tree, available at: 
 
 
-<code>git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-testing.git</code>
+<code>git://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-testing.git</code>
 The driver is also available in the 3.2 and newer kernels.  When using 'make menuconfig' it can be accessed: 
 
 Location: -> Device Drivers 
