@@ -209,7 +209,7 @@ Both brcmsmac and brcmfmac have several tracepoints defined that can be traced u
                 *  *    *  *  *  * powersave 
                 *  *    *  *  *  * IBSS 
                 *  *    *  *  *  * HW-based encryption 
-                *  *    *  *  *  * Add support for more chips, including (near term) BCM43227, BCM43228, and BCM4331.  Support for additional new chips to follow. 
+
 ==== To be done for fullmac driver ====
                 *  *    *  *  *   * Add support for 
                 *  *    *  *  *   *  * debugfs (for accessing counters and other diagnostic info) 
