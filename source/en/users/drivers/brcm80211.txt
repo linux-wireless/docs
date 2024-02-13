@@ -149,7 +149,7 @@ Copy this file where brcmfmac expects the nvram, for example:
 
 For driver issues and/or bug reports, please use one or both:
 
-[[mailto:brcm80211@lists.linux.dev|brcm80211@lists.linux.dev]]\\
+[[mailto:brcm80211@lists.linux.dev|brcm80211@lists.linux.dev]]  [[https://lore.kernel.org/brcm80211/|archive]]\\
 [[mailto:linux-wireless@vger.kernel.org|linux-wireless@vger.kernel.org]]\\
 
 For any other questions feel free to contact the developers listed below: 
