@@ -203,8 +203,8 @@ Location: -> Device Drivers
 
 Maintaining a driver for a family of chipsets that is widespread and productized by multiple entities can be challenging. While having a good stock of devices it is by no means covering a fraction of the variants out in the wild. So we can always use help from people doing regression testing or co-maintaining the driver. The table below provides an overview of those involved and the role they play.
 
-^Name ^Email ^Role ^Device(s) ^
-| | | | |
+^ Name                ^ Email                ^ Role    ^ Device(s)          ^
+| Izabella Bakollari  | ibakolla@redhat.com  | Tester  | Raspberry PI4 8GB  |
 
 ==== tracepoint support ====
 
