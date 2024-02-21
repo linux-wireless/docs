@@ -33,7 +33,7 @@ Build and install the kernel and the kernel modules. There are multiple ways to 
 
 Clone ath11k firmware project which currently also contains the ath12k firmware:
 <code>
-  git clone https://github.com/kvalo/ath11k-firmware.git
+  git clone https://git.codelinaro.org/clo/ath-firmware/ath12k-firmware
 </code>
 
 Install ath12k Wi-fi firmware:
