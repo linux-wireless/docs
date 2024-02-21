@@ -6,7 +6,7 @@ Go back --> [[en/users/Drivers/ath10k|ath10k]]
 
 ===== ath10k firmware =====
 
-The ath10k firmware images are available from [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]] which all common Linux distributions should install by default. Latest firmware images can be downloaded from [[https://github.com/kvalo/ath10k-firmware|ath10k-firmware.git]] from which they get eventually pushed to [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]].
+The ath10k firmware images are available from [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]] which all common Linux distributions should install by default. Latest firmware images can be downloaded from [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware|ath10k-firmware.git]] from which they get eventually pushed to [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]].
 
 ==== Firmware branches =====
 
