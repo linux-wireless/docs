@@ -58,6 +58,6 @@ Under the NL80211_CMD_VENDOR command, there's the ability to register vendor-spe
   - The newly proposed API shall be subject to stable API rules.
   - Unless the data inside NL80211_ATTR_VENDOR_DATA is just an opaque blob not used by the driver (but e.g. by firmware), sub-attributes shall be used inside of it, and those shall be documented.
   - Vendor command and sub-attribute definitions shall be in a common header file location (TBD, e.g. include/uapi/nl80211-vnd-*.h)
-  - Patches introducing such commands shall be submitted separately, not "buried" in big driver patchsets. Give them a "nl80211: vendor-cmd: " prefix to make them easily identifiable.
+  - Patches introducing such commands shall be submitted separately, not "buried" in big driver patchsets. Give them a "wifi: nl80211: vendor-cmd: " prefix to make them easily identifiable.
 
 The goal with these rules is to enable use of vendor commands in a fashion that is transparent enough to allow later reuse by other components with similar needs, and then potentially defining "real" nl80211 API for the use case in question.
