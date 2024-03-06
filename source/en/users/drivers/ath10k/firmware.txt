@@ -8,31 +8,6 @@ Go back --> [[en/users/Drivers/ath10k|ath10k]]
 
 The ath10k firmware images are available from [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]] which all common Linux distributions should install by default. Latest firmware images can be downloaded from [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware|ath10k-firmware.git]] from which they get eventually pushed to [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]].
 
-==== Firmware branches =====
-
-
-^ Hardware         ^ Firmware major version/branch  ^ Latest firmware revision                                                      ^ Intended use  ^ Kernel version required*  ^ Git commit                  ^
-| QCA988X          | main                           | [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware/-/tree/main/QCA988X/hw2.0/main|link]]    | STA           | 3.11                      | 5e3dd157d7e7                |
-| QCA988X          | 10.1                           | [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware/-/tree/main/QCA988X/hw2.0/10.1|link]]    | AP            | 3.13                      | 8acd3c97ff9e                |
-| QCA988X          | 10.2                           | [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware/-/tree/main/QCA988X/hw2.0/10.2|link]]    | AP            | 3.18                      | 24c88f7807fb                |
-| QCA988X          | 10.2.4                         | [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware/-/tree/main/QCA988X/hw2.0/10.2.4|link]]  | AP            | 4.0                       | 4a16fbec1cd0                |
-| QCA6164/QCA6174  | wmi-tlv                        | [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware/-/tree/main/QCA6174|link]]         | AP/STA        | 4.0                       | d63955b33b3b, ca996ec56608  |
-| QCA9980          | 10.4                           | [[https://git.codelinaro.org/clo/ath-firmware/ath10k-firmware/-/tree/main/QCA99X0|link]]         | AP            | 4.2                       | 8a055a8adc87                |
-
-
-
-
-* Note: It is possible to use newer ath10k driver on an older kernel with [[en/users/Drivers/ath10k/backports|backports project]].
-
-===== Update firmware =====
-
-First download the firmware image from the links above. In this example we use firmware-2.bin_10.1.467.2-1 from QCA988X 10.1 directory. Then just copy that file as firmware-2.bin to the ath10k firmware directory: 
-
-<code>cp firmware-2.bin_10.1.467.2-1 /lib/firmware/ath10k/QCA988X/hw2.0/firmware-2.bin</code>
-Then reload ath10k (or restart the system) and you can [[en/users/Drivers/ath10k/debug#firmware_version|check if the new firmware is in use]]. 
-
-Note: In some distributions the firmware location can be different than /lib/firmware. 
-
 ===== Firmware API versions =====
 
 Because firmware changes between versions we have introduced firmware API concept to ath10k. This makes it possible to support different versions of ath10k. 
