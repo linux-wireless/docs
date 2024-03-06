@@ -3,16 +3,11 @@ Go back --> [[en/users/Drivers/ath11k]]
 
 ===== Installing ath11k =====
 
-As of this writing (December 2020) Linux distributions do not support QCA6390 PCI devices out of box, so you need to install kernel and firmware manually. Here are simple instructions how to install Linux kernel v5.10 with ath11k PCI support and latest ath11k firmwares.
+==== Driver ====
 
-Clone kernel:
-
-  git clone -b v5.10 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
-
-Ensure below options are selected in the kernel (debug, tracing and spectral scan options are optional):
+ath11k is included in official Linux releases starting from v5.6, just download the latest release from https://www.kernel.org/ or use a recent enough Linux distribution. Ensure below options are selected in the kernel (debug, tracing and spectral scan options are optional):
 
 <code>
-cd linux
 make menuconfig
 --> Select Device drivers
         --> Network device support
@@ -32,21 +27,5 @@ Build and install the kernel and the kernel modules. There are multiple ways to 
   * https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
   * https://fedoraproject.org/wiki/Building_a_custom_kernel
 
-Clone linux-firmware:
-
-  git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
-                                                                
-Install Wi-fi firmware:
-
-<code>
-cd linux-firmware           
-sudo cp -r ath11k/ /lib/firmware/
-</code>
-
-Install Bluetooth firmware:
-
-<code>
-sudo cp qca/htnv20.bin /lib/firmware/qca/
-sudo cp qca/htbtfw20.tlv /lib/firmware/qca/
-</code>
+The ath11k firmware images are available from [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]] which all common Linux distributions should install by default. Latest firmware images can be downloaded from [[https://git.codelinaro.org/clo/ath-firmware/ath11k-firmware|ath11k-firmware.git]] from which they get eventually pushed to [[https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/|linux-firmware.git]].
 
