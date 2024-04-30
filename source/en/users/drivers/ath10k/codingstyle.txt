@@ -12,7 +12,7 @@ This is the coding style document for [[en/users/Drivers/ath10k|ath10k]], [[en/u
 
 ==== Tools =====
 
-Use latest GCC which you can download from [[https://mirrors.edge.kernel.org/pub/tools/crosstool/|crosstool]]. Setting it up is easy, unpack it to a directory and create a GNUmakefile:
+Use latest GCC which you can download from [[https://mirrors.edge.kernel.org/pub/tools/crosstool/|crosstool]]. Setting it up is easy, unpack it to a directory and create a GNUmakefile in Linux sources top-level directory:
 
 <code>
 ARCH=x86
