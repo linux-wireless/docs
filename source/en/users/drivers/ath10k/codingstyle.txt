@@ -26,7 +26,17 @@ You will need [[https://docs.kernel.org/dev-tools/sparse.html#getting-sparse|the
 
 ==== Checking code ====
 
-For checking the code we have a dedicated script [[https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath10k/ath10k-check|ath10k-check]] which runs various tests, including sparse and checkpatch. Run the script with ''--help'' to see the installation and usage instructions. Strongly recommended to run this before submitting patches as it can catch common problems. Example:
+For checking the code we have dedicated scripts for each driver:
+
+  * [[https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath10k/ath10k-check|ath10k-check]] 
+  * [[https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath11k/ath11k-check|ath11k-check]] 
+  * [[https://github.com/qca/qca-swiss-army-knife/blob/master/tools/scripts/ath12k/ath12k-check|ath12k-check]] 
+
+They run various tests, including sparse and checkpatch. Run the script with ''--help'' to see the installation and usage instructions. ''--version'' shows version information for all dependencies, include that when reporting a problem.
+
+It is required to run the check script before submitting patches as it can catch common problems. There must not be any warnings!
+
+An example how to run the script:
 
 <code>
 ~$ cd ~/ath
