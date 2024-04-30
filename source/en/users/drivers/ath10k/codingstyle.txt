@@ -4,12 +4,25 @@ Go back –> [[en/users/Drivers/ath10k|ath10k]]
  
 
 
-===== ath10k Coding Style =====
+===== ath10k/ath11k/ath12k Coding Style =====
 
+==== Introduction ====
 
-==== Linux coding style ====
+This is the coding style document for [[en/users/Drivers/ath10k|ath10k]], [[en/users/Drivers/ath11k|ath11k]] and [[en/users/Drivers/ath12k|ath12k]] drivers. Read this before writing any code.
 
-ath10k mostly follows [[https://www.kernel.org/doc/html/latest/process/coding-style.html|Linux Coding Style]], so read that first. 
+==== Tools =====
+
+Use latest GCC which you can download from [[https://mirrors.edge.kernel.org/pub/tools/crosstool/|crosstool]]. Setting it up is easy, unpack it to a directory and create a GNUmakefile:
+
+<code>
+ARCH=x86
+CROSS_COMPILE=/opt/cross/gcc-13.2.0-nolibc/x86_64-linux/bin/x86_64-linux-
+
+export ARCH
+export CROSS_COMPILE
+</code>
+
+You will need [[https://docs.kernel.org/dev-tools/sparse.html#getting-sparse|the latest sparse from git]]. Linux distros usually have too old sparse and you will see wrong errors!
 
 ==== Checking code ====
 
@@ -45,6 +58,10 @@ drivers/net/wireless/ath/ath10k/debug.c:2620: Alignment should match open parent
 drivers/net/wireless/ath/ath10k/debug.c:2640: Alignment should match open parenthesis
 ~/ath$
 </code>
+
+==== Linux coding style ====
+
+ath10k/ath11k/ath12k mostly follows [[https://docs.kernel.org/process/coding-style.html|Linux Coding Style]], so read that first. 
 
 ==== Status/error variables ====
 
