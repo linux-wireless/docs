@@ -20,6 +20,7 @@ CROSS_COMPILE=/opt/cross/gcc-13.2.0-nolibc/x86_64-linux/bin/x86_64-linux-
 
 export ARCH
 export CROSS_COMPILE
+include Makefile
 </code>
 
 You will need [[https://docs.kernel.org/dev-tools/sparse.html#getting-sparse|the latest sparse from git]]. Linux distros usually have too old sparse and you will see wrong errors!
