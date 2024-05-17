@@ -193,7 +193,7 @@ There are several modes supported. The modes supported are:
 
 For example to add a monitor interface: 
 <code>iw phy phy0 interface add moni0 type monitor</code>
-where you can replace <code>monitor</code> by anything else and <code>moni0</code> by the interface name, and need to replace <code>phy0</code> by the PHY name for your hardware (usually phy0 will be correct unless you hotplugged or reloaded any modules.) If your udev is configured incorrectly, the newly created virtual interface may be renamed by it right away, use <code>ip link</code> to list all interfaces. To create a new managed mode interface you would use: 
+where you can replace <code>monitor</code> by any other supported mode and <code>moni0</code> by the interface name, and need to replace <code>phy0</code> by the PHY name for your hardware (usually phy0 will be correct unless you hotplugged or reloaded any modules.) If your udev is configured incorrectly, the newly created virtual interface may be renamed by it right away, use <code>ip link</code> to list all interfaces. To create a new managed mode interface you would use: 
 
 
 <code>iw phy phy0 interface add wlan10 type managed</code>
