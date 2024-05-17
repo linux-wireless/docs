@@ -2,7 +2,7 @@
 
 ===== About this guide =====
 
-This guide is designed to give you an idea of how to write //linux-wireless// patches. 
+This guide is designed to give you an idea of how to write patches for the Linux wireless (Wi-Fi) subsystem. Before reading this guide, read [[https://docs.kernel.org/process/submitting-patches.html|the kernel submitting patches guide]].
 
 
 ===== Subscribe to this page =====
