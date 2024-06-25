@@ -25,7 +25,7 @@
     * **r8192du** is a USB driver for RTL8192DU devices. (**WIP**: [[http://github.com/lwfinger/rtl8192du|http://github.com/lwfinger/rtl8192du]]). It's going to be replaced by rtl8xxxu.
 
 
-They are included in the **staging** tree at [[https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/|https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/]] and they are **NOT supported** by linux-wireless developers or mailing list. Instead ask for support in [[http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel|http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel]] . Maintainers are Greg Kroah-Hartman <[[mailto:gregkh@linuxfoundation.org|gregkh@linuxfoundation.org]]>. 
+They are included in the **staging** tree at [[https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/|https://git.kernel.org/cgit/linux/kernel/git/gregkh/staging.git/]] and they are **NOT supported** by linux-wireless developers or mailing list. Instead ask for support in [[http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel|http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel]] . Maintainer is Greg Kroah-Hartman <[[mailto:gregkh@linuxfoundation.org|gregkh@linuxfoundation.org]]>. 
 
 ===== Firmware =====
 
