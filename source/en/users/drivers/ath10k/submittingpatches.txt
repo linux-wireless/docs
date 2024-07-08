@@ -91,10 +91,10 @@ Tested-on tag should be in every patch, as non-trivial patches should not be sub
 
 The ath10k patch flow is this: 
           * Patch gets posted to the mailing lists. 
-          * Kalle applies ASAP (usually can take 1-3 business days) the patch to pending and master-pending branches for build testing. 
+          * Kalle applies ASAP (usually can take 1-3 business days) the patch to pending and main-pending branches for build testing. 
           * Kalle waits minimum of two business days for patch being under review (unless the patch is urgent). 
           * If no comments or warnings, Kalle applies the patch either to ath-current branch (for critical fixes) or to ath-next branch (new features, low priority fixes) and sends a "Thanks, applied" reply. 
-          * Kalle merges ath-next and ath-current to master branch immeadiately after the patch is applied. 
+          * Kalle merges ath-next and ath-current to main branch immediately after the patch is applied. 
           * Kalle merges ath-next into wireless-drivers-next tree and ath-current to wireless-drivers tree roughly every 2-3 weeks.
           * David Miller merges wireless-drivers-next into net-next tree and wireless-drivers to net tree every two weeks or so.
           * Linus Torvalds merges net every week and net-next during [[https://www.kernel.org/doc/html/latest/process/2.Process.html|the merge window]] into linux.git . 
