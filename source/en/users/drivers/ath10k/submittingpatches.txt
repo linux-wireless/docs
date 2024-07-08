@@ -7,7 +7,7 @@ Send patches to the mailing lists below. Kalle Valo reviews the patches within t
       * To: [[ath10k@lists.infradead.org]] 
       * Cc: [[linux-wireless@vger.kernel.org]] 
 
-Preferably use [[en/users/drivers/ath10k/sources|ath.git master branch]] as the baseline for patches. Other trees can be used as well, but then the chances of conflicts are higher.
+Preferably use [[en/users/drivers/ath10k/sources|ath.git main branch]] as the baseline for patches. Other trees can be used as well, but then the chances of conflicts are higher.
 
 It's important that linux-wireless is CCed on the patches, otherwise it won't be in patchwork and the maintainer won't see it. You can follow the state of ath10k patch review from patchwork:
 
