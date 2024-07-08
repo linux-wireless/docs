@@ -3,7 +3,7 @@ Go back --> [[en/users/Drivers/ath10k|ath10k]]
  
 ===== ath10k sources =====
 
-//ath10k// development happens in Kalle Valo's ath.git tree on kernel.org: 
+//ath10k// development happens in the ath/ath.git tree on kernel.org: 
 
 https://git.kernel.org/cgit/linux/kernel/git/ath/ath.git/
 
