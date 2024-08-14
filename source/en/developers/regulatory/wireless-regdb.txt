@@ -19,7 +19,7 @@ wireless-regdb is licensed under the [[wp>ISC_license|ISC license]] and CRDA is 
 
 
 <code>git://git.kernel.org/pub/scm/linux/kernel/git/wens/wireless-regdb.git</code>
-The regulatory.bin file there is signed with his RSA private key. We keep the RSA public key embedded as part of CRDA which allows us to verify the authorship and integrity of the regulatory database. 
+The regulatory.bin file there is signed with the current maintainer's RSA private key. We keep the RSA public key embedded as part of CRDA which allows us to verify the authorship and integrity of the regulatory database. 
 
 
 ===== Releases of wireless-regdb =====
