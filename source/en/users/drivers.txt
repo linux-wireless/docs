@@ -33,7 +33,7 @@ See also:
 | [[en/users/Drivers/ipw2100|ipw2100]]                  | Intel                  | no              | no        | yes         | no          | no             | B              | PCI                         |
 | [[en/users/Drivers/ipw2200|ipw2200]]                  | Intel                  | no              | no (3)    | yes         | no          | no             | A/B/G          | PCI                         |
 | [[en/users/Drivers/iwlegacy|iwlegacy]]                | Intel                  | yes             | no        | yes         | no          | no             | A/B/G          | PCI-E                       |
-| [[en/users/Drivers/iwlwifi|iwlwifi]]                  | Intel                  | yes             | yes (6)   | yes         | no          | yes            | A/B/G/N/AC     | PCI-E                       |
+| [[en/users/Drivers/iwlwifi|iwlwifi]]                  | Intel                  | yes             | yes (6)   | yes         | no          | yes            | A/B/G/N/AC/AX/BE     | PCI-E                       |
 | [[en/users/Drivers/libertas|libertas]]                | Marvell                | no              | no        | yes         | yes (4)     | no             | B/G            | USB / PCMCIA / SDIO / GSPI  |
 | [[en/users/Drivers/libertastf|libertas_tf]]           | Marvell                | yes             | yes       | no          | yes         | ?              | B/G            | USB                         |
 | [[en/users/Drivers/mac80211_hwsim|mac80211_hwsim]]    | Jouni                  | yes             | yes       | yes         | no          | yes            | A/B/G/N        | NONE!                       |
