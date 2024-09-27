@@ -1,0 +1,15 @@
+February 4th, 2008
+~~~~~~~~~~~~~~~~~~
+
+`Linux 2.6.24 <http://kernelnewbies.org/Linux_2_6_24>`__ was released on January 28th. It includes a horde of new wireless drivers:
+
+-  `Intel Wireless Link <http://www.intellinuxwireless.org/>`__ (iwlwifi) drivers for :doc:`iwl3945 <../en/users/drivers/iwl3945>` and :doc:`iwl4965 <../en/users/drivers/iwl4965>`
+-  SDIO driver for Marvell's Libertas 8385 and 8686 hardware
+-  Ralink drivers for RT2400/RT2500/:doc:`RT61 <../en/users/drivers/rt61pci>` (PCI/PCMCIA), RT2500/:doc:`RT73 <../en/users/drivers/rt73usb>` (USB)
+-  :doc:`b43 <../en/users/drivers/b43>` and :doc:`b43legacy <../en/users/drivers/b43>` Broadcom drivers which replace the older bcm43xx driver. bcm43xx is now deprecated and will be removed in future kernel releases.
+
+Various other drivers received bug fixes and increased hardware support.
+
+:doc:`mac80211 <../en/developers/documentation/mac80211>` received a huge amount of internal rework and fixes, some resulting in optimisations and better IEEE 802.11 spec compliance. Additionally, it now supports the SIOCGIWTXPOWER ioctl ("iwconfig dev power ..."), reports better link statistics, no longer sends invalid QoS frames, better supports dynamic WEP and has improved radiotap injection.
+
+For users looking to help test the bleeding edge but stuck on older kernels we now have available a :doc:`wireless compatibility package <../en/users/download>`. This lets you get the latest drivers and bug fixes on kernels >= 2.6.22, this includes the new Atheros :doc:`ath5k <../en/users/drivers/ath5k>` driver, which is scheduled for inclusion for 2.6.25.

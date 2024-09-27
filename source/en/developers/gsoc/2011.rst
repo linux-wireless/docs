@@ -1,0 +1,11 @@
+Go back --> :doc:`GSoC <../gsoc>`
+
+Linux wireless GSoC 2011
+------------------------
+
+This is our third year with Linux wireless GSoC projects, under the `Linux Foundation GSoC umbrella <https://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2011>`__. This is the home page to keep track of the current projects, their status development done through it. Students should also use these pages to keep track of their own status of their projects.
+
+Linux wireless GSoC 2011 project ideas
+--------------------------------------
+
+Dump here ideas

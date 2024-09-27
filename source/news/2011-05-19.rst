@@ -1,0 +1,13 @@
+May 19, 2011
+~~~~~~~~~~~~
+
+Kernel `2.6.39 <http://kernelnewbies.org/Linux_2_6_39>`__ has been released with following important wireless changes:
+
+-  b43: support for OFDM rates on N-PHYs (11M is not a limit anymore)
+-  iwlagn: support for 2000 series devices
+-  iwlwifi: fix "Received BA when not expected" regression
+-  iwlwifi: fix injection on HT channels
+-  rt2x00: very experimental support for RT5390 devices
+-  rt2x00: fix hw crypto for WPA TKIP (Michael MIC failures)
+-  rtl8192cu: new driver
+-  zd1211rw: support for AP mode

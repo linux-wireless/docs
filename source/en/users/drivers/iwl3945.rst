@@ -1,0 +1,31 @@
+iwl3945
+-------
+
+Intel maintains the iwl3945 driver. Their Linux driver project site is:
+
+http://www.intellinuxwireless.org/
+
+firmware
+--------
+
+You can get the firmware for iwl3945 from:
+
+http://www.intellinuxwireless.org/?p=iwlwifi&n=downloads
+
+kerneldoc
+---------
+
+There is plenty of documentation for the iwl3945:
+
+-  `iwl3945-base.c <en/users/Drivers/iwl3945/kerneldoc/iwl3945-base.c>`__
+-  `iwl-3945.c <en/users/Drivers/iwl3945/kerneldoc/iwl-3945.c>`__
+-  `iwl-3945-commands.h <en/users/Drivers/iwl3945/kerneldoc/iwl-3945-commands.h>`__
+-  `iwl-3945-debug.h <en/users/Drivers/iwl3945/kerneldoc/iwl-3945-debug.h>`__
+-  `iwl-3945.h <en/users/Drivers/iwl3945/kerneldoc/iwl-3945.h>`__
+-  `iwl-3945-hw.h <en/users/Drivers/iwl3945/kerneldoc/iwl-3945-hw.h>`__
+-  `iwl-3945-io.h <en/users/Drivers/iwl3945/kerneldoc/iwl-3945-io.h>`__
+-  `iwl-3945-rs.c <en/users/Drivers/iwl3945/kerneldoc/iwl-3945-rs.c>`__
+-  `iwl-3945-rs.h <en/users/Drivers/iwl3945/kerneldoc/iwl-3945-rs.h>`__
+-  `iwl-helpers.h <en/users/Drivers/iwl3945/kerneldoc/iwl-helpers.h>`__
+-  `iwl-prph.h <en/users/Drivers/iwl3945/kerneldoc/iwl-prph.h>`__
+-  `iwl-spectrum.h <en/users/Drivers/iwl3945/kerneldoc/iwl-spectrum.h>`__

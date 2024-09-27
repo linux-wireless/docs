@@ -1,2 +1,0 @@
-
-Please see [[http://moinmo.in/SyntaxReference|http://moinmo.in/SyntaxReference]] instead. 

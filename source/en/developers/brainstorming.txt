@@ -1,4 +1,0 @@
-
-  * [[en/developers/Brainstorming/WPS-client|/WPS-client]] 
-  * [[en/developers/Brainstorming/WPS-AP|/WPS-AP]] 
-  * [[en/developers/Brainstorming/AP-bufferbloat-problem|/AP-bufferbloat-problem]] 

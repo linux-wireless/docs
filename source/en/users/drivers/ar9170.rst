@@ -1,0 +1,102 @@
+Go back –> :doc:`Atheros Linux wireless drivers <atheros>`
+
+ar9170
+------
+
+ar9170usb is a GPL driver for the Atheros 802.11n USB chipset (AR9170).
+
+**This driver is deprecated and it was deleted on Linux 3.0**, replaced by :doc:`carl9170 <carl9170>`.
+
+See also :doc:`otus <otus>`, the driver which ar9170 is based on, and :doc:`carl9170 <carl9170>` which drives same hardware.
+
+caveats
+-------
+
+Before you can use the hardware, you have to :doc:`get the the right firmware <ar9170>`.
+
+device driver
+-------------
+
+ar9170 will be part of the 2.6.31 kernel release but new updates (such as AVM Fritz support, and support for the one stage open source firmware) will be available until 2.6.32. You can however get the latest ar9170 driver, as targeted in the wireless-testing development tree by using :doc:`git to get wireless-testing <../../developers/documentation/git-guide>` directly or by using the :doc:`compat-wireless <../download>` tarball which will get you only the wireless drivers.
+
+open firmware
+-------------
+
+Firmware is open! Go check the :doc:`ar9170.fw <ar9170.fw>` page.
+
+.. image:: /anchor/firmware
+   :alt: firmware
+
+official device firmware
+------------------------
+
+You have to pick the right one, download and put it into the *right place*. Normally this should be /lib/firmware. However some distributions put firmware in a different place.
+
+-  **one stage**: *adds support for AVM FRITZ!WLAN USB Stick N and AVM FRITZ!WLAN USB Stick 2.4*
+-   \* *Download* `ar9170.fw <http://www.kernel.org/pub/linux/kernel/people/mcgrof/firmware/ar9170/ar9170.fw>`__ *and put it into the right place.*
+
+.. list-table::
+
+   - 
+
+      - **firmware checksums**
+      - 
+   - 
+
+      - *filename*
+      - *md5sum*
+   - 
+
+      - ar9170.fw
+      - 34feec4ec0eae3bb92c7c1ea2dfb4530
+
+-   **two stage**: *legacy firmware*
+-   \* The firmware files are included in the `firmware tree <http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git>`__. *Download* `ar9170-1.fw <http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=ar9170-1.fw>`__\ *,* `ar9170-2.fw <http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=ar9170-2.fw>`__ *and put them into the right place.*
+
+.. list-table::
+
+   - 
+
+      - **firmware checksums**
+      - 
+   - 
+
+      - *filename*
+      - *md5sum*
+   - 
+
+      - ar9170-1.fw
+      - bebf8de7bf0aa8ae3eb395cc6be2e762
+   - 
+
+      - ar9170-2.fw
+      - 33ae4899340c75be4bc80c34fbe5d171
+
+available devices
+-----------------
+
+features
+--------
+
+-   \* 802.11abgn/bgn (depending on hardware)
+-   \* 1 or 2 spatial streams for 802.11n (depending on hardware)
+
+working
+~~~~~~~
+
+-   \* 802.11 a/b/g
+-   \* Ad-hoc, monitor and station mode
+-   \* Cryptographic accelerator in station mode
+-   \* SoftLEDs
+
+not working yet
+~~~~~~~~~~~~~~~
+
+-   \* Cryptographic accelerator in Ad-hoc mode
+-   \* Adaptive Noise Immunity
+-   \* Lots of other things
+
+Sharing code between drivers
+----------------------------
+
+ar9170 makes use of :doc:`ath.ko module <ath>` for help with regulatory.

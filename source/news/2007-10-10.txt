@@ -1,5 +1,0 @@
-
-
-==== October 10, 2007 ====
-
-[[http://kernelnewbies.org/Linux_2_6_23|Linux 2.6.23]] was released today. On the wireless front, a variety of fixes and improvements were contributed all over the place. The biggest news items are the inclusion of the **rtl8187** driver, which supports USB devices based on the RTL8187 chipset, and **zd1211rw** enhancements to support devices based on the Atheros AR5007UG USB chipset. 

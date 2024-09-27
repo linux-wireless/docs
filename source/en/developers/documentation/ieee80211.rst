@@ -1,0 +1,18 @@
+IEEE-802.11 Standards
+---------------------
+
+Linux supports a variety of devices which were designed to support an array of IEEE-802.11 standards.
+
+-  `Download some IEEE-802.11 standards for free <http://standards.ieee.org/getieee802/802.11.html>`__: consists of standards after they have been published in PDF format after twelve months.
+-  `Purchase new or draft IEEE-802.11 standards <https://sbwsweb.ieee.org/ecustomercme_enu/start.swe?SWECmd=Login&SWECM=S&SWEHo=sbwsweb.ieee.org>`__: draft standards or new standards
+
+Our own IEEE-802.11 interpretations
+-----------------------------------
+
+Here we list a few of our 802.11 standards interpretations to help development. Please feel free to add new sections, interpretations or simply add links to help with development.
+
+::
+
+     * [[en/developers/Documentation/ieee80211/power-savings|Power Savings]]: IEEE-802.11 was designed with power saving in mind for stations. This section tries to summarize what the standard defines for all aspects of power saving. Its work in progress. 
+     * [[en/developers/Documentation/ieee80211/802.11n|802.11n]]: This section tries to summarize crucial aspects of 802.11n for [[en/developers/Documentation/mac80211|mac80211]] development. 
+     * [[en/developers/Documentation/ieee80211/802.11s|802.11s]]: This section tries to summarize 802.11s (in draft) for [[en/developers/Documentation/mac80211|mac80211]] development. 

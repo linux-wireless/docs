@@ -1,7 +1,0 @@
-
-
-===== wicd =====
-
-Simple GUI wireless manager 
-
-[[http://wicd.sourceforge.net/|http://wicd.sourceforge.net/]] 

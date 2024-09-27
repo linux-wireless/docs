@@ -1,0 +1,18 @@
+July 22, 2011
+~~~~~~~~~~~~~
+
+With a little delay, Linus released `3.0 <http://kernelnewbies.org/Linux_3.0>`__. Besides numbering change, this version contains some interesting wireless changes :)
+
+-  ar9170usb: remove driver (replaced by carl9170)
+-  ath6kl: add support for AR6003 v2.1.1
+-  ath9k_htc: add AP and P2P modes
+-  ath9k_hw: support for AR9340
+-  b43: fix DMA problems on some LP-PHY cards
+-  iwlagn: fix performance regression since 2.6.35 (use cts-to-self protection)
+-  iwlagn: support for new 105 series devices
+-  rt2860sta: remove driver (replaced by mainline rt2800pci)
+-  rt2870sta: remove driver (replaced by mainline rt2800usb)
+-  rt2x00: Initial support for RT5370 USB devices
+-  rt2x00: Enable support for RT53xx PCI devices by default
+-  rt2x00: RT33xx device support is no longer experimental
+-  rtlwifi: support for RTL8192SE chips added

@@ -1,0 +1,6 @@
+July 8, 2007
+~~~~~~~~~~~~
+
+Linux 2.6.22, released today, features the initial inclusion of `mac80211 <en/developers/mac80211>`__, the upcoming unified Linux wireless stack which will be shared between a number of drivers. No drivers in this kernel release use mac80211, but existing drivers will be ported and new drivers will be added later.
+
+Alongside the usual rounds of driver updates and fixes, the Marvell Libertas 8388 USB-wireless driver was added, which drives the hardware in the `OLPC laptop <http://www.laptop.org>`__.

@@ -1,0 +1,3 @@
+-  :doc:`Howto <p2p/howto>`
+-  :doc:`Stack Overview <p2p/overview>`
+-  :doc:`Design notes on dedicated P2P interface API <p2p/p2p-interface-notes>`

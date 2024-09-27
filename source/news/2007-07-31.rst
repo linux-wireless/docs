@@ -1,0 +1,4 @@
+July 31, 2007
+~~~~~~~~~~~~~
+
+The `Software Freedom Law Center <http://www.softwarefreedom.org>`__ has published a statement clearing legal uncertainty of the reverse-engineered OpenHAL code used to drive Atheros PCI hardware. This is a significant step in the journey to support Atheros PCI wireless hardware in mainline Linux. `Read the full statement here <http://www.softwarefreedom.org/news/2007/jul/31/openhal/>`__.

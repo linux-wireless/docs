@@ -1,4 +1,0 @@
-
-  * [[en/developers/p2p/howto|Howto]] 
-  * [[en/developers/p2p/overview|Stack Overview]] 
-  * [[en/developers/p2p/p2p-interface-notes|Design notes on dedicated P2P interface API]] 

@@ -1,0 +1,15 @@
+Things are have done for test
+-----------------------------
+
+-  :doc:`wifi-test <testing/wifi-test>`
+
+Some things we could do for testing:
+
+::
+
+     * [[en/developers/Testing/pseudo-driver|mac80211 userspace pseudo-driver]] 
+
+User Mode Linux setup notes
+---------------------------
+
+Using the Ubuntu x86_64 fs from `http:uml.nagafix.co.uk/filesystems/]]. \* [[http:\ blog.o-x-t.com/2008/05/09/ttys-killed-on-ubuntu-hardy-heron-vps/\|http://blog.o-x-t.com/2008/05/09/ttys-killed-on-ubuntu-hardy-heron-vps/ <http://uml.nagafix.co.uk/filesystems/>`__

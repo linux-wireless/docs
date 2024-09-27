@@ -1,0 +1,10 @@
+March 10th, 2008
+~~~~~~~~~~~~~~~~
+
+On February 14, 2008 `John Linville <http://people.redhat.com/linville/>`__ `announced a new git tree <http://thread.gmane.org/gmane.linux.kernel.wireless.general/11358>`__, the `wireless-testing.git tree <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=summary>`__, "created to replace the usage of the former 'everything' branch". As it stands, there is *no more #everything branch in wireless-2.6.git tree*. Users and developers should rely on wireless-testing.git for the bleeding edge Linux wireless developments. *The wireless-testing.git tree should be used as the primary development target*. New git URL:
+
+::
+
+   git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-testing.git
+
+To learn how check this tree out, and a general overview of git please see our :doc:`Linux wireless git-guide <../en/developers/documentation/git-guide>`. To see the latest changes made on this tree check out the :doc:`wireless-testing.git ChangeLog <../en/developers/documentation>`

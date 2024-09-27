@@ -1,0 +1,18 @@
+March 15, 2011
+~~~~~~~~~~~~~~
+
+`2.6.38 <http://kernelnewbies.org/Linux_2_6_38>`__ has been released on March 15.
+
+Worth noting changes:
+
+-  ath5k: AHB bus support (AR231X?)
+-  ath9k: fix power problems of certain 3 stream chipsets
+-  b43: experimental support for N-PHY devices
+-  b43legacy: fix false positive rfkill check
+-  iwlagn: use both TX chains on some 6250 with faulty EEPROM
+-  iwlwifi: use second RX chain when possible (devices with one TX were affected)
+-  iwlwifi: advance power management for 6000g2b and up
+-  rt2x00: fix hw crypto for WPA TKIP (Michael MIC failures)
+-  rt2x00: support for RT3370/RT3390 devices
+-  rt2x00: fix hw crypto in AP mode for older devices (e.g. rt73usb)
+-  rtl8192ce: add new driver

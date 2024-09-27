@@ -1,0 +1,4 @@
+adm8211
+-------
+
+adm8211 is a mac80211 driver for PCI/mini-PCI/Cardbus 802.11b chips ADMtek/Infineon ADM8211A, ADM8211B, and ADM8211C.

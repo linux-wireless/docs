@@ -1,0 +1,2 @@
+-  en/vendors/VendorSupport
+-  en/vendors/DriverDevelopment

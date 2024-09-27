@@ -1,8 +1,0 @@
-
-Go back –> [[en/users/Drivers-bluetooth|Linux Bluetooth drivers]] 
-
-
-===== Atheros Linux Bluetooth drivers =====
-
-This page documents all [[http://www.atheros.com/|Atheros Communications]] Linux Bluetooth drivers. 
-  * [[en/users/Drivers/ath3k|ath3k]] - USB AR3011, and UART AR3001 

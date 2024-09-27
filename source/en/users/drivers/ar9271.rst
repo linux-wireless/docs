@@ -1,0 +1,1 @@
+You're probably looking for :doc:`ath9k_htc <ath9k_htc>`.

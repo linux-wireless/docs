@@ -1,0 +1,407 @@
+For relicensing, the content of this page was removed.
+
+The old website for now has a copy of the old content:
+
+http://linuxwireless.sipsolutions.net/en/users/Drivers/b43/
+
+**b43** and **b43legacy** are wireless drivers for Broadcom :doc:`SoftMAC <../../developers/documentation/glossary>` chipsets. Kernel will automatically pick a proper module for you:
+
+-  **b43** for any new (supported) hardware
+-  **b43legacy** for BCM4301 and early BCM4306 versions
+
+Summary
+-------
+
+-  You need to have firmware files (usually in ``/lib/firmware/``) so **b43(legacy)** can upload them to the card and run properly.
+-  For :doc:`FullMAC <../../developers/documentation/glossary>` devices support see :doc:`brcmfmac <brcm80211>` and :doc:`rndis_wlan <rndis_wlan>`
+
+Known problems & limitations
+----------------------------
+
+-  Some stalls (on G-PHY only?) possibly related to CCK vs. OFDM, see `WRT54g / b43 / mac802.11 BREAKTHROUGH <https://lists.openwrt.org/pipermail/openwrt-devel/2012-August/016432.html>`__
+-  N-PHY: 5 GHz support requires kernel 3.17+
+-  HT-PHY: no support for 5 GHz
+-  No support for 802.11n features (HT, aggregation, 40 MHz width)
+
+Resolved problems
+-----------------
+
+-  G-PHY devices: not working with kernels 3.15 and 3.16-rc1 (a regression). This was fixed in 3.15.5 (`6f3f164 <https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/commit/?h=linux-3.15.y&id=6f3f164bd0efe9a090cd74e08d6195c95024a1d1>`__) and 3.16-rc3 (`2fc68eb <http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=2fc68eb122c7ea6cd5be1fe7d6650c0beb2f4f40>`__).
+-  Scanning/connectivity problems: caused by **b43** bug exposed with kernel 3.8 (by `0172bb7 <http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=0172bb75073e11a5aa9d8a953bdaefb8709f00c8>`__). Fixed in kernel 3.14 (by `64e5acb <http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=64e5acb09ca6b50c97299cff9ef51299470b29f2>`__) and backported to 3.13.2, 3.12.10, 3.10.29.
+
+List of hardware
+----------------
+
+To check for a present hardware model execute following command:
+
+::
+
+   lspci -nn -d 14e4:
+
+If the chipset isn't listed, check if it's connected via SSB (Sonics Silicon Backplane). Such connected chipsets only become visible after the ``ssb`` kernel module has been loaded.
+
+Please look carefully at device ID and chipset name.
+
+.. list-table::
+   :header-rows: 1
+
+   - 
+
+      - PCI-ID
+      - Supported?
+      - Chip ID
+      - Modes
+      - PHY version
+      - Alternative
+   - 
+
+      - 14e4:0576
+      - not tested
+      - BCM43224
+      - a/b/g/n
+      - ?
+      - brcm80211
+   - 
+
+      - 14e4:4301
+      - yes (b43legacy)
+      - BCM4301
+      - b
+      - B
+      - 
+   - 
+
+      - 14e4:4306
+      - yes (b43legacy)
+      - BCM4306/2
+      - b/g
+      - G
+      - 
+   - 
+
+      - 14e4:4307
+      - yes
+      - BCM4306/3
+      - b/g
+      - G
+      - 
+   - 
+
+      - 14e4:4311
+      - yes
+      - BCM4311
+      - b/g
+      - G
+      - wl
+   - 
+
+      - 14e4:4312
+      - yes
+      - BCM4311
+      - a/b/g
+      - G (r8)
+      - wl
+   - 
+
+      - 14e4:4313
+      - not tested
+      - BCM4311
+      - a
+      - ?
+      - wl
+   - 
+
+      - :::
+      - no
+      - BCM4313
+      - b/g/n
+      - LCN (r1)
+      - brcm80211
+   - 
+
+      - 14e4:4315
+      - yes
+      - BCM4312
+      - b/g
+      - LP (r1)
+      - wl
+   - 
+
+      - 14e4:4318
+      - yes
+      - BCM4318
+      - b/g
+      - G (r7)
+      - 
+   - 
+
+      - 14e4:4319
+      - yes
+      - BCM4318
+      - a/b/g
+      - G
+      - 
+   - 
+
+      - 14e4:4320
+      - yes (b43legacy)
+      - BCM4306/2
+      - b/g
+      - G (r1)
+      - 
+   - 
+
+      - :::
+      - yes
+      - BCM4306/3
+      - ?
+      - G (r2)
+      - 
+   - 
+
+      - 14e4:4321
+      - partially
+      - BCM4321
+      - ?
+      - N (r2)
+      - 
+   - 
+
+      - 14e4:4322
+      - yes (3.18+)
+      - BCM4322
+      - b/g/n
+      - N (r4)
+      - 
+   - 
+
+      - 14e4:4324
+      - yes (b43legacy)
+      - BCM4306
+      - a/b/g
+      - G (r1)
+      - 
+   - 
+
+      - :::
+      - yes
+      - BCM4306/3
+      - a/b/g
+      - G (r5)
+      - 
+   - 
+
+      - 14e4:4325
+      - yes (b43legacy)
+      - BCM4306/2
+      - b/g
+      - G (r1)
+      - 
+   - 
+
+      - 14e4:4328
+      - partially
+      - BCM4321
+      - a/b/g/n
+      - N (r2)
+      - wl
+   - 
+
+      - 14e4:4329
+      - partially
+      - BCM4321
+      - b/g/n
+      - N (r1)
+      - wl
+   - 
+
+      - 14e4:432a
+      - not tested
+      - BCM4321
+      - a/n
+      - N
+      - wl
+   - 
+
+      - 14e4:432b
+      - partially
+      - BCM4322
+      - a/b/g/n
+      - N (r4)
+      - wl
+   - 
+
+      - 14e4:432c
+      - yes
+      - BCM4322
+      - b/g/n
+      - N
+      - wl
+   - 
+
+      - 14e4:432d
+      - not tested
+      - BCM4322
+      - a/n
+      - N
+      - wl
+   - 
+
+      - 14e4:4331
+      - yes (3.2-rc3+)
+      - BCM4331
+      - a/b/g/n
+      - HT (r1)
+      - wl
+   - 
+
+      - 14e4:4350
+      - yes (3.8+)
+      - BCM43222
+      - a/b/g/n
+      - N (r6)
+      - 
+   - 
+
+      - 14e4:4353
+      - yes (3.1+)
+      - BCM43224
+      - a/b/g/n
+      - N (r6)
+      - wl/brcm80211
+   - 
+
+      - 14e4:4357
+      - yes (3.1+)
+      - BCM43225
+      - b/g/n
+      - N (r6)
+      - wl/brcm80211
+   - 
+
+      - 14e4:4358
+      - yes (3.17+)
+      - BCM43227
+      - b/g/n
+      - N (r16)
+      - wl
+   - 
+
+      - 14e4:4359
+      - yes (3.17+)
+      - BCM43228
+      - a/b/g/n
+      - N (r16)
+      - wl
+   - 
+
+      - 14e4:4360
+      - no
+      - BCM4360
+      - ?
+      - AC (r1)
+      - 
+   - 
+
+      - 14e4:4365
+      - no
+      - BCM43142
+      - b/g/n
+      - LCN40 (r3)
+      - wl
+   - 
+
+      - 14e4:43a0
+      - no
+      - BCM4360
+      - a/b/g/n/ac
+      - AC?
+      - wl
+   - 
+
+      - :::
+      - no
+      - BCM4352
+      - a/b/g/n/ac
+      - ?
+      - wl
+   - 
+
+      - 14e4:43a9
+      - yes (3.17+)
+      - BCM43217
+      - b/g/n
+      - N (r17)
+      - 
+   - 
+
+      - 14e4:43aa
+      - yes (3.17+)
+      - BCM43131
+      - b/g/n
+      - N (r17)
+      - 
+   - 
+
+      - 14e4:43b1
+      - no
+      - BCM4352
+      - a/b/g/n/ac
+      - AC (r3)
+      - 
+   - 
+
+      - 14e4:4727
+      - no
+      - BCM4313
+      - b/g/n
+      - LCN (r1)
+      - wl/brcm80211
+   - 
+
+      - 14e4:a8d6
+      - not tested
+      - BCM43222
+      - ?
+      - N (6)
+      - 
+   - 
+
+      - 14e4:a8d8
+      - yes (3.6+)
+      - BCM43224
+      - a/b/g/n
+      - N (r6)
+      - brcm80211
+   - 
+
+      - :::
+      - yes (3.6+)
+      - BCM43225
+      - ?
+      - N (r6)
+      - brcm80211
+   - 
+
+      - 14e4:a8db
+      - partially (3.18+)
+      - BCM43217
+      - b/g/n
+      - N (r17)
+      - 
+   - 
+
+      - 14e4:a99d
+      - not tested
+      - BCM43421?
+      - ?
+      - ?
+      - 
+
+Contact
+-------
+
+-  For instant contact you can try #bcm-users channel in IRC freenode network. Please note the limited activity and that you may need to wait for an answer.
+-  As a more reliable way you can use `b43-dev mailing list <http://lists.infradead.org/mailman/listinfo/b43-dev>`__.
+
+In case of any problem, please start with providing hardware model (including ID) and description of the issue.

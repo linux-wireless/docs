@@ -1,0 +1,31 @@
+iwl4965
+-------
+
+Intel maintains the iwl4965 driver. Their Linux driver project site is:
+
+http://www.intellinuxwireless.org/
+
+firmware
+--------
+
+You can get the firmware for iwl4965 from:
+
+http://www.intellinuxwireless.org/?p=iwlwifi&n=downloads
+
+kerneldoc
+---------
+
+There is plenty of documentation for the iwl4965:
+
+-  `iwl4965-base.c <en/users/Drivers/iwl4965/kerneldoc/iwl4965-base.c>`__
+-  `iwl-4965.c <en/users/Drivers/iwl4965/kerneldoc/iwl-4965.c>`__
+-  `iwl-4965-commands.h <en/users/Drivers/iwl4965/kerneldoc/iwl-4965-commands.h>`__
+-  `iwl-4965-debug.h <en/users/Drivers/iwl4965/kerneldoc/iwl-4965-debug.h>`__
+-  `iwl-4965.h <en/users/Drivers/iwl4965/kerneldoc/iwl-4965.h>`__
+-  `iwl-4965-hw.h <en/users/Drivers/iwl4965/kerneldoc/iwl-4965-hw.h>`__
+-  `iwl-4965-io.h <en/users/Drivers/iwl4965/kerneldoc/iwl-4965-io.h>`__
+-  `iwl-4965-rs.c <en/users/Drivers/iwl4965/kerneldoc/iwl-4965-rs.c>`__
+-  `iwl-4965-rs.h <en/users/Drivers/iwl4965/kerneldoc/iwl-4965-rs.h>`__
+-  `iwl-helpers.h <en/users/Drivers/iwl4965/kerneldoc/iwl-helpers.h>`__
+-  `iwl-prph.h <en/users/Drivers/iwl4965/kerneldoc/iwl-prph.h>`__
+-  `iwl-spectrum.h <en/users/Drivers/iwl4965/kerneldoc/iwl-spectrum.h>`__

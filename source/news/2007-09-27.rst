@@ -1,0 +1,14 @@
+September 27, 2007
+~~~~~~~~~~~~~~~~~~
+
+The `Software Freedom Law Center <http://www.softwarefreedom.org>`__ has published a new statement which as per `MadWifi's press release <http://madwifi-project.org/wiki/news/20070927/sflc-helps-ath5k-developers-contribute-back>`__:
+
+-  *"... this should once and for all clear up any doubts about licensing practices we have used and details of provenance of code since the project's start all the way down to our current ath5k driver code.".*
+
+Additionally, the press release states that
+
+::
+
+     * //"The audit confirms that fixes and improvements to work derived from OpenBSD's ar5k - specifically what is in the [[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-legacy.git;a=commit;h=c1928199c27de433d1e81b78e3178be4f0e978d2|wireless-legacy repository now]] - can safely be contributed back."// 
+
+As per the advice from SFLC new guidelines have been posted about about `sending patches for Linux-wireless <en/developers/SubmittingPatches>`__. To help keep track of changes under permissive licenses a new ```Changes-licensed-under`` <en/developers/SubmittingPatches>`__ tag is being introduced. Additionally we would like to request developers to subscribe to the `guidelines page for submitting patches <en/developers/SubmittingPatches>`__ to receive diffs of changes to this guide so we're all on the same page.

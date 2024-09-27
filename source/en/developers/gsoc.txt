@@ -1,9 +1,0 @@
-
-
-===== Linux wireless Google Summer of Code page =====
-
-Here you will find our Google Summer of Code (GSoC) projects. 
-  * [[en/developers/GSoC/2009|2009]] 
-  * [[en/developers/GSoC/2010|2010]] 
-  * [[en/developers/GSoC/2011|2011]] 
-  * [[en/developers/GSoC/2012|2012]] 

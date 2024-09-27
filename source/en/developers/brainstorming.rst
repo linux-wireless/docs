@@ -1,0 +1,3 @@
+-  :doc:`/WPS-client <brainstorming/wps-client>`
+-  :doc:`/WPS-AP <brainstorming/wps-ap>`
+-  :doc:`/AP-bufferbloat-problem <brainstorming/ap-bufferbloat-problem>`
