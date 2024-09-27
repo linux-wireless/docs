@@ -1,0 +1,572 @@
+18:00 < *mcgrof> We're going to start the DFS IRC meeting now, for more details please check: http://wireless.kernel.org/en/developers/DFS
+18:00 < johill> mcgrof: btw, this might be relevant for off-channel TDLS too
+18:01 -!- orbiter [~kgiori@mail.atheros.com] has joined #linux-wireless
+18:01 < *mcgrof> johill: oh yeah?
+18:01 < *mcgrof> johill: TDLS uses some DFS concepts?
+18:01 -!- orbiter is now known as stella
+18:01 < *bschmidt> hi there
+18:01 < johill> if it's a dfs channel then you need it
+18:01 -!- stella is now known as Guest92870
+18:02 < *mcgrof> so I will admit I haven't yet reviewed the 802.11 stack components to DFS but I started poking yesterday at the code we have at Atheros on the core driver, and also reviewed the docs we have
+18:02 < johill> need a DFS owner then
+18:02 < *mcgrof> johill: ah ok
+18:02 < *mcgrof> johill: makes sense
+18:02 -!- jigrap` [~jigrap@174-140-96-143-dhcp.mia.fl.atlanticbb.net] has quit [Read error: Connection reset by peer]
+18:02 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has joined #linux-wireless
+18:02 < johill> mcgrof: so I know that broadcom's chip will give you raw pulse data
+18:02 -!- Guest92870 is now known as kgiori
+18:02 < *mcgrof> so I'd like to identify the components of software that need to be written and at least decide where we want to stuff it
+18:02 < johill> mcgrof: and you have to actually detect whether it's a radar in sw
+18:03 -!- jigrap [~jigrap@174-140-96-143-dhcp.mia.fl.atlanticbb.net] has joined #linux-wireless
+18:03 < *mcgrof> johill: does intel not have any DFS support?
+18:03 < johill> I'm not aware
+18:03 < *bschmidt> mcgrof: great
+18:03 < *mcgrof> ok so so far it would likely be just Atheros hardware
+18:03 < *mcgrof> for a good while
+18:03 < *mcgrof> I don't expect broadcom to step in and add DFS support
+18:04 < *bschmidt> mcgrof: about the wiki page, you've updated the infos?
+18:04 < *mcgrof> and marvel, bleh
+18:04 < *mcgrof> bschmidt: yeah
+18:04 < *mcgrof> bschmidt: did you see?
+18:04 < johill> mcgrof: yeah true
+18:04 < *bschmidt> well the etsi signals are still from an old version of the std
+18:05 < *mcgrof> bschmidt: ah, well feel free to update it
+18:05 < *mcgrof> bschmidt: its a wiki after all
+18:05 < *bschmidt> will do so
+18:05 < *gxk1> mcgrof: TI wants to step in too.
+18:06 -!- jigrap [~jigrap@174-140-96-143-dhcp.mia.fl.atlanticbb.net] has quit [Remote host closed the connection]
+18:06 < johill> do we know what driver interfaces we have?
+18:06 < johill> I mean device, sorry
+18:06 -!- ivdoorn [~ivd@62-177-162-130.dsl.bbeyond.nl] has quit [Remote host closed the connection]
+18:06 < *mcgrof> so after we program hw to detect soe sort of pulses, we get some interrupts, update stats, and if the stats analysis tells us we likely have a radar signal, then we send an event
+18:06 < *mcgrof> gxk1: is this an assumption or statement?
+18:06 < johill> it's probably going to be different, so some devices will say "here's radar" while others will need programming, while others again like bcom need sw to detect it
+18:06 < *mcgrof> ah yeah
+18:06 -!- jigrap [~jigrap@174-140-96-143-dhcp.mia.fl.atlanticbb.net] has joined #linux-wireless
+18:06 -!- jigrap [~jigrap@174-140-96-143-dhcp.mia.fl.atlanticbb.net] has quit [Read error: Connection reset by peer]
+18:06 < *gxk1> mcgrof: statement.
+18:06 < *mcgrof> before we get into the events we need to figure out how to program the DFS parameters
+18:07 < *mcgrof> gxk1: neat! Are you from TI?
+18:07 < *mcgrof> the table on the wiki right now comes from Atheros docs, so likely we use thse during programming in one way or another, but this does need some review
+18:07 < *mcgrof> gxk1: do the values look familiar to you guys? http://wireless.kernel.org/en/developers/DFS
+18:07 < *gxk1> mcgrof: Yes. I am Gery. remember me from SF-2010?
+18:07 < johill> mcgrof: so you program tables into the hw and the he then checks things?
+18:08 < *mcgrof> maybe we can settle on that first
+18:08 < *mcgrof> gxk1: ah ok yeah
+18:08 < johill> mcgrof: I'm pretty sure bcom tells you signal peaks w/o any hw programming
+18:08 < *mcgrof> johill: no, your stuff parameters into hw, then hw will send interrupts when it detects some pattern, we won't know we hit the radar pattern until a collection of stats indicate that we did
+18:08 -!- jigrap [~jigrap@174-140-96-143-dhcp.mia.fl.atlanticbb.net] has joined #linux-wireless
+18:08 < *mcgrof> johill: at least this is my understanding so far
+18:08 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has quit [Ping timeout: 276 seconds]
+18:09 < johill> mcgrof: ok so different hw design
+18:09 < *bschmidt> mcgrof, correct, for atheros hw
+18:09 < *mcgrof> johill: well signal peaks are likely parts of a radar signal no?
+18:09 < *mcgrof> bschmidt: ok
+18:09 < johill> mcgrof: yeah but you don't know if they're just random, so you need to do pattern matching on them in sw
+18:09 < *bschmidt> mcgrof: you get one event for every pulse, a series of pulses makes a pattern aka radar signal
+18:10 < *mcgrof> I mean, think about it, how can you determine if a radar signal was receive dif all the regulatory bodies gives us are ranges on possible signals?
+18:10 < *mcgrof> and the signals are encompassed through time
+18:10 < *mcgrof> johill: right
+18:10 < johill> yeah pulse, not peak, I'm not familiar with this terminology
+18:10 < *mcgrof> me neither :)
+18:11 < *mcgrof> gxk1: this sound similar to what TI does?
+18:11 < *mcgrof> gxk1: would you guys do this for a mobile chipset or a regular one?
+18:11 -!- nbd [~nbd@openwrt/developer/nbd] has joined #linux-wireless
+18:11 -!- markmentovai [~markmento@nat/google/x-yzezmefbgqtwwqer] has joined #linux-wireless
+18:11 < *mcgrof> nbd: so TI is interested in helping with DFS too BTW
+18:11 < johill> mcgrof: what's a regular chip?
+18:12 < *nbd> mcgrof: cool
+18:12 < *mcgrof> johill: heh, I guess non-mobile ?: )
+18:12 < *mcgrof> PCIE?
+18:12 < johill> mcgrof: where in TI's lineup do you see those? :)
+18:12 < *gxk1> mcgrof: It may goes that hw/fw alone decides how to detect radar, like full fw solution
+18:12 < *mcgrof> hehe.. good point
+18:12 < *mcgrof> gxk1: ok interesting, so how about hte DFS parameters
+18:13 < *mcgrof> gxk1: how do you guys update that?
+18:13 < johill> I guess it could tell you "EU radar" ;)
+18:13 < johill> firmware update?
+18:13 < johill> :)
+18:13 < *nbd> mcgrof: did i miss anything important? can you throw a log on pastebin?
+18:13 < *mcgrof> so does TI no tneed any DFS parameters from cfg80211?
+18:13 < johill> nbd: I'll do
+18:13 < *mcgrof> johill++
+18:14 < *gxk1> mcgrof: part of boot sequence and couple of separate commands during runtime
+18:14 < *mcgrof> gxk1: or can the firmware simply come up already DFS happy and ready to go out swinging with events?
+18:14 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has joined #linux-wireless
+18:14 < johill> nbd: http://paste.pocoo.org/raw/304823/
+18:15 < *mcgrof> johill: if I can trouble you for a paste dump for later so we can link to this on the wiki :)
+18:15 < *mcgrof> johill: or just the text file and I can dump it somewhere
+18:15 < johill> I'll give you a copy of my real logging w/o the linebreaks then
+18:15 < *mcgrof> thanks
+18:16 < *mcgrof> gxk1: maybe not sure at this point?
+18:16 < *gxk1> mcgrof: this is the best scenario :)
+18:16 < *mcgrof> gxk1: its ok we can get answers to these questions for next week maybe?
+18:16 -!- r0cktOd_ [~prashant@58.146.97.129] has joined #linux-wireless
+18:16 < *mcgrof> programming the DFS parameters will be the first thing we need to iron out
+18:16 < johill> how much do they vary?
+18:17 < *mcgrof> johill: I think per regulatory domain (3)
+18:17 < johill> it seems very hw dependent whether that's needed, and how to give them
+18:17 < *matteo> hi all
+18:17 < *mcgrof> well 3 regions
+18:17 < *nbd> mcgrof: what kind of DFS parameters are you thinking about?
+18:17 < *bschmidt> mcgrof: i still have the feeling that only the driver/fw itself should care about that we just throw a 'do readar dection on chan xy' at it
+18:17 < johill> are new reg regions likely to adopt other parameters?
+18:17 < *mcgrof> are we aware of any other regions other than FCC, ETSI and JP?
+18:17 < johill> bschmidt: yeah, I tend to agree
+18:17 -!- lorenzo_ [~lorenzo@93-32-35-117.ip31.fastwebnet.it] has joined #linux-wireless
+18:17 -!- lorenzo__ [~lorenzo@93-32-35-117.ip31.fastwebnet.it] has joined #linux-wireless
+18:18 < johill> and if the driver needs tables that must be updated, maybe it can requets those as "firmware"
+18:18 < *mcgrof> johill: I heard its possible, but have not heard of others, and if they do I think they will embrace the already existing standards in other regulatory bodies, not sure of any other than these 3 though
+18:18 < *bschmidt> the values are to highly hw dependend and probably must be handled on a per-device basis anyway
+18:18 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has quit [Ping timeout: 240 seconds]
+18:18 < *mcgrof> nbd: well so for example the Non-occupancy period
+18:18 < johill> bschmidt: well I guess one could imagine translating the regulatory rules into hw tables at runtime, but it seems not worht it
+18:18 -!- lorenzo_ [~lorenzo@93-32-35-117.ip31.fastwebnet.it] has quit [Client Quit]
+18:19 < *mcgrof> this is the time during which we cannot use a channel if we have already found out there is a radar signal on it
+18:19 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has joined #linux-wireless
+18:19 < *bschmidt> johill: ack
+18:19 < johill> yeah but that's different, we were mostly talking about the actual detection
+18:19 < *matteo> the CAC
+18:19 < *nbd> mcgrof: isn't it up to mac80211 to handle that?
+18:19 < *mcgrof> it seems like a lot of data and that we can come up with some generic values we can share and need to program at least
+18:19 < *mcgrof> nbd: oh well sure, but for example TI may have this in firmware
+18:20 < *mcgrof> nbd: can we query it?
+18:20 < *bschmidt> mcgrof: we have to care about that
+18:20 < *mcgrof> nbd: should we have a db.txt a la CRDA for this?
+18:20 < *bschmidt> err
+18:20 < *bschmidt> +dont
+18:20 < johill> mcgrof: we should probably embed some info there
+18:20 < *bschmidt> because it doesn't matter for the detection, only for the handling of detected events
+18:20 < *mcgrof> bschmidt: can you state what you meant again, I didn't get what you were trying to say
+18:21 < *bschmidt> the NOP, CAC, .. aren't relevant for radar detection, only for handling
+18:21 < *mcgrof> bschmidt: oh sure but they vary depending on regulatory domain no?
+18:21 < johill> yeah like I said -- we were talking about detection
+18:21 < johill> mcgrof: but they aren't programmed into the hw either
+18:21 < *mcgrof> ah I see
+18:21 < *bschmidt> exactly
+18:21 < *gxk1> bschmidt: how to remove channel from NOL list?
+18:22 < johill> so let's structure this a bit more
+18:22 < *mcgrof> gxk1: well how does TI do that? Does the firmware have the values for that based on the programmed regulatory domain?
+18:22 < *mcgrof> gxk1: in fact can you extract a regulatory domain from TI cardS?
+18:22 < johill> detection -- I guess the driver is told "do it please" and tells us "I detected foo"
+18:22 < *bschmidt> gxk1: there will be some queues/timers going over every channel
+18:22 < *gxk1> mcgrof: it is configurable.
+18:22 < *bschmidt> johill: ack
+18:22 < johill> or maybe the driver is told "please detect [etsi|fcc|jp]" and tells us when it happens
+18:23 -!- [florian] [~florian@openwrt/developer/florian] has quit [Read error: Operation timed out]
+18:23 -!- pupyldo [~pupy@85.155.140.87.dyn.user.ono.com] has joined #linux-wireless
+18:23 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has quit [Ping timeout: 240 seconds]
+18:23 < johill> if multiple drivers need to go from pulse lists to detection we can share that (cfg80211 or mac80211), but that's tangential and a technical detail
+18:23 < johill> (this would be bcom)
+18:23 -!- orospakr [~orospakr@mahoromatic.orospakr.ca] has quit [Ping timeout: 260 seconds]
+18:24 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has joined #linux-wireless
+18:24 < *mcgrof> gxk1: which parts, the regulatory domain or does the firmware also need to be told the Non-occupancy period for example?
+18:24 < *matteo> johill: you mean the automata which parses the pulse?
+18:24 < *nbd> yeah, we should share it only when we're sure that it makes sense to share it, so we should have a working implementation with driver-internal tables first
+18:24 < johill> I don't think we should worry about updating the actual detection waveforms etc.
+18:24 < johill> matteo: yes
+18:24 < *gxk1> mcgrof: fw doesn't care for regulatory domain and rules, like i said - configurable
+18:24 < johill> nbd: well ath9k doesn't need that automaton
+18:24 < johill> since apparently it's built into the hw
+18:25 < *pupy> is there anyway I can avoid log messages like this:  <7>wlan0: deauthenticated (Reason: 7)?
+18:25 < *bschmidt> johill: point is, that hw reports different (sometimes incorrect, by design) values, that can't be handled generally
+18:25 -!- [florian] [~florian@openwrt/developer/florian] has joined #linux-wireless
+18:25 < *matteo> johill: it just reports pulses?
+18:25 < *gxk1> mcgrof: need to check
+18:25 < *mcgrof> gxk1: ok for next week maybe ? :)
+18:25 < johill> bschmidt: right, err, so it does report pulses?
+18:25 < *pupy> with the consecuent disconnection from the accesspoint each 10 minutes or so?
+18:25 < *nbd> johill: the hw only reports pulses based on configurable parameters such as duration, energy level, etc.
+18:25 < *nbd> johill: everything beyond that is up to the software
+18:25 < johill> ok
+18:25 < *mcgrof> pupy: try coming back in an hour, we have a meeting
+18:25 < johill> but still ... we can share what makes sense once it works
+18:25 < *bschmidt> johill: yeah, some abstraction of pulses
+18:26 < johill> right
+18:26 < johill> so bcom's abstraction might differ, which would make sharing impractical
+18:26 < *bschmidt> exactly
+18:26 < *gxk1> mcgrof: yeh:)
+18:26 < *nbd> this will require extensive testing, atheros apparently had lots of trouble making a good tradeoff between false positives and false negatives with various chip generations
+18:26 < johill> so I guess the only question is whether we need to ask the driver to report any radar, or just one of fcc|etsi|jp|whatever 
+18:26 < *nbd> so there are definitely some hw specific aspects there that will make it hard to share pulse pattern matching automatons
+18:27 < *mcgrof> nbd: well so regarding that
+18:27 < *kgiori> dfs dudes - i just sent out some DFS docs to the e-mail list of folks invited to this chat - check your e-mail
+18:27 < johill> I suppose some driver would require the latter, and we should have the info, so we might as well ask it ... and if the driver doesn't need to know it can ignore that info
+18:27 < *bschmidt> johill: sounds about right, do we have that knowledge in cfg80211?
+18:27 < *nbd> johill: it makes sense to tell the driver about a radar type mask
+18:27 < johill> we have a regdomain, based on various things
+18:27 < *nbd> so that it can skip detection for radars that it does not need to look out for
+18:27 < johill> right
+18:27 < *nbd> reducing false positives
+18:27 < johill> we can solve that fairly easily, need to keep track of a bit more info
+18:28 < johill> maybe even add the type mask to regdb
+18:28 < *nbd> yeah
+18:28 -!- pupyldo [~pupy@85.155.140.87.dyn.user.ono.com] has quit [Ping timeout: 276 seconds]
+18:28 < johill> so yeah I guess - add type mask to regdb, tell driver about it
+18:28 < *mcgrof> for some hw I intend on disabling DFS by default and only allwing to be turned on if the parameters have been set / tested by a third party, we have no other option for some first generation hw
+18:28 < johill> potentially per channel, even if that doesn't make a lot of sense -- it might simplify the APIs involved
+18:29 < *mcgrof> or some kconfig option
+18:29 < johill> mcgrof: but that's a driver parameter
+18:29 < *mcgrof> johill: sure
+18:29 < *bschmidt> johill: we might need a per channel info anyway
+18:29 < johill> bschmidt: we definitely need where it's required
+18:29 < *mcgrof> do we want to group countries to DFS "regions" ?
+18:29 < johill> bschmidt: but it doesn't make a lot of sense to ask for fcc radars on 40, and etsi on 60 :)
+18:29 < *bschmidt> there are a few exception for channel ~5600 with NOL/CAC
+18:30 < *mcgrof> seems sloppy, but its what may make sense today...
+18:30 < *bschmidt> johill: that's true
+18:30 < johill> yeah but there we go into handling again
+18:30 < *gxk1> kgiori: am i on list? can't see email.
+18:30 < johill> mcgrof: I'd rather have a DFS-FCC, DFS-ETSI etc bit
+18:30 < *kgiori> gxkl - you are with TI?
+18:31 < *gxk1> kgiori: yes
+18:31 -!- crissi2 [~quassel@p54B6B204.dip.t-dialin.net] has quit [Read error: Connection reset by peer]
+18:31 < *kgiori> gxk1, can you have mcgrof send me your e-mail?
+18:31 < *bschmidt> kgiori: got it, thx
+18:31 < *mcgrof> gxk1: you can just give it to kgiori youreslf
+18:32 < johill> so let's talk about handling
+18:32 < johill> what do we need to do?
+18:32 < johill> manage a NOL mostly?
+18:32 < johill> s/a/the/
+18:32 < *bschmidt> yes, and defer sending any frames before CAC is over
+18:32 < johill> remind me what CAC is?
+18:32 < *bschmidt> channel availabilty check
+18:33 < johill> n/m
+18:33 < *mcgrof> Channel Availibility Check (CAC) Time: amount of time we should sit idle on a channel checking for radar pulses before initiating 802.11 frames on
+18:33 < *matteo> Channel Availibility Check
+18:33 < *matteo> 60 seconds IIRC
+18:33 < *mcgrof> radar pulses before initiating 802.11 frames on
+18:33 < *mcgrof> I think its really high now for FCC
+18:33 < *mcgrof> not sure
+18:33 < johill> when does this apply?
+18:33 < johill> whenever you go to a new channel?
+18:33 < *mcgrof> bring up
+18:33 < *bschmidt> mcgrof: it's 10min for weather channels in ETSI
+18:34 < johill> or whenever you use a channel that's not on the NOL?
+18:34 < *mcgrof> turn AP on
+18:34 < *gxk1> Did CAC depends on country?
+18:34 < *mcgrof> gxk1: region
+18:34 < *matteo> mcgrof: might apply on channel change as well IMHO
+18:34 < *kgiori> CAC for Wx radar has some new specs that can take up to 10 minutes to scan i've heard
+18:34 < *matteo> as there could be a radar acting
+18:34 < *bschmidt> it applies every time you try to send something on a channel
+18:34 < johill> well, surely not on every frame, so ..?
+18:34 < johill> is there like a monitoring requirement?
+18:35 < *bschmidt> yes there is
+18:35 < johill> if you haven't been on the channel for X seconds, wait CAC again?
+18:35 < *mcgrof> matteo: for sure, but note that I have read that the algorithm required for picking a new channel is supposed to be random
+18:35 < *mcgrof> I thought we could choose a smart algorithm, but some docs I read state random is required
+18:35 < *mcgrof> not sure whow they would test to proove randomness.. but  :)
+18:35 < *bschmidt> johill, a channel is marked 'free' if you've done CAC once, this 'free' is removed after 24h
+18:35 < *matteo> hehe
+18:35 < johill> bschmidt: ok
+18:35 -!- r0cktOd_ [~prashant@58.146.97.129] has quit [Read error: Connection reset by peer]
+18:36 < *mcgrof> kgiori: Wx meaning Weather radars?
+18:36 < johill> so we need something to keep track of this for pretty long periods of time
+18:36 < *mcgrof> johill: yeah..
+18:36 < *matteo> if you have a wifi link all devices jump to the same random channel
+18:36 < *mcgrof> we can certainly share this info
+18:36 < *matteo> or everyone jump to a random one and the link goes down?
+18:37 < *bschmidt> there channel switch announcements frames for that
+18:37 < *kgiori> mcgrof, yep, Wx = weather
+18:37 < *bschmidt> +are
+18:37 < *bschmidt> ap sends em and clients follow
+18:37 < *mcgrof> bschmidt: I think matteo meant if we had 2 802.11 cards on the same box
+18:37 < *bschmidt> oh, ok
+18:38 < *mcgrof> likely no other OS has handled these corner cases
+18:38 < *mcgrof> we'll be the first
+18:38 < johill> what about mobile stations?
+18:38 < *gxk1> It may be defined by AP which channel is alternative if NOL happenedd
+18:38 < *matteo> mcgrof: what the atheros does in HW and what should implemented in SW?
+18:38 < johill> matteo: hey let's talk about high level stuff
+18:38 < johill> matteo: you guys can discuss the nitty hw details later if you care
+18:38 < *mcgrof> yeah
+18:39 < *mcgrof> I'd like to at least decide on what needs to get done and where
+18:39 -!- pupy [~pupy@85.155.140.87.dyn.user.ono.com] has quit [Ping timeout: 240 seconds]
+18:39 < *mcgrof> and start doing things
+18:39 -!- crissi_ [~quassel@p54B6B204.dip.t-dialin.net] has joined #linux-wireless
+18:39 < johill> well you could start on detection now ;)
+18:39 < johill> anyhow
+18:39 < *mcgrof> seems we'll have at least a fw DFS solution and a complete SW solution
+18:39 < johill> I'm not sure we should/need to store the info to disk
+18:39 < *mcgrof> johill: which info?
+18:39 < johill> that seems worhtwhile for some cases, but dangerous in others
+18:39 < johill> the NOL
+18:40 < johill> and CAC check list
+18:40 < *bschmidt> i doubt that is worth for 1 min of scanning
+18:40 < johill> depends
+18:40 < johill> if you think about TDLS, it could be relevant
+18:40 < *mcgrof> johill: makes sense
+18:40 < johill> otoh you'd probably just start using a channel that's free
+18:41 < johill> and I'm worried about mobile stations
+18:41 < johill> hop into a plane, and arrive somewhere totally different w/in 24 hours
+18:41 < *jm_> I'm not sure whether TDLS (or P2P) use cases really can handle the long initial scan period..
+18:42 < johill> how long do you need per channel btw?
+18:42 < *jm_> something like 10 min or even 30 min scan before using a channel sounds like something that would be limited to enterprise like static AP networks..
+18:42 < johill> so maybe those APs should tell us :)
+18:42 < *kgiori> i like that idea
+18:42 < *jm_> I'm not sure whether you would be allowed to trust that
+18:42 < johill> yeah
+18:43 < *bschmidt> johill: 'undefined' as long as you can fulfill detection probability
+18:43 < johill> well if the AP is on the channel can you use it?
+18:43 < *bschmidt> yes, you can
+18:43 < *jm_> there are some cases where authorization is transferable, but maybe not all
+18:43 < *jm_> clients can obviously use the master device, but TDLS/P2P (and well, obviously AP) are master cases..
+18:43 < *kgiori> how about any device who performs a scan shares that knowledge in a beacon IE of some sort?
+18:43 < *bschmidt> johill: clients have an exception, sec, let me dig that up
+18:44 < johill> bschmidt: well yeah if you actually connect
+18:44 < *bschmidt> johill: so?
+18:44 < *mcgrof> regulatory language regarding master device requirements are strong about them being independent and have no language yet of being able to share regulatory info
+18:44 < johill> jm_: yeah but the CAC list could be primed with the channels that APs are on?
+18:44 < *jm_> there are examples like .11y where some devices can enable others to use a specific channel
+18:45 < johill> bschmidt: I'm probably conflating things .. but I thought each link had to have a DFS owner?
+18:45 < *jm_> johill: would need to verify whether that is allowed..
+18:45 < johill> jm_: ok ... of course you wouldn't know anything about NOL then
+18:45 < *bschmidt> johill: 'master' devices need to have dfs knowledge, whatever your master is
+18:46 -!- _twitch [~burning_a@64.112.96.58.static.exetel.com.au] has quit [Quit: _twitch]
+18:46 < *mcgrof> if we want to keep the NOL list in memory then it seems we need to keep it in mac80211
+18:46 < johill> mcgrof: cfg80211?
+18:46 < *mcgrof> or just send it to userspace and have userspace keept in memory
+18:46 < *jm_> johill: yeah.. I don't remember seeing anything advertising the channels on which a radar has been detected recently
+18:46 -!- Ionic [ionic@ionic.de] has quit [Excess Flood]
+18:46 < *mcgrof> johill: sure, or hostapd?
+18:46 < johill> jm_: right
+18:46 < johill> mcgrof: sucks for testing unless you store it to disk ;)
+18:47 < *mcgrof> johill: why is that?
+18:47 < johill> long startup time when you restart hostapd?
+18:47 < *jm_> for testing, I used to just set the timeout to something more "reasonable"... ;-)
+18:47 < johill> hehe
+18:47 < *jm_> for real use, I'm not sure I would like to see this stored on a medium that is easily modifiable
+18:47 < johill> well ok I guess after a few timse you know there's no weather radar near you ...
+18:47 -!- Ionic [ionic@ionic.de] has joined #linux-wireless
+18:48 < *bschmidt> johill: no, after a few times you definitely make sure to use another channel (customer reply)
+18:48 < johill> well we can keep it entirely in cfg80211, if we don't want to store it
+18:48 < *jm_> and maintaining state over reboots may not be desirable anyway
+18:48 < *jm_> or well, NOL could be stored, if desired
+18:48 < johill> could cut down testing time
+18:49 < johill> bschmidt: I mean if you've done the testing a few times
+18:49 < *matteo> storing in cfg80211 will be fine, if you restart the machine the timer will start again
+18:49 < *kgiori> but if NOL type data stored in hostapd, then perhaps more portable for different protocol architectures?
+18:49 < johill> kgiori: what do you mean?
+18:50 < *kgiori> i'm thinking other O/S implementations, maybe one of the BSDs
+18:50 < johill> ah
+18:50 < *kgiori> or maybe we don't care?
+18:50 < johill> well hostapd ports over, right?
+18:50 < *kgiori> yeah
+18:50 < *bschmidt> kgiori: bsd have that stuff, well at least freebsd
+18:50 < johill> sounds like a reasonable compromise tho
+18:50 < johill> store NOL, and tell the kernel
+18:50 < johill> have the kernel then maintain it and CAC list
+18:51 < *kgiori> jouni is mr hostapd, and he thought of this idea, not me :)
+18:51 < *kgiori> i think because P2P has required some change channel stuff or related features, so this might be a logical addition
+18:52 < *kgiori> would be better if jouni were here to describe
+18:52 < *mcgrof> ok so both? is that what we decided?
+18:52 < *mcgrof> to stuff it to cfg80211 in memory and also send it to hostapd?
+18:52 < *bschmidt> i don't have a strong opinion, fine with me
+18:53 < johill> well it needs to be queryable
+18:53 < *mcgrof> if we do both then hostapd just has to keep registered for events to make decisions
+18:53 < *kgiori> sure, but which one to trust for making subsequent decision on which random channel to go to next?
+18:53 < johill> but the kernel would maintain the CAC list so nobody overrides it?
+18:53 < *jm_> hostapd needs to know the list one way or another
+18:53 < johill> and the NOL list can be primed from userspace
+18:53 < *mcgrof> johill: you mean the NOL list?
+18:54 < *mcgrof> what's the CAC list?
+18:54 < johill> well, NOL I guess
+18:54 < johill> NOL list is list list :)
+18:54 < *mcgrof> hehe
+18:54 < *mcgrof> yeah good point
+18:54 < johill> by CAC list I mean the channels that have been checked and found no radar w/in CAC
+18:54 < *jm_> how quickly does that time out?
+18:54 < *jm_> i.e., would you really have such a list?
+18:54 < *mcgrof> good point
+18:55 < *bschmidt> no, CAC is just sleep(60)
+18:55 < *bschmidt> no list i mean
+18:55 < *jm_> is the 60ms value on wireless.kernel.org/en/developers/DFS typo?
+18:55 < *jm_> i.e. s/ms/s/ ?
+18:55 < *bschmidt> jm_: yes, and a few others, i'll correct those
+18:56 < *gxk1> channel in CAC list may be after number of retries
+18:56 < johill> but didn't you just say that you wouldn't re-check a channel for 24 hours?
+18:56 < *mcgrof> 24 hours? Geesh
+18:56 < *bschmidt> s,wouldn't,must be,
+18:56 < *bschmidt> err..
+18:56 < *bschmidt> well
+18:57 < *bschmidt> it must be rececked after 24h, but not within
+18:57 < johill> right
+18:57 < *kgiori> unfortunately, i have to run to another mtg. mcgrof can clue me in later. good chatting. let me know if you want to use IRC or the conf bridge when we chat again next week.
+18:57 < johill> so you have to keep track of which channels you checked
+18:57 < *jm_> what does rechecking here mean?
+18:57 < *matteo> it's like a "clear list"
+18:57 < *matteo> a whitelist
+18:57 < *jm_> if I start an AP and leave it running on the channel..
+18:57 < *mcgrof> it just sounds like using any DFS channel at all is just a bad idea :-P
+18:57 < johill> jm_: right then it's checking all the time, I guess
+18:57 < *jm_> i.e., wait 30 minutes in the beginning and then use it for five days
+18:57 < *jm_> where does this 24 hours come from?
+18:58 < johill> but do we not care about keeping the next channel?
+18:58 < johill> so you could check a few channels at startup, and have candidates?
+18:58 < *jm_> how long can I be away from the channel without having to run the initial non-occupancy period check?
+18:58 < johill> I thought that 24h was the answer to that
+18:58 < *bschmidt> johill: let me phrase it this way, there is a list of channels, each channel as flags CHECKED (with time of CAC), UNCHECKED, RADAR_DETECTED
+18:58 < *jm_> if the check is 30 min, I'm not sure I want to check multiple channels.. ;-)
+18:58 < johill> bschmidt: right
+18:59 < johill> the transition to detected is obvious
+18:59 < johill> the transition ot checked mostly too
+18:59 < johill> question is when do we transition from checked to unchecked
+18:59 < *mcgrof> johill: as soon as you leave no?
+18:59 < *bschmidt> johill: after 24h (if it's the current channel then CAC is required)
+19:00 < *mcgrof> because as soon as you leave it seems you can get some radar crap
+19:00 < *bschmidt> yeah right, there's another value for that
+19:00 < *bschmidt> sec
+19:00 < *mcgrof> anyway, to get an initial DFS implementation -- what do we need and where are we leaning towards
+19:01 < johill> well implement detection in the drivers
+19:01 < *bschmidt> right
+19:01 < *mcgrof> it seems first we'll do an atheros hw based implementation, and in the mean time consider the firmware solutions required by TI
+19:01 < johill> tell the drivers, based on regdb, what kind they need to detect
+19:01 < johill> keep the three flags bschmidt mentioned in some channel list in cfg80211
+19:01 -!- Hauke [~Hauke@host-091-097-245-140.ewe-ip-backbone.de] has joined #linux-wireless
+19:02 < *mcgrof> ok so first is to be able to map countries to a DFS region bit
+19:02 < johill> maybe the per device/driver list, maybe not
+19:02 < johill> right
+19:02 < *mcgrof> wouldn't CHECKEd imply its the currenty operated channel?
+19:03 < *bschmidt> mcgrof: usally it does, but you might also to switch to channel x to cac, switch to channel y to another cac, ..
+19:03 < *bschmidt> s,to,do,
+19:04 < *mcgrof> bschmidt: but if you do you start all over and clear all that channel's info no?
+19:04 < *bschmidt> depends on the implementation, generally there is no need to do that
+19:05 < *bschmidt> i know an implementation which checks all channels during one CAC
+19:05 < *bschmidt> which is fine
+19:05 < *bschmidt> as long as you detect the 60% required during CAC
+19:05 < *matteo> bschmidt: it does switch between channels?
+19:06 < *bschmidt> yes
+19:06 < *matteo> bschmidt: you will lose some pulses then
+19:06 < *bschmidt> matteo: definitely, and you also increase false positives
+19:06 < *bschmidt> but it's fine by the regulatory requirements
+19:07 < *matteo> and since there is no guarantee that cards will 100% of the pulses you should get  much many
+19:07 < *bschmidt> matteo: i agree with that, just wanted to point out that it is possible to have multiple channels marked as checked
+19:07 -!- psycho_oreos [~no@115.131.7.192] has quit [Ping timeout: 240 seconds]
+19:07 < *matteo> bschmidt: usually you start operating on a channel and stay here for much time
+19:08 < *matteo> so it's kinda useless to me
+19:08 < *bschmidt> mcgrof: btw, the etsi std contains a description about a state machine on how to handle those flags
+19:08 < *mcgrof> ok so 1) map countries to a DFS region bit 2) get that info through cfg80211 to the driver 3) where do we stuff DFS parameters for each region 4) program hw 4) events to cfg80211 and cfg80211 sends events to hostapd
+19:08 < *mcgrof> eh?
+19:08 < *mcgrof> look ok for a quick roadmap?
+19:08 < *matteo> the ETSI standard is much more easy to implement AFAIK
+19:08 < *bschmidt> mcgrof: yeah
+19:08 < *bschmidt> ;)
+19:09 < *mcgrof> 1 and 2) I can take care of
+19:09 -!- Chainsaw [~chainsaw@gentoo/developer/atheme.member.chainsaw] has quit [Remote host closed the connection]
+19:09 < *mcgrof> we need some more review of 3)
+19:09 < johill> mcgrof: 3 - driver/maybe requets_firmwarwe
+19:09 < johill> mcgrof: it's going to be hw specific
+19:09 < *mcgrof> particularly from TI and whoever wants to implement DFS in their drivers
+19:10 < *bschmidt> mcgrof: which parameters?
+19:10 < *bschmidt> the CAC,NOL stuff?
+19:10 < *gxk1> i'll review 3
+19:12 < *mcgrof> please subscribe to the wiki DFS page so you can get e-mails to udpates to it
+19:12 < *neratec_andreas> hi, I will send the road map to my neratec colleges. Unfortunate they could not participate today.
+19:12 < *matteo> ha altri figli tuo padre?
+19:12 < *mcgrof> I can likely get 1) and 2) done by next week
+19:12 < *matteo> sorry wrong window
+19:13 < *mcgrof> bschmidt: you seem to be more familiar where we want 3) in ath9k
+19:13 < *bschmidt> hmm, guess i've mixed something up here, 24h is for weather channels, it's 30min for others, sorry about that (called NOP)
+19:13 < *mcgrof> bschmidt: are you familiar with request_firmware() stuff?
+19:13 < *matteo> can we divide the work in the HW independend and driver dependent work
+19:14 < *matteo> or just the step 4 is HW dependent?
+19:14 < *mcgrof> matteo: nbd already did most of our hw dependent code
+19:14 < *bschmidt> no really, but, i'll ask the neratec guys about that, the afaik have something usable already
+19:14 < *bschmidt> s,no,not,
+19:14 < *mcgrof> matteo: nbd submitted patches to enable the HAL DFS knobs
+19:14 < *nbd> mcgrof: not really 'most'
+19:14 < *matteo> mcgrof: nice
+19:14 < *nbd> initially the pulse pattern matching will be somewhat hw specific
+19:14 < *nbd> or at least driver specific
+19:14 < *mcgrof> nbd: ah what's missing?, can you print a list of exported symbols needed?
+19:14 < *nbd> and that's the big part
+19:14 < *mcgrof> AR9280 first right?
+19:14 < *nbd> my patches were just trivial register writes
+19:15 < *nbd> and some default values
+19:15 < *tharvey> anyone familiar with mac80211_hwsim much?  I'm curious if it allows you to specify sig str's and packet error rates to effectively test things like rate control algos etc or if not if conceptually this would be a simple thing to add?
+19:15 < *nbd> tharvey: i think that's a rather bad rate control test
+19:16 < *nbd> testing rate control properly requires much more than that
+19:16 < *bschmidt> nbd, mcgrof, as I said you might want to ping the neratec guys about that, they started with the pattern matcher already, so I guess they have some those infos there somewhere
+19:16 < *tharvey> that is what I figured, but perhaps I can augment it easily enough to allow specification of packet error rates such that it affects the 'copying' of frames across nodes on the same channel
+19:16 < johill> tharvey: it doesn't have any of this, and it wouldn't be really simple -- bcopeland has something in userspace
+19:16 < *nbd> tharvey: what do you want to use this for?
+19:17 < *tharvey> I want to use it to programatically test various layer 3 mesh solutions
+19:17 < *bschmidt> just wondering, how do we want to handle blocking xmit of frames? I mean somewhere after drv_config() we enable beaconing, how to block that?
+19:18 < johill> ok I'm going to have to go -- anything else on DFS?
+19:18 < johill> should I cut the log and copy it somewhere?
+19:18 < *nbd> tharvey: i think that kind of simulation is way too simplistic to produce any useful results
+19:18 < *bschmidt> johill: yes please
+19:18 < johill> bschmidt: just wondering if tehre was anything else going forward that I should wait for
+19:19 < *bschmidt> me last questions maybe?
+19:19 < *bschmidt> *my
+19:19 < johill> sorry what questions were those?
+19:19 < *bschmidt> 19:17 < bschmidt> just wondering, how do we want to handle blocking xmit of frames? I mean somewhere after drv_config() we enable beaconing, how to block that?
+19:20 < *matteo> johill: maybe we need a time line
+19:20 < *matteo> and something like a page in w.k.o with the status of the task
+19:20 < *matteo> doing, done, etc.
+19:20 < johill> matteo: not my job
+19:20 < johill> bschmidt: ah, I scrolled up way past that :)
+19:20 < *bschmidt> ;)
+19:21 < johill> bschmidt: I'd think we would want this to be specifically asked for by userspace
+19:22 < johill> bschmidt: so I think hostapd would check for radar, and if we don't detect anything we'd enable using that channel?
+19:22 < johill> right now we block everything
+19:22 < *bschmidt> sounds useful
+19:22 < *bschmidt> so, more or less adding 'something' before drv_config() should do it
+19:23 < johill> right
+19:23 < johill> well drv_config would still go to the channel
+19:23 < johill> but we wouldn't enable beaconing or tx frames
+19:23 < johill> I guess
+19:23 < *bschmidt> yeah, right
+19:23 < *bschmidt> drv_config() does not do that, afaik it's a bss_config_changes() call or something which does that
+19:23 < johill> right
+19:24 < *bschmidt> so around that drv_config() then
+19:24 < *bschmidt> *after
+19:24 -!- brain0 [~brain0@archlinux/developer/brain0] has joined #linux-wireless
+19:24 < *jm_> I would expect hostapd to select a random channel and ask mac80211 to set that up, but without beaconing if it is DFS chan
+19:24 < johill> jm_: set it up in what way?
+19:24 < *jm_> than wait for NOP check and enable beaconing only after that (assuming no radar seen)
+19:24 < johill> I was kinda expecting "drv_check_radar()"
+19:24 < *mcgrof> ok just updated the wiki with some more roadmap stuff
+19:24 < *jm_> RX and enable radar swtuff
+19:24 < *mcgrof> feel free to expand
+19:24 < johill> and then come back to hostapd telling it that channel is ok, and then it can set it up
+19:24 -!- lorenzo__ [~lorenzo@93-32-35-117.ip31.fastwebnet.it] has quit [Quit: Ex-Chat]
+19:24 < *jm_> so hostapd would just sit there waiting for 30 min
+19:25 < *jm_> and get a nl80211 event in the end if the time for NOP is controlled in kernel
+19:25 < johill> hm, I guess that could work, but why would you want all the setup done before?
+19:25 < johill> it seems simpler to do the beacon setup etc. after
+19:25 < *bschmidt> yes, definitely after
+19:25 < johill> since it can fail, in theory, and we couldn't report that otherwise
+19:25 < *jm_> oh, I did not mean setting beacon before
+19:25 < johill> oh ok
+19:25 < johill> misunderstood you then
+19:25 < *jm_> just set up channel (freq) and set it for rx/radardet
+19:25 < johill> right
+19:26 < johill> I guess I'd prefer that to be explicit though (the "set up for radardet" part)
+19:26 < *jm_> sure
+19:26 < johill> ok we're in agreement then :)
+19:26 < johill> at the end you get an event with the result
+19:27 < johill> and at if it's clear, cfg80211 will allow setting up beacaon on the channel etc
+19:27 < *bschmidt> mcgrof: I'll update the numbers for etsi tomorrow or so
+19:27 < johill> ok, I'll go have dinner and post the log somewhere afterwards
+19:27 < johill> ttyl
+19:28 < *mcgrof> thanks all
+19:28 < *gxk1> mcgrof: thank you
+19:28 < *mcgrof> see you guys next week
+19:29 < *mcgrof> or we may have a call
+19:29 < *mcgrof> whatever
+19:29 < *kgiori> let me know what you prefer (call or IRC)
+19:29 < *mcgrof> I'll try to get the first two items done by then
+19:29 < *jm_> and obviously an event if radar is detected before the 30 min (etc.) wait.. :-)
+19:29 < *mcgrof> Atheros and TI will have to check with mobile team for fw programming on DFS parameters
+19:31 < *mcgrof> gxk1: what's your e-mail address?
+19:31 < *mcgrof> name: first last <foo@ti.com>
+19:32 < *gxk1> mcgrof: Gery Kahn <geryk@ti.com>
+19:39 -!- gerhard7 [~gerhard7@212-123-146-122.ip.telfort.nl] has quit [Quit: Leaving]
+19:41 < *dileks> mcgrof johill: debians meetbot might be a good tool to protocol irc meetings
+19:41 < *dileks> http://meetbot.debian.net/Manual.html
+19:41 < *mcgrof> dileks: thanks
+19:42 -!- DJWillis [djwillis@cpc3-bath5-2-0-cust220.aztw.cable.virginmedia.com] has quit [Ping timeout: 245 seconds]
+19:47 -!- NastX is now known as NastX-AFK
+19:56 < johill> jm_: yes :)
