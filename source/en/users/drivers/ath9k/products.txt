@@ -1,0 +1,10 @@
+
+Go back --> [[en/users/Drivers/ath9k|Main ath9k driver page]] 
+
+
+===== ath9k products =====
+
+ath9k ships in many different products. This page documents all know products in the retail market which ship with ath9k cards. 
+  * [[en/users/Drivers/ath9k/products/laptops|Laptops with ath9k cards]] 
+  * [[en/users/Drivers/ath9k/products/external|External ath9k cards]] 
+  * [[en/users/Drivers/ath9k/products/APs|APs with ath9k cards]] 

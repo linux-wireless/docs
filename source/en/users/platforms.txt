@@ -1,0 +1,31 @@
+
+
+
+===== Wireless router platforms =====
+
+A lot of wireless access points ship on specific custom vendor platforms. This is done to simplify the units and communication. These are also known as [[http://en.wikipedia.org/wiki/System-on-a-chip|System on Chip (SoC)]] solutions. 
+
+
+==== Atheros ====
+
+The following platforms are being worked on by the [[http://openwrt.org|OpenWrt]] development project and the current platform codes are available in the [[https://dev.openwrt.org|OpenWrt SVN repository]] until they mature enough for upstream inclusion. 
+
+
+=== AR231x/5312 ===
+
+Work on supporting ath5k on these devices will start soon. 
+
+
+=== AR913x ===
+
+Patches have been [[http://marc.info/?l=linux-wireless&m=123099030513681|submitted to add support to ath9k on the AR9130/AR9132 platforms]]. These patches are under review now for inclusion. 
+
+
+==== Broadcom ====
+
+Add information here... 
+
+
+==== Marvell ====
+
+Add information here... 

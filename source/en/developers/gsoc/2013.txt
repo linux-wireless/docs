@@ -1,0 +1,10 @@
+
+
+===== Linux wireless GSoC 2013 =====
+
+This is our fifth year with Linux wireless GSoC projects, under the [[http://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2013|Linux Foundation GSoC umbrella]]. This is the home page to keep track of the current projects, their status development done through it. Students should also use these pages to keep track of their own status of their projects. 
+
+
+===== Linux wireless GSoC 2012 projects ideas =====
+
+If you are a student and want to talk just join [[en/users/Support|our IRC channel]] and linger and poke at us there to help evaluate ideas. 

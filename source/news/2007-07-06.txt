@@ -1,0 +1,5 @@
+
+
+==== July 6, 2007 ====
+
+The [[http://www.softwarefreedom.org|Software Freedom Law Center]] has released a white paper detailing the implications of the FCC's new //Software Defined Radio// (SDR) classification on free/open source wireless drivers. This is certainly a step in the right direction, although the FCC's position regarding free/open code remains "more conservative than is necessary". [[http://www.softwarefreedom.org/resources/2007/fcc-sdr-whitepaper.html|Read the full white paper]]. 

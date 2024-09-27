@@ -1,0 +1,28 @@
+
+
+==== December 3, 2009 ====
+
+[[http://kernelnewbies.org/Linux_2_6_32|2.6.32]] has been released with 1020 patches touching wireless code. 
+
+Among the changes a few worth noting: 
+  * lots of wl1251 fixes, support for the 1271 chip 
+  * orinoco begins conversion to cfg80211 
+  * b43 LP PHY support (BCM4312 devices) 
+  * almost all mac80211 callbacks can now sleep (configure_filter was made able to) 
+  * rndis_wlan uses cfg80211 
+  * rtl8187 got rfkill switch support 
+  * ath9k gets AR9287 support and a large number of enhancements 
+  * wireless is now network namespace aware 
+  * nl80211 testmode command for factory testing/calibration 
+  * nl80211 reports BSS status 
+  * cfg80211 gains the ability to connect to APs 
+  * cfg80211 finally verifies that changing channel won't interfere with operation 
+  * cfg80211 drivers now can also parse country IEs 
+  * mac80211 no longer depends on wireless extensions 
+  * mac80211 scanning is much improved 
+  * mac80211 has a tracer now for driver interaction 
+  * mac80211 no longer creates the master netdev wmaster0 
+  * mac80211 dynamic power save default set to 100ms 
+  * mac80211 Mesh enhancements and config IE updated to match 802.11s draft 3.02 
+  * improvements and fixes for mac80211 resume 
+  * improvements to mac80211's connection loss detection Quite a number of changes, and not small changes either -- for example the ability for cfg80211 to emulate wireless extensions fully now or the LP PHY support in b43. 

@@ -1,0 +1,18 @@
+
+
+==== July 14, 2008 ====
+
+[[http://kernelnewbies.org/Linux_2_6_26|Linux 2.6.26]] is released. With almost 600 changesets related to wireless, this release brings you lots more wireless goodies: 
+  * mac80211 now supports draft mesh networking (802.11s; thanks to the [[http://www.open80211s.org/|open80211s project]]) 
+  * [[en/users/Drivers/zd1211rw|zd1211rw]] supports mesh networking ([[en/users/Drivers/b43|b43]] will follow in 2.6.27, hopefully more drivers later) 
+  * mac80211 now supports more optional HT (802.11n) features 
+  * mac80211's monitor interfaces can now be configured more precisely, "cooked" monitors were added 
+  * mac80211's IBSS implementation now supports IBSS merging and received various bugfixes 
+  * mac80211 now has an in-kernel [[mac80211book|documentation book]], help welcome! 
+  * [[en/users/Drivers/b43|b43]] now has support for PCMCIA devices and QoS/WME 
+
+Also, lots of removals this time: 
+    * the bcm43xx driver 
+    * the old ieee80211softmac code Access point mode has received a lot of attention in the stack and drivers, but is not ready yet. 
+
+Finally, lots of internal API updates and fixes. 

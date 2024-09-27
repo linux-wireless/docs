@@ -1,0 +1,15 @@
+
+
+===== Existing Linux Bluetooth drivers =====
+
+This page tries to document all available Bluetooth Linux drivers, this page just started so bare with us. 
+
+
+
+
+
+
+|**Driver**|**Manufacturer**|**BT version**|**Interface**|
+|[[Drivers/ath3k|ath3k]]|Atheros|2.1+EDR|USB|
+|[[Drivers/ath3k|ath6k]]|Atheros|2.1+EDR|SDIO|
+|[[Drivers/hci_uart|hci_uart]]|Multiple|2.1+EDR|UART|

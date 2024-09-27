@@ -1,0 +1,17 @@
+
+
+===== Packetspammer =====
+
+Is an example packet injection utility for use with mac80211 drivers. To inject frames it uses a monitor interface and uses radiotap headers to tune the wireless device per package. For details please see the kernel documentation: 
+
+[[http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=blob;f=Documentation/networking/mac80211-injection.txt;|Documentation/networking/mac80211-injection.txt]] 
+
+
+==== Get the code ====
+
+
+<code>git clone git://git.warmcat.com/packetspammer.git</code>
+
+==== See the code ====
+
+[[http://git.warmcat.com/cgi-bin/cgit/packetspammer/|http://git.warmcat.com/cgi-bin/cgit/packetspammer/]] 

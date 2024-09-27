@@ -1,0 +1,61 @@
+
+
+===== Replacing iwconfig with iw =====
+
+Consider using iw from git 
+
+
+==== Getting info on wlan0 ====
+
+
+<code>iwconfig wlan0</code>
+is be replaced by 
+
+
+<code>iw dev wlan0 link</code>
+
+==== Connecting to an open network ====
+
+
+<code>iwconfig wlan0 essid foo</code>
+is replaced by 
+<code>iw wlan0 connect foo</code>
+If you want to set the channel: 
+<code>iwconfig wlan0 essid foo freq 2432M
+-or-
+iwconfig wlan0 freq 2432M
+iwconfig wlan0 essid foo</code>
+you instead simply use 
+<code>iw wlan0 connect foo 2432</code>
+
+==== Connecting to a protected network ====
+
+For WPA/WPA2 encryption, you have to use wpa_supplicant. 
+
+For WEP protection, you can use 
+<code>iw wlan0 connect foo keys 0:abcde d:1:0011223344</code>
+instead of 
+<code>iwconfig wlan0 key s:abcde
+iwconfig wlan0 key '[2]0011223344'
+iwconfig wlan0 key '[2]'
+iwconfig wlan0 essid foo</code>
+Note that <code>iwconfig</code> uses 1-based key numbers and <code>iw</code> uses 0-based key numbers like the 802.11 standard. 
+
+
+==== Join an IBSS (ad-hoc network) ====
+
+
+<code>iwconfig wlan0 mode ad-hoc
+iwconfig wlan0 essid foo-adhoc</code>
+in iw: 
+<code>iw wlan0 set type ibss
+iw wlan0 ibss join foo-adhoc 2412</code>
+
+==== Leave an IBSS (ad-hoc network) ====
+
+
+<code>iwconfig wlan0 essid off</code>
+**might** work, but doesn't always work properly. 
+
+in iw, it will always work: 
+<code>iw wlan0 ibss leave</code>

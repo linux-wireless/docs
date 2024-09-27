@@ -1,0 +1,33 @@
+
+
+
+===== Dynamic power save =====
+
+mac80211 has a feature called //Dynamic power save// which allows the wireless device to dynamically go into power save mode if the device is associated and no network traffic is going through the card for a certain period of time, with a default value set to 100 ms. To enable dynamic power save the wireless driver must support power save mode of operation. 
+
+Some device drivers only power save manually. Some others have it enabled all the time. To enable/disable power save manually you would use: 
+
+
+<code>iw wlan0 set power_save on</code>
+The dynamic power save timeout (the time for no traffic through the card before going to powersave) is affected by the [[en/developers/Documentation/pm-qos|pm-qos]] network latency setting. 
+
+To enable power save a wireless device can sleep at most the duration of the BSS [[en/developers/Documentation/ieee80211/power-savings|DTIM interval]]. It will wake up during that period to listen for beacons from the AP to see if the AP has buffered frames for it. Refer to the [[en/developers/Documentation/ieee80211/power-savings|power savings guide]] for more details as to how this works. 
+
+
+===== Drivers with power save enabled by default =====
+  * Atheros ath9k for single-chips (>= AR9280) 
+  * TI wl1251 
+  * TI wl1271 
+===== Ways to tune dynamic power save from userspace =====
+
+
+==== Default timeout ====
+
+You can tune dynamic power save by tuning the default timeout. 
+
+
+<code>iwconfig wlan0 power 500m</code>
+
+==== Network latency ====
+
+You can also user [[en/developers/Documentation/pm-qos|pm-qos]] to tune dynamic power save based on network latency requirements of your userspace applications. 

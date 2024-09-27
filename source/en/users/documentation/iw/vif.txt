@@ -1,0 +1,105 @@
+
+Go back --> [[en/users/Documentation/iw|iw documentation]]  
+
+
+===== mac80211 Multiple Virtual Interface (vif) Support =====
+
+The mac80211 subsystem in the linux kernel supports multiple wireless interfaces to be created with one physical wireless card.  This depends on the driver implementing this.  This could allow you to join multiple networks at once, or connect to one network while routing traffic from an access point interface.   
+
+
+===== Notes on Terminology and Omissions =====
+
+This document only covers the creation and configuration of the wireless side of the network.  Once complete, the interfaces are configured the same as you would configure a wired interface on your system, and those details are documented very well, and in great depth by most distributions. 
+
+
+===== Syntax =====
+
+<code>iw dev <devname> interface add <name> type <type> [mesh_id <meshid>] [4addr on|off] [flags <flag>*]</code> 
+
+or 
+
+<code>iw phy <phyname> interface add <name> type <type> [mesh_id <meshid>] [4addr on|off] [flags <flag>*]</code> 
+
+while the basic syntax to destroy an interface is: 
+
+<code>iw dev <devname> del</code> 
+  * The //<devname>// and //<phyname>// fields represent the virtual interface (devname) and physical device (phyname).  //<devname>// is often wlan0, wlan1, etc, while //<phyname>// is phy0, phy1, etc.   
+  * The //<name>// field is where you choose what to call the new virtual interface (it's new devname).   
+  * The //<type>// field is where you define what sort of interface you're creating.  It is one of: 
+  *  * ibss - [[en/users/Documentation/iw/vif|IBSS/ad-hoc]] 
+  *  * mp - [[en/users/Documentation/iw/vif|Mesh Point]] 
+  *  * monitor - [[en/users/Documentation/iw/vif|Monitor]] 
+  *  * ap - [[en/users/Documentation/iw/vif|Access Point]] (special steps required) 
+  *  * station - [[en/users/Documentation/iw/vif|Station/Client]] 
+
+
+==== Interface Types ====
+
+{{anchor:ibss}} 
+=== IBSS/ad-hoc ===
+
+An IBSS (Independent Basic Service Set) network, often called an ad-hoc network, is a way to have a group of devices talk to each other wirelessly, without a central controller.  All devices talk directly to each other, with no inherent relaying.   
+
+All Devices can talk to each other: 
+<code>  A
+ / \
+B---C</code>
+A can talk to B, B can talk to A and C, C can talk to B, but A and C can not talk directly (without setting up routes): 
+<code>A---B---C</code>
+To create an ad-hoc network, you first create an ad-hoc interface (in this example named ah0): <code>iw phy <phyname> interface add <devname> type ibss</code> 
+
+Next, you join/create the ibss: <code>iw dev <devname> ibss join <SSID> <freq in MHz> [fixed-freq] [<fixed bssid>] [key d:0:abcde]</code> 
+
+example: 
+<code>iw phy phy0 interface add ah0 type ibss
+ifconfig ah0 up
+iw dev ah0 ibss join AdHocNetworkName 2412</code>
+Repeat these steps on all devices you want to network together. 
+
+To leave an ibss you do: <code>iw dev <devname> ibss leave</code> 
+
+example: <code>dev ah0 ibss leave</code> 
+
+{{anchor:mp}} 
+=== Mesh Point ===
+
+A Mesh Point is a device in an 802.11s mesh network.  Mesh networks work similarly to ad-hoc networks, with the added benefit of supporting routing between devices that can't talk directly to each other. All Devices can talk to each other: 
+<code>  A
+ / \
+B---C</code>
+A can talk to B and C by relaying through B, B can talk to A and C directly, C can talk to B and A by relaying through B: 
+<code>A---B---C</code>
+To create a mesh network, you first create a mesh interface(named mp0): <code>iw phy <phyname> interface add <devname> type mp mesh_id <meshid></code> 
+
+example: <code>iw phy phy0 interface add mp0 type mp mesh_id MeshNetwork</code> 
+
+Unlike ad-hoc network, you do not need to actively join the Mesh.  Once you've created a mesh point interface, and brought it up, it will automatically begin discovering the network topology, and relaying traffic as needed.   
+
+Repeat these steps on all devices you want to network together. 
+
+There are advanced commands you can use to control the routing over the mesh: 
+
+<code>iw dev <devname> mpath dump</code> <code>iw dev <devname> mpath set <destination MAC address> next_hop <next hop MAC address></code> <code>iw dev <devname> mpath new <destination MAC address> next_hop <next hop MAC address></code> <code>iw dev <devname> mpath del <MAC address></code> <code>iw dev <devname> mpath get <MAC address> del <MAC address></code> 
+
+TODO: learn to use those so I can document them 
+
+{{anchor:monitor}} 
+=== Monitor ===
+
+Monitor mode is a passive-only mode, no packets are transmitted. All incoming packets are handed over to the host computer completely unfiltered. This mode is useful to see what's going on on the network.  
+
+To create a monitor interface you use the command: <code>phy <phyname> interface add <name> type <type> monitor [flags <flag>*]</code> 
+
+Example: <code>iw phy phy0 interface add mon0 type monitor</code> 
+
+Next you set the channel or frequency:  <code>iw dev <devname> set channel <channel></code> or <code>iw dev <devname> set freq <freq></code>(in MHz) 
+
+Example: <code>iw dev mon0 set channel 7</code> or <code>iw dev mon0 set freq 2442</code> 
+
+You can then use a utility like tcpdump, wireshark or tshark to view packets. 
+
+{{anchor:ap}} 
+=== Access Point ===
+
+{{anchor:station}} 
+=== Station/Client ===

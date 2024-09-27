@@ -1,0 +1,17 @@
+
+
+==== December 23, 2008 ====
+
+The [[http://kernelnewbies.org/Linux_2_6_28|2.6.28]] kernel is released. About 400 patches related to wireless have been merged and once again this release brings a slew of new wireless features to the kernel: 
+  * [[en/developers/Regulatory|regulatory support]] -- the kernel will now attempt to obey local wireless spectrum regulations 
+  * [[en/users/Drivers/libertastf|libertas_tf]] -- a thin firmware driver for the XO-1's wireless 
+  * [[en/users/Drivers/ath5k|ath5k]] gains mesh networking 
+  * the full-mac [[en/users/Drivers/orinoco|orinoco]] driver gains WPA support 
+  * [[en/users/Drivers/p54|p54]] gains 5 GHz support 
+  * mac80211 got mesh portal functionality (bridging a mesh mode interface) 
+  * the [[en/developers/Documentation/mac80211/RateControl/minstrel|minstrel]] rate control algorithm was added along with rate control API improvements 
+  * nl80211 userspace API improvements for various things As usual, some drivers and mac80211 received cleanups and API changes: 
+    * Some mac80211 driver operations are no longer required to be atomic which makes drivers simpler 
+    * mac80211 code was restructured to be easier to read 
+    * more station information is shared with the driver 
+    * the rate control API was rewritten and made available to outside mac80211 (due to be updated again in 2.6.29 for better HT control etc.) 

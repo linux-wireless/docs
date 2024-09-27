@@ -1,0 +1,14 @@
+
+
+==== March 23, 2009 ====
+
+[[http://kernelnewbies.org/Linux_2_6_29|Linux 2.6.29]] is released. With almost 600 commits, wireless keeps moving. New features: 
+  * We now support access point functionality with selected [[en/users/Drivers|drivers]] 
+  * [[en/developers/Documentation/mac80211/RateControl/minstrel|minstrel]] is the default rate control algorithm 
+  * dynamic powersave support for some drivers 
+  * HT capabilities of the local hardware are now visible in [[en/users/Documentation/iw|iw]] 
+  * mesh parameters can now be configured And a number of fixes, notably: 
+    * short slot handling is now working properly 
+    * HT/11n code revamped 
+    * new, much cleaner, rate control API 
+    * when auth/assoc times out, notify userspace to allow it to react faster As always, a large number of driver changes were made too. 

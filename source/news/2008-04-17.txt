@@ -1,0 +1,13 @@
+
+
+==== April 17, 2008 ====
+
+[[http://kernelnewbies.org/Linux_2_6_25|Linux 2.6.25]] is released. There are a number of important changes: 
+  * mac80211 now supports HT (802.11n) operation 
+  * a new rate control algorithm for mac80211 (using a [[http://en.wikipedia.org/wiki/PID_controller|PID controller]]) was added 
+
+In drivers, there were a number of changes as well: 
+    * New drivers added: [[en/users/Drivers/ath5k|ath5k]], [[en/users/Drivers/rndis_wlan|rndis_wlan]] and [[en/users/Drivers/rtl8180|rtl8180]] 
+    * rt2x00 drivers now support software antenna diversity 
+    * zd1211rw is now a mac80211 driver 
+    * b43 supports new devices (BCM94311MCG rev 02) As always, of course, lots of code improvements (notably libertas), bugfixes and device IDs for new (or just found to be working) devices. 

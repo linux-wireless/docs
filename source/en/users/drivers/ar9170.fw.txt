@@ -1,0 +1,49 @@
+
+Go back --> [[en/users/Drivers/Atheros|Atheros Linux wireless drivers]] --> [[en/users/Drivers/ar9170|ar9170]] 
+
+
+===== ar9170.fw =====
+
+This page is for the ar9170 open firmware. ar9170.fw is the firmware for the Atheros 802.11n USB chipset (AR9170). It was released by Atheros under the GPLv2 License with a lot of contributions made by the community. The firmware is maintained by the community. 
+
+This is NOT the same firmware as the one released officially by Atheros in a binary form under a restrictive license.  If you are just looking to download a ready-to-use firmware, please see the page for the [[en/users/Drivers/ar9170|ar9170]] driver for the links and instructions. 
+
+ 
+
+
+===== Get the source =====
+
+You can get the source code from: 
+
+
+<code>http://git.sipsolutions.net/ar9170-fw.git</code>
+
+===== Toolchain =====
+
+You will need an SH2 toolchain, ar9170 firmware git tree allows you to build your own toolchain on the fly. 
+
+
+===== Build and install =====
+
+
+<code>make
+sudo make install</code>
+
+===== releases =====
+
+No official releases have been made yet as the source code was just released, a lot of cleanup is currently being done on the code. The firmware is still usable though if you compile it. 
+
+
+===== status =====
+
+This firmware should get you connected with 802.11n networks and with networks requiring encryptions. At this point the firmware just works but could use enhancements. 
+
+
+===== bug reports =====
+
+Bug reports are probably immature to report at this point, but feel free to give it a spin and let us know how it is going on the [[en/users/Support|linux-wireless IRC channel]]. 
+
+
+===== patches =====
+
+Patches should be sent to the [[en/developers/MailingLists|linux-wireless mailing list]]. 

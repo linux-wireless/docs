@@ -1,0 +1,7 @@
+
+Go back --> [[en/users/Drivers/ath9k|Main ath9k driver page]] 
+
+
+===== ath9k Antenna Diversity =====
+
+This page documents how Wake on WLAN is supported by ath9k. 

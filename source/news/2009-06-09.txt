@@ -1,0 +1,15 @@
+
+
+==== June 9, 2009 ====
+
+This time around for the [[http://kernelnewbies.org/Linux_2_6_30|2.6.30 kernel release]] more than 900 patches related to wireless went into the next version of Linux. Besides lots of internal cleanups, notable new features are: 
+  * rt2x00 now supports powersave (use <code>iwconfig wlan0 power timeout 500ms</code> to enable) 
+  * rt2x00 now supports mesh (point/portal) and WDS operation 
+  * ath9k now supports mesh point operation 
+  * mac80211 IBSS can be fixed to channel/BSSID for those who can't use 802.11s mesh but need layer 3 mesh 
+  * mac80211 now re-aligns frames where necessary to avoid unaligned IP payload for platforms that are not capable of processing such frames 
+  * mac80211 can support 802.11w (protected management frames), however the only driver currently supporting it is ath9k (other drivers just need testing) 
+  * mac80211 now deconfigures/reconfigures the device during suspend/resume 
+  * iwlwifi now supports 1000/6000 hw series 
+  * cfg80211/nl80211 support scanning (<code>iw dev wlan0 scan</code>) 
+  * mac80211 now supports aggregation with iwlwifi again (broken since 2.6.27) For further wireless related details you can check the [[http://www.orbit-lab.org/kernel/compat-wireless-2.6-stable/v2.6.30/ChangeLog-2.6.30-wireless|2.6.30 wireless log]]. 

@@ -1,0 +1,15 @@
+
+
+==== September 9, 2009 ====
+
+With again almost 600 patches related to wireless, the new [[http://kernelnewbies.org/Linux_2_6_31|2.6.31 kernel]] comes with many wireless changes: 
+  * iwlwifi continues unification between 3945 and AGN hardware 
+  * the often-discussed [[http://article.gmane.org/gmane.linux.kernel.wireless.general/32727|rfkill rewrite]], along with rfkill integration into cfg80211 
+  * [[en/users/Drivers/rndis_wlan|rndis_wlan]] starts using cfg80211 as the first full-MAC driver 
+  * iwlwifi support for 3x3 802.11n hardware 
+  * cfg80211 now handles connecting to an ad-hoc network (including wext support) 
+  * initial support for rt2800usb, but still experimental 
+  * a new wl12xx driver for the TI 1251 B/G chip 
+  * ath5k has enabled AP mode 
+  * the hwsim driver can now separate its virtual radios into groups to allow testing mesh topologies 
+  * there's a new driver for new Intel integrated full-MAC hardware, also using cfg80211 

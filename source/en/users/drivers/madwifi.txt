@@ -1,0 +1,8 @@
+
+
+===== MADWifi =====
+  * [[http://madwifi-project.org/|MadWifi]] - a deprecated Linux kernel device driver for Wireless LAN chipsets from [[http://www.atheros.com/|Atheros]]. [[MadWifi|MadWifi]] is an old Atheros sponsored driver effort for Linux. This driver is now deprecated and users should look at [[en/users/Drivers/ath5k|ath5k]] and [[en/users/Drivers/ath5k|ath9k]] which are upstream and part of the Linux kernel. 
+
+
+===== supported chips =====
+    * 802.11abg PCI and Cardbus Devices with Chipset AR5xxx from Atheros. There's no support for most AR6xxx or AR9xxx chipsets. 

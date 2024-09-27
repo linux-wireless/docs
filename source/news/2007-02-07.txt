@@ -1,0 +1,5 @@
+
+
+==== February 9, 2007 ====
+
+Intel launches a new site dedicated to their Linux wireless projects -- [[http://intellinuxwireless.org/|intellinuxwireless.org]]. From their site, "Here you can learn about and download the latest development versions of the Linux-based wireless drivers for Intel adapters." 
