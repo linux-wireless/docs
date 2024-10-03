@@ -1,18 +1,16 @@
-Go back --> :doc:`Atheros Linux wireless drivers <atheros>`
-
 ar5523
-------
+======
 
-ar5523 is a driver to support old Atheros USB 802.11abg chipsets. Supported in the mainline kernel since version 3.8. Firmware is available in linux-firmware.
+ar5523 is a driver to support old Atheros USB 802.11abg chipsets.
+Supported in the mainline kernel since version 3.8. Firmware is
+available in linux-firmware.
 
 Features
 --------
 
 Only station mode is supported. No AP.
 
-You can send patches to:
-
-::
+You can send patches to::
 
    To: Pontus Fuchs <pontus.fuchs@gmail.com>
    Cc: linux-wireless@vger.kernel.org

@@ -1,10 +1,10 @@
 Broadcom brcmsmac(PCIe) and brcmfmac(SDIO/USB) drivers
-------------------------------------------------------
+======================================================
 
--  Completely open source host drivers, no binary object files.
--  Framework for supporting new chips, including mac80211-aware embedded chips.
--  Does not support older PCI/PCIe chips with SSB backplane (see :doc:`b43 <b43>`).
--  **brcm**\ s\ **mac** is a mac80211-based :doc:`SoftMAC <../../developers/documentation/glossary>` driver, and **brcm**\ f\ **mac** is a :doc:`FullMAC <../../developers/documentation/glossary>` driver.
+- Completely open source host drivers, no binary object files.
+- Framework for supporting new chips, including mac80211-aware embedded chips.
+- Does not support older PCI/PCIe chips with SSB backplane (see :doc:`b43 <b43>`).
+- **brcm**\ s\ **mac** is a mac80211-based :doc:`SoftMAC <../../developers/documentation/glossary>` driver, and **brcm**\ f\ **mac** is a :doc:`FullMAC <../../developers/documentation/glossary>` driver.
 
 Supported Chips
 ---------------
@@ -88,12 +88,12 @@ PCIe devices
 
       - BCM43567
       - 14e4:43d3
-      - :::
+      - \-
    - 
 
       - BCM43570
       - 14e4:43d9
-      - :::
+      - \-
    - 
 
       - BCM4358
@@ -286,8 +286,8 @@ USB devices
 
 Both brcmsmac and brcmfmac drivers require firmware files that need to be separately downloaded. Firmware is available from the Linux firmware repository at:
 
--  git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
--  `http:git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] \* [[https:\ git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git <http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git>`__
+- git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+- `http:git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git]] \* [[https:\ git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git|https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git <http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git>`__
 
 Unsupported Chips
 -----------------
@@ -351,23 +351,18 @@ BCM43231 and BCM43236 (rev <= 2) have another architecture and can't be easily s
 Broadcom brcmsmac driver
 ------------------------
 
-::
-
-       * Support for both 32 and 64 bit Linux kernels 
+* Support for both 32 and 64 bit Linux kernels 
 
 Firmware installation
 ~~~~~~~~~~~~~~~~~~~~~
 
-Copy brcm/bcm43xx-0.fw and brcm/bcm43xx_hdr-0.fw to /lib/firmware/brcm (or wherever firmware is normally installed on your system).
+Copy brcm/bcm43xx-0.fw and brcm/bcm43xx_hdr-0.fw to /lib/firmware/brcm
+(or wherever firmware is normally installed on your system).
 
 Broadcom brcmfmac driver
 ------------------------
 
-::
-
-         * Support for both 32 and 64 bit Linux kernels 
-
-.. _firmware-installation-1:
+* Support for both 32 and 64 bit Linux kernels 
 
 Firmware installation
 ~~~~~~~~~~~~~~~~~~~~~
@@ -375,55 +370,54 @@ Firmware installation
 Current
 ^^^^^^^
 
-For SDIO driver you need to copy the nvram for your system and place it in /lib/firmware/brcm. The nvram file name depends on the chip you have. The kernel log will tell you the exact file name.
+For SDIO driver you need to copy the nvram for your system and place it
+in /lib/firmware/brcm. The nvram file name depends on the chip you have.
+The kernel log will tell you the exact file name.
 
-For the USB driver no nvram file is *strictly* needed: in fact, the driver only loads the firmware blob and does not look for an nvram text file. However, the nvram parameters are still required and they are already part of the firmware blob. This is a TRX file which contains the nvram parameters as a sequence of zero-terminated plain text strings, appended at the end of the last section. For an example of how to modify/add nvram parameters for USB devices, see `this post <https://blog.elimo.io/2020/06/05/pta-coexistence/>`__
+For the USB driver no nvram file is *strictly* needed: in fact, the
+driver only loads the firmware blob and does not look for an nvram text
+file. However, the nvram parameters are still required and they are
+already part of the firmware blob. This is a TRX file which contains the
+nvram parameters as a sequence of zero-terminated plain text strings,
+appended at the end of the last section. For an example of how to
+modify/add nvram parameters for USB devices, see `this post
+<https://blog.elimo.io/2020/06/05/pta-coexistence/>`__
 
-The firmware files are located in the linux-firmware repository and can be copied as is to /lib/firmware/brcm.
+The firmware files are located in the linux-firmware repository and can
+be copied as is to /lib/firmware/brcm.
 
 SDIO chip on older kernels (before 3.13)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In kernel priors to v3.13 the SDIO driver used generic firmware names. Below are the instruction Use the nvram file installed in your system and copy it to /lib/firmware/brcm/brcmfmac-sdio.txt The firmware can be found in the linux-firmware repository.
+In kernel priors to v3.13 the SDIO driver used generic firmware names.
+Below are the instruction Use the nvram file installed in your system
+and copy it to /lib/firmware/brcm/brcmfmac-sdio.txt The firmware can be
+found in the linux-firmware repository.
 
-.. list-table::
-
-   - 
-
-      - For 4329: cp brcm/brcmfmac4329.bin /lib/firmware/brcm/brcmfmac-sdio.bin
-   - 
-
-      - For 4330: cp brcm/brcmfmac4330.bin /lib/firmware/brcm/brcmfmac-sdio.bin
+- For 4329: cp brcm/brcmfmac4329.bin /lib/firmware/brcm/brcmfmac-sdio.bin
+- For 4330: cp brcm/brcmfmac4330.bin /lib/firmware/brcm/brcmfmac-sdio.bin
 
 Alternatively, when not available the Android version can be used as well:
 
-.. list-table::
-
-   - 
-
-      - git clone https://android.googlesource.com/platform/hardware/broadcom/wlan
-   - 
-
-      - firmware files: bcmdhd/firmware/bcm4329/fw_bcm4329.bin bcmdhd/firmware/bcm4330/fw_bcm4330_b2.bin
+- git clone https://android.googlesource.com/platform/hardware/broadcom/wlan
+- firmware files: bcmdhd/firmware/bcm4329/fw_bcm4329.bin bcmdhd/firmware/bcm4330/fw_bcm4330_b2.bin
 
 NVRAM from EFI
 ^^^^^^^^^^^^^^
 
-Some new devices are storing the nvram which is needed in addition to the firmware by the driver in an EFI variable and the Windows driver can access it (this file should be optional in the case of PCIe devices). Currently brcmfmac does not support this automatically. First mount the efi vars into sysfs:
-
-::
+Some new devices are storing the nvram which is needed in addition to
+the firmware by the driver in an EFI variable and the Windows driver can
+access it (this file should be optional in the case of PCIe devices).
+Currently brcmfmac does not support this automatically. First mount the
+efi vars into sysfs::
 
    mount -t efivarfs none /sys/firmware/efi/efivars
 
-The content of the nvram is in this file:
-
-::
+The content of the nvram is in this file::
 
    /sys/firmware/efi/efivars/nvram-74b00bd9-805a-4d61-b51f-43268123d113
 
-Copy this file where brcmfmac expects the nvram, for example:
-
-::
+Copy this file where brcmfmac expects the nvram, for example::
 
     cat /sys/firmware/efi/efivars/nvram-74b00bd9-805a-4d61-b51f-43268123d113 > /lib/firmware/brcm/brcmfmac43241b4-sdio.txt
 
@@ -444,45 +438,47 @@ Developer information
 Overview
 ~~~~~~~~
 
-::
-
-           * On-chip firmware loaded using standard request_firmware() 
-           * Infrastructure for future chips in place. 
-           * AMPDU support 
-           * tracepoint support 
+* On-chip firmware loaded using standard request_firmware() 
+* Infrastructure for future chips in place. 
+* AMPDU support 
+* tracepoint support 
 
 softmac driver specifics
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
-
-             * Integrated with mac80211 
-             * Using BCMA bus driver 
-             * Uses minstrel_ht rate algorithm 
-             * HW based encryption not enabled yet 
-             * monitor mode 
+* Integrated with mac80211 
+* Using BCMA bus driver 
+* Uses minstrel_ht rate algorithm 
+* HW based encryption not enabled yet 
+* monitor mode 
 
 fullmac driver specifics
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The brcmfmac driver is based on the DHD driver, which is also released in AOSP under the name bcmdhd. Although similar the brcmfmac driver has been reworked significantly. In the figure below the layering of the brcmfmac is shown. It was made couple of years ago so it may not be accurate. |image1|
-| The bus layer supports SDIO, USB, and PCIe. The protocol layer support msgbuf protocol used for PCIe devices and BCDC which is used for SDIO and USB devices.
+The brcmfmac driver is based on the DHD driver, which is also released
+in AOSP under the name bcmdhd. Although similar the brcmfmac driver has
+been reworked significantly. In the figure below the layering of the
+brcmfmac is shown. It was made couple of years ago so it may not be
+accurate.  The bus layer supports SDIO, USB, and PCIe. The protocol
+layer support msgbuf protocol used for PCIe devices and BCDC which is
+used for SDIO and USB devices.
+
+.. image:: ../../../media/en/users/drivers/brcm80211/brcmfmac-layering.png
+   :width: 500px
 
 Get the code
 ~~~~~~~~~~~~
 
-The driver is available in linux mainline and development is done on the wireless-testing tree, available at:
-
-::
+The driver is available in linux mainline and development is done on the wireless-testing tree, available at::
 
    git://git.kernel.org/pub/scm/linux/kernel/git/wireless/wireless-testing.git
 
 The driver is also available in the 3.2 and newer kernels. When using 'make menuconfig' it can be accessed:
 
-Location: -> Device Drivers
-
 ::
 
+                 Location:
+                 -> Device Drivers
                  * -> Network device support 
                  *  * -> Wireless LAN 
                  *  *  * -> < > Broadcom IEEE802.11n PCIe SoftMAC WLAN driver 
@@ -504,7 +500,12 @@ Location: -> Device Drivers
 Get Involved
 ~~~~~~~~~~~~
 
-Maintaining a driver for a family of chipsets that is widespread and productized by multiple entities can be challenging. While having a good stock of devices it is by no means covering a fraction of the variants out in the wild. So we can always use help from people doing regression testing or co-maintaining the driver. The table below provides an overview of those involved and the role they play.
+Maintaining a driver for a family of chipsets that is widespread and
+productized by multiple entities can be challenging. While having a good
+stock of devices it is by no means covering a fraction of the variants
+out in the wild. So we can always use help from people doing regression
+testing or co-maintaining the driver. The table below provides an
+overview of those involved and the role they play.
 
 .. list-table::
    :header-rows: 1
@@ -537,33 +538,40 @@ Maintaining a driver for a family of chipsets that is widespread and productized
 tracepoint support
 ~~~~~~~~~~~~~~~~~~
 
-Both brcmsmac and brcmfmac have several tracepoints defined that can be traced using kernel Ftrace. Python-based plugins are available on Github: https://github.com/arend/brcm80211-trace-cmd
+Both brcmsmac and brcmfmac have several tracepoints defined that can be
+traced using kernel Ftrace. Python-based plugins are available on
+Github: https://github.com/arend/brcm80211-trace-cmd
 
 To be done for softmac driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+* Add support for 
 
-                 *  *    *  *  * Add support for 
-                 *  *    *  *  *  * 40MHz channels 
-                 *  *    *  *  *  * powersave 
-                 *  *    *  *  *  * IBSS 
-                 *  *    *  *  *  * HW-based encryption 
+    * 40MHz channels 
+    * powersave 
+    * IBSS 
+    * HW-based encryption 
 
 To be done for fullmac driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+* Add support for 
 
-                 *  *    *  *  *   * Add support for 
-                 *  *    *  *  *   *  * debugfs (for accessing counters and other diagnostic info) 
-                 *  *    *  *  *   *  * monitor mode 
-                 *  *    *  *  *   *  * Add support for more chips. 
+    * debugfs (for accessing counters and other diagnostic info) 
+    * monitor mode 
+    * Add support for more chips. 
 
 Regulatory Implementation for brcmsmac
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This generation of chips contain additional regulatory support independent of the driver. The devices use a single worldwide regulatory domain, with channels 1-11 (2.4 GHz band) and channels 52-64 and 100-140 (5 GHz band) restricted to passive operation. Transmission on those channels is suppressed until appropriate other traffic is observed on those channels. Within the driver, we use the ficticious country code "X2" to represent this worldwide regulatory domain. There is currently no interface to configure a different domain. The driver reads the SROM country code from the chip and hands it up to mac80211 as the regulatory hint, however this information is otherwise unused with the driver.
+This generation of chips contain additional regulatory support
+independent of the driver. The devices use a single worldwide regulatory
+domain, with channels 1-11 (2.4 GHz band) and channels 52-64 and 100-140
+(5 GHz band) restricted to passive operation. Transmission on those
+channels is suppressed until appropriate other traffic is observed on
+those channels. Within the driver, we use the ficticious country code
+"X2" to represent this worldwide regulatory domain. There is currently
+no interface to configure a different domain. The driver reads the SROM
+country code from the chip and hands it up to mac80211 as the regulatory
+hint, however this information is otherwise unused with the driver.
 
-.. |image1| image:: /en/users/drivers/brcm80211/brcmfmac-layering.png
-   :width: 500px

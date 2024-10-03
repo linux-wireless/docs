@@ -1,5 +1,5 @@
 wicd
-----
+====
 
 Simple GUI wireless manager
 

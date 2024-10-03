@@ -1,5 +1,5 @@
 rt2400pci
----------
+=========
 
 Driver for `Ralink <http://www.mediatek.com>`__ PCI devices RT2460.
 

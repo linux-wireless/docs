@@ -1,18 +1,19 @@
 Supported PCI / Cardbus wireless devices
-----------------------------------------
+========================================
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **form factor**
-      - **Chip**
-      - **PCI Vendor**
-      - **PCI Product**
-      - **PCI Subvendor**
-      - **PCI Subsystem**
+      - Vendor
+      - Product
+      - form factor
+      - Chip
+      - PCI Vendor
+      - PCI Product
+      - PCI Subvendor
+      - PCI Subsystem
    - 
 
       - 3COM
@@ -228,15 +229,16 @@ Supported USB wireless devices
 ------------------------------
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **Chip**
-      - **USB Vendor**
-      - **USB Product**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - Chip
+      - USB Vendor
+      - USB Product
+      - MaxPower
    - 
 
       - 2Wire

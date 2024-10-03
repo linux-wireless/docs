@@ -1,54 +1,52 @@
-Go back –> :doc:`Main ath9k driver page <../../ath9k>` –> :doc:`ath9k products page <../products>`
-
 APs with ath9k cards
---------------------
+====================
 
 This list tries to document all known APs with ath9k cards.
 
 Legend used to describe cards
 -----------------------------
 
--  HB: PCIe Half `MiniCard <MiniCard>`__
--  XB: PCIe Full `MiniCard <MiniCard>`__
--  MB: Mini PCI card
--  CB: PCI Cardbus card
--  SB: Single band, 1x2, 2x2 configuration
--  DB: Dual band, 2x3, 2x2 configuration
+- HB: PCIe Half MiniCard
+- XB: PCIe Full MiniCard
+- MB: Mini PCI card
+- CB: PCI Cardbus card
+- SB: Single band, 1x2, 2x2 configuration
+- DB: Dual band, 2x3, 2x2 configuration
 
 Legend for Access Point components
 ----------------------------------
 
-::
-
-     * FE: Fast Ethernet, 100 Mbit/s 
-     * GBe: [[GigaBit|GigaBit]] Ethernet 1000 Mbit/s 
-     * USB: USB ports available 
-     * OLED: Organic-LED Display 
-     * DBDC: [[DualBand|DualBand]]-[[DualConcurrent|DualConcurrent]], means AP can run in 2 GHz and 5 GHz at the same time 
+* FE: Fast Ethernet, 100 Mbit/s 
+* GBe: GigaBit Ethernet 1000 Mbit/s 
+* USB: USB ports available 
+* OLED: Organic-LED Display 
+* DBDC: DualBand-DualConcurrent, means AP can run in 2 GHz and 5 GHz at
+  the same time 
 
 Table of known APs with ath9k cards
 -----------------------------------
 
-WARNING of practicality: Not all models can be flashed with custom GPL software at this time, see the `OpenWrt web <http://wiki.openwrt.org/toh/start>`__ for latest information. However, all of these routers have been identified to use supported Atheros 11n radio chips.
+WARNING of practicality: Not all models can be flashed with custom GPL
+software at this time, see the `OpenWrt web
+<http://wiki.openwrt.org/toh/start>`__ for latest information. However,
+all of these routers have been identified to use supported Atheros 11n
+radio chips.
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **AP Model**
-      - \*\* Chipset*\*
-      - **Chains**
-      - **SB
-         **
-      - **DB
-         **
-      - **FE
-         **
-      - **GBe
-         **
-      - **OLED**
-      - **DBDC**
-      - **USB**
+      - AP Model
+      - Chipset
+      - Chains
+      - SB
+      - DB
+      - FE
+      - GBe
+      - OLED
+      - DBDC
+      - USB
    - 
 
       - Atlantiland A02-RB-W300N

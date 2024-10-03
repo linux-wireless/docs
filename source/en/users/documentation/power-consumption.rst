@@ -1,7 +1,5 @@
-Go back --> :doc:`Documentation <../documentation>`
-
 Power consumption on Linux with 802.11
---------------------------------------
+======================================
 
 This section covers all aspects of power consumption and power saving with 802.11 on Linux.
 
@@ -16,8 +14,7 @@ This section covers all aspects of power consumption and power saving with 802.1
 Devices measured power consumption
 ----------------------------------
 
-This section documents extensive power consumption details by supported devices:
+This section documents extensive power consumption details by supported
+devices:
 
-::
-
-     * [[en/users/Drivers/ath9k/power-consumption|ath9k power consumption details]] 
+* :doc:`ath9k power consumption details <../drivers/ath9k/power-consumption>`

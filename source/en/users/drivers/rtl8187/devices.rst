@@ -1,13 +1,17 @@
+Devices
+=======
+
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **Chip**
-      - **USB Vendor**
-      - **USB Product**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - Chip
+      - USB Vendor
+      - USB Product
+      - MaxPower
    - 
 
       - Alfa

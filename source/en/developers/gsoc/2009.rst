@@ -1,7 +1,17 @@
 Linux wireless GSoC 2009
-------------------------
+========================
 
-This was our first year with Linux wireless GSoC projects. The original project proposal can be seen at the `Linux Foundation GSoC 2009 page <https://www.linuxfoundation.org/en/Google_Summer_of_Code_2009#802.11_Wireless>`__. This page keeps track of the details of the projects, completed and failed.
+.. toctree::
+
+   2009/add_ap_support_to_network_manager
+   2009/automation_of_testing
+   2009/geoclue_regulatory
+
+This was our first year with Linux wireless GSoC projects. The original
+project proposal can be seen at the `Linux Foundation GSoC 2009 page
+<https://www.linuxfoundation.org/en/Google_Summer_of_Code_2009#802.11_Wireless>`__.
+This page keeps track of the details of the projects, completed and
+failed.
 
 Completed projects
 ------------------
@@ -13,27 +23,30 @@ This projects were completed successfully.
 Projects moved on to next year
 ------------------------------
 
-::
-
-     * [[en/developers/GSoC/2010/Improve_wireless_roaming|Improve wireless roaming]] 
-     * [[en/developers/GSoC/2010/wifi-test-nl80211|Extending the wifi-test project with nl80211 support]] 
+* :doc:`2010/improve_wireless_roaming`
+* :doc:`2010/wifi-test-nl80211`
 
 Uncompleted projects
 --------------------
 
 These two projects were assigned slots but both students did not complete them.
 
-::
-
-       * [[en/developers/GSoC/2009/GeoClue_regulatory|Integrate GeoClue to help with regulatory compliance]] 
-       * [[en/developers/GSoC/2009/Automation_of_testing|Automation of testing using mac80211_hwsim and Orbit]] 
+* :doc:`2009/geoclue_regulatory`
+* :doc:`2009/automation_of_testing`
 
 General mentorship
 ------------------
 
-Besides the mentors listed for each project you are encouraged to seek help through the :doc:`Linux wireless mailing list <../mailinglists>` and the :doc:`Linux wireless IRC channel <../../users/support>`.
+Besides the mentors listed for each project you are encouraged to seek
+help through the :doc:`Linux wireless mailing list <../mailinglists>`
+and the :doc:`Linux wireless IRC channel <../../users/support>`.
 
 Applying
 --------
 
-Google will publish the list of accepted mentoring organizations for Google Summer of Code 2009 `on their GSOC 2009 page <http://socghop.appspot.com/>`__ on Wednesday, March 18, 2009. Google will then begin accepting applications from students beginning at 19:00 UTC on March 23, 2009. Please be sure to check out the `timeline <http://socghop.appspot.com/document/show/program/google/gsoc2009/timeline>`__.
+Google will publish the list of accepted mentoring organizations for
+Google Summer of Code 2009 `on their GSOC 2009 page
+<http://socghop.appspot.com/>`__ on Wednesday, March 18, 2009. Google
+will then begin accepting applications from students beginning at 19:00
+UTC on March 23, 2009. Please be sure to check out the `timeline
+<http://socghop.appspot.com/document/show/program/google/gsoc2009/timeline>`__.

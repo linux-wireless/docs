@@ -1,23 +1,38 @@
-Go back –> :doc:`IEEE-802.11 standards <../ieee80211>`
-
 Review of IEEE-802.11n
-----------------------
+======================
 
-IEEE-802.11n was designed to allow transmissions of up to 100Mbps, thanks to this work, devices are theoretically capable of transmitting at rates of up to 600Mbps (PHY data rate). This section summarizes what 802.11n is for developers.
+IEEE-802.11n was designed to allow transmissions of up to 100Mbps,
+thanks to this work, devices are theoretically capable of transmitting
+at rates of up to 600Mbps (PHY data rate). This section summarizes what
+802.11n is for developers.
 
 Spatial streams
 ---------------
 
-802.11n capable hardware can have more than one spatial stream. You can have multiple spatial streams all capable of transmitting and receiving concurrently. Each stream can use multiple RX or TX chains. Streams are different than chains, each TX or RX chain consists of a dedicated radio and at least one antenna (a chain can also use *antenna diversity*). One stream can use one chain or move between them intelligently (this is called *selection diversity*). Theoretically, you can use as many chains as needed for one stream. This differs from the notion of *antenna diversity* on 802.11abg hardware. In *antenna diversity* you are switching the antenna you use to TX or RX dynamically.
+802.11n capable hardware can have more than one spatial stream. You can
+have multiple spatial streams all capable of transmitting and receiving
+concurrently. Each stream can use multiple RX or TX chains. Streams are
+different than chains, each TX or RX chain consists of a dedicated radio
+and at least one antenna (a chain can also use *antenna diversity*). One
+stream can use one chain or move between them intelligently (this is
+called *selection diversity*). Theoretically, you can use as many chains
+as needed for one stream. This differs from the notion of *antenna
+diversity* on 802.11abg hardware. In *antenna diversity* you are
+switching the antenna you use to TX or RX dynamically.
 
-The NxM nomenclature tells us about the number of TX/RX chains, and has nothing to do with streams. It should be noted that each stream increases the overall throughput. See below for nSS on the table.
+The NxM nomenclature tells us about the number of TX/RX chains, and has
+nothing to do with streams. It should be noted that each stream
+increases the overall throughput. See below for nSS on the table.
 
 MCS Rates
 ---------
 
-With 802.11n you can use a new set of rates designed specifically for high throughput (HT). Below are the HT Modulation and Coding Schemes (MCS) rates and its dependent symbols. These come from section 20.6 from 802.11n D5.
+With 802.11n you can use a new set of rates designed specifically for
+high throughput (HT). Below are the HT Modulation and Coding Schemes
+(MCS) rates and its dependent symbols. These come from section 20.6 from
+802.11n D5.
 
-Legend
+Legend:
 
 .. list-table::
 
@@ -56,20 +71,21 @@ HT20 rates
 HT20 mode uses 20 MHz width channels.
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **MCS Index**
-      - **nSS**
-      - **Modulation**
-      - **R**
-      - **nBPCSS(iSS)**
-      - **nSD**
-      - **nSP**
-      - **nCBPS**
-      - **nDBPS**
-      - **Mbps (800 ns GI)**
-      - **Mbps (400 ns GI)**
+      - MCS Index
+      - nSS
+      - Modulation
+      - R
+      - nBPCSS(iSS)
+      - nSD
+      - nSP
+      - nCBPS
+      - nDBPS
+      - Mbps (800 ns GI)
+      - Mbps (400 ns GI)
    - 
 
       - 0
@@ -714,14 +730,22 @@ HT40 rates
       - 270.0
       - 300.0
 
-Note that MCS [16-76] exist going up to 600 Mbps but too lazy to write that from the docs, feel free to expand – the section with this table on the 802.11n specification is on tables 20-29 up to 20-43. These rates also require the addition of another entry in the table, the nES (number of BCC encoders for the DATA field).
+Note that MCS [16-76] exist going up to 600 Mbps but too lazy to write
+that from the docs, feel free to expand – the section with this table on
+the 802.11n specification is on tables 20-29 up to 20-43. These rates
+also require the addition of another entry in the table, the nES (number
+of BCC encoders for the DATA field).
 
-See `http:mcsindex.com/]] for all of them. Raw tables are available at [[https:\ github.com/ewa/802.11-data|https://github.com/ewa/802.11-data <http://mcsindex.com/>`__.
+See https://mcsindex.com/ for all of them. Raw tables are available at
+https://github.com/ewa/802.11-data
 
 Block Acks
 ----------
 
-Block Acks let you acknowledge a set of frames with a single new modified type of ACK. This is extremely useful when you use aggregation. If a transmitter did not get a block ack back it will send a *block ack request* to the receiver after a period of time.
+Block Acks let you acknowledge a set of frames with a single new
+modified type of ACK. This is extremely useful when you use aggregation.
+If a transmitter did not get a block ack back it will send a *block ack
+request* to the receiver after a period of time.
 
 Aggregation
 -----------
@@ -731,16 +755,26 @@ Aggregation
 A-MPDU
 ~~~~~~
 
-This is the most common form of aggregation supported and used by drivers. mac80211 has full support for this type of aggregation. With it you pack together frames and each frame has its own dedicated CRC. The receiver can send a `BlockAck <BlockAck>`__ with a bitmap of each successful frame. In the bitmap it can also specify which frame failed to force the transmitter to retransmit the single unsuccessful frame.
+This is the most common form of aggregation supported and used by
+drivers. mac80211 has full support for this type of aggregation. With it
+you pack together frames and each frame has its own dedicated CRC. The
+receiver can send a BlockAck with a bitmap of each successful frame. In
+the bitmap it can also specify which frame failed to force the
+transmitter to retransmit the single unsuccessful frame.
 
 A-MSDU
 ~~~~~~
 
-This is not commonly used, but the standard and `WiFi <WiFi>`__ certification requires support for receiving A-MSDUs. mac80211 has support for this, so drivers don't need to do anything. With A-MSDUs you cannot check each individual frame as each of them does not have a dedicated CRC. If a frame is corrupt you will have to retransmit the entire aggregate.
+This is not commonly used, but the standard and WiFi certification
+requires support for receiving A-MSDUs. mac80211 has support for this,
+so drivers don't need to do anything. With A-MSDUs you cannot check each
+individual frame as each of them does not have a dedicated CRC. If a
+frame is corrupt you will have to retransmit the entire aggregate.
 
 More references
 ---------------
+You can read this paper written for computer scientists without a strong
+EE/RF signal processing background called "802.11 with Multiple Antennas
+for Dummies":
 
-You can read this paper written for computer scientists without a strong EE/RF signal processing background called "802.11 with Multiple Antennas for Dummies":
-
-http://www.cs.washington.edu/homes/dhalperi/pubs/mimo_for_dummies.pdf
+* http://www.cs.washington.edu/homes/dhalperi/pubs/mimo_for_dummies.pdf

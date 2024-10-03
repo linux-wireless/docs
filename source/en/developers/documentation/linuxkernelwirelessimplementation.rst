@@ -1,4 +1,5 @@
-*\**Linux Wireless Subsystem \*\**
+Linux Wireless Subsystem
+========================
 
 By Rami Rosen
 

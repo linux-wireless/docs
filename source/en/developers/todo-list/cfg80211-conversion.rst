@@ -1,5 +1,5 @@
 drivers needing full conversion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===============================
 
 -  airo
 -  atmel
@@ -12,14 +12,10 @@ drivers needing full conversion
 drivers that have partial conversion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
-
-     * orinoco 
-     * libertas 
+* orinoco 
+* libertas 
 
 drivers to kill
 ~~~~~~~~~~~~~~~
 
-::
-
-       * hostap (?) From this list, only ipw2200 and libertas are 802.11**g** hardware. All others are only 802.11**b**, except ray and wl3501. 
+* hostap (?) From this list, only ipw2200 and libertas are 802.11**g** hardware. All others are only 802.11**b**, except ray and wl3501. 

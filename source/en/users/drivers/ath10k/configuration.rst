@@ -1,22 +1,18 @@
-Go back –> :doc:`ath10k <../ath10k>`
-
 ath10k driver
--------------
+=============
 
 Building
 ~~~~~~~~
 
 To build ath10k enable these kernel build configuration options, for example with make menuconfig:
 
--  CONFIG_ATH10K
--  CONFIG_ATH10K_PCI
--  CONFIG_ATH10K_DEBUG (optional)
--  CONFIG_ATH10K_DEBUGFS (optional)
--  CONFIG_ATH10K_TRACING (optional) The debug and tracing options are optional, but it's strongly recommended to enable to make it easier to debug issues.
+- CONFIG_ATH10K
+- CONFIG_ATH10K_PCI
+- CONFIG_ATH10K_DEBUG (optional)
+- CONFIG_ATH10K_DEBUGFS (optional)
+- CONFIG_ATH10K_TRACING (optional) The debug and tracing options are optional, but it's strongly recommended to enable to make it easier to debug issues.
 
-ath10k options can be found from location:
-
-::
+ath10k options can be found from location::
 
    -> Device Drivers
     -> Network device support (NETDEVICES [=y])
@@ -26,19 +22,20 @@ ath10k options can be found from location:
 Loading the modules
 ~~~~~~~~~~~~~~~~~~~
 
-The ath10k modules should be loaded automatically in most systems. If that's not happening, first load ath10k_core.ko and then ath10k_pci.ko.
+The ath10k modules should be loaded automatically in most systems. If
+that's not happening, first load ath10k_core.ko and then ath10k_pci.ko.
 
 hostapd
 -------
 
-ath10k uses the standard :doc:`upstream hostapd <../../documentation/hostapd>`. For features like 802.11ac, DFS or ACS please use hostapd 2.2 or later.
+ath10k uses the standard :doc:`upstream hostapd
+<../../documentation/hostapd>`. For features like 802.11ac, DFS or ACS
+please use hostapd 2.2 or later.
 
 Building hostapd
 ~~~~~~~~~~~~~~~~
 
-When building hostapd enable these configuration options:
-
-::
+When building hostapd enable these configuration options::
 
      * CONFIG_IEEE80211AC 
      * CONFIG_ACS 
@@ -46,9 +43,7 @@ When building hostapd enable these configuration options:
 Configuring hostapd
 ~~~~~~~~~~~~~~~~~~~
 
-Example hostapd config to use 11ac VHT80 mode with ath10k:
-
-::
+Example hostapd config to use 11ac VHT80 mode with ath10k::
 
    interface=wlan0
    driver=nl80211
@@ -63,45 +58,57 @@ Example hostapd config to use 11ac VHT80 mode with ath10k:
    vht_oper_chwidth=1
    vht_oper_centr_freq_seg0_idx=42
 
-vht_oper_centr_freq_seg0_idx is calculated for VHT80 with channel + 6. If you get "set channel failed to set in kernel" error message, most likely your regulatory database doesn't support 80 MHz channels.
+vht_oper_centr_freq_seg0_idx is calculated for VHT80 with channel + 6.
+If you get "set channel failed to set in kernel" error message, most
+likely your regulatory database doesn't support 80 MHz channels.
 
-To enable ACS set channel to zero:
-
-::
+To enable ACS set channel to zero::
 
    channel=0
 
-To enable DFS enable 11d and 11h as well as set country code:
-
-::
+To enable DFS enable 11d and 11h as well as set country code::
 
    country_code=FI
    ieee80211d=1
    ieee80211h=1
 
-Current implementation of ath radar pattern detector supports only ETSI regulatory domain. It means radar detection works only when master region is set to ETSI. It can be done by setting regulatory domain to country from Europe (DE, FI, FR, PL, ...):
+Current implementation of ath radar pattern detector supports only ETSI
+regulatory domain. It means radar detection works only when master
+region is set to ETSI. It can be done by setting regulatory domain to
+country from Europe (DE, FI, FR, PL, ...)::
 
-<code> iw reg set DE</code> Other regulatory domains like JP (Japan), US (FCC master region) are currently not supported. Starting AP on DFS channel in DFS master region different that ETSI will cause radar event at first suspicious RF signal even it was not radar.
+    iw reg set DE
 
-See :doc:`hostapd wiki page <../../documentation/hostapd>` and `hostapd.conf documentation <http://hostap.epitest.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=hostapd/hostapd.conf>`__ for more information.
+Other regulatory domains like JP (Japan), US (FCC master region) are
+currently not supported. Starting AP on DFS channel in DFS master region
+different that ETSI will cause radar event at first suspicious RF signal
+even it was not radar.
+
+See :doc:`hostapd wiki page <../../documentation/hostapd>` and
+`hostapd.conf documentation
+<http://hostap.epitest.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=hostapd/hostapd.conf>`__
+for more information.
 
 Mu-MIMO configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
-To enable Mu-MIMO configuration:
+To enable Mu-MIMO configuration::
 
-<code> vht_capab=[MAX-MPDU-11454][RXLDPC][SHORT-GI-80][TX-STBC-2BY1][RX-STBC-1][MAX-A-MPDU-LEN-EXP7][RX-ANTENNA-PATTERN][TX-ANTENNA-PATTERN][SU-BEAMFORMER][SU-BEAMFORMEE][MU-BEAMFORMER][MU-BEAMFORMEE][BF-ANTENNA-4][SOUNDING-DIMENSION-4] </code>
+    vht_capab=[MAX-MPDU-11454][RXLDPC][SHORT-GI-80][TX-STBC-2BY1][RX-STBC-1][MAX-A-MPDU-LEN-EXP7][RX-ANTENNA-PATTERN][TX-ANTENNA-PATTERN][SU-BEAMFORMER][SU-BEAMFORMEE][MU-BEAMFORMER][MU-BEAMFORMEE][BF-ANTENNA-4][SOUNDING-DIMENSION-4]
 
-The values for "BF-ANTENNA" and "SOUNDING-DIMENSION" refer to the number of radio chains. Here the value is used as 4 which means that the target has 4 radio chains.
+The values for "BF-ANTENNA" and "SOUNDING-DIMENSION" refer to the number
+of radio chains. Here the value is used as 4 which means that the target
+has 4 radio chains.
 
 mBSSID
 ~~~~~~
 
-Multiple BSSID (mBSSID) is a feature where you can have multiple virtual APs on one physical device. Here is an example how you can dynamically create and remove virtual APs.
+Multiple BSSID (mBSSID) is a feature where you can have multiple virtual
+APs on one physical device. Here is an example how you can dynamically
+create and remove virtual APs.
 
-ath10.conf is the master device, as of this writing (2014-11-19) you cannot remove this while hostapd is running:
-
-::
+ath10.conf is the master device, as of this writing (2014-11-19) you
+cannot remove this while hostapd is running::
 
    interface=wlan0
    driver=nl80211
@@ -124,18 +131,14 @@ ath10.conf is the master device, as of this writing (2014-11-19) you cannot remo
    wpa_pairwise=TKIP CCMP
    rsn_pairwise=CCMP
 
-ath10k-1.conf, the first virtual AP:
-
-::
+ath10k-1.conf, the first virtual AP::
 
    interface=wlan0-1
 
    ssid=ath10k-1
    bssid=02:00:00:00:03:01
 
-ath10k-2.conf, the second virtual AP:
-
-::
+ath10k-2.conf, the second virtual AP::
 
    interface=wlan0-2
 
@@ -147,28 +150,23 @@ ath10k-2.conf, the second virtual AP:
    wpa_key_mgmt=WPA-PSK
    rsn_pairwise=CCMP
 
-For mBSSID start hostapd using -b switch:
-
-::
+For mBSSID start hostapd using -b switch::
 
    hostapd -g /var/run/hostapd/global -b phy0:ath10k.conf -b phy0:ath10k-1.conf -b phy0:ath10k-2.conf
 
-To remove an interface:
-
-::
+To remove an interface::
 
    wpa_cli -g /var/run/hostapd/global raw REMOVE wlan0-2
 
-To add an interface:
-
-::
+To add an interface::
 
    wpa_cli -g /var/run/hostapd/global raw ADD bss_config=phy0:ath10k-2.conf
 
 Full hostapd configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Below is the full hostapd configuration file which enables all features ath10k supports.
+Below is the full hostapd configuration file which enables all features
+ath10k supports.
 
 ::
 
@@ -267,8 +265,8 @@ Below is the full hostapd configuration file which enables all features ath10k s
    tx_queue_data0_cwmax=7
    tx_queue_data0_burst=1.5
 
-When the client side interface is included in a bridge, add -b <bridge_interface> when running wpa_supplicant. Please add the following on hostapd.conf to enable 4-address mode:
-
-::
+When the client side interface is included in a bridge, add -b
+<bridge_interface> when running wpa_supplicant. Please add the following
+on hostapd.conf to enable 4-address mode::
 
    wds_sta=1

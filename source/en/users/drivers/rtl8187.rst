@@ -1,5 +1,10 @@
 rtl818x
--------
+=======
+
+.. toctree::
+
+   rtl8180/devices
+   rtl8187/devices
 
 The rtl818x drivers provide support for 802.11a/b/g wireless chipsets from Realtek
 
@@ -28,27 +33,27 @@ Features
 working
 ~~~~~~~
 
--   \* Station/Managed mode
--   \* Monitor mode
--   \* Injection
--   \* Ad-Hoc since Linux 3.4
+- Station/Managed mode
+- Monitor mode
+- Injection
+- Ad-Hoc since Linux 3.4
 
 not working yet
 ~~~~~~~~~~~~~~~
 
--   \* AP/Master mode
+- AP/Master mode
 
 not supported
 ~~~~~~~~~~~~~
 
--   \* *TODO*
+- *TODO*
 
 Project Home Page
 -----------------
 
--   \* `Realtek Linux wireless driver <http://sourceforge.net/projects/rtl-wifi/>`__
+- `Realtek Linux wireless driver <http://sourceforge.net/projects/rtl-wifi/>`__
 
 External Links
 --------------
 
--   \* `Old Project Pages <http://rtl8180-sa2400.sourceforge.net/>`__
+- `Old Project Pages <http://rtl8180-sa2400.sourceforge.net/>`__

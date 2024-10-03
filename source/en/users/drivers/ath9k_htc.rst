@@ -1,20 +1,27 @@
-Go back –> :doc:`Atheros Linux wireless drivers <atheros>`
-
 ath9k_htc
----------
+=========
 
-ath9k_htc provides hardware support for Atheros AR9001 and AR9002 family hardware.
+.. toctree::
+   :hidden:
+
+   ath9k_htc/devices
+
+ath9k_htc provides hardware support for Atheros AR9001 and AR9002 family
+hardware.
 
 Get the driver
 --------------
 
-The driver is part of wireless-testing. See this :doc:`guide <../../developers/documentation/git-guide>` to use the wireless-testing tree directly. Or you can use :doc:`compat-wireless <../download>` to get the driver.
+The driver is part of wireless-testing. See this :doc:`guide
+<../../developers/documentation/git-guide>` to use the wireless-testing
+tree directly. Or you can use :doc:`compat-wireless <../download>` to
+get the driver.
 
 Chipsets supported
 ------------------
 
--  AR9271
--  AR7010 USB-PCIe bridge with AR928x wireless chips
+- AR9271
+- AR7010 USB-PCIe bridge with AR928x wireless chips
 
 Supported Devices
 -----------------
@@ -135,44 +142,51 @@ See :doc:`here <ath9k/debug>`.
 Known issues
 ------------
 
--  The AMPDU size is limited to 22 subframes for UB94/95 and 17 for UB91. Fixing this would require removing lots of cruft and structural changes in the firmware.
--  This HW strongly depends on USB. Please chech `usb related issues <https://github.com/qca/open-ath9k-htc-firmware/wiki/usb-related-issues>`__ before sending bug report.
+- The AMPDU size is limited to 22 subframes for UB94/95 and 17 for UB91.
+  Fixing this would require removing lots of cruft and structural
+  changes in the firmware.
+- This HW strongly depends on USB. Please chech `usb related issues
+  <https://github.com/qca/open-ath9k-htc-firmware/wiki/usb-related-issues>`__
+  before sending bug report.
 
 AP/P2P Modes
 ------------
 
 **This is experimental !**
 
-Patches enabling P2P/AP modes have been merged in wireless-testing, it would be part of the driver from Linux 3.0. Using only one VIF (Virtual Interface) running in AP mode would be a good idea for now, multiple interface support has not been tested extensively. Note: `PowerSave <PowerSave>`__ is not properly supported yet.
+Patches enabling P2P/AP modes have been merged in wireless-testing, it
+would be part of the driver from Linux 3.0. Using only one VIF (Virtual
+Interface) running in AP mode would be a good idea for now, multiple
+interface support has not been tested extensively. Note: `PowerSave
+<PowerSave>`__ is not properly supported yet.
 
-Please do report bugs, crashes, weird behavior and other general tantrums thrown by the driver.
+Please do report bugs, crashes, weird behavior and other general
+tantrums thrown by the driver.
 
 TODO
 ----
 
 A list of things that need to be fixed in the firmware.
 
-::
-
-             * Handle AMPDU subframe limits properly. 
-             * Handle AMPDU density properly. 
-             * ERP protection needs to be fixed. 
-             * RTS/CTS has to be handled properly (for both management and data frames). 
-             * Processing multicast frames has to be fixed ([[MultiRateRetry|MultiRateRetry]] etc.). 
-             * Short/Long preamble selection has to be fixed. 
-             * Duration calculation for data, control and management frames. 
-             * BAR transmission to be moved to the host. 
-             * Low RSSI issue for UB91/94. 
-             * TPC for UB94/95 - why is it required ? 
-             * NOACK handling. 
-             * Destination mask handling. 
-             * TX filtering (legacy and HT modes). 
-             * AMPDU delimiter calculation. 
-             * [[AccessClass|AccessClass]] distribution. 
-             * Unify TX statistics. 
-             * MIB interrupt processing (how the fsck does ANI even work now ?) 
-             * cwMin/cwMax handling. 
-             * _Three_ different data structures pointing to the same rate control data, really ? 
-             * Multicast frame completion. 
-             * World poverty. 
-             * [[en/developers/GSoC/2012/ath9k_htc_open_firmware|open firmware for ath9k_htc]] 
+* Handle AMPDU subframe limits properly. 
+* Handle AMPDU density properly. 
+* ERP protection needs to be fixed. 
+* RTS/CTS has to be handled properly (for both management and data frames). 
+* Processing multicast frames has to be fixed (MultiRateRetry etc.). 
+* Short/Long preamble selection has to be fixed. 
+* Duration calculation for data, control and management frames. 
+* BAR transmission to be moved to the host. 
+* Low RSSI issue for UB91/94. 
+* TPC for UB94/95 - why is it required ? 
+* NOACK handling. 
+* Destination mask handling. 
+* TX filtering (legacy and HT modes). 
+* AMPDU delimiter calculation. 
+* AccessClass distribution. 
+* Unify TX statistics. 
+* MIB interrupt processing (how the fsck does ANI even work now ?) 
+* cwMin/cwMax handling. 
+* _Three_ different data structures pointing to the same rate control data, really ? 
+* Multicast frame completion. 
+* World poverty. 
+* :doc:`../../developers/gsoc/2012/ath9k_htc_open_firmware`

@@ -1,3 +1,6 @@
+Chicago 2014
+============
+
 As `proposed <http://lists.linuxfoundation.org/pipermail/ksummit-discuss/2014-June/000984.html>`__ on the ksummit-discuss list, a meeting for the Kernel Summit "breakout" day on 19 August 2014...
 
 This is intended as a more kernel-focused meeting, in order to deal with deeper development issues.

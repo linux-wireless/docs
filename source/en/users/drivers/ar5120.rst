@@ -1,7 +1,5 @@
-Go back --> :doc:`Atheros Linux wireless drivers <atheros>`
-
 ar5120
-------
+======
 
 This page is for the Linux Atheros GPS driver for the AR5120 chipset.
 
@@ -13,4 +11,5 @@ This is going to be submitted soon.
 Userspace application
 ---------------------
 
-This driver requires a userspace application which will interact with the driver via ioctl. More information on this to be posted later.
+This driver requires a userspace application which will interact with
+the driver via ioctl. More information on this to be posted later.

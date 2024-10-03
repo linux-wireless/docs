@@ -1,3 +1,6 @@
+Ottawa 2015
+===========
+
 This event is going to be a 'workshop' at the `netdev 0.1 conference <https://www.netdev01.org/>`__.
 
 Suggested topics:

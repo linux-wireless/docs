@@ -1,3 +1,6 @@
+Auth-Assoc-Deauth
+=================
+
 <seqdia> # # This outlines the Linux authentication/association and # deauthentication/disassociation flows. # # This can be converted into a diagram using the service # at http://www.websequencediagrams.com/ #
 
 participant userspace participant mac80211 participant driver

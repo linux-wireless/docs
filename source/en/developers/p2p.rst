@@ -1,3 +1,8 @@
--  :doc:`Howto <p2p/howto>`
--  :doc:`Stack Overview <p2p/overview>`
--  :doc:`Design notes on dedicated P2P interface API <p2p/p2p-interface-notes>`
+P2P
+===
+
+.. toctree::
+
+   p2p/howto
+   p2p/overview
+   p2p/p2p-interface-notes

@@ -1,138 +1,145 @@
 Glossary
+========
 
 Terms we use throughout the wiki with which you should become familiar.
 
-BSS
----
+.. glossary::
 
-*BSS* stands for *Basic Service Set*. The coverage of an access point is called a *BSS*.
+   AP
+     Access Point.
 
-cfg80211
---------
+   BSS
+     BSS stands for *Basic Service Set*. The coverage of an access point is called a BSS.
 
-Kernel side of configuration management for wireless devices. :doc:`nl80211 <glossary>` is the User-space side of configuration management for wireless devices.
+   cfg80211
+     Kernel side of configuration management for wireless devices.
+     :term:`nl80211` is the User-space side of configuration management for
+     wireless devices. Works together with :term:`FullMAC` drivers and also
+     with :term:`mac80211`-based drivers.
 
-Works together with :doc:`FullMAC <glossary>`-drivers and also with :doc:`mac80211 <glossary>`-based drivers.
+   CLI
+     CLI stands for `Command-line interface
+     <https://en.wikipedia.org/wiki/Command-line_interface>`__. These
+     are utilities you can run in the console or terminal emulator.
 
-CLI
----
+   FullMAC
+     FullMAC is a term used to describe a type of wireless card where
+     the :term:`MLME` is managed in hardware. You would **not** use
+     :term:`mac80211` to write a :term:`FullMAC` wireless driver.
 
-*CLI* stands for `Command-line interface <https://en.wikipedia.org/wiki/Command-line_interface>`__. These are utilities you can run in the console or terminal emulator.
+   git-describe
+     git-describe is a git command. It outputs something like this::
 
-FullMAC
--------
+         v3.12-11297-g6579946
 
-*FullMAC* is a term used to describe a type of wireless card where the :doc:`MLME <glossary>` is managed in hardware. You would **not** use :doc:`mac80211 <glossary>` to write a *FullMAC* wireless driver.
+     The first part is the *tag* for the current release. The second
+     part is the number of patches which have been applied since the tag
+     was applied. The last part, after the first *g* is the SHA1 commit
+     ID of the last commit applied.
 
-git-describe
-------------
+   IBSS
+     IBSS stands for *Independent Basic Service Set*. Its basically
+     Ad-Hoc mode. See `Independent Basic Service Set
+     <https://en.wikipedia.org/wiki/Independent_Basic_Service_Set>`__
 
-git-describe is a git command. It outputs something like this:
+   Information Element
+     An Information Element (IE) is a part of management frames in the
+     IEEE 802.11 wireless LAN protocol. IEs are a device's way to
+     transfer descriptive information about itself inside management
+     frames. There are usually several IEs inside each such frame, and
+     each is built of `Type-length-value <https://en.wikipedia.org/wiki/Type-length-value>`__ (TLVs).
 
-*v3.12-11297-g6579946*
+     The common structure of an IE is as follows::
 
-The first part is the *tag* for the current release. The second part is the number of patches which have been applied since the tag was applied. The last part, after the first *g* is the SHA1 commit ID of the last commit applied.
+           |   1   |    1   |     1-255       |
+           +-------+--------+-----------------+
+           | Type  | Length |     Data        |
+           +-------+--------+-----------------+
 
-IBSS
-----
+     Whereas the vendor specific IE looks like this::
 
-*IBSS* stands for *Independent Basic Service Set*. Its basically Ad-Hoc mode. See `Independent Basic Service Set <https://en.wikipedia.org/wiki/Independent_Basic_Service_Set>`__
+           |   1   |    1   |          4        |    1-251   |
+           +-------+--------+-------------------+------------+
+           |  221  | Length |        OUI        |     Data   |
+           +-------+--------+-------------------+------------+
 
-Information Element
--------------------
+   iw
+     :doc:`iw <../../users/documentation/iw>` is a new :term:`nl80211`
+     based :term:`CLI` configuration utility for wireless devices.
 
-An Information Element (IE) is a part of management frames in the IEEE 802.11 wireless LAN protocol. IEs are a device's way to transfer descriptive information about itself inside management frames. There are usually several IEs inside each such frame, and each is built of `Type-length-value <https://en.wikipedia.org/wiki/Type-length-value>`__ (TLVs).
+   nl80211
+     User-space side of configuration management for wireless devices.
+     It is a Netlink-based user-space protocol. :term:`cfg80211` is Kernel
+     side of configuration management for wireless devices.
 
-The common structure of an IE is as follows:
+     :doc:`Several user-space applications <../../users/documentation>`
+     are available which utilize :term:`nl80211`. See :doc:`Developer
+     Docs for nl80211 <nl80211>`.
 
-::
+   mac80211
+     A driver API for SoftMAC wireless cards. See :doc:`Developer Docs
+     for mac80211 <mac80211>`.
 
-   |   1   |    1   |     1-255       |
-   +-------+--------+-----------------+
-   | Type  | Length |     Data        |
-   +-------+--------+-----------------+
+     See also :term:`SoftMAC`.
 
-Whereas the vendor specific IE looks like this:
+   MLME
+     MLME Stands for *Media Access Control (MAC) Sublayer Management
+     Entity*. MLME is the management entity where the Physical layer
+     (PHY) MAC state machines reside. Examples of states a MLME may
+     assist in reaching:
 
-::
+     - Authenticate
+     - Deauthenticate
+     - Associate
+     - Disassociate
+     - Reassociate
+     - Beacon
+     - Probe
 
-   |   1   |    1   |          4        |    1-251   |
-   +-------+--------+-------------------+------------+
-   |  221  | Length |        OUI        |     Data   |
-   +-------+--------+-------------------+------------+
+     :term:`mac80211`'s MLME management implementation is currently
+     handled by ``net/mac80211/mlme.c``. This handles only the
+     client-side MLME.
 
-iw
---
+   PHY
+     physical-layer controller
 
-:doc:`iw <../../users/documentation/iw>` is a new :doc:`nl80211 <nl80211>` based :doc:`CLI <glossary>` configuration utility for wireless devices.
+   SME
+     Station Management Entity, often prepended with AP (Access Point)
 
-nl80211
--------
+   SoftMAC
+     SoftMAC is a term used to describe a type of WNIC where the
+     :term:`MLME` is expected to be managed in software.
+     :term:`mac80211` is a driver API for SoftMAC WNIC, for example.
 
-User-space side of configuration management for wireless devices. It is a Netlink-based user-space protocol. :doc:`cfg80211 <glossary>` is Kernel side of configuration management for wireless devices.
+   SSID
+     SSID stands for *Service Set IDentifier*. The SSID is a code
+     attached to all packets on a wireless network to identify each
+     packet as part of that network. The code consists of a string of
+     1-32 octets (usually represented as case sensitive alphanumeric
+     characters).
 
-:doc:`Several user-space applications <../../users/documentation>` are available which utilize *nl80211*. See :doc:`Developer Docs for nl80211 <nl80211>`.
+     See also `SSID <https://en.wikipedia.org/wiki/Service_set_(802.11_network)>`__
 
-mac80211
---------
+   STA
+     *Station* (or *STA*) is the generic term for a device with a radio
+     that can communicate with other *stations* in a wireless network.
+     Common forms of a *station* are access points (AP), computers, or
+     phones.
 
-A driver API for SoftMAC wireless cards. See :doc:`Developer Docs for mac80211 <mac80211>`.
+     See also `Station\_(networking)
+     <https://en.wikipedia.org/wiki/Station_(networking)>`__ or
+     `Wireless access point
+     <https://en.wikipedia.org/wiki/Wireless_access_point>`__.
 
-See also :doc:`SoftMAC <glossary>`.
+   WE
+     WE stands for :doc:`Wireless-Extensions <wireless-extensions>` -
+     the old driver API and user <--> kernel communication transport.
+     Obsoleted by :term:`cfg80211`
 
-MLME
-----
+   WEXT
+     WEXT stands for :doc:`Wireless-Extensions <wireless-extensions>` -
+     the old driver API and user <--> kernel communication transport.
+     Obsoleted by :term:`cfg80211`
 
-*MLME* Stands for *Media Access Control (MAC) Sublayer Management Entity*. MLME is the management entity where the Physical layer (PHY) MAC state machines reside. Examples of states a MLME may assist in reaching:
-
--  Authenticate
--  Deauthenticate
--  Associate
--  Disassociate
--  Reassociate
--  Beacon
--  Probe :doc:`mac80211 <glossary>`'s MLME management implementation is currently handled by ``net/mac80211/mlme.c``. This handles only the client-side MLME.
-
-PHY
----
-
-physical-layer controller
-
-SME
----
-
-Station Management Entity, often prepended with *AP* (Access Point)
-
-SoftMAC
--------
-
-*SoftMAC* is a term used to describe a type of WNIC where the :doc:`MLME <glossary>` is expected to be managed in software. :doc:`mac80211 <glossary>` is a driver API for SoftMAC WNIC, for example.
-
-SSID
-----
-
-*SSID* stands for *Service Set IDentifier*. The SSID is a code attached to all packets on a wireless network to identify each packet as part of that network. The code consists of a string of 1-32 octets (usually represented as case sensitive alphanumeric characters).
-
-See also `SSID <https://en.wikipedia.org/wiki/Service_set_(802.11_network)>`__
-
-Station (STA)
--------------
-
-*Station* (or *STA*) is the generic term for a device with a radio that can communicate with other *stations* in a wireless network. Common forms of a *station* are access points (AP), computers, or phones.
-
-See also `Station\_(networking) <https://en.wikipedia.org/wiki/Station_(networking)>`__ or `Wireless access point <https://en.wikipedia.org/wiki/Wireless_access_point>`__.
-
-WE
---
-
-*WE* stands for :doc:`Wireless-Extensions <wireless-extensions>` - the old driver API and user <--> kernel communication transport. Obsoleted by :doc:`cfg80211 <glossary>`
-
-WEXT
-----
-
-*WEXT* stands for :doc:`Wireless-Extensions <wireless-extensions>` - the old driver API and user <--> kernel communication transport. Obsoleted by :doc:`cfg80211 <glossary>`
-
-WIPHY
------
-
-Wireless :doc:`PHY <glossary>`.
+   WIPHY
+     Wireless :term:`PHY`

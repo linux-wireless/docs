@@ -1,18 +1,19 @@
 Supported Orinoco wireless devices
-----------------------------------
+==================================
 
 PCMCIA devices
 ~~~~~~~~~~~~~~
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **Driver variant**
-      - **PCMCIA Vendor**
-      - **PCMCIA Device**
+      - Vendor
+      - Product
+      - Driver variant
+      - PCMCIA Vendor
+      - PCMCIA Device
    - 
 
       - 
@@ -648,17 +649,18 @@ PCI devices
 ~~~~~~~~~~~
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **form factor**
-      - **Driver variant**
-      - **PCI Vendor**
-      - **PCI Product**
-      - **PCI Subvendor**
-      - **PCI Subsystem**
+      - Vendor
+      - Product
+      - form factor
+      - Driver variant
+      - PCI Vendor
+      - PCI Product
+      - PCI Subvendor
+      - PCI Subsystem
    - 
 
       - 3Com
@@ -844,16 +846,17 @@ USB devices
 ~~~~~~~~~~~
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **Driver variant**
-      - **Chipset**
-      - **USB Vendor**
-      - **USB Product**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - Driver variant
+      - Chipset
+      - USB Vendor
+      - USB Product
+      - MaxPower
    - 
 
       - Compaq
@@ -1038,4 +1041,5 @@ USB devices
 Other devices
 ~~~~~~~~~~~~~
 
-The airport driver supports the AirPort in the Apple Powerbook G3 (Firewire) and G4 (Titanium).
+The airport driver supports the AirPort in the Apple Powerbook G3
+(Firewire) and G4 (Titanium).

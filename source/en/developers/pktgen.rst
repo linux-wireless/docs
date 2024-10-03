@@ -1,30 +1,31 @@
 pktgen
-------
+======
 
 Using pktgen with mac80211_hwsim
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using pktgen together with :doc:`mac80211_hwsim <../users/drivers/mac80211_hwsim>` allows to accurately measure the performance impact of code changes onto the rx and tx path of mac80211 (without outside influences that would happen with real devices like interference).
+Using pktgen together with :doc:`mac80211_hwsim
+<../users/drivers/mac80211_hwsim>` allows to accurately measure the
+performance impact of code changes onto the rx and tx path of mac80211
+(without outside influences that would happen with real devices like
+interference).
 
-In order to run pktgen through mac80211 we need to set up for example one AP (wlan0) and one station (wlan1) interface (see :doc:`mac80211_hwsim <../users/drivers/mac80211_hwsim>`).
+In order to run pktgen through mac80211 we need to set up for example
+one AP (wlan0) and one station (wlan1) interface (see
+:doc:`mac80211_hwsim <../users/drivers/mac80211_hwsim>`).
 
-First, load the pktgen module:
-
-::
+First, load the pktgen module::
 
    modprobe pktgen
 
-Set up pktgen to use wlan1 as transmitter:
-
-::
+Set up pktgen to use wlan1 as transmitter::
 
    cd /proc/net/pktgen
    echo "rem_device_all" > kpktgend_0
    echo "add_device wlan1" > kpktgend_0
 
-Now set up some parameters (frame size, number of buffers to send etc.):
-
-::
+Now set up some parameters (frame size, number of buffers to send
+etc.)::
 
    echo "count 10000" > wlan1
    echo "pkt_size 600" > wlan1
@@ -33,15 +34,11 @@ Now set up some parameters (frame size, number of buffers to send etc.):
 
 If you want the AP interface to receive the frames use the AP interface MAC address as dst_mac.
 
-Start transmitting:
-
-::
+Start transmitting::
 
    echo "start" > pgctrl
 
-The results can be read afterwards using:
-
-::
+The results can be read afterwards using::
 
    > cat wlan1
    Params: count 100000 min_pkt_size: 600 max_pkt_size: 600

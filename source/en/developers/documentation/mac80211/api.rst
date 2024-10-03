@@ -1,7 +1,8 @@
 mac80211 driver API notes
--------------------------
+=========================
 
-There surely are errors and omissions in this list, please help. Also, if you maintain a driver, please look through this list.
+There surely are errors and omissions in this list, please help. Also,
+if you maintain a driver, please look through this list.
 
 A driver must (alternatives in order of preference)
 

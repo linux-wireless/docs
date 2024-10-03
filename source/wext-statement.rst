@@ -1,10 +1,5 @@
-\**This page is currently not readable to people who are not logged on because I don't want it to be widely linked *yet*, and it will also move to another place.
-
-This statement is WORK IN PROGRESS.*\*
-
---------------
-
-**Wireless extension deprecation**
+Wireless extension deprecation
+==============================
 
 With the recent advances in cfg80211, the userspace API nl80211 is now mostly at feature parity over wireless extensions, in some areas much exceeding the feature set already. At the same time, cfg80211 has gained support for emulating wireless extensions, so that applications using wireless extensions can continue to work for drivers implementing the richer and better defined cfg80211 API instead.
 

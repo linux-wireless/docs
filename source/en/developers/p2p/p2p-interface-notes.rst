@@ -1,7 +1,7 @@
-**Note: The design on this page is WIP:** http://thread.gmane.org/gmane.linux.kernel.wireless.general/93044
-
 Design notes on dedicated P2P interface API
--------------------------------------------
+===========================================
+
+**Note: The design on this page is WIP:** http://thread.gmane.org/gmane.linux.kernel.wireless.general/93044
 
 Rationale
 ~~~~~~~~~

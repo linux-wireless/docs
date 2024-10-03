@@ -1,7 +1,5 @@
-Go back –> :doc:`ath10k <../ath10k>`
-
 ath10k TODO
------------
+===========
 
 Things ath10k developers are currently working on, and other things to do:
 

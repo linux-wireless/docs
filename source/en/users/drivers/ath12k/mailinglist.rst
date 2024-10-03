@@ -1,9 +1,9 @@
-Go back --> :doc:`en/users/Drivers/ath12k <../ath12k>`
-
 ath12k mailing list
--------------------
+===================
 
-ath12k discussion and development happens on the public `ath12k@lists.infradead.org <ath12k@lists.infradead.org>`__. Anyone can send mails to the list, no subscription required.
+ath12k discussion and development happens on the public
+`ath12k@lists.infradead.org <ath12k@lists.infradead.org>`__. Anyone can
+send mails to the list, no subscription required.
 
 Subscribe via the listinfo page:
 

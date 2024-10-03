@@ -1,21 +1,18 @@
-Go back --> :doc:`ath10k <../ath10k>`
-
 ath10k sources
---------------
+==============
 
 *ath10k* development happens in the ath/ath.git tree on kernel.org:
 
 https://git.kernel.org/cgit/linux/kernel/git/ath/ath.git/
 
-To clone the tree:
-
-::
+To clone the tree::
 
    git clone git://git.kernel.org/pub/scm/linux/kernel/git/ath/ath.git
 
 ath10k driver is located in directory drivers/net/wireless/ath/ath10k.
 
-If you just want to browse the source code with your web browser this links always points to latest version of ath10k:
+If you just want to browse the source code with your web browser this
+links always points to latest version of ath10k:
 
 https://git.kernel.org/cgit/linux/kernel/git/ath/ath.git/tree/drivers/net/wireless/ath/ath10k
 
@@ -30,4 +27,5 @@ ath.git contains multiple branches:
 -  **pending:** Used for building and runtime testing patches under review. Is rebased almost daily and hence commit ids are NOT stable. Use this only if you know what you are doing.
 -  **main-pending:** The pending branch merged on top of the main branch, for easier testing of the pending patches. Same rules apply as with the pending branch.
 
-See also :doc:`submitting ath10k patches <submittingpatches>` for more information about the patch flow.
+See also :doc:`submitting ath10k patches <submittingpatches>` for more
+information about the patch flow.

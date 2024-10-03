@@ -1,5 +1,9 @@
 rt2500usb
----------
+=========
+
+.. toctree::
+
+   rt2500usb/devices
 
 Driver for `Ralink <http://www.mediatek.com>`__ USB devices RT2571 & RT2572.
 
@@ -8,35 +12,27 @@ available devices
 
 Please see the :doc:`device list <rt2500usb/devices>`.
 
--  http://rt2x00.serialmonkey.com/wiki/index.php/Hardware List of devices from the project site.
+- http://rt2x00.serialmonkey.com/wiki/index.php/Hardware List of devices from the project site.
 
 features
 --------
 
-::
-
-     * //TODO// 
+* //TODO// 
 
 working
 ~~~~~~~
 
-::
-
-       * //TODO// 
+* //TODO// 
 
 not working yet
 ~~~~~~~~~~~~~~~
 
-::
-
-         * //TODO// 
+* //TODO// 
 
 not supported
 ~~~~~~~~~~~~~
 
-::
-
-           * //TODO// 
+* //TODO// 
 
 device firmware
 ---------------
@@ -46,14 +42,10 @@ device firmware
 support
 -------
 
-::
-
-             * [[http://rt2x00.serialmonkey.com/mailman/listinfo/users_rt2x00.serialmonkey.com|Mailing list]] 
-             * [[http://rt2x00.serialmonkey.com/phpBB/viewforum.php?f=5|Forum]] 
+* `Mailing list <http://rt2x00.serialmonkey.com/mailman/listinfo/users_rt2x00.serialmonkey.com>`__ 
+* `Forum <http://rt2x00.serialmonkey.com/phpBB/viewforum.php?f=5>`__ 
 
 external links
 --------------
 
-::
-
-               * [[http://rt2x00.serialmonkey.com/|rt2x00 project website]] 
+* `rt2x00 project website <http://rt2x00.serialmonkey.com/>`__ 

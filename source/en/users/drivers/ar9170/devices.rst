@@ -1,12 +1,16 @@
+ar9170 devices
+==============
+
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **USB Vendor**
-      - **USB Product**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - USB Vendor
+      - USB Product
+      - MaxPower
    - 
 
       - 3Com

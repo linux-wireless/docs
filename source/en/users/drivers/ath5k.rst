@@ -1,9 +1,18 @@
-Go back --> :doc:`Atheros Linux wireless drivers <atheros>`
-
 About Ath5k
------------
+===========
 
-Ath5k is a completely FOSS wireless driver for Atheros based wireless chipset versions AR5xxx in the Linux Kernel. It has evolved out of `MadWiFi <http://madwifi-project.org/>`__, `OpenHAL <https://madwifi-project.org/wiki/About/OpenHAL>`__, and the `open-sourced HAL <http://www.kernel.org/pub/linux/kernel/people/mcgrof/legacy-hal.tar.bz2>`__ code of Atheros and `Sam Leffler <http://svn.freebsd.org/base/projects/ath_hal/>`__.
+.. toctree::
+
+   ath5k/devices
+
+Ath5k is a completely FOSS wireless driver for Atheros based wireless
+chipset versions AR5xxx in the Linux Kernel. It has evolved out of
+`MadWiFi <http://madwifi-project.org/>`__, `OpenHAL
+<https://madwifi-project.org/wiki/About/OpenHAL>`__, and the
+`open-sourced HAL
+<http://www.kernel.org/pub/linux/kernel/people/mcgrof/legacy-hal.tar.bz2>`__
+code of Atheros and `Sam Leffler
+<http://svn.freebsd.org/base/projects/ath_hal/>`__.
 
 News
 ----
@@ -11,87 +20,104 @@ News
 2010-12-03
 ~~~~~~~~~~
 
-**AHB Bus support**: Support for the AHB bus got merged. Now ath5k can be used on AR231X and AR5312 embedded devices (WiSoC). (`commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=a0b907ee2a71052fefdf6151764095f3f97b3275>`__)
-
-.. _section-1:
+**AHB Bus support**: Support for the AHB bus got merged. Now ath5k can
+be used on AR231X and AR5312 embedded devices (WiSoC). (`commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=a0b907ee2a71052fefdf6151764095f3f97b3275>`__)
 
 2010-11-30
 ~~~~~~~~~~
 
-**Preparations for Turbo Mode and half/quarter rate support:** Big internal update of PHY code to clean up turbo modes and reset and add half/quarter rate support (50/10MHz channel widths). These new modes are not enabled yet, and it's unlikely that there will be a standard API for enabling them in the near future, however developers/researchers can use them for various projects like 802.11p support. (`first commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=9320b5c4a7260d9593102f378201d17e3f030739>`__)
+**Preparations for Turbo Mode and half/quarter rate support:** Big
+internal update of PHY code to clean up turbo modes and reset and add
+half/quarter rate support (50/10MHz channel widths). These new modes are
+not enabled yet, and it's unlikely that there will be a standard API for
+enabling them in the near future, however developers/researchers can use
+them for various projects like 802.11p support. (`first commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=9320b5c4a7260d9593102f378201d17e3f030739>`__)
 
-**Synthesizer-only channel change for newer chips:** On AR2413/AR5413 we now support faster channel switching by skipping normal reset and directly setting the channel on PHY while it's still active (`commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commitdiff;h=8aec7af99b1e4594c4bb9e1c48005e6111f97e8e>`__).
-
-.. _section-2:
+**Synthesizer-only channel change for newer chips:** On AR2413/AR5413 we
+now support faster channel switching by skipping normal reset and
+directly setting the channel on PHY while it's still active (`commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commitdiff;h=8aec7af99b1e4594c4bb9e1c48005e6111f97e8e>`__).
 
 2010-10-05
 ~~~~~~~~~~
 
-**Support for virtual STA and AP added:** Support for up to 4 virtual APs and as many virtual STA interfaces as desired got added (`commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=b1ae1edf9e9872d3aa657cc34ae40c9aadfbc72f>`__). This feature is sometimes also called "Multi ESSID" and allows us to configure several AP and STA interfaces on top of only one physical device.
-
-.. _section-3:
+**Support for virtual STA and AP added:** Support for up to 4 virtual
+APs and as many virtual STA interfaces as desired got added (`commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=b1ae1edf9e9872d3aa657cc34ae40c9aadfbc72f>`__).
+This feature is sometimes also called "Multi ESSID" and allows us to
+configure several AP and STA interfaces on top of only one physical
+device.
 
 2010-09-28
 ~~~~~~~~~~
 
-**802.11e/WME/QoS support:** Support for QoS/WME, using multiple hardware queues, got merged. (`commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=925e0b061300c94912be36eac16f0b44249a1add>`__)
-
-.. _section-4:
+**802.11e/WME/QoS support:** Support for QoS/WME, using multiple
+hardware queues, got merged. (`commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=925e0b061300c94912be36eac16f0b44249a1add>`__)
 
 2010-09-16
 ~~~~~~~~~~
 
-**Hardware Encryption:** Hardware encryption is enabled again, by sharing code with ath9k. Before that HW encryption was disabled in AP mode due to bugs in the ath5k key handling. (`commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=e0f8c2a9b879e1e65d588a40a3c88db69a7d6956>`__)
-
-.. _section-5:
+**Hardware Encryption:** Hardware encryption is enabled again, by
+sharing code with ath9k. Before that HW encryption was disabled in AP
+mode due to bugs in the ath5k key handling. (`commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=e0f8c2a9b879e1e65d588a40a3c88db69a7d6956>`__)
 
 2010-08-13
 ~~~~~~~~~~
 
-**Disable ASPM L0s for all cards**: This fixes problems with PCI-E cards, especially on Acer Aspire One. (`commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=6ccf15a1a76d2ff915cdef6ae4d12d0170087118>`__)
-
-.. _section-6:
+**Disable ASPM L0s for all cards**: This fixes problems with PCI-E
+cards, especially on Acer Aspire One. (`commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=6ccf15a1a76d2ff915cdef6ae4d12d0170087118>`__)
 
 2010-04-07
 ~~~~~~~~~~
 
-**ANI implementation added:** Adaptive Noise Immunity (ANI) got implemented. This greatly improves performance in noisy environments. (`commit <http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=2111ac0d888767999c7dd6d1309dcc1fb8012022>`__)
+**ANI implementation added:** Adaptive Noise Immunity (ANI) got
+implemented. This greatly improves performance in noisy environments.
+(`commit
+<http://git.kernel.org/?p=linux/kernel/git/linville/wireless-testing.git;a=commit;h=2111ac0d888767999c7dd6d1309dcc1fb8012022>`__)
 
 Mailing list
 ------------
 
 :doc:`linux-wireless <../../developers/mailinglists>` is the recommended mailing list to use.
 
-The archives ​for the old ath5k-devel list, which was closed in 2017, are available `here <https://lists.ath5k.org/mailman/listinfo/ath5k-devel>`__.
+The archives for the old ath5k-devel list, which was closed in 2017, are
+available `here
+<https://lists.ath5k.org/mailman/listinfo/ath5k-devel>`__.
 
 Getting ath5k
 -------------
 
-The driver is pre-installed in most current Linux distributions. ath5k is available through different places:
+The driver is pre-installed in most current Linux distributions. ath5k
+is available through different places:
 
--  The :doc:`wireless-testing <../../developers/process>` tree - this is where the latest code can be found and what the develpers work with.
--  The :doc:`Linux wireless compatibility package <../download>` - the most easy way to get and install the latest versions on all stable kernels.
--  The Linux kernel from version **2.6.25** and up. However, we recommend to use at least **2.6.31**.
--  The Linux kernel **2.6.38** has some bugs in ath5k. We recommend to install the :doc:`Linux wireless compatibility package <../download>` if you are running this kernel and your internet connection is slow or unreliable.
--  :doc:`ath5k on RHEL5 <ath9k/rhel5>`
+- The :doc:`wireless-testing <../../developers/process>` tree - this is where the latest code can be found and what the develpers work with.
+- The :doc:`Linux wireless compatibility package <../download>` - the most easy way to get and install the latest versions on all stable kernels.
+- The Linux kernel from version **2.6.25** and up. However, we recommend to use at least **2.6.31**.
+- The Linux kernel **2.6.38** has some bugs in ath5k. We recommend to install the :doc:`Linux wireless compatibility package <../download>` if you are running this kernel and your internet connection is slow or unreliable.
+- :doc:`ath5k on RHEL5 <ath9k/rhel5>`
 
 Enabling ath5k
 ~~~~~~~~~~~~~~
 
-To enable ath5k in the kernel configuration, you must first enable mac80211:
-
-::
+To enable ath5k in the kernel configuration, you must first enable
+mac80211::
 
    Networking support --->
      Wireless  --->
        <M>   cfg80211 - wireless configuration API
        <M>   Generic IEEE 802.11 Networking Stack (mac80211)
 
-Please note that in older kernels there was another 802.11 networking stack: <code> < > Generic IEEE 802.11 Networking Stack</code> You do not need this. This option enables the old SoftMAC which is already removed from newer kernels. You can still safely enable this though.
+Please note that in older kernels there was another 802.11 networking
+stack: ``< > Generic IEEE 802.11 Networking Stack``. You do not need
+this. This option enables the old SoftMAC which is already removed from
+newer kernels. You can still safely enable this though.
 
-You can then enable ath5k in the kernel configuration under
-
-::
+You can then enable ath5k in the kernel configuration under::
 
    Device Drivers  --->
      [*] Network device support  --->
@@ -99,9 +125,7 @@ You can then enable ath5k in the kernel configuration under
              <M>   Atheros Wireless Cards  ---> 
                <M>   Atheros 5xxx wireless cards support
 
-To try the driver you can do something like this:
-
-::
+To try the driver you can do something like this::
 
    modprobe ath5k
    sudo ip link set wlan%d up
@@ -113,7 +137,12 @@ To try the driver you can do something like this:
 Supported Devices
 -----------------
 
-See the :doc:`ath5k device list <ath5k/devices>`. This list is still very much incomplete - please add your device/card if it works! A longer but less reliable list can be found at http://madwifi-project.org/wiki/Compatibility. It's worth trying your card with ath5k even though it is not in the list above, if it has one of the following chips:
+See the :doc:`ath5k device list <ath5k/devices>`. This list is still
+very much incomplete - please add your device/card if it works! A longer
+but less reliable list can be found at
+http://madwifi-project.org/wiki/Compatibility. It's worth trying your
+card with ath5k even though it is not in the list above, if it has one
+of the following chips:
 
 Supported Chips
 ~~~~~~~~~~~~~~~
@@ -190,91 +219,77 @@ Supports 802.11abg, depending on the chipset. This driver requires no firmware o
 working
 ~~~~~~~
 
-::
-
-     * //Station Mode// 
-     * //Ad-Hoc Mode// 
-     * //Mesh Point Mode// 
-     * //Access Point Mode// (enabled in Linux 2.6.31 and newer and in compat-wireless, can also be enabled by [[http://madwifi-project.org/wiki/UserDocs/ath5kAccessPoint|patching an older kernel]].) 
-     * //5/10MHz channels// 
-     * //Turbo (*)// 
+* //Station Mode// 
+* //Ad-Hoc Mode// 
+* //Mesh Point Mode// 
+* //Access Point Mode// (enabled in Linux 2.6.31 and newer and in
+  compat-wireless, can also be enabled by
+  [[http://madwifi-project.org/wiki/UserDocs/ath5kAccessPoint|patching
+  an older kernel]].) 
+* //5/10MHz channels// 
+* //Turbo (*)// 
 
 not working yet
 ~~~~~~~~~~~~~~~
 
-::
-
-       * //XR (*)// 
-       * //SuperA/G (*)// 
+* //XR (*)// 
+* //SuperA/G (*)// 
 
 \* We don't plan on supporting XR mode nor dynamic 20/40MHz turbo mode supported by hw.
 
 Hacking ath5k
 -------------
 
-Developers are encouraged to work using the git repository. If you are not familiar with git please check out our :doc:`Linux wireless git-guide <../../developers/documentation/git-guide>` and the description of the :doc:`development process <../../developers/process>`. Alternatively you can use the :doc:`Linux wireless compatibility package <../download>` but please be sure to post patches in unified diff format (diff -u). To learn how to submit patches please read our :doc:`Submitting patches guideline <../../developers/documentation/submittingpatches>`.
+Developers are encouraged to work using the git repository. If you are
+not familiar with git please check out our :doc:`Linux wireless
+git-guide <../../developers/documentation/git-guide>` and the
+description of the :doc:`development process
+<../../developers/process>`. Alternatively you can use the :doc:`Linux
+wireless compatibility package <../download>` but please be sure to post
+patches in unified diff format (diff -u). To learn how to submit patches
+please read our :doc:`Submitting patches guideline
+<../../developers/documentation/submittingpatches>`.
 
 Documentation available
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Read this section on :doc:`Atheros specifications and documentation <../../developers/documentation/specs>`.
+Read this section on :doc:`Atheros specifications and documentation
+<../../developers/documentation/specs>`.
 
 Atheros common module
 ~~~~~~~~~~~~~~~~~~~~~
 
 ath5k uses the common shared :doc:`ath.ko module <ath>`.
 
-ath5k kerneldoc
-~~~~~~~~~~~~~~~
-
-We have kerneldocs available for ath5k:
-
-::
-
-         * General driver structure: 
-         *  * [[en/users/Drivers/ath5k/kerneldoc/ath5k.h|ath5k.h]] ([[en/users/Drivers/ath5k/kerneldoc/ath5k.h/warnings|warnings]])(has some content) 
-         *   Main PCI and mac80211 driver interface: 
-         *    * [[en/users/Drivers/ath5k/kerneldoc/base.c|base.c]] ([[en/users/Drivers/ath5k/kerneldoc/base.c/warnings|warnings]]) (TODO) 
-         *    * [[en/users/Drivers/ath5k/kerneldoc/base.h|base.h]] ([[en/users/Drivers/ath5k/kerneldoc/base.h/warnings|warnings]]) (TODO) 
-         *     Debug utilities: 
-         *      * [[en/users/Drivers/ath5k/kerneldoc/debug.c|debug.c]] ([[en/users/Drivers/ath5k/kerneldoc/debug.c/warnings|warnings]]) (TODO) 
-         *      * [[en/users/Drivers/ath5k/kerneldoc/debug.h|debug.h]] ([[en/users/Drivers/ath5k/kerneldoc/debug.h/warnings|warnings]]) (has some content) 
-         *       Initialization and PHY control: 
-         *        * [[en/users/Drivers/ath5k/kerneldoc/initvals.c|initvals.c]] ([[en/users/Drivers/ath5k/kerneldoc/initvals.c/warnings|warnings]]) (TODO) 
-         *        * [[en/users/Drivers/ath5k/kerneldoc/phy.c|phy.c]] ([[en/users/Drivers/ath5k/kerneldoc/phy.c/warnings|warnings]]) (has some content) 
-         *         Hardware registers: 
-         *          * [[en/users/Drivers/ath5k/kerneldoc/reg.h|reg.h]] ([[en/users/Drivers/ath5k/kerneldoc/reg.h/warnings|warnings]]) (TODO) 
-
 Reported bugs on ath5k
 ----------------------
 
-This is a collection of bug reports both unresolved and resolved to help users track issues and to find patches for fixes which have not yet been merged.
+This is a collection of bug reports both unresolved and resolved to help
+users track issues and to find patches for fixes which have not yet been
+merged.
 
-::
-
-         *           * [[http://bugzilla.kernel.org/buglist.cgi?query_format=specific&order=relevance+desc&bug_status=__all__&product=&content=ath5k|All ath5k bugs]] 
-         *           * [[http://bugzilla.kernel.org/buglist.cgi?query_format=specific&order=relevance+desc&bug_status=__open__&product=&content=ath5k|All opened ath5k bugs]] 
-         *           * [[http://bugzilla.kernel.org/buglist.cgi?query_format=specific&order=relevance+desc&bug_status=__closed__&product=&content=ath5k|All closed ath5k bugs]] 
-
-**Please** when submitting a bug report **always** include your card's silicon revision for MAC and PHY chips, just look at your kernel log for a line like this one... or ``dmesg |grep "ath5.*chip"``:
-
-::
+**Please** when submitting a bug report **always** include your card's
+silicon revision for MAC and PHY chips, just look at your kernel log for
+a line like this one... or ``dmesg |grep "ath5.*chip"``::
 
    ath5k phy0: Atheros AR2413 chip found (MAC: 0x78, PHY: 0x45)
 
-...and put it in your report. ``lspci`` information is much less useful than this.
+...and put it in your report. ``lspci`` information is much less useful
+than this.
 
 ath5k TODO List
 ---------------
 
 Things ath5k developers are currently working on, and other things to do:
 
-::
-
-         *             * Tx power support (setting tx power) (Nick/Felix -works but experiments show that the card transmits only on some standard power levels instead of a power range as expected -still debuging, any ideas are welcome) 
-         *             * Power saving (Bob) 
-         *             * AR5210 support (EEPROM etc) (Nick) 
-         *             * EAR (EEPROM Added Registers) support 
-         *             * Documentation update/cleanup (Nick - added kerneldoc on all hw related functions and files, need to do some more reading) 
-         *             * Radar detection/DFS stuff 
-         *             * Update ath_info 
+* Tx power support (setting tx power) (Nick/Felix -works but experiments
+  show that the card transmits only on some standard power levels
+  instead of a power range as expected -still debuging, any ideas are
+  welcome) 
+* Power saving (Bob) 
+* AR5210 support (EEPROM etc) (Nick) 
+* EAR (EEPROM Added Registers) support 
+* Documentation update/cleanup (Nick - added kerneldoc on all hw related
+  functions and files, need to do some more reading) 
+* Radar detection/DFS stuff 
+* Update ath_info 

@@ -1,5 +1,5 @@
 mac80211 issues
----------------
+===============
 
 This page lists the issues blocking zd1211rw moving to the mac80211 stack. Some of these may already be resolved, they just need to be checked.
 
@@ -25,21 +25,17 @@ Testing on ARM and SPARC64
 
 We have happy ARM and SPARC64 users. To my knowledge, mac80211 has not been tested there.
 
-::
-
-     * However, we do test on powerpc and x86 so there's unlikely to be problems. Also, who's going to test mac80211 without a driver? IMHO this is a requirement that can't be solved. -- [[JohannesBerg|JohannesBerg]]  
-
---------------
+* However, we do test on powerpc and x86 so there's unlikely to be
+  problems. Also, who's going to test mac80211 without a driver? IMHO
+  this is a requirement that can't be solved. -- JohannesBerg
 
 Fixed issues
 ------------
 
-::
-
-       * Regulatory domain control 
-       * Signal level reporting 
-       * Connectivity loss issues 
-       * monitor mode not showing all frames 
-       * monitor mode scanning oops 
-       * multicasting/IPv6 
-       * Barker preamble handling 
+* Regulatory domain control 
+* Signal level reporting 
+* Connectivity loss issues 
+* monitor mode not showing all frames 
+* monitor mode scanning oops 
+* multicasting/IPv6 
+* Barker preamble handling 

@@ -1,12 +1,14 @@
 wcn36xx
--------
+=======
 
-wcn36xx is a mac80211 driver for wcn3660 and wcn3680 chips found from Qualcomm SoC.
+wcn36xx is a mac80211 driver for wcn3660 and wcn3680 chips found from
+Qualcomm SoC.
 
 Caveats
 -------
 
-Currently wcn36xx only compiles with msm kernels and backports infrastructure is needed to get latest cfg80211 and mac80211.
+Currently wcn36xx only compiles with msm kernels and backports
+infrastructure is needed to get latest cfg80211 and mac80211.
 
 Supported chips
 ---------------
@@ -16,68 +18,70 @@ wcn36xx supports both WCN3660 and WCN3680 chips.
 Available devices
 -----------------
 
-wcn36xx was tested on Google Nexus 4(Mako), Sony Xperia - T(Mint), Z(Yuga), ZR(Dogo) and Z1(Honami). Basically, wcn36xx can support all MSM based devices.
+wcn36xx was tested on Google Nexus 4(Mako), Sony Xperia - T(Mint),
+Z(Yuga), ZR(Dogo) and Z1(Honami). Basically, wcn36xx can support all MSM
+based devices.
 
 Features
 --------
 
-As a general rule for this section, don't list every tiny detail, just the most important things one should know about.
+As a general rule for this section, don't list every tiny detail, just
+the most important things one should know about.
 
 Working
 ~~~~~~~
 
-list wireless features that your driver supports, e.g. station mode, access point mode etc
+list wireless features that your driver supports, e.g. station mode,
+access point mode etc
 
--  11b, 11g, 11n, 11a
--  HW rate control
--  hardware encryption(TKIP, CCMP, WEP)
--  HW connection monitoring
--  aggregation (Immediate BA only)
--  `ProbeResponse <ProbeResponse>`__ offloading
--  Beacon filtering
--  Multicast filtering
--  WoW
--  power save
--  AP mode support
--  Ad-Hoc
--  11s mesh
+- 11b, 11g, 11n, 11a
+- HW rate control
+- hardware encryption(TKIP, CCMP, WEP)
+- HW connection monitoring
+- aggregation (Immediate BA only)
+- ProbeResponse offloading
+- Beacon filtering
+- Multicast filtering
+- WoW
+- power save
+- AP mode support
+- Ad-Hoc
+- 11s mesh
 
 Not working (yet)
 ~~~~~~~~~~~~~~~~~
 
 list features that could be supported but are not yet
 
-::
-
-     * ARP offloading 
-     * 80211AC 
-     * P2P 
-     * Miracast 
-     * Bluetooth coexistence 
-     * WAPI 
-     * WMM 
-     * CQM 
-     * DFS 
-     * Recovery(In case of chip hanging, wcn36xx must restart it) 
+* ARP offloading 
+* 80211AC 
+* P2P 
+* Miracast 
+* Bluetooth coexistence 
+* WAPI 
+* WMM 
+* CQM 
+* DFS 
+* Recovery (In case of chip hanging, wcn36xx must restart it) 
 
 Not supported
 ~~~~~~~~~~~~~
 
-::
-
-       * list important features that the device will not support 
+* list important features that the device will not support 
 
 Sources
 -------
 
-wcn36xx is part of the mainline kernel. The latest developement version can be found on github:
+wcn36xx is part of the mainline kernel. The latest developement version
+can be found on github:
 
 https://github.com/KrasnikovEugene/wcn36xx
 
 Device firmware
 ---------------
 
-The latest greatest firmware can be found on here https://www.codeaurora.org/cgit/external/hisense/platform/vendor/qcom-opensource/wlan/prima/tree/firmware_bin?h=8130_CS
+The latest greatest firmware can be found on here
+https://www.codeaurora.org/cgit/external/hisense/platform/vendor/qcom-opensource/wlan/prima/tree/firmware_bin?h=8130_CS
 
 wcn36xx loads WCNSS_qcom_wlan_nv.bin file and sends it to the hardware.
 
@@ -97,7 +101,10 @@ https://github.com/KrasnikovEugene/wcn36xx/issues
 Dissector
 ---------
 
-If you are hacking on wcn36xx and want to see see what Qualcomm's prima driver (or wcn36xx) sends to and from fw, check out the wcn36xx-dissector. It allows you to view all commands and data in wireshark. It understands most commands and buffer structures.
+If you are hacking on wcn36xx and want to see see what Qualcomm's prima
+driver (or wcn36xx) sends to and from fw, check out the
+wcn36xx-dissector. It allows you to view all commands and data in
+wireshark. It understands most commands and buffer structures.
 
 https://github.com/kanstrup/wcn36xx-dissector
 
@@ -150,7 +157,10 @@ Do a git log, find the first commit that says something like: "refresh on next-2
    cd backports
    ./gentree.py --verbose --clean --git-revision next-20131122 --extra-driver ../ copy-list.wcn36xx ../linux-next/ ../backport-wcn
 
-This command will create the folder ../backport-wcn where it will put all the necessary linux stuff from linux-next. It will also apply a number of patches, if any of these fail you must sort it out otherwise the build folder will not be ready.
+This command will create the folder ../backport-wcn where it will put
+all the necessary linux stuff from linux-next. It will also apply a
+number of patches, if any of these fail you must sort it out otherwise
+the build folder will not be ready.
 
 Time to build
 ~~~~~~~~~~~~~
@@ -209,12 +219,13 @@ To make this run on OSX (Mountain Lion) I had to do some changes. 1) The make co
 
 2) The Makefile in backport-wcn must be modified.
 
-::
+The comment on line 101 looking like this: 
+ * # RHEL as well, sadly we need to grep for it                                ;\ 
+ * It must be remove or else you will get a bash error.
 
-         * The comment on line 101 looking like this: 
-         *  * # RHEL as well, sadly we need to grep for it                                ;\ 
-         *  *  * It must be remove or else you will get a bash error. 3) You must modify the kconf/Makefile 
-         *  *  * To the first line in this file (beginning with CFLAGS) add -DKBUILD_NO_NLS to the end. Otherwise you will get a lkc.h error when building. 
+3) You must modify the kconf/Makefile 
+
+* To the first line in this file (beginning with CFLAGS) add -DKBUILD_NO_NLS to the end. Otherwise you will get a lkc.h error when building. 
 
 Installation
 ------------

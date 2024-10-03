@@ -1,17 +1,18 @@
 Supported Realtek wireless devices
-----------------------------------
+==================================
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **form factor**
-      - **Realtek Chip**
-      - **PCI Product**
-      - **PCI Subvendor**
-      - **PCI Subsystem**
+      - Vendor
+      - Product
+      - form factor
+      - Realtek Chip
+      - PCI Product
+      - PCI Subvendor
+      - PCI Subsystem
    - 
 
       - Netgear

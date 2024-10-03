@@ -1,5 +1,5 @@
-.. image:: /en/users/drivers/primary-master-logo_en_cmyk_orange.png
-   :width: 250px
+mediatek
+========
 
 Introduction
 ~~~~~~~~~~~~
@@ -20,16 +20,15 @@ mac80211 wireless driver for MediaTek MT7xxx series
    -  **MT7986**/**MT7981** 802.11a/b/g/n/ac/ax 4T4R 2.4/5GHz SoC Device (**5.18+**)
    -  **MT7921** 802.11a/b/g/n/ac/ax 2T2R 2.4/5GHz/6Hz PCIe/USB/SDIO Chip
 
-::
-
          * MT7921 PCIe is supported since (**5.12+**)
          * MT7921 SDIO is supported since (**5.16+**)
          * MT7921 USB is supported since (**5.18+**)
          * 6G band is supported by MT7921K
-     * **MT7922** 802.11a/b/g/n/ac/ax 2T2R 2.4/5G/6GHz PCIe Chip (**5.16+**)
-     * **MT7996** 802.11a/b/g/n/ac/ax/be 4T4R 2.4/5G/6GHz PCIe Chip (**6.2+**)
-     * **MT7925** 802.11a/b/g/n/ac/ax/be 2T2R 2.4/5G/6GHz PCIe/USB Chip (**6.7+**)
-     * **MT7992** 802.11a/b/g/n/ac/ax/be 4T4R 2.4/5T5R 5G PCIe Chip (**6.8+**)
+
+   - **MT7922** 802.11a/b/g/n/ac/ax 2T2R 2.4/5G/6GHz PCIe Chip (**5.16+**)
+   - **MT7996** 802.11a/b/g/n/ac/ax/be 4T4R 2.4/5G/6GHz PCIe Chip (**6.2+**)
+   - **MT7925** 802.11a/b/g/n/ac/ax/be 2T2R 2.4/5G/6GHz PCIe/USB Chip (**6.7+**)
+   - **MT7992** 802.11a/b/g/n/ac/ax/be 4T4R 2.4/5T5R 5G PCIe Chip (**6.8+**)
 
 -  **mt7601u** driver handles:
 
@@ -40,29 +39,26 @@ note: 5Ghz MT7613BEN is handled as a mt7663 case (ChipID=0x7663) which is handle
 Unsupported chips
 ~~~~~~~~~~~~~~~~~
 
-::
-
-    * [[https://deviwiki.com/wiki/MediaTek|Any other MediaTek chips]].
+* `Any other MediaTek chips <https://deviwiki.com/wiki/MediaTek>`__
 
 Firmware
 ~~~~~~~~
 
-You can get the latest firmware from `linux-firmware.git <https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/mediatek>`__
+You can get the latest firmware from `linux-firmware.git
+<https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/mediatek>`__
 
 Developers & Support
 ~~~~~~~~~~~~~~~~~~~~
 
 Send patches to the people and mailing lists below:
 
-::
-
-       * To: Felix Fietkau [[nbd@nbd.name]] 
-       * To: Lorenzo Bianconi [[lorenzo@kernel.org]] 
-       * To: Ryder Lee [[ryder.lee@mediatek.com]]
-       * To: Shayne Chen [[shayne.chen@mediatek.com]] 
-       * To: Sean Wang [[sean.wang@mediatek.com]]
-       * To: Deren Wu [[deren.wu@mediatek.com]]
-       * Cc: [[linux-mediatek@lists.infradead.org]] - https://lists.infradead.org/mailman/listinfo/linux-mediatek
-       * Cc: [[linux-wireless@vger.kernel.org]] - http://vger.kernel.org/vger-lists.html#linux-wireless
+* To: Felix Fietkau <nbd@nbd.name> 
+* To: Lorenzo Bianconi <lorenzo@kernel.org> 
+* To: Ryder Lee <ryder.lee@mediatek.com>
+* To: Shayne Chen <shayne.chen@mediatek.com> 
+* To: Sean Wang <sean.wang@mediatek.com>
+* To: Deren Wu <deren.wu@mediatek.com>
+* Cc: <linux-mediatek@lists.infradead.org> - https://lists.infradead.org/mailman/listinfo/linux-mediatek
+* Cc: <linux-wireless@vger.kernel.org> - http://vger.kernel.org/vger-lists.html#linux-wireless
 
 IRC channel: #mt76-devel

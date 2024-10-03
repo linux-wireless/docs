@@ -8,7 +8,7 @@ July 14, 2008
 -  mac80211 now supports more optional HT (802.11n) features
 -  mac80211's monitor interfaces can now be configured more precisely, "cooked" monitors were added
 -  mac80211's IBSS implementation now supports IBSS merging and received various bugfixes
--  mac80211 now has an in-kernel :doc:`documentation book <../mac80211book>`, help welcome!
+-  mac80211 now has an in-kernel documentation book, help welcome!
 -  :doc:`b43 <../en/users/drivers/b43>` now has support for PCMCIA devices and QoS/WME
 
 Also, lots of removals this time:

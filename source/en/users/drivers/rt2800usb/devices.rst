@@ -1,13 +1,17 @@
+Devices
+=======
+
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **Chipset**
-      - **USB Vendor**
-      - **USB Product**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - Chipset
+      - USB Vendor
+      - USB Product
+      - MaxPower
    - 
 
       - Airlink101

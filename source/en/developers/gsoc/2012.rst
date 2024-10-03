@@ -1,13 +1,23 @@
 Linux wireless GSoC 2012
-------------------------
+========================
 
-This is our fourth year with Linux wireless GSoC projects, under the `Linux Foundation GSoC umbrella <http://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2012>`__. This is the home page to keep track of the current projects, their status development done through it. Students should also use these pages to keep track of their own status of their projects.
+.. toctree::
+
+   2012/ath9k_htc_open_firmware
+
+This is our fourth year with Linux wireless GSoC projects, under the
+`Linux Foundation GSoC umbrella
+<http://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2012>`__.
+This is the home page to keep track of the current projects, their
+status development done through it. Students should also use these pages
+to keep track of their own status of their projects.
 
 Linux wireless GSoC 2012 projects
 ---------------------------------
 
 There is one project for 2012 for 802.11 for GSoC:
 
--  :doc:`Open firmware for ath9k_htc <2012/ath9k_htc_open_firmware>`
+- :doc:`Open firmware for ath9k_htc <2012/ath9k_htc_open_firmware>`
 
-If you are a student and want to talk just join :doc:`our IRC channel <../../users/support>` and linger and poke at us there.
+If you are a student and want to talk just join :doc:`our IRC channel
+<../../users/support>` and linger and poke at us there.

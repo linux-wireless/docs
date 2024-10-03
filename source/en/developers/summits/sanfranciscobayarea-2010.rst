@@ -1,23 +1,29 @@
-Notes
-~~~~~
-
-There are :doc:`notes from this summit <sanfranciscobayarea-2010/notes>`.
-
 San Francisco 2010
-~~~~~~~~~~~~~~~~~~
+==================
 
-This event will be September 9-10, 2010 (Thursday-Friday) in San Francisco. Meeting space will be in Marriott Union Square San Francisco at 480 Sutter Street. A group rate of $159/night at the hotel is available for two nights (September 9-11) with group code "wifwifa". Direct link to the reservation page: http://www.marriott.com/hotels/travel/sfous?groupCode=wifwifa&app=resvlink&fromDate=9/9/10&toDate=9/11/10
+.. toctree::
+
+   notes from this summit <sanfranciscobayarea-2010/notes>
+
+This event will be September 9-10, 2010 (Thursday-Friday) in San
+Francisco. Meeting space will be in Marriott Union Square San Francisco
+at 480 Sutter Street. A group rate of $159/night at the hotel is
+available for two nights (September 9-11) with group code "wifwifa".
+Direct link to the reservation page:
+http://www.marriott.com/hotels/travel/sfous?groupCode=wifwifa&app=resvlink&fromDate=9/9/10&toDate=9/11/10
 
 Topics
 ~~~~~~
 
 -  Overview of Wi-Fi Alliance
 -  `Wi-Fi Direct <https://www.wi-fi.org/draft_specifications.php>`__ (P2P)
--   \* Introduction to the protocol
--   \* Driver requirements
--   \* mac80211 design
--   \* wpa_supplicant/hostapd functionality
--   \* Planning for communication with other than core WLAN components
+
+    - Introduction to the protocol
+    - Driver requirements
+    - mac80211 design
+    - wpa_supplicant/hostapd functionality
+    - Planning for communication with other than core WLAN components
+
 -   cfg80211/mac80211 issues with different channels on different virtual interfaces
 -   Enabling more spectrum availability when roaming through `GeoClue <GeoClue>`__, passing accuracy values to the kernel for regulatory hints
 -   Requirements for wireless-regdb patches
@@ -25,7 +31,9 @@ Topics
 -   automated testing of the drivers and Linux WLAN
 -   define mac80211 callback order (e.g. station notification before/after bss_info_changed?)
 -   RSN IBSS
--   \* iwlwifi might require knowing this to disable hw group crypto, not sure what happens if simply no key exists
+
+    -  iwlwifi might require knowing this to disable hw group crypto, not sure what happens if simply no key exists
+
 -   GTK handling in mac80211
 -   HT IBSS
 -   a-MSDU TX support
@@ -115,8 +123,8 @@ Thursday
    - 
 
       - 17:00 - 18:00
-      - Automated `WiFi <WiFi>`__ Testing (use `Autotest <http://autotest.kernel.org/>`__)
-      - `SamLeffler <SamLeffler>`__
+      - Automated WiFi Testing (use `Autotest <http://autotest.kernel.org/>`__)
+      - SamLeffler
 
 Friday
 ^^^^^^
@@ -177,34 +185,34 @@ Friday
 Attendees
 ~~~~~~~~~
 
--   - Jouni Malinen
--   - Johannes Berg
--   - Kalle Valo
--   - Henry Ptasinski
--   - Lennert Buytenhek
--   - Luis R. Rodriguez
--   - Luciano Coelho
--   - John Linville
--   - Brett Rudley
--   - Wey-Yi Guy
--   - Ajit Pal Singh
--   - Nohee Ko
--   - Tim Gardner
--   - Jason Young
--   - Sam Leffler
--   - Paul Stewart
--   - Irfan Sheriff
--   - Dimitry Shmidt
--   - Abhijeet Kolekar
--   - Ajay Gupta
--   - Cyrille Vignon
--   - Gery Kahn
--   - Rik Logan
--   - Jayant Sane
--   - Guru
--   - Howard Harte
--   - Felix Fietkau
--   - Ohad Ben-Cohen
--   - Francois Amand
--   - Nicolas Petit
--   - Vipin Mehta
+- Jouni Malinen
+- Johannes Berg
+- Kalle Valo
+- Henry Ptasinski
+- Lennert Buytenhek
+- Luis R. Rodriguez
+- Luciano Coelho
+- John Linville
+- Brett Rudley
+- Wey-Yi Guy
+- Ajit Pal Singh
+- Nohee Ko
+- Tim Gardner
+- Jason Young
+- Sam Leffler
+- Paul Stewart
+- Irfan Sheriff
+- Dimitry Shmidt
+- Abhijeet Kolekar
+- Ajay Gupta
+- Cyrille Vignon
+- Gery Kahn
+- Rik Logan
+- Jayant Sane
+- Guru
+- Howard Harte
+- Felix Fietkau
+- Ohad Ben-Cohen
+- Francois Amand
+- Nicolas Petit
+- Vipin Mehta

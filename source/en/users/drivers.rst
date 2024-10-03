@@ -1,27 +1,117 @@
 Existing Linux Wireless drivers
--------------------------------
+###############################
 
-We currently have a fair amount of working drivers that cover most of the available wireless networking cards. However, they don't implement all features and may have some issues, due to various reasons like companies not providing specs. Below is an alphabetically sorted list of drivers and what they currently can and can't do.
+.. toctree::
+   :hidden:
 
-See also:
+   drivers/acx1xx
+   drivers/adm8211
+   drivers/agnx
+   drivers/airo
+   drivers/ar5120
+   drivers/ar5523
+   drivers/ar6k
+   drivers/ar9170.fw
+   drivers/ar9170
+   drivers/ar9271
+   drivers/at76_usb
+   drivers/at76c50x-usb
+   drivers/ath
+   drivers/ath10k
+   drivers/ath11k
+   drivers/ath12k
+   drivers/ath3k
+   drivers/ath5k
+   drivers/ath6kl
+   drivers/ath9k
+   drivers/ath9k_htc
+   drivers/atheros-bt
+   drivers/atheros
+   drivers/atmel
+   drivers/b43
+   drivers/bcm43xx
+   drivers/brcm80211
+   drivers/carl9170.fw
+   drivers/carl9170
+   drivers/cw1200
+   drivers/driverpagetemplate
+   drivers/ipw2100
+   drivers/ipw2200
+   drivers/iwl3945
+   drivers/iwl4965
+   drivers/iwlegacy
+   drivers/iwlwifi
+   drivers/iwmc3200wifi
+   drivers/libertas
+   drivers/libertastf
+   drivers/mac80211_hwsim
+   drivers/madwifi
+   drivers/mediatek
+   drivers/mwifiex
+   drivers/mwl8k
+   drivers/orinoco
+   drivers/otus
+   drivers/p54
+   drivers/qtnfmac
+   drivers/rndis_wlan
+   drivers/rt2400
+   drivers/rt2400pci
+   drivers/rt2500pci
+   drivers/rt2500usb
+   drivers/rt2800pci
+   drivers/rt2800usb
+   drivers/rt2880_inic
+   drivers/rt61pci
+   drivers/rt73usb
+   drivers/rtl8187
+   drivers/rtl819x
+   drivers/stlc45xx
+   drivers/vt665x
+   drivers/wcn36xx
+   drivers/wfx
+   drivers/wil6210
+   drivers/wilc
+   drivers/wl1251
+   drivers/wl12xx
+   drivers/wl18xx
+   drivers/wlags49_h2
+   drivers/zd1211rw
 
--  `Linux wireless drivers in Wikipedia <https://en.wikipedia.org/wiki/Comparison_of_open_source_wireless_drivers>`__
+We currently have a fair amount of working drivers that cover most of the
+available wireless networking cards. However, they don't implement all features
+and may have some issues, due to various reasons like companies not providing
+specs. Below is an alphabetically sorted list of drivers and what they currently
+can and can't do.
 
-**NOTE:** All drivers can of course run in :doc:`station mode <documentation/modes>`, but only a few drivers support the other available :doc:`wireless modes <documentation/modes>`! Support of :doc:`cfg80211 <../developers/documentation/glossary>` also offers benefits.
+.. seealso::
+
+   `Linux wireless drivers in Wikipedia
+   <https://en.wikipedia.org/wiki/Comparison_of_open_source_wireless_drivers>`__
+
+.. note::
+
+   All drivers can of course run in :doc:`station mode <documentation/modes>`,
+   but only a few drivers support the other available :doc:`wireless modes
+   <documentation/modes>`! Support of :doc:`cfg80211
+   <../developers/documentation/glossary>` also offers benefits.
+
+Supported drivers
+*****************
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Driver**
-      - **Manufacturer**
-      - **cfg80211**
-      - **AP**
-      - **IBSS**
-      - **mesh**
-      - **monitor**
-      - **PHY modes**
-      - **Buses**
+      - Driver
+      - Manufacturer
+      - cfg80211
+      - AP
+      - IBSS
+      - mesh
+      - monitor
+      - PHY modes
+      - Buses
    - 
 
       - :doc:`adm8211 <drivers/adm8211>`
@@ -826,24 +916,27 @@ See also:
       - A(2)/B/G
       - USB
 
-Note: \*\* **staging drivers**
+.. note::
+
+   \*\* **staging drivers**
 
 Out of the tree drivers(Unsupported)
-------------------------------------
+************************************
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Driver**
-      - **Manufacturer**
-      - **cfg80211**
-      - **AP**
-      - **IBSS**
-      - **mesh**
-      - **monitor**
-      - **PHY modes**
-      - **Buses**
+      - Driver
+      - Manufacturer
+      - cfg80211
+      - AP
+      - IBSS
+      - mesh
+      - monitor
+      - PHY modes
+      - Buses
    - 
 
       - :doc:`acx1xx <drivers/acx1xx>`
@@ -902,32 +995,31 @@ Out of the tree drivers(Unsupported)
 
 Notes:
 
-::
-
-     - 802.11a capabilities depend on the actual radio chip used. 
-     - 802.11a devices exist, but currently can't be used with this driver, A/B/G devices will work in B/G mode only. 
-     - There is support with a special, out-of-tree driver and special firmware, see [[http://sf.net/projects/ipw2200-ap|http://sf.net/projects/ipw2200-ap]]. 
-     - Slightly different mesh implementation than mac80211's, in firmware. 
-     - Tested with RT2870/RT3070 driver 
-     - Only some devices 
+#. 802.11a capabilities depend on the actual radio chip used. 
+#. 802.11a devices exist, but currently can't be used with this driver, A/B/G devices will work in B/G mode only. 
+#. There is support with a special, out-of-tree driver and special firmware, see http://sf.net/projects/ipw2200-ap
+#. Slightly different mesh implementation than mac80211's, in firmware. 
+#. Tested with RT2870/RT3070 driver 
+#. Only some devices 
 
 Abandoned/Deprecated Drivers(Unsupported)
------------------------------------------
+*****************************************
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Driver**
-      - **Manufacturer**
+      - Driver
+      - Manufacturer
       - :doc:`cfg80211 <../developers/documentation/cfg80211>`
       - :doc:`AP <documentation/modes>`
       - :doc:`ad-hoc <documentation/modes>`
       - :doc:`mesh <documentation/modes>`
       - :doc:`monitor <documentation/modes>`
-      - **PHY modes**
-      - **BUS**
-      - **Replaced by**
+      - PHY modes
+      - BUS
+      - Replaced by
    - 
 
       - :doc:`ar9170usb <drivers/ar9170>`
@@ -951,7 +1043,7 @@ Abandoned/Deprecated Drivers(Unsupported)
       - ?
       - pre802.11
       - ISA
-      - -
+      -
    - 
 
       - :doc:`at76_usb <drivers/at76_usb>`
@@ -975,7 +1067,7 @@ Abandoned/Deprecated Drivers(Unsupported)
       - ?
       - pre802.11
       - PCMCIA
-      - -
+      -
    - 
 
       - :doc:`otus <drivers/otus>`
@@ -1023,6 +1115,4 @@ Abandoned/Deprecated Drivers(Unsupported)
       - ?
       - pre802.11
       - ISA / PCMCIA
-      - -
-
---------------
+      -

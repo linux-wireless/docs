@@ -1,7 +1,9 @@
 PCI and PCI-Express cards
--------------------------
+=========================
 
-*Note: this list is still incomplete as not all drivers have information*
+.. note::
+
+   this list is still incomplete as not all drivers have information
 
 Form factors
 ~~~~~~~~~~~~
@@ -10,7 +12,7 @@ There are various form factors for PCI/PCI-E cards:
 
 ::
 
-   ; Cardbus  : 
+   ; Cardbus  :
 
 also called **PC Card**, this is a form factor similiar to PCMCIA. `Wikipedia has an image <http://en.wikipedia.org/wiki/PC_Card>`__.
 
@@ -32,7 +34,7 @@ mini-PCI express, the PCI Express equivalent of Mini-PCI, but even smaller. `Wik
 
    ; ExpressCard  : 
 
-The hot-pluggable version of PCI Express. Note that Express\ ````\ Cards can be USB as well, in which case they won't be listed here.
+The hot-pluggable version of PCI Express. Note that ExpressCards can be USB as well, in which case they won't be listed here.
 
 Device list
 ~~~~~~~~~~~

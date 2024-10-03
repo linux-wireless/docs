@@ -1,3 +1,6 @@
+Düsseldorf 2014
+===============
+
 Proposal for Wireless Networking Micro-conference at Linux Plumbers Conference 2014 in Düsseldorf, Germany...
 
 http://wiki.linuxplumbersconf.org/2014:network_wireless

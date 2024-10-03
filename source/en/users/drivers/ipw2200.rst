@@ -1,5 +1,5 @@
 ipw2200
--------
+=======
 
 The Intel Linux ipw2200 driver is part of the upstream kernel.
 

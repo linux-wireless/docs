@@ -1,18 +1,19 @@
 Supported Zydas ZD1211 devices
-------------------------------
+==============================
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **Chipset**
-      - **USB Vendor**
-      - **USB Product**
-      - **RF Type**
-      - **MaxPower**
-      - **Notes**
+      - Vendor
+      - Product
+      - Chipset
+      - USB Vendor
+      - USB Product
+      - RF Type
+      - MaxPower
+      - Notes
    - 
 
       - 3COM

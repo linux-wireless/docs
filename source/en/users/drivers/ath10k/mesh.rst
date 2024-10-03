@@ -1,27 +1,35 @@
-Go back --> :doc:`ath10k <../ath10k>`
-
 ath10k mesh mode
-----------------
+================
 
-Refer this link for IEEE 802.11s (Mesh Networking) introduction. https://wireless.wiki.kernel.org/en/developers/Documentation/ieee80211/802.11s
+Refer this link for IEEE 802.11s (Mesh Networking) introduction.
+https://wireless.wiki.kernel.org/en/developers/Documentation/ieee80211/802.11s
 
-ath10k supports mesh BSS (MBSS) in raw-mode since Sep/2015 (commit id: b6c7bafa7d4b1398cce93e4af0a48603919fa933) and in native Wi-Fi mode since Nov/2015 (commit id: bb58b89c5ea1006c93270fd2e667ab72312bf7ab).
+ath10k supports mesh BSS (MBSS) in raw-mode since Sep/2015 (commit id:
+b6c7bafa7d4b1398cce93e4af0a48603919fa933) and in native Wi-Fi mode since
+Nov/2015 (commit id: bb58b89c5ea1006c93270fd2e667ab72312bf7ab).
 
-Firmware must have “raw-mode” feature flag to use MBSS in raw-mode and “mfp-support” feature flag to use MBSS with security.
+Firmware must have “raw-mode” feature flag to use MBSS in raw-mode and
+“mfp-support” feature flag to use MBSS with security.
 
 Bring up Mesh Point (MP)
 ------------------------
 
 There are 2 manners to bring up MP which are using “iw” and “wpa_supplicant”.
 
-iw does MLME in kernelspace while wpa_supplicant does it in userspace. iw is simple and quick to verify MP working because it doesn't require any other utilities, but cannot be used for secured mode due to lack of SAE support.
+iw does MLME in kernelspace while wpa_supplicant does it in userspace.
+iw is simple and quick to verify MP working because it doesn't require
+any other utilities, but cannot be used for secured mode due to lack of
+SAE support.
 
-Contrarily wpa_supplicant may be a bit complex comparing to iw, however it is good to use with security.
+Contrarily wpa_supplicant may be a bit complex comparing to iw, however
+it is good to use with security.
 
 Setup open Mesh Point using iw
 ------------------------------
 
-In this example we will configure a MP to use an open Mesh network. The MP will automatically peer with others that are using same configuration (mesh ID and channel).
+In this example we will configure a MP to use an open Mesh network. The
+MP will automatically peer with others that are using same configuration
+(mesh ID and channel).
 
 Create a new MP interface "mesh0".
 
@@ -96,7 +104,9 @@ Verify peer link status
 Setup Mesh Point using wpa_suppliant
 ------------------------------------
 
-Both of open MP and secured MP can be brought up using wpa_supplicant. This section will instruct the steps to both of open and secured MP setup.
+Both of open MP and secured MP can be brought up using wpa_supplicant.
+This section will instruct the steps to both of open and secured MP
+setup.
 
 Create a new MP interface "mesh0".
 

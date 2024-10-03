@@ -2,15 +2,16 @@ Certified by Wi-Fi Alliance
 ===========================
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Date**
-      - **Vendor**
-      - **Certificate**
-      - **Hardware**
-      - **Driver (version)**
-      - **Certified**
+      - Date
+      - Vendor
+      - Certificate
+      - Hardware
+      - Driver (version)
+      - Certified
    - 
 
       - September 11, 2019
@@ -34,31 +35,63 @@ Work In Progress
 rtl8xxxu on RTL8188CUS on GARDENA smart gateway
 -----------------------------------------------
 
-RealTek provides a GPLed Linux driver named "8192cu" for its RTL8188CUS hardware. While it has worked `well enough to pass the Wi-Fi Alliance certification <https://api.cert.wi-fi.org/api/certificate/download/public?variantId=14856>`__, the last release `is from 2017 <https://github.com/rettichschnidi/realtek-linux/tree/master/RTL8188C_8192C/USB/v4.0>`__, its code does not work well with modern kernels (FullMAC, and notoriously unstable) and does no longer receive any security updates. Luckily, it has been superseded by TWO mainlined kernel drivers:
+RealTek provides a GPLed Linux driver named "8192cu" for its RTL8188CUS
+hardware. While it has worked `well enough to pass the Wi-Fi Alliance
+certification
+<https://api.cert.wi-fi.org/api/certificate/download/public?variantId=14856>`__,
+the last release `is from 2017
+<https://github.com/rettichschnidi/realtek-linux/tree/master/RTL8188C_8192C/USB/v4.0>`__,
+its code does not work well with modern kernels (FullMAC, and
+notoriously unstable) and does no longer receive any security updates.
+Luckily, it has been superseded by TWO mainlined kernel drivers:
 
--  rtl8192cu: Based on the RealTek driver, shoehorned into mainline Linux. Suffers from various stability issues and code is close to unreadable.
--  rtl8xxxu: Written from scratch, `will replace rtl8192cu </en//users//drivers//rtl819x>`__. It has been shown to to be stable during long-term testing. Code is readable. Not (yet) feature equivalent to the 8192cu or even the rtl8192cu.
+- rtl8192cu: Based on the RealTek driver, shoehorned into mainline
+  Linux. Suffers from various stability issues and code is close to
+  unreadable.
+- rtl8xxxu: Written from scratch, :doc:`will replace rtl8192cu
+  <drivers/rtl819x>`. It has been shown to to be stable during long-term
+  testing. Code is readable. Not (yet) feature equivalent to the 8192cu
+  or even the rtl8192cu.
 
-Both, rtl8192cu and rtl8xxxu are worse than 8192cu when it comes to features and performance.
+Both, rtl8192cu and rtl8xxxu are worse than 8192cu when it comes to
+features and performance.
 
-Given the code quality and stability, it is the goal of GARDENA to develop the rtl8xxxu driver as far as needed to pass the Wi-Fi Alliance certification.
+Given the code quality and stability, it is the goal of GARDENA to
+develop the rtl8xxxu driver as far as needed to pass the Wi-Fi Alliance
+certification.
 
-A big hurdle is `the lack of sources as well as documentation for the firmware <https://blog.linuxplumbersconf.org/2016/ocw/system/presentations/4089/original/2016-11-02-rtl8xxxu-presentation.pdf>`__. Therefore, digging in the (hard to read) sources of the vendor driver is needed.
+A big hurdle is `the lack of sources as well as documentation for the
+firmware
+<https://blog.linuxplumbersconf.org/2016/ocw/system/presentations/4089/original/2016-11-02-rtl8xxxu-presentation.pdf>`__.
+Therefore, digging in the (hard to read) sources of the vendor driver is
+needed.
 
 Hardware
 ~~~~~~~~
 
--  End product: ARMv5, Atmel SAM9G25 based GARDENA smart gateway (`sources <https://github.com/husqvarnagroup/smart-garden-gateway-public>`__)
--  For development: x86_amd64, `Edimax EW-7811UN <https://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/de/wireless_adapters_n150/ew-7811un/>`__
+- End product: ARMv5, Atmel SAM9G25 based GARDENA smart gateway
+  (`sources
+  <https://github.com/husqvarnagroup/smart-garden-gateway-public>`__)
+- For development: x86_amd64, `Edimax EW-7811UN
+  <https://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/de/wireless_adapters_n150/ew-7811un/>`__
 
-Progress: Hardware is already on the market, nothing left to do or could be changed for that matter.
+Progress: Hardware is already on the market, nothing left to do or could
+be changed for that matter.
 
 Firmware
 ~~~~~~~~
 
-All driver development and the verification is getting done with firmware version 88.2, which is part of linux-wireless `since release 20201118 <https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi?id=2ea86675db1349235e9af0a9d0372b72da4db259>`__.
+All driver development and the verification is getting done with
+firmware version 88.2, which is part of linux-wireless `since release
+20201118
+<https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/rtlwifi?id=2ea86675db1349235e9af0a9d0372b72da4db259>`__.
 
-Before linux-wireless release 20201118, the provided firmware was version 80.0, which is known to hang on the GARDENA smart gateway as long-term tests have shown (and on other machines too - Google knows). Only a cold reset resolved the problem, which is easy to do for an USB WLAN stick but problematic (human intervention needed) on a embedded device that has no hardware reset capabilities for the USB device.
+Before linux-wireless release 20201118, the provided firmware was
+version 80.0, which is known to hang on the GARDENA smart gateway as
+long-term tests have shown (and on other machines too - Google knows).
+Only a cold reset resolved the problem, which is easy to do for an USB
+WLAN stick but problematic (human intervention needed) on a embedded
+device that has no hardware reset capabilities for the USB device.
 
 Driver development
 ~~~~~~~~~~~~~~~~~~
@@ -69,42 +102,46 @@ Setup
 Reto
 ''''
 
--  AP: various (mainly Linksys WRT3200ACM with TA 00:60:6e:00:07:7d, BS 24:f5:a2:c0:4e:b1, SSID "customer-wifi")
--  STAs:
+- AP: various (mainly Linksys WRT3200ACM with TA 00:60:6e:00:07:7d, BS 24:f5:a2:c0:4e:b1, SSID "customer-wifi")
+- STAs:
 
-   -  Thinkpad T420/Edimax EW-7811UN (08:be:ac:0b:14:c4; amd64)
-   -  GARDENA smart gateways (various MAC addresses; ARMv5)
+   - Thinkpad T420/Edimax EW-7811UN (08:be:ac:0b:14:c4; amd64)
+   - GARDENA smart gateways (various MAC addresses; ARMv5)
 
--  Capturing device: Asus PCE-AX58BT (Intel AX200)
--  iperf3 host: Workstation with IPv4 address 10.42.0.1
--  Distance: Variable, but generally close (1-3m distance)
--  Environment: Residual area; not clean/standardized, but using a (seemingly) non-crowded channel (12)
+- Capturing device: Asus PCE-AX58BT (Intel AX200)
+- iperf3 host: Workstation with IPv4 address 10.42.0.1
+- Distance: Variable, but generally close (1-3m distance)
+- Environment: Residual area; not clean/standardized, but using a (seemingly) non-crowded channel (12)
 
 Chris
 '''''
 
--  AP: Dlink DIR-612 (2x2) SSID: CHT57196 with BSSID: 18:0f:76:c5:0a:ea
--  STA: rtl8xxxu running on Edimax EW-7811UN (amd64)
--  Distance: fixed to 3m and 6m for experiment
--  Environment: use less-noisy channel 9 in a 8x9 square meters area which only have 1 router.
+- AP: Dlink DIR-612 (2x2) SSID: CHT57196 with BSSID: 18:0f:76:c5:0a:ea
+- STA: rtl8xxxu running on Edimax EW-7811UN (amd64)
+- Distance: fixed to 3m and 6m for experiment
+- Environment: use less-noisy channel 9 in a 8x9 square meters area which only have 1 router.
 
 Baseline
 ^^^^^^^^
 
-The rtl8xxxu driver performance (throughput) gets compared to the latest vendor driver release (8192cu), which has been patched to work on recent Linux versions (5.10+): https://github.com/husqvarnagroup/8192cu_rtl8188cus
+The rtl8xxxu driver performance (throughput) gets compared to the latest
+vendor driver release (8192cu), which has been patched to work on recent
+Linux versions (5.10+):
+https://github.com/husqvarnagroup/8192cu_rtl8188cus
 
 Progress
 ^^^^^^^^
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Priority**
-      - **Task**
-      - **Wi-Fi Alliance Test Case**
-      - **State**
-      - **Optional**
+      - Priority
+      - Task
+      - Wi-Fi Alliance Test Case
+      - State
+      - Optional
    - 
 
       - 1
@@ -242,18 +279,23 @@ Progress
 ACK #1: Fix Block ACKs to include (ack) recently sent frames
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-rtl8xxxu: During block ACK sessions, the STA does not ACK frames sent by the AP in time, causing the AP to resend them. It is unknown whether the frames have not been properly received by the STA or if the STA is "just" too slow to ACK them in time.
+rtl8xxxu: During block ACK sessions, the STA does not ACK frames sent by
+the AP in time, causing the AP to resend them. It is unknown whether the
+frames have not been properly received by the STA or if the STA is
+"just" too slow to ACK them in time.
 
-This results in retransmission percentages of 10-50%. While still yielding usable performance (10-40 MBit/s), this percentage is too high for passing the Wi-Fi Alliance certification.
+This results in retransmission percentages of 10-50%. While still
+yielding usable performance (10-40 MBit/s), this percentage is too high
+for passing the Wi-Fi Alliance certification.
 
-8192cu: ACK-ing all sent frames in time, resulting in only 1-2% retransmitted frames and great performance (35+ MBit/s).
+8192cu: ACK-ing all sent frames in time, resulting in only 1-2%
+retransmitted frames and great performance (35+ MBit/s).
 
 Firmware upload failure
 '''''''''''''''''''''''
 
-The following error happens frequently on Reto's machine, but does not happen on the GARDENA smart gateway:
-
-::
+The following error happens frequently on Reto's machine, but does not
+happen on the GARDENA smart gateway::
 
    kernel: usb 1-1.5.4: new high-speed USB device number 8 using ehci-pci
    kernel: usb 1-1.5.4: New USB device found, idVendor=7392, idProduct=7811, bcdDevice= 2.00
@@ -292,9 +334,8 @@ The following error happens frequently on Reto's machine, but does not happen on
 RX IQK failed
 '''''''''''''
 
-The following error happens frequently on Reto's machine, but does not happen on the GARDENA smart gateway:
-
-::
+The following error happens frequently on Reto's machine, but does not
+happen on the GARDENA smart gateway::
 
    kernel: usb 1-1.5.4: Vendor: Realtek
    kernel: usb 1-1.5.4: Product: 802.11n WLAN Adapter
@@ -329,14 +370,15 @@ Patches
 ^^^^^^^
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Number**
-      - **Description**
-      - **Link**
-      - **Testing results (Reto)**
-      - **Upstream State**
+      - Number
+      - Description
+      - Link
+      - Testing results (Reto)
+      - Upstream State
    - 
 
       - 1
@@ -418,12 +460,8 @@ Patches
 Driver Testing
 ~~~~~~~~~~~~~~
 
-.. _reto-1:
-
 Reto
 ^^^^
-
-.. _setup-1:
 
 Setup
 '''''
@@ -435,35 +473,36 @@ Setup
 #. Start wpa_supplicant on DUT
 #. Once IP address got assigned, measure the performance using iperf3:
 
-   -  TCP TX Throughput: ``iperf3 -c 10.42.0.1``
-   -  TCP RX Throughput: ``iperf3 -c --reverse 10.42.0.1``
+   - TCP TX Throughput: ``iperf3 -c 10.42.0.1``
+   - TCP RX Throughput: ``iperf3 -c --reverse 10.42.0.1``
 
 Repos
 '''''
 
--  Linux: https://github.com/husqvarnagroup/linux
--  8192cu: https://github.com/husqvarnagroup/realtek-8192cu_rtl8188cus
+- Linux: https://github.com/husqvarnagroup/linux
+- 8192cu: https://github.com/husqvarnagroup/realtek-8192cu_rtl8188cus
 
 Analysis
 ''''''''
 
--  The throughput values are the ones reported by iperf3 (the lower value if server/client values differ)
--  The retry values are taken from Wireshark in menu "Wireless" -> "WLAN Traffic"
+- The throughput values are the ones reported by iperf3 (the lower value if server/client values differ)
+- The retry values are taken from Wireshark in menu "Wireless" -> "WLAN Traffic"
 
 TCP TX Throughput
 '''''''''''''''''
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **DUT**
-      - **AP**
-      - **Driver**
-      - **Throughput [Mbits/sec]; retries [%]**
-      - **AP <-> DUT**
-      - **Notes**
-      - **PCAP**
+      - DUT
+      - AP
+      - Driver
+      - Throughput [Mbits/sec]; retries [%]
+      - AP <-> DUT
+      - Notes
+      - PCAP
    - 
 
       - amd64, Edimax
@@ -586,16 +625,17 @@ TCP RX Throughput
 '''''''''''''''''
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **DUT**
-      - **AP**
-      - **Driver**
-      - **Throughput [Mbits/sec]; retries [%]**
-      - **AP <-> DUT**
-      - **Notes**
-      - **PCAP**
+      - DUT
+      - AP
+      - Driver
+      - Throughput [Mbits/sec]; retries [%]
+      - AP <-> DUT
+      - Notes
+      - PCAP
    - 
 
       - amd64, Edimax
@@ -696,12 +736,8 @@ TCP RX Throughput
       - Terrible overall performance. Patch 9 does not change this.
       - https://files.reto-schneider.ch/rtl8xxxu/2021-07-27-Testing/2021-07-27-6-Linux-5.10.52-rtl8xxxu-writeup-5-ampdu-v1-gateway-00:1d:43:c0:19:8a-iperf-rx-tcp-26.5%25-retries-at-8.29MBps.pcapng.gz
 
-.. _chris-1:
-
 Chris
 ^^^^^
-
-.. _setup-2:
 
 Setup
 '''''
@@ -712,41 +748,36 @@ Setup
 #. Start 802.11 capture
 #. Once IP address got assigned, measure the performance using iperf3:
 
-   -  TCP TX Throughput: ``iperf3 -c 192.168.0.11 -t 30 -i 1``
-   -  TCP RX Throughput: ``iperf3 -c --reverse 192.168.0.11 -t 30 -i 1``
-
-.. _repos-1:
+   - TCP TX Throughput: ``iperf3 -c 192.168.0.11 -t 30 -i 1``
+   - TCP RX Throughput: ``iperf3 -c --reverse 192.168.0.11 -t 30 -i 1``
 
 Repos
 '''''
 
--  Linux: https://github.com/mschiu77/linux/tree/chris/ampdu_action
--  8192cu: https://github.com/mschiu77/rtl8188cus_vendor
-
-.. _analysis-1:
+- Linux: https://github.com/mschiu77/linux/tree/chris/ampdu_action
+- 8192cu: https://github.com/mschiu77/rtl8188cus_vendor
 
 Analysis
 ''''''''
 
--  The throughput values are the ones reported by iperf3 (the lower value if server/client values differ)
--  The retry values are taken from Wireshark in menu "Wireless" -> "WLAN Traffic"
-
-.. _tcp-tx-throughput-1:
+- The throughput values are the ones reported by iperf3 (the lower value if server/client values differ)
+- The retry values are taken from Wireshark in menu "Wireless" -> "WLAN Traffic"
 
 TCP TX Throughput
 '''''''''''''''''
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **DUT**
-      - **AP**
-      - **Driver**
-      - **Throughput [Mbits/sec]; retries [%]**
-      - **AP <-> DUT**
-      - **Notes**
-      - **PCAP**
+      - DUT
+      - AP
+      - Driver
+      - Throughput [Mbits/sec]; retries [%]
+      - AP <-> DUT
+      - Notes
+      - PCAP
    - 
 
       - amd64, Edimax
@@ -790,16 +821,17 @@ TCP RX Throughput
 '''''''''''''''''
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **DUT**
-      - **AP**
-      - **Driver**
-      - **Throughput [Mbits/sec]; retries [%]**
-      - **AP <-> DUT**
-      - **Notes**
-      - **PCAP**
+      - DUT
+      - AP
+      - Driver
+      - Throughput [Mbits/sec]; retries [%]
+      - AP <-> DUT
+      - Notes
+      - PCAP
    - 
 
       - amd64, Edimax
@@ -841,14 +873,15 @@ Observations
 ~~~~~~~~~~~~
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Criterion**
-      - **rtl8xxxu**
-      - **rtl8192cu**
-      - **8192cu**
-      - **Comment**
+      - Criterion
+      - rtl8xxxu
+      - rtl8192cu
+      - 8192cu
+      - Comment
    - 
 
       - wlan.frag != 1
@@ -895,25 +928,24 @@ Observations
 Register Comparison
 ~~~~~~~~~~~~~~~~~~~
 
-.. _reto-2:
-
 Reto
 ^^^^
 
--  Issue: When using the rtl8xxxu driver, the communication has a much higher retransmission rate (20%) than with the other drivers (8192cu: < 5%, rtl8192cu: < 7.5%). Mainly, because the DUT fails to send ACKs in time, causing the AP to resend many frames. Issue can be seen best in the RX traces (iperf3 receiving data from the AP).
--  Traces: https://files.reto-schneider.ch/diesunddas/rtl8xxxu/2021-11-09-Testing/t420-2021-11-09T05:20:20+01:00/
--  Please note: Only differentiating registers and their values are shown. Whenever additional information about bits/bitmasks is available, those are printed too.
+- Issue: When using the rtl8xxxu driver, the communication has a much higher retransmission rate (20%) than with the other drivers (8192cu: < 5%, rtl8192cu: < 7.5%). Mainly, because the DUT fails to send ACKs in time, causing the AP to resend many frames. Issue can be seen best in the RX traces (iperf3 receiving data from the AP).
+- Traces: https://files.reto-schneider.ch/diesunddas/rtl8xxxu/2021-11-09-Testing/t420-2021-11-09T05:20:20+01:00/
+- Please note: Only differentiating registers and their values are shown. Whenever additional information about bits/bitmasks is available, those are printed too.
 
 RF Register
 '''''''''''
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Driver**
-      - **Source**
-      - **Filename**
+      - Driver
+      - Source
+      - Filename
    - 
 
       - 8192cu
@@ -931,16 +963,17 @@ RF Register
       - rtl8xxxu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-rf_reg_dump-05-iperf-done
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Address**
-      - **Mask**
-      - **Name**
-      - **#0: 8192cu**
-      - **#1: rtl8192cu**
-      - **#2: rtl8xxxu**
-      - **Hint**
+      - Address
+      - Mask
+      - Name
+      - #0: 8192cu
+      - #1: rtl8192cu
+      - #2: rtl8xxxu
+      - Hint
    - 
 
       - 0x0000
@@ -1387,12 +1420,13 @@ BB Register
 '''''''''''
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Driver**
-      - **Source**
-      - **Filename**
+      - Driver
+      - Source
+      - Filename
    - 
 
       - 8192cu
@@ -1410,16 +1444,17 @@ BB Register
       - rtl8xxxu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-bb_reg_dump-05-iperf-done
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Address**
-      - **Mask**
-      - **Name**
-      - **#0: 8192cu**
-      - **#1: rtl8192cu**
-      - **#2: rtl8xxxu**
-      - **Hint**
+      - Address
+      - Mask
+      - Name
+      - #0: 8192cu
+      - #1: rtl8192cu
+      - #2: rtl8xxxu
+      - Hint
    - 
 
       - 0x0818
@@ -2208,12 +2243,13 @@ MAC Register
 ''''''''''''
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Driver**
-      - **Source**
-      - **Filename**
+      - Driver
+      - Source
+      - Filename
    - 
 
       - 8192cu
@@ -2231,16 +2267,17 @@ MAC Register
       - rtl8xxxu-gardena-rs-v5.10.69-dump-registers-v13-10-g1f3acbbe2d2a.ko-74:da:38:0e:49:7d-rx-mac_reg_dump-05-iperf-done
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Address**
-      - **Mask**
-      - **Name**
-      - **#0: 8192cu**
-      - **#1: rtl8192cu**
-      - **#2: rtl8xxxu**
-      - **Hint**
+      - Address
+      - Mask
+      - Name
+      - #0: 8192cu
+      - #1: rtl8192cu
+      - #2: rtl8xxxu
+      - Hint
    - 
 
       - 0x0000

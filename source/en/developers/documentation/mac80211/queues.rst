@@ -1,4 +1,9 @@
-For QoS/WMM (EDCA) a mac80211 driver needs to have at least four queues. mac80211 will then program the queues according to the advertised access parameters.
+Queues
+======
+
+For QoS/WMM (EDCA) a mac80211 driver needs to have at least four queues.
+mac80211 will then program the queues according to the advertised access
+parameters.
 
 **Legend:**
 
@@ -9,11 +14,12 @@ For QoS/WMM (EDCA) a mac80211 driver needs to have at least four queues. mac8021
 mac80211 queue mapping:
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **AC**
-      - **MQ**
+      - AC
+      - MQ
    - 
 
       - BK
@@ -34,11 +40,12 @@ mac80211 queue mapping:
 802.11 uses the following number scheme (cf. Table 7-36)
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **AC**
-      - **ACI**
+      - AC
+      - ACI
    - 
 
       - BK
@@ -59,6 +66,7 @@ mac80211 queue mapping:
 Therefore, we have:
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
@@ -86,17 +94,22 @@ Therefore, we have:
       - 3
       - 0
 
-Due to internal collisions (we don't really know what this means either) the queue numbering is important, and queue 0 is highest priority, 3 lowest. If your hardware has a different idea of queue priority, you may need to rewrite the queue number, but make sure to do it everywhere mac80211 passes a queue number (conf_tx, skb_get_queue_mapping).
+Due to internal collisions (we don't really know what this means either)
+the queue numbering is important, and queue 0 is highest priority, 3
+lowest. If your hardware has a different idea of queue priority, you may
+need to rewrite the queue number, but make sure to do it everywhere
+mac80211 passes a queue number (conf_tx, skb_get_queue_mapping).
 
 The user priority is used as follows (802.11-2007 table 9-1):
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **UP**
-      - **AC**
-      - **Priority**
+      - UP
+      - AC
+      - Priority
    - 
 
       - 1
@@ -138,18 +151,23 @@ The user priority is used as follows (802.11-2007 table 9-1):
       - VO
       - Highest
 
-**TOS:**
+TOS
+---
 
-mac80211 currently determines the UP based only on the IPv4 TOS field, unless the packet priority is set to 256..263 with setsockopt(SO_PRIORITY), in which case this maps directly to the UP (priority - 256) for testing.
+mac80211 currently determines the UP based only on the IPv4 TOS field,
+unless the packet priority is set to 256..263 with
+setsockopt(SO_PRIORITY), in which case this maps directly to the UP
+(priority - 256) for testing.
 
 The IPv4 TOS field maps into the UP as follows, but keep in mind that the lowest two bits of the TOS are reserved (or used for ECN):
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **TOS**
-      - **UP**
+      - TOS
+      - UP
    - 
 
       - 0 - 31
@@ -167,9 +185,13 @@ The IPv4 TOS field maps into the UP as follows, but keep in mind that the lowest
       - 224 - 255
       - 7
 
-\**DSCP **(RFC 2474)**:\*\*
+DSCP (RFC 2474)
+---------------
 
-Alternatively you can set the IP_TOS with setsockopt, then you need to ask how DSCP maps into the UP. DSCP is defined in the Differentiated Services (`DiffServ <DiffServ>`__) model as the six most significant bits of the `DiffServ <DiffServ>`__\ (DS) Field.
+Alternatively you can set the IP_TOS with setsockopt, then you need to
+ask how DSCP maps into the UP. DSCP is defined in the Differentiated
+Services (`DiffServ <DiffServ>`__) model as the six most significant
+bits of the `DiffServ <DiffServ>`__\ (DS) Field.
 
 .. list-table::
 
@@ -187,11 +209,12 @@ Alternatively you can set the IP_TOS with setsockopt, then you need to ask how D
 The classes of DSCP in wide usage are:
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **DSCP Class**
-      - **Codepoint(s)**
+      - DSCP Class
+      - Codepoint(s)
    - 
 
       - Default
@@ -220,12 +243,13 @@ The classes of DSCP in wide usage are:
 The 3 Precedence bits of DSCP (**P2, P1, P0**) are used for mapping to 802.1D tags and AC values as:
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **P2 P1 P0**
-      - **802.1D**
-      - **AC**
+      - P2 P1 P0
+      - 802.1D
+      - AC
    - 
 
       - 0 0 0
@@ -267,12 +291,12 @@ The 3 Precedence bits of DSCP (**P2, P1, P0**) are used for mapping to 802.1D ta
       - 7
       - VO
 
-**Testing**:
+Testing
+-------
 
-::
+* Use ping ( with -Q option, see manpage ) 
+* use iperf: ``iperf -S 0xE0 -c <IP>``
+* Use iptables. Example session with 2 iperf streams: 
 
-     * Use ping ( with -Q option, see manpage ) 
-     * use iperf: <code>iperf -S 0xE0 -c <IP></code> 
-     * Use iptables. Example session with 2 iperf streams: 
-     *  * iptables -t mangle -A OUTPUT -p tcp –dport 5000 -j DSCP –set-dscp-class "EF" 
-     *  * iptables -t mangle -A OUTPUT -p tcp –dport 5001 -j DSCP –set-dscp-class "BE" 
+    * ``iptables -t mangle -A OUTPUT -p tcp –dport 5000 -j DSCP –set-dscp-class "EF"``
+    * ``iptables -t mangle -A OUTPUT -p tcp –dport 5001 -j DSCP –set-dscp-class "BE"``

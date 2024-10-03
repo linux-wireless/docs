@@ -1,7 +1,9 @@
 System on a chip
-----------------
+================
 
-Broadcom produces many SoCs that can combine processor, ethernet, WiFi, USB and more. *b43* can operate on WiFi cores present in SoCs similarly to the ones present on standalone PCI/PCIe cards.
+Broadcom produces many SoCs that can combine processor, ethernet, WiFi,
+USB and more. *b43* can operate on WiFi cores present in SoCs similarly
+to the ones present on standalone PCI/PCIe cards.
 
 Known SSB SoCs
 --------------
@@ -37,10 +39,10 @@ Known SSB SoCs
       - rev
       - PHY
       - Radio
-      - :::
-      - :::
-      - :::
-      - :::
+      - \-
+      - \-
+      - \-
+      - \-
    - 
 
       - BCM5352
@@ -178,10 +180,10 @@ Known BCMA SoCs
       - PHY
       - Radio
       - Supp.
-      - :::
-      - :::
-      - :::
-      - :::
+      - 
+      - 
+      - 
+      - 
    - 
 
       - BCM5356A1
@@ -385,10 +387,10 @@ Known BCMA ARM SoCs
       - pkg
       - 
       - rev
-      - :::
+      - 
       - 2.0
       - 3.0
-      - :::
+      - 
    - 
 
       - BCM4708A0
@@ -403,14 +405,14 @@ Known BCMA ARM SoCs
    - 
 
       - BCM47081A0
-      - :::
-      - :::
-      - :::
-      - :::
-      - :::
-      - :::
-      - :::
-      - :::
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
    - 
 
       - BCM4709A0
@@ -447,8 +449,8 @@ Known BCMA ARM SoCs
 
 Please note that devices with PCI(e)/USB core (working in a host mode) can have extra cards attached. We don't list them in the table, as it's vendor choice what additional card will be used. For example:
 
--  Netgear WNDR3400 V1 uses BCM4718 and has extra BCM43224 attached
--  Netgear WNDR3700 V3 uses BCM4718 but has extra BCM4331 attached
+- Netgear WNDR3400 V1 uses BCM4718 and has extra BCM43224 attached
+- Netgear WNDR3700 V3 uses BCM4718 but has extra BCM4331 attached
 
 .. [1]
    Unsupported PHY type

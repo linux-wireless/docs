@@ -1,17 +1,21 @@
+Devices
+=======
+
 The list is still in progress, please feel free to complete the device list. :-)
 
 rtl8188cus based devices
 ------------------------
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **USB Vendor ID**
-      - **USB Product ID**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - USB Vendor ID
+      - USB Product ID
+      - MaxPower
    - 
 
       - Savio
@@ -38,14 +42,15 @@ rtl8192cu based devices
 -----------------------
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **USB Vendor ID**
-      - **USB Product ID**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - USB Vendor ID
+      - USB Product ID
+      - MaxPower
    - 
 
       - TP-Link
@@ -58,14 +63,15 @@ rtl8192eu based devices
 -----------------------
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **USB Vendor ID**
-      - **USB Product ID**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - USB Vendor ID
+      - USB Product ID
+      - MaxPower
    - 
 
       - Gembird

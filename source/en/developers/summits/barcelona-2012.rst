@@ -1,5 +1,5 @@
 Barcelona, 2012
----------------
+===============
 
 The wireless summit is over, with close to 50 people having attended. Here are presentations and notes:
 
@@ -10,19 +10,27 @@ The wireless summit is over, with close to 50 people having attended. Here are p
 -  `Implementation of IEEE 802.11s Mesh Powersave <mesh_powersaving.pdf>`__
 -  `IEEE802.11aa implementation on mesh <11aa-mesh.pdf>`__
 
---------------
-
 Audience
 --------
 
-This event is intended to include developers from the Linux Bluetooth, NFC, and wireless LAN (802.11) communities. This year we are also reaching out to members of the `OpenWrt <http://openwrt.org>`__ community.
+This event is intended to include developers from the Linux Bluetooth,
+NFC, and wireless LAN (802.11) communities. This year we are also
+reaching out to members of the `OpenWrt <http://openwrt.org>`__
+community.
 
 Date and Venue
 --------------
 
-This event will occur immediately after the `LinuxCon Europe 2012 <http://events.linuxfoundation.org/events/linuxcon-europe/>`__ event, on November 8-9, 2012 at the Hotel Fira Palace in Barcelona, Spain. This will overlap Yocto Project Developer Day, oVirt Summit and KVM Forum at the same venue.
+This event will occur immediately after the `LinuxCon Europe 2012
+<http://events.linuxfoundation.org/events/linuxcon-europe/>`__ event, on
+November 8-9, 2012 at the Hotel Fira Palace in Barcelona, Spain. This
+will overlap Yocto Project Developer Day, oVirt Summit and KVM Forum at
+the same venue.
 
-Please note that all attendees must be registered to attend `LinuxCon Europe 2012 <http://events.linuxfoundation.org/events/linuxcon-europe/>`__. Please also consider giving a talk at that event!
+Please note that all attendees must be registered to attend `LinuxCon
+Europe 2012
+<http://events.linuxfoundation.org/events/linuxcon-europe/>`__. Please
+also consider giving a talk at that event!
 
 Topics
 ------

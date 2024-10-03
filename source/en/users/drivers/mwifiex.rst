@@ -1,5 +1,5 @@
 mwifiex
--------
+=======
 
 `Manual <https://www.kernel.org/doc/readme/drivers-net-wireless-mwifiex-README>`__
 

@@ -1,7 +1,9 @@
 Stable pending
---------------
+==============
 
-This section is dedicated to monitoring 802.11 patches pending stable integration which were not marked stable or requires some more manual backport after having failed applying directly from Linus' tree.
+This section is dedicated to monitoring 802.11 patches pending stable
+integration which were not marked stable or requires some more manual
+backport after having failed applying directly from Linus' tree.
 
 Series pending merge
 --------------------
@@ -29,49 +31,37 @@ Nothing.
 Patches pending a manual backport
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  ath9k: Avoid corrupt frames being forwarded to mac80211
+- ath9k: Avoid corrupt frames being forwarded to mac80211
 
 Pending stable 2.6.33
 ---------------------
 
 Stable patches pending integration onto the next 2.6.33.y stable series.
 
-.. _patches-not-marked-stable-1:
-
 Patches not marked stable
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nothing.
 
-.. _patches-pending-a-manual-backport-1:
-
 Patches pending a manual backport
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
-
-     * ath5k: drop warning on jumbo frames 
-     * ath9k: Avoid corrupt frames being forwarded to mac80211 
+* ath5k: drop warning on jumbo frames
+* ath9k: Avoid corrupt frames being forwarded to mac80211
 
 Pending stable 2.6.32
 ---------------------
 
 Stable patches pending integration onto the next 2.6.32.y stable series.
 
-.. _patches-not-marked-stable-2:
-
 Patches not marked stable
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nothing.
 
-.. _patches-pending-a-manual-backport-2:
-
 Patches pending a manual backport
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
-
-       * ath9k: re-enable ps by default for new single chip families 
-       * ath5k: drop warning on jumbo frames 
-       * ath9k: Avoid corrupt frames being forwarded to mac80211 
+* ath9k: re-enable ps by default for new single chip families 
+* ath5k: drop warning on jumbo frames 
+* ath9k: Avoid corrupt frames being forwarded to mac80211 

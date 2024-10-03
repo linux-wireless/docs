@@ -1,5 +1,5 @@
 vt665x
-------
+======
 
 vt6655 is a VIA driver for PCI devices, and vt6656 is for USB.
 
@@ -7,6 +7,10 @@ vt6656 is a mac80211 driver, since 3.17+.
 
 vt6655 is a mac80211 driver, since 3.19+.
 
-These are in the **staging** tree at linux-2.6/drivers/staging and it is **NOT supported** by linux-wireless developers or mailing list.
+These are in the **staging** tree at linux-2.6/drivers/staging and it is
+**NOT supported** by linux-wireless developers or mailing list.
 
-Instead ask for support in http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel or to the maintainers Greg Kroah-Hartman <`greg@kroah.com </mailto/greg@kroah.com>`__> and Forest Bond <`forest@alittletooquiet.net </mailto/forest@alittletooquiet.net>`__> .
+Instead ask for support in
+http://driverdev.linuxdriverproject.org/mailman/listinfo/driverdev-devel
+or to the maintainers Greg Kroah-Hartman <greg@kroah.com> and Forest
+Bond <forest@alittletooquiet.net>.

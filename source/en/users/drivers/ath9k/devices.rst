@@ -1,7 +1,8 @@
 Out of date
------------
+===========
 
-This page is horribly out of date. Please refer instead to :doc:`the products page <products>`.
+This page is horribly out of date. Please refer instead to :doc:`the
+products page <products>`.
 
 Please feel free to add devices to this list here though.
 
@@ -9,16 +10,17 @@ Supported Atheros wireless devices
 ----------------------------------
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **form factor**
-      - **Atheros Chip**
-      - **PCI Product**
-      - **PCI Subvendor**
-      - **PCI Subsystem**
+      - Vendor
+      - Product
+      - form factor
+      - Atheros Chip
+      - PCI Product
+      - PCI Subvendor
+      - PCI Subsystem
    - 
 
       - Compex

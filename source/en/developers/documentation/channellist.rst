@@ -1,11 +1,14 @@
+Channel List
+============
+
 .. list-table::
+   :header-rows: 1
 
    - 
-
-      - **Frequency**
-      - **Channel**
-      - **spacing**
-      - **Country/RegClass (list)**
+      - Frequency
+      - Channel
+      - spacing
+      - Country/RegClass (list)
    - 
 
       - 2412

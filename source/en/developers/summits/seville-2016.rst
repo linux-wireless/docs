@@ -1,3 +1,6 @@
+Seville, 2016
+=============
+
 As the previous year, this event is going to be a workshop at the `netdev 1.1 conference <http://www.netdevconf.org/1.1/>`__. As a consequence, you need to be registered for that conference to attend.
 
 The workshop is going to take place on the second day of netdev 1.1, February 11th.

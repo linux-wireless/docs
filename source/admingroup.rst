@@ -1,4 +1,0 @@
--  `JohannesBerg <JohannesBerg>`__
--  `LuisRodriguez <LuisRodriguez>`__
--  mbuesch
--  sujith

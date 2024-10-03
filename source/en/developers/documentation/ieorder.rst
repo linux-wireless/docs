@@ -1,16 +1,20 @@
-This table (compiled by Jouni) documents in which order IEs are added to association and reassociation request frames, and where they originate in the Linux implementation.
+IE Order
+========
+
+This table (compiled by Jouni) documents in which order IEs are added to
+association and reassociation request frames, and where they originate
+in the Linux implementation.
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Kernel/User**
-      - **order
-         (assoc req)**
-      - **order
-         (reassoc req)**
-      - **IE number**
-      - **name [amendment]**
+      - Kernel/User
+      - order (assoc req)
+      - order (reassoc req)
+      - IE number
+      - name [amendment]
    - 
 
       - K
@@ -77,14 +81,14 @@ This table (compiled by Jouni) documents in which order IEs are added to associa
    - 
 
       - U
-      - -
+      - \-
       - 13
       - 55
       - ftie [11r]
    - 
 
       - U
-      - -
+      - \-
       - 14
       - 57
       - ric(multiple IEs; can include vendor IEs) [11r]

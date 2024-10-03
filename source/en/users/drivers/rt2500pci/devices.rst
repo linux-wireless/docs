@@ -1,17 +1,18 @@
 Supported RaLink wireless devices
----------------------------------
+=================================
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **form factor**
-      - **Ralink Chip**
-      - **PCI Product**
-      - **PCI Subvendor**
-      - **PCI Subsystem**
+      - Vendor
+      - Product
+      - form factor
+      - Ralink Chip
+      - PCI Product
+      - PCI Subvendor
+      - PCI Subsystem
    - 
 
       - Hercules

@@ -1,3 +1,9 @@
--  :doc:`/WPS-client <brainstorming/wps-client>`
--  :doc:`/WPS-AP <brainstorming/wps-ap>`
--  :doc:`/AP-bufferbloat-problem <brainstorming/ap-bufferbloat-problem>`
+Brainstorming
+=============
+
+.. toctree::
+   :maxdepth: 1
+
+   brainstorming/wps-client
+   brainstorming/wps-ap
+   brainstorming/ap-bufferbloat-problem

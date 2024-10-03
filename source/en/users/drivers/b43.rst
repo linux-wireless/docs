@@ -1,3 +1,15 @@
+b43
+===
+
+.. toctree::
+
+   b43/developers
+   b43/devices
+   b43/donations
+   b43/faq
+   b43/firmware
+   b43/soc
+
 For relicensing, the content of this page was removed.
 
 The old website for now has a copy of the old content:
@@ -111,7 +123,7 @@ Please look carefully at device ID and chipset name.
       - wl
    - 
 
-      - :::
+      - 
       - no
       - BCM4313
       - b/g/n
@@ -151,7 +163,7 @@ Please look carefully at device ID and chipset name.
       - 
    - 
 
-      - :::
+      - 
       - yes
       - BCM4306/3
       - ?
@@ -183,7 +195,7 @@ Please look carefully at device ID and chipset name.
       - 
    - 
 
-      - :::
+      - 
       - yes
       - BCM4306/3
       - a/b/g
@@ -319,7 +331,7 @@ Please look carefully at device ID and chipset name.
       - wl
    - 
 
-      - :::
+      - 
       - no
       - BCM4352
       - a/b/g/n/ac
@@ -375,7 +387,7 @@ Please look carefully at device ID and chipset name.
       - brcm80211
    - 
 
-      - :::
+      - 
       - yes (3.6+)
       - BCM43225
       - ?

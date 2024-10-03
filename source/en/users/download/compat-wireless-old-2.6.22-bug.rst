@@ -1,8 +1,9 @@
-:doc:`Go back to Download section <../download>`
+Compat wireless old 2.6.22 bug
+==============================
 
-compat-wireless-old currently disables support for 2.6.22 because of a kernel crash you get if its enabled. The oops is below and the exact line where it hits is showed as well:
-
-::
+compat-wireless-old currently disables support for 2.6.22 because of a
+kernel crash you get if its enabled. The oops is below and the exact
+line where it hits is showed as well::
 
    wme_qdiscop_dequeue+0x120
    __qdisc_run
@@ -13,9 +14,7 @@ compat-wireless-old currently disables support for 2.6.22 because of a kernel cr
    ieee80211_sta_scan_work+0x0
    run_workqueue+0x81
 
-Using gdb to get the exact culprit:
-
-::
+Using gdb to get the exact culprit::
 
    mcgrof@tesla /lib/modules/2.6.22-15-generic/updates/net/mac80211 $ gdb mac80211.ko
    GNU gdb 6.8-debian

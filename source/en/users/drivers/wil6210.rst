@@ -1,20 +1,26 @@
-Go back –> :doc:`Atheros Linux wireless drivers <atheros>`
-
 About wil6210
--------------
+=============
 
-The wil6210 driver supports 60GHz wireless card by Qualcomm. Hardware provides `WiFi <WiFi>`__ and wireless PCIE connectivity, as described in the `WiGig <WiGig>`__ WBE spec. Driver supports `WiFi <WiFi>`__ only. Card is PCIE device, with PCIe ID ``1ae9:0310``
+The wil6210 driver supports 60GHz wireless card by Qualcomm. Hardware
+provides WiFi and wireless PCIE connectivity, as described in the WiGig
+WBE spec. Driver supports WiFi only.  Card is PCIE device, with PCIe ID
+``1ae9:0310``
 
-There are old version of the Qualcomm 60GHz card, with PCIe ID ``1ae9:0301`` it is not supported.
+There are old version of the Qualcomm 60GHz card, with PCIe ID
+``1ae9:0301`` it is not supported.
 
-wil6210 device, ``1ae9:0310``, has one 2Mb BAR; it supports MSI interrupt.
+wil6210 device, ``1ae9:0310``, has one 2Mb BAR; it supports MSI
+interrupt.
 
-Since 60GHz is emerging technology and hardware is completely new, driver provides lots of features for experimenting, and can be used as researcher workbench.
+Since 60GHz is emerging technology and hardware is completely new,
+driver provides lots of features for experimenting, and can be used as
+researcher workbench.
 
 Network features
 ----------------
 
-For the `WiFi <WiFi>`__ connection, implemented is 802.11ad spec. Supported are channels 1..3 with corresponded frequencies 58320, 60480, 62640 MHz.
+For the WiFi connection, implemented is 802.11ad spec. Supported are
+channels 1..3 with corresponded frequencies 58320, 60480, 62640 MHz.
 
 wil6210 use cfg80211 framework, but not mac80211.
 
@@ -28,23 +34,23 @@ Firmware has to be downloaded to the card; card will not work without firmware.
 What works
 ~~~~~~~~~~
 
--  managed mode, aka station. Fully functional. Require up-to-date wpa_supplicant.
--  sniffer. May be configured to captures either only CP (control PHY) or all frames
--  AP mode. Up to 8 simultaneous connected stations supported
--  security. supported is GCMP, it is the only allowed cipher accordingly to the spec.
+- managed mode, aka station. Fully functional. Require up-to-date wpa_supplicant.
+- sniffer. May be configured to captures either only CP (control PHY) or all frames
+- AP mode. Up to 8 simultaneous connected stations supported
+- security. supported is GCMP, it is the only allowed cipher accordingly to the spec.
 
 TODO
 ~~~~
 
--  P2P and FST flows
--  various offloads
+- P2P and FST flows
+- various offloads
 
 Status
 ~~~~~~
 
--  Basic support for 802.11ad merged into kernel 3.6
--  The driver merged into kernel 3.8.
--  Patches for basic 11ad support for hostapd/wpa_supplicant merged.
+- Basic support for 802.11ad merged into kernel 3.6
+- The driver merged into kernel 3.8.
+- Patches for basic 11ad support for hostapd/wpa_supplicant merged.
 
 Sniffer
 ~~~~~~~
@@ -194,8 +200,8 @@ Module parameters
 
 wil6210 support of interrupt handling modes:
 
--  MSI - MSI interrupt. This is the default mode.
--  INTx - legacy pin interrupt. Do not use if possible.
+- MSI - MSI interrupt. This is the default mode.
+- INTx - legacy pin interrupt. Do not use if possible.
 
 When **debug_fw** set to true, driver probe will not fail if firmware do not report "ready" event. This is to aid firmware boot issues debugging.
 
@@ -216,10 +222,10 @@ Firmware error recovery
 
 Should firmware crash, or in case of scan timeout, driver try to recover from error by resetting card. This works for **station** only. In the **AP** mode, driver will not perform recovery. It will, however, report error to the user space. There are 2 modes of firmware recovery, depending on the driver parameter **no_fw_recovery**:
 
--  Automatic
--  when **no_fw_recovery** not set (default), driver starts recovery attempt immediately. If firmware keeps crashing, driver will stop after 5 attempts performed within short time.
--  Manual
--  when **no_fw_recovery** set (**Y** or **1**), driver will report firmware error to the user space and wait for command to continue. To query error state and continue with recovery, use **recovery** file on the driver's debugfs: read it
+- Automatic
+- when **no_fw_recovery** not set (default), driver starts recovery attempt immediately. If firmware keeps crashing, driver will stop after 5 attempts performed within short time.
+- Manual
+- when **no_fw_recovery** set (**Y** or **1**), driver will report firmware error to the user space and wait for command to continue. To query error state and continue with recovery, use **recovery** file on the driver's debugfs: read it
 
 ::
 
@@ -227,7 +233,7 @@ Should firmware crash, or in case of scan timeout, driver try to recover from er
 
 to query status, it will reads: <code> mode = [auto|manual] state = [idle|pending|running]</code> If **state** is *pending*, it is time to collect all crash information as desired, and continue with recovery by writing **run** into **recovery**:
 
--  ``echo -n "run" > /sys/kernel/debug/ieee80211/phy/wil6210/recovery``
+- ``echo -n "run" > /sys/kernel/debug/ieee80211/phy/wil6210/recovery``
 
 Debug facilities
 ~~~~~~~~~~~~~~~~
@@ -253,8 +259,8 @@ All debugfs files placed under standard location for the cfg80211 devices, $DEBU
 
 All wil6210 specific files placed under directory 'wil6210'. Facilities provided:
 
--  register access. All ICR (Interrupt Control Registers) groups represented as directories, with entries per register, allowing read/write. ITR (Interrupt Threshold Registers) represented as well.
--  raw memory access. All memory sections represented as 'blob' files, providing read only access to the memory on card. Sections include:
+- register access. All ICR (Interrupt Control Registers) groups represented as directories, with entries per register, allowing read/write. ITR (Interrupt Threshold Registers) represented as well.
+- raw memory access. All memory sections represented as 'blob' files, providing read only access to the memory on card. Sections include:
 
 ::
 
@@ -275,8 +281,8 @@ All wil6210 specific files placed under directory 'wil6210'. Facilities provided
 
 Raw memory access used by firmware/ucode trace extractor. See below. Also, raw memory dump may be obtained for later analysis.
 
--  DWORD memory read, as FW see it. Files 'mem_addr' and 'mem_val' provide access to the memory, using FW addresses (FW memory mapping is somewhat different from what host see in BAR0). Write address to the 'mem_addr', then read 'mem_val'. It will reads like "[0x%08x] = 0x%08x\\n", addr, value
--  mailbox for WMI commands events. File 'mbox' reads like:
+- DWORD memory read, as FW see it. Files 'mem_addr' and 'mem_val' provide access to the memory, using FW addresses (FW memory mapping is somewhat different from what host see in BAR0). Write address to the 'mem_addr', then read 'mem_val'. It will reads like "[0x%08x] = 0x%08x\\n", addr, value
+- mailbox for WMI commands events. File 'mbox' reads like:
 
 ::
 
@@ -323,11 +329,11 @@ There are 2 separate rings, one for Tx, or host->card commands; and 2-nd for Rx,
 
 Printed for each ring (all addresses in FW memory mapping):
 
--  base address of ring in card's memory
--  ring size in bytes and entries
--  tail and head pointers
--  max. entry size. It is fake for Rx - FW may allocate entry of arbitrary size
--  mailbox entries, format for entry:
+- base address of ring in card's memory
+- ring size in bytes and entries
+- tail and head pointers
+- max. entry size. It is fake for Rx - FW may allocate entry of arbitrary size
+- mailbox entries, format for entry:
 
 <code> /-- 'E' for empty entry, 'F' for full
 
@@ -364,18 +370,23 @@ There is one block for Rx DMA vring and one for every Tx DMA vring.
 
 Information printed:
 
--  addresses, physical (pa) and virtual (va)
--  size, entries
--  software head and tail pointers
--  hardware tail, format: [fw addr] -> value
--  One letter per vring entry, 'H' for hardware owned and 'S' for software owned ones.
+- addresses, physical (pa) and virtual (va)
+- size, entries
+- software head and tail pointers
+- hardware tail, format: [fw addr] -> value
+- One letter per vring entry, 'H' for hardware owned and 'S' for software owned ones.
 
 Contributions to wil6210
 ------------------------
 
-You can see `statistics and graphs of contributions to wil6210 here <https://docs.google.com/spreadsheet/pub?key=0AtNdeeyGJEJ7dG45U2xrZldlQm80Nlg5QzEwUmtNUGc&single=true&gid=2&output=html>`__. Contact the wil6210 maintainer if you'd like to help with keeping this document up to date.
+You can see `statistics and graphs of contributions to wil6210 here
+<https://docs.google.com/spreadsheet/pub?key=0AtNdeeyGJEJ7dG45U2xrZldlQm80Nlg5QzEwUmtNUGc&single=true&gid=2&output=html>`__.
+Contact the wil6210 maintainer if you'd like to help with keeping this
+document up to date.
 
 Subscribe to this page!
 -----------------------
 
-You should subscribe to this page so you can get e-mail updates on changes and news for ath9k automatically. You'll get an e-mail as soon as this page gets updated.
+You should subscribe to this page so you can get e-mail updates on
+changes and news for ath9k automatically. You'll get an e-mail as soon
+as this page gets updated.

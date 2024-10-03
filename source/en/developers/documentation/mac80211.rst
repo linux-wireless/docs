@@ -1,15 +1,38 @@
 About mac80211
---------------
+==============
 
-mac80211 is a framework which driver developers can use to write drivers for :doc:`SoftMAC <glossary>` wireless devices.
+.. toctree::
 
-SoftMAC devices allow for a finer control of the hardware, allowing for 802.11 frame management to be done in software for them, for both parsing and generation of 802.11 wireless frames. Most 802.11 devices today tend to be of this type.
+   mac80211/api
+   mac80211/auth-assoc-deauth
+   mac80211/hw-scan
+   mac80211/multi-queue-rx
+   mac80211/queues
+   mac80211/semantics
+   mac80211/tracing
+   mac80211/ratecontrol/minstrel
+   mac80211/ratecontrol/pid
 
-mac80211 implements the cfg80211 callbacks for SoftMAC devices, mac80211 then depends on cfg80211 for both registration to the networking subsystem and for configuration. Configuration is handled by cfg80211 both through nl80211 and wireless extensions.
 
-In mac80211 the :doc:`MLME <glossary>` is done in the kernel for station mode (:doc:`STA <glossary>`) and in userspace for :doc:`AP <glossary>` mode (:doc:`hostapd <../../users/documentation/hostapd>`).
+mac80211 is a framework which driver developers can use to write drivers
+for :term:`SoftMAC` wireless devices.
 
-If you have new userspace utilities which support nl80211 you do not need wireless-extensions to support a mac80211 device.
+SoftMAC devices allow for a finer control of the hardware, allowing for
+802.11 frame management to be done in software for them, for both
+parsing and generation of 802.11 wireless frames. Most 802.11 devices
+today tend to be of this type.
+
+mac80211 implements the cfg80211 callbacks for SoftMAC devices, mac80211
+then depends on cfg80211 for both registration to the networking
+subsystem and for configuration. Configuration is handled by cfg80211
+both through nl80211 and wireless extensions.
+
+In mac80211 the :term:`MLME` is done in the kernel for station mode
+(:term:`STA`) and in userspace for :term:`AP` mode (:doc:`hostapd
+<../../users/documentation/hostapd>`).
+
+If you have new userspace utilities which support nl80211 you do not
+need wireless-extensions to support a mac80211 device.
 
 Supported features
 ------------------
@@ -28,50 +51,63 @@ Here is a quick review of the features supported in mac80211.
 The mac80211 book
 -----------------
 
-We are working on a `set of documentation books <http://wireless.kernel.org/80211books/>`__, including one for mac80211, which are generated from comments in the various source files. You will find a more thorough review of mac80211 in the mac80211 book; the wiki pages can be used as a quick reference for mac80211 development. The book incorporates the kernel-doc docs below.
+We are working on a `documentation
+<https://www.kernel.org/doc/html/latest/driver-api/80211/>`__, including
+one for mac80211, which are generated from comments in the various
+source files. You will find a more thorough review of mac80211 in the
+mac80211 book; the wiki pages can be used as a quick reference for
+mac80211 development. The book incorporates the kernel-doc docs below.
 
 mac80211 driver API
 -------------------
 
-The :doc:`new mac80211 driver interface semantics <mac80211/semantics>` gives an overview of the expected and suggested driver behavior.
+The :doc:`new mac80211 driver interface semantics <mac80211/semantics>`
+gives an overview of the expected and suggested driver behavior.
 
-The :doc:`API page <mac80211/api>` lists notes about using the driver API.
+The :doc:`API page <mac80211/api>` lists notes about using the driver
+API.
 
-The :doc:`tracing page <mac80211/tracing>` has notes on how to trace what mac80211 is asking the driver to do.
+The :doc:`tracing page <mac80211/tracing>` has notes on how to trace
+what mac80211 is asking the driver to do.
 
 Sequence diagrams:
 
-::
-
-     * [[en/developers/Documentation/mac80211/auth-assoc-deauth|auth/assoc/deauth diagram]] 
-     * [[en/developers/Documentation/mac80211/hw-scan|HW scan diagram]] 
+* :doc:`auth/assoc/deauth diagram <mac80211/auth-assoc-deauth>`
+* :doc:`HW scan diagram <mac80211/hw-scan>`
 
 mac80211 drivers
 ----------------
 
-mac80211 drivers are listed on the :doc:`drivers table <../../users/drivers>`
+mac80211 drivers are listed on the :doc:`drivers table
+<../../users/drivers>`
 
 mac80211 802.11d support
 ------------------------
 
-mac80211 supports 802.11d by processing country information element on beacons after association with an AP. You should still be able to associate to the AP in your region as cfg80211 allows users to set the regulatory domain from userspace before country information elements are parsed, this is expected to be set via wpa_supplicant upon initialization. We let cfg80211 parse the country information element for us and deal with reviewing regulatory enforcement for us. To review that please see :doc:`cfg80211's regulatory support <cfg80211>`.
+mac80211 supports 802.11d by processing country information element on
+beacons after association with an AP. You should still be able to
+associate to the AP in your region as cfg80211 allows users to set the
+regulatory domain from userspace before country information elements are
+parsed, this is expected to be set via wpa_supplicant upon
+initialization. We let cfg80211 parse the country information element
+for us and deal with reviewing regulatory enforcement for us. To review
+that please see :doc:`cfg80211's regulatory support <cfg80211>`.
 
 802.11n and WEP or TKIP
 -----------------------
 
-IEEE 802.11n does not allow TKIP/WEP as pairwise ciphers in HT mode. If any of these ciphers are found to be used by the AP when a STA tries to associate to it:
-
-::
+IEEE 802.11n does not allow TKIP/WEP as pairwise ciphers in HT mode. If
+any of these ciphers are found to be used by the AP when a STA tries to
+associate to it::
 
    WLAN_CIPHER_SUITE_WEP40
    WLAN_CIPHER_SUITE_TKIP
    WLAN_CIPHER_SUITE_WEP104
 
-then 802.11n will be disabled and the STA will fall back to legacy mode of operation: 802.11a/b/g.
+then 802.11n will be disabled and the STA will fall back to legacy mode
+of operation: 802.11a/b/g.
 
 other documentation
 -------------------
 
-::
-
-       * {{mac80211.pdf|Johannes Berg's presentation}}
+* :download:`Johannes Berg's presentation <../../../media/en/developers/documentation/mac80211.pdf>`

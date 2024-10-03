@@ -1,14 +1,37 @@
 IEEE 802.11s
-------------
+============
 
 Introduction
 ~~~~~~~~~~~~
 
-IEEE 802.11s is an extension to the IEEE 802.11 standard which allows multiple wireless nodes to connect with each other without having an AP between them. If you have an AP at your home, and you want to copy a file to another laptop B which is connected to the same AP as your own laptop (laptop A), then A transmits the data to the AP, which in turn, transmits it to laptop B. So all the communication between A and B is done via the AP.
+IEEE 802.11s is an extension to the IEEE 802.11 standard which allows
+multiple wireless nodes to connect with each other without having an AP
+between them. If you have an AP at your home, and you want to copy a
+file to another laptop B which is connected to the same AP as your own
+laptop (laptop A), then A transmits the data to the AP, which in turn,
+transmits it to laptop B. So all the communication between A and B is
+done via the AP.
 
-IEEE 802.11s, however, allows direct communication between A and B without the need for an AP. However, the real power of IEEE 802.11s manifests itself in the presence of multiple wireless nodes. Using the 802.11s mesh standard, the nodes can form a multi-hop network where all the links of the network are wireless. This means that no wired infrastructure is needed to setup the network. This is very handy in a lot of scenarios, for example, disaster relief teams can carry laptops with IEEE 802.11s support. This would enable them to exchange information with other laptops in the area even if those are not in direct range.
+IEEE 802.11s, however, allows direct communication between A and B
+without the need for an AP. However, the real power of IEEE 802.11s
+manifests itself in the presence of multiple wireless nodes. Using the
+802.11s mesh standard, the nodes can form a multi-hop network where all
+the links of the network are wireless. This means that no wired
+infrastructure is needed to setup the network. This is very handy in a
+lot of scenarios, for example, disaster relief teams can carry laptops
+with IEEE 802.11s support. This would enable them to exchange
+information with other laptops in the area even if those are not in
+direct range.
 
-IEEE 802.11 standard defines a Wireless Distribution System. Typical implementations of a WDS are found at universities for example, where multiple APs are installed throughout the campus advertising a single SSID. The APs are connected together using a wired network such as Ethernet, but users can connect to the APs via a wireless connection. Think of IEEE 802.11s as replacing wires with wireless links in the above scenario. That removes the infrastructure cost such as laying wires and maintaining them. Also, it enables flexibility in terms of moving the APs or installing new APs.
+IEEE 802.11 standard defines a Wireless Distribution System. Typical
+implementations of a WDS are found at universities for example, where
+multiple APs are installed throughout the campus advertising a single
+SSID. The APs are connected together using a wired network such as
+Ethernet, but users can connect to the APs via a wireless connection.
+Think of IEEE 802.11s as replacing wires with wireless links in the
+above scenario. That removes the infrastructure cost such as laying
+wires and maintaining them. Also, it enables flexibility in terms of
+moving the APs or installing new APs.
 
 Terminology
 ~~~~~~~~~~~
@@ -22,59 +45,93 @@ IEEE 802.11s defines three kinds of nodes:
 Mesh Point
 ^^^^^^^^^^
 
-A Mesh Point (MP) supports a Peer Link Management protocol, which is used to discover neighboring nodes and keep track of them. Note that neighbor discovery is only limited to nodes which are in range of an MP.
+A Mesh Point (MP) supports a Peer Link Management protocol, which is
+used to discover neighboring nodes and keep track of them. Note that
+neighbor discovery is only limited to nodes which are in range of an MP.
 
-For communicating with nodes that are farther than one hop, an MP also supports Hybrid Wireless Mesh Protocol (HWMP). It is hybrid, because it supports two kinds of path selection protocols. Although these protocols are very similar to routing protocols, but bear in mind, that in case of IEEE 802.11s these use MAC addresses for "routing", instead of IP addresses. Therefore, we use the term "path" instead of "route" and thus path selection instead of routing.
+For communicating with nodes that are farther than one hop, an MP also
+supports Hybrid Wireless Mesh Protocol (HWMP). It is hybrid, because it
+supports two kinds of path selection protocols. Although these protocols
+are very similar to routing protocols, but bear in mind, that in case of
+IEEE 802.11s these use MAC addresses for "routing", instead of IP
+addresses. Therefore, we use the term "path" instead of "route" and thus
+path selection instead of routing.
 
 Mesh Portal
 ^^^^^^^^^^^
 
-An IEEE 802.11s mesh network could be used for a variety of purposes. One of them is providing cheap Internet access. In this case, atleast one node and potentially some of the nodes are connected to the Internet. Users connected to the mesh network can access the Internet via these gateway nodes called Mesh Portals (MPP) which are connected to both the mesh network and the Internet.
+An IEEE 802.11s mesh network could be used for a variety of purposes.
+One of them is providing cheap Internet access. In this case, atleast
+one node and potentially some of the nodes are connected to the
+Internet. Users connected to the mesh network can access the Internet
+via these gateway nodes called Mesh Portals (MPP) which are connected to
+both the mesh network and the Internet.
 
-Note that an MPP must bridge atleast two interfaces to provide the gateway functionality.
+Note that an MPP must bridge atleast two interfaces to provide the
+gateway functionality.
 
 Mesh Access Point
 ^^^^^^^^^^^^^^^^^
 
-A MAP is your traditional AP augmented with mesh functionality. So it can serves as an AP and be a part of the mesh network at the same time.
+A MAP is your traditional AP augmented with mesh functionality. So it
+can serves as an AP and be a part of the mesh network at the same time.
 
 Peer Link Management Protocol
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As mentioned earlier, Peer Link Management protocol is used for neighbor (peer) discovery and maintenance. When a wireless node is configured as an MP, it starts transmitting beacons. Other nodes that are in range of the new node, initiate the Peer Link Management Protocol FSM on receiving a beacon from the new node.
+As mentioned earlier, Peer Link Management protocol is used for neighbor
+(peer) discovery and maintenance. When a wireless node is configured as
+an MP, it starts transmitting beacons. Other nodes that are in range of
+the new node, initiate the Peer Link Management Protocol FSM on
+receiving a beacon from the new node.
 
 Hybrid Wireless Mesh Protocol
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-HWMP is used for path selection which is necessary in order to find a "route" to a node which is not in your immediate neighborhood. There are two main parts of HWMP, a proactive portion which is basically a tree-based hierarchical routing protocol, and an on-demand portion, which is a modification of Ad-hoc On Demand Vector (AODV).
+HWMP is used for path selection which is necessary in order to find a
+"route" to a node which is not in your immediate neighborhood. There are
+two main parts of HWMP, a proactive portion which is basically a
+tree-based hierarchical routing protocol, and an on-demand portion,
+which is a modification of Ad-hoc On Demand Vector (AODV).
 
 Information Elements
 ^^^^^^^^^^^^^^^^^^^^
 
-IEEE 802.11 support Information Elements (IE) contained in beacon or probe response frames. There are multiple kinds of IEs. In the context of IEEE 802.11s, following IEs are used
+IEEE 802.11 support Information Elements (IE) contained in beacon or
+probe response frames. There are multiple kinds of IEs. In the context
+of IEEE 802.11s, following IEs are used:
 
-::
+* Mesh Configuration
+* Peer Link Information Element
+* Path Request (PREQ), Path Reply (PREP), Path Error(PERR), Root
+  Annoucement (RANN) { Specific to HWMP }
 
-     * Mesh Configuration 
-     * Peer Link Information Element 
-     * Path Request (PREQ), Path Reply (PREP), Path Error(PERR), Root Annoucement (RANN) { Specific to HWMP } The above list might not be complete and other IEs specific to IEEE 802.11s can be added above. 
+The above list might not be complete and other IEs specific to IEEE
+802.11s can be added above. 
 
 Network Formation
 ~~~~~~~~~~~~~~~~~
 
-The *iw* utility can be used to configure a node as an MP. Configuration includes setting the mesh ID (similar to SSID in infrastructure-based (AP) networks) and channel at the least. Other things that are included in the configuration are described by the Mesh Configuration Information Element. Once a node is configured as an MP, it starts sending out beacons at regular intervals (by default every second). These beacons contain the *Mesh Configuration* IE mentioned above. This information element has following fields
+The *iw* utility can be used to configure a node as an MP. Configuration
+includes setting the mesh ID (similar to SSID in infrastructure-based
+(AP) networks) and channel at the least. Other things that are included
+in the configuration are described by the Mesh Configuration Information
+Element. Once a node is configured as an MP, it starts sending out
+beacons at regular intervals (by default every second). These beacons
+contain the *Mesh Configuration* IE mentioned above. This information
+element has following fields:
 
-::
+* Path Selection Protocol ID 
+* Path Selection metric 
+* Congestion Control Mode 
+* Synchronization Protocol ID 
+* Authentication Protocol ID 
+* Mesh Formation Info (Usually the count of neighbors/peers) 
+* Mesh Capability (includes whether this node allows establishment of peer links)
 
-       * Path Selection Protocol ID 
-       * Path Selection metric 
-       * Congestion Control Mode 
-       * Synchronization Protocol ID 
-       * Authentication Protocol ID 
-       * Mesh Formation Info (Usually the count of neighbors/peers) 
-       * Mesh Capability (includes whether this node allows establishment of peer links) In case of mac80211, the mesh interface is represented by **struct ieee80211_if_mesh** shown below: 
+In case of mac80211, the mesh interface is represented by **struct ieee80211_if_mesh** shown below: 
 
-::
+.. code-block:: c
 
    struct ieee80211_if_mesh {
            struct work_struct work;
@@ -118,44 +175,64 @@ The *iw* utility can be used to configure a node as an MP. Configuration include
            bool accepting_plinks;
    };
 
-The above structure maintains state information regarding a mesh interface. The current configuration of a mesh interface is stored in this interface.
+The above structure maintains state information regarding a mesh
+interface. The current configuration of a mesh interface is stored in
+this interface.
 
-The Mesh Configuration IE is important because, a node that receives a beacon from an existing node, should only process it, if it is configured to connect to the same network or is already part of the network having the same configuration as specified by the Mesh Configuration IE. This check is performed by the function **mesh_matches_local**.
+The Mesh Configuration IE is important because, a node that receives a
+beacon from an existing node, should only process it, if it is
+configured to connect to the same network or is already part of the
+network having the same configuration as specified by the Mesh
+Configuration IE. This check is performed by the function
+**mesh_matches_local**.
 
-A new node that wishes to be a part of the mesh network must be configured with the correct mesh ID and must be set to the correct channel. Once that is done, the new node will also start sending beacons. At this point, two things will happen. The node that started the network, will receive beacons from the new node, and the new node will also start receiving beacons from the existing node(s).
+A new node that wishes to be a part of the mesh network must be
+configured with the correct mesh ID and must be set to the correct
+channel. Once that is done, the new node will also start sending
+beacons. At this point, two things will happen. The node that started
+the network, will receive beacons from the new node, and the new node
+will also start receiving beacons from the existing node(s).
 
-On receiving the beacons, both nodes will start the Peer Link Management protocol, which is basically a four-way handshake. After the completion of handshake, each node will add the other in its station hash (read neighbor table). The following ASCII diagram describes the ideal (without loss) four-way handshake. Here, P2 is an existing node in a mesh network, and P1 is a node which receives the beacon or probe response from P2. P1 might be a new node joining the network or it might have lost the connection (because of moving away/crash) and can now listen to P2's beacons again because it recovered or the link became active again.
-
-<code> Beacon/Probe resp P1's state <-------------- P2's state PLINK_LISTEN PLINK_LISTEN
-
-::
-
-                  PLINK_OPEN
-
-PLINK_OPN_SNT --------------> PLINK_OPN_RCVD
-
-::
-
-                  PLINK_OPEN
-
-PLINK_OPN_RCVD <-------------- PLINK_OPN_RCVD
-
-::
-
-                  PLINK_CONFIRM
-
-PLINK_ESTAB <-------------- PLINK_OPN_RCVD
-
-::
-
-                  PLINK_CONFIRM
-
-PLINK_ESTAB ---------------> PLINK_ESTAB</code> All peer link management frames are IEEE 802.11 frames of type management and the sub-type is action. The function that is called to process IEEE 802.11s (mesh) management frames of type action is **ieee80211_mesh_rx_queued_mgmt** (invoked by **ieee80211_iface_work** which is the interface workqueue function). Following shows an excerpt from this function:
-
-<code> switch (stype) {
+On receiving the beacons, both nodes will start the Peer Link Management
+protocol, which is basically a four-way handshake. After the completion
+of handshake, each node will add the other in its station hash (read
+neighbor table). The following ASCII diagram describes the ideal
+(without loss) four-way handshake. Here, P2 is an existing node in a
+mesh network, and P1 is a node which receives the beacon or probe
+response from P2. P1 might be a new node joining the network or it might
+have lost the connection (because of moving away/crash) and can now
+listen to P2's beacons again because it recovered or the link became
+active again.
 
 ::
 
+                   Beacon/Probe resp
+    P1's state                        P2's state
+
+    PLINK_LISTEN   <----------------  PLINK_LISTEN
+
+                      PLINK_OPEN
+    PLINK_OPN_SNT  ---------------->  PLINK_OPN_RCVD
+
+                      PLINK_OPEN
+    PLINK_OPN_RCVD <----------------  PLINK_OPN_RCVD
+
+                      PLINK_CONFIRM
+    PLINK_ESTAB    <----------------  PLINK_OPN_RCVD
+
+                      PLINK_CONFIRM
+    PLINK_ESTAB    ---------------->  PLINK_ESTAB
+
+All peer link management frames are IEEE 802.11 frames of type
+management and the sub-type is action. The function that is called to
+process IEEE 802.11s (mesh) management frames of type action is
+**ieee80211_mesh_rx_queued_mgmt** (invoked by **ieee80211_iface_work**
+which is the interface workqueue function). Following shows an excerpt
+from this function:
+
+.. code-block:: c
+
+   switch (stype) {
           case IEEE80211_STYPE_PROBE_RESP:
           case IEEE80211_STYPE_BEACON:
                   ieee80211_mesh_rx_bcn_presp(sdata, stype, mgmt, skb->len,
@@ -164,10 +241,15 @@ PLINK_ESTAB ---------------> PLINK_ESTAB</code> All peer link management frames 
           case IEEE80211_STYPE_ACTION:
                   ieee80211_mesh_rx_mgmt_action(sdata, mgmt, skb->len, rx_status);
                   break;
-          }</code>
+          }
 
-*stype* in the above code refers to subtype of the received IEEE 802.11 frame. You can dig it up further to find more information about the peer link management state machine.
+*stype* in the above code refers to subtype of the received IEEE 802.11
+frame. You can dig it up further to find more information about the peer
+link management state machine.
 
-Note that, HWMP frames are also management frames with subtype *action*, so you will find info about that in **ieee80211_mesh_rx_mgmt** as well.
+Note that, HWMP frames are also management frames with subtype *action*,
+so you will find info about that in **ieee80211_mesh_rx_mgmt** as well.
 
-The on-demand part of HWMP is very similar to AODV, so I will recommend reading about AODV from the web in order to gain familiarity with the code.
+The on-demand part of HWMP is very similar to AODV, so I will recommend
+reading about AODV from the web in order to gain familiarity with the
+code.

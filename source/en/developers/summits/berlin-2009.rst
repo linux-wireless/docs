@@ -1,5 +1,5 @@
 Berlin, 2009
-------------
+============
 
 The wireless summit is over, with 15-20 people having attended. Here are presentations and notes:
 
@@ -7,9 +7,10 @@ The wireless summit is over, with 15-20 people having attended. Here are present
 -  `userspace rate control API discussion <rc.pdf>`__
 -  `Kalle's power save presentation <power-save-presentation.pdf>`__
 -  `IEEE 802.11 standardization activity <ieee80211-activity.pdf>`__
--  :doc:`Notes <berlin-2009/notes>`
 
---------------
+.. toctree::
+
+   Notes <berlin-2009/notes>
 
 What
 ~~~~
@@ -29,37 +30,33 @@ Where
 Confirmed Talks
 ~~~~~~~~~~~~~~~
 
-::
-
-     * power saving - Kalle (and maybe Johannes wrt. pm_qos?) 
-     * mac80211/cfg80211 overview - Johannes (like at UDS) 
+* power saving - Kalle (and maybe Johannes wrt. pm_qos?) 
+* mac80211/cfg80211 overview - Johannes (like at UDS) 
 
 "Workshops"
 ~~~~~~~~~~~
 
-::
+* full-MAC hardware cfg80211 support (connect/disconnect commands) 
+* cfg80211 wext compat work 
 
-       * full-MAC hardware cfg80211 support (connect/disconnect commands) 
-       * cfg80211 wext compat work 
-       *  * channel setting vs. virtual interfaces 
-       *  * stats 
-       *  * managed mode (Johannes has it mostly worked out in his head, cf. IBSS) 
-       *  * iwrate 
-       *  * key/auth stuff 
-       *  * power saving (iwpower) 
-       *  * tx power (iwtxpower) 
-       *   rate control userspace API 
-       *   how to tell userspace about noise measurements 
-       *   user space extensions for mac80211 management frame processing (e.g., action frames) 
+    * channel setting vs. virtual interfaces 
+    * stats 
+    * managed mode (Johannes has it mostly worked out in his head, cf. IBSS) 
+    * iwrate 
+    * key/auth stuff 
+    * power saving (iwpower) 
+    * tx power (iwtxpower) 
+
+*   rate control userspace API 
+*   how to tell userspace about noise measurements 
+*   user space extensions for mac80211 management frame processing (e.g., action frames) 
 
 Suggested topics/talks
 ~~~~~~~~~~~~~~~~~~~~~~
 
-::
-
-       *   * IBSS support 
-       *   * HT/11n - including A-M[PS]DU details 
-       *   * improved roaming support (between BSSes in an ESS) 
+* IBSS support 
+* HT/11n - including A-M[PS]DU details 
+* improved roaming support (between BSSes in an ESS) 
 
 Schedule
 ~~~~~~~~
@@ -69,7 +66,7 @@ Schedule
 Thursday
 ^^^^^^^^
 
-Some sightseeing/dinner with a small group of hackers? Or check out Linux\ ````\ Tag?
+Some sightseeing/dinner with a small group of hackers? Or check out LinuxTag?
 
 Friday
 ^^^^^^
@@ -99,9 +96,9 @@ Friday
    - 
 
       - 12:00 - 13:00
-      - :::
-      - :::
-      - :::
+      - 
+      - 
+      - 
    - 
 
       - 13:00 - 14:00
@@ -127,9 +124,9 @@ Friday
    - 
 
       - 16:00 - 17:00
-      - :::
-      - :::
-      - :::
+      - 
+      - 
+      - 
    - 
 
       - 17:00 - 18:00
@@ -159,9 +156,9 @@ Saturday
    - 
 
       - 11:00 - 12:00
-      - :::
-      - :::
-      - :::
+      - 
+      - 
+      - 
    - 
 
       - 12:00 - 13:00
@@ -195,25 +192,23 @@ Saturday
    - 
 
       - 17:00 - 18:00
-      - :::
-      - :::
-      - :::
+      - 
+      - 
+      - 
 
 Confirmed attendees
 ~~~~~~~~~~~~~~~~~~~
 
-::
-
-       *     * John 
-       *     * Kalle 
-       *     * Jouni 
-       *     * Johannes (can realistically attend sessions Thu 15:00 - Sun 16:00) 
-       *     * Helmut 
-       *     * Marcel(?) 
-       *     * Bob 
-       *     * Felix 
-       *     * Henning 
-       *     * Samuel 
-       *     * Ivo 
-       *     * Luis (Correia) 
-       *     * Nick 
+* John 
+* Kalle 
+* Jouni 
+* Johannes (can realistically attend sessions Thu 15:00 - Sun 16:00) 
+* Helmut 
+* Marcel(?) 
+* Bob 
+* Felix 
+* Henning 
+* Samuel 
+* Ivo 
+* Luis (Correia) 
+* Nick 

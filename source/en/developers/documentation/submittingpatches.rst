@@ -1,40 +1,52 @@
-About this guide
-----------------
+Submitting Patches
+==================
 
-This guide is designed to give you an idea of how to write patches for the Linux wireless (Wi-Fi) subsystem. Before reading this guide, read `the kernel submitting patches guide <https://docs.kernel.org/process/submitting-patches.html>`__.
+This guide is designed to give you an idea of how to write patches for
+the Linux wireless (Wi-Fi) subsystem. Before reading this guide, read
+`the kernel submitting patches guide
+<https://docs.kernel.org/process/submitting-patches.html>`__.
 
 Subscribe to this page
 ----------------------
 
-We would like to ask Linux-wireless developers to subscribe to this page on the wiki. Any new policies and best practices on patching to linux-wireless will be posted here.
+We would like to ask Linux-wireless developers to subscribe to this page
+on the wiki. Any new policies and best practices on patching to
+linux-wireless will be posted here.
 
 Prior to sending patches
 ------------------------
 
-Please **DO NOT** PGP sign patches sent to public lists. The reason is that signing patches will encapsulate them into MIME and thereby mangle the patch. Also, please note that we prefer patches inline rather than attachments. And no HTML mail, our lists reject those automatically.
+Please **DO NOT** PGP sign patches sent to public lists. The reason is
+that signing patches will encapsulate them into MIME and thereby mangle
+the patch. Also, please note that we prefer patches inline rather than
+attachments. And no HTML mail, our lists reject those automatically.
 
-And carefully read `our email etiquette <http://www.infradead.org/~dwmw2/email.html>`__, that saves everyone's time.
+And carefully read `our email etiquette
+<http://www.infradead.org/~dwmw2/email.html>`__, that saves everyone's
+time.
 
 Who to address
 --------------
 
-Send mac80211, cfg80211 and mac80211_hwsim patches as follows:
-
-::
+Send mac80211, cfg80211 and mac80211_hwsim patches as follows::
 
    To: Johannes Berg <johannes@sipsolutions.net>
    CC: linux-wireless@vger.kernel.org, Other Developers
 
-For wireless drivers patches (except mac80211_hwsim) send patches as:
-
-::
+For wireless drivers patches (except mac80211_hwsim) send patches as::
 
    To: linux-wireless@vger.kernel.org
    Cc: Driver maintainers, Other Developers
 
-Where :doc:`Maintainers <../maintainers>` contains the list of maintainers and mailing lists for the piece of code you are patching. *Other Developers* in this case can be a list of developers (or mailing lists) who you think may like to review this patch or who changed the code you are working on recently.
+Where :doc:`Maintainers <../maintainers>` contains the list of
+maintainers and mailing lists for the piece of code you are patching.
+*Other Developers* in this case can be a list of developers (or mailing
+lists) who you think may like to review this patch or who changed the
+code you are working on recently.
 
-Do note that drivers might have special requirements, the best is to check them from the corresponding wiki page. Here's a list for a few of them:
+Do note that drivers might have special requirements, the best is to
+check them from the corresponding wiki page. Here's a list for a few of
+them:
 
 -  :doc:`ath10k <../../users/drivers/ath10k/submittingpatches>`
 -  :doc:`ath11k <../../users/drivers/ath11k/submittingpatches>`
@@ -43,41 +55,62 @@ Do note that drivers might have special requirements, the best is to check them 
 Checking state of patches from patchwork
 ----------------------------------------
 
-All wireless patches are tracked in `linux-wireless patchwork project <https://patchwork.kernel.org/project/linux-wireless/list/>`__. From patchwork you can check the state of the patch and to whom it is assigned. Here's a quick link to see all the patches, no matter what's the state:
+All wireless patches are tracked in `linux-wireless patchwork project
+<https://patchwork.kernel.org/project/linux-wireless/list/>`__. From
+patchwork you can check the state of the patch and to whom it is
+assigned. Here's a quick link to see all the patches, no matter what's
+the state:
 
-https://patchwork.kernel.org/project/linux-wireless/list/?state=*
+* https://patchwork.kernel.org/project/linux-wireless/list/?state=*
 
-Always avoid contacting maintainers directly, they get way too much email already. Instead use the link above to find your patch and see the status. Only in last resort contact the maintainers, and do that by replying to your own patch and ask for status. Do not top post!
+Always avoid contacting maintainers directly, they get way too much
+email already. Instead use the link above to find your patch and see the
+status. Only in last resort contact the maintainers, and do that by
+replying to your own patch and ask for status. Do not top post!
 
 Different patchwork states and their meanings:
 
--  **New**: No action haven't taken yet, expect maybe assigned to a correct maintainer.
--  **Under Review**: The maintainer is waiting review comments from others.
--  **Accepted**: The maintainer has applied the patch to his/her tree.
--  **Rejected**: The maintainer rejected the patch, reasons stated in an email.
--  **Changes Requested**: Either the maintainer or a reviewer requested changes in the patch. The maintainer expects the patch author to submit a new version.
--  **Deferred**: The maintainer has postponed the review of the patch for some reason, for example due to lack of time, patch being to controversial or something else. Patch author doesn't need to take any action, the maintainer will revisit the patch in a later time.
--  **Awaiting Upstream**: The patch depends on an another patch from a different tree, for example a wireless driver needing a specific mac80211 patch to implement a new feature.
--  **RFC**: The patch is sent as Request For Comments. The maintainer expects the patch author to submit a new version.
--  **Superseded**: There's a new version of the patch available, the maintainer has skipped this version.
--  **Not Applicable**: The patch is either not part of wireless subsystem or it will be applied via different trees (for example net-next or driver maintainer trees). The patch is considered as dropped from now on and needs to be resubmitted for the maintainer to reconsider it.
+- **New**: No action haven't taken yet, expect maybe assigned to a
+  correct maintainer.
+- **Under Review**: The maintainer is waiting review comments from
+  others.
+- **Accepted**: The maintainer has applied the patch to his/her tree.
+- **Rejected**: The maintainer rejected the patch, reasons stated in an
+  email.
+- **Changes Requested**: Either the maintainer or a reviewer requested
+  changes in the patch. The maintainer expects the patch author to
+  submit a new version.
+- **Deferred**: The maintainer has postponed the review of the patch for
+  some reason, for example due to lack of time, patch being to
+  controversial or something else. Patch author doesn't need to take any
+  action, the maintainer will revisit the patch in a later time.
+- **Awaiting Upstream**: The patch depends on an another patch from a
+  different tree, for example a wireless driver needing a specific
+  mac80211 patch to implement a new feature.
+- **RFC**: The patch is sent as Request For Comments. The maintainer
+  expects the patch author to submit a new version.
+- **Superseded**: There's a new version of the patch available, the
+  maintainer has skipped this version.
+- **Not Applicable**: The patch is either not part of wireless subsystem
+  or it will be applied via different trees (for example net-next or
+  driver maintainer trees). The patch is considered as dropped from now
+  on and needs to be resubmitted for the maintainer to reconsider it.
 
 Subject
 -------
 
-If what you are sending is a patch you should use a subject as follows:
-
-::
+If what you are sending is a patch you should use a subject as follows::
 
    [PATCH] wifi: subsystem: fix foo and optimize bar
 
 Starting from 2022 we prefix all wireless patch titles with "wifi: ".
 
-In case of wireless patches the subsystem can for example be ``mac80211``, ``cfg80211`` or the name of the driver, for example ``ath9k``. There's an easy way to check with git what prefix you should use:
+In case of wireless patches the subsystem can for example be
+``mac80211``, ``cfg80211`` or the name of the driver, for example
+``ath9k``. There's an easy way to check with git what prefix you should
+use::
 
-::
-
-   $ $ git log --oneline --no-merges -10 drivers/net/wireless/ath/ath9k/ar9003_mac.c
+   $ git log --oneline --no-merges -10 drivers/net/wireless/ath/ath9k/ar9003_mac.c
    8b537686a116 ath9k: add TPC capability to TX descriptor path
    315dd1149b60 ath9k: fix getting tx duration for dynack
    36678b2b67d7 ath9k: add duration field to ath_tx_status
@@ -88,34 +121,39 @@ In case of wireless patches the subsystem can for example be ``mac80211``, ``cfg
    ab2761033576 ath9k: remove useless flag conversation.
    ff9bd2d8d95a ath9k_hw: Handle AR_INTR_SYNC_HOST1_(FATAL|PERR) on AR9003
    a4a2954ff49e ath9k_hw: Add AR9565 HW support
-   $
 
-If your patch is just a proposal you can mark the patch as RFC in the subject:
-
-::
+If your patch is just a proposal you can mark the patch as RFC in the subject::
 
    [RFC] wifi: subsystem: add a new way to do foo
 
-If you need to make changes to the patch add a version number inside the brackets:
-
-::
+If you need to make changes to the patch add a version number inside the brackets::
 
    [PATCH v2] wifi: subsystem: fix foo and optimize bar
    [PATCH v3] wifi: subsystem: fix foo and optimize bar
    [PATCH v4] wifi: subsystem: fix foo and optimize bar
 
-**Always** increase the version number, no matter how small the change is. The maintainers focus on the latest version and ignore the older versions. Make sure that the maintainers don't need to guess what version he should take, that just creates problems.
+**Always** increase the version number, no matter how small the change
+is. The maintainers focus on the latest version and ignore the older
+versions. Make sure that the maintainers don't need to guess what
+version he should take, that just creates problems.
 
-Then sending a new version of the patch **always** add a change log, either after the ``---`` line (three dashes) or in the cover letter.
+Then sending a new version of the patch **always** add a change log,
+either after the ``---`` line (three dashes) or in the cover letter.
 
-If a patch in a bigger patchset changes resubmit the whole patchset, even the patches which have not changes. The maintainers look at patchsets as a complete unit, usually they do not want to take patches individually from a patchset.
+If a patch in a bigger patchset changes resubmit the whole patchset,
+even the patches which have not changes. The maintainers look at
+patchsets as a complete unit, usually they do not want to take patches
+individually from a patchset.
 
-Subject lines, like commit messages (see below) should be written in imperative voice ("fix foo and optimize bar"), not in any other way such as past tense ("fixed foo and optimized bar").
+Subject lines, like commit messages (see below) should be written in
+imperative voice ("fix foo and optimize bar"), not in any other way such
+as past tense ("fixed foo and optimized bar").
 
 Commit Messages
 ---------------
 
-Please write commit messages, like mentioned for the subject above, in imperative voice.
+Please write commit messages, like mentioned for the subject above, in
+imperative voice.
 
 Commit messages should describe
 
@@ -128,28 +166,34 @@ Commit messages should describe
    -  possible security implications,
    -  etc.
 
-If you find yourself listing out a number of changes in the commit message as a bulleted list or similar, consider splitting up the patch into discrete changes that each do one thing. Similarly, if one of the additional considerations is refactoring, try to shift that into a separate patch.
+If you find yourself listing out a number of changes in the commit
+message as a bulleted list or similar, consider splitting up the patch
+into discrete changes that each do one thing. Similarly, if one of the
+additional considerations is refactoring, try to shift that into a
+separate patch.
 
 Tree labels
 -----------
 
-Labeling patches with what tree the patch should go to helps maintainers to prioritise and sort patches and avoids unnecessary emails, which saves everyone time and speeds up patch review. Here are some tips how to label wireless patches.
+Labeling patches with what tree the patch should go to helps maintainers
+to prioritise and sort patches and avoids unnecessary emails, which
+saves everyone time and speeds up patch review. Here are some tips how
+to label wireless patches.
 
-If you want to target your patch to a specific release (for example that the patch should go -rc release not -next) you can inform the maintainer by adding the release number inside the PATCH brackets:
-
-::
+If you want to target your patch to a specific release (for example that
+the patch should go -rc release not -next) you can inform the maintainer
+by adding the release number inside the PATCH brackets::
 
    [PATCH 4.20] wifi: subsystem: fix foo
 
-If you want to make it clear to the maintainer that the patch should NOT go to -rc release but to -next instead you can add "-next" to PATCH brackets:
-
-::
+If you want to make it clear to the maintainer that the patch should NOT
+go to -rc release but to -next instead you can add "-next" to PATCH
+brackets::
 
    [PATCH -next] wifi: subsystem: fix foo
 
-Alternatively you can specify the exact tree you are targetting by adding the name of the git tree inside PATCH brackets:
-
-::
+Alternatively you can specify the exact tree you are targetting by
+adding the name of the git tree inside PATCH brackets::
 
    [PATCH wireless] wifi: mac80211: fix foo
    [PATCH wireless-next] wifi: mac80211: implement very-cool-feature
@@ -159,11 +203,17 @@ Alternatively you can specify the exact tree you are targetting by adding the na
 Sending large patches or multiple patches
 -----------------------------------------
 
-You should only send a large patch if your patch does one specific task, or a few of them if they are easy to review. If your work consists of multiple tasks you must split your tasks into separate patches. Each patch must address a small set of tasks to help the maintainers with revision. The rule of thumb here is if you read your patch and if its not clear what the patch is doing then better break it down into separate patches. Patches should also be run through scripts/checkpatch.pl.
+You should only send a large patch if your patch does one specific task,
+or a few of them if they are easy to review. If your work consists of
+multiple tasks you must split your tasks into separate patches. Each
+patch must address a small set of tasks to help the maintainers with
+revision. The rule of thumb here is if you read your patch and if its
+not clear what the patch is doing then better break it down into
+separate patches. Patches should also be run through
+``scripts/checkpatch.pl``.
 
-If you are sending multiple patches which depend on each other you can use this format for the subjects:
-
-::
+If you are sending multiple patches which depend on each other you can
+use this format for the subjects::
 
    [PATCH 0/4] wifi: driver_name: introduce foo and bar
    [PATCH 1/4] wifi: driver_name: introduce get_foo_bars()
@@ -171,14 +221,22 @@ If you are sending multiple patches which depend on each other you can use this 
    [PATCH 3/4] wifi: driver_name: use foo when barring
    [PATCH 4/4] wifi: driver_name: optimize bar at init time
 
-On the e-mail with subject, "[PATCH 0/4] wifi: driver_name: introduce foo and bar", you would give a brief overview of all the changes. No patch should be included in that e-mail, and as that e-mail will not end up in the change logs it should not contain anything that should be archived, only a rough overview over the purpose of the patch set, no in-depth description which should be in the changelog for each patch.
+On the e-mail with subject, ``[PATCH 0/4] wifi: driver_name: introduce
+foo and bar``, you would give a brief overview of all the changes. No
+patch should be included in that e-mail, and as that e-mail will not end
+up in the change logs it should not contain anything that should be
+archived, only a rough overview over the purpose of the patch set, no
+in-depth description which should be in the changelog for each patch.
 
 Format of patches
 -----------------
 
-We prefer patches to be inline-text at the end of the body of the e-mail. It's strongly recommended to use git-format-patch and git-send-email tools to submit patches as they use the correct format automatically. Additionally note that we prefer to apply patches with git-am (using the -p1 diff format). A header as follows is then acceptable:
-
-::
+We prefer patches to be inline-text at the end of the body of the
+e-mail. It's strongly recommended to use git-format-patch and
+git-send-email tools to submit patches as they use the correct format
+automatically. Additionally note that we prefer to apply patches with
+git-am (using the -p1 diff format). A header as follows is then
+acceptable::
 
    diff --git a/include/net/mac80211.h b/include/net/mac80211.h
    index 9b4b4a2..4832e6a 100644
@@ -188,11 +246,16 @@ We prefer patches to be inline-text at the end of the body of the e-mail. It's s
 Patch tags
 ----------
 
-In order to track who worked on a patch and released the source code under the appropriate licenses used, patch tags are used to track of provenance of patches. This also helps developers review who was in the line of a patch work, who submitted it, and who reviewed it. This information is available from the *git-log*. We currently use, *Signed-off-by*, *Acked-by*, *Cc*, *Reviewed-by* and *Tested-by*.
+In order to track who worked on a patch and released the source code
+under the appropriate licenses used, patch tags are used to track of
+provenance of patches. This also helps developers review who was in the
+line of a patch work, who submitted it, and who reviewed it. This
+information is available from the *git-log*. We currently use,
+*Signed-off-by*, *Acked-by*, *Cc*, *Reviewed-by* and *Tested-by*.
 
-Please note that since you are submitting patches inline, after the *Signed-off-by:* lines, you **must** put ``---``, that is three dashes. Example:
-
-::
+Please note that since you are submitting patches inline, after the
+*Signed-off-by:* lines, you **must** put ``---``, that is three dashes.
+Example::
 
    ...
    Signed-off-by: Luis R. Rodriguez <mcgrof@example.com>
@@ -200,7 +263,12 @@ Please note that since you are submitting patches inline, after the *Signed-off-
     include/net/ieee80211_regdomains.h |  196 ++++++++
    ...
 
-Please also read the `official Linux SubmittingPatches <https://www.kernel.org/doc/html/latest/process/submitting-patches.html>`__ documentation, especially the `Developer's Certificate of Origin <https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin>`__. Do not submit patches unless you have read, understood and agreed to the certificate.
+Please also read the `official Linux SubmittingPatches
+<https://www.kernel.org/doc/html/latest/process/submitting-patches.html>`__
+documentation, especially the `Developer's Certificate of Origin
+<https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin>`__.
+Do not submit patches unless you have read, understood and agreed to the
+certificate.
 
 New driver
 ----------
@@ -246,7 +314,7 @@ Below are a few examples of a patches. Only the header is provided for long patc
 
 -  Single patch
 
-::
+.. code-block:: eml
 
    From: Michael Buesch
    To: John Linville
@@ -336,9 +404,9 @@ Frequent problems in patch submissions
 Patch version missing
 ~~~~~~~~~~~~~~~~~~~~~
 
-If you send a new version of the patch or patchset you should always add a version number. The first version does not need to be shown but starting from second version the version number must be available:
-
-::
+If you send a new version of the patch or patchset you should always add
+a version number. The first version does not need to be shown but
+starting from second version the version number must be available::
 
    [PATCH] wifi: ath10k: fix DMA allocation
    [PATCH v2] wifi: ath10k: fix DMA allocation
@@ -346,51 +414,59 @@ If you send a new version of the patch or patchset you should always add a versi
    ...
    [PATCH v11] wifi: ath10k: fix DMA allocation
 
-You can add the version with switch ``--subject-prefix``:
-
-::
+You can add the version with switch ``--subject-prefix``::
 
    git format-patch --subject-prefix="PATCH v2"
 
 Changelog missing
 ~~~~~~~~~~~~~~~~~
 
-When sending a new version of a patch or patchset you should **always** add a changelog so that maintainer can easily see what has changed.
+When sending a new version of a patch or patchset you should **always**
+add a changelog so that maintainer can easily see what has changed.
 
-If you have just one patch you can add the changelog after the ``---`` (three dashes) line.
+If you have just one patch you can add the changelog after the ``---``
+(three dashes) line.
 
-If you have multiples patches (called a patchset) add the changelog to the cover letter. You can create the cover letter with the switch ``--cover-letter``:
-
-::
+If you have multiples patches (called a patchset) add the changelog to
+the cover letter. You can create the cover letter with the switch
+``--cover-letter``::
 
    git format-patch --subject-prefix="PATCH v2" --cover-letter
 
 Signed-off-by missing
 ~~~~~~~~~~~~~~~~~~~~~
 
-Read `Developer's Certificate of Origin <https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin>`__. Do not submit patches unless you have read, understood and agreed to the certificate.
+Read `Developer's Certificate of Origin
+<https://www.kernel.org/doc/html/latest/process/submitting-patches.html#sign-your-work-the-developer-s-certificate-of-origin>`__.
+Do not submit patches unless you have read, understood and agreed to the
+certificate.
 
 Format issues
 ~~~~~~~~~~~~~
 
-Patch is somehow whitespace damaged, for example tabs converted to spaces, extra new lines or other modifications which prevent applying the patch without manual fixing. Or the mail is in HTML format which most of the mailing lists even block silently.
+Patch is somehow whitespace damaged, for example tabs converted to
+spaces, extra new lines or other modifications which prevent applying
+the patch without manual fixing. Or the mail is in HTML format which
+most of the mailing lists even block silently.
 
-The best way to avoid all formatting issues is to use `git send-email <https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html>`__. See :doc:`linux-wireless git guide <git-guide>` for more information.
+The best way to avoid all formatting issues is to use `git send-email
+<https://www.kernel.org/pub/software/scm/git/docs/git-send-email.html>`__.
+See :doc:`linux-wireless git guide <git-guide>` for more information.
 
 Fixes line is incorrect
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The correct format for the commit references in Fixes line is the 12 initial digits of the SHA1_ID of the commit, followed by a space, followed by the commit log message header line text enclosed in parentheses and double quotes with no line breaks whatsoever. The fixes lines must be placed just above the signed-off-by lines.
+The correct format for the commit references in Fixes line is the 12
+initial digits of the SHA1_ID of the commit, followed by a space,
+followed by the commit log message header line text enclosed in
+parentheses and double quotes with no line breaks whatsoever. The fixes
+lines must be placed just above the signed-off-by lines.
 
-Example:
-
-::
+Example::
 
    Fixes: c742e623e941 ("mwifiex: sdio card reset enhancement")
 
-Here's how one can configure git to provide the fixes tag in correct format:
-
-::
+Here's how one can configure git to provide the fixes tag in correct format::
 
    $ git config --global --add alias.fixes 'show -q --format=fixes'
    $ git config --global --add pretty.fixes 'Fixes: %h ("%s")'
@@ -401,11 +477,12 @@ Here's how one can configure git to provide the fixes tag in correct format:
 Commit reference is wrong
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The correct format for the commit references in commit logs is to start with the string "commit", followed by a space, followed 12 initial digits of the SHA1_ID of the commit, followed by a space and followed by the commit log message header line text enclosed in parentheses.
+The correct format for the commit references in commit logs is to start
+with the string "commit", followed by a space, followed 12 initial
+digits of the SHA1_ID of the commit, followed by a space and followed by
+the commit log message header line text enclosed in parentheses.
 
-Example:
-
-::
+Example::
 
    commit f99a6abe59e096cc2c753e667c19f22022e3bef4
    Author: Sara Sharon <sara.sharon@intel.com>
@@ -424,13 +501,15 @@ Example:
 Commit title is wrong
 ~~~~~~~~~~~~~~~~~~~~~
 
-The correct format for the commit title is name of driver, followed by a colon, followed by a space and then followed by the actual title. Also the title should be informative and unique, so something like "fix a bug" is not a good title.
+The correct format for the commit title is name of driver, followed by a
+colon, followed by a space and then followed by the actual title. Also
+the title should be informative and unique, so something like "fix a
+bug" is not a good title.
 
 In 2022 we started using "wifi: " in front of all wireless patches.
 
-For examples uou can use ``git log`` to check older commits and see what prefix was used:
-
-::
+For examples uou can use ``git log`` to check older commits and see what
+prefix was used::
 
    $ git log --oneline --follow --no-merges -20 drivers/net/wireless/marvell/mwifiex/11ac.c
    277b024e5e3d mwifiex: move under marvell vendor directory
@@ -450,24 +529,44 @@ For examples uou can use ``git log`` to check older commits and see what prefix 
 Too many patches
 ~~~~~~~~~~~~~~~~
 
-The recommend size is 10-12 patches per patchset. More than that it gets difficult for reviewers and maintainers. Of course there's no hard rule, for simple patches more than that might be ok but then again for more complex patches even 10 patches per patchset might be too much.
+The recommend size is 10-12 patches per patchset. More than that it gets
+difficult for reviewers and maintainers. Of course there's no hard rule,
+for simple patches more than that might be ok but then again for more
+complex patches even 10 patches per patchset might be too much.
 
 Resubmit the whole patchset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Even if just one patch has changed in a patch series resubmit the whole patchset (and remember to increase the version number), do not just resubmit that one changed patch. The reason is that it's difficult to apply patches in correct order when some of them are submitted separately.
+Even if just one patch has changed in a patch series resubmit the whole
+patchset (and remember to increase the version number), do not just
+resubmit that one changed patch. The reason is that it's difficult to
+apply patches in correct order when some of them are submitted
+separately.
 
 Commit log does not answer "Why?"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The commit log should *always* answer the question "Why?" and describe the reason what motivated to implement the patch. This is the most important part of the commit log as this helps maintainers, backports, distros etc to make decisions if the patch is important for them or not and to what release it should go.
+The commit log should *always* answer the question "Why?" and describe
+the reason what motivated to implement the patch. This is the most
+important part of the commit log as this helps maintainers, backports,
+distros etc to make decisions if the patch is important for them or not
+and to what release it should go.
 
-The commit log needs to tell why you wrote the patch. If you fixed a bug give a short summary of the bug (can be a long one as well, of course) from user's point of view, and if there's a publically available bug report include a link to that. If you are fixing a warning from a compiler or a static checker add the warning from tool. Or if it's just code cleanup or fixing a theoretical issue, and does not have practical user visible changes, mention that also.
+The commit log needs to tell why you wrote the patch. If you fixed a bug
+give a short summary of the bug (can be a long one as well, of course)
+from user's point of view, and if there's a publically available bug
+report include a link to that. If you are fixing a warning from a
+compiler or a static checker add the warning from tool. Or if it's just
+code cleanup or fixing a theoretical issue, and does not have practical
+user visible changes, mention that also.
 
 Do not top post and edit your quotes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Top posting makes following email threads hard to follow and also it makes use of patchwork more difficult, which gets the maintainers grumpy as you are making their work more difficult. So do not top post and instead edit your quotes properly.
+Top posting makes following email threads hard to follow and also it
+makes use of patchwork more difficult, which gets the maintainers grumpy
+as you are making their work more difficult. So do not top post and
+instead edit your quotes properly.
 
 ::
 
@@ -489,11 +588,12 @@ linux-wireless mailing list drops all mail using HTML, so don't use it.
 Use RFC or RFT for patches not ready
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the patches are not yet ready to be applied by the maintainer, mark them as RFC (Request For Comments) or RFT (Request For Test) in the subject. This way the maintainer can easily see that the patch should not be applied yet and saves maintainer's time.
+If the patches are not yet ready to be applied by the maintainer, mark
+them as RFC (Request For Comments) or RFT (Request For Test) in the
+subject. This way the maintainer can easily see that the patch should
+not be applied yet and saves maintainer's time.
 
-Examples:
-
-::
+Examples::
 
    [PATCH RFC] wifi: ath11k: enable power save mode always
    [PATCH RFT] wifi: ath10k: sdio: always use DMA transfers
@@ -508,9 +608,16 @@ https://www.kernel.org/doc/html/latest/process/submitting-patches.html#when-to-u
 Maximum of 7-12 patches per patchset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want your patches reviewed smoothly submit maximum of 7-12 patches per patchset. If the patches are bigger don't send more than 7 patches. But if they smaller, or trivial patches, 12 patches is ok. But anything more than 12 patches and you will get reviewers grumpy (read: it takes longer to get your patches reviewed and applied).
+If you want your patches reviewed smoothly submit maximum of 7-12
+patches per patchset. If the patches are bigger don't send more than 7
+patches. But if they smaller, or trivial patches, 12 patches is ok. But
+anything more than 12 patches and you will get reviewers grumpy (read:
+it takes longer to get your patches reviewed and applied).
 
-But you can submit multiple patchsets, just try to throttle it down to avoid bufferbloat in patchwork, for example you can send a new patchset every other day. And don't forget to document the dependencies in the cover letter ("this patchset depends on patchset B").
+But you can submit multiple patchsets, just try to throttle it down to
+avoid bufferbloat in patchwork, for example you can send a new patchset
+every other day. And don't forget to document the dependencies in the
+cover letter ("this patchset depends on patchset B").
 
 More references
 ---------------

@@ -1,88 +1,117 @@
 Documentation
--------------
+#############
 
-Here we start documentation for users for all new wireless utilities. The list is short, but we'll try to add more as we go.
+Here we start documentation for users for all new wireless utilities. The list
+is short, but we'll try to add more as we go.
 
--  :doc:`Wireless modes <documentation/modes>` - modes you can set your wireless card to operate in
--  :doc:`FAQ <documentation/faq>` Frequently asked questions
--  :doc:`iw <documentation/iw>` - new nl80211 based command line interface (:doc:`CLI <../developers/documentation/glossary>`) configuration utility
--  :doc:`wireless module parameters <documentation/module-parameters>` - documents the different 802.11 module parameters available
--  :doc:`rfkill <documentation/rfkill>` - simple tool for rfkill debugging/settings
--  :doc:`crda <../developers/regulatory/crda>` - new central regulatory domain agent, nl80211 based userspace regulatory db agent
--  :doc:`hostapd <documentation/hostapd>` - hostapd is a *IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator*
--  :doc:`wpa_supplicant <documentation/wpa_supplicant>` - wpa_supplicant is a WPA Supplicant and SME (initiates MLME commands)
--  :doc:`WoWLAN <documentation/wowlan>` - Wake on Wireless LAN support
--  :doc:`Power consumption <documentation/power-consumption>` - details of power consumption with 802.11 devices on Linux, covers IEEE 802.11 power savings, ASPM, and driver tweaks for ASPM, Dynamic power save, and pm-qos.
--  :doc:`WAPI <../developers/wapi>` - China's alternative to 802.11i (now part of 802.11-2007), ISO voted yes. However, as of 2012, the standard has been withdrawn by China\ https://mentor.ieee.org/802.11/dcn/12/11-12-0199-00-0jtc-jacksonville-minutes-jan-2012.doc.
--  :doc:`DFS <../developers/dfs>` - Design documentation for future DFS implementation in mac80211
--  :doc:`ACS <documentation/acs>` - Automatic Channel Selection support for Linux
--  :doc:`Solutions on Linux for the Open Wireless Movement <../developers/openwirelessmovement>`
--  `WiMAX on Linux <http://linuxwimax.org/>`__
--  `iwd <https://iwd.wiki.kernel.org/>`__ - Wifi management daemon (scanning, AP, supplicant, etc.)
+.. toctree::
+   :maxdepth: 1
 
-YouTube Documentation
----------------------
+   documentation/modes
+   documentation/faq
+   documentation/iw
+   documentation/module-parameters
+   documentation/rfkill
+   ../developers/regulatory/crda
+   documentation/hostapd
+   documentation/wpa_supplicant
+   documentation/wowlan
+   documentation/power-consumption
+   ../developers/wapi
+   ../developers/dfs
+   documentation/acs
+   ../developers/openwirelessmovement
 
-::
+External links
+**************
 
-     * [[http://www.youtube.com/playlist?p=PLA12950D8456F1818|Linux wireless support series - Baked: May 20 2011]] 
-     * [[http://www.youtube.com/watch?v=_yyFiLFx4Mg|RFC: 802.11 DFS support on mac80211 and ath9k]] - [[LinuxCon|LinuxCon]] 2011 
-     * [[http://www.youtube.com/watch?v=frvXN9pmLO4|802.11s on LInux mac80211]] - [[LinuxCon|LinuxCon]] 2011 
-     * [[http://www.youtube.com/watch?v=FzZsTd4Bj7I|wmediumd for mac80211_hwsim]] - [[LinuxCon|LinuxCon]] 2011 
+- `WiMAX on Linux <http://linuxwimax.org/>`__
+- `IWD Wifi Management Daemon <https://iwd.wiki.kernel.org/>`__
+
+YouTube links
+*************
+
+* `Linux wireless support series - Baked: May 20 2011 <https://www.youtube.com/playlist?p=PLA12950D8456F1818>`__
+* `RFC: 802.11 DFS support on mac80211 and ath9k <https://www.youtube.com/watch?v=_yyFiLFx4Mg>`__ - LinuxCon 2011 
+* `802.11s on LInux mac80211 <https://www.youtube.com/watch?v=frvXN9pmLO4>`__ - LinuxCon 2011 
+* `wmediumd for mac80211_hwsim <http://www.youtube.com/watch?v=FzZsTd4Bj7I>`__ - LinuxCon 2011 
 
 by Adrian Chadd:
 
-::
+* `Inside the Atheros WiFi Chipset - Adrian Chadd <https://www.youtube.com/watch?v=WOcYTqoSQ68>`__ - subtitle: how I learned to love the HAL - Defcon 2014. - ath9k DMA, PHY, MAC ... 
+* `The future of wireless networking - mobile, gigabit and beyond - Adrian Chadd <https://www.youtube.com/watch?v=pmespp2HDsU>`__ - (2013) 802.11ac, 802.11ad, hybrid operating modes, aggressive mobile power saving, the challenges involved in building a network stack that will handle 1+ gigabit/sec throughput. FreeBSD/Linux/Atheros HAL.
+*  `Wireless drivers (ath9k, HAL, BSD) - Adrian Chadd <https://www.youtube.com/watch?v=9P-r3H0bY8c>`__
 
-     * [[https://www.youtube.com/watch?v=WOcYTqoSQ68|Inside the Atheros WiFi Chipset - Adrian Chadd]] - subtitle: how I learned to love the HAL - Defcon 2014. - ath9k DMA, PHY, MAC ... 
-     * [[https://www.youtube.com/watch?v=pmespp2HDsU|The future of wireless networking - mobile, gigabit and beyond - Adrian Chadd]] - (2013) 802.11ac, 802.11ad, hybrid operating modes, aggressive mobile power saving, the challenges involved in building a network stack that will handle 1+ gigabit/sec throughput. FreeBSD/Linux/Atheros HAL.
-     * [[https://www.youtube.com/watch?v=9P-r3H0bY8c|Wireless drivers (ath9k, HAL, BSD) - Adrian Chadd]]
-
-Note: Adrian Chadd worked at Atheros for 18 months on chip bring-up and open source work. He worked with other Atheros developers to open source the USB firmware for the AR5513 and ath9k-htc hardware, as well as the AR9300 HAL, used by Linux and FreeBSD.
+.. note:: 
+     
+     Adrian Chadd worked at Atheros for 18 months on chip bring-up and open
+     source work. He worked with other Atheros developers to open source the USB
+     firmware for the AR5513 and ath9k-htc hardware, as well as the AR9300 HAL,
+     used by Linux and FreeBSD.
 
 Wireless managers
------------------
+*****************
 
 This is the list of available known wireless managers you can use in distributions
 
-::
+.. toctree::
+   :maxdepth: 1
 
-       * [[en/users/Documentation/NetworkManager|NetworkManager]] - GUI based connection manager with wireless support 
-       * [[en/users/Documentation/wicd|wicd]] - Simple GUI based connection manager with wireless support 
-       * [[en/users/Documentation/connman|connman]] - GUI based connection manager with wireless support, designed with embedded devices in mind 
+   documentation/networkmanager
+   documentation/wicd
+   documentation/connman
 
 Wireless sniffers / intrusion testing / packet injection utilities
-------------------------------------------------------------------
+******************************************************************
 
-::
-
-         * [[http://www.wireshark.org/|wireshark]] - a packet analyzer 
-         * [[http://www.kismetwireless.net/|kismet]] - an 802.11 layer2 wireless network detector, sniffer, and intrusion detection system 
-         * [[en/users/Documentation/packetspammer|packetspammer]]- a mac80211 packet injection utility 
-         * [[http://www.aircrack-ng.org/|aircrack-ng]] - an 802.11 WEP and WPA-PSK keys intrusion testing program 
-         * [[http://w1.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=wlantest/inject.c;hb=HEAD|Test AP injection code]] 
-         * [[http://br1.einfach.org/tech/horst/|horst]] - lightweight 802.11 wireless LAN analyzer 
+* `wireshark <https://www.wireshark.org/>`__ - a packet analyzer 
+* `kismet <https://www.kismetwireless.net/>`__ - an 802.11 layer2 wireless network detector, sniffer, and intrusion detection system 
+* :doc:`packetspammer <documentation/packetspammer>` - a mac80211 packet injection utility 
+* `aircrack-ng <https://www.aircrack-ng.org/>`__ - an 802.11 WEP and WPA-PSK keys intrusion testing program 
+* `Test AP injection code <https://w1.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=wlantest/inject.c;hb=HEAD>`__
+* `horst <https://br1.einfach.org/tech/horst/>`__ - lightweight 802.11 wireless LAN analyzer 
 
 Helping users and developers
-----------------------------
+****************************
 
-Please consider reading these sections to help developers help you more efficiently.
+Please consider reading these sections to help developers help you more
+efficiently.
 
-::
+.. toctree::
+   :maxdepth: 1
 
-           * [[en/users/Documentation/Reporting_bugs|Reporting bugs]] - How to report a bug 
-           * [[en/developers/Documentation/mac80211/tracing|Tracing mac80211]] - how to trace mac80211 
-           * [[en/developers/Testing/wifi-test|wifi-test project]] - utilities to help test your wireless driver 
-           * [[en/users/Documentation/Fix_Propagation|Understanding bug fix propagation]] - should help to understand the flow of a fix 
+   documentation/acs
+   documentation/aspm
+   documentation/bluetooth-coexistence
+   documentation/connman
+   documentation/dynamic-power-save
+   documentation/faq
+   documentation/fix_propagation
+   documentation/hostapd
+   documentation/iw
+   documentation/modes
+   documentation/module-parameters
+   documentation/networkmanager
+   documentation/packetspammer
+   documentation/power-consumption
+   documentation/reporting_bugs
+   documentation/rfkill
+   documentation/wicd
+   documentation/wowlan
+   documentation/wpa_supplicant
 
 To the very curious user
-------------------------
+************************
 
-In case you want to read up on what things are being advanced within Linux wireless. This should help users become familiar with our latest developments.
+In case you want to read up on what things are being advanced within Linux
+wireless. This should help users become familiar with our latest developments.
 
-::
+.. toctree::
+   :maxdepth: 1
 
-             * [[en/developers/Documentation/Wireless-Extensions|Wireless-Extensions]] - what are they? 
-             * [[en/developers/Documentation/mac80211|mac80211]] - New wireless driver API for [[en/developers/Documentation/Glossary|SoftMAC]] devices 
-             * [[en/developers/Documentation/cfg80211|cfg80211]] - new driver configuration API 
-             * [[en/developers/Documentation/nl80211|nl80211]] - new userspace <–> kernelspace wireless driver communication transport 
+   ../developers/documentation/wireless-extensions
+   ../developers/documentation/mac80211
+   ../developers/documentation/cfg80211
+   ../developers/documentation/nl80211
+   ../developers/documentation/mac80211/tracing
+   ../developers/testing/wifi-test

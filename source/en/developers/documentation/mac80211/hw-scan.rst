@@ -1,3 +1,6 @@
+HW-Scan
+=======
+
 <seqdia> title "scanning (with device offload)"
 
 participant userspace participant mac80211 participant driver

@@ -1,4 +1,4 @@
 About cw1200
-------------
+============
 
 This is driver for the `ST-Ericsson <http://www.stericsson.com/products/wi-fi.jsp>`__ CW1100 & CW1200 WLAN chipsets with SDIO or SPI bus.

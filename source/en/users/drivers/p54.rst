@@ -1,55 +1,86 @@
-*The Prism54.org domain redirects here. The old website and drivers are archived at [[*\ http://lekernel.net/prism54/%7Chttp://lekernel.net/prism54/\ *]].*
-
 p54
----
+===
 
-p54 is a driver for Intersil's Prism54 chips series. It supports both older full-MAC devices (with new soft-MAC firmware) and newer soft-MAC devices. It is included in the Linux kernel.
+.. toctree::
+   :hidden:
+
+   p54/devices
+
+.. note::
+
+   The Prism54.org domain redirects here. The old website and drivers
+   are archived at http://lekernel.net/prism54/
+
+p54 is a driver for Intersil's Prism54 chips series. It supports both
+older full-MAC devices (with new soft-MAC firmware) and newer soft-MAC
+devices. It is included in the Linux kernel.
 
 prism54 (deprecated)
 --------------------
 
-FullMAC PCI / Cardbus devices used to be supported only by the prism54 wireless driver. After Intersil stopped selling these devices in preference for the newer more flexible SoftMAC devices a SoftMAC device driver was required and prism54 did not support them. The p54pci driver now exists and has been present in the kernel for a while. This driver supports both SoftMAC devices and FullMAC devices. The main difference between these devices was the amount of memory which could be used for the firmware. The SoftMAC devices support a smaller amount of memory. Because of this the SoftMAC firmware fits into FullMAC devices's memory. p54pci supports not only PCI / Cardbus but also USB and SPI. Since p54pci supports all devices prism54 supports you will have a conflict. I'm not quite sure how distributions are handling this conflict right now. prism54 was kept around due to claims users may experience issues when using the SoftMAC driver. Time has passed users have not reported issues. If you use prism54 and for whatever reason you cannot use p54pci please let us know! E-mail us at: `linux-wireless@vger.kernel.org </mailto/linux-wireless@vger.kernel.org>`__
+FullMAC PCI / Cardbus devices used to be supported only by the prism54
+wireless driver. After Intersil stopped selling these devices in
+preference for the newer more flexible SoftMAC devices a SoftMAC device
+driver was required and prism54 did not support them. The p54pci driver
+now exists and has been present in the kernel for a while. This driver
+supports both SoftMAC devices and FullMAC devices. The main difference
+between these devices was the amount of memory which could be used for
+the firmware. The SoftMAC devices support a smaller amount of memory.
+Because of this the SoftMAC firmware fits into FullMAC devices's memory.
+p54pci supports not only PCI / Cardbus but also USB and SPI. Since
+p54pci supports all devices prism54 supports you will have a conflict.
+I'm not quite sure how distributions are handling this conflict right
+now. prism54 was kept around due to claims users may experience issues
+when using the SoftMAC driver. Time has passed users have not reported
+issues. If you use prism54 and for whatever reason you cannot use p54pci
+please let us know! E-mail us at: `linux-wireless@vger.kernel.org
+</mailto/linux-wireless@vger.kernel.org>`__
 
 caveats
 -------
 
-Before you can use the hardware, you have to :doc:`get the the right firmware <p54>`.
+Before you can use the hardware, you have to :doc:`get the the right
+firmware <p54>`.
 
 supported chips
 ---------------
 
--  ISL3877, ISL3880, ISL3890 and ISL3886 (miniPCI)
--  ISL3886 + net2280 (USB, 1st generation with net2280 usb<->pci bridge)
--  ISL3887 (USB, 2nd generation, native USB interface)
--  ST-Ericsson' STLC4560 (SPI)
+- ISL3877, ISL3880, ISL3890 and ISL3886 (miniPCI)
+- ISL3886 + net2280 (USB, 1st generation with net2280 usb<->pci bridge)
+- ISL3887 (USB, 2nd generation, native USB interface)
+- ST-Ericsson' STLC4560 (SPI)
 
 available devices
 -----------------
 
 For a complete listing of supported products, see the :doc:`device list <p54/devices>`\ *.*
 
-.. image:: /anchor/firmware
-   :alt: firmware
-
 firmware
 --------
 
-There are several different firmwares for different hardware. You have to pick the right one, download, rename to the listed name and put it into the right place... Normally this should be /lib/firmware. However some distributions put firmware in a different place.
+There are several different firmwares for different hardware. You have
+to pick the right one, download, rename to the listed name and put it
+into the right place... Normally this should be /lib/firmware. However
+some distributions put firmware in a different place.
 
 please pick the right one for your device from the lists:
 
-::
+.. note::
 
-     * NOTE: Not all firmwares revisions are compatible with every device out of there! If you run into problems, first try an alternative firmware before requesting further assistance ([[en/users/Drivers/p54|Contact]]). 
-     * for **2.6.29** kernels **and above**:
+   Not all firmwares revisions are compatible with every device out of
+   there! If you run into problems, first try an alternative firmware
+   before requesting further assistance
+
+for **2.6.29** kernels **and above**:
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **card type**
-      - **required filename**
-      - **recommended image**
+      - card type
+      - required filename
+      - recommended image
    - 
 
       - PCI / PCMCIA
@@ -71,18 +102,17 @@ please pick the right one for your device from the lists:
       - 3826.arm
       - `Maxi's site <http://daemonizer.de/prism54/prism54-fw/>`__
 
-::
-
-     * for **2.6.28** kernels **and older**:
+for **2.6.28** kernels **and older**:
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **card type**
-      - **required filename**
-      - \**older than 2.6.28 \*\*
-      - **specially for 2.6.28**
+      - card type
+      - required filename
+      - older than 2.6.28
+      - specially for 2.6.28
    - 
 
       - PCI / PCMCIA
@@ -102,64 +132,157 @@ please pick the right one for your device from the lists:
       - `download <http://daemonizer.de/prism54/prism54-fw/fw-usb/2.5.8.0.arm>`__
       - `download <http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.arm.1>`__
 
-::
-
-     *     More firmwares for all devices, even unsupported ones, can be found in [[http://daemonizer.de/prism54/prism54-fw/|Maxi's prism54 firmwares archive]]. 
-     *     Alternatively, firmware can be extracted from windows drivers with a tool called "fwextract3" available from [[http://lekernel.net/prism54/misc.html|http://lekernel.net/prism54/misc.html]]. 
+* More firmwares for all devices, even unsupported ones, can be found in `Maxi's prism54 firmwares archive <http://daemonizer.de/prism54/prism54-fw/>`__. 
+* Alternatively, firmware can be extracted from windows drivers with a tool called "fwextract3" available from `http://lekernel.net/prism54/misc.html <http://lekernel.net/prism54/misc.html>`__. 
 
 Steps to installing the right firmware:
 
-1) Identify the type of Intersil/Conexant chipset you have. There are two ways of identifying this.
+- Identify the type of Intersil/Conexant chipset you have. There are two
+  ways of identifying this.
 
-a) Identifying via lspci/lsusb route. Depending on how your device is connected to your computer it could be either a USB dongle or PCI/PCMCIA/MiniPCI based.
+    - Identifying via lspci/lsusb route. Depending on how your device is
+      connected to your computer it could be either a USB dongle or
+      PCI/PCMCIA/MiniPCI based.
 
-USB owners/users needs to type in "lsusb" (without quotes) and look for the correct line that identifies the vendor or the make of the device. Once that has been identified the VendorID;ProductID needs to be copied and pasted directly into google for further analysis of what other users have reported the USB device has. The VendorID:ProductID goes in the form of XXXX:XXXX, that is the where it needs to be copied and pasted into google.
+      USB owners/users needs to type in "lsusb" (without quotes) and
+      look for the correct line that identifies the vendor or the make
+      of the device.  Once that has been identified the
+      VendorID;ProductID needs to be copied and pasted directly into
+      google for further analysis of what other users have reported the
+      USB device has. The VendorID:ProductID goes in the form of
+      XXXX:XXXX, that is the where it needs to be copied and pasted into
+      google.
 
-non-USB owners/users (that is PCI/PCMCIA/MiniPCI/etc based) needs to type in "lspci -nn" (without quotes) and look for the correct line that identifies the vendor or the make of the device. Once that has been identified the VendorID:ProductID needs to be copied and pasted directly into google for further analysis of what other users have reported the PCI based device has. The VendorID:ProductID goes in the form of XXXX:XXXX, that is where it needs to be copied and pasted into google. **N.B.: Some owners/users may have tablet based computers "built-in" with prism54 based chipset, your required firmware would be the ones for stlc4560. Examples of these cases maybe the Nokia N800/N810 devices.**
+      non-USB owners/users (that is PCI/PCMCIA/MiniPCI/etc based) needs
+      to type in "lspci -nn" (without quotes) and look for the correct
+      line that identifies the vendor or the make of the device. Once
+      that has been identified the VendorID:ProductID needs to be copied
+      and pasted directly into google for further analysis of what other
+      users have reported the PCI based device has. The
+      VendorID:ProductID goes in the form of XXXX:XXXX, that is where it
+      needs to be copied and pasted into google.  **N.B.: Some
+      owners/users may have tablet based computers "built-in" with
+      prism54 based chipset, your required firmware would be the ones
+      for stlc4560. Examples of these cases maybe the Nokia N800/N810
+      devices.**
 
-b) Identifying via FCC ID for the device. Most devices using radio frequencies usually have stickers/imprints identifying their rights for use. Most of these stickers/imprints will have FCC ID labelling on it which usually goes by the words "FCC ID: XXXXXXXXXXXX". The FCC has a `website <http://qwikfix.co.uk/sky-customer-services/>`__. for one to enquire more information specifically for that device and this is also where it comes in handy for the alternative platform users whom wants to find out what sort of chipset is inside the device, etc without having to physically pull the device apart/open.
+    - Identifying via FCC ID for the device. Most devices using radio
+      frequencies usually have stickers/imprints identifying their
+      rights for use. Most of these stickers/imprints will have FCC ID
+      labelling on it which usually goes by the words "FCC ID:
+      XXXXXXXXXXXX". The FCC has a `website
+      <http://qwikfix.co.uk/sky-customer-services/>`__. for one to
+      enquire more information specifically for that device and this is
+      also where it comes in handy for the alternative platform users
+      whom wants to find out what sort of chipset is inside the device,
+      etc without having to physically pull the device apart/open.
 
-USB owners/users will find such labels on the physical device itself. It is normally a sticker that is on the outside of the physical device rather than the inside. Once the sticker/label has been found you will need to copy that information and enter it in onto FCC website: https://fjallfoss.fcc.gov/oetcf/eas/reports/GenericSearch.cfm. Once the information has been entered in click "submit" and click on "detail" when the site presents a table. If your device has more than one entry in the table, look for the entry that has the words "original equipment" printed on the same line as "detail" and then click on "detail". Upon the next table presented by the site click on "internal photos", this word maybe slightly varied (i.e. shortened, capitalised) but the meaning should be the same. The site will then prompt you a pdf file in which you will need to examine the photos on the various pages and to see which chipset you have. USB second generation owners/users may find their device internal photos denoted as GW3887 printed on the physical chip itself.
+      USB owners/users will find such labels on the physical device
+      itself. It is normally a sticker that is on the outside of the
+      physical device rather than the inside. Once the sticker/label has
+      been found you will need to copy that information and enter it in
+      onto FCC website:
+      https://fjallfoss.fcc.gov/oetcf/eas/reports/GenericSearch.cfm.
+      Once the information has been entered in click "submit" and click
+      on "detail" when the site presents a table. If your device has
+      more than one entry in the table, look for the entry that has the
+      words "original equipment" printed on the same line as "detail"
+      and then click on "detail". Upon the next table presented by the
+      site click on "internal photos", this word maybe slightly varied
+      (i.e. shortened, capitalised) but the meaning should be the same.
+      The site will then prompt you a pdf file in which you will need to
+      examine the photos on the various pages and to see which chipset
+      you have. USB second generation owners/users may find their device
+      internal photos denoted as GW3887 printed on the physical chip
+      itself.
 
-non-USB owners/users (that is PCI/PCMCIA/MiniPCI/etc based) needs to look for either a label or an imprint on the physical device itself. PCMCIA owners/users usually have the FCC ID printed on the underside of the PCMCIA card. PCI/MiniPCI owners/users may either find a label or an imprint on the underside of the card or imprint on the top side. Once the sticker/label/imprint has been found you will need to copy that information and enter it in onto FCC website: https://fjallfoss.fcc.gov/oetcf/eas/reports/GenericSearch.cfm. Once the information has been entered in click "submit" and click on "detail" when the site presents a table. If your device has more than one entry in the table, look for the entry that has the words "original equipment" printed on the same line as "detail" and then click on "detail". Upon the next table presented by the site click on "internal photos", this word maybe slightly varied (i.e. shortened, capitalised) but the meaning should be the same. The site will then prompt you a pdf file in which you will need to examine the photos on the various pages and to see which chipset you have.
+      non-USB owners/users (that is PCI/PCMCIA/MiniPCI/etc based) needs
+      to look for either a label or an imprint on the physical device
+      itself. PCMCIA owners/users usually have the FCC ID printed on the
+      underside of the PCMCIA card. PCI/MiniPCI owners/users may either
+      find a label or an imprint on the underside of the card or imprint
+      on the top side. Once the sticker/label/imprint has been found you
+      will need to copy that information and enter it in onto FCC
+      website:
+      https://fjallfoss.fcc.gov/oetcf/eas/reports/GenericSearch.cfm.
+      Once the information has been entered in click "submit" and click
+      on "detail" when the site presents a table. If your device has
+      more than one entry in the table, look for the entry that has the
+      words "original equipment" printed on the same line as "detail"
+      and then click on "detail". Upon the next table presented by the
+      site click on "internal photos", this word maybe slightly varied
+      (i.e. shortened, capitalised) but the meaning should be the same.
+      The site will then prompt you a pdf file in which you will need to
+      examine the photos on the various pages and to see which chipset
+      you have.
 
-2) Identify your kernel version, this can be done via: uname -r. Owners/users whom use compat-wireless ontop of their kernel needs to find out the dated version of compat-wireless source tarball that was used and compare with the dates for released kernels and their version.
+- Identify your kernel version, this can be done via: uname -r.
+  Owners/users whom use compat-wireless ontop of their kernel needs to
+  find out the dated version of compat-wireless source tarball that was
+  used and compare with the dates for released kernels and their
+  version.
 
-3) Find the correct firmware for your device, first is to compare your kernel version and the kernel versions listed above. There are three choices and obviously you choose the one your kernel version is running on. You then narrow the tables down and look for the way your device connects to the computer. Once you have done that you download the firmware and you rename the filename of the firmware to the filename as required on the site. Once you have done renaming the firmare, you will need to place the renamed firmware into the firmware directory for your distribution. Most linux distributions has their firmware directory set as /lib/firmware and if yours is different you will need to seek approrpriate manuals/support for your distribution.
+- Find the correct firmware for your device, first is to compare your
+  kernel version and the kernel versions listed above. There are three
+  choices and obviously you choose the one your kernel version is
+  running on. You then narrow the tables down and look for the way your
+  device connects to the computer. Once you have done that you download
+  the firmware and you rename the filename of the firmware to the
+  filename as required on the site. Once you have done renaming the
+  firmare, you will need to place the renamed firmware into the firmware
+  directory for your distribution. Most linux distributions has their
+  firmware directory set as /lib/firmware and if yours is different you
+  will need to seek approrpriate manuals/support for your distribution.
 
-For example, you have determined your card is PCI based and you have kernel 2.6.35, you simply need to look at the tables "for 2.6.29 kernels and above", look for PCI/PCMCIA based and download the firmware from the "download" link. Once you have downloaded the firmware (usually the filename of the firmware downloaded from the sites will result with .arm) You need to rename the file to isl3886pci as per required filename from the site. You then place the file "isl3886pci" into /lib/firmware and then reload the p54pci driver. That is to unload the driver (via modprobe -r p54pci or rmmod p54pci) and then load the driver via modprobe p54pci or insmod /path/to/p54pci.ko)
+  For example, you have determined your card is PCI based and you have
+  kernel 2.6.35, you simply need to look at the tables "for 2.6.29
+  kernels and above", look for PCI/PCMCIA based and download the
+  firmware from the "download" link. Once you have downloaded the
+  firmware (usually the filename of the firmware downloaded from the
+  sites will result with .arm) You need to rename the file to isl3886pci
+  as per required filename from the site. You then place the file
+  "isl3886pci" into /lib/firmware and then reload the p54pci driver.
+  That is to unload the driver (via modprobe -r p54pci or rmmod p54pci)
+  and then load the driver via modprobe p54pci or insmod
+  /path/to/p54pci.ko)
 
-If you have issues with getting the interface to work, you need to check dmesg and to see what is going on. For example, you renamed the filename incorrectly when p54pci requested isl3886pci and you renamed it to isl3886pci.arm, or that you have not placed it into the correct firmware directory for your distribution.
+  If you have issues with getting the interface to work, you need to
+  check dmesg and to see what is going on. For example, you renamed the
+  filename incorrectly when p54pci requested isl3886pci and you renamed
+  it to isl3886pci.arm, or that you have not placed it into the correct
+  firmware directory for your distribution.
 
-In some cases using the incorrect firmware may result in unusable interface. If you are not sure with what filename that is required for p54pci/p54usb the best way is to reload the driver and to check the last few lines of dmesg.
+  In some cases using the incorrect firmware may result in unusable
+  interface. If you are not sure with what filename that is required for
+  p54pci/p54usb the best way is to reload the driver and to check the
+  last few lines of dmesg.
 
 working
 -------
 
-::
-
-     *     * Ad-Hoc, AP, mesh, monitor and station mode 
-     *     * WMM/WME/802.11e (QoS) 
-     *     * ERP 
-     *     * Protected Management Frames (802.11w) 
-     *     * Programmable LEDs 
-     *     * Antenna diversity 
-     *     * Cryptographic accelerator for WEP, TKIP and CCMP 
-     *     * Packet injection in monitor mode 
-     *     * Power save management in station mode 
-     *     * Coverage class for long distance links 
-     *     * FAA Switch notifications (rfkill) 
-     *     * Multicast filtering 
-     *     * Supported band table (by radio chip): 
+* Ad-Hoc, AP, mesh, monitor and station mode 
+* WMM/WME/802.11e (QoS) 
+* ERP 
+* Protected Management Frames (802.11w) 
+* Programmable LEDs 
+* Antenna diversity 
+* Cryptographic accelerator for WEP, TKIP and CCMP 
+* Packet injection in monitor mode 
+* Power save management in station mode 
+* Coverage class for long distance links 
+* FAA Switch notifications (rfkill) 
+* Multicast filtering 
+* Supported band table (by radio chip): 
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **ID**
-      - **Chip name**
-      - **802.11 b/g**
-      - **802.11 a**
+      - ID
+      - Chip name
+      - 802.11 b/g
+      - 802.11 a
    - 
 
       - **1**
@@ -194,41 +317,33 @@ working
 not working yet
 ---------------
 
-::
-
-     *     *   * Regulatory domain codes 
-     *     *   * 5/10MHz channels 
-     *     *   * Jumbo frames (3232 Bytes) 
-     *     *   * (TPC), DFS and Radar Detection 
-     *     *   * Bluetooth coexistence 
-     *     *   * Firmware Versions >= 2.17.2.0 ([[SoftMac|SoftMac]] Protocol >= 7.06) 
+* Regulatory domain codes 
+* 5/10MHz channels 
+* Jumbo frames (3232 Bytes) 
+* (TPC), DFS and Radar Detection 
+* Bluetooth coexistence 
+* Firmware Versions >= 2.17.2.0 ([[SoftMac|SoftMac]] Protocol >= 7.06) 
 
 not supported
 -------------
 
-::
-
-     *     *     * NITRO Xtreme Multimedia (Hifn's LZS compression) 
-     *     *     * Accelerator for Cisco's CKIP and CMIC 
-     *     *     * Some (?) early PrismGT cards (e.g.: Netgear WG511v1) 
-     *     *     * offload active scanning to the firmware 
-     *     *     * ARP frame filtering was dropped due to buggy FW [[http://marc.info/?l=linux-wireless&m=130169870817618|RFT-Patch]] 
+* NITRO Xtreme Multimedia (Hifn's LZS compression) 
+* Accelerator for Cisco's CKIP and CMIC 
+* Some (?) early PrismGT cards (e.g.: Netgear WG511v1) 
+* offload active scanning to the firmware 
+* ARP frame filtering was dropped due to buggy FW `RFT-Patch <http://marc.info/?l=linux-wireless&m=130169870817618>`__ 
 
 Enabling p54 in the kernel
 --------------------------
 
-To enable p54 in the kernel configuration, you must first enable mac80211:
-
-::
+To enable p54 in the kernel configuration, you must first enable mac80211::
 
    Networking Support --->
      Wireless  --->
        <M> cfg80211 - wireless configuration API
        <M> Generic IEEE 802.11 Networking Stack (mac80211)
 
-You can then enable p54
-
-::
+You can then enable p54::
 
    Device Drivers  --->
      [*] Network device support  --->
@@ -239,19 +354,13 @@ You can then enable p54
              <M>     Prism54 PCI support
              <M>     Prism54 SPI (stlc45xx) support
 
-.. image:: /anchor/Contact
-   :alt: Contact
-
 Contact
 -------
 
-::
 
-     *     *       * IRC: #linux-wireless on [[http://freenode.net/|freenode]] 
-     *     *       * no special mailing list, use the [[en/developers/MailingLists|linux wireless list]] for development and firmware issues 
-
-.. image:: /anchor/Donations
-   :alt: Donations
+* IRC: #linux-wireless on `freenode <http://freenode.net/>`__ 
+* no special mailing list, use the linux wireless list for development
+  and firmware issues 
 
 Donations
 ---------
@@ -259,12 +368,13 @@ Donations
 A big thank you to the following people who kindly donated:
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **who**
+      - who
       - 
-      - **what**
+      - what
    - 
 
       - Maximilian Engelhardt

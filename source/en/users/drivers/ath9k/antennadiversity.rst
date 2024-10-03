@@ -1,14 +1,13 @@
-Go back –> :doc:`Main ath9k driver page <../ath9k>`
-
 ath9k Antenna Diversity
------------------------
+=======================
 
 This page documents how antenna diversity is supported by ath9k.
 
 What is Antenna Diversity ?
 ---------------------------
 
-Adrian Chadd's excellent, detailed `notes <https://wiki.freebsd.org/dev/ath_hal(4)/AntennaDiversity>`__.
+Adrian Chadd's excellent, detailed `notes
+<https://wiki.freebsd.org/dev/ath_hal(4)/AntennaDiversity>`__.
 
 Supported cards
 ---------------
@@ -16,8 +15,8 @@ Supported cards
 WLAN Only
 ~~~~~~~~~
 
--  HB95 (AR9285)
--  HB125 (AR9485)
+- HB95 (AR9285)
+- HB125 (AR9485)
 
 WLAN and BT
 ~~~~~~~~~~~
@@ -26,15 +25,16 @@ WB195
 ^^^^^
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **WLAN**
-      - **Bluetooth**
-      - **Vendor ID**
-      - **Device ID**
-      - **Subvendor ID**
-      - **Subdevice ID**
+      - WLAN
+      - Bluetooth
+      - Vendor ID
+      - Device ID
+      - Subvendor ID
+      - Subdevice ID
    - 
 
       - AR9285
@@ -48,15 +48,16 @@ CUS198
 ^^^^^^
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **WLAN**
-      - **Bluetooth**
-      - **Vendor ID**
-      - **Device ID**
-      - **Subvendor ID**
-      - **Subdevice ID**
+      - WLAN
+      - Bluetooth
+      - Vendor ID
+      - Device ID
+      - Subvendor ID
+      - Subdevice ID
    - 
 
       - AR9485
@@ -94,15 +95,16 @@ CUS230
 ^^^^^^
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **WLAN**
-      - **Bluetooth**
-      - **Vendor ID**
-      - **Device ID**
-      - **Subvendor ID**
-      - **Subdevice ID**
+      - WLAN
+      - Bluetooth
+      - Vendor ID
+      - Device ID
+      - Subvendor ID
+      - Subdevice ID
    - 
 
       - AR9485
@@ -124,15 +126,16 @@ WB225
 ^^^^^
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **WLAN**
-      - **Bluetooth**
-      - **Vendor ID**
-      - **Device ID**
-      - **Subvendor ID**
-      - **Subdevice ID**
+      - WLAN
+      - Bluetooth
+      - Vendor ID
+      - Device ID
+      - Subvendor ID
+      - Subdevice ID
    - 
 
       - AR9485
@@ -249,16 +252,20 @@ WB225
 WB335
 ^^^^^
 
-There are 3 types of WB335-based cards. 1-ANT cards share a LNA between WLAN/BT. 2-ANT cards have dedicated LNA for BT and WLAN and have antennae in both slots (MAIN and ALT), but WLAN RX diversity is disabled for some cards (based on vendor requirements).
+There are 3 types of WB335-based cards. 1-ANT cards share a LNA between
+WLAN/BT. 2-ANT cards have dedicated LNA for BT and WLAN and have
+antennae in both slots (MAIN and ALT), but WLAN RX diversity is disabled
+for some cards (based on vendor requirements).
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Type**
-      - **No. of connected antennae**
-      - **Shared LNA with BT**
-      - **Antenna Diversity**
+      - Type
+      - No. of connected antennae
+      - Shared LNA with BT
+      - Antenna Diversity
    - 
 
       - 1-ANT
@@ -281,15 +288,16 @@ There are 3 types of WB335-based cards. 1-ANT cards share a LNA between WLAN/BT.
 2-ANT cards supporting WLAN RX diversity.
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **WLAN**
-      - **Bluetooth**
-      - **Vendor ID**
-      - **Device ID**
-      - **Subvendor ID**
-      - **Subdevice ID**
+      - WLAN
+      - Bluetooth
+      - Vendor ID
+      - Device ID
+      - Subvendor ID
+      - Subdevice ID
    - 
 
       - AR9565
@@ -502,15 +510,16 @@ There are 3 types of WB335-based cards. 1-ANT cards share a LNA between WLAN/BT.
 CUS252 (AR9565 + xLNA)
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **WLAN**
-      - **Bluetooth**
-      - **Vendor ID**
-      - **Device ID**
-      - **Subvendor ID**
-      - **Subdevice ID**
+      - WLAN
+      - Bluetooth
+      - Vendor ID
+      - Device ID
+      - Subvendor ID
+      - Subdevice ID
    - 
 
       - AR9565
@@ -531,13 +540,16 @@ CUS252 (AR9565 + xLNA)
 Enable WLAN/BT RX Antenna Diversity
 -----------------------------------
 
-To enable WLAN RX diversity using the ALT antenna, use the module parameter *bt_ant_diversity*. The Bluetooth interface has to be disabled when this feature is enabled in ath9k. Also, BTCOEX should be disabled, so the driver must **not** be loaded with *btcoex_enable=1*.
+To enable WLAN RX diversity using the ALT antenna, use the module
+parameter bt_ant_diversity. The Bluetooth interface has to be disabled
+when this feature is enabled in ath9k. Also, BTCOEX should be disabled,
+so the driver must not be loaded with btcoex_enable=1.
 
 ::
 
    modprobe ath9k bt_ant_diversity=1
 
-This can also be turned on/off using the debugfs file *bt_ant_diversity*.
+This can also be turned on/off using the debugfs file bt_ant_diversity.
 
 ::
 
@@ -547,11 +559,12 @@ This can also be turned on/off using the debugfs file *bt_ant_diversity*.
 Debug statistics
 ----------------
 
-The debugfs file *antenna_diversity* can be used to see how the LNA combining algorithm is performing.
+The debugfs file antenna_diversity can be used to see how the LNA
+combining algorithm is performing.
 
 ::
 
-   cat /sys/kernel/debug/ieee80211/phy*/ath9k/antenna_diversity
+   cat /sys/kernel/debug/ieee80211/phy/ath9k/antenna_diversity
 
    Current MAIN config : LNA1
    Current ALT config  : LNA2

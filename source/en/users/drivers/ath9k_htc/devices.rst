@@ -1,16 +1,17 @@
 Supported Atheros devices
--------------------------
+=========================
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **Chipset**
-      - **USB Vendor**
-      - **USB Product**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - Chipset
+      - USB Vendor
+      - USB Product
+      - MaxPower
    - 
 
       - Atheros
@@ -164,4 +165,5 @@ Supported Atheros devices
       - 0x9271
       - 
 
-A longer list of devices supported by ath9k_htc: `wikidevi ath9k htc page <https://wikidevi.com/wiki/Ath9k_htc>`__
+A longer list of devices supported by ath9k_htc: `wikidevi ath9k htc
+page <https://wikidevi.com/wiki/Ath9k_htc>`__

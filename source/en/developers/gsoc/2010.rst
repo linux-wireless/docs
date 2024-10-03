@@ -1,21 +1,30 @@
 Linux wireless GSoC 2010
 ------------------------
 
-This is our second year with Linux wireless GSoC projects, under the `Linux Foundation GSoC umbrella <https://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2010>`__. This is the home page to keep track of the current projects, their status development done through it. Students should also use these pages to keep track of their own status of their projects.
+.. toctree::
+
+   2010/improve_wireless_roaming
+   2010/wifi-test-nl80211
+
+This is our second year with Linux wireless GSoC projects, under the
+`Linux Foundation GSoC umbrella
+<https://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2010>`__.
+This is the home page to keep track of the current projects, their
+status development done through it. Students should also use these pages
+to keep track of their own status of their projects.
 
 Linux wireless GSoC 2010 projects
 ---------------------------------
 
 There are two projects for 2010 for 802.11 for GSoC:
 
--  :doc:`Improve wireless roaming <2010/improve_wireless_roaming>`
--  :doc:`Extending the wifi-test project with nl80211 support <2010/wifi-test-nl80211>`
+- :doc:`Improve wireless roaming <2010/improve_wireless_roaming>`
+- :doc:`Extending the wifi-test project with nl80211 support <2010/wifi-test-nl80211>`
 
-If you are a student and want to talk just join :doc:`our IRC channel <../../users/support>` and linger and poke at us there.
+If you are a student and want to talk just join :doc:`our IRC channel
+<../../users/support>` and linger and poke at us there.
 
 Two older projects are also still open, but currently lack a mentoring plan:
 
-::
-
-     * [[en/developers/GSoC/2009/GeoClue_regulatory|Integrate GeoClue to help with regulatory compliance]] 
-     * [[en/developers/GSoC/2009/Automation_of_testing|Automation of testing using mac80211_hwsim and Orbit]] 
+* :doc:`2009/geoclue_regulatory`
+* :doc:`2009/automation_of_testing`

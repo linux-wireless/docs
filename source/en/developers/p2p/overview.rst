@@ -1,5 +1,5 @@
 What this is about
-------------------
+==================
 
 For an introduction see the `slides <http://pdxplumbers.osuosl.org/2010/ocw/system/presentations/639/original/lpc-p2p.pdf>`__ for the "Wi-Fi Peer-to-Peer on Linux" talk given by Johannes Berg during the Linux Plumbers Conference 2010.
 

@@ -1,18 +1,19 @@
 Supported USB wireless devices
-------------------------------
+==============================
 
 (rt2500usb)
 ~~~~~~~~~~~
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **USB Vendor**
-      - **USB Product**
-      - **MaxPower**
+      - Vendor
+      - Product
+      - USB Vendor
+      - USB Product
+      - MaxPower
    - 
 
       - MSI

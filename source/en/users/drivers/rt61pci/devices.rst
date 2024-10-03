@@ -1,17 +1,18 @@
 Supported Ralink wireless devices
----------------------------------
+=================================
 
 .. list-table::
+   :header-rows: 1
 
    - 
 
-      - **Vendor**
-      - **Product**
-      - **form factor**
-      - **Ralink Chip**
-      - **PCI Product**
-      - **PCI Subvendor**
-      - **PCI Subsystem**
+      - Vendor
+      - Product
+      - form factor
+      - Ralink Chip
+      - PCI Product
+      - PCI Subvendor
+      - PCI Subsystem
    - 
 
       - `Edimax <http://www.edimax.com/>`__
