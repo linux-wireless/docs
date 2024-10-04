@@ -14,7 +14,7 @@ with the new userspace and in-kernel :doc:`nl80211
 also documented.
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
    en/users
    en/vendors
