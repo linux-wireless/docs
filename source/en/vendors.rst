@@ -1,4 +1,4 @@
-Information for vendors
+Information for Vendors
 #######################
 
 .. toctree::
@@ -12,8 +12,6 @@ concerns for FOSS driver development. The biggest barrier with vendor
 support has been legal considerations due to regulatory compliance. The
 document below summarizes the approach we have taken on successfully
 enhancing vendor support.
-
--  :doc:`Vendor Support <vendors/vendorsupport>`
 
 If you are a wireless vendor, want a driver for Linux, and do not have
 the resources to do it we have good news for you -- we will write it for
