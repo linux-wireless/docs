@@ -64,9 +64,12 @@ highlight_language = 'none'
 master_doc = 'index'
 
 html_context = {
-    "display_github": True, # Integrate GitHub
-    "github_user": "linux-wireless", # Username
-    "github_repo": "docs", # Repo name
-    "github_version": "main", # Version
-    "conf_py_path": "/source/", # Path in the checkout to the docs root
+    "github_user": "linux-wireless",
+    "github_repo": "docs",
+    "github_version": "main",
+    "doc_path": "/source/",
+}
+
+html_theme_options = {
+    "use_edit_page_button": True,
 }
