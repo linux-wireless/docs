@@ -13,7 +13,7 @@ to buffer frames for a station when that station is in power save mode
 and to transmit them later to the station when the AP knows the station
 will listen. When a station is in power save mode, it turns off its
 transmitter and receiver to preserve energy. It takes less power for a
-station to turn its receiver on to listen to frames than to turn it its
+station to turn its receiver on to listen for frames than to turn its
 transmitter on to transmit frames. For this reason, it's more
 power-efficient for an AP to inform a station if it has buffered frames
 present on the AP than to have the station poll the AP querying if
