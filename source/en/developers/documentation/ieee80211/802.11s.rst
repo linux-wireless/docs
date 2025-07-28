@@ -61,7 +61,7 @@ Mesh Portal
 ^^^^^^^^^^^
 
 An IEEE 802.11s mesh network could be used for a variety of purposes.
-One of them is providing cheap Internet access. In this case, atleast
+One of them is providing cheap Internet access. In this case, at least
 one node and potentially some of the nodes are connected to the
 Internet. Users connected to the mesh network can access the Internet
 via these gateway nodes called Mesh Portals (MPP) which are connected to
