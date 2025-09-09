@@ -28,8 +28,9 @@ A standard reply which can be used for private email queries::
 
    Hi,
 
-   you contacted me about ath10k/ath11k/ath12k but unfortunately I do not 
-   have time to reply to offlist emails. Instead please check
-   the wiki how to get help and find more information:
+   You contacted me about ath10k/ath11k/ath12k but unfortunately I do not
+   have time to reply to offlist emails. Instead, please check the Linux
+   Kernel documentation to learn how to get help:
 
-   http://wireless.wiki.kernel.org/en/users/drivers/ath10k/privatesupport
+   https://wireless.docs.kernel.org/en/latest/en/users/drivers/ath10k/privatesupport.html
+
