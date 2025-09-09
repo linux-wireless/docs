@@ -2,7 +2,7 @@ ath10k mesh mode
 ================
 
 Refer this link for IEEE 802.11s (Mesh Networking) introduction.
-https://wireless.wiki.kernel.org/en/developers/Documentation/ieee80211/802.11s
+https://wireless.docs.kernel.org/en/latest/en/developers/documentation/ieee80211/802.11s.html
 
 ath10k supports mesh BSS (MBSS) in raw-mode since Sep/2015 (commit id:
 b6c7bafa7d4b1398cce93e4af0a48603919fa933) and in native Wi-Fi mode since
