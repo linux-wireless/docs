@@ -407,7 +407,7 @@ Supported drivers
       - yes
       - yes
       - yes
-      - A/B/G/N/AC/AX
+      - A/B/G/N/AC/AX/BE
       - PCIe / SoC / USB / SDIO
    - 
 
