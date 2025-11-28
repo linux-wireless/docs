@@ -243,18 +243,16 @@ keys before you send it via email or attach it to bug trackers:
 
 -  Emmanuel Grumbach (18D075865D915B5E386F660F2D0B96FE6E363201);
 -  Johannes Berg (C0EBC440F6DA091C884D8532E0F373F37BF9099A);
--  Gregory Greenman (F5C83636E8E2909E44319BAC083082600E73773C).
 
 For instance::
 
    gpg --recv-keys \
     C0EBC440F6DA091C884D8532E0F373F37BF9099A \
-    F5C83636E8E2909E44319BAC083082600E73773C \
     18D075865D915B5E386F660F2D0B96FE6E363201
    gpg --encrypt \
     -r 18D075865D915B5E386F660F2D0B96FE6E363201 \
     -r C0EBC440F6DA091C884D8532E0F373F37BF9099A \
-    -r F5C83636E8E2909E44319BAC083082600E73773C <file_to_encrypt>
+    <file_to_encrypt>
 
 This will generate a new, encrypted file that you should provide to us.
 Any of, and only, these developers will be able to open the file. Adding
