@@ -21,37 +21,37 @@ drivers supported by fwcutter.
    - 
 
       - b43
-      - `6.30.163.46 <http://www.lwfinger.com/b43-firmware/broadcom-wl-6.30.163.46.tar.bz2>`__
+      - `6.30.163.46 <https://web.archive.org/web/20150117040036/http://www.lwfinger.com/b43-firmware/broadcom-wl-6.30.163.46.tar.bz2>`__
       - 784.2
       - b43-fwcutter-018
    - 
 
       - b43
-      - `5.100.138 <http://www.lwfinger.com/b43-firmware/broadcom-wl-5.100.138.tar.bz2>`__
+      - `5.100.138 <https://web.archive.org/web/20150117040036/http://www.lwfinger.com/b43-firmware/broadcom-wl-5.100.138.tar.bz2>`__
       - 666.2
       - b43-fwcutter-015
    - 
 
       - b43
-      - `5.100.104.2 <http://www.lwfinger.com/b43-firmware/broadcom-wl-5.100.104.2.tar.bz2>`__
+      - `5.100.104.2 <https://web.archive.org/web/20150117040036/http://www.lwfinger.com/b43-firmware/broadcom-wl-5.100.104.2.tar.bz2>`__
       - 644.1001
       - b43-fwcutter-015
    - 
 
       - b43
-      - `5.10.144.3 <http://www.lwfinger.com/b43-firmware/broadcom-wl-5.10.144.3.tar.bz2>`__
+      - `5.10.144.3 <https://web.archive.org/web/20150117040036/http://www.lwfinger.com/b43-firmware/broadcom-wl-5.10.144.3.tar.bz2>`__
       - 508.154
       - b43-fwcutter-015
    - 
 
       - b43
-      - `5.10.56.2808 <http://www.lwfinger.com/b43-firmware/broadcom-wl-5.10.56.2808.tar.bz2>`__
+      - `5.10.56.2808 <https://web.archive.org/web/20150117040036/http://www.lwfinger.com/b43-firmware/broadcom-wl-5.10.56.2808.tar.bz2>`__
       - 508.10872
       - b43-fwcutter-015
    - 
 
       - b43
-      - `5.10.56.51 <http://www.lwfinger.com/b43-firmware/broadcom-wl-5.10.56.51.tar.bz2>`__
+      - `5.10.56.51 <https://web.archive.org/web/20150117040036/http://www.lwfinger.com/b43-firmware/broadcom-wl-5.10.56.51.tar.bz2>`__
       - 508.1107
       - b43-fwcutter-015
    - 
