@@ -26,7 +26,7 @@ latest review no one seems to have come up with reasons to support this.
 Spectral power limits
 ---------------------
 
-Its believed we may need to allow for spectral power limits (e.g.
+It's believed we may need to allow for spectral power limits (e.g.
 10mW/MHz). If this is true the database may need to be adjusted to
 account for these. This is relevant for 5/10 MHz channels, where we
 currently assume 1/4 and 1/2 TX power respectively (i.e. assume a

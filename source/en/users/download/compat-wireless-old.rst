@@ -41,7 +41,7 @@ any mac80211 drivers, it came just with mac80211 itself. Since you get a
 custom WMM support you also get 802.11n support, which requires WMM
 support.
 
-Its worth noting compat-wireless-old currently does not get any
+It's worth noting compat-wireless-old currently does not get any
 attention from any developer as such its not getting further updates.
 Patches are always welcomed though.
 

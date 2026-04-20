@@ -38,7 +38,7 @@ Terms we use throughout the wiki with which you should become familiar.
      ID of the last commit applied.
 
    IBSS
-     IBSS stands for *Independent Basic Service Set*. Its basically
+     IBSS stands for *Independent Basic Service Set*. It's basically
      Ad-Hoc mode. See `Independent Basic Service Set
      <https://en.wikipedia.org/wiki/Independent_Basic_Service_Set>`__
 
