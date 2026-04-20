@@ -1090,7 +1090,7 @@ Abandoned/Deprecated Drivers(Unsupported)
       - ?
       - ?
       - A/B/G
-      - PCI / PCMCIA
+      - PCI / PCMCIA      
       - :doc:`p54pci <drivers/p54>`
    - 
 
