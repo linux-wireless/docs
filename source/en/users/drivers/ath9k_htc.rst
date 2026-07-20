@@ -145,7 +145,7 @@ Known issues
 - The AMPDU size is limited to 22 subframes for UB94/95 and 17 for UB91.
   Fixing this would require removing lots of cruft and structural
   changes in the firmware.
-- This HW strongly depends on USB. Please chech `usb related issues
+- This HW strongly depends on USB. Please check `usb related issues
   <https://github.com/qca/open-ath9k-htc-firmware/wiki/usb-related-issues>`__
   before sending bug report.
 
