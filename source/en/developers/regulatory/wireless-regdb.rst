@@ -17,7 +17,7 @@ The regulatory database
 
 :doc:`CRDA <crda>` requires a regulatory database (`gitweb
 <http://git.kernel.org/?p=linux/kernel/git/wens/wireless-regdb.git;a=blob;f=db.txt;hb=HEAD>`__)
-to be build and maintained. Our hope is that this database can be used
+to be built and maintained. Our hope is that this database can be used
 by other platforms (open or proprietary), not just Linux. The database
 is currently unmaintained, but the latest changes can be found in this
 git tree:
