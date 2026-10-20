@@ -19,3 +19,10 @@ http://lists.infradead.org/mailman/listinfo/ath10k
 Archive for the mailing list:
 
 https://lore.kernel.org/ath10k/
+
+Matrix channel
+--------------
+
+For real-time discussions, you can join the ath10k Matrix channel:
+
+#ath10k:ixit.cz
